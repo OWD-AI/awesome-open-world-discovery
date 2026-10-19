@@ -1,0 +1,34 @@
+name: Suggest a resource
+description: Suggest a paper, author blog, research project, dataset or benchmark.
+title: "[Resource] "
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title and year
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary source URL
+      description: Paper, author blog, official repository or original dataset card.
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Contribution and relevance
+      description: What does it add to discovering, learning, experimenting or evaluating?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and evidence
+      description: Mention known limits, publication status, implementation status and whether results were independently reproduced.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Benchmark or environment details
+      description: If applicable, specify feedback origin, interaction, real versus simulated measurement, openness, reward and reset support.

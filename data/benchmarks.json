@@ -1,0 +1,663 @@
+{
+  "updated": "2026-10-19",
+  "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
+  "profiles": [
+    {
+      "id": "discoveryworld",
+      "resource_id": "d01",
+      "name": "DiscoveryWorld",
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "mechanism",
+        "experimental-design"
+      ],
+      "focus": "Scientific investigations and hypothesis testing",
+      "limits": "Designed scenarios and rules; broad discovery claims need transfer beyond those scenarios.",
+      "training": {
+        "reward": "Task and investigation scoring are described by the project.",
+        "reset": "Source-provided environment; exact reset semantics not audited.",
+        "branching": "Not audited."
+      },
+      "status": "public-code",
+      "evidence": "https://github.com/allenai/discoveryworld"
+    },
+    {
+      "id": "boxinggym",
+      "resource_id": "d02",
+      "name": "BoxingGym",
+      "feedback": "probabilistic-model",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "parameters",
+        "mechanism",
+        "experimental-design"
+      ],
+      "focus": "Experimental design, model discovery and explanation transfer",
+      "limits": "Scientific domain grounding does not turn simulated observations into real measurements.",
+      "training": {
+        "reward": "EIG and prediction-related evaluation are described.",
+        "reset": "Generative environments are documented; training wrappers not audited.",
+        "branching": "Not audited."
+      },
+      "status": "public-code",
+      "evidence": "https://github.com/kanishkg/boxing-gym"
+    },
+    {
+      "id": "newtonbench",
+      "resource_id": "d03",
+      "name": "NewtonBench",
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "mechanism",
+        "counterfactual-laws"
+      ],
+      "focus": "Discovering modified laws through experimentation",
+      "limits": "Counterfactual physical laws are intentionally simulated; original-law memory remains a separate control.",
+      "training": {
+        "reward": "Code-assisted evaluation is described; repository reports an RL-environment integration.",
+        "reset": "Task instances are documented; restoration behavior not audited.",
+        "branching": "Not audited."
+      },
+      "status": "public-code",
+      "evidence": "https://github.com/HKUST-KnowComp/NewtonBench"
+    },
+    {
+      "id": "causalab",
+      "resource_id": "c11",
+      "name": "CausaLab",
+      "feedback": "synthetic-scm",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "structure",
+        "mechanism",
+        "interventions"
+      ],
+      "focus": "Causal mechanism recovery versus predictive success",
+      "limits": "Ground-truth graph scoring must be interpreted under the supplied information and identifiability assumptions.",
+      "training": {
+        "reward": "Task prediction and mechanism evaluation are described in the paper.",
+        "reset": "Random SCM episodes are described; implementation not audited.",
+        "branching": "Not audited."
+      },
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/abs/2605.26029"
+    },
+    {
+      "id": "causalarc",
+      "resource_id": "c10",
+      "name": "CausalARC",
+      "feedback": "synthetic-scm",
+      "interaction": "task-demonstrations",
+      "new_physical_experiments": false,
+      "openness": [
+        "mechanism",
+        "distribution-shift"
+      ],
+      "focus": "Abstract, causal and counterfactual reasoning with world-model-generated demonstrations",
+      "limits": "Observation/intervention/counterfactual feedback is supplied as demonstrations; do not assume unrestricted active lab access.",
+      "training": {
+        "reward": "Task-level correctness; TTT is one evaluated setting.",
+        "reset": "Task generation is described; reset protocol depends on setting.",
+        "branching": "Not audited."
+      },
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/abs/2509.03636"
+    },
+    {
+      "id": "scienceworld",
+      "resource_id": "scienceworld",
+      "name": "ScienceWorld",
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "task-variation"
+      ],
+      "focus": "Interactive scientific task execution",
+      "limits": "Elementary-science reasoning and execution are enabling capabilities, not proof of discovering novel laws.",
+      "training": {
+        "reward": "Task completion scoring is described in the paper.",
+        "reset": "Environment episodes are described; exact interface not audited.",
+        "branching": "Not audited."
+      },
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/abs/2203.07540"
+    },
+    {
+      "id": "discoverybench-real",
+      "resource_id": "d04",
+      "name": "DiscoveryBench real-workflow subset",
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "hypothesis",
+        "analysis-workflow"
+      ],
+      "focus": "Data-driven hypothesis discovery from scientific datasets",
+      "limits": "Tasks are grounded in published workflows; new analysis is not new physical data acquisition.",
+      "training": {
+        "reward": "Hypothesis/workflow evaluation is described; evaluator validity must be checked.",
+        "reset": "Restore the analysis workspace and fixed inputs.",
+        "branching": "Workspace branching not audited."
+      },
+      "status": "public-data-code",
+      "evidence": "https://arxiv.org/html/2407.01725v1"
+    },
+    {
+      "id": "discoverybench-synth",
+      "resource_id": "d04",
+      "name": "DiscoveryBench synthetic subset",
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "hypothesis",
+        "workflow-complexity"
+      ],
+      "focus": "Controlled variation in data-driven discovery complexity",
+      "limits": "Keep this subset separate from real-workflow results; semantic generation and structural data construction have their own assumptions.",
+      "training": {
+        "reward": "Hypothesis/workflow evaluation is described.",
+        "reset": "Restore fixed inputs and workspace.",
+        "branching": "Not audited."
+      },
+      "status": "public-data-code",
+      "evidence": "https://arxiv.org/html/2407.01725v1"
+    },
+    {
+      "id": "scienceagentbench",
+      "resource_id": "scienceagentbench",
+      "name": "ScienceAgentBench",
+      "feedback": "real-data",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "analysis-workflow",
+        "scientific-code"
+      ],
+      "focus": "Executing data-driven scientific analysis tasks",
+      "limits": "Published research tasks and code execution do not imply online laboratory experimentation.",
+      "training": {
+        "reward": "Task-specific evaluation is provided; training use needs split and contamination controls.",
+        "reset": "Restore files, dependencies and workspace; implementation not audited.",
+        "branching": "Not audited."
+      },
+      "status": "public-data-code",
+      "evidence": "https://github.com/OSU-NLP-Group/ScienceAgentBench"
+    },
+    {
+      "id": "genedisco",
+      "resource_id": "genedisco",
+      "name": "GeneDisco",
+      "feedback": "real-experiment-records",
+      "interaction": "finite-pool-query",
+      "new_physical_experiments": false,
+      "openness": [
+        "experimental-design",
+        "hit-discovery"
+      ],
+      "focus": "Budgeted active learning over genetic intervention outcomes",
+      "limits": "Queries reveal recorded outcomes; out-of-pool experiments cannot be measured without another backend.",
+      "training": {
+        "reward": "Active-learning and discovery performance are evaluated across acquisition cycles.",
+        "reset": "Pool/acquisition state is reusable; exact wrapper not audited.",
+        "branching": "Not audited."
+      },
+      "status": "public-data-code",
+      "evidence": "https://github.com/genedisco/genedisco"
+    },
+    {
+      "id": "chambers-recorded",
+      "resource_id": "c12",
+      "name": "Causal Chambers recorded datasets",
+      "feedback": "real-experiment-records",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "structure",
+        "representation",
+        "intervention-effects"
+      ],
+      "focus": "Causal methodology using physical-system observations and interventions",
+      "limits": "Recorded physical interventions remain offline evidence when downloaded as datasets.",
+      "training": {
+        "reward": "Depends on the chosen causal/representation task.",
+        "reset": "Dataset state is fixed.",
+        "branching": "Data reuse is possible; no new physical branch is executed."
+      },
+      "status": "public-data",
+      "evidence": "https://github.com/juangamella/causal-chamber"
+    },
+    {
+      "id": "chambers-simulator",
+      "resource_id": "c12",
+      "name": "Causal Chambers physical simulators",
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "structure",
+        "intervention-effects"
+      ],
+      "focus": "Simulation-based experimentation with chamber models",
+      "limits": "A model of a real device is still a simulator; model mismatch and sim-to-real transfer need separate evaluation.",
+      "training": {
+        "reward": "Task-dependent.",
+        "reset": "Simulator behavior is source-reported, not audited.",
+        "branching": "Not audited."
+      },
+      "status": "source-reported-tooling",
+      "evidence": "https://github.com/juangamella/causal-chamber-package"
+    },
+    {
+      "id": "chambers-live",
+      "resource_id": "c12",
+      "name": "Causal Chambers remote physical lab",
+      "feedback": "new-physical-measurements",
+      "interaction": "remote-device-jobs",
+      "new_physical_experiments": true,
+      "openness": [
+        "experimental-design",
+        "intervention-effects"
+      ],
+      "focus": "Collecting new measurements by interacting with a physical chamber",
+      "limits": "Access is requested separately; physical resets, throughput and repeatability are not equivalent to simulator resets.",
+      "training": {
+        "reward": "Task-dependent; not independently integrated here.",
+        "reset": "Physical preparation and reset conditions must be specified.",
+        "branching": "No assumption of exact physical state cloning."
+      },
+      "status": "access-required-author-reported",
+      "evidence": "https://www.causalchamber.ai/index.html"
+    },
+    {
+      "id": "scidisco",
+      "resource_id": "d05",
+      "name": "SciDisco process-verifiable environments",
+      "feedback": "scientific-datasets-and-hidden-verifiers",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "analysis-workflow",
+        "hypothesis-verification"
+      ],
+      "focus": "Turn-level RL for scientific data analysis",
+      "limits": "Hidden evidence graphs and templates define the verification scope; this is not online physical experimentation.",
+      "training": {
+        "reward": "Process-verifiable evidence and turn-level credit are described.",
+        "reset": "Environment construction is described in the paper; runtime not audited.",
+        "branching": "Not audited."
+      },
+      "status": "preprint-described",
+      "evidence": "https://arxiv.org/abs/2607.28990"
+    },
+    {
+      "id": "asbench-replay",
+      "resource_id": "as-bench",
+      "name": "as-bench replay campaigns",
+      "feedback": "real-experiment-records",
+      "interaction": "budgeted-pool-jobs",
+      "new_physical_experiments": false,
+      "openness": [
+        "experimental-design",
+        "hit-discovery"
+      ],
+      "focus": "Budgeted closed-loop campaigns over held-back experimental records",
+      "limits": "Early project; README reports a replay backend, not new physical execution. Results have not been independently reproduced here.",
+      "training": {
+        "reward": "Project describes verifier gates and withheld-design evaluation.",
+        "reset": "Stateful lab service is described; reset semantics not audited.",
+        "branching": "Not audited."
+      },
+      "status": "early-project-author-reported",
+      "evidence": "https://github.com/Yibo-Wen/as-bench"
+    },
+    {
+      "id": "asbench-twin",
+      "resource_id": "as-bench",
+      "name": "as-bench digital-twin campaign",
+      "feedback": "digital-twin",
+      "interaction": "budgeted-simulator-jobs",
+      "new_physical_experiments": false,
+      "openness": [
+        "experimental-design",
+        "optimization"
+      ],
+      "focus": "Campaigns using a hidden process model",
+      "limits": "A twin supplies model predictions; grounding in real data does not make them new physical measurements.",
+      "training": {
+        "reward": "Project-specific verifier gates.",
+        "reset": "Not audited.",
+        "branching": "Not audited."
+      },
+      "status": "early-project-author-reported",
+      "evidence": "https://github.com/Yibo-Wen/as-bench"
+    },
+    {
+      "id": "asbench-live-contract",
+      "resource_id": "as-bench",
+      "name": "as-bench live backend contract",
+      "feedback": "planned-physical-backend",
+      "interaction": "proposed-device-jobs",
+      "new_physical_experiments": null,
+      "openness": [
+        "experimental-design"
+      ],
+      "focus": "An interface contract for future physical-lab jobs",
+      "limits": "README status is contract defined. Do not list as an already demonstrated live benchmark; physical execution is unverified.",
+      "training": {
+        "reward": "Proposed contract only.",
+        "reset": "Not established.",
+        "branching": "Not established."
+      },
+      "status": "contract-only",
+      "evidence": "https://github.com/Yibo-Wen/as-bench"
+    },
+    {
+      "id": "profile-mle-bench",
+      "resource_id": "mle-bench",
+      "name": "MLE-bench",
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Iterative ML engineering on 75 recreated Kaggle competitions.",
+      "limits": "Known competition tasks; public solutions/contamination and resource differences require controls. Computational training runs do not collect new physical measurements.",
+      "training": {
+        "reward": "Competition metrics and medal thresholds; the public validity tool does not expose hidden test scores in the paper protocol.",
+        "reset": "Fresh execution environments and fixed datasets; downloads/compute prerequisites apply.",
+        "branching": "Independent runs are possible; filesystem/container snapshots are an implementation choice, not an audited standard contract."
+      },
+      "status": "public-data-code",
+      "evidence": "https://github.com/openai/mle-bench/",
+      "evaluation_family": "computational-research"
+    },
+    {
+      "id": "profile-paperbench",
+      "resource_id": "paperbench",
+      "name": "PaperBench",
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Reproduce research papers against hierarchical implementation/execution/result rubrics.",
+      "limits": "Replication supplies the target method. Automated judging can err; exposing the hidden grading rubric for training changes the task.",
+      "training": {
+        "reward": "Weighted rubric score including clean reproduction and result match; code-development-only scoring is a separate mode.",
+        "reset": "Clean VM reproduction is described; full reproduction requires datasets, dependencies and compute.",
+        "branching": "Candidate code branches are possible, but each independent execution/grade must be budgeted."
+      },
+      "status": "public-code",
+      "evidence": "https://github.com/openai/preparedness/tree/main/project/paperbench",
+      "evaluation_family": "computational-research"
+    },
+    {
+      "id": "profile-re-bench",
+      "resource_id": "re-bench",
+      "name": "RE-Bench",
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Seven bounded AI R&D tasks with human comparisons and objective scores.",
+      "limits": "Small selected task set. Best-of-k and longer runs use different allocations and need comparable total resource accounting.",
+      "training": {
+        "reward": "Task-specific quantitative scores, including runtime and model loss.",
+        "reset": "Task repositories specify environments and starting artifacts; hardware and data requirements vary.",
+        "branching": "Independent agent attempts are reported; full state cloning was not audited."
+      },
+      "status": "public-code",
+      "evidence": "https://github.com/METR/ai-rd-tasks",
+      "evaluation_family": "computational-research"
+    },
+    {
+      "id": "profile-mlgym",
+      "resource_id": "mlgym",
+      "name": "MLGym-Bench",
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Gym-compatible computational research interface and 13 diverse ML tasks.",
+      "limits": "A benchmark/framework enabling RL does not establish a trained discovery policy. Task performance can improve through ordinary engineering.",
+      "training": {
+        "reward": "Task-defined validation/test metrics; evaluator access must match the chosen benchmark protocol.",
+        "reset": "Gym-style task/environment initialization; dataset and runtime setup are required.",
+        "branching": "Modular execution supports agent experimentation; exact snapshot/branch semantics are not established by this review."
+      },
+      "status": "public-code",
+      "evidence": "https://github.com/facebookresearch/MLGym",
+      "evaluation_family": "computational-research"
+    },
+    {
+      "id": "profile-mlrc-bench",
+      "resource_id": "mlrc-bench",
+      "name": "MLRC-Bench",
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Research-method proposals and repository-level implementation on seven competitions.",
+      "limits": "Competition effectiveness and scientific novelty are distinct; public content and source-paper guidance can contaminate evaluation.",
+      "training": {
+        "reward": "Objective test effectiveness relative to baselines/human solutions, under runtime and GPU-memory constraints.",
+        "reset": "Task-specific starter repositories and data splits; computational prerequisites differ.",
+        "branching": "Alternative implementations can be evaluated independently; account for all evaluator/compute calls."
+      },
+      "status": "public-code",
+      "evidence": "https://github.com/yunx-z/MLRC-Bench",
+      "evaluation_family": "computational-research"
+    },
+    {
+      "id": "profile-llm-srbench",
+      "resource_id": "llm-srbench",
+      "name": "LLM-SRBench",
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Equation discovery with transformed known equations and synthetic terms.",
+      "limits": "Uses supplied datasets rather than autonomous physical measurement. LLM-assisted construction/judging and known scientific priors remain relevant.",
+      "training": {
+        "reward": "Numerical ID/OOD fidelity and symbolic-equivalence metrics; these measure different properties.",
+        "reset": "Fixed versioned problem/data instances; no simulator or laboratory reset is required.",
+        "branching": "Candidate expressions can be tested repeatedly; evaluation and search budget should be counted."
+      },
+      "status": "public-data-code",
+      "evidence": "https://github.com/deep-symbolic-mathematics/llm-srbench"
+    },
+    {
+      "id": "profile-acdb",
+      "resource_id": "acdb",
+      "name": "ACDB initial ladder",
+      "feedback": "synthetic-scm",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Causal graph recovery with budgeted hard interventions and abstention.",
+      "limits": "Small linear-Gaussian causally sufficient worlds. The initial dense ladder has a high random-graph floor and is explicitly a calibration/audit report.",
+      "training": {
+        "reward": "Separate skeleton recovery, directed-DAG recovery and intervention-efficiency scoring.",
+        "reset": "Paper describes generated paired instances and a new session per world; a public implementation was not verified.",
+        "branching": "Do not assume branchable sessions from the paper API alone."
+      },
+      "status": "preprint-described",
+      "evidence": "https://arxiv.org/abs/2609.31675"
+    },
+    {
+      "id": "profile-kosmos-audit",
+      "resource_id": "kosmos-audit",
+      "name": "Kosmos radiobiology audit (three cases)",
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Audit proposed biological relationships against empirical null models.",
+      "limits": "A three-case study rather than a standardized broad benchmark; small samples and analytic choices limit generalization.",
+      "training": {
+        "reward": "Claim-specific correlation/survival statistics and random-gene or permutation nulls; no shared RL reward API.",
+        "reset": "Fixed public GEO datasets and specified analyses; an executable reset wrapper was not verified.",
+        "branching": "Alternative analyses are possible but need multiple-testing and provenance controls."
+      },
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/abs/2511.13825"
+    },
+    {
+      "id": "profile-science-gym",
+      "resource_id": "science-gym",
+      "name": "Science-Gym",
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Seven scientific simulations with experiment collection and equation-problem interfaces.",
+      "limits": "Simulation, not live physics. No explicit new-object/variable discovery interface; droplet-friction symbolic ground truth is listed as unknown.",
+      "training": {
+        "reward": "Gym task rewards and equation/problem evaluation are separate; a control reward alone does not establish explanation recovery.",
+        "reset": "Gym-compatible reset/step APIs are documented; per-problem settings differ.",
+        "branching": "Simulation can be reinitialized; arbitrary state cloning was not independently audited."
+      },
+      "status": "public-code",
+      "evidence": "https://github.com/pibborn/science-gym"
+    },
+    {
+      "id": "profile-discern",
+      "resource_id": "discern",
+      "name": "DISCERN",
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Data integrity, analysis verification and evidence-sensitive hypothesis revision.",
+      "limits": "Real data with controlled defects and constructed counterfactual dossiers; no new physical measurements. Rubric/judge and domain effects require attention.",
+      "training": {
+        "reward": "Level-specific scores and claim-level evaluation; using evaluation judgments as training rewards needs an independent hidden audit.",
+        "reset": "Versioned task/data bundles; exact training wrapper and reset semantics were not executed here.",
+        "branching": "Counterfactual task variants are evaluation cases, not experimentally performed physical interventions."
+      },
+      "status": "public-data",
+      "evidence": "https://huggingface.co/datasets/discern-bench-anon/discern-benchmark"
+    },
+    {
+      "id": "profile-a-lab",
+      "resource_id": "a-lab",
+      "name": "A-Lab demonstration",
+      "feedback": "new-physical-measurements",
+      "interaction": "remote-device-jobs",
+      "new_physical_experiments": true,
+      "openness": [
+        "experimental-design",
+        "hypothesis-testing"
+      ],
+      "focus": "Autonomous solid-state synthesis and physical XRD feedback.",
+      "limits": "Laboratory demonstration, not a turnkey public benchmark. The publisher updated synthesis counts; phase interpretation and material novelty require scrutiny.",
+      "training": {
+        "reward": "Measured phase/yield feedback guides recipe search; computational stability is separate from successful synthesis.",
+        "reset": "Requires physical equipment, consumables and preparation. Samples/devices cannot be reset like a simulator.",
+        "branching": "Additional experiments consume resources; arbitrary branching or cloning is unavailable."
+      },
+      "status": "source-reported-tooling",
+      "evidence": "https://www.nature.com/articles/s41586-023-06734-w"
+    },
+    {
+      "id": "profile-robin",
+      "resource_id": "robin",
+      "name": "Robin laboratory-feedback demonstration",
+      "feedback": "new-physical-measurements",
+      "interaction": "human-mediated-lab",
+      "new_physical_experiments": true,
+      "openness": [
+        "experimental-design",
+        "hypothesis-testing"
+      ],
+      "focus": "Hypothesis proposals and analysis updated from cell-assay and RNA-seq evidence.",
+      "limits": "System demonstration with scientist-run experiments and some human changes to assay choices; no generic public lab access or discovery benchmark.",
+      "training": {
+        "reward": "Experimental measurements plus scientific interpretation; no standardized per-step RL reward is supplied.",
+        "reset": "Cell culture and assays require human work, new samples and laboratory preparation.",
+        "branching": "Independent biological repeats are possible at physical cost; identical-state branching is not provided."
+      },
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/abs/2505.13400"
+    },
+    {
+      "id": "profile-virtual-lab",
+      "resource_id": "virtual-lab",
+      "name": "Virtual Lab physical validation",
+      "feedback": "new-physical-measurements",
+      "interaction": "human-mediated-lab",
+      "new_physical_experiments": true,
+      "openness": [
+        "experimental-design",
+        "hypothesis-testing"
+      ],
+      "focus": "Computational nanobody design followed by wet-lab binding validation.",
+      "limits": "The team is virtual; validation is physical. Humans run scripts/experiments. This is a demonstration rather than a public interactive physical benchmark.",
+      "training": {
+        "reward": "Computational design scores differ from physical binding measurements; neither is clinical efficacy.",
+        "reset": "Agent discussions can be restarted, while physical validation requires new samples and laboratory work.",
+        "branching": "Multiple computational proposals can be branched; physical tests are new experiments with costs."
+      },
+      "status": "source-reported-tooling",
+      "evidence": "https://www.nature.com/articles/s41586-025-09442-9"
+    },
+    {
+      "id": "exploration-narrowing-analysis",
+      "resource_id": "exploration-narrowing",
+      "name": "AI Research Agents Narrow Scientific Exploration — idea-space audit",
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "question-generation",
+        "research-diversity"
+      ],
+      "focus": "Breadth and literature proximity of agent-generated research ideas",
+      "limits": "Text-space and historical impact proxies; no independent experimental validation of generated hypotheses.",
+      "training": {
+        "reward": "Reported breadth, proximity and future-alignment measures; not a supplied online training reward.",
+        "reset": "Fixed literature and idea-analysis study; interactive reset is not applicable.",
+        "branching": "Not applicable to this analysis profile."
+      },
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/abs/2605.27905"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<section class="research-section library-section" aria-labelledby="library-heading">
+  <div class="section-heading"><div><p class="eyebrow">THE RESEARCH LIBRARY</p><h1 id="library-heading">A field, connected<span class="heading-dot">.</span></h1><p class="section-description">Browse @@WORK_COUNT@@ works across eight questions in Open World Discovery.</p></div><a class="text-link" href="https://github.com/OWD-AI/awesome-open-world-discovery/blob/main/references.bib">Download BibTeX ↗</a></div>
+  <div class="research-layout library-layout">
+    <aside class="library-sidebar"><details class="theme-panel" open><summary>Research themes <span>@@WORK_COUNT@@</span></summary><nav id="theme-filters" class="theme-list" aria-label="Filter by research theme">@@THEME_BUTTONS@@</nav></details><a class="sidebar-about" href="@@ABOUT@@">About our research scope <span aria-hidden="true">↗</span></a></aside>
+    <div class="library-column">
+      <div class="toolbar library-toolbar"><label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">Search the library</span><input id="search" type="search" placeholder="Search titles, authors, or ideas…" autocomplete="off"></label><label class="select-field"><span class="sr-only">Publication year</span><select id="year"><option value="all">All years</option>@@YEARS@@</select></label><label class="select-field"><span class="sr-only">Sort works</span><select id="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="title">Title A–Z</option></select></label></div>
+      <div class="library-status"><p id="theme-question" class="theme-question">Eight research questions. One connected discovery process.</p><p id="result-count" class="result-count" aria-live="polite">@@WORK_COUNT@@ works</p></div>
+      <div id="results" class="results"><div id="cards" class="work-list">@@INITIAL_WORKS@@</div><p id="empty" class="empty" hidden>No works match these filters.</p></div>
+      <button id="load-more" class="load-more" type="button" hidden>Load more works <span aria-hidden="true">↓</span></button>
+      <noscript><p class="small-note">All works are listed above. Search and filters require JavaScript.</p></noscript>
+    </div>
+  </div>
+</section>
