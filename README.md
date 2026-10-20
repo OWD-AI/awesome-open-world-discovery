@@ -60,16 +60,16 @@ Visit the website for summaries, figures, today's updates, and the full research
 
 | Date | Paper |
 | --- | --- |
+| 2026-10-16 | [Self-Evolving Coding Agents via Harness-Policy Optimization](https://arxiv.org/abs/2610.22791) |
 | 2026-10-16 | [DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses](https://arxiv.org/abs/2610.23839) |
+| 2026-10-16 | [Benchmarking and Enhancing Agentic Causal Discovery](https://arxiv.org/abs/2610.22846) |
 | 2026-10-15 | [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) |
 | 2026-10-15 | [Null Controls Are Necessary but Not Sufficient: Evaluating Acceptance Guards for Scientific Discovery and Interpretability](https://arxiv.org/abs/2610.22445) |
 | 2026-10-15 | [Data World: Scaling Data Environments from Scratch](https://arxiv.org/abs/2610.21656) |
 | 2026-10-14 | [SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm](https://arxiv.org/abs/2610.20431) |
 | 2026-10-14 | [Scaling Discovery Requires Forgetting](https://arxiv.org/abs/2610.20563) |
-| 2026-10-13 | [Searching for What Matters: Open-Ended Discovery of Multiple Hypotheses with Agentic Data Exploration](https://arxiv.org/abs/2610.17874) |
-| 2026-10-13 | [Autonomous Science Bench: Evaluating AI Agents for Autonomous Scientific Discovery](https://arxiv.org/abs/2610.18449) |
-| 2026-10-12 | [HarnessTTT: Learn to Optimize Harness at Test-Time for Scientific Discovery](https://arxiv.org/abs/2610.17370) |
-| 2026-10-12 | [D-World: An Explicit World-Language-Action Model with Recursive Self-Improvement under Dual Control](https://arxiv.org/abs/2610.17114) |
+| 2026-10-14 | [Amortizing Sequential Experimental Design in Reasoning LLMs](https://arxiv.org/abs/2610.20832) |
+| 2026-10-13 | [Self-Evolving Agent Harness](https://arxiv.org/abs/2610.18813) |
 
 <a id="contents"></a>
 
