@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T20:38:50-04:00",
+  "updated_at": "2026-10-19T20:42:38-04:00",
   "window_start": "2026-09-20",
   "window_end": "2026-10-19",
   "window_days": 30,
@@ -234,6 +234,18 @@
       "id": "c749e943da3bd0cf"
     },
     {
+      "title": "Recursive self-improvement, part 3: code that rewrites its coder, from FunSearch to AIDE²",
+      "url": "https://ashishkumar.ai/blog/self-improving-code-alphaevolve-to-aide",
+      "published_at": "2026-10-11",
+      "kind": "blog",
+      "summary": "Ashish Kumar analyzes code-evolving research systems and argues that current recursive improvement lives mainly in editable scaffolds, search policies, memory, and tools. The post highlights transferred gains from AIDE² but also stresses evaluator gaming across systems.",
+      "date_evidence": "Article header explicitly states 11 October 2026.",
+      "relevance": "Useful technical commentary on harness-level RSI, transfer, verifier limits, and the safeguards needed before running autonomous improvement loops.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "65ebb8893bb9f2db"
+    },
+    {
       "title": "TagBO: LLM-Driven Task-Aware Graph Bayesian Optimization for Scientific Discovery",
       "url": "https://arxiv.org/abs/2610.14626",
       "published_at": "2026-10-10",
@@ -354,6 +366,18 @@
       "id": "7d26a5c9a55b02eb"
     },
     {
+      "title": "Language Models as AI Research World Models",
+      "url": "https://arxiv.org/abs/2610.12235",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "Uses language models to predict the outcomes of proposed research interventions from more than 2,600 prior experiments. Research experience improved intervention ranking and reduced selection regret, including across environments.",
+      "date_evidence": "arXiv submission history: v1 submitted 8 October 2026 at 16:18:54 UTC.",
+      "relevance": "Directly addresses learned world models for experimental selection, allowing AutoResearch agents to choose promising trials under limited budgets.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "4f0706d28b33b8b2"
+    },
+    {
       "title": "RSIGym: A Flexible Environment for Recursive Self-Improvement",
       "url": "https://arxiv.org/abs/2610.10310",
       "published_at": "2026-10-07",
@@ -438,6 +462,18 @@
       "id": "d0a1aad7216e9e1d"
     },
     {
+      "title": "From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists",
+      "url": "https://arxiv.org/abs/2610.05197",
+      "published_at": "2026-10-04",
+      "kind": "paper",
+      "summary": "Introduces MechHypoBench, which tests whether AI scientists can infer mechanisms from complex empirical observations across 14 fields and 17.98 million records. Generated hypotheses are evaluated through predictions under withheld conditions, revealing a substantial mechanism-recovery gap.",
+      "date_evidence": "arXiv submission history: v1 submitted 4 October 2026 at 13:10:47 UTC.",
+      "relevance": "A focused discovery evaluation for moving beyond correlations toward falsifiable mechanistic hypotheses.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "dd2dc379979e7af0"
+    },
+    {
       "title": "CURIO: Curiosity-Driven Test-Time Learning for Open-Ended Discovery",
       "url": "https://arxiv.org/abs/2610.04851",
       "published_at": "2026-10-04",
@@ -448,6 +484,30 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "0b814b1f03c2835d"
+    },
+    {
+      "title": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
+      "url": "https://arxiv.org/abs/2610.04915",
+      "published_at": "2026-10-04",
+      "kind": "paper",
+      "summary": "Tests whether AI-scientist answers actually follow supplied evidence by withdrawing or reversing evidence in benchmark data. High ordinary accuracy fell sharply under an evidence-grounded metric, showing that prior knowledge and shortcuts can masquerade as scientific reasoning.",
+      "date_evidence": "arXiv submission history: v1 submitted 4 October 2026 at 03:50:36 UTC.",
+      "relevance": "Provides a concrete discovery-evaluation protocol for separating evidence-grounded inference from recall or answer-key exploitation.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "31ad9246f9a10e34"
+    },
+    {
+      "title": "When Is Enough Enough in Self-Evolving LLM Systems?",
+      "url": "https://arxiv.org/abs/2610.04756",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "Develops an anytime-valid detector for deciding when iterative self-evolution should stop and a change-point method for selecting an earlier artifact when late updates overfit. Reported experiments substantially reduce compute while preserving unseen-test performance.",
+      "date_evidence": "arXiv source page submission history identifies the initial October 3, 2026 version; candidate metadata agrees.",
+      "relevance": "Supplies principled stopping and checkpoint-selection machinery for bounded recursive self-improvement.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "76e8130f572b6405"
     },
     {
       "title": "Recursive Self-Improvement: What Happens When AI Helps Build Better AI",
@@ -462,6 +522,54 @@
       "id": "95f2c46863e1dec4"
     },
     {
+      "title": "EvoCast: Reliable Autonomous Research Agents for Iterative Forecasting Architecture Evolution",
+      "url": "https://arxiv.org/abs/2610.04517",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "Presents an autonomous forecasting-research system that diagnoses baselines, proposes evidence-grounded architecture changes, executes them, and accumulates results. Deterministic authorities constrain edits, evaluation, and promotion while agents retain open-ended hypothesis generation.",
+      "date_evidence": "arXiv submission history: v1 submitted 3 October 2026 at 13:30:53 UTC.",
+      "relevance": "A strong example of controlled AutoResearch combining open-ended exploration with reproducible experimental governance.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "a05a302fbb0b80d4"
+    },
+    {
+      "title": "EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?",
+      "url": "https://arxiv.org/abs/2610.04184",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "Benchmarks agents that design executable evaluators by selecting tasks, implementing graders, and repairing them through pilots. The best agent-built evaluators approximate target-benchmark rankings but still suffer failures such as truncation and budget exhaustion.",
+      "date_evidence": "arXiv submission history: v1 submitted 3 October 2026 at 00:49:27 UTC; v2 followed on 16 October.",
+      "relevance": "Directly studies whether recursive-improvement agents can construct the feedback signals needed to guide their own progress.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "1663c6679dab72c8"
+    },
+    {
+      "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
+      "url": "https://arxiv.org/abs/2610.02616",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "Allows an optimizer to revise both an executor's harness and its own prompts, skills, tools, hooks, and notes while keeping model weights frozen. Execution-based verification, replay, and regression tracking produced held-out and out-of-distribution gains.",
+      "date_evidence": "arXiv submission history: v1 submitted 2 October 2026 at 00:16:30 UTC.",
+      "relevance": "A central agent-harness and recursive-self-improvement result demonstrating that verified optimizer self-modification can outperform fixed optimization workflows.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "ee825def7bc9147c"
+    },
+    {
+      "title": "YouRA: A Persistent-State Architecture for Evidence-Traceable Autonomous Research Agents",
+      "url": "https://arxiv.org/abs/2610.01097",
+      "published_at": "2026-10-01",
+      "kind": "paper",
+      "summary": "Introduces persistent state for hypotheses, gates, evidence pointers, failures, and recovery decisions across long research trajectories. Its separated controller and structured reflection improve end-to-end research scores and provenance diagnostics.",
+      "date_evidence": "arXiv submission history: v1 submitted 1 October 2026 at 05:40:21 UTC.",
+      "relevance": "Addresses evidence traceability, recovery, and durable research state—core infrastructure for reliable discovery agents.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "ef09ae7b3870a9b3"
+    },
+    {
       "title": "Scientific Discovery under Validation Congestion via Multi-Fidelity Pairwise Rankings",
       "url": "https://arxiv.org/abs/2610.01827",
       "published_at": "2026-10-01",
@@ -474,6 +582,90 @@
       "id": "0deb0ab403be3bb5"
     },
     {
+      "title": "Can AI Scientists Coordinate at Runtime?",
+      "url": "https://arxiv.org/abs/2610.00980",
+      "published_at": "2026-10-01",
+      "kind": "paper",
+      "summary": "Studies runtime selection and coordination among agents drawn from existing AI-scientist systems. Runtime agent selection improved observed mean scores, while extra contracts and verification had mixed effects under constrained budgets.",
+      "date_evidence": "arXiv submission history: v1 submitted 1 October 2026 at 03:18:07 UTC.",
+      "relevance": "Tests adaptive research-team orchestration rather than fixed, design-time scientific workflows.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "ab69aff2f86002f6"
+    },
+    {
+      "title": "SimEX: Simulation-Integrated Robotics AutoResearch",
+      "url": "https://arxiv.org/abs/2609.38982",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Combines open-ended simulation experiments with a small number of physical trials to build and repair reusable robot tools. The reported system acquired manipulation skills without demonstrations and with ten minutes of real-robot interaction.",
+      "date_evidence": "arXiv submission history: v1 submitted 30 September 2026 at 04:58:21 UTC.",
+      "relevance": "Extends AutoResearch into embodied discovery, using simulation as an experimental laboratory and real trials as targeted corrective evidence.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "792ae4cee70ec7f2"
+    },
+    {
+      "title": "Experimental Experience Modeling for Autonomous Research",
+      "url": "https://arxiv.org/abs/2609.39392",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Builds a continually growing library of decision-relevant experimental experience. An agent retrieves prior evidence and runs a low-cost pilot only when that evidence is insufficient before committing to expensive full evaluation.",
+      "date_evidence": "arXiv submission history: v1 submitted 30 September 2026 at 09:39:30 UTC.",
+      "relevance": "Directly targets experimental design and efficient experiment selection for autonomous discovery agents.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "4be86010ca166aa2"
+    },
+    {
+      "title": "Do Self-Evolving Skills Generalize to Held-Out Tasks?",
+      "url": "https://arxiv.org/abs/2609.39148",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Evaluates whether repeatedly rewritten agent skills transfer beyond the tasks used to evolve them. It focuses on the gap between training-task improvement and genuine held-out generalization across several self-evolving skill methods.",
+      "date_evidence": "The opened arXiv source is record 2609.39148; its original-version metadata gives 30 September 2026.",
+      "relevance": "A critical evaluation of persistent skill evolution and whether apparent self-improvement survives distribution shift.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "8c25de7e3b883e2e"
+    },
+    {
+      "title": "ConflictGuide: AutoResearch Improves When Competing Behaviors Are Made Visible",
+      "url": "https://arxiv.org/abs/2609.39933",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Shows that scalar feedback can hide tradeoffs among competing model behaviors. ConflictGuide exposes behavior-level conflicts so an AutoResearch loop can pursue edits that resolve them rather than merely improving a single aggregate score.",
+      "date_evidence": "The opened arXiv source is record 2609.39933; its original-version metadata gives 30 September 2026.",
+      "relevance": "Improves discovery feedback by making multi-objective experimental effects visible to an autonomous researcher.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "684cb6641ea22913"
+    },
+    {
+      "title": "Can AI Scientists Change Their Minds? Prior-Evidence Conflict in Synthetic Universes",
+      "url": "https://arxiv.org/abs/2609.36726",
+      "published_at": "2026-09-29",
+      "kind": "paper",
+      "summary": "Creates matched familiar and altered synthetic worlds to test whether scientific agents follow new evidence when it conflicts with recognizable prior laws. Reported laws are checked both by execution and mechanism recovery.",
+      "date_evidence": "The opened arXiv source is record 2609.36726; its original-version metadata gives 29 September 2026.",
+      "relevance": "Directly probes open-world scientific adaptation, prior-evidence conflict, and mechanism-grounded evaluation.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "68fff9f7177eccc7"
+    },
+    {
+      "title": "DoAtlas-2: A Foundation for Self-Evolving Causal Biomedical Discovery",
+      "url": "https://arxiv.org/abs/2609.35107",
+      "published_at": "2026-09-28",
+      "kind": "paper",
+      "summary": "Organizes large-scale biomedical resources around causal mechanisms and links them to a multi-million-edge evidence network. The proposed foundation is designed to evolve as additional population evidence becomes available.",
+      "date_evidence": "The opened arXiv source is record 2609.35107; its original-version metadata gives 28 September 2026.",
+      "relevance": "Combines causal discovery, external evidence accumulation, and continual knowledge evolution for biomedical research.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "7f1896e8c90c3d01"
+    },
+    {
       "title": "Collaborative Principle Evolution via Evidence Transfer for Scientific Discovery",
       "url": "https://arxiv.org/abs/2609.35315",
       "published_at": "2026-09-28",
@@ -484,6 +676,18 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "67f22dd62e086df9"
+    },
+    {
+      "title": "2026: The Year AI Scientists Become Effective, Fast, Scalable and Cheap",
+      "url": "https://isg.beel.org/blog/2026/09/26/2026-the-year-ai-scientists-become-effective-fast-scalable-and-cheap",
+      "published_at": "2026-09-26",
+      "kind": "blog",
+      "summary": "Joeran Beel argues that AI scientists are progressing from tool-using research loops toward systems that can choose and prioritize research directions. The post compares 2026 examples by output, duration, parallelism, cost, and human validation rather than treating paper generation alone as discovery.",
+      "date_evidence": "The article explicitly states “Published by Joeran Beel on 26th September 2026.”",
+      "relevance": "First-party lab commentary that frames autonomous science and AI-on-AI research as ingredients of recursive self-improvement while emphasizing remaining human control.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "61852a197328115f"
     },
     {
       "title": "Recursive self-improvement of AI research agents",
@@ -800,6 +1004,18 @@
       "id": "7d26a5c9a55b02eb"
     },
     {
+      "title": "Language Models as AI Research World Models",
+      "url": "https://arxiv.org/abs/2610.12235",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "Uses language models to predict the outcomes of proposed research interventions from more than 2,600 prior experiments. Research experience improved intervention ranking and reduced selection regret, including across environments.",
+      "date_evidence": "arXiv submission history: v1 submitted 8 October 2026 at 16:18:54 UTC.",
+      "relevance": "Directly addresses learned world models for experimental selection, allowing AutoResearch agents to choose promising trials under limited budgets.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "4f0706d28b33b8b2"
+    },
+    {
       "title": "RSIGym: A Flexible Environment for Recursive Self-Improvement",
       "url": "https://arxiv.org/abs/2610.10310",
       "published_at": "2026-10-07",
@@ -884,6 +1100,18 @@
       "id": "d0a1aad7216e9e1d"
     },
     {
+      "title": "From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists",
+      "url": "https://arxiv.org/abs/2610.05197",
+      "published_at": "2026-10-04",
+      "kind": "paper",
+      "summary": "Introduces MechHypoBench, which tests whether AI scientists can infer mechanisms from complex empirical observations across 14 fields and 17.98 million records. Generated hypotheses are evaluated through predictions under withheld conditions, revealing a substantial mechanism-recovery gap.",
+      "date_evidence": "arXiv submission history: v1 submitted 4 October 2026 at 13:10:47 UTC.",
+      "relevance": "A focused discovery evaluation for moving beyond correlations toward falsifiable mechanistic hypotheses.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "dd2dc379979e7af0"
+    },
+    {
       "title": "CURIO: Curiosity-Driven Test-Time Learning for Open-Ended Discovery",
       "url": "https://arxiv.org/abs/2610.04851",
       "published_at": "2026-10-04",
@@ -896,6 +1124,78 @@
       "id": "0b814b1f03c2835d"
     },
     {
+      "title": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
+      "url": "https://arxiv.org/abs/2610.04915",
+      "published_at": "2026-10-04",
+      "kind": "paper",
+      "summary": "Tests whether AI-scientist answers actually follow supplied evidence by withdrawing or reversing evidence in benchmark data. High ordinary accuracy fell sharply under an evidence-grounded metric, showing that prior knowledge and shortcuts can masquerade as scientific reasoning.",
+      "date_evidence": "arXiv submission history: v1 submitted 4 October 2026 at 03:50:36 UTC.",
+      "relevance": "Provides a concrete discovery-evaluation protocol for separating evidence-grounded inference from recall or answer-key exploitation.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "31ad9246f9a10e34"
+    },
+    {
+      "title": "When Is Enough Enough in Self-Evolving LLM Systems?",
+      "url": "https://arxiv.org/abs/2610.04756",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "Develops an anytime-valid detector for deciding when iterative self-evolution should stop and a change-point method for selecting an earlier artifact when late updates overfit. Reported experiments substantially reduce compute while preserving unseen-test performance.",
+      "date_evidence": "arXiv source page submission history identifies the initial October 3, 2026 version; candidate metadata agrees.",
+      "relevance": "Supplies principled stopping and checkpoint-selection machinery for bounded recursive self-improvement.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "76e8130f572b6405"
+    },
+    {
+      "title": "EvoCast: Reliable Autonomous Research Agents for Iterative Forecasting Architecture Evolution",
+      "url": "https://arxiv.org/abs/2610.04517",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "Presents an autonomous forecasting-research system that diagnoses baselines, proposes evidence-grounded architecture changes, executes them, and accumulates results. Deterministic authorities constrain edits, evaluation, and promotion while agents retain open-ended hypothesis generation.",
+      "date_evidence": "arXiv submission history: v1 submitted 3 October 2026 at 13:30:53 UTC.",
+      "relevance": "A strong example of controlled AutoResearch combining open-ended exploration with reproducible experimental governance.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "a05a302fbb0b80d4"
+    },
+    {
+      "title": "EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?",
+      "url": "https://arxiv.org/abs/2610.04184",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "Benchmarks agents that design executable evaluators by selecting tasks, implementing graders, and repairing them through pilots. The best agent-built evaluators approximate target-benchmark rankings but still suffer failures such as truncation and budget exhaustion.",
+      "date_evidence": "arXiv submission history: v1 submitted 3 October 2026 at 00:49:27 UTC; v2 followed on 16 October.",
+      "relevance": "Directly studies whether recursive-improvement agents can construct the feedback signals needed to guide their own progress.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "1663c6679dab72c8"
+    },
+    {
+      "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
+      "url": "https://arxiv.org/abs/2610.02616",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "Allows an optimizer to revise both an executor's harness and its own prompts, skills, tools, hooks, and notes while keeping model weights frozen. Execution-based verification, replay, and regression tracking produced held-out and out-of-distribution gains.",
+      "date_evidence": "arXiv submission history: v1 submitted 2 October 2026 at 00:16:30 UTC.",
+      "relevance": "A central agent-harness and recursive-self-improvement result demonstrating that verified optimizer self-modification can outperform fixed optimization workflows.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "ee825def7bc9147c"
+    },
+    {
+      "title": "YouRA: A Persistent-State Architecture for Evidence-Traceable Autonomous Research Agents",
+      "url": "https://arxiv.org/abs/2610.01097",
+      "published_at": "2026-10-01",
+      "kind": "paper",
+      "summary": "Introduces persistent state for hypotheses, gates, evidence pointers, failures, and recovery decisions across long research trajectories. Its separated controller and structured reflection improve end-to-end research scores and provenance diagnostics.",
+      "date_evidence": "arXiv submission history: v1 submitted 1 October 2026 at 05:40:21 UTC.",
+      "relevance": "Addresses evidence traceability, recovery, and durable research state—core infrastructure for reliable discovery agents.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "ef09ae7b3870a9b3"
+    },
+    {
       "title": "Scientific Discovery under Validation Congestion via Multi-Fidelity Pairwise Rankings",
       "url": "https://arxiv.org/abs/2610.01827",
       "published_at": "2026-10-01",
@@ -906,6 +1206,90 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "0deb0ab403be3bb5"
+    },
+    {
+      "title": "Can AI Scientists Coordinate at Runtime?",
+      "url": "https://arxiv.org/abs/2610.00980",
+      "published_at": "2026-10-01",
+      "kind": "paper",
+      "summary": "Studies runtime selection and coordination among agents drawn from existing AI-scientist systems. Runtime agent selection improved observed mean scores, while extra contracts and verification had mixed effects under constrained budgets.",
+      "date_evidence": "arXiv submission history: v1 submitted 1 October 2026 at 03:18:07 UTC.",
+      "relevance": "Tests adaptive research-team orchestration rather than fixed, design-time scientific workflows.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "ab69aff2f86002f6"
+    },
+    {
+      "title": "SimEX: Simulation-Integrated Robotics AutoResearch",
+      "url": "https://arxiv.org/abs/2609.38982",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Combines open-ended simulation experiments with a small number of physical trials to build and repair reusable robot tools. The reported system acquired manipulation skills without demonstrations and with ten minutes of real-robot interaction.",
+      "date_evidence": "arXiv submission history: v1 submitted 30 September 2026 at 04:58:21 UTC.",
+      "relevance": "Extends AutoResearch into embodied discovery, using simulation as an experimental laboratory and real trials as targeted corrective evidence.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "792ae4cee70ec7f2"
+    },
+    {
+      "title": "Experimental Experience Modeling for Autonomous Research",
+      "url": "https://arxiv.org/abs/2609.39392",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Builds a continually growing library of decision-relevant experimental experience. An agent retrieves prior evidence and runs a low-cost pilot only when that evidence is insufficient before committing to expensive full evaluation.",
+      "date_evidence": "arXiv submission history: v1 submitted 30 September 2026 at 09:39:30 UTC.",
+      "relevance": "Directly targets experimental design and efficient experiment selection for autonomous discovery agents.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "4be86010ca166aa2"
+    },
+    {
+      "title": "Do Self-Evolving Skills Generalize to Held-Out Tasks?",
+      "url": "https://arxiv.org/abs/2609.39148",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Evaluates whether repeatedly rewritten agent skills transfer beyond the tasks used to evolve them. It focuses on the gap between training-task improvement and genuine held-out generalization across several self-evolving skill methods.",
+      "date_evidence": "The opened arXiv source is record 2609.39148; its original-version metadata gives 30 September 2026.",
+      "relevance": "A critical evaluation of persistent skill evolution and whether apparent self-improvement survives distribution shift.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "8c25de7e3b883e2e"
+    },
+    {
+      "title": "ConflictGuide: AutoResearch Improves When Competing Behaviors Are Made Visible",
+      "url": "https://arxiv.org/abs/2609.39933",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Shows that scalar feedback can hide tradeoffs among competing model behaviors. ConflictGuide exposes behavior-level conflicts so an AutoResearch loop can pursue edits that resolve them rather than merely improving a single aggregate score.",
+      "date_evidence": "The opened arXiv source is record 2609.39933; its original-version metadata gives 30 September 2026.",
+      "relevance": "Improves discovery feedback by making multi-objective experimental effects visible to an autonomous researcher.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "684cb6641ea22913"
+    },
+    {
+      "title": "Can AI Scientists Change Their Minds? Prior-Evidence Conflict in Synthetic Universes",
+      "url": "https://arxiv.org/abs/2609.36726",
+      "published_at": "2026-09-29",
+      "kind": "paper",
+      "summary": "Creates matched familiar and altered synthetic worlds to test whether scientific agents follow new evidence when it conflicts with recognizable prior laws. Reported laws are checked both by execution and mechanism recovery.",
+      "date_evidence": "The opened arXiv source is record 2609.36726; its original-version metadata gives 29 September 2026.",
+      "relevance": "Directly probes open-world scientific adaptation, prior-evidence conflict, and mechanism-grounded evaluation.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "68fff9f7177eccc7"
+    },
+    {
+      "title": "DoAtlas-2: A Foundation for Self-Evolving Causal Biomedical Discovery",
+      "url": "https://arxiv.org/abs/2609.35107",
+      "published_at": "2026-09-28",
+      "kind": "paper",
+      "summary": "Organizes large-scale biomedical resources around causal mechanisms and links them to a multi-million-edge evidence network. The proposed foundation is designed to evolve as additional population evidence becomes available.",
+      "date_evidence": "The opened arXiv source is record 2609.35107; its original-version metadata gives 28 September 2026.",
+      "relevance": "Combines causal discovery, external evidence accumulation, and continual knowledge evolution for biomedical research.",
+      "review_status": "approved",
+      "source": "Codex source-checked",
+      "id": "7f1896e8c90c3d01"
     },
     {
       "title": "Collaborative Principle Evolution via Evidence Transfer for Scientific Discovery",
