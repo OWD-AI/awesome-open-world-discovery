@@ -54,22 +54,22 @@ Discovery involves deciding what to investigate, gathering evidence, testing exp
 
 **[Explore the research observatory →](https://owd-ai.github.io/awesome-open-world-discovery/#updates)**
 
-The latest 10 source-checked papers from our daily monitor · Updated 2026-10-19.
+The latest 10 source-checked papers from our daily monitor · Updated 2026-10-20.
 
 Visit the website for summaries, figures, today's updates, and the full research library.
 
 | Date | Paper |
 | --- | --- |
-| 2026-10-16 | [Self-Evolving Coding Agents via Harness-Policy Optimization](https://arxiv.org/abs/2610.22791) |
-| 2026-10-16 | [DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses](https://arxiv.org/abs/2610.23839) |
-| 2026-10-16 | [Benchmarking and Enhancing Agentic Causal Discovery](https://arxiv.org/abs/2610.22846) |
-| 2026-10-15 | [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) |
-| 2026-10-15 | [Null Controls Are Necessary but Not Sufficient: Evaluating Acceptance Guards for Scientific Discovery and Interpretability](https://arxiv.org/abs/2610.22445) |
-| 2026-10-15 | [Data World: Scaling Data Environments from Scratch](https://arxiv.org/abs/2610.21656) |
-| 2026-10-14 | [SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm](https://arxiv.org/abs/2610.20431) |
-| 2026-10-14 | [Scaling Discovery Requires Forgetting](https://arxiv.org/abs/2610.20563) |
-| 2026-10-14 | [Amortizing Sequential Experimental Design in Reasoning LLMs](https://arxiv.org/abs/2610.20832) |
-| 2026-10-13 | [Self-Evolving Agent Harness](https://arxiv.org/abs/2610.18813) |
+| 2026-10-19 | [Where is Physical RSI capability from? An Observational Scaling Law of LLM-as-policy](https://arxiv.org/abs/2610.26848) |
+| 2026-10-19 | [Vision-Language-Delta-Action: Learning Compact Deltas as Actionable Transition Interfaces for Robotic Manipulation](https://arxiv.org/abs/2610.25874) |
+| 2026-10-19 | [VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement](https://arxiv.org/abs/2610.26342) |
+| 2026-10-19 | [State World Models: Execute the Rules, Generate the Pixels](https://arxiv.org/abs/2610.26811) |
+| 2026-10-19 | [Self-Consistency of Entity Sets and Citations in a Deep Research System under Repeated Prompting](https://arxiv.org/abs/2610.26421) |
+| 2026-10-19 | [Remembering Has a Price: Learning Memory Worth under Resource Constraints](https://arxiv.org/abs/2610.26453) |
+| 2026-10-19 | [OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory](https://arxiv.org/abs/2610.26860) |
+| 2026-10-19 | [OpenSaC: A Python Library for Search as Code in Deep Research Agents](https://arxiv.org/abs/2610.25779) |
+| 2026-10-19 | [MemT-1.0: Towards Memory-Native Evolution](https://arxiv.org/abs/2610.26825) |
+| 2026-10-19 | [MIRA: A Multimodal Illustrated Deep Research Agent for Controllable Reports](https://arxiv.org/abs/2610.25926) |
 
 <a id="contents"></a>
 
