@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-151-2563eb?style=flat-square" alt="151 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-31-0f766e?style=flat-square" alt="31 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-152-2563eb?style=flat-square" alt="152 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-32-0f766e?style=flat-square" alt="32 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 25 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 24 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 15 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 22 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 23 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -571,6 +571,8 @@ For environment types, physical experiment access, and training interfaces, see 
   Junlin Yang et al. · Tsinghua University; University of Illinois Urbana-Champaign; Carnegie Mellon University; +2 institutions
 - <a id="discern"></a>**DISCERN: Can AI Agents Work Like Scientists and Guide Discovery?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.33357)* · [Paper](https://arxiv.org/abs/2609.33357) · [HF Dataset](https://huggingface.co/datasets/discern-bench-anon/discern-benchmark)<br>
   Nan Huang et al. · University of California San Diego
+- <a id="into-the-unknown"></a>**Into the Unknown: Benchmarking AI agents on open scientific research problems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19159)* · [Paper](https://arxiv.org/abs/2610.19159) · [Code](https://github.com/prometheus-eval/into-the-unknown) · [Project](https://prometheus-eval.github.io/into-the-unknown/viewer/) · [HF Dataset](https://huggingface.co/datasets/prometheus-eval/into-the-unknown)<br>
+  Seungone Kim et al. · Carnegie Mellon University; University of Minnesota; Stanford University; +13 institutions
 - <a id="d03"></a>**NewtonBench: Benchmarking Generalizable Scientific Law Discovery in LLM Agents** · *[ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/a0e1c2c40fc245b5fe7251ea33fbb045-Abstract-Conference.html)* · [Paper](https://arxiv.org/abs/2510.07172) · [Code](https://github.com/HKUST-KnowComp/NewtonBench)<br>
   Tianshi Zheng et al. · HKUST; NVIDIA
 - <a id="science-gym"></a>**Science-Gym: a simple testbed for AI-driven scientific discovery** · *[Machine Learning 2026](https://link.springer.com/article/10.1007/s10994-025-06914-x)* · [Paper](https://link.springer.com/article/10.1007/s10994-025-06914-x) · [Code](https://github.com/pibborn/science-gym)<br>

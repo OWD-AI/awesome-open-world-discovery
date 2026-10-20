@@ -5577,6 +5577,83 @@
           8
         ]
       }
+    },
+    "into-the-unknown": {
+      "institutions": [
+        "Carnegie Mellon University",
+        "University of Minnesota",
+        "Stanford University",
+        "Trillion Labs",
+        "Los Alamos National Laboratory",
+        "Sandia National Laboratory",
+        "Lawrence Berkeley National Laboratory",
+        "Ames National Laboratory",
+        "Iowa State University",
+        "University of Colorado Boulder",
+        "Michigan State University",
+        "Lawrence Livermore National Laboratory",
+        "TelePIX",
+        "Johns Hopkins University",
+        "NEC Laboratories Europe",
+        "Ss. Cyril and Methodius University of Skopje"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        15,
+        16
+      ],
+      "sections": [
+        "2.1 Evaluation protocol",
+        "2.2 Construction process",
+        "3 Experimental setup",
+        "4 Experimental results",
+        "5.1 Behaviors that inhibit scientific research",
+        "6 Related work",
+        "Appendix A: judge reliability",
+        "Appendix B: judge consistency"
+      ],
+      "method": "Fifteen author-proposed, unpublished follow-up directions supply original papers, code, datasets, and task specifications. Agents submit a follow-up paper, code, and execution logs. Expert-verified direction-specific and integrity rubrics are graded by an agentic judge, separating integrity, completeness, and sufficiency. The main metric requires all three strict gates.",
+      "evidence": "The authors evaluate nine agents on 15 tasks (135 submissions); none passes all strict gates and 114 fail integrity. Table 2 reports node-level and paper-level outcomes. Appendix A compares rubric judgments with domain-expert criticisms; agreement is strongest for satisfying the specified direction and weaker for broader scientific quality and impact.",
+      "discovery_use": "A concrete evaluation protocol for pursuing open scientific problems without a reference solution, with executable artifacts and evidence traceability. The primary contribution is a benchmark and evaluation method, so it belongs in Discovery Evaluation.",
+      "limits": "Only 15 computational follow-up tasks from selected domains; humans supply the research direction, constraints, and success conditions. No new physical experiments are required. Automated judging and expert-validated rubrics test necessary conditions, not comprehensive novelty, scientific merit, autonomous question generation, or general research ability. Results are author-reported, not independently reproduced.",
+      "classification_review": {
+        "date": "2026-10-19",
+        "category": "benchmarks",
+        "rationale": "The main contribution is a public collection of open research tasks, expert-verified rubrics, evidence-based grading, and baseline measurements, rather than a new discovery training algorithm or agent harness.",
+        "pdf_sha256": "69baf9bc753f5f57de496d45a74faee9f3afaee13df50e7b8228db1a9aa769fb",
+        "evidence_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          15,
+          16
+        ]
+      },
+      "agent_review": {
+        "model": "gpt-6.1-sol",
+        "decision": "include",
+        "category": "benchmarks",
+        "scope": "Targeted full-text body-section analysis through the local Codex subscription login; exact evidence text was checked locally against the PDF.",
+        "evidence_pages": [
+          5,
+          7,
+          16
+        ],
+        "pdf_sha256": "69baf9bc753f5f57de496d45a74faee9f3afaee13df50e7b8228db1a9aa769fb",
+        "reviewed_at": "2026-10-20T02:41:47.184443+00:00"
+      }
     }
   }
 }

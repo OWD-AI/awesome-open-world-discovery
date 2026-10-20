@@ -658,6 +658,30 @@
       },
       "status": "paper-described",
       "evidence": "https://arxiv.org/abs/2605.27905"
+    },
+    {
+      "id": "profile-into-the-unknown",
+      "resource_id": "into-the-unknown",
+      "name": "Into the Unknown",
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "open-research-problems",
+        "hypothesis-testing",
+        "method-search",
+        "evaluation"
+      ],
+      "focus": "Carry out scientist-proposed open follow-up research and submit a paper, code, and execution evidence.",
+      "limits": "Human-specified directions and rubrics constrain openness; tasks are computational and do not certify autonomous problem generation or new laboratory measurements. Automated judgments are fallible, and scientific merit still requires expert assessment.",
+      "training": {
+        "reward": "Public task-specific rubric graders report integrity, completeness, sufficiency, and strict joint pass rates; author baselines are evaluated with an agentic judge. No independently audited RL reward wrapper.",
+        "reset": "The official runner prepares a fresh task workspace with the supplied original code and data. Per-task dependencies and CPU/GPU resources must be provisioned.",
+        "branching": "Independent workspace copies support separate attempts; baseline agents can continue for up to five review/retry rounds. Standard snapshot/branch semantics are not audited."
+      },
+      "status": "public-data-code",
+      "evidence": "https://github.com/prometheus-eval/into-the-unknown",
+      "evaluation_family": "computational-research"
     }
   ]
 }

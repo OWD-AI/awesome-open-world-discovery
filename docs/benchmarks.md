@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**31 usage profiles** · Updated **2026-10-19**
+**32 usage profiles** · Updated **2026-10-19**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -488,6 +488,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [RE-Bench](#profile-re-bench) | Executed programs + evaluators | Computational experiments | Code |
 | [MLGym-Bench](#profile-mlgym) | Executed programs + evaluators | Computational experiments | Code |
 | [MLRC-Bench](#profile-mlrc-bench) | Executed programs + evaluators | Computational experiments | Code |
+| [Into the Unknown](#profile-into-the-unknown) | Executed programs + evaluators | Computational experiments | Data + code |
 
 <a id="profile-mle-bench"></a>
 
@@ -601,6 +602,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Objective test effectiveness relative to baselines/human solutions, under runtime and GPU-memory constraints. |
 | Reset | Task-specific starter repositories and data splits; computational prerequisites differ. |
 | Branching | Alternative implementations can be evaluated independently; account for all evaluator/compute calls. |
+
+</details>
+
+<a id="profile-into-the-unknown"></a>
+
+<details>
+<summary>Into the Unknown — details</summary>
+
+[Work](../README.md#into-the-unknown) · [Source](https://github.com/prometheus-eval/into-the-unknown)
+
+**Focus:** Carry out scientist-proposed open follow-up research and submit a paper, code, and execution evidence.
+
+**Openness:** `open-research-problems`, `hypothesis-testing`, `method-search`, `evaluation`
+
+**New physical measurements:** No
+
+**Limits:** Human-specified directions and rubrics constrain openness; tasks are computational and do not certify autonomous problem generation or new laboratory measurements. Automated judgments are fallible, and scientific merit still requires expert assessment.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Public task-specific rubric graders report integrity, completeness, sufficiency, and strict joint pass rates; author baselines are evaluated with an agentic judge. No independently audited RL reward wrapper. |
+| Reset | The official runner prepares a fresh task workspace with the supplied original code and data. Per-task dependencies and CPU/GPU resources must be provisioned. |
+| Branching | Independent workspace copies support separate attempts; baseline agents can continue for up to five review/retry rounds. Standard snapshot/branch semantics are not audited. |
 
 </details>
 
