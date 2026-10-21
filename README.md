@@ -54,22 +54,22 @@ Discovery involves deciding what to investigate, gathering evidence, testing exp
 
 **[Explore the research observatory →](https://owd-ai.github.io/awesome-open-world-discovery/#updates)**
 
-The latest 10 source-checked papers from our daily monitor · Updated 2026-10-20.
+The latest 10 source-checked papers from our daily monitor · Updated 2026-10-21.
 
 Visit the website for summaries, figures, today's updates, and the full research library.
 
 | Date | Paper |
 | --- | --- |
-| 2026-10-19 | [Where is Physical RSI capability from? An Observational Scaling Law of LLM-as-policy](https://arxiv.org/abs/2610.26848) |
-| 2026-10-19 | [Vision-Language-Delta-Action: Learning Compact Deltas as Actionable Transition Interfaces for Robotic Manipulation](https://arxiv.org/abs/2610.25874) |
-| 2026-10-19 | [VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement](https://arxiv.org/abs/2610.26342) |
-| 2026-10-19 | [State World Models: Execute the Rules, Generate the Pixels](https://arxiv.org/abs/2610.26811) |
-| 2026-10-19 | [Self-Consistency of Entity Sets and Citations in a Deep Research System under Repeated Prompting](https://arxiv.org/abs/2610.26421) |
-| 2026-10-19 | [Remembering Has a Price: Learning Memory Worth under Resource Constraints](https://arxiv.org/abs/2610.26453) |
-| 2026-10-19 | [OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory](https://arxiv.org/abs/2610.26860) |
-| 2026-10-19 | [OpenSaC: A Python Library for Search as Code in Deep Research Agents](https://arxiv.org/abs/2610.25779) |
-| 2026-10-19 | [MemT-1.0: Towards Memory-Native Evolution](https://arxiv.org/abs/2610.26825) |
-| 2026-10-19 | [MIRA: A Multimodal Illustrated Deep Research Agent for Controllable Reports](https://arxiv.org/abs/2610.25926) |
+| 2026-10-20 | [When Does Feedback Help? Auditing Learned Voltage-Clamp Experimental Design](https://arxiv.org/abs/2610.27632) |
+| 2026-10-20 | [Slot-JEPA: Object-Structured Prediction Interfaces for Latent World Models](https://arxiv.org/abs/2610.28074) |
+| 2026-10-20 | [Self-Evolving Agents through Privileged Retrospective Distillation](https://arxiv.org/abs/2610.27495) |
+| 2026-10-20 | [Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition](https://arxiv.org/abs/2610.28578) |
+| 2026-10-20 | [S-Agent 2.0: Spatial Reasoning with a General Coding Agent](https://arxiv.org/abs/2610.28354) |
+| 2026-10-20 | [OverSeer: Multi-Agent World Models Beyond What Agents See](https://arxiv.org/abs/2610.28554) |
+| 2026-10-20 | [MaD-RSI: Model-as-Data for Recursive Self-Improvement of Agent Harnesses](https://arxiv.org/abs/2610.28201) |
+| 2026-10-20 | [MMEnterprise-Bench: Evaluating Enterprise Agents over Evolving Multimodal Records](https://arxiv.org/abs/2610.27911) |
+| 2026-10-20 | [Learning the 4D World through Point Trajectory Forecasting](https://arxiv.org/abs/2610.28594) |
+| 2026-10-20 | [Harness Self-Evolution for Long-Horizon Terminal Agents](https://arxiv.org/abs/2610.27435) |
 
 <a id="contents"></a>
 
