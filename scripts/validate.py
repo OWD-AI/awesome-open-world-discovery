@@ -87,7 +87,7 @@ for item in updates['items']:
         parsed=urlsplit(link['url'])
         require(parsed.scheme=='https' and bool(parsed.hostname) and not parsed.username and not parsed.password,
                 'Invalid news artifact URL')
-        require(link['label'] in {'Model','Code','Project','Announcement'},'Invalid news artifact label')
+        require(link['label'] in {'Paper','Dataset','Model','Code','Project','Announcement'},'Invalid news artifact label')
     require(urlsplit(item['url']).scheme=='https' and item['url'] not in news_urls,'Invalid or duplicate news URL')
     news_urls.add(item['url'])
 from build_site import paper_slug
