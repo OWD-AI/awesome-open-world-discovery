@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T10:22:49-04:00",
+  "updated_at": "2026-10-22T11:15:48-04:00",
   "window_start": "2026-09-23",
   "window_end": "2026-10-22",
   "window_days": 30,
@@ -2054,12 +2054,22 @@
       "url": "https://arxiv.org/abs/2610.13194",
       "published_at": "2026-10-09",
       "kind": "paper",
-      "summary": "Adds co-evolving predictive world models to autonomous research loops so agents can forecast experiment outcomes and allocate costly executions more strategically instead of relying only on reactive trial and error.",
-      "date_evidence": "The opened arXiv source verifies the title under identifier 2610.13194 and reports the original submission date as 2026-10-09.",
-      "relevance": "Targets long-horizon scientific agents, experiment planning, delayed feedback, and scalable exploration of large research spaces.",
+      "summary": "JANUS organizes autonomous research around a growing graph of proposals, implementations, predictions, and experimental outcomes. It combines experiment selection with feedback-driven improvement of research skills and predictive judgment.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp is corroborated by the arXiv v1 submission history. The manuscript header dated October 10 is not the original publication timestamp.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "ff469b4c8e0c8634"
+      "relevance": "The primary contribution is an autonomous research harness that predicts experiment value, verifies proposals through execution, and retains experience to improve subsequent investigations.",
+      "id": "ff469b4c8e0c8634",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.13194"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/bilemond/JANUS"
+        }
+      ]
     },
     {
       "title": "Harness^2: Recursive Agent Harnessing for an Open World",
@@ -2084,6 +2094,24 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "97aa05f1d051eb67"
+    },
+    {
+      "title": "The Scientific Research Taste Benchmark (SciTaste-Bench): A Multi-Disciplinary Benchmark for Assessing Large Language Models' Judgment of Research Taste in Scientific Papers",
+      "url": "https://arxiv.org/abs/2610.28653",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "SciTaste-Bench evaluates paper assessment across six disciplines using 300 selected papers, seven scoring dimensions, and four external-information conditions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the arXiv v1 submission history. The manuscript's October 22 date is not the original publication date; the preserved timestamp falls on October 8 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Evaluates scientific value judgments that research agents could use to prioritize papers and ideas. Its discovery relevance is concrete, although agreement with bibliometric scores does not establish good research judgment.",
+      "id": "1b71ddb115ba5e37",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28653"
+        }
+      ]
     },
     {
       "title": "Recursive Self-Improvement through Multi-Agent Self-Supervision",
@@ -2126,12 +2154,58 @@
       "url": "https://arxiv.org/abs/2610.12235",
       "published_at": "2026-10-08",
       "kind": "paper",
-      "summary": "Uses language models to predict the outcomes of proposed research interventions from more than 2,600 prior experiments. Research experience improved intervention ranking and reduced selection regret, including across environments.",
-      "date_evidence": "arXiv submission history: v1 submitted 8 October 2026 at 16:18:54 UTC.",
-      "relevance": "Directly addresses learned world models for experimental selection, allowing AutoResearch agents to choose promising trials under limited budgets.",
+      "summary": "The paper tests whether frozen language models can use prior experiment records to forecast the effects of unseen research interventions, including transfer to environments with no local outcome records.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp is corroborated by the arXiv v1 submission history and the October 8 PDF margin date.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "4f0706d28b33b8b2"
+      "relevance": "The central contribution is an action-conditioned research world model that predicts experimental outcomes from retained evidence and helps agents allocate limited discovery budgets.",
+      "id": "4f0706d28b33b8b2",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.12235"
+        }
+      ]
+    },
+    {
+      "title": "LLM-IDEA: Identifiability-Driven Experimental Agent for Autonomous Discovery of Mechanistic World Models",
+      "url": "https://arxiv.org/abs/2610.11253",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "LLM-IDEA couples a language-model proposer to deterministic identifiability diagnostics. It also audits whether discovery benchmarks reward distinctions that their observation interfaces can actually reveal.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp matches the arXiv v1 submission history. The October 9 manuscript date does not replace the October 8 original submission timestamp.",
+      "review_status": "approved",
+      "relevance": "The primary contribution gives discovery agents a principled way to distinguish insufficient search from insufficient experimental information, choose informative experiments, and identify when a different experiment class is required.",
+      "id": "ce6ca28e99a1250e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.11253"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Suraskey/llm-idea"
+        }
+      ]
+    },
+    {
+      "title": "EvoBelief: Falsifiable World Models for Self-Improving LLM Agents",
+      "url": "https://arxiv.org/abs/2610.12789",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "EvoBelief maintains an external world model of falsifiable rules while keeping the underlying LLM frozen. Learned claims gain permission to affect decisions only after validation and can lose that permission when observations contradict them.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp matches the arXiv v1 submission history and the October 8 PDF margin date.",
+      "review_status": "approved",
+      "relevance": "The main contribution is continual acquisition, independent validation, reuse, and revision of environmental knowledge, with direct tests of hidden dynamics changes and quantitative law discovery.",
+      "id": "dc5079437446d0d5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.12789"
+        }
+      ]
     },
     {
       "title": "RSIGym: A Flexible Environment for Recursive Self-Improvement",
@@ -2192,6 +2266,24 @@
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "id": "fd0dc27ca8ea6554"
+    },
+    {
+      "title": "ST-Bench: A Spatial-Temporal Benchmark for Multi-Agent System Generation on Scientific Research Tasks",
+      "url": "https://arxiv.org/abs/2610.07763",
+      "published_at": "2026-10-06",
+      "kind": "paper",
+      "summary": "ST-Bench tests whether optimized multi-agent workflows improve scientific data analysis across hydrology, agriculture, and wetland methane tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the arXiv v1 submission history.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates generated scientific agent workflows, including continuous optimization feedback, held-out queries, and the cost of coordination.",
+      "id": "5bd5dfea78d8efef",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.07763"
+        }
+      ]
     },
     {
       "title": "Can AI Agents Make Open-Ended Scientific Discovery? Evidence from Station",
@@ -2255,18 +2347,6 @@
       "id": "dd2dc379979e7af0"
     },
     {
-      "title": "CURIO: Curiosity-Driven Test-Time Learning for Open-Ended Discovery",
-      "url": "https://arxiv.org/abs/2610.04851",
-      "published_at": "2026-10-04",
-      "kind": "paper",
-      "summary": "CURIO augments task-reward learning with prediction-error bonuses from an intrinsic world model, encouraging exploration beyond the policy's most likely outputs. It reports gains on mathematical-discovery tasks and single-cell denoising together with increased program diversity.",
-      "date_evidence": "The opened arXiv source page explicitly states “Submitted on 4 Oct 2026.”",
-      "relevance": "Combines open-ended exploration, learned world-model signals and test-time reinforcement learning for scientific discovery.",
-      "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "0b814b1f03c2835d"
-    },
-    {
       "title": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
       "url": "https://arxiv.org/abs/2610.04915",
       "published_at": "2026-10-04",
@@ -2304,6 +2384,24 @@
       "id": "76e8130f572b6405"
     },
     {
+      "title": "VCLMU: Mechanism-Centric Virtual Cell World Modeling for Perturbation Response",
+      "url": "https://arxiv.org/abs/2610.04475",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "VCLMU represents cells through reusable Latent Mechanism Units and models genetic interventions as transitions of their observation-specific states.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the arXiv v1 submission history.",
+      "review_status": "approved",
+      "relevance": "Contributes an explicit intervention-conditioned world representation for predicting unknown perturbation responses. The methodological contribution extends beyond an ordinary biological prediction application.",
+      "id": "cf2e288d5f7302fd",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04475"
+        }
+      ]
+    },
+    {
       "title": "Recursive Self-Improvement: What Happens When AI Helps Build Better AI",
       "url": "https://thesearchsherpa.com/recursive-self-improvement",
       "published_at": "2026-10-03",
@@ -2338,6 +2436,32 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "1663c6679dab72c8"
+    },
+    {
+      "title": "CURIO: Curiosity-Driven Test-Time Learning for Open-Ended Discovery",
+      "url": "https://arxiv.org/abs/2610.04851",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "CURIO augments test-time reinforcement learning for program-based discovery with curiosity derived from prediction errors in the proposing policy's representations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp establishes the original publication time. October 4 UTC corresponds to October 3 in America/New_York; the exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Introduces and evaluates a learning signal intended to preserve exploration while a proposing model learns from discovery feedback.",
+      "id": "0b814b1f03c2835d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04851"
+        },
+        {
+          "label": "Project",
+          "url": "https://ft2023.github.io/CURIO/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ft2023/CURIO"
+        }
+      ]
     },
     {
       "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
@@ -2487,6 +2611,24 @@
       "id": "684cb6641ea22913"
     },
     {
+      "title": "Identifying ODEs from Unstructured Data with Causal Representation Learning",
+      "url": "https://arxiv.org/abs/2609.37083",
+      "published_at": "2026-09-29",
+      "kind": "paper",
+      "summary": "SPEED-AE transforms disentangled representations into coordinates suited to sparse ODE discovery and analyzes the remaining ambiguity in recovered variables.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the arXiv v1 submission history.",
+      "review_status": "approved",
+      "relevance": "Connects identifiable latent variables to governing-equation discovery, addressing when learned representations support recovery of interpretable scientific laws.",
+      "id": "cff6e82a848858e5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.37083"
+        }
+      ]
+    },
+    {
       "title": "Can AI Scientists Change Their Minds? Prior-Evidence Conflict in Synthetic Universes",
       "url": "https://arxiv.org/abs/2609.36726",
       "published_at": "2026-09-29",
@@ -2509,6 +2651,28 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "7f1896e8c90c3d01"
+    },
+    {
+      "title": "DeepRewind: Predicting and Repairing Premature Commitments in Deep Research Agents",
+      "url": "https://arxiv.org/abs/2609.36344",
+      "published_at": "2026-09-28",
+      "kind": "paper",
+      "summary": "DeepRewind adds commitment control to a deep-research agent. It tracks evidence dependencies, predicts the consequences of accepting conclusions, blocks risky commitments, and repairs affected reasoning when contradictory evidence arrives.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-09-28T22:27:33Z; PDF page 1 corroborates 28 September 2026.",
+      "review_status": "approved",
+      "relevance": "Directly improves research agents’ ability to preserve competing hypotheses, reconsider conclusions, and repair knowledge invalidated by later evidence.",
+      "id": "1bad7b8c664a2eb2",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.36344"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AmirAbaskohi/DeepRewind"
+        }
+      ]
     },
     {
       "title": "Collaborative Principle Evolution via Evidence Transfer for Scientific Discovery",
@@ -2536,6 +2700,42 @@
       "content_label": "Blog · video not reviewed"
     },
     {
+      "title": "MultiEcho: An Experimental Science of Learned Worlds",
+      "url": "https://arxiv.org/abs/2609.33347",
+      "published_at": "2026-09-27",
+      "kind": "paper",
+      "summary": "MultiEcho studies frozen world models as experimental systems. It separates the predictability of their responses, recovery of intervention parameters, and correspondence to physical dynamics.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-09-27T08:17:42Z; PDF page 1 and the arXiv record corroborate 27 September 2026.",
+      "review_status": "approved",
+      "relevance": "Provides controlled experiments for discovering learned world-model response laws and testing whether those regularities correspond to physical effects, directly supporting verification of discovery representations.",
+      "id": "c70675c50ebe2aee",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.33347"
+        }
+      ]
+    },
+    {
+      "title": "ALDER: Discovering the Laws of a World by Acting in It",
+      "url": "https://arxiv.org/abs/2609.33728",
+      "published_at": "2026-09-27",
+      "kind": "paper",
+      "summary": "ALDER discovers equation-based world models through interaction. It combines structural proposals, numerical coefficient fitting, targeted experiments, and protected validation, returning a model only when admission criteria are met.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-09-27T16:30:08Z; PDF page 1 and the arXiv record corroborate 27 September 2026.",
+      "review_status": "approved",
+      "relevance": "Its primary contribution is an agentic cycle of hypothesis construction, discriminating experiments, counterexample-driven revision, and independent verification of executable world models.",
+      "id": "e998d3a5dbcbbbaa",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.33728"
+        }
+      ]
+    },
+    {
       "title": "2026: The Year AI Scientists Become Effective, Fast, Scalable and Cheap",
       "url": "https://isg.beel.org/blog/2026/09/26/2026-the-year-ai-scientists-become-effective-fast-scalable-and-cheap",
       "published_at": "2026-09-26",
@@ -2546,6 +2746,32 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "61852a197328115f"
+    },
+    {
+      "title": "GameBoyWorlds: A Testbed for Self-Improvement in Embodied Video Games",
+      "url": "https://arxiv.org/abs/2609.32093",
+      "published_at": "2026-09-25",
+      "kind": "paper",
+      "summary": "GameBoyWorlds benchmarks experience-driven learning through short execution tasks and extended playthroughs. Its unfamiliar fan-made games test knowledge acquisition beyond recall of familiar walkthroughs.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-09-25T23:55:38Z; PDF page 1 corroborates 25 September 2026.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates whether agents discover unfamiliar mechanics, retain actionable experience, and improve autonomously without demonstrations or game-specific rewards.",
+      "id": "7b88221edcfc1946",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.32093"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/DhananjayAshok/GameBoyWorlds-Benchmark"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/DhananjayAshok/GameBoyWorlds"
+        }
+      ]
     },
     {
       "title": "Bringing Trusted Research Into Kosmos with Springer Nature",
@@ -4212,12 +4438,22 @@
       "url": "https://arxiv.org/abs/2610.13194",
       "published_at": "2026-10-09",
       "kind": "paper",
-      "summary": "Adds co-evolving predictive world models to autonomous research loops so agents can forecast experiment outcomes and allocate costly executions more strategically instead of relying only on reactive trial and error.",
-      "date_evidence": "The opened arXiv source verifies the title under identifier 2610.13194 and reports the original submission date as 2026-10-09.",
-      "relevance": "Targets long-horizon scientific agents, experiment planning, delayed feedback, and scalable exploration of large research spaces.",
+      "summary": "JANUS organizes autonomous research around a growing graph of proposals, implementations, predictions, and experimental outcomes. It combines experiment selection with feedback-driven improvement of research skills and predictive judgment.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp is corroborated by the arXiv v1 submission history. The manuscript header dated October 10 is not the original publication timestamp.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "ff469b4c8e0c8634"
+      "relevance": "The primary contribution is an autonomous research harness that predicts experiment value, verifies proposals through execution, and retains experience to improve subsequent investigations.",
+      "id": "ff469b4c8e0c8634",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.13194"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/bilemond/JANUS"
+        }
+      ]
     },
     {
       "title": "Harness^2: Recursive Agent Harnessing for an Open World",
@@ -4242,6 +4478,24 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "97aa05f1d051eb67"
+    },
+    {
+      "title": "The Scientific Research Taste Benchmark (SciTaste-Bench): A Multi-Disciplinary Benchmark for Assessing Large Language Models' Judgment of Research Taste in Scientific Papers",
+      "url": "https://arxiv.org/abs/2610.28653",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "SciTaste-Bench evaluates paper assessment across six disciplines using 300 selected papers, seven scoring dimensions, and four external-information conditions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the arXiv v1 submission history. The manuscript's October 22 date is not the original publication date; the preserved timestamp falls on October 8 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Evaluates scientific value judgments that research agents could use to prioritize papers and ideas. Its discovery relevance is concrete, although agreement with bibliometric scores does not establish good research judgment.",
+      "id": "1b71ddb115ba5e37",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28653"
+        }
+      ]
     },
     {
       "title": "Recursive Self-Improvement through Multi-Agent Self-Supervision",
@@ -4284,12 +4538,58 @@
       "url": "https://arxiv.org/abs/2610.12235",
       "published_at": "2026-10-08",
       "kind": "paper",
-      "summary": "Uses language models to predict the outcomes of proposed research interventions from more than 2,600 prior experiments. Research experience improved intervention ranking and reduced selection regret, including across environments.",
-      "date_evidence": "arXiv submission history: v1 submitted 8 October 2026 at 16:18:54 UTC.",
-      "relevance": "Directly addresses learned world models for experimental selection, allowing AutoResearch agents to choose promising trials under limited budgets.",
+      "summary": "The paper tests whether frozen language models can use prior experiment records to forecast the effects of unseen research interventions, including transfer to environments with no local outcome records.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp is corroborated by the arXiv v1 submission history and the October 8 PDF margin date.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "4f0706d28b33b8b2"
+      "relevance": "The central contribution is an action-conditioned research world model that predicts experimental outcomes from retained evidence and helps agents allocate limited discovery budgets.",
+      "id": "4f0706d28b33b8b2",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.12235"
+        }
+      ]
+    },
+    {
+      "title": "LLM-IDEA: Identifiability-Driven Experimental Agent for Autonomous Discovery of Mechanistic World Models",
+      "url": "https://arxiv.org/abs/2610.11253",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "LLM-IDEA couples a language-model proposer to deterministic identifiability diagnostics. It also audits whether discovery benchmarks reward distinctions that their observation interfaces can actually reveal.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp matches the arXiv v1 submission history. The October 9 manuscript date does not replace the October 8 original submission timestamp.",
+      "review_status": "approved",
+      "relevance": "The primary contribution gives discovery agents a principled way to distinguish insufficient search from insufficient experimental information, choose informative experiments, and identify when a different experiment class is required.",
+      "id": "ce6ca28e99a1250e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.11253"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Suraskey/llm-idea"
+        }
+      ]
+    },
+    {
+      "title": "EvoBelief: Falsifiable World Models for Self-Improving LLM Agents",
+      "url": "https://arxiv.org/abs/2610.12789",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "EvoBelief maintains an external world model of falsifiable rules while keeping the underlying LLM frozen. Learned claims gain permission to affect decisions only after validation and can lose that permission when observations contradict them.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp matches the arXiv v1 submission history and the October 8 PDF margin date.",
+      "review_status": "approved",
+      "relevance": "The main contribution is continual acquisition, independent validation, reuse, and revision of environmental knowledge, with direct tests of hidden dynamics changes and quantitative law discovery.",
+      "id": "dc5079437446d0d5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.12789"
+        }
+      ]
     },
     {
       "title": "RSIGym: A Flexible Environment for Recursive Self-Improvement",
@@ -4340,6 +4640,24 @@
       "id": "e15c7d3de5e7f265"
     },
     {
+      "title": "ST-Bench: A Spatial-Temporal Benchmark for Multi-Agent System Generation on Scientific Research Tasks",
+      "url": "https://arxiv.org/abs/2610.07763",
+      "published_at": "2026-10-06",
+      "kind": "paper",
+      "summary": "ST-Bench tests whether optimized multi-agent workflows improve scientific data analysis across hydrology, agriculture, and wetland methane tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the arXiv v1 submission history.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates generated scientific agent workflows, including continuous optimization feedback, held-out queries, and the cost of coordination.",
+      "id": "5bd5dfea78d8efef",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.07763"
+        }
+      ]
+    },
+    {
       "title": "Can AI Agents Make Open-Ended Scientific Discovery? Evidence from Station",
       "url": "https://arxiv.org/abs/2610.08927",
       "published_at": "2026-10-06",
@@ -4388,18 +4706,6 @@
       "id": "dd2dc379979e7af0"
     },
     {
-      "title": "CURIO: Curiosity-Driven Test-Time Learning for Open-Ended Discovery",
-      "url": "https://arxiv.org/abs/2610.04851",
-      "published_at": "2026-10-04",
-      "kind": "paper",
-      "summary": "CURIO augments task-reward learning with prediction-error bonuses from an intrinsic world model, encouraging exploration beyond the policy's most likely outputs. It reports gains on mathematical-discovery tasks and single-cell denoising together with increased program diversity.",
-      "date_evidence": "The opened arXiv source page explicitly states “Submitted on 4 Oct 2026.”",
-      "relevance": "Combines open-ended exploration, learned world-model signals and test-time reinforcement learning for scientific discovery.",
-      "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "0b814b1f03c2835d"
-    },
-    {
       "title": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
       "url": "https://arxiv.org/abs/2610.04915",
       "published_at": "2026-10-04",
@@ -4424,6 +4730,24 @@
       "id": "76e8130f572b6405"
     },
     {
+      "title": "VCLMU: Mechanism-Centric Virtual Cell World Modeling for Perturbation Response",
+      "url": "https://arxiv.org/abs/2610.04475",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "VCLMU represents cells through reusable Latent Mechanism Units and models genetic interventions as transitions of their observation-specific states.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the arXiv v1 submission history.",
+      "review_status": "approved",
+      "relevance": "Contributes an explicit intervention-conditioned world representation for predicting unknown perturbation responses. The methodological contribution extends beyond an ordinary biological prediction application.",
+      "id": "cf2e288d5f7302fd",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04475"
+        }
+      ]
+    },
+    {
       "title": "EvoCast: Reliable Autonomous Research Agents for Iterative Forecasting Architecture Evolution",
       "url": "https://arxiv.org/abs/2610.04517",
       "published_at": "2026-10-03",
@@ -4446,6 +4770,32 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "1663c6679dab72c8"
+    },
+    {
+      "title": "CURIO: Curiosity-Driven Test-Time Learning for Open-Ended Discovery",
+      "url": "https://arxiv.org/abs/2610.04851",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "CURIO augments test-time reinforcement learning for program-based discovery with curiosity derived from prediction errors in the proposing policy's representations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp establishes the original publication time. October 4 UTC corresponds to October 3 in America/New_York; the exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Introduces and evaluates a learning signal intended to preserve exploration while a proposing model learns from discovery feedback.",
+      "id": "0b814b1f03c2835d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04851"
+        },
+        {
+          "label": "Project",
+          "url": "https://ft2023.github.io/CURIO/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ft2023/CURIO"
+        }
+      ]
     },
     {
       "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
@@ -4544,6 +4894,24 @@
       "id": "684cb6641ea22913"
     },
     {
+      "title": "Identifying ODEs from Unstructured Data with Causal Representation Learning",
+      "url": "https://arxiv.org/abs/2609.37083",
+      "published_at": "2026-09-29",
+      "kind": "paper",
+      "summary": "SPEED-AE transforms disentangled representations into coordinates suited to sparse ODE discovery and analyzes the remaining ambiguity in recovered variables.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the arXiv v1 submission history.",
+      "review_status": "approved",
+      "relevance": "Connects identifiable latent variables to governing-equation discovery, addressing when learned representations support recovery of interpretable scientific laws.",
+      "id": "cff6e82a848858e5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.37083"
+        }
+      ]
+    },
+    {
       "title": "Can AI Scientists Change Their Minds? Prior-Evidence Conflict in Synthetic Universes",
       "url": "https://arxiv.org/abs/2609.36726",
       "published_at": "2026-09-29",
@@ -4568,6 +4936,28 @@
       "id": "7f1896e8c90c3d01"
     },
     {
+      "title": "DeepRewind: Predicting and Repairing Premature Commitments in Deep Research Agents",
+      "url": "https://arxiv.org/abs/2609.36344",
+      "published_at": "2026-09-28",
+      "kind": "paper",
+      "summary": "DeepRewind adds commitment control to a deep-research agent. It tracks evidence dependencies, predicts the consequences of accepting conclusions, blocks risky commitments, and repairs affected reasoning when contradictory evidence arrives.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-09-28T22:27:33Z; PDF page 1 corroborates 28 September 2026.",
+      "review_status": "approved",
+      "relevance": "Directly improves research agents’ ability to preserve competing hypotheses, reconsider conclusions, and repair knowledge invalidated by later evidence.",
+      "id": "1bad7b8c664a2eb2",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.36344"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AmirAbaskohi/DeepRewind"
+        }
+      ]
+    },
+    {
       "title": "Collaborative Principle Evolution via Evidence Transfer for Scientific Discovery",
       "url": "https://arxiv.org/abs/2609.35315",
       "published_at": "2026-09-28",
@@ -4578,6 +4968,68 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "67f22dd62e086df9"
+    },
+    {
+      "title": "MultiEcho: An Experimental Science of Learned Worlds",
+      "url": "https://arxiv.org/abs/2609.33347",
+      "published_at": "2026-09-27",
+      "kind": "paper",
+      "summary": "MultiEcho studies frozen world models as experimental systems. It separates the predictability of their responses, recovery of intervention parameters, and correspondence to physical dynamics.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-09-27T08:17:42Z; PDF page 1 and the arXiv record corroborate 27 September 2026.",
+      "review_status": "approved",
+      "relevance": "Provides controlled experiments for discovering learned world-model response laws and testing whether those regularities correspond to physical effects, directly supporting verification of discovery representations.",
+      "id": "c70675c50ebe2aee",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.33347"
+        }
+      ]
+    },
+    {
+      "title": "ALDER: Discovering the Laws of a World by Acting in It",
+      "url": "https://arxiv.org/abs/2609.33728",
+      "published_at": "2026-09-27",
+      "kind": "paper",
+      "summary": "ALDER discovers equation-based world models through interaction. It combines structural proposals, numerical coefficient fitting, targeted experiments, and protected validation, returning a model only when admission criteria are met.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-09-27T16:30:08Z; PDF page 1 and the arXiv record corroborate 27 September 2026.",
+      "review_status": "approved",
+      "relevance": "Its primary contribution is an agentic cycle of hypothesis construction, discriminating experiments, counterexample-driven revision, and independent verification of executable world models.",
+      "id": "e998d3a5dbcbbbaa",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.33728"
+        }
+      ]
+    },
+    {
+      "title": "GameBoyWorlds: A Testbed for Self-Improvement in Embodied Video Games",
+      "url": "https://arxiv.org/abs/2609.32093",
+      "published_at": "2026-09-25",
+      "kind": "paper",
+      "summary": "GameBoyWorlds benchmarks experience-driven learning through short execution tasks and extended playthroughs. Its unfamiliar fan-made games test knowledge acquisition beyond recall of familiar walkthroughs.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-09-25T23:55:38Z; PDF page 1 corroborates 25 September 2026.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates whether agents discover unfamiliar mechanics, retain actionable experience, and improve autonomously without demonstrations or game-specific rewards.",
+      "id": "7b88221edcfc1946",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.32093"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/DhananjayAshok/GameBoyWorlds-Benchmark"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/DhananjayAshok/GameBoyWorlds"
+        }
+      ]
     },
     {
       "title": "Recursive self-improvement of AI research agents",
