@@ -39,7 +39,7 @@ def fetch(url, limit=25_000_000):
         return body
 
 
-def acquire():
+def acquire(paper_cache=None):
     import fitz
     from PIL import Image
     path = ROOT / 'data/update-media.json'
@@ -65,9 +65,10 @@ def acquire():
         try:
             if host == 'arxiv.org':
                 pdf_url = url.replace('/abs/', '/pdf/')
-                pdf = cached.get(url, local / (key + '.pdf'))
+                candidates=[cached.get(url),Path(paper_cache)/key/'paper.pdf' if paper_cache else None]
+                pdf=next((candidate for candidate in candidates if candidate and candidate.is_file()),local/(key+'.pdf'))
                 if not pdf.exists():
-                    pdf.write_bytes(fetch(pdf_url))
+                    pdf.write_bytes(fetch(pdf_url,limit=80_000_000))
                     time.sleep(3.2)
                 with fitz.open(pdf) as doc:
                     page = doc[0]
@@ -133,4 +134,6 @@ def acquire():
 
 
 if __name__ == '__main__':
-    acquire()
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--paper-cache',type=Path,help='Optional local reviewed-PDF cache; PDFs are never copied into public assets.')
+    acquire(parser.parse_args().paper_cache)
