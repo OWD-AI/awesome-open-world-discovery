@@ -10,6 +10,19 @@ from build import CATEGORIES, load
 
 
 class SiteTests(unittest.TestCase):
+    def test_model_release_displays_official_artifacts_without_becoming_a_paper(self):
+        resources, _ = load()
+        links=[{'label':'Model','url':'https://huggingface.co/RecursiveSI/flint'},
+               {'label':'Code','url':'https://github.com/recursive-oss/rec'}]
+        updates={'window_end':'2026-10-21','window_days':30,'items':[{
+            'title':'Recursive Flint','summary':'A developer-reported automated research model release.',
+            'url':links[0]['url'],'kind':'model','published_at':'2026-10-21',
+            'review_status':'approved','links':links}]}
+        card=build_site.payload(resources['resources'],CATEGORIES,updates,'assets')['updates'][0]
+        self.assertEqual(card['links'],links)
+        self.assertEqual(card['content_label'],'Model release')
+        self.assertNotIn('Discuss',build_site.initial_cards([card]))
+
     def test_related_paper_and_discussion_keep_separate_content_and_dates(self):
         resources, _ = load()
         updates = {'window_end': '2026-10-19', 'window_days': 30, 'items': [

@@ -83,6 +83,11 @@ for item in updates['items']:
     require(item['review_status']=='approved' and item['date_evidence'].strip(),'Unverified news item')
     require(start<=date.fromisoformat(item['published_at'][:10])<=end,'News item outside rolling window')
     require(item['kind'] in {'paper','x','linkedin','blog','model'},'Invalid news type')
+    for link in item.get('links', []):
+        parsed=urlsplit(link['url'])
+        require(parsed.scheme=='https' and bool(parsed.hostname) and not parsed.username and not parsed.password,
+                'Invalid news artifact URL')
+        require(link['label'] in {'Model','Code','Project','Announcement'},'Invalid news artifact label')
     require(urlsplit(item['url']).scheme=='https' and item['url'] not in news_urls,'Invalid or duplicate news URL')
     news_urls.add(item['url'])
 from build_site import paper_slug

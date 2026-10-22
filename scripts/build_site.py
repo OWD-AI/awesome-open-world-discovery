@@ -67,7 +67,7 @@ def payload(resources, categories, updates, asset_prefix):
             continue
         source, group, mark = source_info(item)
         image = media.get(canonical(item['url']), {})
-        links = byurl.get(canonical(item['url']), [{'label': 'Paper' if item['kind'] == 'paper' else 'Read post', 'url': item['url']}])
+        links = byurl.get(canonical(item['url']), item.get('links') or [{'label': 'Paper' if item['kind'] == 'paper' else 'Model' if item['kind'] == 'model' else 'Read post', 'url': item['url']}])
         if image.get('related_url'):
             links = [*links, {'label': 'Related paper', 'url': image['related_url']}]
         news.append({'title': item['title'], 'summary': item['summary'], 'url': item['url'],
