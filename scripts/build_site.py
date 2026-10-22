@@ -185,6 +185,23 @@ def framework_figure(asset_prefix, about_url):
     return f'<figure class="framework-figure"><a href="{image}" target="_blank" rel="noopener noreferrer" aria-label="View the Open World Discovery framework at full size"><img src="{image}" width="1774" height="887" fetchpriority="high" alt="Our discovery framework: an agent experiments in a partially known world, gathers evidence, revises its hypotheses, expands its knowledge, and learns to discover."></a><figcaption><span>Our discovery framework</span><a href="{html.escape(about_url, quote=True)}">Explore the idea <span aria-hidden="true">↗</span></a></figcaption></figure>'
 
 
+def feed_context(updates):
+    """Describe the published feed, independently of catalog size or an in-progress run."""
+    refreshed = datetime.fromisoformat(updates['updated_at'].replace('Z', '+00:00'))
+    if refreshed.tzinfo is None:
+        raise ValueError('Feed refresh timestamp must include its timezone')
+    refreshed = refreshed.astimezone(ZoneInfo('America/New_York'))
+    start = date.fromisoformat(updates['window_start'])
+    end = date.fromisoformat(updates['window_end'])
+    def label(day, year=False):
+        return day.strftime('%b') + f' {day.day}' + (f', {day.year}' if year else '')
+    refresh_label = label(refreshed, True) + refreshed.strftime(' · %H:%M %Z')
+    return (f'<p class="feed-context" aria-label="Published feed information">'
+            f'<span>Feed refreshed <time datetime="{refreshed.isoformat(timespec="seconds")}">{refresh_label}</time></span> '
+            f'<span>Publication window <time datetime="{start.isoformat()}">{label(start, start.year != end.year)}</time>'
+            f' – <time datetime="{end.isoformat()}">{label(end, True)}</time></span></p>')
+
+
 def render(resources, benchmarks, categories, inline=False, page='home', paper=None):
     from build import CATEGORY_GUIDE
     if page not in ('home', 'updates', 'library', 'about', 'paper'):
@@ -202,7 +219,7 @@ def render(resources, benchmarks, categories, inline=False, page='home', paper=N
     theme_links = ''.join(f'<a href="{esc(paths["library"], quote=True)}?theme={key}">{esc(title)}<span>{counts[key]}</span></a>' for key, title in categories.items())
     theme_buttons = f'<button type="button" data-theme="all" aria-pressed="true">All themes<span>{len(resources)}</span></button>' + ''.join(f'<button type="button" data-theme="{key}" aria-pressed="false">{esc(title)}<span>{counts[key]}</span></button>' for key, title in categories.items())
     questions = ''.join(f'<a class="question-card" href="{esc(paths["library"], quote=True)}?theme={key}"><span class="question-number">0{index}</span><h3>{esc(title)}</h3><p>{esc(data["questions"][key])}</p><span>{counts[key]} works ↗</span></a>' for index, (key, title) in enumerate(categories.items(), 1))
-    intro = '''<section class="hero"><div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> EXPLORE BEYOND WHAT WE KNOW</p><h1>Open World<br>Discovery<span class="heading-dot">.</span></h1><p class="hero-description">Connecting research on agents that explore unknowns, build verifiable knowledge, and learn to discover.</p><div class="hero-actions"><a class="primary-link" href="#updates">Latest research <span aria-hidden="true">↓</span></a><a class="text-link" href="@@LIBRARY@@">Browse the library ↗</a></div></div>@@FRAMEWORK@@</section><div class="stats-line" aria-label="Collection statistics"><span><strong>@@WORK_COUNT@@</strong> curated works</span><span><strong>@@THEME_COUNT@@</strong> research themes</span><span><strong>30 days</strong> of updates</span><span class="updated">Updated @@UPDATED@@</span></div>''' if page == 'home' else ''
+    intro = '''<section class="hero"><div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> EXPLORE BEYOND WHAT WE KNOW</p><h1>Open World<br>Discovery<span class="heading-dot">.</span></h1><p class="hero-description">Connecting research on agents that explore unknowns, build verifiable knowledge, and learn to discover.</p><div class="hero-actions"><a class="primary-link" href="#updates">Latest research <span aria-hidden="true">↓</span></a><a class="text-link" href="@@LIBRARY@@">Browse the library ↗</a></div></div>@@FRAMEWORK@@</section>''' if page == 'home' else ''
     content = (ROOT / 'site' / (('updates' if page == 'home' else page) + '.html')).read_text(encoding='utf-8')
     footnote = '<section class="home-about"><div><h2>One connected discovery process.</h2><p>Representations, reasoning, training, systems, and evaluation contribute to a shared question: how can agents make verifiable discoveries and become better discoverers?</p></div><a class="text-link" href="@@ABOUT@@">What is Open World Discovery? ↗</a></section>' if page == 'home' else ''
     template = (ROOT / 'site/index.html').read_text(encoding='utf-8').replace('@@INTRO@@', intro).replace('@@CONTENT@@', content).replace('@@FOOTNOTE@@', footnote)
@@ -236,6 +253,7 @@ def render(resources, benchmarks, categories, inline=False, page='home', paper=N
         '@@STYLE@@': '<style>' + (ROOT / 'site/site.css').read_text(encoding='utf-8') + '</style>' if inline else '<link rel="stylesheet" href="' + base + 'site.css?v=' + hashlib.sha256((ROOT / 'site/site.css').read_bytes()).hexdigest()[:10] + '">',
         '@@SCRIPT@@': '<script>' + (ROOT / 'site/site.js').read_text(encoding='utf-8') + '</script>' if inline else '<script src="' + base + 'site.js?v=' + hashlib.sha256((ROOT / 'site/site.js').read_bytes()).hexdigest()[:10] + '" defer></script>',
         '@@UPDATED@@': esc(updates['updated_at'][:10]),
+        '@@FEED_CONTEXT@@': feed_context(updates),
         '@@NEWS_COUNT@@': str(len(data['updates'])), '@@WORK_COUNT@@': str(len(resources)), '@@THEME_COUNT@@': str(len(categories)),
         '@@TODAY_COUNT@@': str(sum(item['published_at'] == datetime.now(ZoneInfo('America/New_York')).date().isoformat() for item in data['updates'])),
         '@@HEADING_TAG@@': 'h2' if page == 'home' else 'h1',

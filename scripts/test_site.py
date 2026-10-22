@@ -11,6 +11,25 @@ from build import CATEGORIES, load
 
 
 class SiteTests(unittest.TestCase):
+    def test_feed_context_distinguishes_refresh_time_from_publication_window(self):
+        context = build_site.feed_context({'updated_at':'2026-10-22T04:05:36Z',
+                                           'window_start':'2026-09-22','window_end':'2026-10-21'})
+        self.assertIn('Oct 22, 2026 · 00:05 EDT', context)
+        self.assertIn('datetime="2026-10-22T00:05:36-04:00"', context)
+        self.assertIn('Publication window', context)
+        self.assertIn('datetime="2026-10-21"', context)
+        winter = build_site.feed_context({'updated_at':'2026-01-22T05:05:36Z',
+                                          'window_start':'2025-12-24','window_end':'2026-01-22'})
+        self.assertIn('00:05 EST', winter)
+        self.assertIn('Dec 24, 2025', winter)
+        self.assertIn('Jan 22, 2026', winter)
+        resources, benchmarks = load()
+        page = build_site.render(resources['resources'], benchmarks, CATEGORIES)
+        self.assertNotIn('class="stats-line"', page)
+        self.assertNotIn('A daily view of discovery.', page)
+        self.assertIn('Published feed information', page)
+        self.assertIn('Explore the library', page)
+
     def test_model_release_displays_official_artifacts_without_becoming_a_paper(self):
         resources, _ = load()
         links=[{'label':'Model','url':'https://huggingface.co/RecursiveSI/flint'},
