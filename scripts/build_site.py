@@ -4,9 +4,11 @@ import hashlib
 import html
 import json
 import shutil
-from datetime import date, timedelta
+from functools import lru_cache
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlsplit
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = 'https://owd-ai.github.io/awesome-open-world-discovery/'
@@ -39,6 +41,30 @@ def source_info(item):
     return host.removeprefix('www.'), 'Blogs' if item['kind'] == 'blog' else 'Other', '↗'
 
 
+@lru_cache(maxsize=512)
+def image_fingerprint(path, modified, size):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()[:10]
+
+
+def preview_images(image, asset_prefix):
+    images = []
+    for entry in image.get('images') or ([image] if image else []):
+        path = entry.get('path', '')
+        local = (ROOT / path).resolve()
+        if not path.startswith('assets/news/') or not local.is_relative_to(ROOT / 'assets/news') or not local.is_file():
+            continue
+        stat = local.stat()
+        images.append({'url': asset_prefix + '/' + path.removeprefix('assets/') + '?v=' + image_fingerprint(str(local), stat.st_mtime_ns, stat.st_size),
+                       'alt': entry.get('alt', ''), 'source_url': entry.get('source_url', image.get('source_url', '')),
+                       'credit': image.get('credit', 'Original source authors'),
+                       'width': entry.get('width', 1000), 'height': entry.get('height', 700)})
+    return images
+
+
+def merge_links(*groups):
+    return list({(link['label'], link['url']): link for group in groups for link in group}.values())
+
+
 def payload(resources, categories, updates, asset_prefix):
     media_path = ROOT / 'data/update-media.json'
     media = json.loads(media_path.read_text(encoding='utf-8')) if media_path.exists() else {}
@@ -67,16 +93,20 @@ def payload(resources, categories, updates, asset_prefix):
             continue
         source, group, mark = source_info(item)
         image = media.get(canonical(item['url']), {})
-        links = byurl.get(canonical(item['url']), item.get('links') or [{'label': 'Paper' if item['kind'] == 'paper' else 'Model' if item['kind'] == 'model' else 'Read post', 'url': item['url']}])
+        links = merge_links(byurl.get(canonical(item['url']), []), item.get('links', []))
+        if not links:
+            links = [{'label': 'Paper' if item['kind'] == 'paper' else 'Model' if item['kind'] == 'model' else 'Read post', 'url': item['url']}]
         if image.get('related_url'):
-            links = [*links, {'label': 'Related paper', 'url': image['related_url']}]
+            links = merge_links(links, [{'label': 'Related paper' if image.get('kind') == 'related-figure' else image.get('related_label', 'Related source'), 'url': image['related_url']}])
+        images = preview_images(image, asset_prefix)
         news.append({'title': item['title'], 'summary': item['summary'], 'url': item['url'],
                      'kind': item['kind'],
                      'slug': paper_slug(item['url']),
                      'content_label': item.get('content_label') or {'paper': 'Paper', 'x': 'Social post', 'linkedin': 'Social post', 'blog': 'Blog', 'model': 'Model release'}[item['kind']],
                      'published_at': item['published_at'][:10], 'source': source, 'source_group': group, 'source_mark': mark,
-                     'links': links, 'image': asset_prefix + '/' + image['path'].removeprefix('assets/') + '?v=' + hashlib.sha256((ROOT / image['path']).read_bytes()).hexdigest()[:10] if image else '',
-                     'image_alt': image.get('alt', ''), 'image_kind': image.get('kind', '')})
+                     'links': links, 'image': images[0]['url'] if images else '', 'images': images,
+                     'image_alt': images[0]['alt'] if images else '', 'image_kind': image.get('kind', ''),
+                     'image_label': image.get('image_label') or ('Related paper figure' if image.get('kind') == 'related-figure' else 'Post images' if item['kind'] in ('x', 'linkedin') else 'Source figures' if image.get('kind') == 'source-image' else 'Publisher cover' if image.get('kind') == 'blog' else 'Paper figure' if image.get('kind') == 'figure' else 'Paper preview')})
     return {'categories': categories, 'updates': news, 'works': sorted(works, key=lambda r: (-r['year'], r['title']))}
 
 
@@ -92,10 +122,26 @@ def paper_pages(works, updates):
         slug = paper_slug(item['url'])
         pages[slug] = {'slug': slug, 'title': item['title'], 'summary': item['summary'],
                        'year': int(item['published_at'][:4]), 'venue': source_info(item)[0],
-                       'links': [{'label': 'Paper', 'url': item['url']}], 'url': item['url']}
+                       'links': merge_links([{'label': 'Paper', 'url': item['url']}], item.get('links', [])), 'url': item['url']}
     # Catalog admission enriches the same page rather than moving its conversation.
-    pages.update({item['slug']: item for item in works})
+    for item in works:
+        old = pages.get(item['slug'], {})
+        pages[item['slug']] = {**item, 'links': merge_links(item.get('links', []), old.get('links', []))}
     return pages
+
+
+def thumbnail(item):
+    esc = html.escape
+    fallback = f'<div class="update-thumb source-thumb" aria-hidden="true"><strong>{esc(item["source_mark"])}</strong><span>{esc(item["source"])}</span></div>'
+    if not item['image']:
+        return fallback
+    kind = 'paper-preview' if item['image_kind'] == 'paper' else ''
+    count = len(item.get('images', [])) or 1
+    badge = f'<span class="image-count">1 / {count}</span>' if count > 1 else ''
+    return (f'<figure class="update-media"><a class="update-thumb {kind}" data-gallery="{esc(item["slug"], quote=True)}" '
+            f'href="{esc(item["image"], quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="View images: {esc(item["title"], quote=True)}">'
+            f'<img src="{esc(item["image"], quote=True)}" alt="{esc(item["image_alt"], quote=True)}" loading="lazy" width="400" height="268">{badge}'
+            f'<span class="image-expand" aria-hidden="true">⤢</span></a><figcaption>{esc(item["image_label"])}</figcaption></figure>')
 
 
 def initial_cards(items, papers_url=''):
@@ -111,11 +157,7 @@ def initial_cards(items, papers_url=''):
             count = sum(row['published_at'] == day for row in items)
             output.append(f'<section class="date-group" aria-label="{label}"><h3 class="date-heading"><time datetime="{day}">{label}</time><span>{count} {"update" if count == 1 else "updates"}</span></h3>')
             previous = day
-        if item['image'] and item['image_kind'] != 'related-figure':
-            kind = 'blog-thumb' if item['image_kind'] == 'blog' else 'paper-preview' if item['image_kind'] == 'paper' else ''
-            visual = f'<a class="update-thumb {kind}" href="{esc(item["url"], quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="Open {esc(item["title"], quote=True)}"><img src="{esc(item["image"], quote=True)}" alt="{esc(item["image_alt"], quote=True)}" loading="lazy" width="304" height="210"></a>'
-        else:
-            visual = f'<div class="update-thumb source-thumb" aria-hidden="true"><strong>{esc(item["source_mark"])}</strong><span>{esc(item["source"])}</span></div>'
+        visual = thumbnail(item)
         discussion = f'<a class="discussion-link" href="{esc(papers_url + item["slug"] + "/#discussion", quote=True)}">Discuss ↗</a>' if papers_url and item['kind'] == 'paper' else ''
         output.append(f'<article class="update-row">{visual}<div class="update-body"><div class="item-meta"><span class="source-name">{esc(item["source"])}</span><span class="content-type kind-{esc(item["kind"])}">{esc(item["content_label"])}</span><time datetime="{day}">{label}</time></div><h3><a href="{esc(item["url"], quote=True)}" target="_blank" rel="noopener noreferrer">{esc(item["title"])}</a></h3><p class="item-description">{esc(item["summary"])}</p><div class="resource-links">{resource_links(item["links"])}{discussion}</div></div></article>')
     if output:
@@ -195,7 +237,7 @@ def render(resources, benchmarks, categories, inline=False, page='home', paper=N
         '@@SCRIPT@@': '<script>' + (ROOT / 'site/site.js').read_text(encoding='utf-8') + '</script>' if inline else '<script src="' + base + 'site.js?v=' + hashlib.sha256((ROOT / 'site/site.js').read_bytes()).hexdigest()[:10] + '" defer></script>',
         '@@UPDATED@@': esc(updates['updated_at'][:10]),
         '@@NEWS_COUNT@@': str(len(data['updates'])), '@@WORK_COUNT@@': str(len(resources)), '@@THEME_COUNT@@': str(len(categories)),
-        '@@TODAY_COUNT@@': str(sum(item['published_at'] == updates['window_end'] for item in data['updates'])),
+        '@@TODAY_COUNT@@': str(sum(item['published_at'] == datetime.now(ZoneInfo('America/New_York')).date().isoformat() for item in data['updates'])),
         '@@HEADING_TAG@@': 'h2' if page == 'home' else 'h1',
         '@@THEME_LINKS@@': theme_links, '@@THEME_BUTTONS@@': theme_buttons, '@@QUESTIONS@@': questions,
         '@@YEARS@@': ''.join(f'<option value="{year}">{year}</option>' for year in sorted({item['year'] for item in resources}, reverse=True)),
@@ -235,10 +277,14 @@ def build(destination):
     for name in ('owd-mark.svg', 'owd-mark.png', 'favicon.ico', 'open-world-discovery-web.png'):
         shutil.copyfile(ROOT / 'assets' / name, destination / 'assets' / name)
     media = json.loads((ROOT / 'data/update-media.json').read_text(encoding='utf-8'))
-    for entry in media.values():
-        target = destination / entry['path']
+    image_paths = {image['path'] for entry in media.values() for image in [entry, *entry.get('images', [])]}
+    for path in image_paths:
+        source = (ROOT / path).resolve()
+        if not path.startswith('assets/news/') or not source.is_relative_to(ROOT / 'assets/news') or source.suffix != '.webp' or not source.is_file():
+            continue
+        target = destination / path
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(ROOT / entry['path'], target)
+        shutil.copyfile(source, target)
     (destination / 'README.md').write_text('# Open World Discovery\n\nPublic website artifact generated from the research catalog.\n\n' + SITE_URL + '\n', encoding='utf-8', newline='\n')
     return destination
 

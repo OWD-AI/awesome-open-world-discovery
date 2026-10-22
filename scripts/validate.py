@@ -1,5 +1,6 @@
 """Validate catalog structure, usage-mode semantics, generated views and local links."""
 import json
+from pathlib import Path
 import re
 import sys
 from urllib.parse import urlsplit,unquote
@@ -71,9 +72,17 @@ for media_url,preview in media.items():
     require(media_url.startswith('https://') and preview['source_url'].startswith('https://'),'Invalid preview source URL')
     media_path=ROOT/preview['path']
     require(preview['path'].startswith('assets/news/') and '..' not in preview['path'].split('/') and media_path.suffix=='.webp' and media_path.is_file(),'Invalid generated preview path')
-    require(preview['kind'] in {'paper','figure','related-figure','blog'} and preview.get('alt') and preview.get('credit'),'Missing preview attribution')
+    require(preview['kind'] in {'paper','figure','related-figure','blog','source-image','related-source'} and preview.get('alt') and preview.get('credit'),'Missing preview attribution')
     signature=media_path.read_bytes()[:12]
     require(signature[:4]==b'RIFF' and signature[8:12]==b'WEBP','Invalid WebP preview')
+    for image in preview.get('images', []):
+        require(set(image) <= {'path','alt','source_url','width','height','source_index'},'Private image-review fields cannot be exported')
+        require(image.get('alt') and image.get('source_url','').startswith('https://'),'Missing gallery attribution')
+        relative=Path(image['path'])
+        require(relative.as_posix().startswith('assets/news/') and '..' not in relative.parts and relative.suffix=='.webp' and (ROOT/relative).is_file(),'Invalid gallery image path')
+        require(0 < image.get('width',0) <= 1600 and 0 < image.get('height',0) <= 1200,'Invalid gallery image dimensions')
+    if preview['kind']=='related-source':
+        require(preview.get('related_url','').startswith('https://') and preview.get('image_label'),'Unlabeled related-source image')
 updates=json.loads((ROOT/'data/updates.json').read_text(encoding='utf-8'))
 from datetime import date,timedelta
 end=date.fromisoformat(updates['window_end']);start=end-timedelta(days=updates['window_days']-1)

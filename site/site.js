@@ -30,8 +30,8 @@
   const safeURL = value => { try { const url = new URL(value, location.href); return ['http:','https:'].includes(url.protocol) ? esc(value) : '#'; } catch { return '#'; } };
   const links = items => items.map(link => `<a href="${safeURL(link.url)}" target="_blank" rel="noopener noreferrer">${esc(link.label)} ↗</a>`).join('');
   function updateRow(item) {
-    const actualImage = item.image && item.image_kind !== 'related-figure';
-    const visual = actualImage ? `<a class="update-thumb ${item.image_kind === 'blog' ? 'blog-thumb' : item.image_kind === 'paper' ? 'paper-preview' : ''}" href="${safeURL(item.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(item.title)}"><img src="${safeURL(item.image)}" alt="${esc(item.image_alt)}" loading="lazy" width="304" height="210"></a>` : `<div class="update-thumb source-thumb" aria-hidden="true"><strong>${esc(item.source_mark)}</strong><span>${esc(item.source)}</span></div>`;
+    const count = item.images?.length || 1;
+    const visual = item.image ? `<figure class="update-media"><a class="update-thumb ${item.image_kind === 'paper' ? 'paper-preview' : ''}" data-gallery="${esc(item.slug)}" href="${safeURL(item.image)}" target="_blank" rel="noopener noreferrer" aria-label="View images: ${esc(item.title)}"><img src="${safeURL(item.image)}" alt="${esc(item.image_alt)}" loading="lazy" width="400" height="268">${count > 1 ? `<span class="image-count">1 / ${count}</span>` : ''}<span class="image-expand" aria-hidden="true">⤢</span></a><figcaption>${esc(item.image_label)}</figcaption></figure>` : `<div class="update-thumb source-thumb" aria-hidden="true"><strong>${esc(item.source_mark)}</strong><span>${esc(item.source)}</span></div>`;
     const discussion = item.kind === 'paper' ? `<a class="discussion-link" href="${safeURL(data.paths.papers + item.slug + '/#discussion')}">Discuss ↗</a>` : '';
     return `<article class="update-row">${visual}<div class="update-body"><div class="item-meta"><span class="source-name">${esc(item.source)}</span><span class="content-type kind-${esc(item.kind)}">${esc(item.content_label)}</span><time datetime="${esc(item.published_at)}">${dateLabel(item.published_at)}</time></div><h3><a href="${safeURL(item.url)}" target="_blank" rel="noopener noreferrer">${esc(item.title)}</a></h3><p class="item-description">${esc(item.summary)}</p><div class="resource-links">${links(item.links)}${discussion}</div></div></article>`;
   }
@@ -82,6 +82,48 @@
     }
   }
   function changed() { limit = batch; updateAddress(); render(); }
+  if (!library) {
+    const viewer = document.createElement('dialog');
+    viewer.className = 'image-viewer';
+    viewer.setAttribute('aria-labelledby', 'image-viewer-title');
+    viewer.innerHTML = '<header><h2 id="image-viewer-title"></h2><button type="button" class="viewer-close" aria-label="Close image viewer">×</button></header><div class="viewer-stage"><img alt=""></div><div class="viewer-controls"><button type="button" class="viewer-prev" aria-label="Previous image">←</button><span class="viewer-position" aria-live="polite"></span><button type="button" class="viewer-next" aria-label="Next image">→</button></div><p class="viewer-description"></p><div class="viewer-attribution"></div>';
+    document.body.appendChild(viewer);
+    let selectedItem, imageIndex = 0;
+    function showImage() {
+      const image = selectedItem.images[imageIndex];
+      const img = viewer.querySelector('.viewer-stage img');
+      img.src = image.url; img.alt = image.alt;
+      viewer.querySelector('h2').textContent = selectedItem.title;
+      viewer.querySelector('.viewer-description').textContent = image.alt;
+      viewer.querySelector('.viewer-position').textContent = `${imageIndex + 1} / ${selectedItem.images.length}`;
+      viewer.querySelector('.viewer-prev').disabled = imageIndex === 0;
+      viewer.querySelector('.viewer-next').disabled = imageIndex === selectedItem.images.length - 1;
+      viewer.querySelector('.viewer-attribution').innerHTML = `<span>${esc(image.credit)}</span><a href="${safeURL(selectedItem.url)}" target="_blank" rel="noopener noreferrer">Original post / article ↗</a>${image.source_url ? `<a href="${safeURL(image.source_url)}" target="_blank" rel="noopener noreferrer">Image source ↗</a>` : ''}`;
+    }
+    function step(direction) {
+      imageIndex = Math.max(0, Math.min(selectedItem.images.length - 1, imageIndex + direction));
+      showImage();
+    }
+    cards.addEventListener('click', event => {
+      const link = event.target.closest('[data-gallery]');
+      if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      const item = data.updates.find(row => row.slug === link.dataset.gallery);
+      if (!item?.images?.length || typeof viewer.showModal !== 'function') return;
+      event.preventDefault(); selectedItem = item; imageIndex = 0; showImage(); viewer.showModal();
+    });
+    viewer.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
+    viewer.querySelector('.viewer-prev').addEventListener('click', () => step(-1));
+    viewer.querySelector('.viewer-next').addEventListener('click', () => step(1));
+    viewer.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); step(event.key === 'ArrowLeft' ? -1 : 1); }
+    });
+    viewer.addEventListener('click', event => { if (event.target === viewer) { const box = viewer.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) viewer.close(); } });
+    cards.addEventListener('error', event => {
+      if (event.target.tagName !== 'IMG') return;
+      const figure = event.target.closest('.update-media');
+      if (figure) { figure.classList.add('image-unavailable'); figure.querySelector('figcaption').textContent = 'Preview unavailable · open source below'; }
+    }, true);
+  }
   if (library) {
     const years = document.getElementById('year'), order = document.getElementById('sort');
     years.value = year; order.value = sort;

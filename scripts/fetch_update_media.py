@@ -1,4 +1,4 @@
-"""Cache first-page paper previews and first-party blog cover images for the news feed."""
+"""Cache attributed paper previews and reviewed primary-source image derivatives."""
 import argparse
 import hashlib
 import io
@@ -39,7 +39,42 @@ def fetch(url, limit=25_000_000):
         return body
 
 
-def acquire(paper_cache=None):
+def cache_reviewed_images(item, record, assets):
+    """Only a local, explicitly supplied review manifest may introduce social images."""
+    from PIL import Image, ImageOps
+    images = []
+    for photo in record.get('images', [])[:4]:
+        source = urlsplit(photo['source_url'])
+        if source.scheme != 'https' or not source.hostname or source.username or source.password:
+            raise ValueError('Image attribution must use a public HTTPS URL')
+        original = Path(photo['path'])
+        body = original.read_bytes()
+        digest = hashlib.sha256(body).hexdigest()
+        if digest != photo['sha256']:
+            raise ValueError('Reviewed image hash mismatch')
+        key = hashlib.sha256((canonical(item['url']) + digest).encode()).hexdigest()[:20]
+        output = assets / (key + '.webp')
+        with Image.open(io.BytesIO(body)) as opened:
+            image = ImageOps.exif_transpose(opened)
+            image.thumbnail((1600, 1200))
+            if image.mode == 'RGBA':
+                canvas = Image.new('RGB', image.size, 'white')
+                canvas.paste(image, mask=image.getchannel('A'))
+                image = canvas
+            else:
+                image = image.convert('RGB')
+            image.save(output, 'WEBP', quality=84)
+            width, height = image.size
+        images.append({'path': output.relative_to(ROOT).as_posix(), 'alt': photo['alt'],
+                       'source_url': photo['source_url'], 'width': width, 'height': height,
+                       'source_index': photo['index']})
+    if not images:
+        raise ValueError('No reviewed source images')
+    return {**images[0], 'kind': 'source-image', 'images': images, 'preview_version': 4,
+            'credit': 'Original source authors; reviewed image preview with attribution.'}
+
+
+def acquire(paper_cache=None, reviewed_media=None):
     import fitz
     from PIL import Image
     path = ROOT / 'data/update-media.json'
@@ -53,11 +88,20 @@ def acquire(paper_cache=None):
     assets.mkdir(parents=True, exist_ok=True)
     errors = []
     added = 0
+    reviewed = json.loads(Path(reviewed_media).read_text(encoding='utf-8'))['items'] if reviewed_media else {}
     for item in updates['items']:
         if item.get('review_status') != 'approved':
             continue
         url = canonical(item['url'])
-        if url in media and (ROOT / media[url]['path']).exists() and (media[url].get('kind') == 'blog' or media[url].get('preview_version') == 3):
+        if url in reviewed and reviewed[url].get('images'):
+            try:
+                media[url] = cache_reviewed_images(item, reviewed[url], assets)
+                added += 1
+                print('Cached source images:', item['title'][:70], flush=True)
+            except Exception as exc:
+                errors.append({'url': url, 'error': str(exc)[:250]})
+            continue
+        if url in media and (ROOT / media[url]['path']).exists() and (media[url].get('kind') == 'blog' or media[url].get('preview_version') in (3, 4)):
             continue
         host = urlsplit(url).hostname
         key = hashlib.sha256(url.encode()).hexdigest()[:16]
@@ -128,6 +172,23 @@ def acquire(paper_cache=None):
         except Exception as exc:
             errors.append({'url': url, 'error': str(exc)[:250]})
             print('Preview unavailable:', url, str(exc)[:100], flush=True)
+    # An explicitly linked, approved release can illustrate a post without photo attachments.
+    # The card labels it as a linked source, never as an original post attachment.
+    approved = {canonical(row['url']) for row in updates['items'] if row.get('review_status') == 'approved'}
+    for item in updates['items']:
+        url = canonical(item['url'])
+        if url not in approved or media.get(url, {}).get('kind') not in (None, 'related-source'):
+            continue
+        links = reviewed.get(url, {}).get('related_links', item.get('links', []))
+        for link in links:
+            related = canonical(link['url'])
+            image = media.get(related, {})
+            if related not in approved or image.get('kind') in (None, 'related-source', 'related-figure'):
+                continue
+            label = 'Linked model figures' if link['label'] == 'Model' else 'Linked paper figure' if link['label'] == 'Paper' else 'Linked source figures'
+            media[url] = {**image, 'kind': 'related-source', 'related_url': related,
+                          'related_label': link['label'], 'image_label': label, 'preview_version': 4}
+            break
     path.write_text(json.dumps(media, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
     (local / 'last-run.json').write_text(json.dumps({'added': added, 'cached': len(media), 'errors': errors}, indent=2), encoding='utf-8')
     print(f'{len(media)} previews available; {len(errors)} unavailable (source marks are used instead).')
@@ -136,4 +197,6 @@ def acquire(paper_cache=None):
 if __name__ == '__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--paper-cache',type=Path,help='Optional local reviewed-PDF cache; PDFs are never copied into public assets.')
-    acquire(parser.parse_args().paper_cache)
+    parser.add_argument('--reviewed-media',type=Path,help='Private manifest of approved, hash-verified source images; only WebP derivatives are exported.')
+    args = parser.parse_args()
+    acquire(args.paper_cache, args.reviewed_media)

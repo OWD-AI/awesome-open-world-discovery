@@ -2,6 +2,7 @@
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -67,6 +68,9 @@ class SiteTests(unittest.TestCase):
             resources, _ = load()
             updates = json.loads((build_site.ROOT / 'data/updates.json').read_text(encoding='utf-8'))
             data = build_site.payload(resources['resources'], CATEGORIES, updates, 'assets')
+            for row in data['updates']:
+                for image in row['images']:
+                    self.assertIn(image['url'].split('?', 1)[0], names, 'Gallery image missing from public artifact')
             slugs = set(build_site.paper_pages(data['works'], updates))
             allowed |= {f'papers/{slug}/index.html' for slug in slugs}
             self.assertTrue(all(n in allowed or (n.startswith('assets/news/') and n.endswith('.webp')) for n in names))
@@ -108,8 +112,55 @@ class SiteTests(unittest.TestCase):
         updates = {'items': [], 'paper_pages': [item]}
         slug = build_site.paper_slug(item['url'])
         self.assertEqual(build_site.paper_pages([], updates)[slug]['title'], item['title'])
-        reviewed = {'slug': slug, 'title': 'Reviewed paper', 'summary': 'Full-text-reviewed contribution.'}
+        reviewed = {'slug': slug, 'title': 'Reviewed paper', 'summary': 'Full-text-reviewed contribution.',
+                    'links': [{'label': 'Paper', 'url': item['url']}]}
         self.assertEqual(build_site.paper_pages([reviewed], updates)[slug], reviewed)
+
+    def test_paper_detail_keeps_reviewed_code_links_after_catalog_admission(self):
+        item = {'title': 'Paper', 'summary': 'A reviewed paper.', 'kind': 'paper', 'review_status': 'approved',
+                'published_at': '2026-10-21', 'url': 'https://arxiv.org/abs/2610.99999',
+                'links': [{'label': 'Code', 'url': 'https://github.com/lab/method'}]}
+        slug = build_site.paper_slug(item['url'])
+        catalog = {'slug': slug, 'title': 'Catalog paper', 'links': [{'label': 'Paper', 'url': item['url']}]}
+        page = build_site.paper_pages([catalog], {'items': [item]})[slug]
+        self.assertIn(item['links'][0], page['links'])
+        self.assertEqual(len(page['links']), 2)
+
+    def test_missing_preview_does_not_break_build_and_related_figure_is_labeled(self):
+        self.assertEqual(build_site.preview_images({'path': 'assets/news/missing.webp'}, 'assets'), [])
+        self.assertEqual(build_site.preview_images({'path': '../references.bib'}, 'assets'), [])
+        resources, _ = load()
+        updates = {'window_end': '2026-10-19', 'window_days': 30, 'items': [{
+            'url': 'https://x.com/quietnning/status/2112233429245063201', 'title': 'Research discussion',
+            'summary': 'A discussion distinct from its related paper.', 'kind': 'x',
+            'review_status': 'approved', 'published_at': '2026-10-19'}]}
+        row = build_site.payload(resources['resources'], CATEGORIES, updates, 'assets')['updates'][0]
+        self.assertEqual(row['image_label'], 'Related paper figure')
+        self.assertTrue(row['images'])
+        html = build_site.initial_cards([row])
+        self.assertIn('data-gallery=', html)
+        self.assertIn('Related paper figure', html)
+
+    def test_reviewed_image_derivative_checks_hash_and_strips_local_paths(self):
+        import hashlib
+        from PIL import Image
+        import fetch_update_media as media
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            original = root / 'private' / 'photo.png'
+            original.parent.mkdir()
+            Image.new('RGBA', (300, 200), (50, 100, 150, 150)).save(original)
+            assets = root / 'assets' / 'news'; assets.mkdir(parents=True)
+            photo = {'path': str(original), 'sha256': hashlib.sha256(original.read_bytes()).hexdigest(),
+                     'source_url': 'https://pbs.twimg.com/media/source.png', 'alt': 'A chart', 'index': 1}
+            with patch.object(media, 'ROOT', root):
+                result = media.cache_reviewed_images({'url': 'https://x.com/lab/status/123'}, {'images': [photo]}, assets)
+                self.assertNotIn('private', json.dumps(result))
+                self.assertTrue((root / result['path']).is_file())
+                self.assertEqual(result['images'][0]['source_url'], photo['source_url'])
+                photo['sha256'] = 'stale'
+                with self.assertRaisesRegex(ValueError, 'hash mismatch'):
+                    media.cache_reviewed_images({'url': 'https://x.com/lab/status/123'}, {'images': [photo]}, assets)
 
     def test_subpage_links_resolve_under_a_project_site(self):
         class Links(HTMLParser):
