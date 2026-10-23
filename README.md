@@ -54,22 +54,22 @@ Discovery involves deciding what to investigate, gathering evidence, testing exp
 
 **[Explore the research observatory →](https://owd-ai.github.io/awesome-open-world-discovery/#updates)**
 
-The latest 10 source-checked papers from our daily monitor · Updated 2026-10-22.
+The latest 10 source-checked papers from our daily monitor · Updated 2026-10-23.
 
 Visit the website for summaries, figures, today's updates, and the full research library.
 
 | Date | Paper |
 | --- | --- |
+| 2026-10-22 | [RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention](https://arxiv.org/abs/2610.31372) |
+| 2026-10-22 | [Large Language Models Meet Bayesian Optimization: Towards Self-evolving Wireless Digital Twins](https://arxiv.org/abs/2610.31192) |
+| 2026-10-22 | [Inherited, Not Invented: Tracing the Provenance of Wait in Reasoning Models](https://arxiv.org/abs/2610.30882) |
+| 2026-10-22 | [HiSTEVE 1.0: Harnessing Human-Interface VLA Agents for Open-World Games](https://arxiv.org/abs/2610.31162) |
+| 2026-10-22 | [Co-Recursive Semantic Self-Extension: A Mathematical Foundation for Open-Ended Intelligence](https://arxiv.org/abs/2610.31097) |
+| 2026-10-22 | [CellTrack-Bench: Microscopic Cell Tracking Benchmark for Vision-Language Models](https://arxiv.org/abs/2610.31566) |
+| 2026-10-22 | [ADAPT for Science: A Multi-Agent System for Self-Evolving Scientific Optimization](https://arxiv.org/abs/2610.30851) |
+| 2026-10-21 | [WeVisOne-VL: Unified Visual Perception from Objects to Pixels](https://arxiv.org/abs/2610.31329) |
 | 2026-10-21 | [VX-One: Typed, Calibrated Decision Heads for Real-Time Perimeter Triage - An empirical study of unknown-attack honesty, cascade gray zones, and calibration under drift](https://arxiv.org/abs/2610.30090) |
 | 2026-10-21 | [Toward Recursive Self-Improvement in Physical AI](https://arxiv.org/abs/2610.29677) |
-| 2026-10-21 | [SCDM: Scalable Causal Discovery in Nonlinear Temporal Systems with Meta-Learning](https://arxiv.org/abs/2610.29992) |
-| 2026-10-21 | [Residual-Based Causal Discovery via Pretrained In-Context Quantile Regression](https://arxiv.org/abs/2610.29530) |
-| 2026-10-21 | [PreCoMem: Predictive Cognitive Memory for Self-Evolving Long-Term Dialogue Agents](https://arxiv.org/abs/2610.29467) |
-| 2026-10-21 | [OMAR: Open-World Multi-Attribute Reasoning for Scene-Conditioned Shelf Organization](https://arxiv.org/abs/2610.29761) |
-| 2026-10-21 | [Memory-Centric Continual Learning for AI Agents](https://arxiv.org/abs/2610.29357) |
-| 2026-10-21 | [Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation](https://arxiv.org/abs/2610.29989) |
-| 2026-10-21 | [Harness Scaling for Generalizable Agentic Reinforcement Learning](https://arxiv.org/abs/2610.29458) |
-| 2026-10-21 | [GuideEvolve: Self-Evolving Agent Framework with Expert Guidance and 3Ts Mechanisms](https://arxiv.org/abs/2610.30017) |
 
 <a id="contents"></a>
 
