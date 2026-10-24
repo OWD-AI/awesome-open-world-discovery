@@ -54,7 +54,7 @@ Discovery involves deciding what to investigate, gathering evidence, testing exp
 
 **[Explore the research observatory →](https://owd-ai.github.io/awesome-open-world-discovery/#updates)**
 
-The latest 10 source-checked papers from our daily monitor · Updated 2026-10-23.
+The latest 10 source-checked papers from our daily monitor · Updated 2026-10-24.
 
 Visit the website for summaries, figures, today's updates, and the full research library.
 
