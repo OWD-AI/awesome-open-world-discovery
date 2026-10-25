@@ -9025,6 +9025,37 @@
           11
         ]
       }
+    },
+    "paper-c8b4c6ec0a0c2f8e": {
+      "institutions": [
+        "University of California, Los Angeles",
+        "CIS, LMU Munich",
+        "Munich Center for Machine Learning"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Two models are evaluated using forward passes per hundred generated tokens. Output copying and empirical word rarity characterize task differences. Additional DiffusionGemma experiments compare reasoning with final answers, control mathematical correctness analyses for problem and length, translate into twenty-five languages, and test weighted voting on 255 math problems.",
+      "evidence": "DiffusionGemma requires 3.72 passes per hundred tokens for grammar correction versus 11.43 for stories. Incorrect math answers remain more expensive after within-problem controls. Speed-weighted five-answer voting improves accuracy from 71.4% to 73.7%, with a bootstrap gain interval of 0.3–4.5 points. Languages with greater tokenization fragmentation also tend to require more passes per token.",
+      "discovery_use": "Beyond computational characterization, the paper demonstrates a decoding-derived confidence signal that improves selection among mathematical solutions. This provides a concrete connection to verification-oriented reasoning, while transfer to scientific investigation remains untested.",
+      "limits": "Forward-pass counts do not establish wall-clock or hardware-cost advantages across architectures. Confidence voting and multilingual analyses use one model. Task correlations involve only ten aggregate observations and are not causal. Excluding repetition-heavy truncated outputs materially changes DreamReasoner's task rankings: 143 stories hit the limit. Surface novelty misses translation reuse and discourse structure. No first-party release was verified within the search budget.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "sci_methods",
+        "rationale": "Beyond computational characterization, the paper demonstrates a decoding-derived confidence signal that improves selection among mathematical solutions. This provides a concrete connection to verification-oriented reasoning, while transfer to scientific investigation remains untested.",
+        "pdf_sha256": "fa6ae137f725e0e25577037584f1e4a78d2aaf4596b4ddf5024b67e5e65098b2",
+        "evidence_pages": [
+          1,
+          7,
+          13
+        ]
+      }
     }
   }
 }
