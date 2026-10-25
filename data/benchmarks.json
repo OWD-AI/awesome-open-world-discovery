@@ -1604,6 +1604,55 @@
       "name": "OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.24087"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents design their own analysis, scoring, coverage and subset-selection procedures.",
+        "Candidate trajectory pools, base model, group sizes and SFT recipes are fixed.",
+        "Agents may inspect data, execute analysis code and run base-model forward passes.",
+        "Training, gradients, weight updates and access to downstream evaluation tasks are prohibited during selection."
+      ],
+      "focus": "Predict the training value of existing recorded trajectories: submit five disjoint subsets ranked by expected downstream performance. After submission, the benchmark executes separate SFT and evaluation experiments for each subset (pages 2–6).",
+      "limits": "Selection receives no training or downstream evaluation feedback and cannot revise groups after outcomes are observed. Experiments use one base model, two task families, fixed recipes and existing data. Training uses seed 42; repeated evaluation seeds do not establish training-seed robustness. Random selection uses one fixed subset per task. Access checks do not certify complete enforcement. These are computational experiments using recorded trajectories, with no new physical measurements (pages 4–6, 9, 15–16).",
+      "training": {
+        "reward": "No selector training reward or online downstream feedback is supplied. The benchmark performs full-parameter SFT with assistant-token supervision on fresh Qwen3-4B copies. Post-training evaluation uses TBLite task verifiers, including fractional rewards where supported, and BFCL V3 checks of required state and execution behavior. Selector metrics are first-group performance, gain over random selection, Spearman correlation and best-group accuracy. Invalid submissions receive assigned failure penalties (pages 5–6, 15–16).",
+        "reset": "Each selected group trains a fresh base-model copy. Each TBLite evaluation attempt starts in a fresh sandbox. A failed selection submission may retry once within the same four-hour budget. Arbitrary selection-environment reset or checkpoint restoration is not established (pages 3, 5–6).",
+        "branching": "Five disjoint data choices are tested independently after their membership and order are frozen. Agents can compare provisional selections through permitted analysis, but cannot branch on observed training outcomes. Runtime snapshot or rollback support is not established (pages 3–5)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-ec30270490ea6cac",
+      "resource_id": "paper-ec30270490ea6cac",
+      "name": "DataSense-Bench: The First Step Toward an AI Scientist",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.12190"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Solvers may modify or replace runnable starting solutions within task-specific interfaces, rules and compute budgets.",
+        "Development evaluations have no fixed call-count limit.",
+        "Successive sessions inherit submitted code, saved versions, experiment logs and notes while model weights remain fixed.",
+        "Source papers, reproduced implementations and held-out test data are withheld from solvers.",
+        "The corpus is available on request with gated access."
+      ],
+      "focus": "Execute research methods, inspect development results and improve solutions across paper-derived computational tasks. Automated held-out evaluations compare submissions with starting solutions, targets and independently reproduced methods (pages 4–5, 8).",
+      "limits": "Tasks include generated data and simulations; examples include simulated weather estimation and terrain-based foothold selection. Feedback comes from executing candidate methods and scoring their outputs, with no new physical measurements. Bounded adaptations can omit substantive source-paper content, so beating a reproduced baseline does not establish scientific novelty. Inheritance is confounded with extra solving time. Restricted-material access was recorded in 22 of 480 chains; complete isolation is not established. Broader training gains are not demonstrated, and corpus access is gated (pages 7, 9–12, 17, 23).",
+      "training": {
+        "reward": "No solver weight training is performed. Development evaluators provide feedback during solving; held-out scores are withheld until grading. A scoring program is deterministic for fixed evaluation inputs, with normalized score (v − w)/(u − w), where w is the starting-solution score and u is the target. Automated validity checks enforce interfaces, correctness and resource limits; a separate model judge assigns zero reward to rule-violating submissions (pages 4–5, 11, 18).",
+        "reset": "Three successive sessions start with fresh contexts. Only saved solution files, versions, logs and notes carry over; live workspace, conversational context and shell history do not. The prior submission is inherited regardless of score. Arbitrary environment snapshots or simulator-state restoration are not established (pages 8, 18).",
+        "branching": "Solvers can retain and test alternative code versions, and every saved runnable version, including abandoned versions, is later replayed on held-out data. These held-out scores are not returned during solving. Automatic search-tree branching or runtime state cloning is not established (pages 8–9, 18)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-b92b08173531b188",
+      "resource_id": "paper-b92b08173531b188",
+      "name": "RSI-Forge: From Research Papers to Environments for Recursive Self-Improvement",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.09426"
     }
   ]
 }

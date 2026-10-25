@@ -12235,6 +12235,503 @@
           10
         ]
       }
+    },
+    "paper-7d26a5c9a55b02eb": {
+      "institutions": [
+        "University College London",
+        "Huawei Noah’s Ark Lab, UK",
+        "University of Liverpool"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        10,
+        19
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The agent separates rule revision from implementation repair. Acceptance combines an LLM assessment of code–rulebook fidelity with exact replay of recorded observations. Planning searches the executable model; unresolved mechanics guide exploration. A population extension samples distinct plans from multiple hypotheses checked against shared history.",
+      "evidence": "On 25 public ARC-AGI-3 games, the single-model agent clears all 183 levels with mean RHAE 100 and 7,518 actions, versus 8,347 for the closest baseline, which also clears everything. Three-game rulebook ablations reduce actions by 9% and agent turns by 18%. A two-model experiment on one game reduces actions from 899 to 597. A Pong controller wins three evaluated episodes 21:0 after learning from 9,504 emulator frames.",
+      "discovery_use": "Directly studies discovering unknown environment rules, testing executable hypotheses against interaction evidence, and revising world representations that guide further exploration.",
+      "limits": "Public-game saturation, limited ablations, and absent repeated-run stability estimates constrain architectural conclusions. Replay consistency cannot establish correct generalization; semantic fidelity remains LLM-assessed, and population weights are not calibrated posterior probabilities. Action efficiency excludes model-building compute and pretrained knowledge. Pong retains full-frame prediction errors, uses only three evaluation episodes, and compares published RL results with different protocols. No first-party release was verified within the search budget.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "Directly studies discovering unknown environment rules, testing executable hypotheses against interaction evidence, and revising world representations that guide further exploration.",
+        "pdf_sha256": "ef05700e4828926f98f6d1f681d99c9e77b0671c7c1604f72144635f12f015aa",
+        "evidence_pages": [
+          1,
+          10,
+          19
+        ]
+      }
+    },
+    "paper-ef48cb890dde5a10": {
+      "institutions": [
+        "Center of Excellence for Generative AI, King Abdullah University of Science and Technology (KAUST), Thuwal, Saudi Arabia",
+        "Sakana AI, Tokyo, Japan"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A fixed allocator LLM chooses full evaluation, discard, or partial evaluation followed by continuation or stopping. Experience updates track supporting and contradicting cases. Challenger strategies receive shared evaluations and are accepted lexicographically by missed new-best candidates, full evaluations, and partial evaluations. Random probes evaluate otherwise skipped candidates with default probability 0.3. Experiments use five seeds on ADAS-AIME and circle packing.",
+      "evidence": "Under matched full-evaluation budgets, final mean AIME accuracy rises from 35.33% to 39.56%, and packing score from 2.343 to 2.547. Reaching the baseline's final-performance targets requires 59–82% fewer full evaluations and 61–89% fewer recorded LLM tokens. Ablations support strategy evolution and exploration feedback. At the full evaluation budget, however, EvoAlloc consumes more total tokens than the baseline because it considers additional proposals.",
+      "discovery_use": "Makes the evaluation policy inside program discovery itself an evolving component, using retained experience and probes of rejected candidates to improve subsequent search decisions.",
+      "limits": "Evidence covers two benchmarks within individual search runs, with generation and evaluators fixed. AIME search and scoring use the same 30 problems, leaving transfer untested. Initial strategy construction uses baseline cases whose acquisition cost is excluded. Efficiency is measured at targets on evaluation-aligned mean trajectories, not mean individual first-hit costs or total end-of-run savings. Two-disagreement validation windows provide no guarantee of future search improvement. The paper promises code upon acceptance; no first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "open_ended",
+        "rationale": "Makes the evaluation policy inside program discovery itself an evolving component, using retained experience and probes of rejected candidates to improve subsequent search decisions.",
+        "pdf_sha256": "59f06200346d3ce349136810c30b2da177ece618dd7f482b0c34cb98fdf739ec",
+        "evidence_pages": [
+          1,
+          5,
+          23
+        ]
+      }
+    },
+    "paper-5d0025a257e8df1b": {
+      "institutions": [
+        "Nanyang Technological University",
+        "Ropedia"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        9,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Analytic perception fits known benchmark geometry to RGB observations and combines measurements with proprioception and persistent task state. Coding agents diagnose development failures, propose runnable branches, perform numeric and collision checks, and select improvements on validation layouts. Reuse, inheritance, and default-off parameters preserve existing execution paths. Official RoboDojo evaluation covers 42 simulated bimanual tasks with three seeds and 50 layouts per task and seed.",
+      "evidence": "COAP reports 70.24% success and 75.45 progress score, exceeding the strongest listed baseline's 31.38% success by 38.86 percentage points. Generalization success is 77.3% on standard layouts and 54.1% on randomized layouts. New tasks execute mostly shared library code, and measured development reaches 47% mean best validation success within 15 hours. Old-task measurements detect no significant pooled regression, but cannot rule out every smaller change.",
+      "discovery_use": "Contributes an agent-developed, reusable code-policy system with explicit state, failure diagnosis, branch evaluation, and retained improvements across robot tasks.",
+      "limits": "All experiments are simulated and depend on public camera, robot, and object assets. Development uses simulator ground truth for debugging, although runtime policies do not. Each new task incurs offline engineering and validation costs. Exponential capability growth and baseline development curves are schematic, not demonstrated scaling laws. Compute comparisons use estimated model costs. The appendix inconsistently describes the new-task cohort, limiting interpretation of the 47% development result. A project page was verified, but no runnable code release was established.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "Contributes an agent-developed, reusable code-policy system with explicit state, failure diagnosis, branch evaluation, and retained improvements across robot tasks.",
+        "pdf_sha256": "bc96bd7de710f593b49a703d66d54515030000d7beef75a5e4d007524618f4e7",
+        "evidence_pages": [
+          1,
+          9,
+          17
+        ]
+      }
+    },
+    "paper-ec30270490ea6cac": {
+      "institutions": [
+        "Eindhoven University of Technology",
+        "University of Surrey",
+        "ELLIS Institute T¨ubingen",
+        "Max Planck Institute for Intelligent Systems",
+        "T¨ubingen AI Center"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Agents receive inference-only access to Qwen3-4B, a candidate trajectory pool, a fixed SFT recipe, one H100, and four hours. They submit five disjoint groups of 1,000 terminal trajectories or 50 tool-use trajectories. Fresh models are trained for each group and evaluated on TBLite or BFCL V3. Metrics include first-group performance, gain over random selection, Spearman correlation, and best-group accuracy across three selection runs.",
+      "evidence": "Across ten terminal selectors and six tool-use selectors, gains over random selection are modest: BFCL gains range from 0.35 to 1.78 percentage points; TBLite gains range from −0.55 to 0.99 points. GPT-6 Astra identifies its best group in all three BFCL runs but only one TBLite run. No selector succeeds in every run on both tasks. Trace analysis shows differing and unstable interpretations of quality, loss, and coverage signals.",
+      "discovery_use": "Evaluates a concrete prerequisite for autonomous research: predicting the value of experimental data choices before observing training outcomes, then checking those predictions through controlled downstream experiments.",
+      "limits": "The benchmark uses one base model, two task families, fixed training recipes, and existing SFT data; it does not test generating new evidence or learning through experimental feedback. Random selection uses one fixed subset per task, so its error bars do not capture subset-selection variability. Training uses a fixed seed, with repeated downstream evaluations rather than repeated training seeds. Access guards and trace checks do not certify complete restriction enforcement. Failed-submission ranking penalties are assigned values rather than measured correlations.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Evaluates a concrete prerequisite for autonomous research: predicting the value of experimental data choices before observing training outcomes, then checking those predictions through controlled downstream experiments.",
+        "pdf_sha256": "8023530641947ecaf4855981b1dfed34f7e53fc95b1fa792dc4ed9ea7a74d66e",
+        "evidence_pages": [
+          1,
+          5,
+          16
+        ]
+      }
+    },
+    "paper-dc899dc4881918fb": {
+      "institutions": [
+        "Waseda University",
+        "Adelaide University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        24
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A curriculum model generates mathematical tasks and is optimized with GRPO. An executor learns through Python interaction using ADPO and a mixture of current-consensus and historical-reference advantages. The anchor refreshes each outer iteration; its sampled rollouts are cached per task and curriculum batch. All format-valid tasks enter executor training, without external answer labels or replay across iterations. Evaluation covers two backbones and thirteen benchmarks, with five training runs for Agent0 and AnchorLoop.",
+      "evidence": "After three iterations, mathematical averages improve over Agent0 by 2.5 percentage points on both backbones; general-reasoning averages improve by 2.8 and 2.7 points. Matched ablations associate both reference components with gains, with the executor component producing the larger individual improvement. Effective-advantage variance remains higher in later iterations. Cached training takes 24.1 hours per iteration versus Agent0's 20.5 hours, a 17.6% overhead.",
+      "discovery_use": "Studies learning from self-generated curricula and internally produced feedback, with a historical reference intended to improve continued tool-integrated reasoning training.",
+      "limits": "Agreement is not verified correctness, and shared wrong consensus remains undetected. Both centered advantages still vanish under complete current consensus. During curriculum training the anchor and current executor have identical parameters, so their agreement gap reflects independent sampling rather than historical improvement. Results match iterations rather than compute, and diagnostic variance does not establish the mechanism causing gains. Evidence covers small backbones and short training horizons. No first-party code, dataset, or checkpoint release was verified within the search budget.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "Studies learning from self-generated curricula and internally produced feedback, with a historical reference intended to improve continued tool-integrated reasoning training.",
+        "pdf_sha256": "e17032bcd90e85ba82d9d5f1e5dfcab3a14b642dd88d1b64c8b1c459f6bdf351",
+        "evidence_pages": [
+          1,
+          5,
+          24
+        ]
+      }
+    },
+    "paper-256ec415fdba134a": {
+      "institutions": [
+        "Yoolee.ai",
+        "University of Science and Technology of China",
+        "Peking University",
+        "Tianjin University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Induce capability rubrics from interaction evidence and admit them through source-disjoint validation. After each training stage, localize evidence in low-outcome trajectories, attribute supported agent-controlled failures, and activate a limited set of equally weighted process rewards. Validate library expansions separately, making new capabilities eligible only in later updates.",
+      "evidence": "On SOTOPIA-Hard self-play, Goal/Overall improves from AMPO's 7.67/3.94 to 7.90/4.38. Random reward selection and deficiency-frequency selection perform worse across all eight SOTOPIA metrics. Fixed diagnostics show no systematic regression among tracked deactivated capabilities. Some competing ablations nevertheless exceed individual RewardWeaver metrics.",
+      "discovery_use": "Contributes a concrete mechanism for discovering recurrent agent capability bottlenecks, validating previously uncovered capabilities, and adapting training priorities while retaining stable evaluation semantics. This connects directly to feedback-driven learning and discovery of an agent's own deficiencies.",
+      "limits": "Evidence concerns social interaction, bargaining, and synthetic sales rather than scientific discovery. LLM evaluator and terminal-outcome errors can propagate into adaptation. Attribution correlations do not establish capability-level causality. Sales evaluation shares scenario families with training, retention evidence covers selected capabilities, and adaptation settings require tuning. No verified first-party artifact release was found.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "adaptation",
+        "rationale": "Contributes a concrete mechanism for discovering recurrent agent capability bottlenecks, validating previously uncovered capabilities, and adapting training priorities while retaining stable evaluation semantics. This connects directly to feedback-driven learning and discovery of an agent's own deficiencies.",
+        "pdf_sha256": "65aa5aa1ddf361c5560838b220aea8c7c06945fe63a55597f594d2f52ca186a6",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-5946c006a4e58dd8": {
+      "institutions": [
+        "Evolvent AI",
+        "National University of Singapore"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Separate the research agent from its target model and harness. Expose asynchronous services with shared authorization, cost accounting, inspectable trajectories, and post-run audits. Compare six research agents across five benchmarks using RSI-Index, the average fraction of the remaining performance gap closed.",
+      "evidence": "Twenty-nine of thirty main agent–benchmark settings improve over their initial systems. Opus 5 achieves the highest RSI-Index, 0.4809. Revising an existing DSH harness raises Terminal-Bench avg@3 from 0.3034 to 0.4082 with weights fixed. More training or larger budgets do not consistently help; the same-model self-improvement case produces no overall gain.",
+      "discovery_use": "Provides an agent research environment for proposing experiments, evaluating evidence, and improving model–harness systems under configurable budgets and permissions. Its primary contribution directly supports autonomous research and self-improvement.",
+      "limits": "Reported evaluation tasks were visible during development, and each configuration has only one research run. Service budgets exclude researcher inference and final evaluation. Different starting models prevent attributing Joint gains through the single-component tracks. Improved subsequent research cycles remain untested. An excluded run bypassed service accounting through researcher credentials, demonstrating a boundary of the governance design.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "Provides an agent research environment for proposing experiments, evaluating evidence, and improving model–harness systems under configurable budgets and permissions. Its primary contribution directly supports autonomous research and self-improvement.",
+        "pdf_sha256": "98bab004313d37140a4df322ef6d90260a2a0a0d80b0709ccf98561a69b26ce2",
+        "evidence_pages": [
+          1,
+          6,
+          7
+        ]
+      }
+    },
+    "paper-b92b08173531b188": {
+      "institutions": [
+        "Scale AI",
+        "University of California, Santa Cruz",
+        "University of North Carolina at Chapel Hill"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Screen papers for measurable objectives and feasible execution. Build starting solutions, development data, held-out tests, and evaluators; require independent reproduction to outperform the starting solution. Assess environment quality with experts and model judges, then test four fixed-weight solvers over three sessions inheriting code and notes.",
+      "evidence": "The pipeline produces 210 environments across 18 fields, with expert review of 90. On 120 evaluation environments, at least one solver improves after the first session in 84%, and some solver surpasses the reproduced baseline in 68. Final median normalized scores range from 0.332 to 0.800. Experts are less positive than model judges about saturation resistance, shortcut resistance, and source fidelity.",
+      "discovery_use": "Constructs executable scientific research problems with automated evaluation and independently reproduced baselines, then evaluates agents' repeated experimentation and solution selection. This is directly relevant Discovery Evaluation.",
+      "limits": "Surpassing a bounded reproduction does not establish scientific novelty. Inheritance is confounded with additional solving time, and no broader training gains are demonstrated. Twenty-two of 480 chains accessed restricted material; removing flagged chains preserves ordering but does not prove complete isolation. Behavioral labels lack human validation, construction roles are not ablated, and corpus access is gated. No public first-party artifact release URL was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Constructs executable scientific research problems with automated evaluation and independently reproduced baselines, then evaluates agents' repeated experimentation and solution selection. This is directly relevant Discovery Evaluation.",
+        "pdf_sha256": "df771b05fdd4c2b209976a73a16fd98c5263187eb9ff51ceec10e117b04e964b",
+        "evidence_pages": [
+          1,
+          4,
+          11
+        ]
+      }
+    },
+    "paper-a721352a4172d790": {
+      "institutions": [
+        "CUHK-Shenzhen",
+        "University of British Columbia"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Agents propose feature maps, spectral components, input transformations, or kernel compositions. A deterministic backend checks execution, sampled PSD behavior, construction contracts, and consistency; tunes parameters; and maintains archive elites. Search, validation selection, and testing use separated task sets.",
+      "evidence": "Across seven BBO campaigns, frontier-proposed kernels average 8.3% lower held-out CRPS than Matérn, compared with 3% for ensemble proposals. Full search beats closure-only search in 11 of 12 paired campaigns with roughly 8% lower test CRPS. Additional experiments demonstrate predictive transfer across unseen enzyme mechanisms, greenhouse-gas records, and simulated patients.",
+      "discovery_use": "Directly studies agents discovering reusable model structures beyond a fixed kernel grammar, combining verification, behavioral diversity, retained discoveries, and transfer evaluation.",
+      "limits": "The kernel-function guarantee assumes finite, correctly shaped, pure components; sampled consistency tests do not prove purity over the full domain. Predictive transfer does not establish recovery of true scientific mechanisms. The independent-proposal ablation changes several factors together, and human refinement must be distinguished from agent discovery. Review covers supplied pages 1–16 of 61; later appendices, including the dedicated limitations appendix, were not reviewed.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "open_ended",
+        "rationale": "Directly studies agents discovering reusable model structures beyond a fixed kernel grammar, combining verification, behavioral diversity, retained discoveries, and transfer evaluation.",
+        "pdf_sha256": "53115eeec9e2e2da648d07d3518c95b5e6e60efa9b4068e76919c24e494b3bba",
+        "evidence_pages": [
+          1,
+          3,
+          6
+        ]
+      }
+    },
+    "paper-1f223adc2e100034": {
+      "institutions": [
+        "Vilnius University, Institute of Computer Science, Artificial Intelligence Methods Lab",
+        "IRISA, Université Bretagne Sud",
+        "European Commission Joint Research Centre"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        4
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Run 24 experiments per campaign, including the baseline, with 3600 seconds of training per experiment. Permit edits to losses, optimizers, schedules, auxiliary heads, clipping, and augmentation. Retain changes only when validation IoU increases; evaluate only Loop B's selected checkpoint on the held-out test set.",
+      "evidence": "Validation IoU improves from 0.616 to 0.710, 0.723 to 0.858, and 0.737 to 0.858. Loop B reaches test IoU 0.836 and F1 0.891 using real images only, compared with the reference GAN configuration's 0.833 and 0.880. Different modification sequences reach similar validation performance, and proposed changes often change sign across campaigns.",
+      "discovery_use": "Explicitly investigates autonomous experimental search: an agent proposes training-program changes, tests them under controlled budgets, and retains or rejects them using an immutable evaluator. Its analysis of configuration dependence and unreliable small gains contributes evidence about research-agent experimentation.",
+      "limits": "Single-seed experiments do not estimate uncertainty; late gains around 0.001 may reflect variation. Coding model and GPU class are confounded, and only one campaign receives test evaluation. Reference compute and training data differ, and there is no comparison with a declared-space tuner. The abstract's broad hardware-transfer wording exceeds a clean controlled transfer test. The verified repository currently contains a README and figure, without runnable implementation files.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "sci_methods",
+        "rationale": "Explicitly investigates autonomous experimental search: an agent proposes training-program changes, tests them under controlled budgets, and retains or rejects them using an immutable evaluator. Its analysis of configuration dependence and unreliable small gains contributes evidence about research-agent experimentation.",
+        "pdf_sha256": "a1e9dd65267065b7a4e06e7943328273307b3a88f379411d2f5ec782cd21f2c5",
+        "evidence_pages": [
+          1,
+          2,
+          4
+        ]
+      }
+    },
+    "paper-29b6bdf1923373d0": {
+      "institutions": [
+        "Westlake University",
+        "University of Tübingen"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The authors construct 18,279 evidence-linked triples, verify attribution, consistency, specificity, and response, and aggregate equivalent limitations. Qwen3-8B undergoes supervised fine-tuning, verifier-filtered rejection-sampling fine-tuning, and set-level GRPO. Evaluation uses temporal splits, a separate model-family evaluator, three training seeds, human judgments, and a fixed downstream idea proposer.",
+      "evidence": "Independent-evaluator graded recall reaches 0.452 on held-out NLP papers versus 0.262 for the strongest zero-shot baseline, and 0.314 versus 0.252 on CV transfer. Across two baseline comparisons, ActLim wins 64.9% of non-tied human judgments. Its limitations increase downstream retrospective alignment from 0.302 to 0.480. Human relevance and specificity improve; novelty and feasibility gains are not statistically significant.",
+      "discovery_use": "The paper directly trains models to identify technically actionable research gaps and evaluates whether these gaps improve downstream research ideation. Forward citations provide an auditable connection between prior limitations and subsequent investigations.",
+      "limits": "Future-pursued limitations are an incomplete, historically selected proxy for actionability and scientific value. Human-audited joint triple precision is 0.87, not perfect verification. Some models may have pretraining exposure to evaluation papers, and the named frontier baselines are older snapshots. Matching generated-item and verifier-call budgets does not match compute. Downstream alignment is retrospective and does not demonstrate successful research execution. All 19 text pages were supplied; only two were visually inspected. No verified first-party release was located; the paper promises a later release.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "The paper directly trains models to identify technically actionable research gaps and evaluates whether these gaps improve downstream research ideation. Forward citations provide an auditable connection between prior limitations and subsequent investigations.",
+        "pdf_sha256": "aaa04a19489a3afe4f1af9ff1c0abc3d96c311640abde1496e669fdca42dbf09",
+        "evidence_pages": [
+          1,
+          3,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-b401e2f2acb005b6": {
+      "institutions": [
+        "Wuhan University",
+        "University of California, San Diego",
+        "South China University of Technology",
+        "Cornell University",
+        "Microsoft Research Asia",
+        "Microsoft"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8,
+        27
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Model-driven principals coordinate asynchronously, delegate to assistants, review actual artifacts, and retain files and commitments. Fixed task-time snapshots produce 406 benchmark tasks. Qwen3.5-9B receives supervised fine-tuning followed by on-policy distillation; supplementary experiments compare agent harnesses on external tasks.",
+      "evidence": "The leading evaluated model achieves 74.4% complete-task Pass@1, while 20.8% of its eligible judged tasks miss a critical requirement. Training improves GDPval rubric scores from 65.75 to 73.65 on 79 shared tasks. The principal–assistant harness has the highest reported point estimates across five external evaluation columns, including research-code implementation.",
+      "discovery_use": "Persistent memory, permission-scoped information, delegation, artifact review, and unresolved questions generating follow-up work provide concrete mechanisms for discovery agent systems. The empirical focus is professional work rather than scientific discovery.",
+      "limits": "Simulation fidelity and transfer to real organizations remain unvalidated. Automated output scoring lacks established agreement with human graders. Task identity separation does not establish semantic or project isolation. Harness comparisons vary in tokens, terminal budgets, and reference settings. File accumulation measures neither quality nor success. All 34 supplied text pages were available; only the two attached pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "Persistent memory, permission-scoped information, delegation, artifact review, and unresolved questions generating follow-up work provide concrete mechanisms for discovery agent systems. The empirical focus is professional work rather than scientific discovery.",
+        "pdf_sha256": "6ce83a5676fe05cd9841c50f4eb73c4ffd55c6f68facbc01ac403955464214cc",
+        "evidence_pages": [
+          1,
+          4,
+          8,
+          27
+        ]
+      }
+    },
+    "paper-be65e818efe095a3": {
+      "institutions": [
+        "University of Illinois Urbana–Champaign",
+        "Tsinghua University",
+        "Michigan State University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        11,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The authors synthesize scientific-agent, human-factors, coordination, and social-epistemology literature. They define activity–actor–authority mappings, persistent Research State, an accountability loop, and adaptation of collaborative arrangements. Evaluation separates scientific outcomes, computational costs, human effort, controlled design comparisons, and evidential assurance.",
+      "evidence": "The contribution is conceptual rather than experimental. It provides explicit distinctions between performing work and authorizing decisions, between shared research records and participant-specific information, and between observed system performance and effects attributable to collaboration. Existing scientific-agent systems supply illustrative mappings, and an author-associated workflow provides an implementation example.",
+      "discovery_use": "The framework directly addresses the design and evaluation of scientific inquiry involving humans and AI, including hypothesis examination, persistent evidence, decision authority, and attribution of collaboration effects.",
+      "limits": "The proposed relationships have not been tested in real scientific settings. Appropriate decomposition, authority thresholds, and review intensity depend on domain and task. Record keeping and coordination impose human and computational costs, and simpler arrangements may suit bounded tasks. The implementation example establishes neither effectiveness nor generality. All 19 text pages were supplied; the two attached pages contain no empirical evaluation figures.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "foundations",
+        "rationale": "The framework directly addresses the design and evaluation of scientific inquiry involving humans and AI, including hypothesis examination, persistent evidence, decision authority, and attribution of collaboration effects.",
+        "pdf_sha256": "1fd1881a2985758ed75d204019d9eadf034803e549521afb55568dfd2b9cc048",
+        "evidence_pages": [
+          1,
+          8,
+          11,
+          13
+        ]
+      }
+    },
+    "paper-06be42075e2fd31a": {
+      "institutions": [
+        "The Pennsylvania State University",
+        "Microsoft CoreAI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Starting from SFT, generate student trajectories and compare their average stagnation with teacher trajectories. Combine this gap with answer correctness in an adaptive preference margin, retain an SFT anchoring loss, and optionally repeat. Evaluate eight student models using CodeAct on mathematical and multi-hop retrieval tasks, including additional evidence-acquisition diagnostics.",
+      "evidence": "Reported average accuracy gains over SFT are 4.7 percentage points in-domain and 4.9 out-of-domain, with 20.7% fewer inference tokens. Independent gold-evidence diagnostics improve across all eight backbones; Qwen3-4B evidence-hit rate rises from 38.4% to 44.3%. Repetition penalties, concise demonstrations, and rejection-sampling SFT underperform ProD.",
+      "discovery_use": "ProD trains tool-using agents to escape failed strategies and acquire new relevant evidence. This directly supports learning to investigate unknown information through feedback-guided search.",
+      "limits": "Generalization covers dataset shifts within mathematics and factual retrieval, rather than wholly new domains. Main inference is capped at ten turns. Similarity-based stagnation does not identify why progress fails. Hyperparameters use in-domain evaluation performance, and main results lack uncertainty estimates. Additional rollout and training costs remain necessary; autonomous scientific discovery is not evaluated.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "ProD trains tool-using agents to escape failed strategies and acquire new relevant evidence. This directly supports learning to investigate unknown information through feedback-guided search.",
+        "pdf_sha256": "0af8e1faba6d6e52c4fef60c922cfbbbc9f8504a00b09be38528fea4c949bf66",
+        "evidence_pages": [
+          1,
+          5,
+          20
+        ]
+      }
+    },
+    "paper-ec9a86ab8654e080": {
+      "institutions": [
+        "Seoul National University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Evaluate sixteen instruction-tuned models on three English QA benchmarks and seven MKQA languages. Compare gold-token cues with uncued decoding, random and incorrect cues, longer prefixes, candidate oracles, and sampled reasoning. Cross correct and incorrect cues matched by answer type and prior probability, then compare continuation confidence.",
+      "evidence": "For multi-token English answers, cues correct roughly 22% to 49% of baseline errors, with gains across every tested model and language. Matched-prior controls favor correct starts in about 60% to 67% of cases. Gold-free character search improves exact match only about two points, demonstrating a substantial gap between recognizing and finding the answer.",
+      "discovery_use": "The study provides a controlled diagnostic for distinguishing unavailable knowledge from failures to access encoded knowledge. That distinction informs how discovery agents identify unknowns and allocate retrieval or verification effort.",
+      "limits": "The cue leaks gold-answer information and is an oracle diagnostic, not a deployable correction method. Behavioral recovery does not establish an internal mechanism or human-like memory. Scope is short factual QA, and cue information varies by tokenizer and script. Cueing also breaks some correct answers. Human grading validation covers only 200 responses from one model.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "foundations",
+        "rationale": "The study provides a controlled diagnostic for distinguishing unavailable knowledge from failures to access encoded knowledge. That distinction informs how discovery agents identify unknowns and allocate retrieval or verification effort.",
+        "pdf_sha256": "11d41188154e903f0dfd3290d3f64161e9bef030965af98d71961c9b9cc49d3e",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-d03c4239f891aa34": {
+      "institutions": [
+        "University of Chicago"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Clients solve local tasks and upload reflections. The server first revises its own harness, then uses that updated harness to produce the next shared client harness. Human guides bound the editable components. Compare final harnesses with isolated agents, FoT, RHO, and component ablations on daily tasks and ScienceAgentBench.",
+      "evidence": "On held-out ScienceAgentBench tasks, success rises from 11.8% for isolated agents, 21.6% for FoT, and 31.4% for RHO to 58.8% for FoH. Freezing the server gives 52.9%. ClawEval scores increase from 56.60 to 78.44. Case studies show cross-domain reuse of verification and visualization tools.",
+      "discovery_use": "FoH evolves shared knowledge, client research workflows, and the server procedure that improves those workflows. Its held-out scientific-task evaluation provides a concrete discovery-system connection.",
+      "limits": "Validation-free evolution still permits runtime checks and protected interface validation. Improvement depends strongly on guide requirements, with no guarantee that an update helps. Asynchronous and personalized federation remain proposed extensions. Main tables emphasize one evolution run; additional daily-task repetitions are reported. Privacy tests are limited, and methods requiring external validation are excluded from comparison.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "FoH evolves shared knowledge, client research workflows, and the server procedure that improves those workflows. Its held-out scientific-task evaluation provides a concrete discovery-system connection.",
+        "pdf_sha256": "443b023edf79b53eb67b7548d16e3e3181c59c4be2db36c668d1e4f805f0db3a",
+        "evidence_pages": [
+          1,
+          2,
+          6
+        ]
+      }
     }
   }
 }

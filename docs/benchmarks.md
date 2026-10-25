@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**72 usage profiles** · Updated **2026-10-25**
+**74 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1195,6 +1195,8 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch](#paper-d4e79e43099df1b8) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [EdgeKernelBench: Unified LLM-Driven Kernel Generation for Edge Backends](#paper-105b4672ff4fd27c) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners](#paper-5d861400b2f29a95) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [DataSense-Bench: The First Step Toward an AI Scientist](#paper-ec30270490ea6cac) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [RSI-Forge: From Research Papers to Environments for Recursive Self-Improvement](#paper-b92b08173531b188) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -1561,6 +1563,52 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Training or reinforcement-learning rewards are not established; the supplied body reports evaluation of existing models. Final evaluation uses hidden programmatic feasibility checks and independently recomputed objectives. Strict feasibility requires all official cases to pass. Deployment-Adjusted Quality assigns zero to infeasible instances and otherwise uses expert-relative objective quality. Page 33 additionally describes an LLM judge for modeling choices on Tasks 26–31 after deterministic checks. |
 | Reset | Five runs per model–task pair are reported. An agent-accessible episode reset or checkpoint restoration mechanism is not established. |
 | Branching | Agents can revise solutions and execute diagnostic experiments. Environment cloning, checkpoint forks, and an agent-accessible branching mechanism are not established. |
+
+</details>
+
+<a id="paper-ec30270490ea6cac"></a>
+
+<details>
+<summary>DataSense-Bench: The First Step Toward an AI Scientist — details</summary>
+
+[Work](../README.md#paper-ec30270490ea6cac) · [Source](https://arxiv.org/pdf/2610.12190)
+
+**Focus:** Predict the training value of existing recorded trajectories: submit five disjoint subsets ranked by expected downstream performance. After submission, the benchmark executes separate SFT and evaluation experiments for each subset (pages 2–6).
+
+**Openness:** `Agents design their own analysis, scoring, coverage and subset-selection procedures.`, `Candidate trajectory pools, base model, group sizes and SFT recipes are fixed.`, `Agents may inspect data, execute analysis code and run base-model forward passes.`, `Training, gradients, weight updates and access to downstream evaluation tasks are prohibited during selection.`
+
+**New physical measurements:** No
+
+**Limits:** Selection receives no training or downstream evaluation feedback and cannot revise groups after outcomes are observed. Experiments use one base model, two task families, fixed recipes and existing data. Training uses seed 42; repeated evaluation seeds do not establish training-seed robustness. Random selection uses one fixed subset per task. Access checks do not certify complete enforcement. These are computational experiments using recorded trajectories, with no new physical measurements (pages 4–6, 9, 15–16).
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No selector training reward or online downstream feedback is supplied. The benchmark performs full-parameter SFT with assistant-token supervision on fresh Qwen3-4B copies. Post-training evaluation uses TBLite task verifiers, including fractional rewards where supported, and BFCL V3 checks of required state and execution behavior. Selector metrics are first-group performance, gain over random selection, Spearman correlation and best-group accuracy. Invalid submissions receive assigned failure penalties (pages 5–6, 15–16). |
+| Reset | Each selected group trains a fresh base-model copy. Each TBLite evaluation attempt starts in a fresh sandbox. A failed selection submission may retry once within the same four-hour budget. Arbitrary selection-environment reset or checkpoint restoration is not established (pages 3, 5–6). |
+| Branching | Five disjoint data choices are tested independently after their membership and order are frozen. Agents can compare provisional selections through permitted analysis, but cannot branch on observed training outcomes. Runtime snapshot or rollback support is not established (pages 3–5). |
+
+</details>
+
+<a id="paper-b92b08173531b188"></a>
+
+<details>
+<summary>RSI-Forge: From Research Papers to Environments for Recursive Self-Improvement — details</summary>
+
+[Work](../README.md#paper-b92b08173531b188) · [Source](https://arxiv.org/pdf/2610.09426)
+
+**Focus:** Execute research methods, inspect development results and improve solutions across paper-derived computational tasks. Automated held-out evaluations compare submissions with starting solutions, targets and independently reproduced methods (pages 4–5, 8).
+
+**Openness:** `Solvers may modify or replace runnable starting solutions within task-specific interfaces, rules and compute budgets.`, `Development evaluations have no fixed call-count limit.`, `Successive sessions inherit submitted code, saved versions, experiment logs and notes while model weights remain fixed.`, `Source papers, reproduced implementations and held-out test data are withheld from solvers.`, `The corpus is available on request with gated access.`
+
+**New physical measurements:** No
+
+**Limits:** Tasks include generated data and simulations; examples include simulated weather estimation and terrain-based foothold selection. Feedback comes from executing candidate methods and scoring their outputs, with no new physical measurements. Bounded adaptations can omit substantive source-paper content, so beating a reproduced baseline does not establish scientific novelty. Inheritance is confounded with extra solving time. Restricted-material access was recorded in 22 of 480 chains; complete isolation is not established. Broader training gains are not demonstrated, and corpus access is gated (pages 7, 9–12, 17, 23).
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No solver weight training is performed. Development evaluators provide feedback during solving; held-out scores are withheld until grading. A scoring program is deterministic for fixed evaluation inputs, with normalized score (v − w)/(u − w), where w is the starting-solution score and u is the target. Automated validity checks enforce interfaces, correctness and resource limits; a separate model judge assigns zero reward to rule-violating submissions (pages 4–5, 11, 18). |
+| Reset | Three successive sessions start with fresh contexts. Only saved solution files, versions, logs and notes carry over; live workspace, conversational context and shell history do not. The prior submission is inherited regardless of score. Arbitrary environment snapshots or simulator-state restoration are not established (pages 8, 18). |
+| Branching | Solvers can retain and test alternative code versions, and every saved runnable version, including abandoned versions, is later replayed on held-out data. These held-out scores are not returned during solving. Automatic search-tree branching or runtime state cloning is not established (pages 8–9, 18). |
 
 </details>
 
