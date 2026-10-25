@@ -1944,7 +1944,7 @@
   },
   "https://recursive.com/updates/introducing-recursive-flint": {
     "path": "assets/news/ad489904c3cece5956a6.webp",
-    "alt": "The plot places both Flint implementations near 81% mean score, at approximately 48 and 69 normalized tokens/s. Purple and beige lines mark frontiers with and without Flint; filled and hollow baseline markers distinguish evaluation sources. The shaded frontier gain is a speed-quality comparison, not a measurement of automated research effectiveness. Neither uncertainty intervals nor task counts appear.",
+    "alt": "Scatterplot compares six-benchmark mean quality against decode throughput. The horizontal axis spans 0–120 tokens/s; the displayed vertical scale starts at 10%, not zero. Flint MLX is near 69 tokens/s and 81%; llama.cpp is near 48 tokens/s and 81%. Qwen3.8 27B has higher mean quality near 85% but substantially lower speed near 10 tokens/s. Filled and hollow baseline markers distinguish reference evaluations from external-survey results. The shaded frontier gain is an author-presented comparison, not evidence of automated research causality.",
     "source_url": "https://framerusercontent.com/images/r0ZvZoY4jdnhGrjQFOVH8C8aFGo.png?width=12800&height=7200",
     "width": 1600,
     "height": 900,
@@ -1953,7 +1953,7 @@
     "images": [
       {
         "path": "assets/news/ad489904c3cece5956a6.webp",
-        "alt": "The plot places both Flint implementations near 81% mean score, at approximately 48 and 69 normalized tokens/s. Purple and beige lines mark frontiers with and without Flint; filled and hollow baseline markers distinguish evaluation sources. The shaded frontier gain is a speed-quality comparison, not a measurement of automated research effectiveness. Neither uncertainty intervals nor task counts appear.",
+        "alt": "Scatterplot compares six-benchmark mean quality against decode throughput. The horizontal axis spans 0–120 tokens/s; the displayed vertical scale starts at 10%, not zero. Flint MLX is near 69 tokens/s and 81%; llama.cpp is near 48 tokens/s and 81%. Qwen3.8 27B has higher mean quality near 85% but substantially lower speed near 10 tokens/s. Filled and hollow baseline markers distinguish reference evaluations from external-survey results. The shaded frontier gain is an author-presented comparison, not evidence of automated research causality.",
         "source_url": "https://framerusercontent.com/images/r0ZvZoY4jdnhGrjQFOVH8C8aFGo.png?width=12800&height=7200",
         "width": 1600,
         "height": 900,
@@ -1961,7 +1961,7 @@
       },
       {
         "path": "assets/news/c96467572e5346696930.webp",
-        "alt": "Six panels compare Flint with three sparse MoE and three dense peers. Flint exceeds all displayed sparse peers on the three agentic benchmarks and leads all displayed models on IFBench and IFEval. Dense peers lead several other panels; Qwen 3.6 slightly exceeds Flint on LiveCodeBench. Dagger marks identify internally measured results. Bars show no uncertainty intervals.",
+        "alt": "Six bar panels report Flint scores of 54.9, 89.7, 74.2, 80.3, 89.2 and 95.1 respectively. Flint exceeds the displayed sparse MoE peers on the three agentic benchmarks, IFBench and IFEval; Qwen3.6 narrowly exceeds it on LiveCodeBench, 80.4 versus 80.3. Dense Qwen3.8 leads several coding panels. Dagger marks identify selected internally measured results, including the entire SWE-bench Pro v2 panel. No error bars appear.",
         "source_url": "https://framerusercontent.com/images/Pr0KZ9ZtzPrFHMFZxCtZXjud04.png?width=12800&height=7200",
         "width": 1600,
         "height": 900,
@@ -1969,7 +1969,7 @@
       },
       {
         "path": "assets/news/9825ce27583e8634b476.webp",
-        "alt": "Separate columns distinguish short-context throughput from context-averaged decode performance. M4 Pro llama.cpp reports 87.98/47.58 tokens/s for Flint versus 65.55/37.13 for Qwen 3.6. RTX Spark llama.cpp reports 96.61/59.35 versus 72.65/53.49. The much smaller Qwen 3.5 0.8B is faster than Flint on M4 Pro, so the chart supports hardware-, engine-, and comparator-specific speed claims.",
+        "alt": "Paired horizontal bars distinguish short-context throughput from context-averaged throughput. On M4 Pro, Flint MLX reports 131.22/68.89 tokens/s and Flint llama.cpp 87.98/47.58. On RTX Spark, Flint NVFP4 reports 155.82/101.95, Flint llama.cpp 96.61/59.35 and Qwen3.6 llama.cpp 72.65/53.49. Some tiny dense models are faster on M4 Pro; the figure supports a capability-dependent speed comparison rather than universal speed leadership.",
         "source_url": "https://framerusercontent.com/images/5t7vbDk5jkbHiOHKkSzJDzhgz4.png?width=12800&height=7200",
         "width": 1600,
         "height": 900,
@@ -4778,6 +4778,243 @@
       223.31553649902344,
       532.0023193359375,
       417.6539001464844
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://x.com/MiniHui_zhu/status/2113182085385273507": {
+    "path": "assets/news/af0233cd0e624ab64cca.webp",
+    "alt": "The upper bar chart places GPT-6 Astra first at 83.1%. The lower scatterplot compares percentage scores against logarithmic dollar cost per task, with a shaded upper-left region favoring higher scores and lower costs. The checkerboard legend marks a model without a publicly available API. No challenge count, error bars, or five-evaluation averaging note is visible.",
+    "source_url": "https://pbs.twimg.com/media/HVOB87laEAA21IM?format=jpg&name=orig",
+    "width": 1467,
+    "height": 1200,
+    "source_index": 1,
+    "kind": "source-image",
+    "images": [
+      {
+        "path": "assets/news/af0233cd0e624ab64cca.webp",
+        "alt": "The upper bar chart places GPT-6 Astra first at 83.1%. The lower scatterplot compares percentage scores against logarithmic dollar cost per task, with a shaded upper-left region favoring higher scores and lower costs. The checkerboard legend marks a model without a publicly available API. No challenge count, error bars, or five-evaluation averaging note is visible.",
+        "source_url": "https://pbs.twimg.com/media/HVOB87laEAA21IM?format=jpg&name=orig",
+        "width": 1467,
+        "height": 1200,
+        "source_index": 1
+      }
+    ],
+    "preview_version": 4,
+    "credit": "Original source authors; reviewed image preview with attribution."
+  },
+  "https://x.com/TeksEdge/status/2112974699835859236": {
+    "path": "assets/news/6d6c83409d3816448e9a.webp",
+    "alt": "Readable table comparing six models across twelve benchmarks. The three benchmark rows quoted in the post match the pixels. Sage-A1.5 scores above the three larger comparators on PinchBench and FS-Olympiad, and below them on SWE-Pro. No axes, units, sample counts, uncertainty, precision designation, or methodological caveats appear. The reused comparison table supplies reported scores, not evidence of the current author's testing.",
+    "source_url": "https://pbs.twimg.com/media/HVKqHwWbgAAVTBY?format=jpg&name=orig",
+    "width": 1600,
+    "height": 900,
+    "source_index": 1,
+    "kind": "source-image",
+    "images": [
+      {
+        "path": "assets/news/6d6c83409d3816448e9a.webp",
+        "alt": "Readable table comparing six models across twelve benchmarks. The three benchmark rows quoted in the post match the pixels. Sage-A1.5 scores above the three larger comparators on PinchBench and FS-Olympiad, and below them on SWE-Pro. No axes, units, sample counts, uncertainty, precision designation, or methodological caveats appear. The reused comparison table supplies reported scores, not evidence of the current author's testing.",
+        "source_url": "https://pbs.twimg.com/media/HVKqHwWbgAAVTBY?format=jpg&name=orig",
+        "width": 1600,
+        "height": 900,
+        "source_index": 1
+      }
+    ],
+    "preview_version": 4,
+    "credit": "Original source authors; reviewed image preview with attribution."
+  },
+  "https://arxiv.org/abs/2610.23010": {
+    "path": "assets/news/25be5f1bd7762386.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from What Makes a Good Symbol for Hybrid Discrete-Continuous Planning?",
+    "source_url": "https://arxiv.org/pdf/2610.23010",
+    "pdf_page": 3,
+    "pdf_clip": [
+      98.0,
+      71.86160278320312,
+      514.001708984375,
+      191.74951171875
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.22697": {
+    "path": "assets/news/81e562d86820e0f8.webp",
+    "kind": "paper",
+    "alt": "First-page preview of What It Is, Not What It Says: Securing Agentic Browsing Interactions with Web Semantics",
+    "source_url": "https://arxiv.org/pdf/2610.22697",
+    "pdf_page": 1,
+    "pdf_clip": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.22732": {
+    "path": "assets/news/bc96cee780e278b5.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from TokenEconomizer: Experience-Driven Black-Box Cost Control for Coding Agents",
+    "source_url": "https://arxiv.org/pdf/2610.22732",
+    "pdf_page": 2,
+    "pdf_clip": [
+      62.0,
+      19.674110412597656,
+      550.0081176757812,
+      256.58099365234375
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.22708": {
+    "path": "assets/news/c8f0a1e7ad6a901d.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations",
+    "source_url": "https://arxiv.org/pdf/2610.22708",
+    "pdf_page": 2,
+    "pdf_clip": [
+      99.53445434570312,
+      73.39485168457031,
+      512.461181640625,
+      293.4232177734375
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.22894": {
+    "path": "assets/news/6e3e2ae7454ba2f5.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from Competence-Based Evaluation of Logical Reasoning in Large Language Models",
+    "source_url": "https://arxiv.org/pdf/2610.22894",
+    "pdf_page": 5,
+    "pdf_clip": [
+      69.14175415039062,
+      78.46968078613281,
+      531.4777221679688,
+      222.9070587158203
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.09684": {
+    "path": "assets/news/173432e0518b18b9.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from From Pareto to Preference: Personalized Test-Time Scaling via Amortized Agentic Policy Discovery",
+    "source_url": "https://arxiv.org/pdf/2610.09684",
+    "pdf_page": 2,
+    "pdf_clip": [
+      98.0,
+      71.86238098144531,
+      514.0009765625,
+      357.8944396972656
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.10468": {
+    "path": "assets/news/6e87228c64a8ec80.webp",
+    "kind": "paper",
+    "alt": "First-page preview of A Society of Researchers: Designing Institutions for Populations of Autonomous Research Agents",
+    "source_url": "https://arxiv.org/pdf/2610.10468",
+    "pdf_page": 1,
+    "pdf_clip": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.08327": {
+    "path": "assets/news/034319a912d1c23e.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from MedZERO: Self-Evolving Agents for Open-Ended Medical Reasoning Through Controlled Knowledge Accumulation",
+    "source_url": "https://arxiv.org/pdf/2610.08327",
+    "pdf_page": 2,
+    "pdf_clip": [
+      100.80657196044922,
+      83.69544219970703,
+      515.1363525390625,
+      248.69528198242188
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.07969": {
+    "path": "assets/news/fd271a5f07c0fe55.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from EmbodiedSmith: Scaling Embodied Data through Recursive Self-Improvement Flywheel in Simulation",
+    "source_url": "https://arxiv.org/pdf/2610.07969",
+    "pdf_page": 2,
+    "pdf_clip": [
+      60.865997314453125,
+      53.78074645996094,
+      551.135986328125,
+      327.8869323730469
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.06376": {
+    "path": "assets/news/bb5599a8f4dfd40c.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from Towards Robust Prehensile Manipulation in Open-Ended Environments",
+    "source_url": "https://arxiv.org/pdf/2610.06376",
+    "pdf_page": 1,
+    "pdf_clip": [
+      90.37000274658203,
+      230.06246948242188,
+      521.6381225585938,
+      377.8005065917969
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.06656": {
+    "path": "assets/news/a293907f11982b44.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from Sample Dependence-Aware Blind Source Separation for Linear Causal Discovery",
+    "source_url": "https://arxiv.org/pdf/2610.06656",
+    "pdf_page": 3,
+    "pdf_clip": [
+      44.42499923706055,
+      62.00038146972656,
+      568.9968872070312,
+      256.66448974609375
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.07509": {
+    "path": "assets/news/12a4904af7aa0825.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from On Open-Ended Information Seeking for Information Elicitation Agents",
+    "source_url": "https://arxiv.org/pdf/2610.07509",
+    "pdf_page": 2,
+    "pdf_clip": [
+      105.61994934082031,
+      78.4173583984375,
+      452.1622619628906,
+      233.66249084472656
+    ],
+    "preview_version": 3,
+    "credit": "Original paper authors; figure or first-page preview with direct paper attribution."
+  },
+  "https://arxiv.org/abs/2610.05701": {
+    "path": "assets/news/54910a6ae6785da1.webp",
+    "kind": "figure",
+    "alt": "Figure 1 from Second-Order Problem Solving for Recursive Self-Improvement in Formal Verification",
+    "source_url": "https://arxiv.org/pdf/2610.05701",
+    "pdf_page": 2,
+    "pdf_clip": [
+      97.81482696533203,
+      71.85696411132812,
+      513.5927734375,
+      314.043701171875
     ],
     "preview_version": 3,
     "credit": "Original paper authors; figure or first-page preview with direct paper attribution."

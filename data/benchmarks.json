@@ -1653,6 +1653,97 @@
       "name": "RSI-Forge: From Research Papers to Environments for Recursive Self-Improvement",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.09426"
+    },
+    {
+      "feedback": "synthetic-scm",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose phenotypes, hypotheses, statistical analyses, intervention targets, conclusions, and stopping points.",
+        "Any statistical analysis implementable in Python is allowed on the released biobank.",
+        "Protein identifiers are anonymous; causal truth and scoring references are hidden.",
+        "Public availability of environment code and data is not established by the supplied pages."
+      ],
+      "focus": "End-to-end causal drug-target investigation in synthetic cardiovascular biobanks. Each world contains generated observations from a hidden structural causal model. Agents execute Python analyses and may purchase simulated cell perturbations or simulated in vivo knockdowns. These interventions return model-generated outcome changes; they produce no new physical measurements.",
+      "limits": "Pages 11–12 allow at most 30 turns, with one Python program per turn and persistent files. The harness returns program output or errors, working-directory contents, and remaining budget and turns, but gives no scientific-correctness feedback during an episode. Experimental budgets are $0, $450,000, or $2 million in simulated charges; cell perturbations cost $150,000 and knockdowns $400,000. Cell perturbations include measurement noise and measure first-visit effects; knockdowns return five-year effects without additional measurement noise. A parseable submission can terminate an episode prematurely. Page 27 identifies exploitable exact-zero knockdown responses, hard-coded scoring labels, and incorrect follow-up MRI morphology in 14 worlds. One run per agent, world, and budget leaves run-to-run variability unmeasured.",
+      "training": {
+        "reward": "Pages 13–15 define a terminal score against hidden causal truth, clipped to 0–100: target identification 30 points, causal confidence 25, intervention direction 20, bias identification 15, and phenotype construction 10, with a 30-point harmful-surrogate penalty. Phenotype agreement is evaluated on a sealed 20% participant sample. The environment is proposed as a source of verifiable training rewards; agent training is not demonstrated in the supplied evaluation.",
+        "reset": "Pages 4 and 8 establish procedural generation of distinct worlds using seeds, with each world's parameters fixed across evaluated agents. Separate episodes are run for each agent, world, and budget. An explicit reset interface, same-seed replay guarantees, and mid-episode reset support are not established.",
+        "branching": "Agents can sequentially choose alternative analyses and interventions. Snapshot restoration, episode forking, and branching from an earlier execution state are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-e15c7d3de5e7f265",
+      "resource_id": "paper-e15c7d3de5e7f265",
+      "name": "DrugTargetWorld: A Synthetic Biobank for Training and Benchmarking AI Scientists",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.09558"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "finite-pool-query",
+      "new_physical_experiments": false,
+      "openness": [
+        "Project code, data, and trajectory files are stated to be available.",
+        "License not established in supplied pages."
+      ],
+      "focus": "Sequential elicitation simulation over recorded human-written arguments. At each step, the elicitor scores k candidates and selects the highest-scoring hypothesis. The respondent independently confirms it with probability 0.5. Selected hypotheses leave the pool; topic-specific confirmation history conditions later scores. Natural-language questions and respondent answers are abstracted away.",
+      "limits": "The finite recorded argument pool supplies candidate content; simulated confirmations do not establish actual human beliefs or factual correctness. The benchmark evaluates information-seeking preferences and trajectory breadth, depth, and redundancy sensitivity. It does not evaluate executed research experiments or new physical measurements.",
+      "training": {
+        "reward": "No benchmark training procedure or training reward is established. Selection uses the model's probability of the complete affirmative label, without renormalization over labels. Evaluation measures topic switching, distinct topics, run lengths, and selection behavior. Human argument-quality scores are external diagnostics, not the optimized objective.",
+        "reset": "Separate trajectories begin before any hypothesis has been selected, with no active topic. Experiments repeat trajectories across three seeds. An explicit reset API is not established.",
+        "branching": "Candidate composition depends on previous selections. Alternative trajectories are generated across models, seeds, and conditions; checkpoint restoration or arbitrary branching from a saved state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-12a4904af7aa0825",
+      "resource_id": "paper-12a4904af7aa0825",
+      "name": "On Open-Ended Information Seeking for Information Elicitation Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.07509"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Benchmark items, evaluation harness, model outputs, judge records, and reproduction instructions are stated to be released.",
+        "Harness code is released under Apache-2.0; adapted items record upstream sources and licenses."
+      ],
+      "focus": "Models predict one next state from a fixed interaction history and final action, without seeing the gold state or interacting with the backend. Gold states come from executing actions against pinned software backends. Sources include adapted testbeds, libraries, and author-written rule simulators across code, enterprise, games, math and science, and dialogue.",
+      "limits": "Executed software supplies reference states; laboratory-schedule measurements are computed by scientific libraries, not newly measured in a physical laboratory. Most items generated from author recipes use synthetic simulators. The benchmark tests transition prediction rather than agents conducting research experiments. It does not measure rollout error accumulation or downstream training utility. Whole-state binary grading and confounded skill, history-length, radius, and output-length factors limit interpretation.",
+      "training": {
+        "reward": "No benchmark training procedure or training reward is established. Evaluation uses binary task success: deterministic comparisons settle equivalence or contradictions against execution-derived golds, with unresolved cases sent to a semantic judge. Refusals and unusable completions count as failures.",
+        "reset": "Pinned backends and reproducibility gates support repeatable gold generation; some items test seeded replay. An interactive reset interface for evaluated models is not established.",
+        "branching": "Evaluated models receive one fixed prefix and final action per item. Construction includes controlled alternative actions, but model-directed branching or checkpoint access is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-c8f0a1e7ad6a901d",
+      "resource_id": "paper-c8f0a1e7ad6a901d",
+      "name": "GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.22708"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Release code is stated to include both presentation samplers.",
+        "Archived answers and released outputs support reported analyses.",
+        "License not established in supplied pages."
+      ],
+      "focus": "Models answer generated logical questions under matched answer-preserving presentations. An exact oracle derives ordering answers from latent structures; a Horn-clause extension uses forward chaining. Parameters vary instance size and presentation. Models submit answers to supplied prompts without acting in an interactive research environment.",
+      "limits": "Synthetic rules and computed gold labels establish logical correctness; no physical measurements are involved. Endpoint ordering queries permit shortcuts, so chain length does not isolate inference depth. Finite tests establish only evaluated coverage. Some length conditions also change presentation distributions, and paired metrics condition on valid answers.",
+      "training": {
+        "reward": "Evaluation reports oracle accuracy, both-correct matched pairs, invariance, and chance-corrected invariance. SFT uses supervised LoRA examples, including a consistency-loss variant. Main GRPO nominally rewards correctness plus half a cross-presentation agreement bonus, with unparseable answers receiving zero. Appendix G establishes that per-prompt normalization made this bonus effectively inert, so the main updates were correctness-driven. An additional instance-grouped variant allows the bonus to affect updates.",
+        "reset": "Independent generated instances and identical-prompt repeat controls are provided. A stateful environment reset API is not established.",
+        "branching": "The generator renders multiple equivalent presentations of the same latent instance and supports controlled perturbations. Interactive action branching or checkpoint restoration is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6e3e2ae7454ba2f5",
+      "resource_id": "paper-6e3e2ae7454ba2f5",
+      "name": "Competence-Based Evaluation of Logical Reasoning in Large Language Models",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.22894"
     }
   ]
 }
