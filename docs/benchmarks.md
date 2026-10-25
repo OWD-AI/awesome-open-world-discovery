@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**85 usage profiles** · Updated **2026-10-25**
+**87 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -647,6 +647,8 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [BlenderWorld: Benchmarking Visual Agents for 3D Creation from Real-World References](#paper-ecf2a0572888b64b) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [Harness-Delta Attribution: Dissecting Gains From Harness Evolution](#paper-f34ad45741b405ff) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization](#paper-ec27d50c3bb0542a) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat](#paper-c643418cbbaee3ee) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [Evaluating Agentic Capabilities Before Post-Training: An End-to-End Approach](#paper-2693639d7f34414f) | Executed programs + evaluators | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1358,6 +1360,52 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | No benchmark policy-training reward or parameter-update procedure is established. Final acceptance requires Lean compilation and faithfulness grades of at least 9 from both GPT-5.2 and Gemini-2.5-Pro. Semantic judging applies only to the final statement. During agent execution, enabled tools provide drafting, library or web search, and compiler diagnostics; runs stop at the first REPL pass, an allowed success declaration, or 24 steps. |
 | Reset | The same statements are evaluated across eight tool configurations. An environment reset API, checkpoint restoration, or replay support is not established. |
 | Branching | Separate tool configurations and completed outputs are compared. Agent-controlled branching, workspace forking, or branching from saved execution states is not established. |
+
+</details>
+
+<a id="paper-c643418cbbaee3ee"></a>
+
+<details>
+<summary>CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat — details</summary>
+
+[Work](../README.md#paper-c643418cbbaee3ee) · [Source](https://arxiv.org/pdf/2610.19005)
+
+**Focus:** Concurrent attack and defense of executed network services in isolated sandboxes. Three 20-minute rounds provide tool observations, arena-verified captures and periodic functionality probes. This is live software execution, with recorded trajectories used for subsequent analysis; it is not a scientific simulator or new physical measurement.
+
+**Openness:** `Agents choose exploits, patches and monitoring strategies against adaptive opponents.`, `An agentic curation pipeline supplies additional validated challenges.`
+
+**New physical measurements:** No
+
+**Limits:** Fixed model–harness entrants and a bounded challenge roster limit coverage. Functionality probes can miss broken workflows or checker discrimination. Six infrastructure-related captures remain in the standings. Rankings and intervals depend on the opponent roster, challenge set and statistical model.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No agent training is performed. The evaluator credits captures, prevented opponent captures and service health equally in the game score. A latent model estimates expected scores across a shared reference set. Offline policy optimization and recursive adversarial improvement are proposed future work. |
+| Reset | Identical service copies initialize isolated games. Objectives rotate each round while defensive modifications persist. Service restart is supported, and challenge validation includes a clean-environment rerun. Arbitrary participant-controlled state reset or rollback is not established. |
+| Branching | Separate games and solo retries are evaluated. Snapshot-based branching or counterfactual continuation from an intermediate game state is not established. |
+
+</details>
+
+<a id="paper-2693639d7f34414f"></a>
+
+<details>
+<summary>Evaluating Agentic Capabilities Before Post-Training: An End-to-End Approach — details</summary>
+
+[Work](../README.md#paper-2693639d7f34414f) · [Source](https://arxiv.org/pdf/2610.19425)
+
+**Focus:** Frozen base models continue a three-step reference prefix and execute actions through existing software-repair, terminal and BrowseComp-Plus scaffolds. Executed tool outputs are appended to the trajectory. Recorded reference trajectories provide initial guidance; evaluation measures newly generated interaction rather than fixed-trajectory likelihood. No new physical measurements are involved.
+
+**Openness:** `Models choose multi-step exploration, editing, testing and recovery actions within fixed task instances.`
+
+**New physical measurements:** No
+
+**Limits:** Results depend on serialization, reference prefixes and scaffold choice. The default budget is 30 steps. Stage 3 jointly introduces trajectory data and longer-context training. Base-versus-post-trained comparisons use different protocols. The network audit does not establish absence of memorization.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | ASAP evaluates frozen models without weight updates or reward optimization. Original task verifiers assess final patches or answers; software patches use the official grader. Pass@k measures repeated-sampling success, and Intersection@n measures success across every run. At most one recovery hint is supplied for each structural failure type. |
+| Reset | Eight independent rollouts per model and task are reported, with the same instance prefix across models. Arbitrary mid-trajectory environment reset, rollback and exact state-restoration mechanisms are not established. |
+| Branching | Repeated independent sampling is supported. Snapshot-based branching from intermediate states is not established. Grader-based preference pairs from intermediate repository states are suggested as future data synthesis. |
 
 </details>
 

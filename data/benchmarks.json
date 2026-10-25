@@ -1903,6 +1903,49 @@
       "name": "Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2606.31002"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose exploits, patches and monitoring strategies against adaptive opponents.",
+        "An agentic curation pipeline supplies additional validated challenges."
+      ],
+      "focus": "Concurrent attack and defense of executed network services in isolated sandboxes. Three 20-minute rounds provide tool observations, arena-verified captures and periodic functionality probes. This is live software execution, with recorded trajectories used for subsequent analysis; it is not a scientific simulator or new physical measurement.",
+      "limits": "Fixed model–harness entrants and a bounded challenge roster limit coverage. Functionality probes can miss broken workflows or checker discrimination. Six infrastructure-related captures remain in the standings. Rankings and intervals depend on the opponent roster, challenge set and statistical model.",
+      "training": {
+        "reward": "No agent training is performed. The evaluator credits captures, prevented opponent captures and service health equally in the game score. A latent model estimates expected scores across a shared reference set. Offline policy optimization and recursive adversarial improvement are proposed future work.",
+        "reset": "Identical service copies initialize isolated games. Objectives rotate each round while defensive modifications persist. Service restart is supported, and challenge validation includes a clean-environment rerun. Arbitrary participant-controlled state reset or rollback is not established.",
+        "branching": "Separate games and solo retries are evaluated. Snapshot-based branching or counterfactual continuation from an intermediate game state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-c643418cbbaee3ee",
+      "resource_id": "paper-c643418cbbaee3ee",
+      "name": "CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.19005"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Models choose multi-step exploration, editing, testing and recovery actions within fixed task instances."
+      ],
+      "focus": "Frozen base models continue a three-step reference prefix and execute actions through existing software-repair, terminal and BrowseComp-Plus scaffolds. Executed tool outputs are appended to the trajectory. Recorded reference trajectories provide initial guidance; evaluation measures newly generated interaction rather than fixed-trajectory likelihood. No new physical measurements are involved.",
+      "limits": "Results depend on serialization, reference prefixes and scaffold choice. The default budget is 30 steps. Stage 3 jointly introduces trajectory data and longer-context training. Base-versus-post-trained comparisons use different protocols. The network audit does not establish absence of memorization.",
+      "training": {
+        "reward": "ASAP evaluates frozen models without weight updates or reward optimization. Original task verifiers assess final patches or answers; software patches use the official grader. Pass@k measures repeated-sampling success, and Intersection@n measures success across every run. At most one recovery hint is supplied for each structural failure type.",
+        "reset": "Eight independent rollouts per model and task are reported, with the same instance prefix across models. Arbitrary mid-trajectory environment reset, rollback and exact state-restoration mechanisms are not established.",
+        "branching": "Repeated independent sampling is supported. Snapshot-based branching from intermediate states is not established. Grader-based preference pairs from intermediate repository states are suggested as future data synthesis."
+      },
+      "evaluation_family": "other",
+      "id": "paper-2693639d7f34414f",
+      "resource_id": "paper-2693639d7f34414f",
+      "name": "Evaluating Agentic Capabilities Before Post-Training: An End-to-End Approach",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.19425"
     }
   ]
 }
