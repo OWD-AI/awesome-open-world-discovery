@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-574-2563eb?style=flat-square" alt="574 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-98-0f766e?style=flat-square" alt="98 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-581-2563eb?style=flat-square" alt="581 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-100-0f766e?style=flat-square" alt="100 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -78,13 +78,13 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 35 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 60 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 63 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 47 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 86 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 88 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 87 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 104 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 66 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 89 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 91 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -216,6 +216,8 @@ Each work appears once under its primary contribution; see the [classification g
   Guoliang Xu, James E. Corter · Columbia University
 - <a id="paper-c749e943da3bd0cf"></a>**D-World: An Explicit World-Language-Action Model with Recursive Self-Improvement under Dual Control** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.17114)* · [Paper](https://arxiv.org/abs/2610.17114)<br>
   Xuan Wen, Baichao Wang · Geek+
+- <a id="paper-6b6e5337c5fddd67"></a>**Decoupled Causal Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.23535)* · [Paper](https://arxiv.org/abs/2609.23535)<br>
+  Zhengkang Guan, Fei Wu, Kun Kuang · Zhejiang University
 - <a id="paper-9f94bbfaed11244a"></a>**Demistifying Data and Simulator Assumptions in Supervised Causal Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.37446)* · [Paper](https://arxiv.org/abs/2609.37446)<br>
   Pingchuan Ma, Rui Ding, Bojun Huang, Shuai Wang · Zhejiang University of Technology; Microsoft Research Asia; Sony Research; +1 institutions
 - <a id="paper-cfc2e6a5c2589e80"></a>**Discrete Score Matching Enables Causal Discovery from Count Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.39326)* · [Paper](https://arxiv.org/abs/2609.39326)<br>
@@ -228,6 +230,8 @@ Each work appears once under its primary contribution; see the [classification g
   Matteo Ceriscioli, Shohei Shimizu, Mallika Gupta, Karthika Mohan · Oregon State University, Causal Intelligence and Reasoning Lab, Corvallis, USA; RIKEN Advanced Intelligence Project, Causal Inference Team, Tokyo, Japan; The University of Osaka, Reasoning for Intelligence Department, Osaka, Japan; +1 institutions
 - <a id="paper-cff6e82a848858e5"></a>**Identifying ODEs from Unstructured Data with Causal Representation Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.37083)* · [Paper](https://arxiv.org/abs/2609.37083)<br>
   Alessandro Trenta, Riccardo Massidda, Davide Bacciu, Sara Magliacane · University of Pisa; Saarland Informatics Campus; Saarland University; +1 institutions
+- <a id="paper-d4efb0c6a2ce0b19"></a>**ITSY: Causal Discovery From Irregular Time-Series Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.23516)* · [Paper](https://arxiv.org/abs/2609.23516)<br>
+  Wenbo Xu et al. · Renmin University of China; Zhejiang University
 - <a id="paper-4934e32c8ead615a"></a>**LaLa-World: Scaling Latent World Models with Natural Language Actions** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27851)* · [Paper](https://arxiv.org/abs/2610.27851) · [Project](https://june-page.github.io/lala-world/) · [Code](https://github.com/junha1125/LaLa-World)<br>
   Junha Song et al. · NAVER AI Lab; Georgia Institute of Technology; Brown University; +1 institutions
 - <a id="paper-4f0706d28b33b8b2"></a>**Language Models as AI Research World Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.12235)* · [Paper](https://arxiv.org/abs/2610.12235)<br>
@@ -252,6 +256,8 @@ Each work appears once under its primary contribution; see the [classification g
   Liming Lu et al. · NVIDIA; MIT; University of Oxford
 - <a id="paper-64dc66d0c1650b10"></a>**PhysLDM: Latent Diffusion for High-Fidelity Deformable Simulation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.07609)* · [Paper](https://arxiv.org/abs/2610.07609) · [Project](https://yucrazing.github.io/physldm/)<br>
   Yu Zhang, Xudong Xu, Xingang Pan · S-Lab, Nanyang Technological University, Singapore; Shanghai Artificial Intelligence Laboratory, Shanghai, China
+- <a id="paper-ba5b84051bbc46cb"></a>**Proxy-Adjusted Causal Discovery from Targeted Interventions** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.23897)* · [Paper](https://arxiv.org/abs/2609.23897)<br>
+  Li Chen, Wei Pan, Xiaotong Shen · University of Minnesota
 - <a id="paper-328d19a6d649c766"></a>**Rate-Based Causal Discovery for Heavy-Tailed Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.15051)* · [Paper](https://arxiv.org/abs/2610.15051)<br>
   Vishal Routh · University of Georgia
 - <a id="paper-07ba9b81fc275bba"></a>**Relational Learning as World Modeling** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.16763)* · [Paper](https://arxiv.org/abs/2610.16763) · [Code](https://github.com/oooranz/TabWM) · [HF Model](https://huggingface.co/oooranz/TabWM)<br>
@@ -549,6 +555,8 @@ Each work appears once under its primary contribution; see the [classification g
   Rodney Lafuente-Mercado et al. · University of Texas at Austin; University of California, Los Angeles; New York University
 - <a id="paper-bc757bb51b5cc488"></a>**Learning to Think and Explore in 3D World** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21783)* · [Paper](https://arxiv.org/abs/2610.21783) · [Project](https://williamium3000.github.io/act3d/)<br>
   Yijiang Li, Bingyang Wang, Nuno Vasconcelos · University of California San Diego; Georgia Institute of Technology
+- <a id="paper-0cf18f180d63c3e4"></a>**Learning What to Investigate Next: Meta-Reasoning for Long-Horizon Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.02525)* · [Paper](https://arxiv.org/abs/2610.02525)<br>
+  Ankur Samanta et al. · Meta AI; Columbia University; Tel Aviv University
 - <a id="paper-fcce4784f34771ef"></a>**Long-MDR: Long-Context Reinforcement Learning for Multimodal Deep-Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.05195)* · [Paper](https://arxiv.org/abs/2610.05195)<br>
   Tang On Tai, Huanyao Zhang, Jiepeng Zhou, Wentao Zhang · The Hong Kong University of Science and Technology (HKUST); Peking University; The Hong Kong University of Science and Technology (Guangzhou)
 - <a id="paper-07ae5adf14031356"></a>**MELD: Recursive Self-Improvement via Hierarchical Coordination for Multi-Agent Scientific Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24454)* · [Paper](https://arxiv.org/abs/2610.24454)<br>
@@ -587,6 +595,8 @@ Each work appears once under its primary contribution; see the [classification g
   Chen Lu et al. · State Key Laboratory of Novel Software Technology, Nanjing University, China; School of Artificial Intelligence, Nanjing University, China; Huawei Noah’s Ark Lab, China
 - <a id="paper-4524ae6f78d2baaf"></a>**SeOPD: Self-Evolving LLMs via Online Policy Distillation from Self-Generated Chain-of-Thought** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.33181)* · [Paper](https://arxiv.org/abs/2609.33181)<br>
   Xiaoshu Chen, Sihang Zhou, Ke Liang, Xinwang Liu · National University of Defense Technology
+- <a id="paper-b0a747f7d53aca09"></a>**SmoothOperator: Enhancing Representations for Fine-grained Open-set Recognition via Modulated Label Smoothing** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00851)* · [Paper](https://arxiv.org/abs/2610.00851)<br>
+  Thiru Thillai Nadarasar Bahavan, Yu Xia, Sachith Seneviratne, Saman Halgamuge · The University of Melbourne
 - <a id="r06"></a>**SPROUT: Scaling Agentic Reinforcement Learning for Long-Horizon Software Engineering** · *[arXiv 2026 (preprint)](https://arxiv.org/html/2610.14405v1)* · [Paper](https://arxiv.org/html/2610.14405v1) · [Code](https://github.com/RISE-X-Lab/SPROUT) · [Project](https://rise-x-lab.github.io/SPROUT/)<br>
   Mengyang Liu et al. · Shanghai Jiao Tong University; Amazon; Nanjing University; +2 institutions
 - <a id="paper-b40ae7e623658513"></a>**SteerSearch: Interactive Search Reasoning with Mid-Response Steering** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24287)* · [Paper](https://arxiv.org/abs/2610.24287)<br>
@@ -1319,6 +1329,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Ilan Theodoro, Jordão Bragantini, Loïc A. Royer · Biohub
 - <a id="paper-6e3e2ae7454ba2f5"></a>**Competence-Based Evaluation of Logical Reasoning in Large Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22894)* · [Paper](https://arxiv.org/abs/2610.22894) · [Dataset](https://huggingface.co/datasets/jizej/Competence-Based-Evaluation)<br>
   Jize Jiang, Chengxiang Zhai · University of Illinois Urbana-Champaign
+- <a id="paper-721958fe0d5a8c2d"></a>**CompMat-Bench: Benchmarking AI Agents for Computational Materials Science** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00636)* · [Paper](https://arxiv.org/abs/2610.00636) · [Code](https://github.com/cz2014/CompMat-Bench)<br>
+  Chenmu Zhang et al. · Rice University
 - <a id="paper-c643418cbbaee3ee"></a>**CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19005)* · [Paper](https://arxiv.org/abs/2610.19005) · [Project](https://cyber-arena.ai) · [Code](https://github.com/cyber-arena-ai/cyber-arena) · [Code](https://github.com/cyber-arena-ai/octagon)<br>
   Bangya Liu et al. · 2077AI Open Source Foundation; UC Santa Cruz; UC Berkeley; +8 institutions
 - <a id="paper-8b5e7afcd33dcbed"></a>**Data World: Scaling Data Environments from Scratch** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21656)* · [Paper](https://arxiv.org/abs/2610.21656) · [Code](https://github.com/Zhanli-Li/Data-World) · [Project](https://zhanli-li.github.io/Data-World/) · [Dataset](https://huggingface.co/datasets/Zhanli-Li/DataWorld-Bench) · [Dataset](https://huggingface.co/collections/Zhanli-Li/dataworld) · [HF Model](https://huggingface.co/Zhanli-Li/DataWorld-35B-A3B)<br>
@@ -1397,6 +1409,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Youran Sun et al. · University of Maryland, College Park; The Chinese University of Hong Kong; Gradient Network; +3 institutions
 - <a id="paper-cb2c3c5e8ea5e05f"></a>**SciCurateBench: Curating Experimental Data from Heterogeneous Scientific Literature with Verbal-Action Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.14393)* · [Paper](https://arxiv.org/abs/2610.14393)<br>
   Minuk Ma, Kaiyun Guo, Jiarui Ding · University of British Columbia
+- <a id="paper-3092c4571c115f82"></a>**Science Utopia? Closed-Loop LLM Simulation of Academic Research Ecosystems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.01257)* · [Paper](https://arxiv.org/abs/2610.01257) · [Code](https://github.com/Ahren09/ScienceUtopia) · [Project](https://Ahren09.github.io/ScienceUtopia)<br>
+  Yiqiao Jin et al. · Georgia Institute of Technology; University of California, Los Angeles; University of Chicago; +1 institutions
 - <a id="science-gym"></a>**Science-Gym: a simple testbed for AI-driven scientific discovery** · *[Machine Learning 2026](https://link.springer.com/article/10.1007/s10994-025-06914-x)* · [Paper](https://link.springer.com/article/10.1007/s10994-025-06914-x) · [Code](https://github.com/pibborn/science-gym)<br>
   Mattia Cerrato et al. · Johannes Gutenberg University Mainz; TU Darmstadt and hessian.AI; Max Planck Institute for Polymer Research; +2 institutions
 - <a id="paper-d90a8e0869dee55c"></a>**SciExam for ENSO: Can AI Agents Build Climate Models?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.10513)* · [Paper](https://arxiv.org/abs/2610.10513) · [Code](https://github.com/ylzhang2447/SciExam-ENSO-code) · [Dataset](https://github.com/ylzhang2447/SciExam-ENSO-code/tree/main/dataset)<br>

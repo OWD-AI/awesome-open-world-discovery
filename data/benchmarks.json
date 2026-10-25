@@ -2196,6 +2196,51 @@
       "name": "Beyond Endpoint Performance: Process-Level Evaluation of Self-Evolving Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2609.24663"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 9 states that tasks, workflows, prompts, inputs, graders, reference answers, offline manuals and all reported attempt records are released at https://github.com/cz2014/CompMat-Bench.",
+        "Page 10 states that approximately 1 TB of reproduction intermediates is not released.",
+        "During evaluation, reference answers and graders are hidden outside the agent container."
+      ],
+      "focus": "Computational materials research execution: 94 single tasks from 15 studies and eight evaluated workflows. Single tasks combine simulation-input preparation, analysis of precomputed simulation outputs and execution of lighter calculations. Workflows execute every calculation, including simulations in seven of eight workflows. These are numerical computations and simulations, without new physical measurements.",
+      "limits": "Single tasks have one hour, four CPU cores and generally 16 GiB memory; some DeepSeek runs have 6 GiB. Workflows have five hours, 5,000 steps and one node with 128 CPU cores and 239 GiB memory. Agents receive task files and offline manuals, with network access restricted to the model API. Fixed graders can reject valid alternatives, and selected tasks exclude studies proposing new ideas or concepts. Strong performance on guided single tasks does not establish autonomous novel discovery.",
+      "training": {
+        "reward": "Agent training or a training reward is not established. Evaluation applies hidden fixed rules after each run: a task scores 1 only if every check passes. Checks cover effective input settings, equivalent structures and numerical agreement with reproduced references; default relative tolerance is 10%. Workflow checks assess final quantities. During execution, agents receive printed computation output, including diagnostics, rather than grader feedback (pages 4–6 and 18).",
+        "reset": "Each run starts a new session in an isolated container. Repeated independent attempts are reported. An agent-accessible reset within a run is not established (pages 6 and 18).",
+        "branching": "An agent-accessible checkpoint, state-cloning or trajectory-branching interface is not established. The persistent Python kernel supports sequential code execution, file operations and shell tools within a run (page 18)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-721958fe0d5a8c2d",
+      "resource_id": "paper-721958fe0d5a8c2d",
+      "name": "CompMat-Bench: Benchmarking AI Agents for Computational Materials Science",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.00636"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 states that code is available at https://github.com/Ahren09/ScienceUtopia.",
+        "Page 22 describes the simulation corpus as a planned release, including annual states, submissions, reviews, decisions, citations, memories and funding outcomes."
+      ],
+      "focus": "Persistent simulation of academic ecosystems. Agents choose research directions, collaborators, retrieved paper artifacts, venues, citations and resubmission actions; they also review papers and participate in funding decisions. LLM-generated evaluations combine with explicit acceptance quotas, funding rules, action costs and attrition. Existing SciEvo literature grounds simulated submissions; agents do not conduct the underlying papers' research experiments or collect physical measurements.",
+      "limits": "All simulations use Qwen3-32B and a fixed set of 53 research directions. Literature is filtered by simulated year. Budgets are abstract resource units. Review instructions request more than 60% of scores at 2.0–2.5 or below, while acceptance depends on ranking and quotas. Some interventions have one world per condition. Citation, funding and acceptance outcomes measure behavior within the prescribed simulation and do not directly establish scientific quality or real-world policy effects.",
+      "training": {
+        "reward": "Policy training and an optimization reward are not established. Feedback consists of reviews, acceptance or rejection, citations, funding, budget changes and attrition, retained in persistent memory and state. Reviewers produce 1–5 scores; venues accept the highest-ranked submissions under quotas, and funding panels rank applicants. Evaluation reports career outcomes, citation measures, topic diversity, workload and resource inequality (pages 3–6 and 21–22).",
+        "reset": "Experiments initialize matched worlds with controlled starting populations and settings and run annual cycles. Resetting to initial conditions for separate counterfactual runs is supported by the reported design; an agent-accessible reset or arbitrary checkpoint restoration is not established (pages 2, 6 and 14).",
+        "branching": "Matched counterfactual worlds vary population composition or institutional mechanisms from controlled initial settings. Runtime branching from a saved intermediate state, or an agent-accessible state-cloning interface, is not established (pages 2, 6 and 14)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-3092c4571c115f82",
+      "resource_id": "paper-3092c4571c115f82",
+      "name": "Science Utopia? Closed-Loop LLM Simulation of Academic Research Ecosystems",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.01257"
     }
   ]
 }

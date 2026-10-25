@@ -19128,6 +19128,221 @@
           13
         ]
       }
+    },
+    "paper-ba5b84051bbc46cb": {
+      "institutions": [
+        "University of Minnesota"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        14,
+        35
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Training data select candidate ancestors and fit matched reduced and augmented conditional models. Held-out likelihood gains measure the contribution of a candidate response and, when supported, its intervention assignment. Calibration and acyclic projection produce the graph. Population identification requires nonparent separation and parent detectability; reported implementations use Gaussian or Poisson mean models.",
+      "evidence": "The supplied results discussion reports improved continuous-simulation recovery with proxy adjustment. Count simulations expose a tradeoff: PABM produces better automatically selected graphs, while ARGEN has better ranking and recovery at matched graph sizes. The K562 illustration selects 52 edges versus ARGEN’s 168, but its association diagnostics cannot establish direct-edge or orientation accuracy.",
+      "discovery_use": "Develops a method for distinguishing direct causal relationships from downstream intervention responses, a concrete capability for constructing discovery representations.",
+      "limits": "Proxy informativeness alone does not establish the strong, generally untestable separation conditions. Sample splitting does not guarantee valid p-values, and the adaptive implementation’s coverage and calibration remain unestablished. Mean-only fits can miss variance or shape effects. K562 proxy adequacy is unresolved. This was a targeted review of supplied sections from 38 pages. No first-party public release was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "Develops a method for distinguishing direct causal relationships from downstream intervention responses, a concrete capability for constructing discovery representations.",
+        "pdf_sha256": "9099072f784bc8d6c6d698820f156c8b5de6479a983d45e11d4d20ac3073a1ea",
+        "evidence_pages": [
+          1,
+          14,
+          35
+        ]
+      }
+    },
+    "paper-d4efb0c6a2ce0b19": {
+      "institutions": [
+        "Renmin University of China",
+        "Zhejiang University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A transition operator formed from contemporaneous and lagged matrices recursively predicts missing states while preserving measured entries. Optimization differentiates through completion and combines masked structural residuals, sparsity penalties and a differentiable contemporaneous acyclicity constraint.",
+      "evidence": "Synthetic experiments report stronger recovery as missingness increases, with competitive complete-data baselines. On small semi-synthetic fMRI networks, ITSY has the highest F1 in all four reported settings, ranging from 0.48 to 0.62; PCMCI+ has lower SHD throughout. The fMRI experiment evaluates only lagged edges.",
+      "discovery_use": "Addresses learning contemporaneous and lagged causal structure from incomplete observations, supporting discovery representations when measurement windows contain missing data.",
+      "limits": "Evidence concerns stationary, causally sufficient, linear first-order dynamics with MCAR masks. It does not establish performance under informative missingness, asynchronous clocks or latent confounding. Appendix B acknowledges that weighting does not fully recover accumulated innovation noise across missing intervals, qualifying the noise-correction claim. The listed PCMCI+ minimum lag of one also complicates contemporaneous comparisons. No first-party public release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "Addresses learning contemporaneous and lagged causal structure from incomplete observations, supporting discovery representations when measurement windows contain missing data.",
+        "pdf_sha256": "c3ee88e3fda37f107068c7df40c6b475c601a0d21998be9b7d28b4bbf316d835",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-6b6e5337c5fddd67": {
+      "institutions": [
+        "Zhejiang University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Population identification assumes strict positivity and weighting faithfulness. The implementation learns softmax sample weights by minimizing pairwise weighted HSIC, monitors effective sample size, and selects boundary members through weighted Pearson tests. Subset-based boundary comparisons recover neighbors and colliders, followed by Meek orientation rules.",
+      "evidence": "Synthetic evaluations compare CPDAG-converted outputs from PC, GES, LiNGAM, NOTEARS, GraNDAG and GOLEM. At ten variables, DCD reports F1 of 0.58 for functional mechanisms and 0.78 for MLP mechanisms. Noise experiments favor DCD beyond low-noise regimes, while PC and GES outperform it on some ER topologies. Performance declines with graph size.",
+      "discovery_use": "Introduces distribution reweighting for discovering Markov boundaries and causal equivalence classes, directly contributing to learning unknown causal structure.",
+      "limits": "Graph guarantees assume causal sufficiency, Markov faithfulness and an oracle boundary identifier. Pairwise HSIC approximates mutual independence, and Pearson correlation can miss nonlinear dependence required by the population theorem. Weight concentration can discard information; very low noise and high dimensionality are difficult. Boundary enumeration scales exponentially with maximum boundary size. Evaluation is synthetic. Supplementary code is stated, but no public first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "Introduces distribution reweighting for discovering Markov boundaries and causal equivalence classes, directly contributing to learning unknown causal structure.",
+        "pdf_sha256": "1a1d37ab54fb784704035508ae32c3a1816425111586c295bc8bb462e3f147c6",
+        "evidence_pages": [
+          1,
+          6,
+          23
+        ]
+      }
+    },
+    "paper-721958fe0d5a8c2d": {
+      "institutions": [
+        "Rice University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The benchmark contains 94 tasks from 15 studies and eight evaluated workflows. Expensive single-task simulations are precomputed; agents prepare inputs, analyze outputs or execute lighter calculations. Workflows execute their calculations within a five-hour budget. Hidden references grade numerical results and input settings. Four agents using three LLMs are evaluated.",
+      "evidence": "Full-guidance single-task pass rates are 66.0–90.4% in MatClaw and 91.5% for Sol in Codex CLI. Reduced-guidance workflow rates are 50%, 54% and 75% across the three MatClaw agents. Scientific errors account for 38 of 50 workflow failures. Agents repeatedly continue despite diagnostic anomalies printed in their own outputs.",
+      "discovery_use": "Directly evaluates scientific agents on research execution, methodological reasoning and recognition of erroneous results, making it a concrete discovery-evaluation contribution.",
+      "limits": "Tasks reconstruct selected research steps and exclude studies proposing new ideas or concepts, so scores do not establish autonomous novel discovery. Strong agents approach saturation on guided single tasks; harder conditions contain fewer runs and different task sets. Fixed graders may reject valid alternatives. Resource budgets differ, selection is partly manual, and about 1 TB of reproduction intermediates is unreleased. The public repository is associated explicitly in the paper and verified by the supplied API check and repository page.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates scientific agents on research execution, methodological reasoning and recognition of erroneous results, making it a concrete discovery-evaluation contribution.",
+        "pdf_sha256": "cb1d02e0ad2b3e1dc34d8772d01da951069660dffb6f32727cb02a3f6985d3e3",
+        "evidence_pages": [
+          1,
+          2,
+          8
+        ]
+      }
+    },
+    "paper-b0a747f7d53aca09": {
+      "institutions": [
+        "The University of Melbourne"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An observer classifier trains on detached encoder features. Its true-class versus strongest-competitor probability margin controls a sigmoid smoothing coefficient. The plug-in augments four spherical representation objectives, followed by frozen-encoder linear probing and existing open-set scoring functions. Evaluation uses three fine-grained Semantic Shift Benchmark datasets and three training seeds.",
+      "evidence": "Most method, dataset and scoring combinations improve, with exceptions. The highlighted 4.70% relative OSCR gain corresponds to 64.47 rising to 67.51, a 3.04 percentage-point increase. Compactness improves in 11 of 12 settings and dispersion in all 12. Ablations show small average benefits beyond batch-mean smoothing schedules, while norm-based unknown separation improves despite slightly worse angular separation.",
+      "discovery_use": "Improves representation training for detecting previously unseen classes, directly supporting the collection’s open-world recognition direction.",
+      "limits": "Evidence is limited to three image benchmarks and one backbone; the method rejects unknowns without learning new classes. Several results regress, and sample-specific assignment benefits are inconsistent. The manuscript disagrees on validation fold counts and seed identities, and modifies the original ConOSR batching procedure. Benefits depend on a nonzero base smoothing coefficient. Supplementary code is stated, but no public first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "Improves representation training for detecting previously unseen classes, directly supporting the collection’s open-world recognition direction.",
+        "pdf_sha256": "80a412bfc5af8b82f42e9028def8ba65d50dcd42b04d33037c613c311701810d",
+        "evidence_pages": [
+          1,
+          7,
+          9
+        ]
+      }
+    },
+    "paper-3092c4571c115f82": {
+      "institutions": [
+        "Georgia Institute of Technology",
+        "University of California, Los Angeles",
+        "University of Chicago",
+        "William & Mary"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        14,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Qwen3-32B agents operate within explicit budget, acceptance-quota, funding, and attrition rules. Submissions retrieve temporally eligible SciEvo papers rather than conduct original experiments. Evaluations span 61 worlds, including matched exploration-strategy populations, population-growth/resubmission interventions, output-capacity comparisons, and a funding-cutoff analysis.",
+      "evidence": "Resubmission raises year-ten reviews per active researcher from 2.25 to 6.64 without population growth; population growth alone yields 2.07. Cautious exploration balances citation outcomes with institutional success and maintains greater topic diversity. Doubling submission intensity increases accepted output while reducing participation. Narrow funding wins show no detectable subsequent funding advantage over three years.",
+      "discovery_use": "Provides a controlled research-agent environment for evaluating exploration strategies and persistent feedback through publication, funding, memory, and attrition. Its discovery connection is evaluating conditions that sustain research exploration, rather than generating new scientific findings.",
+      "limits": "Results depend on one LLM, fixed research directions, retrieved existing papers, abstract resource costs, and prescribed review behavior. Reviewers are explicitly prompted to concentrate scores near rejection. Some intervention comparisons have one world per condition, so paper-level intervals cannot establish across-world uncertainty. Workload ratios use year-end active populations and are not necessarily mean assignments among survivors. Citation metrics do not directly establish scientific quality or real-world policy effects. The simulation corpus is described as a planned release.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Provides a controlled research-agent environment for evaluating exploration strategies and persistent feedback through publication, funding, memory, and attrition. Its discovery connection is evaluating conditions that sustain research exploration, rather than generating new scientific findings.",
+        "pdf_sha256": "fa86948546208d87e0e753bdd7e7a6149f1fb87359247074450da076a537c471",
+        "evidence_pages": [
+          1,
+          4,
+          14,
+          15
+        ]
+      }
+    },
+    "paper-0cf18f180d63c3e4": {
+      "institutions": [
+        "Meta AI",
+        "Columbia University",
+        "Tel Aviv University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        12,
+        16,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A fixed curator constructs observations from a persistent Git workspace; a meta-reasoner issues work orders to fresh executors. A generative critic predicts remaining return using categorical next-token probabilities. Shared actor–critic training assigns delayed credit across complete episodes using asynchronous buffers. Evaluations compare harnesses, token-level and decision-level critics, proxy versus terminal supervision, and cross-environment policy transfer.",
+      "evidence": "The decision-level generative critic achieves mean held-out RMSE of 0.214 versus 0.324 for its token-level generative counterpart. MIRA solves all 30 advanced theorem problems in each of three trials, although token-matched continuation recovers most baseline deficits. The cross-environment policy improves primary gold outcomes over untrained MIRA across all four learning environments. Environment-specific MIRA-AC instead reduces BNLearn successes from 76 to 48; the cross-environment policy reaches 84.",
+      "discovery_use": "Directly trains research agents to choose investigations and stopping decisions from delayed outcomes, with evaluations in symbolic regression, physics discovery, causal discovery, and architecture research.",
+      "limits": "Curation and execution remain fixed. BNLearn is excluded from cross-environment actor training but included in critic pretraining, limiting claims of unseen-environment transfer. Shared-model comparisons also change initialization, so they do not isolate parameter sharing. Proxy alignment is uncharacterized, behavioral judgments are descriptive, and long architecture campaigns provide limited replication. Learning uses LoRA and does not test investigations lasting hours or days. Review covers supplied pages 1–17 and 43 of 47, with only the two supplied pages visually inspected. No paper-specific public release was verified; the hinted Qwen checkpoint is a baseline.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "Directly trains research agents to choose investigations and stopping decisions from delayed outcomes, with evaluations in symbolic regression, physics discovery, causal discovery, and architecture research.",
+        "pdf_sha256": "a0253a71fe7773b2bd2dea760aa3944d903dd6a879fefeeef3076e45fb0a216d",
+        "evidence_pages": [
+          1,
+          3,
+          12,
+          16,
+          17
+        ]
+      }
     }
   }
 }
