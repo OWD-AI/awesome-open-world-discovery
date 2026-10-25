@@ -1991,6 +1991,50 @@
       "name": "Can AI Scientists Change Their Minds? Prior-Evidence Conflict in Synthetic Universes",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2609.36726"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 11 reports code and task sequences at https://github.com/SEABench-Endogenous-Misalignment/SEABench; availability was not independently verified."
+      ],
+      "focus": "Longitudinal capability and safety evaluation of persistent controller, memory, and tool/skill updates. Agents execute tools in a sandbox containing 89 JSON files and 2,220 fictional, model-generated personal-assistant records. The 48 sequences span three evolution surfaces, four domains, and four harm types. These are synthetic records with executed software interactions, not new physical measurements.",
+      "limits": "Adaptive TextGrad search targets failure trajectories, so selected failure rates do not establish deployment prevalence. Attribution compares the evolution process as a whole against paired non-evolving agents. Evolution surfaces are tested separately. Evaluation depends substantially on LLM judges, with a small human audit. General environment reset and arbitrary branching interfaces are not established.",
+      "training": {
+        "reward": "Parameter-free reflect-and-promote adaptation; model weights remain fixed. Kimi K2.5 judges score completion and safety using separate five-point rubrics with threshold 4. Completion feedback is shown to agents, with at most three attempts per evolution task. Safety feedback is offline and withheld. Lookahead and attribution judges guide trajectory discovery; TextGrad permits up to five critique-and-revise iterations. Downstream testing disables further evolution. No scalar reinforcement-learning reward for the evolving agent is established.",
+        "reset": "Page 5 establishes standalone downstream safety-test sessions and discarding rejected candidate states. Accepted task states initialize the next sequence step. A general reset-to-initial-workspace API and its semantics are not established.",
+        "branching": "The discovery pipeline evaluates alternative prompts with paired evolving and non-evolving executions, retains accepted states, and discards rejected states. Arbitrary agent-controlled snapshot branching is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-5687d10cf290fed0",
+      "resource_id": "paper-5687d10cf290fed0",
+      "name": "SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.35596"
+    },
+    {
+      "feedback": "real-experiment-records",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed collection of 200 papers with manuscripts, supplementary files, and hosted experimental datasets.",
+        "Agents choose exploration strategies and create paper-specific Python tools.",
+        "Curriculum transfer reuses distilled exploration strategies across related tasks."
+      ],
+      "focus": "Verify conjunctive experimental eligibility criteria and retrieve patient or sample identifiers with immunotherapy responses from existing literature and data. Python execution produces observations from fixed files; a model critic supplies evidence summaries, information gaps, confidence, and next-step guidance.",
+      "limits": "The environment contains records of previous physical experiments and performs computational document and data curation; it collects no new physical measurements. Coverage is limited to two life-science query families. Some source files require journal access, and PDFs and XLSX sheets are converted to text. The stated 30,000-token environment cap is not reconciled with the reported 55,516 tokens per full-system iteration.",
+      "training": {
+        "reward": "Experiments are zero-shot without additional training (page 6). Iterative feedback comes from the model critic, terminating when evidence is sufficient and confidence exceeds a threshold (page 5). Final evaluation uses expert annotations: classification accuracy and F1, and structured retrieval precision, recall, and F1 with exact-pair and partial-credit scoring (pages 3–4). Curriculum transfer distills prior trajectories into guidance and initial tools (pages 8 and 15).",
+        "reset": "Explicit environment reset, snapshot restoration, and rollback support are not established in the supplied text.",
+        "branching": "Multiple specialized actors can execute parallel evidence-gathering strategies and aggregate observations (page 5). Branching from a shared environment checkpoint is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-cb2c3c5e8ea5e05f",
+      "resource_id": "paper-cb2c3c5e8ea5e05f",
+      "name": "SciCurateBench: Curating Experimental Data from Heterogeneous Scientific Literature with Verbal-Action Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.14393"
     }
   ]
 }

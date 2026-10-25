@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**89 usage profiles** · Updated **2026-10-25**
+**91 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -674,6 +674,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat](#paper-c643418cbbaee3ee) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Evaluating Agentic Capabilities Before Post-Training: An End-to-End Approach](#paper-2693639d7f34414f) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [LifeSearch: Benchmarking Deep Research Agents for Real-World Life and Productivity](#paper-979463277edcf993) | Real data | Analysis + tools | Paper-described |
+| [SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents](#paper-5687d10cf290fed0) | Synthetic data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1457,6 +1458,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-5687d10cf290fed0"></a>
+
+<details>
+<summary>SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents — details</summary>
+
+[Work](../README.md#paper-5687d10cf290fed0) · [Source](https://arxiv.org/pdf/2609.35596)
+
+**Focus:** Longitudinal capability and safety evaluation of persistent controller, memory, and tool/skill updates. Agents execute tools in a sandbox containing 89 JSON files and 2,220 fictional, model-generated personal-assistant records. The 48 sequences span three evolution surfaces, four domains, and four harm types. These are synthetic records with executed software interactions, not new physical measurements.
+
+**Openness:** `Page 11 reports code and task sequences at https://github.com/SEABench-Endogenous-Misalignment/SEABench; availability was not independently verified.`
+
+**New physical measurements:** No
+
+**Limits:** Adaptive TextGrad search targets failure trajectories, so selected failure rates do not establish deployment prevalence. Attribution compares the evolution process as a whole against paired non-evolving agents. Evolution surfaces are tested separately. Evaluation depends substantially on LLM judges, with a small human audit. General environment reset and arbitrary branching interfaces are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Parameter-free reflect-and-promote adaptation; model weights remain fixed. Kimi K2.5 judges score completion and safety using separate five-point rubrics with threshold 4. Completion feedback is shown to agents, with at most three attempts per evolution task. Safety feedback is offline and withheld. Lookahead and attribution judges guide trajectory discovery; TextGrad permits up to five critique-and-revise iterations. Downstream testing disables further evolution. No scalar reinforcement-learning reward for the evolving agent is established. |
+| Reset | Page 5 establishes standalone downstream safety-test sessions and discarding rejected candidate states. Accepted task states initialize the next sequence step. A general reset-to-initial-workspace API and its semantics are not established. |
+| Branching | The discovery pipeline evaluates alternative prompts with paired evolving and non-evolving executions, retains accepted states, and discards rejected states. Arbitrary agent-controlled snapshot branching is not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -1986,6 +2010,7 @@ Queries or analyses use measurements already collected. This does not create new
 | [Causal Chambers recorded datasets](#chambers-recorded) | Recorded experiments | Offline data | Data |
 | [as-bench replay campaigns](#asbench-replay) | Recorded experiments | Budgeted pool queries | Early project |
 | [Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](#paper-f73eeee30c4bf920) | Recorded experiments | Data analysis | Paper-described |
+| [SciCurateBench: Curating Experimental Data from Heterogeneous Scientific Literature with Verbal-Action Agents](#paper-cb2c3c5e8ea5e05f) | Recorded experiments | Analysis + code | Paper-described |
 
 <a id="genedisco"></a>
 
@@ -2076,6 +2101,29 @@ Queries or analyses use measurements already collected. This does not create new
 | Reward / evaluator | No training run or implemented training reward is established. The evaluator assigns correctness for selecting the human-corrected reference plan, averages the two option orders within each case and then weights cases equally. Reconsideration receives no correctness feedback. Page 10 proposes preference training and a future reward scorer; these are future work. |
 | Reset | Page 7 establishes separate evaluation sessions for reversed option orders using the same frozen case. This is repeated assessment of recorded data. An interactive research-environment reset or experiment replay operation is not established. |
 | Branching | The protocol evaluates both option orders separately and continues each medium-effort project session through two reconsiderations retaining prior conversation. Branching execution of the candidate research plans, checkpoint forks and counterfactual experiments are not established. |
+
+</details>
+
+<a id="paper-cb2c3c5e8ea5e05f"></a>
+
+<details>
+<summary>SciCurateBench: Curating Experimental Data from Heterogeneous Scientific Literature with Verbal-Action Agents — details</summary>
+
+[Work](../README.md#paper-cb2c3c5e8ea5e05f) · [Source](https://arxiv.org/pdf/2610.14393)
+
+**Focus:** Verify conjunctive experimental eligibility criteria and retrieve patient or sample identifiers with immunotherapy responses from existing literature and data. Python execution produces observations from fixed files; a model critic supplies evidence summaries, information gaps, confidence, and next-step guidance.
+
+**Openness:** `Fixed collection of 200 papers with manuscripts, supplementary files, and hosted experimental datasets.`, `Agents choose exploration strategies and create paper-specific Python tools.`, `Curriculum transfer reuses distilled exploration strategies across related tasks.`
+
+**New physical measurements:** No
+
+**Limits:** The environment contains records of previous physical experiments and performs computational document and data curation; it collects no new physical measurements. Coverage is limited to two life-science query families. Some source files require journal access, and PDFs and XLSX sheets are converted to text. The stated 30,000-token environment cap is not reconciled with the reported 55,516 tokens per full-system iteration.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Experiments are zero-shot without additional training (page 6). Iterative feedback comes from the model critic, terminating when evidence is sufficient and confidence exceeds a threshold (page 5). Final evaluation uses expert annotations: classification accuracy and F1, and structured retrieval precision, recall, and F1 with exact-pair and partial-credit scoring (pages 3–4). Curriculum transfer distills prior trajectories into guidance and initial tools (pages 8 and 15). |
+| Reset | Explicit environment reset, snapshot restoration, and rollback support are not established in the supplied text. |
+| Branching | Multiple specialized actors can execute parallel evidence-gathering strategies and aggregate observations (page 5). Branching from a shared environment checkpoint is not established. |
 
 </details>
 
