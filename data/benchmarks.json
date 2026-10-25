@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-24",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -821,6 +821,97 @@
       "name": "ST-Bench: A Spatial-Temporal Benchmark for Multi-Agent System Generation on Scientific Research Tasks",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.07763"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents freely explore designated training games; training is restricted to the first installment of each series.",
+        "Training supplies no task exemplars, demonstrations, documentation, or game-specific extrinsic rewards; intrinsic task- and game-agnostic reward shaping is permitted.",
+        "Execution tests reveal natural-language tasks at specified gameplay states; Playthrough evaluates continual learning in two fan-made games.",
+        "The paper states that the emulation package, save states, and screen captures are released; ROMs are excluded."
+      ],
+      "focus": "Self-improvement through interaction with deterministic emulated video games: 500 execution tasks across ten games and end-to-end playthrough in two fan-made games. Button actions produce rendered screen observations. Feedback comes from executed emulator rules, without new physical measurements.",
+      "limits": "Completion checks require distinctive visible screens, biasing tasks toward immediate visual feedback. Evaluation termination signals success and supplies no failure termination signal. Prior game knowledge can contaminate results; knowledge checks do not establish complete absence of contamination. The games evaluate embodied gameplay rather than executed scientific research experiments.",
+      "training": {
+        "reward": "No extrinsic game-specific training reward is provided. Intrinsic task- and game-agnostic shaping is allowed. The curiosity baseline rewards screen novelty using one minus the maximum cosine similarity to buffered frame embeddings. Skill discovery uses the agent's own success judgments to retain practice trajectories for behavioral cloning. Evaluation uses task-specific binary completion functions based on screen-reference matching, task completion gain, and playthrough progress markers; these completion functions are distinct from training rewards.",
+        "reset": "Page 14 establishes exact reset: every episode loads a complete emulator save-state snapshot, and resetting restores it exactly. The same save state and action sequence reproduce the same trajectory. Skill practice returns to a task's starting state and applies random buttons before another attempt. Curiosity buffers reset each episode to their generation-specific initial contents.",
+        "branching": "Exact save-state reset supports reproducible alternative action sequences from the same starting snapshot. The world-model baseline compares predicted next observations for all possible actions. A dedicated emulator cloning or arbitrary mid-trajectory fork interface is not established in the supplied pages."
+      },
+      "evaluation_family": "other",
+      "id": "paper-7b88221edcfc1946",
+      "resource_id": "paper-7b88221edcfc1946",
+      "name": "GameBoyWorlds: A Testbed for Self-Improvement in Embodied Video Games",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.32093"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Free-text answers over a fixed corpus and question set.",
+        "The paper claims code and data availability on page 1; availability was not independently checked."
+      ],
+      "focus": "Evidence reasoning, cross-source and temporal conflict resolution, and recognition of insufficient evidence. The environment comprises 7,140 simulated workplace records across 30 projects grounded in public papers and reports, with 1,613 questions. Historical versions are stored records, not a live evolving workplace (pages 2–6).",
+      "limits": "The evaluated interaction retrieves a fixed top-k context and supplies it to the answering model, ordered by timestamp and ID; it does not establish autonomous investigation or workspace modification (pages 6 and 24). Feedback comes from synthetic records and reference answers, with automatic judging. Source documents may describe experiments, but this benchmark does not execute them or obtain new physical measurements. Simulated enterprise records are not an interactive scientific simulator. LLM generation, validation, and judging can leave errors; human validation includes 50 accepted questions (pages 5 and 10).",
+      "training": {
+        "reward": "A training reward or online learning loop is not established. Evaluation uses GPT-5.6 Luna to compare the question, reference answer, and model response, accepting semantically equivalent answers and correct abstentions; overall and task-level accuracy are reported (pages 6 and 24).",
+        "reset": "Environment reset support is not established. Evaluation uses a fixed retrieval corpus with retained historical record versions; those versions do not establish reset functionality.",
+        "branching": "Agent-controlled branching or state forking is not established. Historical revisions and alternative retrieval budgets are evaluation data and settings."
+      },
+      "evaluation_family": "other",
+      "id": "paper-d413c98db0f6141e",
+      "resource_id": "paper-d413c98db0f6141e",
+      "name": "MMEnterprise-Bench: Evaluating Enterprise Agents over Evolving Multimodal Records",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.27911"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed multiple-choice questions with predicted audio and visual evidence intervals.",
+        "The paper states that data, annotations, and evaluation framework are publicly released (pages 3 and 11); availability was not independently checked."
+      ],
+      "focus": "Audio-visual answering and temporal evidence localization on 1,027 human-annotated questions over 392 recorded videos collected from open platforms. Models receive preprocessed video frames and corresponding audio and return an answer plus separate audio and visual timestamp intervals (pages 5, 8, 16, and 19).",
+      "limits": "This is analysis of prerecorded media, without simulator actions, device control, executed research experiments, or new physical measurements. Temporal overlap establishes localization agreement, not semantic understanding or causal use of evidence (page 32). Coverage scoring permits broad intervals. Video selection constrains duration and content, and human participants may pause and replay, unlike the model inference protocol (pages 6, 17, and 33).",
+      "training": {
+        "reward": "A training reward or online learning loop is not established. Evaluation uses human reference options and evidence intervals. Answer accuracy scores option correctness; Coverage Grounded Score multiplies correctness by the average audio and visual evidence hit rates; Bottleneck Grounded Score multiplies correctness by the smaller modality-specific temporal IoU (pages 5–6). Failed inference, parsing, or truncated output receives zero scores and remains in the denominator (page 32).",
+        "reset": "Environment reset support is not established. Inputs are fixed recordings. Human pause and replay permission is documented on page 17, but does not establish an agent environment reset interface.",
+        "branching": "Agent-controlled branching or state forking is not established. Modality ablations and repeated evaluations change evaluation conditions rather than branch an interactive environment."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ff655bd3f5066c0f",
+      "resource_id": "paper-ff655bd3f5066c0f",
+      "name": "EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.28444"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Finite option sets and probability predictions on fixed released evaluation items.",
+        "Seven core generators support fresh samples with configurable seeds (page 4).",
+        "Core data are stated to use CC BY 4.0 and code Apache-2.0; reference items retain source-specific terms, and access conditions restrict items to evaluation use (pages 7–8)."
+      ],
+      "focus": "Decision correctness, controlled contrast-group correctness, probability ordering, calibration, and selective coverage. The core contains 7,800 generated written cases in 13 families with computed answers checked by independent solvers. The reference track contains 32,233 fixed items from 35 public sets with human, programmatic, or mixed labels (pages 4–8).",
+      "limits": "Models receive a written state, question, and finite options and return probabilities. Described tool calls, filesystem traces, policies, and goal checks are cases to judge, not an interface for executing actions. Solver computation constructs and verifies answer labels; the evaluated model does not conduct research experiments or acquire new physical measurements. The reference track uses existing data rather than live experiments. Interfaces and input restrictions differ across models; selective coverage is retrospective, and fresh draws test the same generator designs (pages 7–9 and 15).",
+      "training": {
+        "reward": "A benchmark training reward or online learning loop is not established. Core evaluation compares the highest-probability option with independently verified gold answers, measures complete-group correctness, binary pair direction, calibration, and confidence-ranked coverage. Reference tasks retain their original metrics. Missing or failed predictions count as incorrect (pages 5–8).",
+        "reset": "Interactive environment reset support is not established. Fixed items can be reevaluated and seven generators can produce seeded fresh samples; neither establishes resetting an agent-controlled execution environment.",
+        "branching": "Agent-controlled branching or state forking is not established. Generated contrast groups contain predefined related cases with changed outcomes; they are not branches selected by an acting agent."
+      },
+      "evaluation_family": "other",
+      "id": "paper-50d8cd71040f538b",
+      "resource_id": "paper-50d8cd71040f538b",
+      "name": "DecisionPivot: A Diagnostic Benchmark for Decision Models in LLM Systems",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.28522"
     }
   ]
 }
