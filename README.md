@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-342-2563eb?style=flat-square" alt="342 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-344-2563eb?style=flat-square" alt="344 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-69-0f766e?style=flat-square" alt="69 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,9 +80,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 24 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 41 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 29 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 47 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 48 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 48 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 59 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 60 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 34 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 60 |
 
@@ -383,6 +383,8 @@ Each work appears once under its primary contribution; see the [classification g
   Anita Kriz, Antonin Berthon, Nicolás Astorga, Mihaela van der Schaar · University of Cambridge
 - <a id="paper-511a84f55bad4b22"></a>**Ask to Distill: Learning to Synthesize Data for On-Policy Distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27450)* · [Paper](https://arxiv.org/abs/2610.27450) · [Code](https://github.com/GasolSun36/Ask_to_Distill) · [Dataset](https://huggingface.co/datasets/gasolsun/Ask_to_Distill-eval)<br>
   Jiashuo Sun et al. · University of Illinois Urbana-Champaign; The Hong Kong University of Science and Technology; Texas A&M University
+- <a id="paper-dff7af28b08d7a75"></a>**Axiomatic World Modeling for Physics Reasoning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24519)* · [Paper](https://arxiv.org/abs/2610.24519) · [Project](https://lei-nlp-lab.github.io/physics_reasoning_neurips_2026/) · [Code](https://github.com/lei-nlp-lab/physics_reasoning_neurips_2026)<br>
+  Xinye Yang, Zhenyang Liu, Yuxuan Wang, Yuanyuan Lei · Northwestern University; University of Florida
 - <a id="paper-5abf8c8643b1a01d"></a>**Breaking Diffusion: Parallel Reasoning with Draft Refinement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26542)* · [Paper](https://arxiv.org/abs/2610.26542)<br>
   Jaesang Yu et al. · KAIST; Microsoft Research Asia; SkillBench
 - <a id="paper-99e6c99aaec144c3"></a>**Bridged Self-Distillation for On-Policy Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26397)* · [Paper](https://arxiv.org/abs/2610.26397) · [Code](https://github.com/TUMLegalTech/Bridged-Self-Distillation)<br>
@@ -658,6 +660,8 @@ Each work appears once under its primary contribution; see the [classification g
   Jingwen Bai et al. · Beijing Ou Rui Ling Shi Technology Co., Ltd.; ChangingTek Robotics Technology (Suzhou) Co., Ltd.; Shanghai Yunfan Intelligent Control Robot Technology Co., Ltd.
 - <a id="paper-1bad7b8c664a2eb2"></a>**DeepRewind: Predicting and Repairing Premature Commitments in Deep Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.36344)* · [Paper](https://arxiv.org/abs/2609.36344) · [Code](https://github.com/AmirAbaskohi/DeepRewind)<br>
   Amirhossein Abaskohi et al. · University of British Columbia
+- <a id="paper-92174196b7146b88"></a>**Design Anything, Design at Scale** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24771)* · [Paper](https://arxiv.org/abs/2610.24771) · [Code](https://github.com/Gemus-AI/DesignAnything) · [Dataset](https://huggingface.co/datasets/Gemus-AI/DesignAnything-Bench)<br>
+  Xuchao Ren et al. · Tsinghua University; Beijing Institute of Fashion Technology; Massachusetts Institute of Technology; +1 institutions
 - <a id="paper-f991937645caaaa5"></a>**DiffResearch: Accelerating Deep Research with Diffusion Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28909)* · [Paper](https://arxiv.org/abs/2610.28909) · [Code](https://github.com/alanrbtx/DiffResearch)<br>
   Alan-Barsag Gazzaev, Alexey Gavrilov, Mikhail Mozikov, Sergey Muravyov · ITMO University; AXXX
 - <a id="paper-cf7a39add6564008"></a>**Epi: Towards a Persistent, Self-Improving Agent for Autonomous Research** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24944)* · [Paper](https://arxiv.org/abs/2610.24944) · [Code](https://github.com/BakeLab/Epi-results) · [Project](https://www.bakelab.ai/research/articles/epi/)<br>

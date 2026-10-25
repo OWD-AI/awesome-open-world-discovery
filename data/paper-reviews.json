@@ -11765,6 +11765,70 @@
           9
         ]
       }
+    },
+    "paper-dff7af28b08d7a75": {
+      "institutions": [
+        "Northwestern University",
+        "University of Florida"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Externalize objects, constraints, representation, equations, and plans into a modeling block. Score extracted physical motifs against reference structures, translate solving pseudocode into Python, and test invariants, trace consistency, and perturbation responses using frozen checkers bound from 147 law templates. Combine these rewards with answer correctness during GRPO and evaluate three backbones plus distribution shifts.",
+      "evidence": "RLAWM improves PhysReason by up to 12.2 points over the strongest baseline. Qwen3-VL-8B reaches 47.9% on PhysReason and 29.0% on PHYSICS. Olympiad physics rises from RLVR's 6.2% to 15.2%, while AIME rises from 46.7% to 56.7%. Adding checker feedback reduces zero-variance training groups from 29.9% to 9.3%.",
+      "discovery_use": "Directly trains scientific reasoning to preserve physical premises and verify derivations through invariants and controlled perturbations. This is a concrete contribution to learning reliable discovery reasoning.",
+      "limits": "This is a targeted review of supplied body sections and selected appendices, not all 33 pages. Training requires external extraction, translation, and checker-synthesis models. Reference structures proxy the physical axioms, and checkers remain static. Diagnostics report 15.8% false positives and 4.9% full rejection among correct, successfully executed rollouts. Evaluation uses an LLM answer judge, and benchmark solving does not establish original physics discovery.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "learning",
+        "rationale": "Directly trains scientific reasoning to preserve physical premises and verify derivations through invariants and controlled perturbations. This is a concrete contribution to learning reliable discovery reasoning.",
+        "pdf_sha256": "1d4d8cc96a6fc65b3944492276f331cb65d0d8c984decd2906589819d1cb9518",
+        "evidence_pages": [
+          1,
+          5,
+          15
+        ]
+      }
+    },
+    "paper-92174196b7146b88": {
+      "institutions": [
+        "Tsinghua University",
+        "Beijing Institute of Fashion Technology",
+        "Massachusetts Institute of Technology",
+        "DAMO Academy, Alibaba Group"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        5,
+        47
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Maintain a task contract, typed workflow graph, deliverable bindings, and execution records. Checked tools update this state; a deterministic delivery controller identifies unfinished work and initiates further turns. Evaluate complete systems on 228 tasks, including 38 project families at three artifact scales, with artifact scoring and blinded designer comparisons.",
+      "evidence": "Reported pooled factual-constraint satisfaction is 85.0% with DeepSeek and 92.5% with GPT, exceeding the strongest same-model baselines by 15.4 and 14.4 percentage points. At 24 artifacts, the respective advantages are 25.1 and 23.0 points. Designer judgments favor its output sets. A bundled harness study reports fewer generation requests and lower LLM cost than generic continuation prompting.",
+      "discovery_use": "Provides an agent-harness contribution relevant to discovery workflows: persistent constraints and decisions, explicit artifact dependencies, and evidence-based continuation across long executions. Evaluation is in design rather than scientific discovery.",
+      "limits": "The controller checks execution, declared output forms, and counts, but cannot verify semantic compliance. Constraint satisfaction is a pooled constraint rate, not complete-task success; competing systems lead some delivery, consistency, and quality measures. Main comparisons vary complete systems and tools, and the delivery-loop study bundles mechanisms. Each configuration has one run per task, three tasks have different brief versions across systems, and some final-corpus tasks were used during development. Evaluation uses English briefs and scripted clients. The public repository describes a release in progress.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "Provides an agent-harness contribution relevant to discovery workflows: persistent constraints and decisions, explicit artifact dependencies, and evidence-based continuation across long executions. Evaluation is in design rather than scientific discovery.",
+        "pdf_sha256": "99a780027dab963e2fdc861fd775b682872f02aedfe61cea8880b134b27e78ee",
+        "evidence_pages": [
+          1,
+          3,
+          5,
+          47
+        ]
+      }
     }
   }
 }
