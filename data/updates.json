@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T21:46:02-04:00",
+  "updated_at": "2026-10-24T22:08:40-04:00",
   "window_start": "2026-09-25",
   "window_end": "2026-10-24",
   "window_days": 30,
@@ -1880,18 +1880,6 @@
       "id": "f5ebfafb83c6121b"
     },
     {
-      "title": "Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience",
-      "url": "https://arxiv.org/abs/2610.26855",
-      "published_at": "2026-10-19",
-      "kind": "paper",
-      "summary": "Ropedia W0 learns egocentric predictions across humans and robots through a shared camera-and-skeleton interface. Human experience supplies transferable supervision for embodied prediction, policy evaluation, and planning.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication date: 2026-10-19. The supplied PDF page 1 identifies arXiv v1 dated 19 Oct 2026, corroborated by arXiv's original submission metadata.",
-      "review_status": "approved",
-      "relevance": "The primary contribution is a transferable action-conditioned world representation. Predicting consequences across embodiments and evaluating candidate policies provides a concrete foundation for agents investigating unfamiliar environments through imagined interactions.",
-      "id": "9a7fdd3c6dd57014"
-    },
-    {
       "title": "Remembering Has a Price: Learning Memory Worth under Resource Constraints",
       "url": "https://arxiv.org/abs/2610.26453",
       "published_at": "2026-10-19",
@@ -1912,18 +1900,6 @@
           "url": "https://github.com/AIGNLAI/TokenWorth"
         }
       ]
-    },
-    {
-      "title": "PVBench: Quantifying Physical Plausibility in Video Generation with Object-Level Physical Measurements",
-      "url": "https://arxiv.org/abs/2610.26711",
-      "published_at": "2026-10-19",
-      "kind": "paper",
-      "summary": "PVBench measures physical plausibility using estimated object states and physical-law residuals. It separates visual appeal from geometric, kinematic, material, and mechanical consistency across paired text-to-video and image-to-video scenarios.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication date: 2026-10-19. Supplied PDF page 1 states October 19, 2026 and identifies arXiv v1; arXiv's original submission metadata corroborates the date.",
-      "review_status": "approved",
-      "relevance": "PVBench evaluates whether generated world representations satisfy measurable physical constraints. Its object-level law checks directly support verification of representations that agents could use for prediction, experimentation, and planning.",
-      "id": "dcda595d5edb15af"
     },
     {
       "title": "PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking",
@@ -2584,6 +2560,28 @@
       ]
     },
     {
+      "title": "SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?",
+      "url": "https://arxiv.org/abs/2610.26659",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "SpatialScout tests whether VLM agents can explore indoor scenes and build complete, accurate maps of object centers. Current models recover coarse layouts but frequently omit objects or produce imprecise positions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-10-19T00:00:00.000Z and is preserved. The attached PDF identifies v3 dated 22 October 2026; that revision date is not substituted for the supplied original publication timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates agents acquiring new evidence, selecting informative viewpoints, and revising an explicit representation of an initially unknown environment. Localization and coverage provide concrete discovery outcomes beyond question-answer accuracy.",
+      "id": "42953ba160717449",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26659"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JesseZZZZZ/SpatialScout"
+        }
+      ]
+    },
+    {
       "title": "ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation",
       "url": "https://arxiv.org/abs/2610.25690",
       "published_at": "2026-10-18",
@@ -2606,6 +2604,88 @@
         {
           "label": "Code",
           "url": "https://github.com/MachEmbodied/ScaleNav"
+        }
+      ]
+    },
+    {
+      "title": "Same Simulation, Different Evidence: Where Retrieved Tool Output Costs LLM Agents Accuracy",
+      "url": "https://arxiv.org/abs/2610.26836",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Retrieving simulator reports can cause agents to answer from their own alternative outputs and mishandle precision, even when their simulations produce the correct result.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at metadata specifies 2026-10-19T00:00:00.000Z, consistent with the 19 Oct 2026 arXiv v1 date on PDF page 1. The supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The paper directly studies scientific-agent harness reliability: whether correctly computed evidence reaches an agent and supports its answer. Execution tracing, controlled replay, and evidence-source interventions provide concrete methods for improving knowledge verification in discovery systems.",
+      "id": "029806d18c63cad7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26836"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/grenadeComing/same-simulation-different-evidence"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/grenadeComing/same-simulation-different-evidence"
+        }
+      ]
+    },
+    {
+      "title": "Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience",
+      "url": "https://arxiv.org/abs/2610.26855",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Ropedia W0 learns egocentric video world models from human and robot experience using a shared geometric interface for locomotion and manipulation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at metadata specifies 2026-10-19T00:00:00.000Z, consistent with the 19 Oct 2026 arXiv v1 date on PDF page 1.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is an action-conditioned world representation that transfers experience across embodiments and supports imagined outcome evaluation and planning. This directly contributes to agents reasoning about unfamiliar action consequences, although physical causal fidelity remains limited.",
+      "id": "9a7fdd3c6dd57014",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26855"
+        },
+        {
+          "label": "Project",
+          "url": "https://ropedia.github.io/ropedia-w0/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Ropedia/ropedia-w0"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/ropedia-ai/Ropedia-W0"
+        }
+      ]
+    },
+    {
+      "title": "PVBench: Quantifying Physical Plausibility in Video Generation with Object-Level Physical Measurements",
+      "url": "https://arxiv.org/abs/2610.26711",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "PVBench evaluates generated videos using object-level geometry, motion, and physical-law consistency alongside semantic and perceptual quality. It exposes substantial gaps between visually convincing generation and physically reliable behavior.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-10-19T00:00:00.000Z. PDF page 1 explicitly states October 19, 2026 and identifies arXiv v1 on that date. Preserve the exact supplied timestamp.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete protocol for verifying learned world behavior against measurable physical constraints. This supports discovery evaluation by testing the physical reliability of representations and generated simulations that agents could use for reasoning and experimentation.",
+      "id": "dcda595d5edb15af",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26711"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/KSZG-11/PVBench"
+        },
+        {
+          "label": "Project",
+          "url": "https://kszg-11.github.io/PVBench-Website/"
         }
       ]
     },
@@ -2796,6 +2876,44 @@
         {
           "label": "Code",
           "url": "https://github.com/deng34567/DAGLoop"
+        }
+      ]
+    },
+    {
+      "title": "Agent World Model in the Wild: Computer-Use Agent Environment Synthesis",
+      "url": "https://arxiv.org/abs/2610.26828",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "WildAWM synthesizes personal-computer environments with accumulated histories, then generates challenging tasks spanning GUI, MCP, and CLI interaction. Supervised initialization and reinforcement learning in these environments improve performance on unseen agent benchmarks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-10-19T00:00:00.000Z. PDF page 1 identifies v1 as 19 October 2026. The timestamp falls on 18 October in America/New_York and is preserved unchanged.",
+      "review_status": "approved",
+      "relevance": "Contributes executable environments, exploration-driven task synthesis, and tested reward verifiers for agents learning through interaction. Its concrete discovery connection is generating and validating unfamiliar tasks and learning transferable behavior within them.",
+      "id": "a4026bea93447d03",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26828"
+        },
+        {
+          "label": "Project",
+          "url": "https://msr-orchard.github.io/WildAWM/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MSR-Orchard/WildAWM"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/ChilleD/WildAWM"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/ChilleD/WildAWM-35B-A3B"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/ChilleD/WildAWM-4B"
         }
       ]
     },
@@ -3039,16 +3157,40 @@
       ]
     },
     {
-      "title": "Benchmarking and Enhancing Agentic Causal Discovery",
-      "url": "https://arxiv.org/abs/2610.22846",
+      "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
+      "url": "https://arxiv.org/abs/2610.23845",
       "published_at": "2026-10-16",
       "kind": "paper",
-      "summary": "Introduces Heuresis, a benchmark of anonymized simulated datasets designed to test whether agents diagnose and repair causal-discovery errors rather than exploit semantic variable names or merely select an existing algorithm.",
-      "date_evidence": "The arXiv page says “Submitted on 16 Oct 2026”; submission history lists v1 at 2026-10-16 02:47:51 UTC.",
-      "relevance": "A particularly strong discovery-evaluation item: it measures autonomous, data-driven causal investigation and includes recurring-watchlist authors Pingchuan Ma, Rui Ding, and Shuai Wang.",
+      "summary": "SEER-Repro packages 20 cancer-epidemiology studies for agent-assisted reproduction and robustness assessment. Agents reconstruct claims, execute alternative analyses and prioritize evidence for expert review.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-16T17:57:55Z; the arXiv submission date agrees.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "13a316d3fa2ce54f"
+      "relevance": "Introduces executable agent workflows for verifying published knowledge and testing defensible analytical alternatives. Its primary contribution directly concerns scientific verification and robustness reasoning.",
+      "id": "b34e9d0c4929185b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.23845"
+        }
+      ]
+    },
+    {
+      "title": "Using Heteroscedasticity for Causal Discovery under Hidden Confounding",
+      "url": "https://arxiv.org/abs/2610.21219",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "CHARGE uses heteroscedasticity to identify causal order and effects even when every candidate instrument violates exclusion. Its theory replaces valid-instrument requirements with explicit covariance restrictions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-15T04:08:09Z, consistent with the primary arXiv record.",
+      "review_status": "approved",
+      "relevance": "Develops general causal-structure identification and estimation under hidden confounding, directly expanding methods for learning unknown causal representations. The contribution is methodological rather than confined to its biological application.",
+      "id": "9f0b1afaa9684d4a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21219"
+        }
+      ]
     },
     {
       "title": "Self-Evolving Coding Agents via Harness-Policy Optimization",
@@ -3077,40 +3219,166 @@
       ]
     },
     {
-      "title": "SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents",
-      "url": "https://arxiv.org/abs/2610.21082",
+      "title": "Selection Is Not Learning: Choosing Model Futures",
+      "url": "https://arxiv.org/abs/2610.22029",
       "published_at": "2026-10-15",
       "kind": "paper",
-      "summary": "SciΠvot evaluates whether research agents make sound decisions at pivotal moments, using 248 cases derived from human interventions across 26 projects. Frontier models often preferred the original agent plan over the human correction, exposing a major scientific-judgment gap.",
-      "date_evidence": "The arXiv source page explicitly states “Submitted on 15 Oct 2026”; submission history records v1 at 01:34:44 UTC.",
-      "relevance": "A highly relevant evaluation resource for autonomous research agents, focusing on consequential experimental and project-level judgment rather than final-answer accuracy.",
+      "summary": "EvoHeir separates which model parameters persist from which experiences remain useful. It explores candidate updates, selects a recipient, distills experience to repair failures while preserving successes, and confirms the completed proposal on fresh probes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied date was attributed to a secondary listing. The primary arXiv v1 submission history independently establishes October 15, 2026 at 15:07:09 UTC.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "f73eeee30c4bf920"
+      "relevance": "Directly studies self-generated curricula, model-update acceptance and experience retention in iterative self-improvement. These mechanisms concretely address learning to improve through continued exploration.",
+      "id": "589ac49b04a690ec",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22029"
+        }
+      ]
+    },
+    {
+      "title": "R$^2$Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
+      "url": "https://arxiv.org/abs/2610.22740",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "R²Orch couples agent orchestration training with an adaptive task curriculum and a changing skill library. Its contribution is a concrete mechanism for transferring procedural guidance into an orchestrator’s parameters while maintaining useful training signals. The evidence concerns improvement on established tasks, rather than autonomous scientific discoveries.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata gives the original publication timestamp as 2026-10-15T23:21:21Z. The rendered PDF is version 2 dated October 22, which is a revision date.",
+      "review_status": "approved",
+      "relevance": "Directly relevant to recursive self-improvement and curriculum discovery: an orchestrator learns which tasks remain learnable as external skills are removed, while randomized comparisons guide skill retirement.",
+      "id": "e0e322c3332399a4",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22740"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/beita6969/R2Orch"
+        }
+      ]
     },
     {
       "title": "Null Controls Are Necessary but Not Sufficient: Evaluating Acceptance Guards for Scientific Discovery and Interpretability",
       "url": "https://arxiv.org/abs/2610.22445",
       "published_at": "2026-10-15",
       "kind": "paper",
-      "summary": "This work tests acceptance criteria used by automated discovery systems and shows that seemingly successful descriptive tests can admit scientifically empty explanations. It proposes evaluating null rejection, positive acceptance and independently verified consequences together.",
-      "date_evidence": "The arXiv source page explicitly states “Submitted on 15 Oct 2026”; submission history records v1 at 15:13:57 UTC.",
-      "relevance": "Targets the reliability of discovery evaluation and demonstrates why candidate hypotheses need both adversarial controls and consequence-based validation.",
+      "summary": "The paper separates satisfying a candidate’s defining property from establishing its intended scientific meaning. It implements four operations for revising physical descriptions and tests the same distinction in neural interpretability. Null acceptance, positive acceptance, and consequence agreement reveal complementary weaknesses in acceptance procedures.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-15T15:13:57Z.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "456c7c8f7dcbfa06"
+      "relevance": "Provides explicit methods for verifying proposed scientific knowledge, showing how descriptive acceptance can fail and how independently specified consequences improve discovery evaluation.",
+      "id": "456c7c8f7dcbfa06",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22445"
+        },
+        {
+          "label": "Project",
+          "url": "https://real-project-aether.github.io/project-aether/"
+        }
+      ]
+    },
+    {
+      "title": "MetaShare: Failure-Aware Collective Self-Improvement for Open-Ended Agents",
+      "url": "https://arxiv.org/abs/2610.21887",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "MetaShare changes the unit of shared experience from complete agents or traces to compact descriptions of evaluated modifications with signed performance changes. Separate success and failure retrieval channels guide later modifications, while an auditor proposes underexplored mechanism categories. Its contribution concerns how populations retain and use evidence during scaffold search.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata and the original arXiv submission history agree on 2026-10-15T13:49:41Z.",
+      "review_status": "approved",
+      "relevance": "Makes failed self-modifications reusable across agent lineages and explicitly broadens the search for new improvement mechanisms, directly addressing retained experience and open-ended self-improvement.",
+      "id": "bc10433cad9d513d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21887"
+        }
+      ]
+    },
+    {
+      "title": "Lean4AgenticRL: Advancing Agentic RL with Verifiable Multi-level Process Rewards",
+      "url": "https://arxiv.org/abs/2610.22448",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "Lean4AgenticRL aligns agent trajectories to problem-specific workflow stages and combines outcome, stage-completion, and tool-behavior rewards. Its central contribution is more structured credit assignment for long-horizon agent learning. Lean checks formalized conditions, while substantial semantic interpretation remains delegated to language models.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history records version 1 at 2026-10-15 15:26:54 UTC, confirming the supplied October 15 publication date with an exact primary-source timestamp.",
+      "review_status": "approved",
+      "relevance": "Contributes agent post-training through evidence-based intermediate rewards for exploration, diagnosis, repair, and verification. This is a concrete training mechanism relevant to discovery-capable agents, although evaluated on software and terminal tasks.",
+      "id": "a97c1f5a709e4de6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22448"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/RickySkywalker/Lean4AgenticRL"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/amazon/LAR-27B"
+        }
+      ]
     },
     {
       "title": "Data World: Scaling Data Environments from Scratch",
       "url": "https://arxiv.org/abs/2610.21656",
       "published_at": "2026-10-15",
       "kind": "paper",
-      "summary": "Data World generates synthetic data environments from explicit underlying mechanisms, along with tasks and auditable rubrics. This provides scalable, verifiable training and evaluation material for agents that must discover insights across heterogeneous files.",
-      "date_evidence": "The opened arXiv source page explicitly states “Submitted on 15 Oct 2026.”",
-      "relevance": "Provides a discovery-training engine and benchmark in which open-ended analytical findings can be checked against known generative truth.",
+      "summary": "Data World specifies generative mechanisms before producing analyst-visible files. This gives task writers access to known relationships and allows audits of whether targeted findings remain recoverable. The engine supplies both an insight-discovery benchmark and a world-disjoint training set, connecting environment construction, verification, and agent learning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history records version 1 at 2026-10-15 10:35:47 UTC, confirming the supplied October 15 publication date with an exact primary-source timestamp.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "8b5e7afcd33dcbed"
+      "relevance": "Creates environments and evaluation criteria for agents recovering unknown analytical relationships from imperfect observations, with direct evidence that the resulting tasks also support learning to discover.",
+      "id": "8b5e7afcd33dcbed",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21656"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Zhanli-Li/Data-World"
+        },
+        {
+          "label": "Project",
+          "url": "https://zhanli-li.github.io/Data-World/"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Zhanli-Li/DataWorld-Bench"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/collections/Zhanli-Li/dataworld"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Zhanli-Li/DataWorld-35B-A3B"
+        }
+      ]
+    },
+    {
+      "title": "Benchmarking and Enhancing Agentic Causal Discovery",
+      "url": "https://arxiv.org/abs/2610.22846",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "HEURESIS evaluates causal-discovery agents on anonymous synthetic datasets spanning six mechanism families. It distinguishes gains from algorithm selection from gains through further statistical investigation and records the evidence preceding graph edits.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-16T02:47:51Z. The arXiv record confirms submission on October 16; the earlier supplied calendar date reflects America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates whether causal-discovery agents gather evidence and repair unknown graph structure beyond selecting existing algorithms. The benchmark design and trace attribution are concrete discovery-evaluation contributions.",
+      "id": "13a316d3fa2ce54f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22846"
+        }
+      ]
     },
     {
       "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
@@ -3153,6 +3421,36 @@
         }
       ],
       "id": "f3fe009c2d3e7e40"
+    },
+    {
+      "title": "Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents",
+      "url": "https://arxiv.org/abs/2610.21082",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "SciPIvot turns documented human corrections of research agents into 248 paired-plan decisions from 26 projects across six fields. Evaluators choose a next step using evidence available before the intervention.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-15T01:34:44Z. Its America/New_York calendar date is October 14.",
+      "review_status": "approved",
+      "relevance": "Benchmarks pivotal scientific decisions from real research projects, including experimental design, anomaly diagnosis and hypothesis revision. This is a direct evaluation of autonomous discovery judgment.",
+      "id": "f73eeee30c4bf920",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21082"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AutoResearch-Factory/SciPIvot"
+        },
+        {
+          "label": "Project",
+          "url": "https://autoresearch-factory.github.io/SciPIvot/"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/sun1245/SciPIvot"
+        }
+      ]
     },
     {
       "title": "Scaling Discovery Requires Forgetting",
@@ -5699,18 +5997,6 @@
       "id": "f5ebfafb83c6121b"
     },
     {
-      "title": "Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience",
-      "url": "https://arxiv.org/abs/2610.26855",
-      "published_at": "2026-10-19",
-      "kind": "paper",
-      "summary": "Ropedia W0 learns egocentric predictions across humans and robots through a shared camera-and-skeleton interface. Human experience supplies transferable supervision for embodied prediction, policy evaluation, and planning.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication date: 2026-10-19. The supplied PDF page 1 identifies arXiv v1 dated 19 Oct 2026, corroborated by arXiv's original submission metadata.",
-      "review_status": "approved",
-      "relevance": "The primary contribution is a transferable action-conditioned world representation. Predicting consequences across embodiments and evaluating candidate policies provides a concrete foundation for agents investigating unfamiliar environments through imagined interactions.",
-      "id": "9a7fdd3c6dd57014"
-    },
-    {
       "title": "Remembering Has a Price: Learning Memory Worth under Resource Constraints",
       "url": "https://arxiv.org/abs/2610.26453",
       "published_at": "2026-10-19",
@@ -5731,18 +6017,6 @@
           "url": "https://github.com/AIGNLAI/TokenWorth"
         }
       ]
-    },
-    {
-      "title": "PVBench: Quantifying Physical Plausibility in Video Generation with Object-Level Physical Measurements",
-      "url": "https://arxiv.org/abs/2610.26711",
-      "published_at": "2026-10-19",
-      "kind": "paper",
-      "summary": "PVBench measures physical plausibility using estimated object states and physical-law residuals. It separates visual appeal from geometric, kinematic, material, and mechanical consistency across paired text-to-video and image-to-video scenarios.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication date: 2026-10-19. Supplied PDF page 1 states October 19, 2026 and identifies arXiv v1; arXiv's original submission metadata corroborates the date.",
-      "review_status": "approved",
-      "relevance": "PVBench evaluates whether generated world representations satisfy measurable physical constraints. Its object-level law checks directly support verification of representations that agents could use for prediction, experimentation, and planning.",
-      "id": "dcda595d5edb15af"
     },
     {
       "title": "PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking",
@@ -6403,6 +6677,28 @@
       ]
     },
     {
+      "title": "SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?",
+      "url": "https://arxiv.org/abs/2610.26659",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "SpatialScout tests whether VLM agents can explore indoor scenes and build complete, accurate maps of object centers. Current models recover coarse layouts but frequently omit objects or produce imprecise positions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-10-19T00:00:00.000Z and is preserved. The attached PDF identifies v3 dated 22 October 2026; that revision date is not substituted for the supplied original publication timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates agents acquiring new evidence, selecting informative viewpoints, and revising an explicit representation of an initially unknown environment. Localization and coverage provide concrete discovery outcomes beyond question-answer accuracy.",
+      "id": "42953ba160717449",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26659"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JesseZZZZZ/SpatialScout"
+        }
+      ]
+    },
+    {
       "title": "ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation",
       "url": "https://arxiv.org/abs/2610.25690",
       "published_at": "2026-10-18",
@@ -6425,6 +6721,88 @@
         {
           "label": "Code",
           "url": "https://github.com/MachEmbodied/ScaleNav"
+        }
+      ]
+    },
+    {
+      "title": "Same Simulation, Different Evidence: Where Retrieved Tool Output Costs LLM Agents Accuracy",
+      "url": "https://arxiv.org/abs/2610.26836",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Retrieving simulator reports can cause agents to answer from their own alternative outputs and mishandle precision, even when their simulations produce the correct result.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at metadata specifies 2026-10-19T00:00:00.000Z, consistent with the 19 Oct 2026 arXiv v1 date on PDF page 1. The supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The paper directly studies scientific-agent harness reliability: whether correctly computed evidence reaches an agent and supports its answer. Execution tracing, controlled replay, and evidence-source interventions provide concrete methods for improving knowledge verification in discovery systems.",
+      "id": "029806d18c63cad7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26836"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/grenadeComing/same-simulation-different-evidence"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/grenadeComing/same-simulation-different-evidence"
+        }
+      ]
+    },
+    {
+      "title": "Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience",
+      "url": "https://arxiv.org/abs/2610.26855",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Ropedia W0 learns egocentric video world models from human and robot experience using a shared geometric interface for locomotion and manipulation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at metadata specifies 2026-10-19T00:00:00.000Z, consistent with the 19 Oct 2026 arXiv v1 date on PDF page 1.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is an action-conditioned world representation that transfers experience across embodiments and supports imagined outcome evaluation and planning. This directly contributes to agents reasoning about unfamiliar action consequences, although physical causal fidelity remains limited.",
+      "id": "9a7fdd3c6dd57014",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26855"
+        },
+        {
+          "label": "Project",
+          "url": "https://ropedia.github.io/ropedia-w0/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Ropedia/ropedia-w0"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/ropedia-ai/Ropedia-W0"
+        }
+      ]
+    },
+    {
+      "title": "PVBench: Quantifying Physical Plausibility in Video Generation with Object-Level Physical Measurements",
+      "url": "https://arxiv.org/abs/2610.26711",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "PVBench evaluates generated videos using object-level geometry, motion, and physical-law consistency alongside semantic and perceptual quality. It exposes substantial gaps between visually convincing generation and physically reliable behavior.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-10-19T00:00:00.000Z. PDF page 1 explicitly states October 19, 2026 and identifies arXiv v1 on that date. Preserve the exact supplied timestamp.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete protocol for verifying learned world behavior against measurable physical constraints. This supports discovery evaluation by testing the physical reliability of representations and generated simulations that agents could use for reasoning and experimentation.",
+      "id": "dcda595d5edb15af",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26711"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/KSZG-11/PVBench"
+        },
+        {
+          "label": "Project",
+          "url": "https://kszg-11.github.io/PVBench-Website/"
         }
       ]
     },
@@ -6615,6 +6993,44 @@
         {
           "label": "Code",
           "url": "https://github.com/deng34567/DAGLoop"
+        }
+      ]
+    },
+    {
+      "title": "Agent World Model in the Wild: Computer-Use Agent Environment Synthesis",
+      "url": "https://arxiv.org/abs/2610.26828",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "WildAWM synthesizes personal-computer environments with accumulated histories, then generates challenging tasks spanning GUI, MCP, and CLI interaction. Supervised initialization and reinforcement learning in these environments improve performance on unseen agent benchmarks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-10-19T00:00:00.000Z. PDF page 1 identifies v1 as 19 October 2026. The timestamp falls on 18 October in America/New_York and is preserved unchanged.",
+      "review_status": "approved",
+      "relevance": "Contributes executable environments, exploration-driven task synthesis, and tested reward verifiers for agents learning through interaction. Its concrete discovery connection is generating and validating unfamiliar tasks and learning transferable behavior within them.",
+      "id": "a4026bea93447d03",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26828"
+        },
+        {
+          "label": "Project",
+          "url": "https://msr-orchard.github.io/WildAWM/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MSR-Orchard/WildAWM"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/ChilleD/WildAWM"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/ChilleD/WildAWM-35B-A3B"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/ChilleD/WildAWM-4B"
         }
       ]
     },
@@ -6839,16 +7255,40 @@
       ]
     },
     {
-      "title": "Benchmarking and Enhancing Agentic Causal Discovery",
-      "url": "https://arxiv.org/abs/2610.22846",
+      "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
+      "url": "https://arxiv.org/abs/2610.23845",
       "published_at": "2026-10-16",
       "kind": "paper",
-      "summary": "Introduces Heuresis, a benchmark of anonymized simulated datasets designed to test whether agents diagnose and repair causal-discovery errors rather than exploit semantic variable names or merely select an existing algorithm.",
-      "date_evidence": "The arXiv page says “Submitted on 16 Oct 2026”; submission history lists v1 at 2026-10-16 02:47:51 UTC.",
-      "relevance": "A particularly strong discovery-evaluation item: it measures autonomous, data-driven causal investigation and includes recurring-watchlist authors Pingchuan Ma, Rui Ding, and Shuai Wang.",
+      "summary": "SEER-Repro packages 20 cancer-epidemiology studies for agent-assisted reproduction and robustness assessment. Agents reconstruct claims, execute alternative analyses and prioritize evidence for expert review.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-16T17:57:55Z; the arXiv submission date agrees.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "13a316d3fa2ce54f"
+      "relevance": "Introduces executable agent workflows for verifying published knowledge and testing defensible analytical alternatives. Its primary contribution directly concerns scientific verification and robustness reasoning.",
+      "id": "b34e9d0c4929185b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.23845"
+        }
+      ]
+    },
+    {
+      "title": "Using Heteroscedasticity for Causal Discovery under Hidden Confounding",
+      "url": "https://arxiv.org/abs/2610.21219",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "CHARGE uses heteroscedasticity to identify causal order and effects even when every candidate instrument violates exclusion. Its theory replaces valid-instrument requirements with explicit covariance restrictions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-15T04:08:09Z, consistent with the primary arXiv record.",
+      "review_status": "approved",
+      "relevance": "Develops general causal-structure identification and estimation under hidden confounding, directly expanding methods for learning unknown causal representations. The contribution is methodological rather than confined to its biological application.",
+      "id": "9f0b1afaa9684d4a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21219"
+        }
+      ]
     },
     {
       "title": "Self-Evolving Coding Agents via Harness-Policy Optimization",
@@ -6877,40 +7317,166 @@
       ]
     },
     {
-      "title": "SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents",
-      "url": "https://arxiv.org/abs/2610.21082",
+      "title": "Selection Is Not Learning: Choosing Model Futures",
+      "url": "https://arxiv.org/abs/2610.22029",
       "published_at": "2026-10-15",
       "kind": "paper",
-      "summary": "SciΠvot evaluates whether research agents make sound decisions at pivotal moments, using 248 cases derived from human interventions across 26 projects. Frontier models often preferred the original agent plan over the human correction, exposing a major scientific-judgment gap.",
-      "date_evidence": "The arXiv source page explicitly states “Submitted on 15 Oct 2026”; submission history records v1 at 01:34:44 UTC.",
-      "relevance": "A highly relevant evaluation resource for autonomous research agents, focusing on consequential experimental and project-level judgment rather than final-answer accuracy.",
+      "summary": "EvoHeir separates which model parameters persist from which experiences remain useful. It explores candidate updates, selects a recipient, distills experience to repair failures while preserving successes, and confirms the completed proposal on fresh probes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied date was attributed to a secondary listing. The primary arXiv v1 submission history independently establishes October 15, 2026 at 15:07:09 UTC.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "f73eeee30c4bf920"
+      "relevance": "Directly studies self-generated curricula, model-update acceptance and experience retention in iterative self-improvement. These mechanisms concretely address learning to improve through continued exploration.",
+      "id": "589ac49b04a690ec",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22029"
+        }
+      ]
+    },
+    {
+      "title": "R$^2$Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
+      "url": "https://arxiv.org/abs/2610.22740",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "R²Orch couples agent orchestration training with an adaptive task curriculum and a changing skill library. Its contribution is a concrete mechanism for transferring procedural guidance into an orchestrator’s parameters while maintaining useful training signals. The evidence concerns improvement on established tasks, rather than autonomous scientific discoveries.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata gives the original publication timestamp as 2026-10-15T23:21:21Z. The rendered PDF is version 2 dated October 22, which is a revision date.",
+      "review_status": "approved",
+      "relevance": "Directly relevant to recursive self-improvement and curriculum discovery: an orchestrator learns which tasks remain learnable as external skills are removed, while randomized comparisons guide skill retirement.",
+      "id": "e0e322c3332399a4",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22740"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/beita6969/R2Orch"
+        }
+      ]
     },
     {
       "title": "Null Controls Are Necessary but Not Sufficient: Evaluating Acceptance Guards for Scientific Discovery and Interpretability",
       "url": "https://arxiv.org/abs/2610.22445",
       "published_at": "2026-10-15",
       "kind": "paper",
-      "summary": "This work tests acceptance criteria used by automated discovery systems and shows that seemingly successful descriptive tests can admit scientifically empty explanations. It proposes evaluating null rejection, positive acceptance and independently verified consequences together.",
-      "date_evidence": "The arXiv source page explicitly states “Submitted on 15 Oct 2026”; submission history records v1 at 15:13:57 UTC.",
-      "relevance": "Targets the reliability of discovery evaluation and demonstrates why candidate hypotheses need both adversarial controls and consequence-based validation.",
+      "summary": "The paper separates satisfying a candidate’s defining property from establishing its intended scientific meaning. It implements four operations for revising physical descriptions and tests the same distinction in neural interpretability. Null acceptance, positive acceptance, and consequence agreement reveal complementary weaknesses in acceptance procedures.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-15T15:13:57Z.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "456c7c8f7dcbfa06"
+      "relevance": "Provides explicit methods for verifying proposed scientific knowledge, showing how descriptive acceptance can fail and how independently specified consequences improve discovery evaluation.",
+      "id": "456c7c8f7dcbfa06",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22445"
+        },
+        {
+          "label": "Project",
+          "url": "https://real-project-aether.github.io/project-aether/"
+        }
+      ]
+    },
+    {
+      "title": "MetaShare: Failure-Aware Collective Self-Improvement for Open-Ended Agents",
+      "url": "https://arxiv.org/abs/2610.21887",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "MetaShare changes the unit of shared experience from complete agents or traces to compact descriptions of evaluated modifications with signed performance changes. Separate success and failure retrieval channels guide later modifications, while an auditor proposes underexplored mechanism categories. Its contribution concerns how populations retain and use evidence during scaffold search.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata and the original arXiv submission history agree on 2026-10-15T13:49:41Z.",
+      "review_status": "approved",
+      "relevance": "Makes failed self-modifications reusable across agent lineages and explicitly broadens the search for new improvement mechanisms, directly addressing retained experience and open-ended self-improvement.",
+      "id": "bc10433cad9d513d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21887"
+        }
+      ]
+    },
+    {
+      "title": "Lean4AgenticRL: Advancing Agentic RL with Verifiable Multi-level Process Rewards",
+      "url": "https://arxiv.org/abs/2610.22448",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "Lean4AgenticRL aligns agent trajectories to problem-specific workflow stages and combines outcome, stage-completion, and tool-behavior rewards. Its central contribution is more structured credit assignment for long-horizon agent learning. Lean checks formalized conditions, while substantial semantic interpretation remains delegated to language models.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history records version 1 at 2026-10-15 15:26:54 UTC, confirming the supplied October 15 publication date with an exact primary-source timestamp.",
+      "review_status": "approved",
+      "relevance": "Contributes agent post-training through evidence-based intermediate rewards for exploration, diagnosis, repair, and verification. This is a concrete training mechanism relevant to discovery-capable agents, although evaluated on software and terminal tasks.",
+      "id": "a97c1f5a709e4de6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22448"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/RickySkywalker/Lean4AgenticRL"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/amazon/LAR-27B"
+        }
+      ]
     },
     {
       "title": "Data World: Scaling Data Environments from Scratch",
       "url": "https://arxiv.org/abs/2610.21656",
       "published_at": "2026-10-15",
       "kind": "paper",
-      "summary": "Data World generates synthetic data environments from explicit underlying mechanisms, along with tasks and auditable rubrics. This provides scalable, verifiable training and evaluation material for agents that must discover insights across heterogeneous files.",
-      "date_evidence": "The opened arXiv source page explicitly states “Submitted on 15 Oct 2026.”",
-      "relevance": "Provides a discovery-training engine and benchmark in which open-ended analytical findings can be checked against known generative truth.",
+      "summary": "Data World specifies generative mechanisms before producing analyst-visible files. This gives task writers access to known relationships and allows audits of whether targeted findings remain recoverable. The engine supplies both an insight-discovery benchmark and a world-disjoint training set, connecting environment construction, verification, and agent learning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history records version 1 at 2026-10-15 10:35:47 UTC, confirming the supplied October 15 publication date with an exact primary-source timestamp.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "8b5e7afcd33dcbed"
+      "relevance": "Creates environments and evaluation criteria for agents recovering unknown analytical relationships from imperfect observations, with direct evidence that the resulting tasks also support learning to discover.",
+      "id": "8b5e7afcd33dcbed",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21656"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Zhanli-Li/Data-World"
+        },
+        {
+          "label": "Project",
+          "url": "https://zhanli-li.github.io/Data-World/"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Zhanli-Li/DataWorld-Bench"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/collections/Zhanli-Li/dataworld"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Zhanli-Li/DataWorld-35B-A3B"
+        }
+      ]
+    },
+    {
+      "title": "Benchmarking and Enhancing Agentic Causal Discovery",
+      "url": "https://arxiv.org/abs/2610.22846",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "HEURESIS evaluates causal-discovery agents on anonymous synthetic datasets spanning six mechanism families. It distinguishes gains from algorithm selection from gains through further statistical investigation and records the evidence preceding graph edits.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-16T02:47:51Z. The arXiv record confirms submission on October 16; the earlier supplied calendar date reflects America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates whether causal-discovery agents gather evidence and repair unknown graph structure beyond selecting existing algorithms. The benchmark design and trace attribution are concrete discovery-evaluation contributions.",
+      "id": "13a316d3fa2ce54f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22846"
+        }
+      ]
     },
     {
       "title": "SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm",
@@ -6929,6 +7495,36 @@
         }
       ],
       "id": "f3fe009c2d3e7e40"
+    },
+    {
+      "title": "Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents",
+      "url": "https://arxiv.org/abs/2610.21082",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "SciPIvot turns documented human corrections of research agents into 248 paired-plan decisions from 26 projects across six fields. Evaluators choose a next step using evidence available before the intervention.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-15T01:34:44Z. Its America/New_York calendar date is October 14.",
+      "review_status": "approved",
+      "relevance": "Benchmarks pivotal scientific decisions from real research projects, including experimental design, anomaly diagnosis and hypothesis revision. This is a direct evaluation of autonomous discovery judgment.",
+      "id": "f73eeee30c4bf920",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21082"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AutoResearch-Factory/SciPIvot"
+        },
+        {
+          "label": "Project",
+          "url": "https://autoresearch-factory.github.io/SciPIvot/"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/sun1245/SciPIvot"
+        }
+      ]
     },
     {
       "title": "Scaling Discovery Requires Forgetting",
