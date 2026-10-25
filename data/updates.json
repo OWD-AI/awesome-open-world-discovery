@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T03:23:52-04:00",
+  "updated_at": "2026-10-25T03:56:57-04:00",
   "window_start": "2026-09-26",
   "window_end": "2026-10-25",
   "window_days": 30,
@@ -4498,6 +4498,28 @@
       "id": "5d16475bcd0b4a26"
     },
     {
+      "title": "Training Reasoning Models to Generate Diverse Scientific Ideas",
+      "url": "https://arxiv.org/abs/2610.22324",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "The paper trains an 8B model to generate portfolios of scientific ideas, rewarding both judged scientific value and the additional diversity each idea contributes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is preserved exactly. The PDF v1 stamp and original arXiv submission record corroborate October 15, 2026; the supplied midnight timestamp comes from Hugging Face publication metadata.",
+      "review_status": "approved",
+      "relevance": "It directly trains a scientific ideation capability: proposing multiple distinct, literature-grounded hypotheses worth investigating. Human judgments and exploratory execution checks connect the objective to research use.",
+      "id": "9e2f9fe91ea38fa6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22324"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ManyaWadhwa/diverge_ideation"
+        }
+      ]
+    },
+    {
       "title": "SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm",
       "url": "https://arxiv.org/abs/2610.20431",
       "published_at": "2026-10-14",
@@ -4663,6 +4685,46 @@
       ]
     },
     {
+      "title": "Predicting Privileged Information Effectiveness for On-Policy Self-Distillation",
+      "url": "https://arxiv.org/abs/2610.22512",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "The paper investigates which privileged information produces useful on-policy self-distillation. It separates information that helps a teacher answer immediately from information that changes the student in a transferable way.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. The original v1 date printed on PDF page 1 is 15 October 2026, matching the supplied publication metadata.",
+      "review_status": "approved",
+      "relevance": "The primary contribution concerns how agents learn transferable behavior from trajectories, observations, and mistake analysis. Its error-targeted screening method concretely supports experience-based improvement of agents that could perform discovery, with transfer evaluated separately from access to leaked solutions.",
+      "id": "1cf7caf1e3962092",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22512"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/zkjzou/PI-OPSD"
+        }
+      ]
+    },
+    {
+      "title": "Measuring Mechanistic Uncertainty in Large Language Models via Causal Robustness",
+      "url": "https://arxiv.org/abs/2610.22636",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "Mechanistic uncertainty measures how easily an internal intervention changes an answer. The proposed causal robustness margin complements behavioral confidence measures and increases for many facts learned successfully through finetuning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. PDF page 1 identifies v1 as 15 October 2026, corroborating the supplied original publication metadata.",
+      "review_status": "approved",
+      "relevance": "The paper develops an intervention-based signal for identifying unreliable factual answers and checking whether acquired knowledge becomes more stable. This directly supports knowledge verification and identifying what an agent may need to investigate, although autonomous investigation is not demonstrated.",
+      "id": "a69e794da1fcd20e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22636"
+        }
+      ]
+    },
+    {
       "title": "MMLA-RSI: Recursive Self-Improvement through RTT and RTMA",
       "url": "https://arxiv.org/abs/2610.20294",
       "published_at": "2026-10-14",
@@ -4677,6 +4739,50 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.20294"
+        }
+      ]
+    },
+    {
+      "title": "Harness-Delta Attribution: Dissecting Gains From Harness Evolution",
+      "url": "https://arxiv.org/abs/2610.22466",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "Harness-Delta Attribution decomposes measured harness-evolution gains into detected shortcut exploitation, gains reproducible through extra inference, and a residual. It shows why search scores and ordinary held-out scores can overstate evidence of general improvement.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. PDF page 1 prints the original v1 date as 15 October 2026, corroborating the supplied publication metadata.",
+      "review_status": "approved",
+      "relevance": "This is directly relevant to evaluating agent self-improvement: it tests whether evolved harnesses produce transferable capability gains after accounting for benchmark shortcuts and additional inference compute.",
+      "id": "f34ad45741b405ff",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22466"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Wenwen-D/HarnessDeltaAttribution"
+        },
+        {
+          "label": "Project",
+          "url": "https://wenwen-d.github.io/blog/harness-delta-attribution/"
+        }
+      ]
+    },
+    {
+      "title": "GRADS: Graph-Regulated Agentic Data Synthesis with Controllable Difficulty",
+      "url": "https://arxiv.org/abs/2610.21167",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "GRADS synthesizes source-grounded questions using evidence dependency graphs, targeting necessary reasoning depth rather than merely adding documents or constraints.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original publication timestamp is 2026-10-15T03:24:42Z, corroborated by the original arXiv submission metadata and PDF v1 date. The exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "GRADS constructs verified research-search tasks and training trajectories with controlled reasoning difficulty. Its concrete contribution improves agents that retrieve, connect, and verify evidence across specialized knowledge corpora.",
+      "id": "0b82946374e2d1ff",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21167"
         }
       ]
     },
@@ -6908,6 +7014,24 @@
       ]
     },
     {
+      "title": "Recursive Self-Improvement in Unified Multimodal Models",
+      "url": "https://arxiv.org/abs/2610.03002",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "RSI couples image generation, visual diagnosis, and program writing within a unified multimodal model. Execution checks constructed examples against specifications before they become training targets, while diagnosed weaknesses guide subsequent data allocation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-02T08:34:21Z.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete mechanism for learning from diagnosed capability gaps through independently verified synthetic data and repeated model updates. This directly supports verified self-improvement and learning to discover, although experiments concern chart generation.",
+      "id": "9d6f1aaa601bd596",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.03002"
+        }
+      ]
+    },
+    {
       "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
       "url": "https://allenai.org/blog/astabrief",
       "published_at": "2026-10-02",
@@ -6919,6 +7043,42 @@
       "source": "Codex primary text-and-image checked",
       "id": "d185427efe0f1914",
       "links": []
+    },
+    {
+      "title": "Mapping and Advancing the Scalability-Accuracy Frontier of Nonlinear Causal Discovery",
+      "url": "https://arxiv.org/abs/2610.03258",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "SPADE accelerates nonlinear causal graph search by compiling reusable spline statistics. A comparison across four algorithm families identifies repeated local regression fitting as a bottleneck and evaluates the resulting accuracy–runtime trade-off.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-02T13:03:56Z.",
+      "review_status": "approved",
+      "relevance": "Directly advances causal structure discovery from observations, providing representations that can support scientific hypotheses and reasoning about unknown mechanisms.",
+      "id": "7cea29ac9f6e3f51",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.03258"
+        }
+      ]
+    },
+    {
+      "title": "Evolutionary Computation for Trustworthy AI: From Attacks and Defenses to Self-Evolving Era",
+      "url": "https://arxiv.org/abs/2610.02996",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "Organizes evolutionary computation for trustworthy AI around attacks, defenses, and persistent self-evolving systems. Its central distinction is whether selected candidates become inherited state that changes future behavior and search.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-02T08:29:15Z.",
+      "review_status": "approved",
+      "relevance": "The survey substantively connects failure discovery, evolutionary search, verified update admission, and retained agent experience. Its treatment of persistent self-evolution provides relevant foundations beyond generic AI security.",
+      "id": "0114a6f3ab1bd81d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.02996"
+        }
+      ]
     },
     {
       "title": "EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?",
@@ -6973,16 +7133,44 @@
       "id": "92005d4a84bd525c"
     },
     {
+      "title": "A Kinetic Theory of the Gated Self-Evolving LLM Agent",
+      "url": "https://arxiv.org/abs/2610.03243",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "Models versioned skill-plugin populations using a kinetic equation with co-activation, mutation, task influence, and external validation selection. It combines a conditional drift certificate with exploratory statistical signatures, while explicitly bounding the fluid analogy.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-02T12:55:38Z.",
+      "review_status": "approved",
+      "relevance": "Develops conditional theory and diagnostic experiments for gated agent self-improvement, including validation separation, improvement horizons, and failure of held-out gains to generalize. These directly concern reliable learning to discover.",
+      "id": "57052b4cd1377f60",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.03243"
+        }
+      ]
+    },
+    {
       "title": "YouRA: A Persistent-State Architecture for Evidence-Traceable Autonomous Research Agents",
       "url": "https://arxiv.org/abs/2610.01097",
       "published_at": "2026-10-01",
       "kind": "paper",
-      "summary": "Introduces persistent state for hypotheses, gates, evidence pointers, failures, and recovery decisions across long research trajectories. Its separated controller and structured reflection improve end-to-end research scores and provenance diagnostics.",
-      "date_evidence": "arXiv submission history: v1 submitted 1 October 2026 at 05:40:21 UTC.",
-      "relevance": "Addresses evidence traceability, recovery, and durable research state—core infrastructure for reliable discovery agents.",
+      "summary": "YouRA externalizes research state into a persistent verification record, separates workflow control from execution, and retains structured failure lessons. Its pipeline connects hypothesis generation and experiments to evidence checks and manuscript review.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-01T05:40:21Z.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "ef09ae7b3870a9b3"
+      "relevance": "Directly contributes an autonomous scientific research harness that preserves hypotheses, execution evidence, failure lessons, and verification decisions across long research trajectories.",
+      "id": "ef09ae7b3870a9b3",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.01097"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/PrayPrey/Your-Research-Agent"
+        }
+      ]
     },
     {
       "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
@@ -7011,12 +7199,18 @@
       "url": "https://arxiv.org/abs/2610.01827",
       "published_at": "2026-10-01",
       "kind": "paper",
-      "summary": "PRISMS prioritizes candidate molecules, materials and other designs using pairwise expert preferences instead of data-hungry absolute-score regressors. It selectively escalates uncertain comparisons to more expensive experts using a Fisher-information criterion.",
-      "date_evidence": "The opened arXiv source page explicitly states “Submitted on 1 Oct 2026.”",
-      "relevance": "Addresses experimental bottlenecks and budget-aware candidate selection using multiple evaluator fidelities, directly supporting scientific experimental design.",
+      "summary": "PRISMS curates scientific designs using pairwise judgments from sources of different cost and reliability, reducing dependence on abundant numerical measurements.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives 2026-10-01T15:04:03Z as the original publication timestamp, confirmed by the primary arXiv version-1 submission history.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "0deb0ab403be3bb5"
+      "relevance": "PRISMS directly addresses which scientific candidates to validate next, using uncertain expert comparisons to allocate scarce experiments. Its contribution connects scientific knowledge sources to iterative discovery decisions.",
+      "id": "0deb0ab403be3bb5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.01827"
+        }
+      ]
     },
     {
       "title": "RoboBridge: A Self-Evolving Embodied Agent Framework for Sim-to-Real Transfer",
@@ -7037,16 +7231,56 @@
       ]
     },
     {
-      "title": "Can AI Scientists Coordinate at Runtime?",
-      "url": "https://arxiv.org/abs/2610.00980",
+      "title": "Oneira: From Open-Ended Generation to Open-World Interaction in Video World Models",
+      "url": "https://arxiv.org/abs/2610.01614",
       "published_at": "2026-10-01",
       "kind": "paper",
-      "summary": "Studies runtime selection and coordination among agents drawn from existing AI-scientist systems. Runtime agent selection improved observed mean scores, while extra contracts and verification had mixed effects under constrained budgets.",
-      "date_evidence": "arXiv submission history: v1 submitted 1 October 2026 at 03:18:07 UTC.",
-      "relevance": "Tests adaptive research-team orchestration rather than fixed, design-time scientific workflows.",
+      "summary": "ONEIRA separates explicit object-state management from video rendering, allowing an agent's actionable world to expand during exploration while retaining earlier changes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-01T12:52:47Z; the first PDF page identifies version 1 as 1 October 2026.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "ab69aff2f86002f6"
+      "relevance": "ONEIRA provides an extensible world representation that registers newly encountered objects as actionable entities and preserves intervention outcomes. This directly supports agents exploring and acting on previously unknown world content.",
+      "id": "33f13c12a6d20792",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.01614"
+        },
+        {
+          "label": "Project",
+          "url": "https://madaoer.github.io/projects/oneira/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Madaoer/Oneira"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Madaoer-Otaku/Oneira_example_weights"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Madaoer-Otaku/Oneira_example_data"
+        }
+      ]
+    },
+    {
+      "title": "My FAULT: Self-Diagnosis as Credit Assignment in Self-Evolving Agentic Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2610.01161",
+      "published_at": "2026-10-01",
+      "kind": "paper",
+      "summary": "FAULT converts structured self-diagnoses into step-specific reinforcement-learning credit while preserving terminal task outcomes as the supervisory anchor.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-01T06:41:10Z. This takes precedence over the manuscript's internal date of 2 October 2026.",
+      "review_status": "approved",
+      "relevance": "FAULT trains agents to localize errors, check diagnostic evidence, and learn from interaction outcomes. This is a concrete learning mechanism for improving evidence-seeking and corrective behavior, although scientific discovery itself is not evaluated.",
+      "id": "f2d49208f39c3a48",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.01161"
+        }
+      ]
     },
     {
       "title": "SimEX: Simulation-Integrated Robotics AutoResearch",
@@ -7107,6 +7341,32 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "684cb6641ea22913"
+    },
+    {
+      "title": "Can AI Scientists Coordinate at Runtime?",
+      "url": "https://arxiv.org/abs/2610.00980",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Runtime Agent Coordination lets existing AI-scientist agents choose subsequent capabilities from current research state, optionally adding scoped work contracts and advisory artifact checks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-01T03:18:07Z. This corresponds to 30 September 2026 in America/New_York, explaining the supplied local publication day.",
+      "review_status": "approved",
+      "relevance": "RAC directly studies coordination of autonomous scientific research agents, selecting subsequent work from current evidence and unresolved research obligations. Its evaluation examines research outputs and the limits of artifact verification.",
+      "id": "ab69aff2f86002f6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.00980"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/systemind-team/Runtime-AI-Scientist"
+        },
+        {
+          "label": "Project",
+          "url": "https://systemind-team.github.io/Runtime-AI-Scientist/"
+        }
+      ]
     },
     {
       "title": "Identifying ODEs from Unstructured Data with Causal Representation Learning",
@@ -11306,6 +11566,28 @@
       ]
     },
     {
+      "title": "Training Reasoning Models to Generate Diverse Scientific Ideas",
+      "url": "https://arxiv.org/abs/2610.22324",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "The paper trains an 8B model to generate portfolios of scientific ideas, rewarding both judged scientific value and the additional diversity each idea contributes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is preserved exactly. The PDF v1 stamp and original arXiv submission record corroborate October 15, 2026; the supplied midnight timestamp comes from Hugging Face publication metadata.",
+      "review_status": "approved",
+      "relevance": "It directly trains a scientific ideation capability: proposing multiple distinct, literature-grounded hypotheses worth investigating. Human judgments and exploratory execution checks connect the objective to research use.",
+      "id": "9e2f9fe91ea38fa6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22324"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ManyaWadhwa/diverge_ideation"
+        }
+      ]
+    },
+    {
       "title": "SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm",
       "url": "https://arxiv.org/abs/2610.20431",
       "published_at": "2026-10-14",
@@ -11458,6 +11740,46 @@
       ]
     },
     {
+      "title": "Predicting Privileged Information Effectiveness for On-Policy Self-Distillation",
+      "url": "https://arxiv.org/abs/2610.22512",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "The paper investigates which privileged information produces useful on-policy self-distillation. It separates information that helps a teacher answer immediately from information that changes the student in a transferable way.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. The original v1 date printed on PDF page 1 is 15 October 2026, matching the supplied publication metadata.",
+      "review_status": "approved",
+      "relevance": "The primary contribution concerns how agents learn transferable behavior from trajectories, observations, and mistake analysis. Its error-targeted screening method concretely supports experience-based improvement of agents that could perform discovery, with transfer evaluated separately from access to leaked solutions.",
+      "id": "1cf7caf1e3962092",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22512"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/zkjzou/PI-OPSD"
+        }
+      ]
+    },
+    {
+      "title": "Measuring Mechanistic Uncertainty in Large Language Models via Causal Robustness",
+      "url": "https://arxiv.org/abs/2610.22636",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "Mechanistic uncertainty measures how easily an internal intervention changes an answer. The proposed causal robustness margin complements behavioral confidence measures and increases for many facts learned successfully through finetuning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. PDF page 1 identifies v1 as 15 October 2026, corroborating the supplied original publication metadata.",
+      "review_status": "approved",
+      "relevance": "The paper develops an intervention-based signal for identifying unreliable factual answers and checking whether acquired knowledge becomes more stable. This directly supports knowledge verification and identifying what an agent may need to investigate, although autonomous investigation is not demonstrated.",
+      "id": "a69e794da1fcd20e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22636"
+        }
+      ]
+    },
+    {
       "title": "MMLA-RSI: Recursive Self-Improvement through RTT and RTMA",
       "url": "https://arxiv.org/abs/2610.20294",
       "published_at": "2026-10-14",
@@ -11472,6 +11794,50 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.20294"
+        }
+      ]
+    },
+    {
+      "title": "Harness-Delta Attribution: Dissecting Gains From Harness Evolution",
+      "url": "https://arxiv.org/abs/2610.22466",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "Harness-Delta Attribution decomposes measured harness-evolution gains into detected shortcut exploitation, gains reproducible through extra inference, and a residual. It shows why search scores and ordinary held-out scores can overstate evidence of general improvement.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. PDF page 1 prints the original v1 date as 15 October 2026, corroborating the supplied publication metadata.",
+      "review_status": "approved",
+      "relevance": "This is directly relevant to evaluating agent self-improvement: it tests whether evolved harnesses produce transferable capability gains after accounting for benchmark shortcuts and additional inference compute.",
+      "id": "f34ad45741b405ff",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22466"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Wenwen-D/HarnessDeltaAttribution"
+        },
+        {
+          "label": "Project",
+          "url": "https://wenwen-d.github.io/blog/harness-delta-attribution/"
+        }
+      ]
+    },
+    {
+      "title": "GRADS: Graph-Regulated Agentic Data Synthesis with Controllable Difficulty",
+      "url": "https://arxiv.org/abs/2610.21167",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "GRADS synthesizes source-grounded questions using evidence dependency graphs, targeting necessary reasoning depth rather than merely adding documents or constraints.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original publication timestamp is 2026-10-15T03:24:42Z, corroborated by the original arXiv submission metadata and PDF v1 date. The exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "GRADS constructs verified research-search tasks and training trajectories with controlled reasoning difficulty. Its concrete contribution improves agents that retrieve, connect, and verify evidence across specialized knowledge corpora.",
+      "id": "0b82946374e2d1ff",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21167"
         }
       ]
     },
@@ -13540,6 +13906,60 @@
       ]
     },
     {
+      "title": "Recursive Self-Improvement in Unified Multimodal Models",
+      "url": "https://arxiv.org/abs/2610.03002",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "RSI couples image generation, visual diagnosis, and program writing within a unified multimodal model. Execution checks constructed examples against specifications before they become training targets, while diagnosed weaknesses guide subsequent data allocation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-02T08:34:21Z.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete mechanism for learning from diagnosed capability gaps through independently verified synthetic data and repeated model updates. This directly supports verified self-improvement and learning to discover, although experiments concern chart generation.",
+      "id": "9d6f1aaa601bd596",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.03002"
+        }
+      ]
+    },
+    {
+      "title": "Mapping and Advancing the Scalability-Accuracy Frontier of Nonlinear Causal Discovery",
+      "url": "https://arxiv.org/abs/2610.03258",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "SPADE accelerates nonlinear causal graph search by compiling reusable spline statistics. A comparison across four algorithm families identifies repeated local regression fitting as a bottleneck and evaluates the resulting accuracy–runtime trade-off.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-02T13:03:56Z.",
+      "review_status": "approved",
+      "relevance": "Directly advances causal structure discovery from observations, providing representations that can support scientific hypotheses and reasoning about unknown mechanisms.",
+      "id": "7cea29ac9f6e3f51",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.03258"
+        }
+      ]
+    },
+    {
+      "title": "Evolutionary Computation for Trustworthy AI: From Attacks and Defenses to Self-Evolving Era",
+      "url": "https://arxiv.org/abs/2610.02996",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "Organizes evolutionary computation for trustworthy AI around attacks, defenses, and persistent self-evolving systems. Its central distinction is whether selected candidates become inherited state that changes future behavior and search.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-02T08:29:15Z.",
+      "review_status": "approved",
+      "relevance": "The survey substantively connects failure discovery, evolutionary search, verified update admission, and retained agent experience. Its treatment of persistent self-evolution provides relevant foundations beyond generic AI security.",
+      "id": "0114a6f3ab1bd81d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.02996"
+        }
+      ]
+    },
+    {
       "title": "EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?",
       "url": "https://arxiv.org/abs/2610.04184",
       "published_at": "2026-10-02",
@@ -13566,16 +13986,44 @@
       ]
     },
     {
+      "title": "A Kinetic Theory of the Gated Self-Evolving LLM Agent",
+      "url": "https://arxiv.org/abs/2610.03243",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "Models versioned skill-plugin populations using a kinetic equation with co-activation, mutation, task influence, and external validation selection. It combines a conditional drift certificate with exploratory statistical signatures, while explicitly bounding the fluid analogy.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-02T12:55:38Z.",
+      "review_status": "approved",
+      "relevance": "Develops conditional theory and diagnostic experiments for gated agent self-improvement, including validation separation, improvement horizons, and failure of held-out gains to generalize. These directly concern reliable learning to discover.",
+      "id": "57052b4cd1377f60",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.03243"
+        }
+      ]
+    },
+    {
       "title": "YouRA: A Persistent-State Architecture for Evidence-Traceable Autonomous Research Agents",
       "url": "https://arxiv.org/abs/2610.01097",
       "published_at": "2026-10-01",
       "kind": "paper",
-      "summary": "Introduces persistent state for hypotheses, gates, evidence pointers, failures, and recovery decisions across long research trajectories. Its separated controller and structured reflection improve end-to-end research scores and provenance diagnostics.",
-      "date_evidence": "arXiv submission history: v1 submitted 1 October 2026 at 05:40:21 UTC.",
-      "relevance": "Addresses evidence traceability, recovery, and durable research state—core infrastructure for reliable discovery agents.",
+      "summary": "YouRA externalizes research state into a persistent verification record, separates workflow control from execution, and retains structured failure lessons. Its pipeline connects hypothesis generation and experiments to evidence checks and manuscript review.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history: 2026-10-01T05:40:21Z.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "ef09ae7b3870a9b3"
+      "relevance": "Directly contributes an autonomous scientific research harness that preserves hypotheses, execution evidence, failure lessons, and verification decisions across long research trajectories.",
+      "id": "ef09ae7b3870a9b3",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.01097"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/PrayPrey/Your-Research-Agent"
+        }
+      ]
     },
     {
       "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
@@ -13604,12 +14052,18 @@
       "url": "https://arxiv.org/abs/2610.01827",
       "published_at": "2026-10-01",
       "kind": "paper",
-      "summary": "PRISMS prioritizes candidate molecules, materials and other designs using pairwise expert preferences instead of data-hungry absolute-score regressors. It selectively escalates uncertain comparisons to more expensive experts using a Fisher-information criterion.",
-      "date_evidence": "The opened arXiv source page explicitly states “Submitted on 1 Oct 2026.”",
-      "relevance": "Addresses experimental bottlenecks and budget-aware candidate selection using multiple evaluator fidelities, directly supporting scientific experimental design.",
+      "summary": "PRISMS curates scientific designs using pairwise judgments from sources of different cost and reliability, reducing dependence on abundant numerical measurements.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives 2026-10-01T15:04:03Z as the original publication timestamp, confirmed by the primary arXiv version-1 submission history.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "0deb0ab403be3bb5"
+      "relevance": "PRISMS directly addresses which scientific candidates to validate next, using uncertain expert comparisons to allocate scarce experiments. Its contribution connects scientific knowledge sources to iterative discovery decisions.",
+      "id": "0deb0ab403be3bb5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.01827"
+        }
+      ]
     },
     {
       "title": "RoboBridge: A Self-Evolving Embodied Agent Framework for Sim-to-Real Transfer",
@@ -13630,16 +14084,56 @@
       ]
     },
     {
-      "title": "Can AI Scientists Coordinate at Runtime?",
-      "url": "https://arxiv.org/abs/2610.00980",
+      "title": "Oneira: From Open-Ended Generation to Open-World Interaction in Video World Models",
+      "url": "https://arxiv.org/abs/2610.01614",
       "published_at": "2026-10-01",
       "kind": "paper",
-      "summary": "Studies runtime selection and coordination among agents drawn from existing AI-scientist systems. Runtime agent selection improved observed mean scores, while extra contracts and verification had mixed effects under constrained budgets.",
-      "date_evidence": "arXiv submission history: v1 submitted 1 October 2026 at 03:18:07 UTC.",
-      "relevance": "Tests adaptive research-team orchestration rather than fixed, design-time scientific workflows.",
+      "summary": "ONEIRA separates explicit object-state management from video rendering, allowing an agent's actionable world to expand during exploration while retaining earlier changes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-01T12:52:47Z; the first PDF page identifies version 1 as 1 October 2026.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "ab69aff2f86002f6"
+      "relevance": "ONEIRA provides an extensible world representation that registers newly encountered objects as actionable entities and preserves intervention outcomes. This directly supports agents exploring and acting on previously unknown world content.",
+      "id": "33f13c12a6d20792",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.01614"
+        },
+        {
+          "label": "Project",
+          "url": "https://madaoer.github.io/projects/oneira/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Madaoer/Oneira"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Madaoer-Otaku/Oneira_example_weights"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Madaoer-Otaku/Oneira_example_data"
+        }
+      ]
+    },
+    {
+      "title": "My FAULT: Self-Diagnosis as Credit Assignment in Self-Evolving Agentic Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2610.01161",
+      "published_at": "2026-10-01",
+      "kind": "paper",
+      "summary": "FAULT converts structured self-diagnoses into step-specific reinforcement-learning credit while preserving terminal task outcomes as the supervisory anchor.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-01T06:41:10Z. This takes precedence over the manuscript's internal date of 2 October 2026.",
+      "review_status": "approved",
+      "relevance": "FAULT trains agents to localize errors, check diagnostic evidence, and learn from interaction outcomes. This is a concrete learning mechanism for improving evidence-seeking and corrective behavior, although scientific discovery itself is not evaluated.",
+      "id": "f2d49208f39c3a48",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.01161"
+        }
+      ]
     },
     {
       "title": "SimEX: Simulation-Integrated Robotics AutoResearch",
@@ -13688,6 +14182,32 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "684cb6641ea22913"
+    },
+    {
+      "title": "Can AI Scientists Coordinate at Runtime?",
+      "url": "https://arxiv.org/abs/2610.00980",
+      "published_at": "2026-09-30",
+      "kind": "paper",
+      "summary": "Runtime Agent Coordination lets existing AI-scientist agents choose subsequent capabilities from current research state, optionally adding scoped work contracts and advisory artifact checks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-01T03:18:07Z. This corresponds to 30 September 2026 in America/New_York, explaining the supplied local publication day.",
+      "review_status": "approved",
+      "relevance": "RAC directly studies coordination of autonomous scientific research agents, selecting subsequent work from current evidence and unresolved research obligations. Its evaluation examines research outputs and the limits of artifact verification.",
+      "id": "ab69aff2f86002f6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.00980"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/systemind-team/Runtime-AI-Scientist"
+        },
+        {
+          "label": "Project",
+          "url": "https://systemind-team.github.io/Runtime-AI-Scientist/"
+        }
+      ]
     },
     {
       "title": "Identifying ODEs from Unstructured Data with Causal Representation Learning",

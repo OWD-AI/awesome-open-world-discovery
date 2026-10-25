@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**83 usage profiles** · Updated **2026-10-25**
+**84 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -645,6 +645,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations](#paper-c8f0a1e7ad6a901d) | Executed programs + evaluators | Offline data | Paper-described |
 | [From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists](#paper-dd2dc379979e7af0) | Synthetic data | Analysis + code | Paper-described |
 | [BlenderWorld: Benchmarking Visual Agents for 3D Creation from Real-World References](#paper-ecf2a0572888b64b) | Executed programs + evaluators | Analysis + tools | Paper-described |
+| [Harness-Delta Attribution: Dissecting Gains From Harness Evolution](#paper-f34ad45741b405ff) | Executed programs + evaluators | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1310,6 +1311,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Training reward is not established in the supplied pages. Evaluation uses GPT-5.6-terra for adaptive rendering and judging: eight complementary views support visual checks, while tool-based inspection checks native scene properties. The final score equally combines weighted satisfaction of frozen binary criteria and eight visual-quality ratings. Rubrics are hidden during generation; failed evaluations and missing .blend files receive zero. |
 | Reset | Tasks start from an initial workspace state and run in isolated Linux containers. Exact reset, replay, and restoration procedures are not established. |
 | Branching | Agents can edit, inspect, render, and revise projects. Explicit snapshot restoration or branching from an intermediate environment state is not established. |
+
+</details>
+
+<a id="paper-f34ad45741b405ff"></a>
+
+<details>
+<summary>Harness-Delta Attribution: Dissecting Gains From Harness Evolution — details</summary>
+
+[Work](../README.md#paper-f34ad45741b405ff) · [Source](https://arxiv.org/pdf/2610.22466)
+
+**Focus:** Attributes harness-evolution gains across a heterogeneous suite. LiveMath uses fixed mathematical questions; CREATE scores generated answer pools; ALFWorld provides interactive simulated observations and actions; SWE-bench runs software-editing tasks with execution feedback. These are benchmark computations and simulated interactions, with no new physical measurements or executed scientific research experiments established.
+
+**Openness:** `Fixed benchmark instances and search, validation and test splits.`, `Framework-dependent editing of harness code, prompts, tools, skills and memory around fixed model weights.`
+
+**New physical measurements:** No
+
+**Limits:** One feedback and interaction label cannot fully represent all four environments. Exact CREATE validity and diversity evaluators and SWE-bench test hooks are not established in the supplied text. Attribution requires human review of compute matching and shortcut neutralization. Undetected or entangled shortcuts can remain, so residual gain is an upper bound rather than proof of generalization.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Harness evolution optimizes task-specific search-set scores while keeping executor weights fixed. The proposer receives scored trajectories and execution evidence. LiveMath uses accuracy; ALFWorld uses episode success within 50 environment steps; CREATE uses Creative Utility rewarding valid and diverse answers; SWE-bench uses success rate. For Meta-Harness, search feedback includes per-instance scores, trajectories and logs, while validation feedback exposes only an aggregate score. Detailed evaluator implementations are not established. |
+| Reset | Repeated evaluation of baseline and candidate harnesses on fixed task sets is established. Exact environment reset procedures, snapshot restoration and rollback support are not established. |
+| Branching | Candidate-level branching is explicit: each iteration proposes k harnesses, evaluates candidates and retains versioned history and feedback. Compute matching may repeat baseline runs and aggregate their outputs. Branching or cloning intermediate simulator and tool states is not established. |
 
 </details>
 

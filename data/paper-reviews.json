@@ -14136,6 +14136,472 @@
           9
         ]
       }
+    },
+    "paper-9d6f1aaa601bd596": {
+      "institutions": [
+        "University of Southern California",
+        "University of California San Diego",
+        "Carnegie Mellon University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Starting from BAGEL-7B-MoT, four rounds use fixed diagnostic requests, rule-based difficulty progression, error-weighted sampling, program execution, and separate generation and understanding updates. Evaluation uses held-out BasicChartBench requests, a frozen initial reader, an external judge, OCR, controls, and a blind human audit.",
+      "evidence": "BasicChartBench L0 improves from 45.7% to 60.2%, versus 46.3% with continued training; L1 improves from 45.1% to 56.2%. Verified construction produces most of the gain, with failure targeting adding 3.5 percentage points on L0 over fixed allocation. Program construction success rises from 48.9% to 95.2% after one update. Updated readers improve much more on edited renders than on native generations.",
+      "discovery_use": "Provides a concrete mechanism for learning from diagnosed capability gaps through independently verified synthetic data and repeated model updates. This directly supports verified self-improvement and learning to discover, although experiments concern chart generation.",
+      "limits": "Evidence covers one model family, seven chart types, predefined specification dimensions, and four rounds. Readers still accept roughly one third of human-identified native-image errors. Gains on StructT2IBench are only 11.0% to 11.9%, and general understanding declines. Vocabulary replacement caused forgetting and prompted a replay-rule change after round 3, qualifying claims of an entirely fixed protocol. All 16 extracted pages were supplied, but only two pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "Provides a concrete mechanism for learning from diagnosed capability gaps through independently verified synthetic data and repeated model updates. This directly supports verified self-improvement and learning to discover, although experiments concern chart generation.",
+        "pdf_sha256": "75c81084d4c0b8c46f61a92ee2293ff84dd5610784e3dc3141ba19a0610b9091",
+        "evidence_pages": [
+          1,
+          3,
+          6,
+          8
+        ]
+      }
+    },
+    "paper-7cea29ac9f6e3f51": {
+      "institutions": [
+        "CISPA Helmholtz Center for Information Security"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Fixed spline bases and penalties allow cached Gram matrices and response products to serve repeated parent-set queries within Topic order search. Gaussian and histogram residual likelihoods share this regression cache. Experiments vary graph size and sample count, compare 480 moderate-size synthetic datasets, and evaluate Causal Chamber and Sachs observations.",
+      "evidence": "Under fixed basis size and bounded indegree, Gaussian score-evaluation complexity becomes O(nd² + d³), versus O(nd³) for repeated direct fits. At 800 variables, SPADE-Gauss takes 99.3 seconds versus Topic’s 12.5 hours. Across the synthetic grid, SPADE-Hist achieves 0.748 F1 in 1.24 seconds, versus Topic’s 0.616 in 75.35 seconds. Causal Chamber results are 0.50 F1 in 0.97 seconds. Accuracy differences also reflect the changed score and penalty; caching itself changes computational cost.",
+      "discovery_use": "Directly advances causal structure discovery from observations, providing representations that can support scientific hypotheses and reasoning about unknown mechanisms.",
+      "limits": "Results are empirical and simulator-dependent. Main assumptions include causal sufficiency, independent additive noise, sparse graphs, and fixed spline representations; latent confounding, heteroscedasticity, and broader identification settings remain open. Histogram scoring retains sample-dependent work and O(nd³) total asymptotic cost. Real-world accuracy remains imperfect. Review covers supplied pages 1–16 of 48 and two rendered pages, leaving later appendix tables unreviewed.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "Directly advances causal structure discovery from observations, providing representations that can support scientific hypotheses and reasoning about unknown mechanisms.",
+        "pdf_sha256": "2112c60922f2cbb3e2d41ade9f70b79c98cdd7997f948b7453ae1995dcc6b951",
+        "evidence_pages": [
+          1,
+          5,
+          7,
+          8
+        ]
+      }
+    },
+    "paper-0114a6f3ab1bd81d": {
+      "institutions": [
+        "Nanyang Technological University",
+        "Center for Frontier AI Research, Institute of High Performance Computing, A*STAR",
+        "Google",
+        "Sichuan University",
+        "Lingnan University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        13,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Synthesizes literature by evolved object, candidate representation, variation, selection, feedback, and evaluation. Persistent adaptation is organized into constrained exploration, selection-guided refinement, and attack–defense co-evolution. Evaluation separates task-level trustworthiness from search efficiency, diversity, budgets, and convergence.",
+      "evidence": "The synthesis identifies update admissibility, retention, and reciprocal adaptation as complementary mechanisms for governing self-improvement. It connects verified harness archives, memory and skill governance, and diverse failure search. It recommends evaluation across tasks and under comparable budgets, preserving capability while reporting safety, utility, diversity, and cost separately. These are literature-derived conclusions, without a new comparative experiment.",
+      "discovery_use": "The survey substantively connects failure discovery, evolutionary search, verified update admission, and retained agent experience. Its treatment of persistent self-evolution provides relevant foundations beyond generic AI security.",
+      "limits": "Much of the survey concerns conventional adversarial robustness rather than scientific discovery. Included systems differ substantially in objectives, resources, and verification strength; the supplied review does not establish a common causal estimate of evolutionary search benefits. No reproducible systematic search protocol is evident in the supplied pages. Review covers pages 1–16 of 20 and two rendered pages.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "foundations",
+        "rationale": "The survey substantively connects failure discovery, evolutionary search, verified update admission, and retained agent experience. Its treatment of persistent self-evolution provides relevant foundations beyond generic AI security.",
+        "pdf_sha256": "c20f4ac66c7856f8f251bc7d1c65045f428d72a7d753dc72aab47486dadd4347",
+        "evidence_pages": [
+          1,
+          4,
+          13,
+          15
+        ]
+      }
+    },
+    "paper-57052b4cd1377f60": {
+      "institutions": [
+        "Neusoft Corporation"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        12,
+        21
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Assumes interchangeable plugin instances, reversible mounting, acyclic dependencies, and typed contracts. The authors report Lean verification of selected formal results. Experiments use four-parameter skill plugins in a synthetic-goal WebShop simulation with one hosted model, varying population, edit budget, retrieval, and gate strictness. Controls are internal signature probes rather than competing agent systems.",
+      "evidence": "Sparse-edit runs show no detectable fluctuation scaling: fitted slope −0.04. Tripling edit density gives −0.58, directionally consistent with −1/2, using two seeds per arm. Fan-3 co-activation reaches 0.495 versus 0.301 for fan-1. Gate-selected improvements accompany negative independent-set change, illustrating selection overfitting. A 500-round run reaches a plateau. These observations support limited diagnostics rather than a general empirical law.",
+      "discovery_use": "Develops conditional theory and diagnostic experiments for gated agent self-improvement, including validation separation, improvement horizons, and failure of held-out gains to generalize. These directly concern reliable learning to discover.",
+      "limits": "The hitting-time bound requires an assumed improving-proposal probability and minimum gain; architecture alone does not establish these premises or out-of-sample improvement. Shared-database dependence is not proved negligible. Two seeds, one model, one synthetic task family, corrected gate and retrieval bugs, and post-hoc verdict categories constrain interpretation. Momentum is not conserved, and no Navier–Stokes limit is claimed. Formal sources were not independently checked. All 24 extracted pages were supplied; only pages 3 and 8 were visually inspected. Repository hints identify cited infrastructure, not this paper’s own release.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "foundations",
+        "rationale": "Develops conditional theory and diagnostic experiments for gated agent self-improvement, including validation separation, improvement horizons, and failure of held-out gains to generalize. These directly concern reliable learning to discover.",
+        "pdf_sha256": "bc4aa0c38eb3291bc0ab1e8ba32c433425f1aa7302bc1a45f52f9916ef58fb5e",
+        "evidence_pages": [
+          1,
+          8,
+          12,
+          21
+        ]
+      }
+    },
+    "paper-ef09ae7b3870a9b3": {
+      "institutions": [
+        "Electronics and Telecommunications Research Institute",
+        "Department of Artificial Intelligence, University of Science and Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A YAML verification state stores hypotheses, gates, evidence pointers, and history. A separate controller manages progression and recovery; reflection routes failures through repair, redesign, or reset. Evaluation compares released configurations of YouRA, MLR-Agent, and AI Scientist V2 on ten MLR-Bench tasks across three execution backbones, using four judges, order-controlled preferences, component ablations, human validation of hallucination flags, and automated provenance audits.",
+      "evidence": "YouRA leads Overall on all three backbones. Across 30 matched cells, mean gains are 0.85 over MLR-Agent and 0.64 over AI Scientist V2, with reported Holm-adjusted p-values of 0.012 and 0.044. Every component removal significantly lowers Overall, without a supported ranking of component importance. Both provenance analyzers classify 27/30 YouRA outputs as real-data-based, versus 11/30 and 17/30 for the baselines. Corrected hallucination counts improve over MLR-Agent but are not distinguishable from AI Scientist V2.",
+      "discovery_use": "Directly contributes an autonomous scientific research harness that preserves hypotheses, execution evidence, failure lessons, and verification decisions across long research trajectories.",
+      "limits": "End-to-end evidence covers ten ML research tasks, without matched tools or token budgets; YouRA also adds a fixed controller model. Automated judge configuration lacks separate human validation of overall research-quality scores, and truncation can remove supporting code and logs. Human checking estimates flagged-instance precision rather than detection recall. API nondeterminism limits replay, and broader scientific discovery remains untested. All 21 extracted pages were supplied, but the two rendered pages contain introductory text rather than result figures.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "Directly contributes an autonomous scientific research harness that preserves hypotheses, execution evidence, failure lessons, and verification decisions across long research trajectories.",
+        "pdf_sha256": "aab1ea1d9b6bfe634273c5a4341debfe6bbc3f26043e6ea9a58fc1e5a149df03",
+        "evidence_pages": [
+          1,
+          5,
+          9,
+          10
+        ]
+      }
+    },
+    "paper-0deb0ab403be3bb5": {
+      "institutions": [
+        "University of Bonn",
+        "Fraunhofer SCAI",
+        "Massachusetts Institute of Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        5,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A comparison graph connects unmeasured candidates with measured designs and nearby unmeasured candidates. A regularized Bradley-Terry objective estimates properties while keeping measured values fixed. A Fisher-information criterion combines comparison uncertainty and uncertainty in property differences to select higher-fidelity queries. Highest-ranked candidates are validated, and their measurements inform subsequent rounds.",
+      "evidence": "Retrospective screening covers 14 drug datasets with 30 seeds and three engineering datasets with ten seeds. Restricted mean time to finding five true top-ten molecules is 11.1 rounds versus 19.3 for GP-EI and 13.1 for RankRefine++. Replacing information-guided escalation with random escalation reduces 24-round discovery AUC by 7.7%. Generated-molecule optimization also improves hypervolume. A limited LLM-ranker experiment remains below simulated-oracle PRISMS but exceeds the reported oracle-based comparison methods.",
+      "discovery_use": "PRISMS directly addresses which scientific candidates to validate next, using uncertain expert comparisons to allocate scarce experiments. Its contribution connects scientific knowledge sources to iterative discovery decisions.",
+      "limits": "Most validation consists of revealing historical labels, and the main higher-fidelity ranker is a simulated 75%-accurate oracle. Estimated calendar savings are extrapolations rather than prospective laboratory outcomes. The method assumes a fixed fidelity ordering and uses local uncertainty approximations. The LLM proof of concept covers only three tasks and three seeds. No paper-specific public release was verified within the search budget.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "sci_methods",
+        "rationale": "PRISMS directly addresses which scientific candidates to validate next, using uncertain expert comparisons to allocate scarce experiments. Its contribution connects scientific knowledge sources to iterative discovery decisions.",
+        "pdf_sha256": "defaaf4e84a7c0763ff2dc9900f822ceed288987699290c571d6c0f6a2e2d51f",
+        "evidence_pages": [
+          1,
+          3,
+          5,
+          14
+        ]
+      }
+    },
+    "paper-33f13c12a6d20792": {
+      "institutions": [
+        "Monash University",
+        "University of Bristol",
+        "Dalian University of Technology",
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Oxford University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A coding agent grounds goals into object-specific actions. A lightweight engine writes deterministic transitions into a table containing object identities, geometry, presence, and discrete states. Newly observed objects extend the table. Rendered state conditions, chunk captions, and compatible memory frames condition a LoRA-fine-tuned video generator.",
+      "evidence": "On InteractionBench's 100 interaction cases, interaction, timing, and target pass rates are 0.78, 0.76, and 0.82. On 50 two-segment memory cases, state retention reaches 0.80 versus 0.68 for the strongest baseline. Removing object boxes reduces target accuracy to 0.61. Qualitative examples demonstrate registering objects absent from the initial image and interacting with them subsequently.",
+      "discovery_use": "ONEIRA provides an extensible world representation that registers newly encountered objects as actionable entities and preserves intervention outcomes. This directly supports agents exploring and acting on previously unknown world content.",
+      "limits": "The model prescribes state transitions rather than discovering physical laws. Actions remain discrete, physical realism depends on the video generator, and persistent state does not guarantee unlimited visual consistency. Evaluation relies on synthetic first frames, automated judges, and a perception-based target metric sharing the system's pipeline. Some baselines lack explicit camera-pose control, confounding revisit-image comparisons. Review used supplied sections and two rendered pages; unrendered appendix figures were not visually inspected. Official pages identify code, example weights, and example data; direct Hugging Face retrieval was unavailable.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "ONEIRA provides an extensible world representation that registers newly encountered objects as actionable entities and preserves intervention outcomes. This directly supports agents exploring and acting on previously unknown world content.",
+        "pdf_sha256": "53e0e15779f536995f48283bcb1b3058e0cb4ce6f160d1926d44adf1f2617fdd",
+        "evidence_pages": [
+          1,
+          3,
+          6,
+          10
+        ]
+      }
+    },
+    "paper-f2d49208f39c3a48": {
+      "institutions": [
+        "Alibaba Group",
+        "Kyoto University",
+        "NII LLMC",
+        "Peking University",
+        "University of California, Los Angeles",
+        "Arizona State University",
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Tsinghua University",
+        "University of the Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        5,
+        34
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Teacher diagnoses initialize a shared actor and diagnoser and a fixed error taxonomy. Step references and exact evidence quotes are checked against trajectories. Within-task outcome models estimate relative error costs, which allocate bounded penalties to diagnosed steps. The actor updates through task-level and anchor-state comparisons, while error prices are periodically refitted from recent rollouts.",
+      "evidence": "At 4B, FAULT reaches 91.0% ALFWorld success versus 80.6% for GiGPO with the same diagnosis-SFT initialization. WebShop task score reaches 88.5, although strict success trails SEED. Search-based QA reaches 43.8, below both diagnosis-SFT controls. Reported diagnostic signal coverage is 95.1%, and decisive-step MRR is 0.494 versus 0.303 for GiGPO.",
+      "discovery_use": "FAULT trains agents to localize errors, check diagnostic evidence, and learn from interaction outcomes. This is a concrete learning mechanism for improving evidence-seeking and corrective behavior, although scientific discovery itself is not evaluated.",
+      "limits": "Evidence-quote matching verifies provenance rather than semantic correctness of an error claim; fitted costs are outcome associations rather than causal error effects. Coverage measures diagnostic contrast for FAULT but optimizer advantages for baselines, so it is not a common-scale gradient comparison. Localization uses LLM judgments with one-step tolerance, not counterfactual validation. Several ablations change multiple factors, diagnostic analyses use single-seed runs, and WebShop rewards differ across methods. This was a targeted review of supplied pages, not all 47 pages. The author-listed code destination returned 404 and is omitted.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "FAULT trains agents to localize errors, check diagnostic evidence, and learn from interaction outcomes. This is a concrete learning mechanism for improving evidence-seeking and corrective behavior, although scientific discovery itself is not evaluated.",
+        "pdf_sha256": "1165bda368ad204ba33d63d7a181631fc7ef35e7ac24300e9df8048793dd66d4",
+        "evidence_pages": [
+          1,
+          4,
+          5,
+          34
+        ]
+      }
+    },
+    "paper-ab69aff2f86002f6": {
+      "institutions": [
+        "University of Oxford",
+        "King Abdullah University of Science and Technology",
+        "University of Sydney",
+        "University of Cambridge"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        6,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Shared host bridges retain existing agents, models, tools, and permissions. Four cumulative conditions compare native execution, added communication, runtime capability selection, and contracts plus verification. Verification feedback informs subsequent work without blocking transitions or discarding artifacts. Evaluation uses ResearchClawBench and an exploratory DiscoveryBench subset.",
+      "evidence": "Runtime selection achieves the highest ResearchClawBench mean in all three hosts: 12.08 for Agent Laboratory, 18.53 for EvoScientist, and 18.42 for ARK, versus native means of 5.47, 15.99, and 16.66. Adding contracts and verification lowers each mean relative to selection alone. Traces show useful corrective handoffs alongside repeated planning, synthetic-data substitution, and locally verified artifacts that leave research objectives unfinished.",
+      "discovery_use": "RAC directly studies coordination of autonomous scientific research agents, selecting subsequent work from current evidence and unresolved research obligations. Its evaluation examines research outputs and the limits of artifact verification.",
+      "limits": "All main runs use one seed, with ten tasks for two hosts and five for ARK. Budget matching is intended but not independently established across archived configurations; realized usage differs and some usage records are missing. Contracts and verification are added jointly. DiscoveryBench transfer uses a nonrandom, incomplete host-task matrix. Selected traces are illustrative, scientific computations were not independently reproduced, and bounded tasks do not establish open-ended discovery. Review used supplied body sections and two rendered pages, not visual inspection of every appendix figure.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "RAC directly studies coordination of autonomous scientific research agents, selecting subsequent work from current evidence and unresolved research obligations. Its evaluation examines research outputs and the limits of artifact verification.",
+        "pdf_sha256": "09e9af7ad0cf128afa66c39562b00f175d3a56d09454942cced76211b3e20295",
+        "evidence_pages": [
+          1,
+          2,
+          6,
+          14
+        ]
+      }
+    },
+    "paper-0b82946374e2d1ff": {
+      "institutions": [
+        "Johns Hopkins University",
+        "Nanjing University",
+        "Amazon"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        8,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An orchestrator coordinates exploration, answer construction, and adversarial verification. Immutable source history supports a graph whose selected subgraph controls difficulty. Deterministic checks validate references and quotations; model verifiers assess entailment and dependency necessity. Comparisons span software, physics, and security, followed by 4B-model SFT and GRPO.",
+      "evidence": "GRADS produces increasing graph depth and decreasing solver scores across requested difficulty bands, unlike the three tested synthesis baselines. SFT scores rise from 0.2319 to 0.3390 in physics, 0.1149 to 0.2838 in software, and 0.1414 to 0.4453 in security. Termination and tool efficiency improve substantially. Additional RL score gains are not statistically separable from SFT.",
+      "discovery_use": "GRADS constructs verified research-search tasks and training trajectories with controlled reasoning difficulty. Its concrete contribution improves agents that retrieve, connect, and verify evidence across specialized knowledge corpora.",
+      "limits": "Dependency necessity is model-judged without a human audit, and the construction graph partly validates its own difficulty definition. Individual depths are approximate and can overshoot target bands. Training sets are small, approximately 55–65 trajectories per arm, with differing token totals. Some source records are internal, and contamination is possible. Appendix prompts permit honest depth shortfalls despite stronger acceptance language in the body. No first-party release URL was verified within the search budget.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "GRADS constructs verified research-search tasks and training trajectories with controlled reasoning difficulty. Its concrete contribution improves agents that retrieve, connect, and verify evidence across specialized knowledge corpora.",
+        "pdf_sha256": "55672a6b4f57b0f6b2505cfd506ec0a7441d97df47c1b90001bf9f00ec2a078f",
+        "evidence_pages": [
+          1,
+          6,
+          8,
+          10
+        ]
+      }
+    },
+    "paper-9e2f9fe91ea38fa6": {
+      "institutions": [
+        "New York University",
+        "Stony Brook University",
+        "Salesforce AI Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Supervised initialization on 7,172 instances precedes GRPO. Each completion contains three structured idea cards sharing one set-level reward: judged impact multiplied by distance to the nearest earlier idea. Evaluation uses 1,740 instances across 16 domains, two existing benchmarks, four expert annotators, and 132 coding-agent executions.",
+      "evidence": "The no-thinking variant achieves creative utility 0.64 versus 0.38 for Claude Opus 4.8 and 0.52 for DARLING. Impact-only training collapses within-set diversity. Expert ratings are similar to Claude's; execution success at three ideas is 33% versus 27%, from small samples. Thinking improves grounding but lowers creative utility.",
+      "discovery_use": "It directly trains a scientific ideation capability: proposing multiple distinct, literature-grounded hypotheses worth investigating. Human judgments and exploratory execution checks connect the objective to research use.",
+      "limits": "Quality and diversity depend on model judges and published-paper reference ideas. Training covers English NLP papers without live retrieval. The strongest utility variant has weaker grounding, and population-level diversity remains below human proposals. Execution verdicts are agent self-reports, sometimes stronger than their evidence, rather than validated discoveries. The verified repository currently announces code, data, and models as forthcoming. Review covers the supplied body sections and selected appendices.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "It directly trains a scientific ideation capability: proposing multiple distinct, literature-grounded hypotheses worth investigating. Human judgments and exploratory execution checks connect the objective to research use.",
+        "pdf_sha256": "f02334eb5e1669d40599bbb8a9d47f366aa2cf0a744761de3133abe4095a2043",
+        "evidence_pages": [
+          1,
+          3,
+          9
+        ]
+      }
+    },
+    "paper-1cf7caf1e3962092": {
+      "institutions": [
+        "University of Michigan – Ann Arbor",
+        "Mila",
+        "Scale AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        11,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Compare 16 privileged-information configurations across three Qwen3 students and ALFWorld, AppWorld, and retail tasks. Train students against the same model conditioned on privileged information. Assess teacher utility, absolute sampled-token log-ratio magnitude, and error-step suppression relative to task- and position-matched baselines. Test leakage controls, per-task candidate selection, and combinations with GRPO.",
+      "evidence": "Detailed trajectories generally outperform compressed hints, while thinking students can be harmed by added context. Error-step contrast correlates positively with performance in all nine student–benchmark combinations, although correlations range from 0.10 to 0.94. Selection helps most when candidate quality varies; shift magnitude alone can favor failed trajectories. Strong trajectory information combined with GRPO reaches 95.13 versus 84.96 on ALFWorld, with smaller gains on the other benchmarks.",
+      "discovery_use": "The primary contribution concerns how agents learn transferable behavior from trajectories, observations, and mistake analysis. Its error-targeted screening method concretely supports experience-based improvement of agents that could perform discovery, with transfer evaluated separately from access to leaked solutions.",
+      "limits": "The students belong to one model family, and per-task selection is tested on ALFWorld with one student. Error identification relies on an automated judge. The magnitude statistic is an absolute sampled log-ratio diagnostic rather than ordinary signed KL. Reported results select the best three-checkpoint window. Static information can accelerate overfitting or interfere with later learning. Scientific discovery and open-world transfer are not evaluated. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "The primary contribution concerns how agents learn transferable behavior from trajectories, observations, and mistake analysis. Its error-targeted screening method concretely supports experience-based improvement of agents that could perform discovery, with transfer evaluated separately from access to leaked solutions.",
+        "pdf_sha256": "29dfeb10f43bfd208f65931bf7a1118e2881e8d77b5a809c20328d34b8c334e8",
+        "evidence_pages": [
+          1,
+          3,
+          11,
+          12
+        ]
+      }
+    },
+    "paper-a69e794da1fcd20e": {
+      "institutions": [
+        "University of Colorado Anschutz Medical Campus",
+        "University of Wisconsin-Madison",
+        "Harvard Medical School",
+        "Boston Children’s Hospital"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Use pretrained Jacobian Lens matrices to identify a consensus token across the last ten layers. Apply normalized positive and negative steering, sweeping magnitudes from 0.01 to 0.50 until the answer changes. Evaluate three models on five QA datasets, combine margins with behavioral uncertainty through cross-validated logistic regression, and compare knowledge-injection finetuning on target versus control entities.",
+      "evidence": "Correct answers have larger average margins, with standalone error-detection AUROCs of 55.78–75.14%. Adding margins improves self-consistency-based detection across the reported settings, but some entropy and probability combinations deteriorate, especially on MedQA. Knowledge injection raises target accuracy and margins for newly correct answers. Qwen also shows a similar aggregate margin increase on control entities, weakening a purely knowledge-specific interpretation.",
+      "discovery_use": "The paper develops an intervention-based signal for identifying unreliable factual answers and checking whether acquired knowledge becomes more stable. This directly supports knowledge verification and identifying what an agent may need to investigate, although autonomous investigation is not demonstrated.",
+      "limits": "Requires white-box access and potentially many steered generations. The estimated minimum is restricted to selected concept directions, layers, normalization, and a finite search grid. Semantic matching and automated judges can misclassify changes; appendix examples include degenerate outputs. Robustness does not establish truth, calibrated confidence, or successful discovery. Oracle answer-recovery results require correctness labels. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "sci_methods",
+        "rationale": "The paper develops an intervention-based signal for identifying unreliable factual answers and checking whether acquired knowledge becomes more stable. This directly supports knowledge verification and identifying what an agent may need to investigate, although autonomous investigation is not demonstrated.",
+        "pdf_sha256": "0674e00e75febb00c3f365b04b234d3b5f36324e3a32a4bfa68cc8aacac8d4ab",
+        "evidence_pages": [
+          1,
+          4,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-f34ad45741b405ff": {
+      "institutions": [
+        "Amazon",
+        "New York University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "First gate improvements using a paired significance test. Construct a compute-matched baseline and minimally neutralize detected shortcuts in the evolved harness, with human review of both decisions. Evaluate 25 settings spanning 11 executor models, three evolution frameworks, and math, coding, creativity, and embodied tasks. Separately test held-out transfer and validation-based selection.",
+      "evidence": "Among 21 settings with significant search gains, reported average shares are 54% detected overfitting and 14% test-time scaling; together they exceed half the gain in 14 settings. Different frameworks rediscover the same mathematical answer-option shortcut. Deterministic ALFWorld controllers can appear to transfer because simulator rules persist across splits. Coding shows more promising residual gains, but some residual-dominated harnesses still regress on held-out tasks.",
+      "discovery_use": "This is directly relevant to evaluating agent self-improvement: it tests whether evolved harnesses produce transferable capability gains after accounting for benchmark shortcuts and additional inference compute.",
+      "limits": "Attribution depends on task-specific compute matching and human judgments about shortcut removal. Implicit or entangled shortcuts can remain, so the residual is only an upper bound on generalizable improvement. Capped percentages can obscure signed raw components. Search sets are small, including 35 math and 48 coding instances, and benchmark transfer does not establish robustness under practical distribution shifts. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "This is directly relevant to evaluating agent self-improvement: it tests whether evolved harnesses produce transferable capability gains after accounting for benchmark shortcuts and additional inference compute.",
+        "pdf_sha256": "e50fea93d5e84fffe1cdef380153d3cbd23453d5bc07339fe6524aa74f5c6aef",
+        "evidence_pages": [
+          1,
+          4,
+          6,
+          9
+        ]
+      }
     }
   }
 }
