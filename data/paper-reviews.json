@@ -16955,6 +16955,41 @@
           18
         ]
       }
+    },
+    "paper-15ebd2f0c38c3b18": {
+      "institutions": [
+        "BUAA",
+        "CUHK",
+        "NTU",
+        "THU",
+        "HFUT"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        11,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A data engine constructs grounded evidence graphs and filters expert tool-use trajectories. Qwen3-VL-8B receives supervised training followed by GRPO. Rewards combine answer correctness, query quality, evidence traceability, and visual grounding. Evaluation spans seven image benchmarks, VideoDR, and two new benchmarks containing 608 questions organized by six research operations.",
+      "evidence": "Against the tool-enabled Qwen3-VL-8B baseline, gains are 20.2 points on the multi-image benchmark, 17.6 on the video benchmark, and 27.0 on VideoDR. Seven-image-benchmark average performance is 58.3 versus 56.6 for OpenSearch-VL. Adding both evidence-process rewards raises the six-benchmark average from 57.3 to 61.1 compared with answer-plus-query rewards.",
+      "discovery_use": "The contribution directly trains agents to investigate visual inputs, retrieve external evidence, and compose supported answers. Its evidence-graph supervision and process rewards explicitly target knowledge acquisition and verification.",
+      "limits": "Changing webpages and external tools affect reproducibility. Automated graph construction and model judges can introduce correlated errors; repeated-seed uncertainty and source-level train/test separation are not documented in the supplied text. Correct final answers do not guarantee faithful supporting claims: the page-32 example retains conflicting heights and adds an inaccurate antenna height. Training and multi-turn inference are costly. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "The contribution directly trains agents to investigate visual inputs, retrieve external evidence, and compose supported answers. Its evidence-graph supervision and process rewards explicitly target knowledge acquisition and verification.",
+        "pdf_sha256": "3b8b8623502feafe85ce57a48b0ee92032fe8dd3e8ceb794c9426213578d927c",
+        "evidence_pages": [
+          1,
+          3,
+          11,
+          12
+        ]
+      }
     }
   }
 }

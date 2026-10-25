@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-506-2563eb?style=flat-square" alt="506 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-507-2563eb?style=flat-square" alt="507 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-91-0f766e?style=flat-square" alt="91 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 30 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 55 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 43 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 74 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 75 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 76 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 90 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 56 |
@@ -517,6 +517,8 @@ Each work appears once under its primary contribution; see the [classification g
   Muse Glimmer team et al. · Meta Superintelligence Labs
 - <a id="paper-f2d49208f39c3a48"></a>**My FAULT: Self-Diagnosis as Credit Assignment in Self-Evolving Agentic Reinforcement Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.01161)* · [Paper](https://arxiv.org/abs/2610.01161)<br>
   Yihua Zhu et al. · Alibaba Group; Kyoto University; NII LLMC; +6 institutions
+- <a id="paper-15ebd2f0c38c3b18"></a>**OneSearch-VL: Unified Multimodal Deep Research Agent for Image and Video** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.12419)* · [Paper](https://arxiv.org/abs/2610.12419) · [Code](https://github.com/appletea233/OneSearch-VL) · [HF Model](https://huggingface.co/OneSearch-VL/OneSearch-VL-8B) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-VL-SFT-110K) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-VL-RL-10K) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-MI-Bench) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-Video-Bench)<br>
+  Hongyu Li et al. · BUAA; CUHK; NTU; +2 institutions
 - <a id="paper-75eeeb130b15e1f6"></a>**PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27628)* · [Paper](https://arxiv.org/abs/2610.27628)<br>
   Pan Wang et al. · Ant International; National University of Singapore
 - <a id="paper-1cf7caf1e3962092"></a>**Predicting Privileged Information Effectiveness for On-Policy Self-Distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22512)* · [Paper](https://arxiv.org/abs/2610.22512) · [Code](https://github.com/zkjzou/PI-OPSD)<br>
