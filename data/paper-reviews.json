@@ -19343,6 +19343,246 @@
           17
         ]
       }
+    },
+    "paper-74664ec24514d549": {
+      "institutions": [
+        "Beijing Normal University",
+        "Ke Holdings"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Combines predictions for every candidate document with residual corrections weighted by logged selection and continuation probabilities. Shrinkage controls variance; partial-identification intervals handle inaccessible documents. Evaluations include 1,200 MS2 trajectories, 216 public-agent trajectories, controlled simulations, and 4,800 paired selection–stopping interventions.",
+      "evidence": "On the main MS2 comparison, MAE falls from 0.1743 to 0.1583 and ranking sensitivity from 0.2445 to 0.1481. Public-agent results at two selections show 60.1% lower MAE and 87.2% lower ranking sensitivity than Opened Mean. At matched MAE, 10 of 28 comparisons favor CESS stability, with 18 inconclusive. Corrected-estimate contrasts poorly track directly measured selection-policy effects.",
+      "discovery_use": "Directly advances evaluation of research agents by auditing whether adaptive evidence collection distorts their conclusions. Its separation of evidence-pool estimation from causal policy attribution is relevant to knowledge verification.",
+      "limits": "The target represents a specified finite pool and aggregation rule, rather than open-web truth or report quality. Unbiasedness applies to the raw estimator under correct logged probabilities and overlap; shrinkage and clipping change that guarantee. Benefits over strong shrinkage baselines are mixed: at matched sensitivity, CESS has higher MAE in 10 of 28 comparisons. Ten-round PERSPECTRUM direction disagreement worsens relative to Opened Mean. Public-agent transfer replaces the search interface with a controlled pool. No first-party artifact release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Directly advances evaluation of research agents by auditing whether adaptive evidence collection distorts their conclusions. Its separation of evidence-pool estimation from causal policy attribution is relevant to knowledge verification.",
+        "pdf_sha256": "90ed5741e435d0080c503509c3f7f5589d77addbe20108118cc767e1eed330db",
+        "evidence_pages": [
+          1,
+          3,
+          7
+        ]
+      }
+    },
+    "paper-1ad6e160560ae715": {
+      "institutions": [
+        "Meta"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses Executable Operating Protocols, product adapters, bounded review–repair flows, and provenance-backed memory. A twelve-iteration HSTU deployment supplies incidents for ExecML: 96 hidden-oracle tasks per repository on HSTU and LitGPT. Controlled comparisons match observable inference budgets and separately test context scope at fixed runtime.",
+      "evidence": "Claude Code–Codex–Claude Code reaches 62.5% HSTU execution accuracy versus 45.8% for the strongest matched-budget single-product baseline, a paired gain of 16.7 percentage points with a 95% interval of 6.6–26.7. LitGPT shows a 12.5-point gain. The deployment reports NDCG@10 of 0.2192 versus the published 0.2098 LARGE anchor, with its largest improvement coming from a metadata feature. Current-step prompting improves late-phase accuracy by 10.4 points at fixed runtime.",
+      "discovery_use": "Contributes an explicitly evaluated harness for iterative ML research, combining hypothesis implementation, experiments, verification, retained findings, and coordination between coding-agent products.",
+      "limits": "Evidence covers two Python/PyTorch repositories with incomplete oracles and black-box products. Observable budget matching cannot match hidden provider compute. Human steering and best-checkpoint selection limit attribution of deployment gains; cross-dataset results use single runs. Memory has no on/off ablation. The plan-merge flow’s apparent advantage requires extra budget and disappears under the matched cap; its uncapped paired contrast is statistically inconclusive. No genuine architectural novelty was demonstrated, and no first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "Contributes an explicitly evaluated harness for iterative ML research, combining hypothesis implementation, experiments, verification, retained findings, and coordination between coding-agent products.",
+        "pdf_sha256": "f6cdc243e8c09b2efa24785cebb295d653b37e5b6404280b947c040931b4773c",
+        "evidence_pages": [
+          1,
+          3,
+          8
+        ]
+      }
+    },
+    "paper-2f1aa49aeba545c1": {
+      "institutions": [
+        "Vals AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Fifteen attorneys author and review 413 questions. Thirteen models use web search, case-law search, document parsing, stored-content retrieval, and final submission under a three-hour cap. All-pass grading requires every rubric criterion and valid cited sources. GPT-5.4 judging is calibrated against attorneys, and no-tool single-shot runs provide an ablation.",
+      "evidence": "The strongest tested model attains 42.9% all-pass despite 85.4% weighted pass. Reconciliation questions score 20.4% versus 29.9% without that attribute, with an adjusted penalty remaining after rubric and source-count controls. Removing tools lowers all-pass by 22.5 percentage points on average. More turns, calls, and cost do not reliably predict accuracy across models. Judge–expert task-level agreement is 86.7%.",
+      "discovery_use": "Evaluates agents conducting open-ended investigations that require locating evidence, checking source validity, reconciling conflicting knowledge, and producing verified conclusions. This is a concrete discovery-evaluation contribution beyond static domain question answering.",
+      "limits": "Restricted to objective U.S. English-language questions and a fixed model, tool, and authority snapshot. Only five questions and the harness are public; the remaining items are held out. Each model has one run per question, leaving run-to-run variance unmeasured. Model-mediated grading remains imperfect, and most adjacent leaderboard differences are not statistically distinguishable. The no-tool comparison also changes the interaction setting, so it is not a pure tool-only intervention.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Evaluates agents conducting open-ended investigations that require locating evidence, checking source validity, reconciling conflicting knowledge, and producing verified conclusions. This is a concrete discovery-evaluation contribution beyond static domain question answering.",
+        "pdf_sha256": "a7f99b089bb1ff218471ecab84557f79af3dbb607b1eb6fbb30e926133658876",
+        "evidence_pages": [
+          1,
+          2,
+          8
+        ]
+      }
+    },
+    "paper-74d382cf780e1dfd": {
+      "institutions": [
+        "Princeton University",
+        "University of Texas at Austin",
+        "Institute for Advanced Study"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        21
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Runs six agent configurations under three prompt packages, classifies intermediate discovery steps, and checks formulas against exact Berends–Giele recursion. Fixed-data symbolic-regression and ML comparisons assess approximate prediction separately. PI-and-student teams share findings while independently implementing checks; additional team structures address the previously unresolved six-point three-minus amplitude.",
+      "evidence": "Four of 18 single-agent runs recover the complete hydrotope formula, all with the true structural hint; none of six no-hint runs completes it. Both no-hint PI-plus-two-student runs succeed. Fitted comparison methods retain nonzero error under the tested settings. A new six-point three-minus expression passes 140 exact checks across 58 chambers. The observed bottleneck is combining local formulas and testing cases outside those used for construction.",
+      "discovery_use": "Directly studies scientific formula discovery through hypotheses, chosen numerical experiments, counterexamples, and independent verification. Its process analysis and new amplitude candidate provide a concrete discovery-capability contribution.",
+      "limits": "Prompt packages change both mathematical guidance and recommended tests. Configurations have only one run per condition; team comparisons are small and not compute matched, preventing causal attribution to coordination. The new-result experiment allows literature access and additional computation. Finite checks do not prove the new expression, and its arbitrary-wave-count extension remains open. Rewritten histories are author interpretations of visible records. The supplied PDF pages form a targeted review; primary-source HTML additionally supplied the omitted team-method and result sections, without exhaustive appendix or figure inspection.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "sci_methods",
+        "rationale": "Directly studies scientific formula discovery through hypotheses, chosen numerical experiments, counterexamples, and independent verification. Its process analysis and new amplitude candidate provide a concrete discovery-capability contribution.",
+        "pdf_sha256": "377db2f959a196fb4057d86ac4d485f025195f5fedaee17a29fe9ed4df9aede0",
+        "evidence_pages": [
+          1,
+          3,
+          21
+        ]
+      }
+    },
+    "paper-98c6269e3dfb0ba6": {
+      "institutions": [
+        "Shanghai Jiao Tong University",
+        "Fudan University",
+        "Shanghai Innovation Institute",
+        "Northeastern University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Derives 12 structural questions per protein and jointly trains LoRA adapters through answer-token supervision and a frozen geometry decoder connected through a shared workspace. Evaluates three independently trained adapters on ten reasoning benchmarks, with shuffled-label, copying, random-geometry, component, model-family, and scaling comparisons. Protein-specific modules are removed for general reasoning evaluation.",
+      "evidence": "General-10 increases from 45.09% to 48.33%, with positive mean changes on all ten datasets; the nine public benchmarks gain 3.14 percentage points. Answer supervision accounts for most transfer: 2.93 points without geometry versus 3.23 for the full recipe. Transfer extends across Qwen scales and InternVL but is neutral for Gemma. Geometry primarily improves local structural readouts.",
+      "discovery_use": "Provides a concrete discovery-training contribution: converting scientific structures into automatically verified supervision and testing transfer to scientific, spatial, and graph reasoning.",
+      "limits": "The evidence establishes benchmark transfer, not autonomous discovery or an identified reasoning mechanism. Geometry's incremental aggregate benefit changes sign across seeds, global folding remains poor, and scaling increases data and optimization steps together. Remote-homology isolation and novel-fold generalization remain unverified. This was a targeted review of supplied body and selected appendix pages, not all 35 pages.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "Provides a concrete discovery-training contribution: converting scientific structures into automatically verified supervision and testing transfer to scientific, spatial, and graph reasoning.",
+        "pdf_sha256": "4b785a3e3bb345a50c5aa299be4a6589c58da0a0af36d7c52a964435040d2519",
+        "evidence_pages": [
+          1,
+          6,
+          9
+        ]
+      }
+    },
+    "paper-0c850351466e0ab2": {
+      "institutions": [
+        "New York University",
+        "New York University Shanghai"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An orchestrator evaluates structured executor outputs and appends search, refinement, or answer nodes. Executors receive summaries from direct dependencies and can retrieve transcript evidence. DAGRPO uses answer-ancestor membership to attenuate off-chain rewards and penalizes invalid plans. Evaluation covers three search benchmarks, multiple backbones, architecture ablations, efficiency measurements, and three RL training seeds.",
+      "evidence": "At Qwen3-32B, DAGent scores 47.3%, 55.3%, and 65.0% on BrowseComp-Plus, GAIA, and xbench-DeepSearch. Its same-architecture Plan-then-Patch variant trails by 5.3, 4.8, and 4.0 points while consuming more tokens and time. DAGRPO adds approximately 3.0 average points over same-budget outcome-only GRPO.",
+      "discovery_use": "Directly advances research-agent investigation and verification through evidence-conditioned planning, uncertainty-triggered refinement, dependency-aware memory, and structural reinforcement learning.",
+      "limits": "Benchmarks evaluate reference-answer search rather than open-ended scientific reports or experimentally established new knowledge. Graph ancestry is a contribution proxy, not causal attribution. Live retrieval and language-model judging affect results; human calibration uses 150 examples. RL covers one 8B backbone and 21 updates, and smaller component ablations use one seed. The verified code release still lists supporting training infrastructure as forthcoming.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "Directly advances research-agent investigation and verification through evidence-conditioned planning, uncertainty-triggered refinement, dependency-aware memory, and structural reinforcement learning.",
+        "pdf_sha256": "10c37dcd8a86da158ee751b9a172d851d3eaf54bf9267997d9e15afad0ff5b41",
+        "evidence_pages": [
+          1,
+          5,
+          6
+        ]
+      }
+    },
+    "paper-50a3bf2dcda6ba17": {
+      "institutions": [
+        "Faculty of Electronic and Information Engineering, Xi’an Jiaotong University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        9,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Ranks tokens using generator-classification gradient sensitivity minus detection sensitivity. A learned scorer selects tokens for generator-directed embedding perturbations. Alternating training combines clean and perturbed real/fake classification with prediction consistency. Evaluates eight baselines on 29 held-out entries, an 18-entry family-disjoint subset, matched controls, alternative backbones, corruptions, feature-space attacks, and codec normalization.",
+      "evidence": "Mean F1 reaches 92.62%, exceeding the strongest baseline by 5.31 points. The family-disjoint subset retains a 5.85-point lead. Random perturbation and global gradient reversal produce substantially smaller improvements. Generator-only token selection slightly underperforms the clean baseline. Results vary substantially by generator, and FORGE does not win every entry.",
+      "discovery_use": "Makes an explicit open-world recognition contribution by training detectors to generalize to unseen video generators and testing shortcut suppression under distribution shift.",
+      "limits": "This is fixed binary detection under unseen-source shifts, without discovering new semantic classes or adapting online. The broad split contains generator-family overlaps; the stricter split uses a name-and-lineage screen. Real videos share one source, leaving dataset confounds possible despite limited codec controls. Eight-frame evaluation does not establish long-video generalization, and white-box attacks still reduce F1 sharply. No first-party release was located in the bounded search; the paper promises release upon acceptance.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "Makes an explicit open-world recognition contribution by training detectors to generalize to unseen video generators and testing shortcut suppression under distribution shift.",
+        "pdf_sha256": "c2f4dc2e6c33b5d919f6ed296289398493c03283db58480e899763402f4e9a9c",
+        "evidence_pages": [
+          1,
+          9,
+          16
+        ]
+      }
+    },
+    "paper-476e87c36ff94c5c": {
+      "institutions": [
+        "Carnegie Mellon University",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Freezes forecasts before outcomes across 336 states in controlled learning, Tox21, and OpenML. Compares paired point and interval losses with task-aware inference, donor controls, simple priors, delivery audits, and prespecified gates. Follow-up replays, component swaps, direct-note delivery, and known-information controls examine alternative explanations.",
+      "evidence": "Natural-explanation predictive credit remains unconfirmed. Tox21 cards reduce secondary repeat drift by 64.5%, but matched point accuracy does not reliably improve. OpenML cards widen intervals by approximately 21% without improved coverage; only 66 of 144 extracted cards contain content. Direct delivery of all notes still yields no detectable matched point-accuracy advantage. A researcher-authored mechanism control improves MAE by 2.596 percentage points.",
+      "discovery_use": "Directly evaluates scientific research agents by measuring whether experimental explanations improve prospective forecasts and distinguish useful hypotheses from repeatable narrative.",
+      "limits": "Results depend on the forecaster, intervention distribution, loss, and donor resolution. Seed donors often share effect signs, limiting alignment discrimination. Extraction failures, only 12 endpoints and 24 external tasks, and concentrated task-scale effects constrain inference. Follow-up controls reuse known outcomes under separately frozen plans, and requested model routes lack resolved returned model IDs. No public first-party artifact destination was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates scientific research agents by measuring whether experimental explanations improve prospective forecasts and distinguish useful hypotheses from repeatable narrative.",
+        "pdf_sha256": "f7771ea50ac7e8313e496d8fdc29dc746ab802b21d47bef9433fbdb56847cacb",
+        "evidence_pages": [
+          1,
+          3,
+          9
+        ]
+      }
     }
   }
 }

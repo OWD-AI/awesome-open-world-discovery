@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**100 usage profiles** · Updated **2026-10-25**
+**103 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -702,6 +702,8 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [LiveMACE: Process-Aware Evaluation of LLM Agent Capabilities in Evolving Markets](#paper-53e3f761f6a0e8c3) | Real data | Interactive simulator | Paper-described |
 | [From Retrieval to Customer Context: Evaluating Frontier-Model Systems for Voice-of-Customer Analysis](#paper-480b56b9da41924d) | Real data | Analysis + tools | Paper-described |
 | [Beyond Endpoint Performance: Process-Level Evaluation of Self-Evolving Agents](#paper-5356077cb77fa887) | Synthetic data | Interactive simulator | Paper-described |
+| [Search Shapes Conclusions: Auditing Evidence Selection Bias in Deep Research Agents](#paper-74664ec24514d549) | Real data | Finite-pool queries | Paper-described |
+| [Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](#paper-2f1aa49aeba545c1) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1577,6 +1579,52 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-74664ec24514d549"></a>
+
+<details>
+<summary>Search Shapes Conclusions: Auditing Evidence Selection Bias in Deep Research Agents — details</summary>
+
+[Work](../README.md#paper-74664ec24514d549) · [Source](https://arxiv.org/pdf/2609.39026)
+
+**Focus:** Audit whether adaptively opened evidence represents a fixed candidate pool, and separately measure selection and stopping policy effects. Feedback consists of retrieved documents and evidence scores derived from existing dataset fields. Controlled simulations supplement the recorded-data evaluations; there are no new physical measurements.
+
+**Openness:** `Agents generate adaptive queries and select documents within prespecified MS2 or PERSPECTRUM pools.`, `Public-agent transfer replaces the search interface with a fixed document pool.`, `Controlled simulations additionally generate synthetic candidate features and evidence values.`, `Public availability of the described implementation and replay logs is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** The target is the specified pool average under a chosen aggregation rule. It does not establish open-web truth or report quality. Raw-estimator unbiasedness requires correct logged probabilities and overlap; shrinkage and clipping alter that guarantee. Corrected target contrasts do not identify policy effects.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No agent-training reward is established. Evaluation uses error against the dataset-derived pool target, ranking sensitivity, direction disagreement, and paired intervention effects. Shrinkage coefficients are selected on separate tuning questions. |
+| Reset | Repeated runs reuse fixed task pools. The public-agent experiment stores a pre-intervention checkpoint and uses an exact-input response cache for computational replay. A general environment reset interface is not established. |
+| Branching | Supporting-first and opposing-first public-agent branches start from the same checkpoint and first query and share Gumbel draws. Controlled simulations also pair pools and random draws. Arbitrary branching at any trajectory state is not established. |
+
+</details>
+
+<a id="paper-2f1aa49aeba545c1"></a>
+
+<details>
+<summary>Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents — details</summary>
+
+[Work](../README.md#paper-2f1aa49aeba545c1) · [Source](https://arxiv.org/pdf/2610.00609)
+
+**Focus:** Measure complete, source-grounded legal research answers. Agents may use Tavily web search, CourtListener case-law search, page parsing, retrieval over stored documents, and final submission within three hours per question. Tool feedback supplies existing legal text; it does not involve scientific simulations or new physical measurements.
+
+**Openness:** `Fixed attorney-authored questions allow open-ended retrieval of U.S. legal authority through web and case-law tools.`, `Five questions and the agent harness are publicly released; 408 questions are held out.`, `The evaluation uses a fixed snapshot of models, tools, and legal authority.`
+
+**New physical measurements:** No
+
+**Limits:** Restricted to objective U.S. English-language questions. Each model has one run per question. Grading remains model-mediated, and the no-tool ablation also changes the interaction to single-shot answering.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No agent-training reward is established. GPT-5.4 evaluates attorney-authored binary rubric criteria after calibration against attorneys. Primary all-pass grading requires every criterion and valid cited authorities; weighted pass is secondary. Online access to grading feedback is not established. |
+| Reset | Separate question runs are described, but an explicit reset or checkpoint-restoration interface is not established. Each model is evaluated once per question. |
+| Branching | Checkpoint branching and alternative continuations from a shared saved state are not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -1613,6 +1661,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [AgentTime: Can Agents Estimate and Control Their Own Runtime?](#paper-a13bbb297eb54c7e) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Reward Hacking Challenges Oversight of Autonomous Research Agents](#paper-3e1c96441442a7d4) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [CompMat-Bench: Benchmarking AI Agents for Computational Materials Science](#paper-721958fe0d5a8c2d) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [Predictive Credit: Measuring What Scientific Explanations Add to Experimental Forecasts](#paper-476e87c36ff94c5c) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -2209,6 +2258,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Agent training or a training reward is not established. Evaluation applies hidden fixed rules after each run: a task scores 1 only if every check passes. Checks cover effective input settings, equivalent structures and numerical agreement with reproduced references; default relative tolerance is 10%. Workflow checks assess final quantities. During execution, agents receive printed computation output, including diagnostics, rather than grader feedback (pages 4–6 and 18). |
 | Reset | Each run starts a new session in an isolated container. Repeated independent attempts are reported. An agent-accessible reset within a run is not established (pages 6 and 18). |
 | Branching | An agent-accessible checkpoint, state-cloning or trajectory-branching interface is not established. The persistent Python kernel supports sequential code execution, file operations and shell tools within a run (page 18). |
+
+</details>
+
+<a id="paper-476e87c36ff94c5c"></a>
+
+<details>
+<summary>Predictive Credit: Measuring What Scientific Explanations Add to Experimental Forecasts — details</summary>
+
+[Work](../README.md#paper-476e87c36ff94c5c) · [Source](https://arxiv.org/pdf/2610.00314)
+
+**Focus:** Measure whether scientific explanations improve forecasts of executed model changes. Outcomes come from computational interventions on synthetic learning tasks, existing Tox21 assay-activity data, and existing OpenML tabular datasets. Tox21 does not involve new molecular assays or other new physical measurements.
+
+**Openness:** `Forecasters receive fixed public parent states, interventions, and assigned explanation contexts in tool-free calls.`, `Controlled v5 proposes interventions from a public catalog; Tox21 and OpenML interventions are assigned.`, `Prospective forecasts are frozen before held-out computational outcomes are revealed.`, `Follow-up studies reuse known outcomes under separately frozen call plans.`, `A public artifact destination is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** Natural-explanation predictive credit remains unconfirmed. Results depend on the forecaster, loss, task distribution, and donor resolution. Extraction failures limit delivered content; external inference covers 12 endpoints and 24 tasks. Requested model routes lack resolved returned model IDs. Post-outcome controls are distinct from prospective studies.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No forecaster policy-training reward is established. Evaluation scores forecasts against executed child-minus-parent outcomes using point MAE, direction accuracy, coverage, interval width, and a proper central-80-percent interval score. Repeat drift, delivery, integrity, donor alignment, and prespecified gates provide additional checks. Underlying experiments fit models with assigned feature, objective, regularization, or budget changes. |
+| Reset | Frozen states, seeds, data splits, cards, and outcomes support repeated forecast calls and replay comparisons. An interactive environment reset or checkpoint-restoration API is not established. |
+| Branching | Description, matched, and donor contexts share each state, intervention, and outcome; component swaps and paired mechanism controls are also tested. Arbitrary agent-controlled branching of experimental trajectories is not established. |
 
 </details>
 

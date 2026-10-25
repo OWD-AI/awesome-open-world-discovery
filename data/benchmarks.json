@@ -2241,6 +2241,78 @@
       "name": "Science Utopia? Closed-Loop LLM Simulation of Academic Research Ecosystems",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.01257"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "finite-pool-query",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents generate adaptive queries and select documents within prespecified MS2 or PERSPECTRUM pools.",
+        "Public-agent transfer replaces the search interface with a fixed document pool.",
+        "Controlled simulations additionally generate synthetic candidate features and evidence values.",
+        "Public availability of the described implementation and replay logs is not established by the supplied pages."
+      ],
+      "focus": "Audit whether adaptively opened evidence represents a fixed candidate pool, and separately measure selection and stopping policy effects. Feedback consists of retrieved documents and evidence scores derived from existing dataset fields. Controlled simulations supplement the recorded-data evaluations; there are no new physical measurements.",
+      "limits": "The target is the specified pool average under a chosen aggregation rule. It does not establish open-web truth or report quality. Raw-estimator unbiasedness requires correct logged probabilities and overlap; shrinkage and clipping alter that guarantee. Corrected target contrasts do not identify policy effects.",
+      "training": {
+        "reward": "No agent-training reward is established. Evaluation uses error against the dataset-derived pool target, ranking sensitivity, direction disagreement, and paired intervention effects. Shrinkage coefficients are selected on separate tuning questions.",
+        "reset": "Repeated runs reuse fixed task pools. The public-agent experiment stores a pre-intervention checkpoint and uses an exact-input response cache for computational replay. A general environment reset interface is not established.",
+        "branching": "Supporting-first and opposing-first public-agent branches start from the same checkpoint and first query and share Gumbel draws. Controlled simulations also pair pools and random draws. Arbitrary branching at any trajectory state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-74664ec24514d549",
+      "resource_id": "paper-74664ec24514d549",
+      "name": "Search Shapes Conclusions: Auditing Evidence Selection Bias in Deep Research Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.39026"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed attorney-authored questions allow open-ended retrieval of U.S. legal authority through web and case-law tools.",
+        "Five questions and the agent harness are publicly released; 408 questions are held out.",
+        "The evaluation uses a fixed snapshot of models, tools, and legal authority."
+      ],
+      "focus": "Measure complete, source-grounded legal research answers. Agents may use Tavily web search, CourtListener case-law search, page parsing, retrieval over stored documents, and final submission within three hours per question. Tool feedback supplies existing legal text; it does not involve scientific simulations or new physical measurements.",
+      "limits": "Restricted to objective U.S. English-language questions. Each model has one run per question. Grading remains model-mediated, and the no-tool ablation also changes the interaction to single-shot answering.",
+      "training": {
+        "reward": "No agent-training reward is established. GPT-5.4 evaluates attorney-authored binary rubric criteria after calibration against attorneys. Primary all-pass grading requires every criterion and valid cited authorities; weighted pass is secondary. Online access to grading feedback is not established.",
+        "reset": "Separate question runs are described, but an explicit reset or checkpoint-restoration interface is not established. Each model is evaluated once per question.",
+        "branching": "Checkpoint branching and alternative continuations from a shared saved state are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-2f1aa49aeba545c1",
+      "resource_id": "paper-2f1aa49aeba545c1",
+      "name": "Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.00609"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Forecasters receive fixed public parent states, interventions, and assigned explanation contexts in tool-free calls.",
+        "Controlled v5 proposes interventions from a public catalog; Tox21 and OpenML interventions are assigned.",
+        "Prospective forecasts are frozen before held-out computational outcomes are revealed.",
+        "Follow-up studies reuse known outcomes under separately frozen call plans.",
+        "A public artifact destination is not established by the supplied pages."
+      ],
+      "focus": "Measure whether scientific explanations improve forecasts of executed model changes. Outcomes come from computational interventions on synthetic learning tasks, existing Tox21 assay-activity data, and existing OpenML tabular datasets. Tox21 does not involve new molecular assays or other new physical measurements.",
+      "limits": "Natural-explanation predictive credit remains unconfirmed. Results depend on the forecaster, loss, task distribution, and donor resolution. Extraction failures limit delivered content; external inference covers 12 endpoints and 24 tasks. Requested model routes lack resolved returned model IDs. Post-outcome controls are distinct from prospective studies.",
+      "training": {
+        "reward": "No forecaster policy-training reward is established. Evaluation scores forecasts against executed child-minus-parent outcomes using point MAE, direction accuracy, coverage, interval width, and a proper central-80-percent interval score. Repeat drift, delivery, integrity, donor alignment, and prespecified gates provide additional checks. Underlying experiments fit models with assigned feature, objective, regularization, or budget changes.",
+        "reset": "Frozen states, seeds, data splits, cards, and outcomes support repeated forecast calls and replay comparisons. An interactive environment reset or checkpoint-restoration API is not established.",
+        "branching": "Description, matched, and donor contexts share each state, intervention, and outcome; component swaps and paired mechanism controls are also tested. Arbitrary agent-controlled branching of experimental trajectories is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-476e87c36ff94c5c",
+      "resource_id": "paper-476e87c36ff94c5c",
+      "name": "Predictive Credit: Measuring What Scientific Explanations Add to Experimental Forecasts",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.00314"
     }
   ]
 }
