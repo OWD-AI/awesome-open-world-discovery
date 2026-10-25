@@ -2313,6 +2313,72 @@
       "name": "Predictive Credit: Measuring What Scientific Explanations Add to Experimental Forecasts",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.00314"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed benchmark questions, answers, unit tests, and translation references.",
+        "Generated reasoning, Python functions, and translations within fixed tasks."
+      ],
+      "focus": "Sensitivity of fixed-task LLM evaluation to system-prompt dates. HumanEval feedback comes from executing generated Python against unit tests; other tasks use answer correctness, calibration, or reference-based translation metrics.",
+      "limits": "This is fixed-task evaluation rather than an environment for agent-directed research experiments. No scientific simulator or new physical measurements are described. Dates use one format, position, and year; proprietary-model testing covers one week.",
+      "training": {
+        "reward": "Training rewards are not established; no model training is reported. Evaluators are MCQA accuracy and ECE, GSM8K final-number accuracy, HumanEval unit-test pass@1, and WMT BLEU and chrF.",
+        "reset": "Repeated inference runs are documented, with identical outputs at a fixed date under the reported deterministic settings. A general environment reset interface is not established.",
+        "branching": "Independent date and configuration comparisons are supported by the experimental protocol. Restoring or branching from an intermediate execution state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-64e370b96218d353",
+      "resource_id": "paper-64e370b96218d353",
+      "name": "Dating the Model: Hidden Dates in System Prompts Affect LLM Evaluation",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.36931"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed scientific objectives and verified reference solutions from 620 existing problems.",
+        "Constructed multi-turn inputs with agent responses and applicable tool use."
+      ],
+      "focus": "Robustness of scientific problem solving across 3–13 dependent turns under generated scientific perturbations. Feedback and evaluation use existing reference solutions and human–LLM judgments, with computation or tool use retained where applicable.",
+      "limits": "Live execution means fresh agent interactions, not new physical measurements. The benchmark constructs tasks from solved problems; it does not establish an environment for open research experiments. Specific available tools and simulator interfaces are not established in the supplied pages.",
+      "training": {
+        "reward": "Training rewards are not established; the study evaluates existing models. TACC requires a correct final answer and scientifically valid process. IC, TP, and RV receive turn-level judgments from Claude Opus 5 and human assessment; disagreement counts as incorrect.",
+        "reset": "Clean and perturbed instances run independently under matched settings, with three fresh runs per condition. Arbitrary intermediate-state restoration is not established.",
+        "branching": "Clean and perturbed trajectories are independently generated and can diverge after perturbation. Snapshot-based branching from a shared intermediate state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-4c7b45ef0c27315b",
+      "resource_id": "paper-4c7b45ef0c27315b",
+      "name": "The Marathon of Scientific Reasoning: Robustness of Scientific Agents to Perturbations in Multi-Turn Interactions",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.34537"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Open-ended financial research responses evaluated against query-specific rubrics.",
+        "Web search, SEC filing search, and code execution under information cutoffs and step budgets."
+      ],
+      "focus": "Rubric generation and evaluation for financial research agents using sourced financial evidence and executed calculations. Evaluation includes published response traces, newly generated responses, expert rubrics, and human comparisons.",
+      "limits": "Financial records and executed calculations do not constitute new physical measurements. This is financial analysis and report evaluation rather than an environment for executed scientific research experiments. Generated rubric scores do not establish expert correctness or intended interpretation.",
+      "training": {
+        "reward": "Generated rubrics are explicitly not studied as training rewards. Evaluation uses point-weighted criterion pass shares. Criterion decisions use a fixed three-judge majority; benchmark solver scores average three judges outside the solver's family.",
+        "reset": "Rubric-generation failures can trigger human restarts from the failed stage while retaining completed stages, subject to the same validation gates. Roles use isolated containers. General solver-state reset or intermediate checkpoint restoration is not established.",
+        "branching": "Separate writer, reviewer, and confirmation sessions are documented. Agent-controlled branching from saved execution states is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-8daca2e781dd8746",
+      "resource_id": "paper-8daca2e781dd8746",
+      "name": "FinAutoRubric: Expert-Guided Automatic Rubric Generation for Evaluating Financial Research Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.35744"
     }
   ]
 }

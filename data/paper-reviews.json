@@ -19583,6 +19583,332 @@
           9
         ]
       }
+    },
+    "paper-64e370b96218d353": {
+      "institutions": [
+        "Johannes Gutenberg University Mainz",
+        "Universidad Iberoamericana",
+        "University of Colorado Boulder"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Sweeps system-prompt dates across 2024 for nine open models while holding other settings fixed. Evaluates answer probabilities, mathematical reasoning, execution-graded code, and translation. Adds a weeklong GPT-5.1 API study, prompting comparisons, and system-level variability controls.",
+      "evidence": "Reported worst-to-best differences reach 6.06 percentage points on multiple-choice QA, 14.42 on GSM8K, 7.32 on HumanEval, and 2.84 BLEU. Rankings change without a consistently favorable date. Five-shot prompting leaves sensitivity; chain-of-thought amplifies it in the tested Llama configuration.",
+      "discovery_use": "Provides an evaluation-control contribution relevant to measuring discovery reasoning and executable solutions: changing hidden date metadata can alter scores and model rankings. Its connection is methodological; research agents themselves are not evaluated.",
+      "limits": "Date format, position, and year are fixed. Hardware comparisons and chain-of-thought analysis have narrower model coverage. Identical same-day API repeats do not exclude other server changes between days. Questions are screened for temporal dependence by an LLM. This is evaluation research, without demonstrated effects on autonomous discovery trajectories. All supplied text pages were reviewed; only the two supplied pages were visually inspected. No first-party release was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Provides an evaluation-control contribution relevant to measuring discovery reasoning and executable solutions: changing hidden date metadata can alter scores and model rankings. Its connection is methodological; research agents themselves are not evaluated.",
+        "pdf_sha256": "674f9eee44a3a22b994b3877c8a6f58f33acdc76f3480afb16b2954f98e240d2",
+        "evidence_pages": [
+          1,
+          2,
+          8
+        ]
+      }
+    },
+    "paper-07001ea82b328e28": {
+      "institutions": [
+        "Google Cloud AI Research",
+        "University of Wisconsin-Madison"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Clusters and ranks ideas using accumulated evidence, selects exploration and exploitation actions, dispatches solver branches, audits task validity and idea alignment, and adjusts parallelism under fixed budgets. Compares research systems on ten AutoLab tasks using a common Gemini backbone and three independent runs.",
+      "evidence": "Average scores are 67.0 versus ScientistOne's 65.4 on system optimization and 55.8 versus 50.9 on model development and CUDA. Flash Attention results support the reported speed advantage and component ablations. AIM does not win every task: AdaEvolve substantially outperforms it on Data Select IFEval.",
+      "discovery_use": "Directly contributes a research-agent system for selecting investigations, learning from experimental evidence, and verifying that implementations match the ideas credited with their results.",
+      "limits": "Evidence concerns bounded engineering benchmarks and primarily one backbone. Component ablations are concentrated on Flash Attention. Some baselines lack task results. Theory assumes faithful implementation and exchangeable competitive directions; two-dimensional embedding hulls are only coverage proxies. Supplied pages 1–16 support a targeted body review, without exhaustive appendix inspection. The author-listed project is verified by the supplied HTTP check; the web reader could not fetch it, and no separate code release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "Directly contributes a research-agent system for selecting investigations, learning from experimental evidence, and verifying that implementations match the ideas credited with their results.",
+        "pdf_sha256": "4d2eb117e82ebc2f47aecb0971295bb39edd69081473d394d87fd9e923f638b1",
+        "evidence_pages": [
+          1,
+          7,
+          14
+        ]
+      }
+    },
+    "paper-4c7b45ef0c27315b": {
+      "institutions": [
+        "Xi’an Jiaotong University",
+        "Inria",
+        "Agency for Science, Technology and Research (A*STAR)",
+        "Zhejiang Key Laboratory of Artificial Intelligence of Things (AIoT) Network and Data Security"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Converts 620 verified problems into 3–13-turn tasks and applies 13 perturbation types across four reasoning stages. Evaluates eight models with three fresh runs per condition. Uses task success plus turn-level information correctness, progression, and reasoning validity, combining blinded LLM and human judgments.",
+      "evidence": "Reasoning perturbations produce a reported average 50.69-percentage-point task-success decrease. Evidence perturbations reduce success by 21.73 points while progression drops only 1.23, exposing continued work with unreliable content. Among failures propagating beyond onset, 82.9% persist and 17.1% recover. Higher clean performance does not consistently imply robustness.",
+      "discovery_use": "Directly evaluates scientific agents' ability to preserve valid evidence and reasoning across dependent interactions, including failure propagation and recovery that final-answer evaluation can miss.",
+      "limits": "Tasks are constructed from existing solved problems rather than open scientific investigations. Perturbation applicability changes the evaluated subsets. Success requires both a correct answer and valid process, so it is not ordinary answer accuracy. Conservative human–LLM agreement scoring and use of an evaluated model as judge may affect comparisons. No explicit limitations section was supplied. Review covers the supplied body and selected appendix pages, not all 34 pages. No first-party release was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates scientific agents' ability to preserve valid evidence and reasoning across dependent interactions, including failure propagation and recovery that final-answer evaluation can miss.",
+        "pdf_sha256": "8cfc0944613365779cb0dff1b2c29289c3d89da86bf7a27cb7bf080e1118a5e8",
+        "evidence_pages": [
+          1,
+          7,
+          9
+        ]
+      }
+    },
+    "paper-e943a5c4fbfc9794": {
+      "institutions": [
+        "Department of Physics, University of Puerto Rico"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Records predictions and stopping criteria in git before pilots, compares physics-inspired constructions against conventional controls, and catalogs abandoned directions with lessons. Uses frozen-weight decompositions, attention-decay fits, perplexity comparisons, and nominal three-seed significance gates.",
+      "evidence": "All five mappings are shelved, including one literature pre-emption. Wannier sparsity is indistinguishable from controls; tight-binding truncation raises perplexity by 96%; per-row tensor trains inflate storage. Padding correction changes median-layer fit winners and reduces the previously positive cross-paper correlation from 0.523 to 0.0472. The enforcement hook was designed but was not wired.",
+      "discovery_use": "Its explicit methodological contribution concerns autonomous research verification: preregistered predictions, baseline-controlled pilots, stopping rules, and retained negative results. This connection extends beyond the particular compression application.",
+      "limits": "Internal inconsistencies remain: prose retains earlier power-law and passing-correlation claims despite corrected tables and summaries. Masked fits use four documents and a different distance window, preventing a like-for-like comparison. Attention conclusions principally concern two small checkpoints; rank tests reach larger models. RoPE incompatibility, protocol deviations, limited corpora, and timestamp trust constrain interpretation. The protocol is relevant, but its effectiveness is not established by a controlled research-agent comparison. This was a targeted review of supplied pages; no first-party release destination was verified despite the data-release claim.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "sci_methods",
+        "rationale": "Its explicit methodological contribution concerns autonomous research verification: preregistered predictions, baseline-controlled pilots, stopping rules, and retained negative results. This connection extends beyond the particular compression application.",
+        "pdf_sha256": "30a8a69ea6d7986cc0d1aa6b58ada6175f14e41ccc5efd5e98c04e6c6d0535c2",
+        "evidence_pages": [
+          1,
+          3,
+          4
+        ]
+      }
+    },
+    "paper-966a7ee9e76d9427": {
+      "institutions": [
+        "Skolkovo Institute of Science and Technology (Skoltech)",
+        "Risk Management, Sber",
+        "The Institute for Information Transmission Problems (IITP RAS)"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        13,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Reuses a Bayesian posterior over discrete known classes and continuous unknown identities. Combines false-acceptance, misidentification, false-rejection, and rejection non-specificity components using four nonnegative validation-tuned weights. Evaluates nine image, audio, and text benchmarks against calibrated HolUE, confidence scores, supervised detectors, and component ablations.",
+      "evidence": "Against the main baselines, tuned MPRisk is best or tied-best at all 12 image/audio operating points. Selected bootstrap comparisons favor it over HolUE on five benchmarks, while Yahoo Answers clearly favors HolUE. Most improvement over the equal-weight score comes from tuning the three ordinary decision risks; the continuous-unknown penalty adds smaller, selective gains. Joint KL and risk features can improve results further.",
+      "discovery_use": "Directly advances reliability assessment for open-world recognition by distinguishing risks associated with accepting known identities and rejecting unknowns. Its contribution concerns uncertainty in a fixed recognition system, rather than incremental discovery of new classes.",
+      "limits": "Requires labeled validation data matched to the operating point and inherits posterior and embedding-quality assumptions. Gallery shift and validation/test cost mismatch were not evaluated. Calibration is mixed. Some bootstrap rows labeled without the non-specificity component use untuned scores, so they do not isolate that component's benefit. No first-party release was verified in the bounded search. All 20 extracted pages were supplied; visual inspection covered only pages 1 and 2.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "foundations",
+        "rationale": "Directly advances reliability assessment for open-world recognition by distinguishing risks associated with accepting known identities and rejecting unknowns. Its contribution concerns uncertainty in a fixed recognition system, rather than incremental discovery of new classes.",
+        "pdf_sha256": "4516143208f12066f6c874147e284a7d999a8706874f3bf11ac8cfa4abe4bd03",
+        "evidence_pages": [
+          1,
+          8,
+          13,
+          18
+        ]
+      }
+    },
+    "paper-8daca2e781dd8746": {
+      "institutions": [
+        "LinqAlpha",
+        "UNIST",
+        "MassMutual Life Insurance",
+        "AllianceBernstein",
+        "Wolfe Research",
+        "Google",
+        "BlackRock",
+        "J.P. Morgan Chase",
+        "State Street Corporation",
+        "Fidelity Investments",
+        "Blackstone",
+        "University of Florida"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Builds an expert-screened Task Bank, separates task requirements from instance context, and generates rubrics through cross-model writer–reviewer loops. Reviewers reopen sources and rederive values; code enforces cutoff, coverage, scoring, and acceptance contracts. Tests expert-score agreement, expected-value coverage, analyst preferences, human-grading agreement, and component removals.",
+      "evidence": "Expected-value coverage reaches 60.8%, 40.7%, and 80.8% across three expert benchmarks, exceeding all evaluated baselines. Score agreement leads on BigFinanceBench but is generally within uncertainty of the strongest comparator elsewhere. Three internal analysts prefer its rubrics in blinded comparisons. Human-ranking accuracy reaches 84.6% on the small ProfBench finance sample, with an uncertain lead. The proposed benchmark spans 78 tasks and eight asset classes.",
+      "discovery_use": "Contributes an evaluation protocol for open-ended research agents that independently researches and verifies expected values, respects information cutoffs, and makes expert evaluation standards inspectable.",
+      "limits": "Long research and review loops cost more than short baseline pipelines. Human evaluation is small and uses internal analysts. Removing contextualization also removes validation and composition review, confounding attribution. Generated benchmark scores do not certify expert correctness or intended interpretation; solver-family alignment and unequal effective tool budgets matter. Calibration to expert point scales, consistency, and customization remain insufficiently tested. Release language is inconsistent with the promise of future code/data release, and no first-party artifact was verified. Review covered supplied pages 1–16 of 35, not the remaining appendices; only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Contributes an evaluation protocol for open-ended research agents that independently researches and verifies expected values, respects information cutoffs, and makes expert evaluation standards inspectable.",
+        "pdf_sha256": "398aa25c5e8cade5d0f8b0d096a488df1e142b06d681825b276e689dadbaeb9f",
+        "evidence_pages": [
+          1,
+          5,
+          7,
+          10
+        ]
+      }
+    },
+    "paper-8e34a7493e3c3928": {
+      "institutions": [
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences",
+        "State Key Laboratory of Multimodal Artificial Intelligence Systems (MAIS), Institute of Automation, Chinese Academy of Sciences",
+        "Alibaba Token Hub, Alibaba Group",
+        "Peking University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An LLM assesses webpage evidence against each rubric and its accumulated support history. Search turns receive credit attributed from later page visits plus separate snippet credit. Group-normalized process advantages combine with GRPO outcome advantages. A Qwen3-8B agent is trained against a matched outcome-only baseline and evaluated on four research benchmarks.",
+      "evidence": "Achieves a four-benchmark average of 61.7 versus 58.2 for matched GRPO, outperforming evaluated open research baselines across reported metrics. Removing evidence histories reduces the three-benchmark average by 3.0 points. Under an eight-turn budget, report quality exceeds GRPO’s best observed score at twelve turns. Recorded training time falls from 75.14 to 63.96 hours despite additional scoring, under the measured asynchronous setup.",
+      "discovery_use": "Directly trains research agents to acquire additional evidence efficiently, assigning intermediate discovery credit without requiring a canonical final answer.",
+      "limits": "Evidence efficiency uses a proxy closely related to the training credit mechanism, rather than independent factual verification. Results center on one trained backbone, one report per evaluation setting, and LLM judgments; repeated-training uncertainty is not established. Snippet credit does not consult visit histories. Training-time savings depend on external scoring capacity and overlap, and do not establish lower total compute or monetary cost. Some proprietary baseline results come from other reports. No first-party release was verified. All 24 extracted pages were supplied; only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "Directly trains research agents to acquire additional evidence efficiently, assigning intermediate discovery credit without requiring a canonical final answer.",
+        "pdf_sha256": "0f4262abe9e53aae64c26ea3c74d18f7dc44b52c7d30b275487c6ed50ed8708b",
+        "evidence_pages": [
+          1,
+          4,
+          7,
+          8
+        ]
+      }
+    },
+    "paper-dc6f0c55ed5292e7": {
+      "institutions": [
+        "State Key Laboratory of Novel Software Technology, Nanjing University",
+        "School of Artificial Intelligence, Nanjing University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The agent selects, reconfigures, or restarts full-space, sparse, embedding, additive, and local optimizers, and chooses evaluation-block lengths. Shared observations persist across strategies. Experiments use four anonymized synthetic functions and eight applied tasks, generally with 100 evaluations and ten seeds, plus scheduler, diagnostic, metadata, model, and control-frequency studies.",
+      "evidence": "Remains competitive with strong numerical methods on all four synthetic tasks and beats the tested heuristic and bandit schedulers on three. On applied tasks, it beats the strongest fixed numerical comparator by mean objective on six of eight and other LLM systems on seven of eight, yielding five overall mean wins. Structural diagnostics change strategy allocation but show no clear aggregate performance benefit. Adaptive blocks reduce inference relative to per-evaluation deliberation.",
+      "discovery_use": "Implements an explicit hypothesis–experiment–feedback loop in which an agent selects and revises search assumptions for unknown objectives while numerical tools execute bounded experiments.",
+      "limits": "Working hypotheses do not establish recovery of true structure; interaction diagnostics are unreliable. Metadata effects combine semantic initialization with later strategy control. Chip and molecular margins are small relative to seed variation, and control-task outcomes can be highly variable. Simpler portfolio controllers were compared only on synthetic tasks. HERA has the highest total-token use among compared agentic systems; caching and fewer requests do not establish lowest cost. Code is reported in supplementary material, but no public first-party release URL was verified. All 24 extracted pages were supplied; only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "sci_methods",
+        "rationale": "Implements an explicit hypothesis–experiment–feedback loop in which an agent selects and revises search assumptions for unknown objectives while numerical tools execute bounded experiments.",
+        "pdf_sha256": "ea37c8be6c2ba99840ddb821f0da0355f102c38b19e4dc427f9aa5db84b08d2f",
+        "evidence_pages": [
+          1,
+          4,
+          9,
+          10
+        ]
+      }
+    },
+    "paper-4cfad5ee09b0c528": {
+      "institutions": [
+        "ÉTS Montréal, Canada"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Confidence-weighted, fixed zero-shot pseudo-labels supervise image-encoder LayerNorm adaptation on an initial buffer. The encoder then freezes. Known classes receive visual prototypes; spherical k-means++ initializes novel prototypes. Cosine assignment and separate prototype updates handle subsequent batches. Evaluation covers five datasets, seven adapted baselines, component ablations, and estimated novel-class counts.",
+      "evidence": "Reported All clustering accuracy reaches 56.31%, 29.11%, and 22.20% on CIFAR-10-C, CIFAR-100-C, and ImageNet-C, respectively. DomainNet averages 46.89% versus 22.56% for the strongest baseline. Ablations support both feature realignment and visual known-class prototypes. Estimated-count evaluation retains first place, although ImageNet-C accuracy falls to 17.64%. DomainNet streaming takes 76 ms per batch after a one-time 30-second GPU warmup.",
+      "discovery_use": "Directly advances open-world recognition by jointly adapting to distribution shift, recognizing known classes, and grouping unknown samples into novel categories without labeled deployment data.",
+      "limits": "Main comparisons supply the true novel-class count despite the task's unknown-count definition. Estimation substantially undercounts ImageNet-C classes. Each domain or corruption forms a separate stream; sustained drift and newly arriving categories are not established. Results depend on pretrained representations, initial pseudo-labels, adapted baseline implementations, and full-stream Hungarian matching. Discovery produces clusters rather than semantic names. Only pages 1–2 were visually inspected. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "adaptation",
+        "rationale": "Directly advances open-world recognition by jointly adapting to distribution shift, recognizing known classes, and grouping unknown samples into novel categories without labeled deployment data.",
+        "pdf_sha256": "648f4378779bbc00605c8b69c6007aeca28b9e13129bd2089ae3e7743ddb6a14",
+        "evidence_pages": [
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    "paper-b489367d0862d8cb": {
+      "institutions": [
+        "Fudan University",
+        "Shanghai Innovation Institute",
+        "University of Edinburgh",
+        "Chinese University of Hong Kong",
+        "Huazhong University of Science and Technology",
+        "Vivo AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Multi-agent demonstrations initialize a Qwen3-4B policy. Reinforcement learning independently normalizes trajectory, execution-phase, and step rewards before combining advantages. Capability slots guide parallel retrieval, while dependency DAGs schedule execution. Training uses ToolEnv, comprising 50,011 interfaces, a learned response simulator, validation rules, and caching. Evaluation uses ToolBench and API-Bank environments rather than ToolEnv.",
+      "evidence": "The main Pass@2 table reports 59.9% average ToolBench success versus 55.5% for the strongest baseline; API-Bank success ties the best at 24%. Gains concentrate on multi-tool tasks. Pass@1 ablations improve ToolBench success from 31.90% after supervised training to 49.66% after the proposed RL. Removing graph rewards or outcome gating reduces success. Reported interaction cost averages roughly 3.7 turns per task.",
+      "discovery_use": "Learns an explicit discovery capability: identifying missing tool capabilities, searching for them during interaction, and revising execution when evidence reveals gaps. This provides a concrete connection beyond generic tool invocation.",
+      "limits": "Training tests only a 4B policy and relies on simulated responses, LLM-generated dependency labels, and LLM rewards. Judge agreement is checked on only 100 trajectories. API-Bank has 50 tasks. Figure 1 and ablations use Pass@1, while Table 1 uses Pass@2. Qwen baselines disable thinking, and DeepAgent disables its auxiliary model. Tool discovery is evaluated within fixed benchmark inventories; autonomous scientific discovery is untested. Released dataset counts differ from the PDF, requiring version reconciliation. Only pages 1–2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "Learns an explicit discovery capability: identifying missing tool capabilities, searching for them during interaction, and revising execution when evidence reveals gaps. This provides a concrete connection beyond generic tool invocation.",
+        "pdf_sha256": "f409c64466fe953ee6e617f608d08a56c83f0a6b6959dae18ae3613b0bcbeb6f",
+        "evidence_pages": [
+          1,
+          3,
+          10
+        ]
+      }
     }
   }
 }

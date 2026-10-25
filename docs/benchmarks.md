@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**103 usage profiles** · Updated **2026-10-25**
+**106 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -704,6 +704,9 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Beyond Endpoint Performance: Process-Level Evaluation of Self-Evolving Agents](#paper-5356077cb77fa887) | Synthetic data | Interactive simulator | Paper-described |
 | [Search Shapes Conclusions: Auditing Evidence Selection Bias in Deep Research Agents](#paper-74664ec24514d549) | Real data | Finite-pool queries | Paper-described |
 | [Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](#paper-2f1aa49aeba545c1) | Real data | Analysis + tools | Paper-described |
+| [Dating the Model: Hidden Dates in System Prompts Affect LLM Evaluation](#paper-64e370b96218d353) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [The Marathon of Scientific Reasoning: Robustness of Scientific Agents to Perturbations in Multi-Turn Interactions](#paper-4c7b45ef0c27315b) | Synthetic data | Analysis + tools | Paper-described |
+| [FinAutoRubric: Expert-Guided Automatic Rubric Generation for Evaluating Financial Research Agents](#paper-8daca2e781dd8746) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1622,6 +1625,75 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | No agent-training reward is established. GPT-5.4 evaluates attorney-authored binary rubric criteria after calibration against attorneys. Primary all-pass grading requires every criterion and valid cited authorities; weighted pass is secondary. Online access to grading feedback is not established. |
 | Reset | Separate question runs are described, but an explicit reset or checkpoint-restoration interface is not established. Each model is evaluated once per question. |
 | Branching | Checkpoint branching and alternative continuations from a shared saved state are not established. |
+
+</details>
+
+<a id="paper-64e370b96218d353"></a>
+
+<details>
+<summary>Dating the Model: Hidden Dates in System Prompts Affect LLM Evaluation — details</summary>
+
+[Work](../README.md#paper-64e370b96218d353) · [Source](https://arxiv.org/pdf/2609.36931)
+
+**Focus:** Sensitivity of fixed-task LLM evaluation to system-prompt dates. HumanEval feedback comes from executing generated Python against unit tests; other tasks use answer correctness, calibration, or reference-based translation metrics.
+
+**Openness:** `Fixed benchmark questions, answers, unit tests, and translation references.`, `Generated reasoning, Python functions, and translations within fixed tasks.`
+
+**New physical measurements:** No
+
+**Limits:** This is fixed-task evaluation rather than an environment for agent-directed research experiments. No scientific simulator or new physical measurements are described. Dates use one format, position, and year; proprietary-model testing covers one week.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Training rewards are not established; no model training is reported. Evaluators are MCQA accuracy and ECE, GSM8K final-number accuracy, HumanEval unit-test pass@1, and WMT BLEU and chrF. |
+| Reset | Repeated inference runs are documented, with identical outputs at a fixed date under the reported deterministic settings. A general environment reset interface is not established. |
+| Branching | Independent date and configuration comparisons are supported by the experimental protocol. Restoring or branching from an intermediate execution state is not established. |
+
+</details>
+
+<a id="paper-4c7b45ef0c27315b"></a>
+
+<details>
+<summary>The Marathon of Scientific Reasoning: Robustness of Scientific Agents to Perturbations in Multi-Turn Interactions — details</summary>
+
+[Work](../README.md#paper-4c7b45ef0c27315b) · [Source](https://arxiv.org/pdf/2609.34537)
+
+**Focus:** Robustness of scientific problem solving across 3–13 dependent turns under generated scientific perturbations. Feedback and evaluation use existing reference solutions and human–LLM judgments, with computation or tool use retained where applicable.
+
+**Openness:** `Fixed scientific objectives and verified reference solutions from 620 existing problems.`, `Constructed multi-turn inputs with agent responses and applicable tool use.`
+
+**New physical measurements:** No
+
+**Limits:** Live execution means fresh agent interactions, not new physical measurements. The benchmark constructs tasks from solved problems; it does not establish an environment for open research experiments. Specific available tools and simulator interfaces are not established in the supplied pages.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Training rewards are not established; the study evaluates existing models. TACC requires a correct final answer and scientifically valid process. IC, TP, and RV receive turn-level judgments from Claude Opus 5 and human assessment; disagreement counts as incorrect. |
+| Reset | Clean and perturbed instances run independently under matched settings, with three fresh runs per condition. Arbitrary intermediate-state restoration is not established. |
+| Branching | Clean and perturbed trajectories are independently generated and can diverge after perturbation. Snapshot-based branching from a shared intermediate state is not established. |
+
+</details>
+
+<a id="paper-8daca2e781dd8746"></a>
+
+<details>
+<summary>FinAutoRubric: Expert-Guided Automatic Rubric Generation for Evaluating Financial Research Agents — details</summary>
+
+[Work](../README.md#paper-8daca2e781dd8746) · [Source](https://arxiv.org/pdf/2609.35744)
+
+**Focus:** Rubric generation and evaluation for financial research agents using sourced financial evidence and executed calculations. Evaluation includes published response traces, newly generated responses, expert rubrics, and human comparisons.
+
+**Openness:** `Open-ended financial research responses evaluated against query-specific rubrics.`, `Web search, SEC filing search, and code execution under information cutoffs and step budgets.`
+
+**New physical measurements:** No
+
+**Limits:** Financial records and executed calculations do not constitute new physical measurements. This is financial analysis and report evaluation rather than an environment for executed scientific research experiments. Generated rubric scores do not establish expert correctness or intended interpretation.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Generated rubrics are explicitly not studied as training rewards. Evaluation uses point-weighted criterion pass shares. Criterion decisions use a fixed three-judge majority; benchmark solver scores average three judges outside the solver's family. |
+| Reset | Rubric-generation failures can trigger human restarts from the failed stage while retaining completed stages, subject to the same validation gates. Roles use isolated containers. General solver-state reset or intermediate checkpoint restoration is not established. |
+| Branching | Separate writer, reviewer, and confirmation sessions are documented. Agent-controlled branching from saved execution states is not established. |
 
 </details>
 
