@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**65 usage profiles** · Updated **2026-10-24**
+**66 usage profiles** · Updated **2026-10-24**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1096,6 +1096,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research](#paper-045c2b8bd847ae46) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [FrontierCS 2: A Benchmark for Computer Science R&D](#paper-72af933c20feb3a7) | Scientific data + verifiers | Computational experiments | Paper-described |
 | [Auto-MD-bench: Evaluating Autoresearch Agents for Real-World Medical Tasks](#paper-4e611eaf34efb11a) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch](#paper-d4e79e43099df1b8) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -1393,6 +1394,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | A benchmark-wide policy-training reward is not established. During development, agents use execution results and self-computed validation metrics. Autoresearch retains changes only when its internal validation primary metric improves. After each run, an external evaluator scores selected predictions against hidden outcomes using survival concordance, AUROC, minimum sensitivity/positive predictive value, or sequential alarm utility. Scores are normalized against null predictions; invalid submissions receive zero in penalized reporting. ECE, external validation, subgroup analyses, and methodological audits provide additional evaluation. |
 | Reset | Page 5 establishes three repetitions per agent-task pair, each using a dedicated virtual machine; page 12 states that test sets remain fixed across runs. Arbitrary environment snapshot restoration or checkpoint reset support is not established. |
 | Branching | Pages 5 and 14 establish greedy tree search for AIDE and best-first tree search for AI Scientist v2, including multiple drafts and workers for the latter. Page 16 establishes KEEP or exact REVERT of experimental changes for Autoresearch. General environment cloning or arbitrary state branching support is not established. |
+
+</details>
+
+<a id="paper-d4e79e43099df1b8"></a>
+
+<details>
+<summary>ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch — details</summary>
+
+[Work](../README.md#paper-d4e79e43099df1b8) · [Source](https://arxiv.org/pdf/2610.18088)
+
+**Focus:** Execution of a multi-claim computational research project using existing public FALCON neural recordings. The task requires implementation, model training, empirical comparisons, analysis, and writing. Feedback during execution comes from computations and their metrics; final assessment uses hidden paper-derived rubrics. No new participant or animal data are collected.
+
+**Openness:** `Agents design and implement neural decoders, baselines, ablations, and evaluation experiments.`, `End-to-end runs may revise their own earlier artifacts across seven research stages.`, `Agents may rerun experiments and inspect computed metrics within a 72-hour end-to-end budget.`, `Train, validation, and local test sessions may inform optimization, with test access logged.`
+
+**New physical measurements:** No
+
+**Limits:** One anchor task and one scored run per configuration limit generality. The paper-derived rubric can undervalue valid alternatives and negative findings. Judge agreement is supported by researcher spot-checking rather than a systematic agreement study. Local public-data splits and logged test optimization are not private FALCON evaluation or closed-loop physical deployment. Actual resource use, instructions, and execution hosts differ.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Pages 5–6 and 17–20: the task evaluates ten required claims with 99 rubric items. A pinned claude-opus-5 judge scores frozen artifacts on 0–4 anchors, cites evidence, and issues binary met/unmet claim verdicts after execution. The overview weights design/planning 0.3, execution 0.5, and analysis/writing 0.2. During research, agents inspect computed metrics, including per-session variance-weighted R2 and offline latency. The hidden evaluator is not established as an online reward returned during optimization; an agent reinforcement-learning training procedure is not established. |
+| Reset | Pages 4–5, 7, and 14: every run begins in a fresh workspace. Stagewise evaluation starts each stage separately with paper-derived upstream inputs; end-to-end stages share the run's own evolving artifacts. Experiment reruns are allowed. Snapshot restoration of a running experiment or agent state is not established. |
+| Branching | End-to-end and stagewise runs provide separate execution conditions, and agents may revise and rerun experiments. Checkpoint branching, replay from identical execution states, and a dedicated branching interface are not established in the supplied pages. |
 
 </details>
 

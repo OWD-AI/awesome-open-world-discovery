@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T22:30:10-04:00",
+  "updated_at": "2026-10-24T22:54:00-04:00",
   "window_start": "2026-09-25",
   "window_end": "2026-10-24",
   "window_days": 30,
@@ -2548,6 +2548,44 @@
       ]
     },
     {
+      "title": "StopLoss: Teaching Agents to Predict Failure and Stop Early",
+      "url": "https://arxiv.org/abs/2610.25525",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "StopLoss trains small external monitors to predict eventual coding-agent failure from recent execution windows and stop selected runs early.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv submission history verifies the original v1 timestamp as 18 October 2026 at 20:39:02 UTC, replacing the supplied midnight-normalized timestamp.",
+      "review_status": "approved",
+      "relevance": "Learns from verifier outcomes to monitor ongoing agent investigations and terminate likely failures. This provides a concrete agent-harness mechanism for allocating effort using learned verification feedback, although evidence is restricted to software engineering.",
+      "id": "ef8dd675a4428711",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.25525"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/StopLoss"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/StopLoss-Training-Data"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/TIGER-Lab/StopLoss-Qwen2.5-7B-Instruct"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/TIGER-Lab/StopLoss-Qwen3-8B"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/TIGER-Lab/StopLoss-Qwen2.5-Coder-7B-Instruct"
+        }
+      ]
+    },
+    {
       "title": "SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?",
       "url": "https://arxiv.org/abs/2610.26659",
       "published_at": "2026-10-18",
@@ -2990,6 +3028,28 @@
         {
           "label": "Model",
           "url": "https://huggingface.co/ChilleD/WildAWM-4B"
+        }
+      ]
+    },
+    {
+      "title": "TILDE: Teacher-in-the-Loop Distillation from Embodied Foundation Models",
+      "url": "https://arxiv.org/abs/2610.25376",
+      "published_at": "2026-10-17",
+      "kind": "paper",
+      "summary": "TILDE transfers embodied foundation-model capabilities through demonstrations, teacher supervision at student-visited states, and executed teacher recovery trajectories. An automated monitor triggers intervention and selects recovered episodes for subsequent student training.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at specifies 2026-10-18T00:00:00.000Z, corroborated by PDF page 1's v1 date of 18 Oct 2026. The repository's October 20 release announcement is not substituted for the original date.",
+      "review_status": "approved",
+      "relevance": "AutoDAgger converts failures encountered during agent execution into retained corrective experience and improved student policies. This provides a concrete feedback-driven learning mechanism relevant to discovery agents adapting beyond their demonstration distribution, although scientific discovery itself is not evaluated.",
+      "id": "759ea716e2ac02e1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.25376"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/hku-sail/TILDE"
         }
       ]
     },
@@ -3541,6 +3601,32 @@
       "id": "b16db32e289347ac"
     },
     {
+      "title": "RouteWeaver: Weaving Mode Selection and Execution into Unified LLM Routing",
+      "url": "https://arxiv.org/abs/2610.19705",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "RouteWeaver trains one router to choose single-call, sequential, or structured agentic execution and coordinate frozen language models within the selected mode.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv submission history verifies v1 on 14 October 2026 at 07:33:05 UTC. The supplied 19 October timestamp corresponds to the revision date rather than original publication.",
+      "review_status": "approved",
+      "relevance": "Learns agent coordination structures, including planning, verification, and aggregation, alongside model selection. This directly supports adaptable reasoning and knowledge-verification harnesses, although autonomous discovery itself is not evaluated.",
+      "id": "da0b864f0a61a686",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19705"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/LaughKing/RouteWeaver"
+        },
+        {
+          "label": "Project",
+          "url": "https://laughking.github.io/RouteWeaver/"
+        }
+      ]
+    },
+    {
       "title": "Research@ 2026: 10 ways we're amplifying human ingenuity",
       "url": "https://research.google/blog/research-2026-10-ways-were-amplifying-human-ingenuity",
       "published_at": "2026-10-14",
@@ -3688,28 +3774,74 @@
       ]
     },
     {
+      "title": "The Last Remote Sensing Model Built by Humans? Casting Any Earth Observation Task as Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2610.18845",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "RSI4EO specifies modeling tasks through permitted resources and a sealed evaluator. Coding agents independently develop pipelines, including self-training procedures, and submit their final artifacts for hidden-test evaluation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-13T17:57:51Z. The PDF's 15 October date belongs to revision v2.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is a verifier-guided system for agents to discover, train, and recursively improve modeling pipelines. Its autonomous experimentation and verification mechanisms are directly relevant beyond the Earth observation application.",
+      "id": "3e1d6c58b4640b70",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18845"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Yokoya-Lab-UTokyo/RSI4EO"
+        }
+      ]
+    },
+    {
       "title": "Self-Evolving Agent Harness",
       "url": "https://arxiv.org/abs/2610.18813",
       "published_at": "2026-10-13",
       "kind": "paper",
-      "summary": "Formalizes persistent revision of prompts, memory, workflows, tools, code, and plugins while model weights remain fixed, and analyzes admission, retention, validation, and safety requirements for accepted harness changes.",
-      "date_evidence": "The arXiv page says “Submitted on 13 Oct 2026”; submission history lists v1 at 2026-10-13 17:48:49 UTC.",
-      "relevance": "A foundational treatment of harness-level recursive self-improvement, including generalization safeguards and institutional consequences.",
+      "summary": "The paper defines harness self-evolution as persistent, feedback-driven software revision around a fixed model. It distinguishes editable artifacts, search mechanisms, and admission rules, and analyzes the conditions under which accepted revisions support reliable improvement.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-13T17:48:49Z, consistent with the v1 date printed on page 1.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "4bc2aa3dc5c6d11a"
+      "relevance": "This conceptual and theoretical framework directly addresses how agents retain experience and revise the machinery used for future investigations, including conditions for verification, generalization, and retention.",
+      "id": "4bc2aa3dc5c6d11a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18813"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/zgcagi/Harness-RSI"
+        },
+        {
+          "label": "Project",
+          "url": "https://zgcagi.github.io/Harness-RSI/"
+        }
+      ]
     },
     {
       "title": "Searching for What Matters: Open-Ended Discovery of Multiple Hypotheses with Agentic Data Exploration",
       "url": "https://arxiv.org/abs/2610.17874",
       "published_at": "2026-10-13",
       "kind": "paper",
-      "summary": "This paper defines a setting where an agent receives a large table and an outcome but no predefined research question. HypAgent interactively proposes, tests and refines multiple hypotheses while removing explained signal so later searches target additional mechanisms.",
-      "date_evidence": "The opened arXiv source page explicitly states “Submitted on 13 Oct 2026.”",
-      "relevance": "Directly studies open-world hypothesis discovery, agentic data exploration and causal validation against hidden structural causal models.",
+      "summary": "HypAgent searches large tables for multiple explanations of an outcome without receiving the relevant variables, functional forms, or mechanism count. OpenHypBench evaluates these discoveries in controlled causal worlds and can credit supported proposals beyond its planted reference set.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata identifies original publication as 2026-10-13T07:33:48Z, consistent with the v1 date on page 1.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "9ea07ad21e399cd7"
+      "relevance": "Its central problem is agents choosing previously unspecified investigations and discovering multiple mechanisms. The method and benchmark explicitly separate observational hypothesis search from independent interventional verification.",
+      "id": "9ea07ad21e399cd7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.17874"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/amazon-science/HypAgent"
+        }
+      ]
     },
     {
       "title": "STRATA: Self-Maintaining Structured Experience Graphs for Self-Evolving Language Agents",
@@ -3730,16 +3862,52 @@
       ]
     },
     {
+      "title": "SEAR: Self-Evolving Agentic Robotics",
+      "url": "https://arxiv.org/abs/2610.18792",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "SEAR supplies a robotics harness and evaluation protocol for agents that write policies, act live, or train action models. Its controlled comparisons test what experience agents retain and how well that knowledge works on new tasks, conditions, simulators, and physical scenes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-13T17:40:20Z, consistent with the v1 date on page 1.",
+      "review_status": "approved",
+      "relevance": "The main contribution evaluates whether autonomous agents acquire reusable knowledge from experience, separating retained learning from repeated attempts and measuring transfer beyond practiced situations.",
+      "id": "d8f686761184cfb8",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18792"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Self-Evolving-Agentic-Robotics/SEAR"
+        },
+        {
+          "label": "Project",
+          "url": "https://sear.bot/"
+        }
+      ]
+    },
+    {
       "title": "ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch",
       "url": "https://arxiv.org/abs/2610.18088",
       "published_at": "2026-10-13",
       "kind": "paper",
-      "summary": "Evaluates continuous, multi-stage research workflows at both claim and stage level. Its experiments find that execution quality trails planning, repeated attempts rarely improve results, and added skills or research orchestration do not reliably close the gap.",
-      "date_evidence": "The arXiv page reports initial submission on 2026-10-13 and revision on 2026-10-14; v1 is the original paper date.",
-      "relevance": "Supplies process-level evaluation for autoresearch, especially iterative execution, claim completion, and evidence-backed revision.",
+      "summary": "ResearchFlow-Eval audits scientific workflows at seven stages and at the level of individual claims. It distinguishes fluent plans and manuscripts from executed experiments that satisfy explicit scientific criteria.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata identifies original publication as 2026-10-13T10:09:15Z. The PDF's 14 October date is revision v2.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "d4e79e43099df1b8"
+      "relevance": "The contribution directly evaluates autonomous scientific research: whether agents carry multiple claims through experiments to verified evidence and improve those claims through iteration.",
+      "id": "d4e79e43099df1b8",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18088"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Jp-17/ResearchFlow-Eval"
+        }
+      ]
     },
     {
       "title": "OSVerify separates error proposal from error validation",
@@ -3768,6 +3936,70 @@
       "id": "0463758b062f5b14"
     },
     {
+      "title": "LeanPRM: Lean-Grounded Process Supervision for Natural Language Proof Verification",
+      "url": "https://arxiv.org/abs/2610.17697",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "LeanPRM transfers formal proof-checking results into natural-language process supervision. Its trained verifier checks informal proofs without requiring Lean at inference.",
+      "source": "Codex full-text screened",
+      "date_evidence": "arXiv submission history verifies the original v1 timestamp as 13 October 2026 at 04:23:36 UTC. The 16 October date belongs to v2.",
+      "review_status": "approved",
+      "relevance": "Provides scalable training supervision for verifying mathematical arguments, a concrete capability needed to assess knowledge produced by discovery agents.",
+      "id": "44d308ca6f63a0d7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.17697"
+        },
+        {
+          "label": "Project",
+          "url": "https://rlafuente.com/lean-prm"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/pavelslab-nyu/LeanPRM"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/data"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/benchmark"
+        }
+      ]
+    },
+    {
+      "title": "JevGPT: Thinking Fast and Slow in Autonomous Research",
+      "url": "https://arxiv.org/abs/2610.18272",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "JevGPT separates deliberative research planning from fast local evidence judgments. Selected original passages guide further investigation and final answers or document rankings.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata identifies the original publication timestamp as 2026-10-13T12:29:13Z; the PDF also identifies v1 on 13 October.",
+      "review_status": "approved",
+      "relevance": "Directly advances autonomous research agents through evidence acquisition, verification, and feedback from source inspection into subsequent research decisions.",
+      "id": "724ade21f496c142",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18272"
+        },
+        {
+          "label": "Project",
+          "url": "https://sunyasheng.github.io/projects/JevGPT.html"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/sunyasheng/JevGPT"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/yashengsun/JevGPT-runs"
+        }
+      ]
+    },
+    {
       "title": "Into the Unknown: Benchmarking AI agents on open scientific research problems",
       "url": "https://arxiv.org/abs/2610.19159",
       "published_at": "2026-10-13",
@@ -3778,6 +4010,76 @@
       "review_status": "approved",
       "source": "Codex full-text screened",
       "id": "96fc3be952a6b3b9"
+    },
+    {
+      "title": "Generalizing Identifiability Results in Causal Discovery from Complete Data to Missing Data Settings",
+      "url": "https://arxiv.org/abs/2610.19211",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "The paper connects recovery of the complete-data distribution to causal identifiability under missingness, including restricted MNAR settings. It develops missing-data versions of DirectLiNGAM and RESIT.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata and the independently opened arXiv submission history agree on the original v1 timestamp, 2026-10-13T21:24:01Z.",
+      "review_status": "approved",
+      "relevance": "Establishes conditions and algorithms for discovering causal structure from incomplete observations, directly supporting discovery representations under imperfect evidence.",
+      "id": "d6361dc4d470facb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19211"
+        }
+      ]
+    },
+    {
+      "title": "EmbodiedEvo: Self-Evolving Coding Agent For Physical Intelligence",
+      "url": "https://arxiv.org/abs/2610.18867",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "EmbodiedEvo turns robot interaction into reusable code Skills and diagnostic Lessons while keeping model weights fixed. Frozen experience initializes fresh agents that continue adapting their programs during execution.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives original publication at 2026-10-13T17:59:51Z. The title-page date agrees; the 14 October PDF margin identifies revision v2.",
+      "review_status": "approved",
+      "relevance": "Studies how agents retain discovered procedures, operating conditions, and failure knowledge from interaction and transfer that experience to unseen scenes and other executors.",
+      "id": "8e422795873eb25c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18867"
+        },
+        {
+          "label": "Project",
+          "url": "https://lab.einsia.ai/embodiedevo/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Einsia/EmbodiedEvo"
+        }
+      ]
+    },
+    {
+      "title": "ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution",
+      "url": "https://arxiv.org/abs/2610.17718",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "ECG-RSI couples measurement-checked waveform synthesis with repeated search over training-data recipes. Its discovery relevance lies in testing improvement hypotheses and adapting supervision as the learner changes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata establishes the original timestamp as 2026-10-13T04:50:27Z; the supplied PDF identifies v1 on 13 October.",
+      "review_status": "approved",
+      "relevance": "Makes a concrete recursive-improvement contribution: learner errors propose training interventions, controlled synthesis verifies examples, and separate candidate comparisons select subsequent updates.",
+      "id": "4f543aaf09b8e37b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.17718"
+        },
+        {
+          "label": "Project",
+          "url": "https://pork-pay.github.io/ECG-RSI/"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/pork-pay/ECG-RSI"
+        }
+      ]
     },
     {
       "title": "Autonomous Science Bench: Evaluating AI Agents for Autonomous Scientific Discovery",
@@ -6903,6 +7205,44 @@
       ]
     },
     {
+      "title": "StopLoss: Teaching Agents to Predict Failure and Stop Early",
+      "url": "https://arxiv.org/abs/2610.25525",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "StopLoss trains small external monitors to predict eventual coding-agent failure from recent execution windows and stop selected runs early.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv submission history verifies the original v1 timestamp as 18 October 2026 at 20:39:02 UTC, replacing the supplied midnight-normalized timestamp.",
+      "review_status": "approved",
+      "relevance": "Learns from verifier outcomes to monitor ongoing agent investigations and terminate likely failures. This provides a concrete agent-harness mechanism for allocating effort using learned verification feedback, although evidence is restricted to software engineering.",
+      "id": "ef8dd675a4428711",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.25525"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/StopLoss"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/StopLoss-Training-Data"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/TIGER-Lab/StopLoss-Qwen2.5-7B-Instruct"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/TIGER-Lab/StopLoss-Qwen3-8B"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/TIGER-Lab/StopLoss-Qwen2.5-Coder-7B-Instruct"
+        }
+      ]
+    },
+    {
       "title": "SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?",
       "url": "https://arxiv.org/abs/2610.26659",
       "published_at": "2026-10-18",
@@ -7345,6 +7685,28 @@
         {
           "label": "Model",
           "url": "https://huggingface.co/ChilleD/WildAWM-4B"
+        }
+      ]
+    },
+    {
+      "title": "TILDE: Teacher-in-the-Loop Distillation from Embodied Foundation Models",
+      "url": "https://arxiv.org/abs/2610.25376",
+      "published_at": "2026-10-17",
+      "kind": "paper",
+      "summary": "TILDE transfers embodied foundation-model capabilities through demonstrations, teacher supervision at student-visited states, and executed teacher recovery trajectories. An automated monitor triggers intervention and selects recovered episodes for subsequent student training.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at specifies 2026-10-18T00:00:00.000Z, corroborated by PDF page 1's v1 date of 18 Oct 2026. The repository's October 20 release announcement is not substituted for the original date.",
+      "review_status": "approved",
+      "relevance": "AutoDAgger converts failures encountered during agent execution into retained corrective experience and improved student policies. This provides a concrete feedback-driven learning mechanism relevant to discovery agents adapting beyond their demonstration distribution, although scientific discovery itself is not evaluated.",
+      "id": "759ea716e2ac02e1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.25376"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/hku-sail/TILDE"
         }
       ]
     },
@@ -7853,6 +8215,32 @@
       "id": "b16db32e289347ac"
     },
     {
+      "title": "RouteWeaver: Weaving Mode Selection and Execution into Unified LLM Routing",
+      "url": "https://arxiv.org/abs/2610.19705",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "RouteWeaver trains one router to choose single-call, sequential, or structured agentic execution and coordinate frozen language models within the selected mode.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv submission history verifies v1 on 14 October 2026 at 07:33:05 UTC. The supplied 19 October timestamp corresponds to the revision date rather than original publication.",
+      "review_status": "approved",
+      "relevance": "Learns agent coordination structures, including planning, verification, and aggregation, alongside model selection. This directly supports adaptable reasoning and knowledge-verification harnesses, although autonomous discovery itself is not evaluated.",
+      "id": "da0b864f0a61a686",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19705"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/LaughKing/RouteWeaver"
+        },
+        {
+          "label": "Project",
+          "url": "https://laughking.github.io/RouteWeaver/"
+        }
+      ]
+    },
+    {
       "title": "Reflect After Failure: Brain-Inspired Self-Evolving Agents for Embodied Spatial Intelligence",
       "url": "https://arxiv.org/abs/2610.20312",
       "published_at": "2026-10-14",
@@ -7987,28 +8375,74 @@
       ]
     },
     {
+      "title": "The Last Remote Sensing Model Built by Humans? Casting Any Earth Observation Task as Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2610.18845",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "RSI4EO specifies modeling tasks through permitted resources and a sealed evaluator. Coding agents independently develop pipelines, including self-training procedures, and submit their final artifacts for hidden-test evaluation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-13T17:57:51Z. The PDF's 15 October date belongs to revision v2.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is a verifier-guided system for agents to discover, train, and recursively improve modeling pipelines. Its autonomous experimentation and verification mechanisms are directly relevant beyond the Earth observation application.",
+      "id": "3e1d6c58b4640b70",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18845"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Yokoya-Lab-UTokyo/RSI4EO"
+        }
+      ]
+    },
+    {
       "title": "Self-Evolving Agent Harness",
       "url": "https://arxiv.org/abs/2610.18813",
       "published_at": "2026-10-13",
       "kind": "paper",
-      "summary": "Formalizes persistent revision of prompts, memory, workflows, tools, code, and plugins while model weights remain fixed, and analyzes admission, retention, validation, and safety requirements for accepted harness changes.",
-      "date_evidence": "The arXiv page says “Submitted on 13 Oct 2026”; submission history lists v1 at 2026-10-13 17:48:49 UTC.",
-      "relevance": "A foundational treatment of harness-level recursive self-improvement, including generalization safeguards and institutional consequences.",
+      "summary": "The paper defines harness self-evolution as persistent, feedback-driven software revision around a fixed model. It distinguishes editable artifacts, search mechanisms, and admission rules, and analyzes the conditions under which accepted revisions support reliable improvement.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-13T17:48:49Z, consistent with the v1 date printed on page 1.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "4bc2aa3dc5c6d11a"
+      "relevance": "This conceptual and theoretical framework directly addresses how agents retain experience and revise the machinery used for future investigations, including conditions for verification, generalization, and retention.",
+      "id": "4bc2aa3dc5c6d11a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18813"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/zgcagi/Harness-RSI"
+        },
+        {
+          "label": "Project",
+          "url": "https://zgcagi.github.io/Harness-RSI/"
+        }
+      ]
     },
     {
       "title": "Searching for What Matters: Open-Ended Discovery of Multiple Hypotheses with Agentic Data Exploration",
       "url": "https://arxiv.org/abs/2610.17874",
       "published_at": "2026-10-13",
       "kind": "paper",
-      "summary": "This paper defines a setting where an agent receives a large table and an outcome but no predefined research question. HypAgent interactively proposes, tests and refines multiple hypotheses while removing explained signal so later searches target additional mechanisms.",
-      "date_evidence": "The opened arXiv source page explicitly states “Submitted on 13 Oct 2026.”",
-      "relevance": "Directly studies open-world hypothesis discovery, agentic data exploration and causal validation against hidden structural causal models.",
+      "summary": "HypAgent searches large tables for multiple explanations of an outcome without receiving the relevant variables, functional forms, or mechanism count. OpenHypBench evaluates these discoveries in controlled causal worlds and can credit supported proposals beyond its planted reference set.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata identifies original publication as 2026-10-13T07:33:48Z, consistent with the v1 date on page 1.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "9ea07ad21e399cd7"
+      "relevance": "Its central problem is agents choosing previously unspecified investigations and discovering multiple mechanisms. The method and benchmark explicitly separate observational hypothesis search from independent interventional verification.",
+      "id": "9ea07ad21e399cd7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.17874"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/amazon-science/HypAgent"
+        }
+      ]
     },
     {
       "title": "STRATA: Self-Maintaining Structured Experience Graphs for Self-Evolving Language Agents",
@@ -8029,16 +8463,116 @@
       ]
     },
     {
+      "title": "SEAR: Self-Evolving Agentic Robotics",
+      "url": "https://arxiv.org/abs/2610.18792",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "SEAR supplies a robotics harness and evaluation protocol for agents that write policies, act live, or train action models. Its controlled comparisons test what experience agents retain and how well that knowledge works on new tasks, conditions, simulators, and physical scenes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-13T17:40:20Z, consistent with the v1 date on page 1.",
+      "review_status": "approved",
+      "relevance": "The main contribution evaluates whether autonomous agents acquire reusable knowledge from experience, separating retained learning from repeated attempts and measuring transfer beyond practiced situations.",
+      "id": "d8f686761184cfb8",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18792"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Self-Evolving-Agentic-Robotics/SEAR"
+        },
+        {
+          "label": "Project",
+          "url": "https://sear.bot/"
+        }
+      ]
+    },
+    {
       "title": "ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch",
       "url": "https://arxiv.org/abs/2610.18088",
       "published_at": "2026-10-13",
       "kind": "paper",
-      "summary": "Evaluates continuous, multi-stage research workflows at both claim and stage level. Its experiments find that execution quality trails planning, repeated attempts rarely improve results, and added skills or research orchestration do not reliably close the gap.",
-      "date_evidence": "The arXiv page reports initial submission on 2026-10-13 and revision on 2026-10-14; v1 is the original paper date.",
-      "relevance": "Supplies process-level evaluation for autoresearch, especially iterative execution, claim completion, and evidence-backed revision.",
+      "summary": "ResearchFlow-Eval audits scientific workflows at seven stages and at the level of individual claims. It distinguishes fluent plans and manuscripts from executed experiments that satisfy explicit scientific criteria.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom metadata identifies original publication as 2026-10-13T10:09:15Z. The PDF's 14 October date is revision v2.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "d4e79e43099df1b8"
+      "relevance": "The contribution directly evaluates autonomous scientific research: whether agents carry multiple claims through experiments to verified evidence and improve those claims through iteration.",
+      "id": "d4e79e43099df1b8",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18088"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Jp-17/ResearchFlow-Eval"
+        }
+      ]
+    },
+    {
+      "title": "LeanPRM: Lean-Grounded Process Supervision for Natural Language Proof Verification",
+      "url": "https://arxiv.org/abs/2610.17697",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "LeanPRM transfers formal proof-checking results into natural-language process supervision. Its trained verifier checks informal proofs without requiring Lean at inference.",
+      "source": "Codex full-text screened",
+      "date_evidence": "arXiv submission history verifies the original v1 timestamp as 13 October 2026 at 04:23:36 UTC. The 16 October date belongs to v2.",
+      "review_status": "approved",
+      "relevance": "Provides scalable training supervision for verifying mathematical arguments, a concrete capability needed to assess knowledge produced by discovery agents.",
+      "id": "44d308ca6f63a0d7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.17697"
+        },
+        {
+          "label": "Project",
+          "url": "https://rlafuente.com/lean-prm"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/pavelslab-nyu/LeanPRM"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/data"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/benchmark"
+        }
+      ]
+    },
+    {
+      "title": "JevGPT: Thinking Fast and Slow in Autonomous Research",
+      "url": "https://arxiv.org/abs/2610.18272",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "JevGPT separates deliberative research planning from fast local evidence judgments. Selected original passages guide further investigation and final answers or document rankings.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata identifies the original publication timestamp as 2026-10-13T12:29:13Z; the PDF also identifies v1 on 13 October.",
+      "review_status": "approved",
+      "relevance": "Directly advances autonomous research agents through evidence acquisition, verification, and feedback from source inspection into subsequent research decisions.",
+      "id": "724ade21f496c142",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18272"
+        },
+        {
+          "label": "Project",
+          "url": "https://sunyasheng.github.io/projects/JevGPT.html"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/sunyasheng/JevGPT"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/yashengsun/JevGPT-runs"
+        }
+      ]
     },
     {
       "title": "Into the Unknown: Benchmarking AI agents on open scientific research problems",
@@ -8051,6 +8585,76 @@
       "review_status": "approved",
       "source": "Codex full-text screened",
       "id": "96fc3be952a6b3b9"
+    },
+    {
+      "title": "Generalizing Identifiability Results in Causal Discovery from Complete Data to Missing Data Settings",
+      "url": "https://arxiv.org/abs/2610.19211",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "The paper connects recovery of the complete-data distribution to causal identifiability under missingness, including restricted MNAR settings. It develops missing-data versions of DirectLiNGAM and RESIT.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata and the independently opened arXiv submission history agree on the original v1 timestamp, 2026-10-13T21:24:01Z.",
+      "review_status": "approved",
+      "relevance": "Establishes conditions and algorithms for discovering causal structure from incomplete observations, directly supporting discovery representations under imperfect evidence.",
+      "id": "d6361dc4d470facb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19211"
+        }
+      ]
+    },
+    {
+      "title": "EmbodiedEvo: Self-Evolving Coding Agent For Physical Intelligence",
+      "url": "https://arxiv.org/abs/2610.18867",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "EmbodiedEvo turns robot interaction into reusable code Skills and diagnostic Lessons while keeping model weights fixed. Frozen experience initializes fresh agents that continue adapting their programs during execution.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives original publication at 2026-10-13T17:59:51Z. The title-page date agrees; the 14 October PDF margin identifies revision v2.",
+      "review_status": "approved",
+      "relevance": "Studies how agents retain discovered procedures, operating conditions, and failure knowledge from interaction and transfer that experience to unseen scenes and other executors.",
+      "id": "8e422795873eb25c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18867"
+        },
+        {
+          "label": "Project",
+          "url": "https://lab.einsia.ai/embodiedevo/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Einsia/EmbodiedEvo"
+        }
+      ]
+    },
+    {
+      "title": "ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution",
+      "url": "https://arxiv.org/abs/2610.17718",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "ECG-RSI couples measurement-checked waveform synthesis with repeated search over training-data recipes. Its discovery relevance lies in testing improvement hypotheses and adapting supervision as the learner changes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata establishes the original timestamp as 2026-10-13T04:50:27Z; the supplied PDF identifies v1 on 13 October.",
+      "review_status": "approved",
+      "relevance": "Makes a concrete recursive-improvement contribution: learner errors propose training interventions, controlled synthesis verifies examples, and separate candidate comparisons select subsequent updates.",
+      "id": "4f543aaf09b8e37b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.17718"
+        },
+        {
+          "label": "Project",
+          "url": "https://pork-pay.github.io/ECG-RSI/"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/pork-pay/ECG-RSI"
+        }
+      ]
     },
     {
       "title": "Autonomous Science Bench: Evaluating AI Agents for Autonomous Scientific Discovery",

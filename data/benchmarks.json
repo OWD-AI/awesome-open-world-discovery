@@ -1440,6 +1440,30 @@
       "name": "Auto-MD-bench: Evaluating Autoresearch Agents for Real-World Medical Tasks",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.25069"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents design and implement neural decoders, baselines, ablations, and evaluation experiments.",
+        "End-to-end runs may revise their own earlier artifacts across seven research stages.",
+        "Agents may rerun experiments and inspect computed metrics within a 72-hour end-to-end budget.",
+        "Train, validation, and local test sessions may inform optimization, with test access logged."
+      ],
+      "focus": "Execution of a multi-claim computational research project using existing public FALCON neural recordings. The task requires implementation, model training, empirical comparisons, analysis, and writing. Feedback during execution comes from computations and their metrics; final assessment uses hidden paper-derived rubrics. No new participant or animal data are collected.",
+      "limits": "One anchor task and one scored run per configuration limit generality. The paper-derived rubric can undervalue valid alternatives and negative findings. Judge agreement is supported by researcher spot-checking rather than a systematic agreement study. Local public-data splits and logged test optimization are not private FALCON evaluation or closed-loop physical deployment. Actual resource use, instructions, and execution hosts differ.",
+      "training": {
+        "reward": "Pages 5–6 and 17–20: the task evaluates ten required claims with 99 rubric items. A pinned claude-opus-5 judge scores frozen artifacts on 0–4 anchors, cites evidence, and issues binary met/unmet claim verdicts after execution. The overview weights design/planning 0.3, execution 0.5, and analysis/writing 0.2. During research, agents inspect computed metrics, including per-session variance-weighted R2 and offline latency. The hidden evaluator is not established as an online reward returned during optimization; an agent reinforcement-learning training procedure is not established.",
+        "reset": "Pages 4–5, 7, and 14: every run begins in a fresh workspace. Stagewise evaluation starts each stage separately with paper-derived upstream inputs; end-to-end stages share the run's own evolving artifacts. Experiment reruns are allowed. Snapshot restoration of a running experiment or agent state is not established.",
+        "branching": "End-to-end and stagewise runs provide separate execution conditions, and agents may revise and rerun experiments. Checkpoint branching, replay from identical execution states, and a dedicated branching interface are not established in the supplied pages."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-d4e79e43099df1b8",
+      "resource_id": "paper-d4e79e43099df1b8",
+      "name": "ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.18088"
     }
   ]
 }
