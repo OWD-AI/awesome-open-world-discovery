@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**81 usage profiles** · Updated **2026-10-25**
+**83 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -644,6 +644,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents](#paper-97aa05f1d051eb67) | Synthetic data | Offline data | Paper-described |
 | [GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations](#paper-c8f0a1e7ad6a901d) | Executed programs + evaluators | Offline data | Paper-described |
 | [From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists](#paper-dd2dc379979e7af0) | Synthetic data | Analysis + code | Paper-described |
+| [BlenderWorld: Benchmarking Visual Agents for 3D Creation from Real-World References](#paper-ecf2a0572888b64b) | Executed programs + evaluators | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1289,6 +1290,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-ecf2a0572888b64b"></a>
+
+<details>
+<summary>BlenderWorld: Benchmarking Visual Agents for 3D Creation from Real-World References — details</summary>
+
+[Work](../README.md#paper-ecf2a0572888b64b) · [Source](https://arxiv.org/pdf/2610.23986)
+
+**Focus:** Interactive creation and verification of editable 3D artifacts across 223 tasks. Feedback consists of executed Blender operations, rendered views, scene queries, and file inspection. Photographs and videos serve as supplied references; physics and animation are digital scene behaviors. These are artifact-production tasks rather than executed research experiments.
+
+**Openness:** `Fixed production briefs with optional image or video references and specification files permit multiple valid 3D implementations.`, `Agents can execute Python and shell commands, inspect scenes and rendered images, retrieve external assets, and revise Blender projects.`
+
+**New physical measurements:** No
+
+**Limits:** Each agent is evaluated once per task using different harnesses and unmatched computation. Hidden model-judged rubrics and visual ratings assess submitted artifacts. Greater inspection volume does not establish effective correction. New physical measurements are not part of the described environment.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Training reward is not established in the supplied pages. Evaluation uses GPT-5.6-terra for adaptive rendering and judging: eight complementary views support visual checks, while tool-based inspection checks native scene properties. The final score equally combines weighted satisfaction of frozen binary criteria and eight visual-quality ratings. Rubrics are hidden during generation; failed evaluations and missing .blend files receive zero. |
+| Reset | Tasks start from an initial workspace state and run in isolated Linux containers. Exact reset, replay, and restoration procedures are not established. |
+| Branching | Agents can edit, inspect, render, and revise projects. Explicit snapshot restoration or branching from an intermediate environment state is not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -1319,6 +1343,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [RSI-Forge: From Research Papers to Environments for Recursive Self-Improvement](#paper-b92b08173531b188) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training](#paper-aa059e79208dfb82) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists](#paper-31ad9246f9a10e34) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?](#paper-1663c6679dab72c8) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -1777,6 +1802,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | A training reward is not established; this is an evaluation audit. BAIS-SD uses exact set matching with half credit for a strict subset; GeneBench-Pro requires every reported quantity to meet tolerance. Process judges assess condensed trajectories against the original key. Evidence-grounded accuracy, its strict variant, invariance, responsiveness and evaluator flip AUC provide additional audit measures. |
 | Reset | Every run starts in a fresh sandbox containing only its task files, with the same prompt across data versions and a 40-minute limit. Mid-run reset or snapshot restoration is not established. |
 | Branching | Independent runs on original, null, withdrawal and flip versions support paired counterfactual comparisons. Branching from an intermediate execution state is not established. |
+
+</details>
+
+<a id="paper-1663c6679dab72c8"></a>
+
+<details>
+<summary>EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement? — details</summary>
+
+[Work](../README.md#paper-1663c6679dab72c8) · [Source](https://arxiv.org/pdf/2610.04184)
+
+**Focus:** Autonomous evaluation research: agents construct and experimentally revise executable evaluators for coding, co-work, and reasoning. Fixed task materials, historical traces, and published reference-score snapshots provide evidence; new model API calls and evaluator execution produce computational feedback. The environment does not describe a scientific simulator or new physical measurements.
+
+**Openness:** `Select, adapt, simplify, or synthesize evaluation tasks.`, `Implement and repair executable graders; choose task weights, aggregation, and answer allowances.`, `Inspect pilot responses and allocate development calls across experiments and revisions within fixed budgets.`
+
+**New physical measurements:** No
+
+**Limits:** Research lasts three hours with separate $100 researcher-inference and $100 development/helper budgets. Submission requires at least 100 distinct scored questions. Tasks, graders, weights, and execution settings freeze before independent assessment, which has a $120 total and $30 per-candidate cap. Sealed candidates and reference scores are unavailable during research, and assessment feedback is withheld afterward. Each researcher configuration contributes one episode; sustained recursive improvement is not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Model-weight training and a training reward are not established. During research, pilots return candidate responses, grading results, costs, and agreement with visible development references. Independent assessment scores frozen evaluators using 100 times Lin’s concordance correlation coefficient and pairwise agreement with target-reference scores; these results are not returned for further revision. |
+| Reset | Not established: the supplied body does not specify environment reset, checkpoint restoration, or budget replenishment. |
+| Branching | Not established: iterative revisions and smaller pilot suites are allowed, but environment cloning, checkpoint branching, and a rollback protocol are not specified. |
 
 </details>
 
