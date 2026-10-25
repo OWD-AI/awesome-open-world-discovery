@@ -11,6 +11,16 @@ from build import CATEGORIES, load
 
 
 class SiteTests(unittest.TestCase):
+    def test_nature_family_papers_have_a_journal_source_group(self):
+        for code, name in [('s41586', 'Nature'), ('s42256', 'Nature Machine Intelligence'),
+                           ('s43588', 'Nature Computational Science')]:
+            source, group, _ = build_site.source_info({'url': f'https://www.nature.com/articles/{code}-026-01283-z', 'kind': 'paper'})
+            self.assertEqual(source, name)
+            self.assertEqual(group, 'Journals')
+        article = 'https://www.nature.com/articles/s42256-026-01283-z'
+        self.assertEqual(build_site.paper_slug(article), build_site.paper_slug(article + '.pdf'))
+        self.assertEqual(build_site.paper_slug(article), build_site.paper_slug(article.replace('www.', '') + '?ref=rss'))
+
     def test_feed_context_distinguishes_refresh_time_from_publication_window(self):
         context = build_site.feed_context({'updated_at':'2026-10-22T04:05:36Z',
                                            'window_start':'2026-09-22','window_end':'2026-10-21'})

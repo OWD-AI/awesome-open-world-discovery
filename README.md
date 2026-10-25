@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-573-2563eb?style=flat-square" alt="573 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-574-2563eb?style=flat-square" alt="574 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-98-0f766e?style=flat-square" alt="98 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 35 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 60 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 47 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 85 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 86 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 87 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 104 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 66 |
@@ -541,6 +541,8 @@ Each work appears once under its primary contribution; see the [classification g
   Minghui Liu et al. · University of Maryland, College Park; Capital One
 - <a id="paper-ff790d2b9ae4b233"></a>**Language Models Learn to Improve Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23344)* · [Paper](https://arxiv.org/abs/2610.23344)<br>
   Minhua Lin et al. · The Pennsylvania State University; UC Santa Cruz; Emory University; +2 institutions
+- <a id="gollum"></a>**Large language models as uncertainty-calibrated optimizers for experimental discovery** · *[Nature Machine Intelligence 2026](https://www.nature.com/articles/s42256-026-01283-z)* · [Paper](https://www.nature.com/articles/s42256-026-01283-z) · [Preprint](https://arxiv.org/abs/2504.06265) · [Code](https://github.com/schwallergroup/gollum)<br>
+  Bojana Ranković, Ryan-Rhys Griffiths, Philippe Schwaller · École Polytechnique Fédérale de Lausanne (EPFL); NCCR Catalysis, EPFL; QuantumGreen
 - <a id="paper-a97c1f5a709e4de6"></a>**Lean4AgenticRL: Advancing Agentic RL with Verifiable Multi-level Process Rewards** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22448)* · [Paper](https://arxiv.org/abs/2610.22448) · [Code](https://github.com/RickySkywalker/Lean4AgenticRL) · [HF Model](https://huggingface.co/amazon/LAR-27B)<br>
   Ruida Wang, Gerald Friedland, Tong Zhang, Chris Kong · Amazon Web Services; University of Illinois Urbana-Champaign
 - <a id="paper-44d308ca6f63a0d7"></a>**LeanPRM: Lean-Grounded Process Supervision for Natural Language Proof Verification** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.17697)* · [Paper](https://arxiv.org/abs/2610.17697) · [Project](https://rlafuente.com/lean-prm) · [Code](https://github.com/pavelslab-nyu/LeanPRM) · [Dataset](https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/data) · [Dataset](https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/benchmark)<br>

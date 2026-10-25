@@ -21,6 +21,11 @@ def paper_slug(url):
 def canonical(url):
     parsed = urlsplit(url)
     path = parsed.path.rstrip('/')
+    if parsed.hostname in ('nature.com', 'www.nature.com'):
+        import re
+        match = re.fullmatch(r'/articles/(s(?:41586|42256|43588)-\d{3}-\d{5}-[a-z0-9]+)(?:\.pdf)?', path)
+        if match:
+            return 'https://www.nature.com/articles/' + match[1]
     if parsed.hostname in ('arxiv.org', 'www.arxiv.org', 'export.arxiv.org'):
         import re
         match = re.fullmatch(r'/(?:abs|pdf|html)/((?:[A-Za-z.-]+/\d{7})|(?:\d{4}\.\d{4,5}))(?:v\d+)?(?:\.pdf)?', path)
@@ -34,6 +39,10 @@ def source_info(item):
     if host.endswith('arxiv.org'): return 'arXiv', 'arXiv', 'arXiv'
     if host in ('x.com', 'twitter.com'): return 'X', 'X', '𝕏'
     if host.endswith('linkedin.com'): return 'LinkedIn', 'LinkedIn', 'in'
+    if host in ('nature.com', 'www.nature.com'):
+        for code, name, mark in [('s41586', 'Nature', 'N'), ('s42256', 'Nature Machine Intelligence', 'NMI'),
+                                 ('s43588', 'Nature Computational Science', 'NCS')]:
+            if '/articles/' + code in item['url']: return name, 'Journals', mark
     if host == 'research.google': return 'Google Research', 'Blogs', 'G'
     if host == 'deepmind.google': return 'Google DeepMind', 'Blogs', 'D'
     if host == 'huggingface.co': return 'Hugging Face', 'Hugging Face', 'HF'
