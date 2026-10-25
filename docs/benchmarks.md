@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**93 usage profiles** · Updated **2026-10-25**
+**96 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -675,6 +675,8 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Evaluating Agentic Capabilities Before Post-Training: An End-to-End Approach](#paper-2693639d7f34414f) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [LifeSearch: Benchmarking Deep Research Agents for Real-World Life and Productivity](#paper-979463277edcf993) | Real data | Analysis + tools | Paper-described |
 | [SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents](#paper-5687d10cf290fed0) | Synthetic data | Analysis + tools | Paper-described |
+| [LiveMACE: Process-Aware Evaluation of LLM Agent Capabilities in Evolving Markets](#paper-53e3f761f6a0e8c3) | Real data | Interactive simulator | Paper-described |
+| [From Retrieval to Customer Context: Evaluating Frontier-Model Systems for Voice-of-Customer Analysis](#paper-480b56b9da41924d) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1481,6 +1483,52 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-53e3f761f6a0e8c3"></a>
+
+<details>
+<summary>LiveMACE: Process-Aware Evaluation of LLM Agent Capabilities in Evolving Markets — details</summary>
+
+[Work](../README.md#paper-53e3f761f6a0e8c3) · [Source](https://arxiv.org/pdf/2610.09872)
+
+**Focus:** Persistent simulated paper-trading accounts receive live cryptocurrency and U.S. equity prices and external information. Every four hours, agents may reason, call tools, gather evidence, and issue zero or more simulated trading actions. Configurations add tool discovery, persistent memory, hierarchical rules, or manager-led collaboration. Live market observations are real data; paper trades do not establish physical experimentation.
+
+**Openness:** `Page 1 lists the code repository https://github.com/RaymondVoldemortFu/LiveMACE; availability was not independently checked.`, `Agents can gather external information and dynamically retrieve tools.`
+
+**New physical measurements:** No
+
+**Limits:** Approximately one month of market conditions is observed. Portfolios diverge persistently, and independent trajectory replications are not established. Several process scores depend on model judges and composite-score choices. Supplied pages cover selected body and appendix material.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A parameter-training reward or optimization loop is not established. Evaluation uses cumulative returns and risk measures, programmatic checks of calls and rules, and model-judged trace diagnostics. Tool, memory, rule, and collaboration scores summarize these measurements; page 44 identifies the primary rule auditor and alternative-auditor checks. |
+| Reset | Page 3 explicitly specifies a non-resettable account state. Positions and account state persist between rounds, and the underlying interaction has no task-defined terminal state. |
+| Branching | State cloning, counterfactual replay, and branching from a common intermediate account state are not established. Matched configurations maintain separate persistent accounts. |
+
+</details>
+
+<a id="paper-480b56b9da41924d"></a>
+
+<details>
+<summary>From Retrieval to Customer Context: Evaluating Frontier-Model Systems for Voice-of-Customer Analysis — details</summary>
+
+[Work](../README.md#paper-480b56b9da41924d) · [Source](https://arxiv.org/pdf/2610.09375)
+
+**Focus:** Agents investigate a fixed corpus using semantic search, record inspection, exact aggregation, segment comparison, optional corpus classification, or traversal of a persistent customer context graph. Tool results provide evidence from recorded public feedback. This evaluates corpus analysis and cited synthesis; it does not collect new physical measurements.
+
+**Openness:** `Thirty fixed questions are evaluated over a frozen corpus of 9,432 public feedback records.`, `Query contracts, family invariants, and evaluator prompts are hidden from candidate systems.`, `Pages 12–13 describe a reproducibility package separate from the manuscript and absent from its source archive; public release availability is not established.`
+
+**New physical measurements:** No
+
+**Limits:** The rubric was calibrated using answers to 28 of 30 questions. Only 127 of 913 context-graph citations were member-audited; 786 aggregates retain traceability without member sampling. Semantic recall and rerun variance are unmeasured. One corpus and bundled architecture and budget differences limit generalization.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A candidate-training reward or parameter-update loop is not established. A comparative gpt-5.5 judge scores answer quality, analytical depth, and evidence strength; a separate gpt-5.5 citation judge assesses sampled claim–record support. The overall evaluator equally averages quality, depth, and evidence quality, with paired query outcomes primary. |
+| Reset | Page 4 states that each query executes in a fresh conversation. The corpus remains frozen, while the context graph's ingestion-time summaries, predictions, and relationships persist across questions. Query-specific assignments from the other systems are not shared across questions. |
+| Branching | Checkpoint branching or cloning of intermediate executions is not established. Specialist delegation and a bounded verification/revision loop are described, but they do not establish environment-state branching. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -1514,6 +1562,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?](#paper-1663c6679dab72c8) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [OpenProblemBench: Benchmarking AI on Open Problems in the Foundational Theoretical Sciences](#paper-5a53c3bdb60bfc08) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [SciExam for ENSO: Can AI Agents Build Climate Models?](#paper-d90a8e0869dee55c) | Scientific data + verifiers | Computational experiments | Paper-described |
+| [AgentTime: Can Agents Estimate and Control Their Own Runtime?](#paper-a13bbb297eb54c7e) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -2041,6 +2090,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | A parameter-training reward is not established. Phase A returns data-processing discrepancy feedback. During model development, agents receive results only from their own frozen diagnostics, which report observed quantities and discrepancies. Hidden scores are withheld until after the run. The final evaluator computes C = 0.3 S + 0.3 D + 0.4 P for statistical properties, reconstruction, and forecasting against persistence; invalid or non-finite models fail the validity gate. |
 | Reset | The grader supports simulations initialized from the zero state and forecasts reinitialized from observed monthly states, with stochastic draws supplied through its random generator. Agent-session reset or checkpoint rollback support is not established. Phase A permits up to four data-check attempts. |
 | Branching | Agents can explore alternative model structures and revisions. The harness saves distinct submission checkpoints every five minutes, at turn ends, and at run completion. Resumable environment forks or a checkpoint-restoration interface are not established; hidden grading occurs after the run. |
+
+</details>
+
+<a id="paper-a13bbb297eb54c7e"></a>
+
+<details>
+<summary>AgentTime: Can Agents Estimate and Control Their Own Runtime? — details</summary>
+
+[Work](../README.md#paper-a13bbb297eb54c7e) · [Source](https://arxiv.org/pdf/2610.09944)
+
+**Focus:** Measures duration-following, runtime forecasting, and retrospective elapsed-time estimation across 222 tasks from 18 benchmark families in native agent harnesses. Agents execute computation and interact with software environments. The suite includes actual research reproduction and model post-training experiments, alongside coding, computer use, question answering, and other tasks. An external supervisor measures wall-clock runtime.
+
+**Openness:** `Page 10 states that code is available at https://github.com/michaelofengenden/agenttimebench and run data at https://agenttimebench.com; availability was not independently checked.`, `Files, tools, and network access follow each constituent benchmark; ProgramBench has no internet, while GPQA and Humanity’s Last Exam receive only a callable clock.`
+
+**New physical measurements:** No
+
+**Limits:** One run per task, agent, and requested duration leaves instruction effects mixed with stochastic variation. Provider latency affects elapsed time. Three main agents and one duration instruction are evaluated. Only four tasks receive requests beyond 8.3 hours. Some grades were reconstructed after the campaign; PaperBench uses a changed judge and a four-hour H100 reproduction budget.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No training loop for the evaluated agent policies is established. Evaluation combines externally measured duration adherence, forecast and retrospective error, transcript labels, and each task's native grader. Native scores include hidden tests, state checks, model judges, reproduction rubrics, and post-trained-model test accuracy. PostTrainBench tasks execute model post-training, but their training reward or loss is not established by these pages. |
+| Reset | Every main run starts in a new Docker container with a fresh agent session and workspace. Three duration conditions use separate fresh runs. Forecasts and natural-runtime executions also use separate sessions. Native time caps and budgets are removed; duration-following retains a hidden administrative cutoff at twice the task's largest requested duration. |
+| Branching | Retrospective experiments explicitly fork completed sessions for Oracle, Native, and Context-only conditions; Replay and Scrubbed rebuild transcripts through an API. Branching or rollback of the underlying task environment during main task execution is not established. |
 
 </details>
 

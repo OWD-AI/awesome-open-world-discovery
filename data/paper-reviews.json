@@ -17532,6 +17532,450 @@
           9
         ]
       }
+    },
+    "paper-3dd4a597d7094e74": {
+      "institutions": [
+        "Shanghai Jiao Tong University",
+        "Shanghai Artificial Intelligence Laboratory",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The agent retrieves cases from bounded recent and long-term memory pools. After 100 completed instances, an MLP begins learning tool rankings through an error-weighted pairwise loss. All six forecasting tools run before targets are revealed, providing full comparative feedback afterward. Evaluation uses 29 selected GIFT-Eval configurations, individual forecasters, an equal-weight ensemble, and memory/policy ablations.",
+      "evidence": "Normalized MAE falls from 0.685 for TiRex-2 to 0.622 for FASE, a 9.1% reduction. FASE also leads aggregate MASE and RMSE. Cumulative MASE improvement over the Base Agent rises from 3.8% after 25 instances to 8.6% after 500. Combining memory and policy gives modest additional point-forecast gains over either alone. Probabilistic performance is weaker: FASE's CRPS is 0.497 versus TiRex-2's 0.489, and Memory Only performs better still at 0.483.",
+      "discovery_use": "The primary contribution is retained experience and online learning that improve an agent's future tool choices. This is a concrete continual-adaptation mechanism relevant to learning how to investigate and predict unknown outcomes.",
+      "limits": "This learns selection within a fixed tool library rather than discovering new forecasting methods. Running every candidate tool creates substantial feedback cost and assumes full comparative outcomes. Replay processes series sequentially without a shared clock, limiting claims about deployment under globally timed streaming feedback. Only 29 of 97 benchmark configurations are evaluated, all targets are univariate, and robustness across independent evolution seeds is not established. No paper-specific release was verified; the supplied repository and checkpoint hints concern baselines.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "adaptation",
+        "rationale": "The primary contribution is retained experience and online learning that improve an agent's future tool choices. This is a concrete continual-adaptation mechanism relevant to learning how to investigate and predict unknown outcomes.",
+        "pdf_sha256": "9f944862e444e4df5ff65e0c07a18ec373a9a44738fcc19f80bf22ee0bc43ba4",
+        "evidence_pages": [
+          1,
+          3,
+          8
+        ]
+      }
+    },
+    "paper-c89da1a6cfaf5632": {
+      "institutions": [
+        "National University of Singapore",
+        "Asian Institute of Digital Finance",
+        "KTH Royal Institute of Technology",
+        "University of Oxford"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        22
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Perspective-specific LLM agents retrieve variables, generate executable equations, repair retrieval or execution failures, and fit coefficients using differential evolution. A meta-coordinator selects and weights specialists using sector and market-regime context with constrained optimization. Memory stores accuracy, dispersion, tail risk, complexity, bias, ranking, and calibration summaries. Five equity-market datasets use chronological 80/20 training/test splits.",
+      "evidence": "The main table reports the lowest MAPE for MUFASA in every evaluated market, with aggregate MAPE 0.5081 versus 0.6351 for PySR. Ablations support combining perspectives, context-dependent coordination, and statistical memory in the complete system, although richer memory does not improve every isolated variant. Released appendix examples include equations, context weights, and distilled lessons.",
+      "discovery_use": "The agents explicitly propose symbolic hypotheses, retrieve explanatory variables, test executable expressions, and retain statistical lessons to guide further search. This is an articulated discovery method despite its financial application.",
+      "limits": "Agent perspectives and contexts are manually specified, and classical valuation comparisons depend on chosen modeling assumptions. Proprietary Bloomberg and FactSet inputs constrain reproduction. News-driven changes and sentiment are outside the modeled information. Price-derived ratios in discovered equations mean predictive accuracy alone does not establish novel economic mechanisms. Some statistical reporting is inconsistent: the S&P 500 MUFASA-minus-PySR difference implied by Table 2 is -0.1929, whereas Table 5 reports -0.2695. Best-so-far search trajectories also do not independently establish continual generalization. No standalone first-party release was verified beyond artifacts included in the PDF.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "sci_methods",
+        "rationale": "The agents explicitly propose symbolic hypotheses, retrieve explanatory variables, test executable expressions, and retain statistical lessons to guide further search. This is an articulated discovery method despite its financial application.",
+        "pdf_sha256": "b18196aef99dff83903aa86fc7a84ef56f59d14b4fac07143be7ef0e4778a906",
+        "evidence_pages": [
+          1,
+          3,
+          22
+        ]
+      }
+    },
+    "paper-8341014696695a89": {
+      "institutions": [
+        "Mohamed bin Zayed University of Artificial Intelligence",
+        "University of Sydney",
+        "University of Oxford",
+        "AI2 Robotics",
+        "University of Waterloo",
+        "University of Melbourne"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        19
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A frozen planner decomposes instructions into atomic stages assigned to predefined skill families. A learned termination head supports first-failure attribution. The system selects frequent blockers, restores encountered simulator states, and uses an LLM to generate Boolean success predicates. PPO updates shared LoRA adapters using current and previously selected tasks. Checkpoints are retained when bottleneck validation improves. Tests cover two VLA backbones on RoboCasa365 and four LIBERO suites.",
+      "evidence": "After three rounds, GR00T Composite-Seen success rises from a 10.2% base rate to 13.1%, and Composite-Unseen rises from 3.5% to 6.1%. RLDX-1 improves from 20.4% to 21.8% and from 6.0% to 7.1%, respectively. LIBERO average success rises from 53.1% to 65.4%, including gains on sibling tasks excluded from PPO. The termination audit reports 92% first-failure attribution accuracy; generated predicates achieve 95.9% episode agreement on evaluated Atomic-Seen rollouts.",
+      "discovery_use": "SEES autonomously identifies recurring capability gaps, constructs targeted practice tasks, and retains policy updates that transfer to related tasks. Its discovery connection is feedback-driven identification and repair of unknown skill bottlenecks.",
+      "limits": "The complete loop is evaluated in simulation; real-world reconstruction and transfer remain future work. No additional demonstrations are required during evolution, but initialization and termination training use existing demonstrations. Families and benchmark-normalized task specifications are predefined. Unseen composite success remains low, and execution-only decomposition initially harms some base-policy results. Checkpoint acceptance checks target-task gains without requiring whole-system or historical-task preservation. LIBERO inference seeds characterize one evolution run per suite, not independent training replications. No paper-specific public release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "adaptation",
+        "rationale": "SEES autonomously identifies recurring capability gaps, constructs targeted practice tasks, and retains policy updates that transfer to related tasks. Its discovery connection is feedback-driven identification and repair of unknown skill bottlenecks.",
+        "pdf_sha256": "6f749a32316301d6bee3ca62d170d0902b1e89a5c9332c4b39a924d5f7e29ffc",
+        "evidence_pages": [
+          1,
+          4,
+          19
+        ]
+      }
+    },
+    "paper-3b70b4be961ade0f": {
+      "institutions": [
+        "Vanderbilt University",
+        "University of California, Santa Cruz",
+        "University of California, San Francisco",
+        "Zhejiang University",
+        "University of Pennsylvania"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Rendered views and reported locations share known 3D geometry. Reference masks verify localization within 5 mm and support attribution to exposure, detection, and downstream retention. Designers receive aggregate statistics and trial histories, then propose bounded revisions. Training changes must beat measured seed variation; inference changes require paired-bootstrap evidence. Evaluation includes LiTS and KiTS23, frozen VLMs, a matched dense-reading baseline, component ablations, and rejected searches.",
+      "evidence": "The selected reader reaches 79% liver recall at 0.35 false positives per patient and 83% kidney recall at 0.37. Under the same dense liver-reading protocol, Gemini 3.8 Flash reaches 34% recall, while the frozen-encoder and hand-selected adapter variants reach 19% and 25%. Recipe revisions mainly improve precision; broader vision adaptation produces the largest increase in detectable lesions. Subsequent inference revisions combine complementary readers. Two recipe searches fail to establish gains beyond seed variation.",
+      "discovery_use": "The contribution is an externally verified self-improvement process that attributes capability failures and searches targeted revisions. It directly addresses how agents can discover and validate improvements to their own perception systems.",
+      "limits": "The routing rule was formulated retrospectively and did not schedule the reported experiments, so prospective autonomous routing is unproven. Attribution is a heuristic rather than a causal guarantee, and geometry cannot predict an unseen reader response without inference. Search is bounded to predefined interventions and depends on reference masks. Cohorts are small, some test patients appeared in earlier component studies, and generalization beyond two CT tasks is untested. Some appendix baseline false-positive rates exceed the main table's stated 0.5 budget, so matched-protocol comparisons are stronger evidence than the blanket frontier comparison. The verified project destination returned public HTML in the supplied availability check; the web reader could not fetch it, and no code or checkpoint release was independently verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "open_ended",
+        "rationale": "The contribution is an externally verified self-improvement process that attributes capability failures and searches targeted revisions. It directly addresses how agents can discover and validate improvements to their own perception systems.",
+        "pdf_sha256": "908c43d6bb68d8d55a990e8c2de7ff5148c4177718c1201675eac8d40cd8b0c7",
+        "evidence_pages": [
+          1,
+          3,
+          5
+        ]
+      }
+    },
+    "paper-d94a846ad662e4ea": {
+      "institutions": [
+        "University of Virginia",
+        "Microsoft Research",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The system extends HyperAgents with an IDM shared across archive branches. Bias-corrected predicted regression triggers an optional revision; the final child is evaluated regardless of its forecast. Every five generations, an IDM candidate is constructed and tested on subsequently collected records, requiring lower forecast loss without worse centered score error. Experiments use five 40-generation runs per setting across coding, jointly optimized paper review and robotics reward design, and mathematical grading, with reflection and frozen-IDM controls.",
+      "evidence": "Coding median AUBC increases from 0.210 to 0.306 over 40 generations, while the matched-token advantage is 10.9%. Selected coding agents gain 13.25 percentage points over initialization on held-out tasks, versus 5.42 for HyperAgents. Candidate IDMs improve Brier loss in 19 of 28 subsequent-record comparisons. Transferring one evolved IDM raises held-out mathematical-grading accuracy to 55%, versus 51% from a fresh IDM and 47% for HyperAgents.",
+      "discovery_use": "The primary contribution is learning to forecast the effects of agent modifications and using those predictions to improve further self-modification. This directly concerns retained knowledge about how to discover better agents.",
+      "limits": "Only five complete runs support each condition. All reported coding AUBC difference intervals against reflection, frozen-IDM, and always-revise IDM controls include zero, so these component advantages remain uncertain. Token matching excludes policy-training compute and wall time, particularly relevant to robotics. Paper review predicts recorded conference decisions, and robotics repeats one velocity-tracking control task; neither establishes broad scientific discovery ability. Transfer uses the same selected source IDM in every target run. The author-listed anonymous code destination could not be fetched, so no accessible code release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "open_ended",
+        "rationale": "The primary contribution is learning to forecast the effects of agent modifications and using those predictions to improve further self-modification. This directly concerns retained knowledge about how to discover better agents.",
+        "pdf_sha256": "57fe3376ad9ba58b9b69d88891eaf18648b7f0ef0f8ae89b3b532643aac98011",
+        "evidence_pages": [
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    "paper-5ff961211382d518": {
+      "institutions": [
+        "Johns Hopkins University",
+        "MIT",
+        "University of Texas at Austin",
+        "Bayesian Health"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A Proposer receives case evidence and the Solver's draft, learns from expert-verified instruction targets, and undergoes feedback-based optimization using labeled correctness, confidence, and retrieved-knowledge verification. Observe, Explain, and Intervene counterfactuals distinguish evidence changes, alternative explanations, and actions. Subsequent memory rounds grow accepted experience while keeping model parameters fixed.",
+      "evidence": "On full-test mortality prediction, SFT plus GRPO raises Qwen accuracy from 58.39% to 84.17% and AUROC from 0.7000 to 0.7553. DiagnosisArena instruction tuning averages 60.9% accuracy across three seeds versus 34.8% initially. Business-memory transfer is much weaker: the selected bank improves accuracy from 56.48% to 57.61%, with confidence intervals including zero.",
+      "discovery_use": "Directly studies feedback-driven agent improvement through verified counterfactual reasoning and retained experience. Its correction-versus-harm objective is relevant to agents learning when new evidence warrants revising knowledge.",
+      "limits": "The Verifier checks plausibility rather than certifying causal truth. Training uses human-designed, expert-verified supervision and reference labels; cross-model results use separately trained Proposers. Training-scale comparisons partly confound quantity with curation. Business memories often retain source-specific numbers and transfer poorly. The proposed improvement bound requires evaluation-independent memory trajectories and does not establish that every admitted note helps. This is a targeted review of supplied sections, not every appendix page. No first-party release was verified; the hinted Llama checkpoint is a baseline.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "adaptation",
+        "rationale": "Directly studies feedback-driven agent improvement through verified counterfactual reasoning and retained experience. Its correction-versus-harm objective is relevant to agents learning when new evidence warrants revising knowledge.",
+        "pdf_sha256": "70131459d53681dcecbb94bd5085f1a85c7015521e65bde514fdad79c7770b66",
+        "evidence_pages": [
+          1,
+          6,
+          9,
+          16
+        ]
+      }
+    },
+    "paper-20899a0b6ded457f": {
+      "institutions": [
+        "Meta AI",
+        "University of California, Riverside"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The student samples on-policy solutions. The same checkpoint, additionally conditioned on a verified reference solution, supplies detached next-token targets through forward KL. Accepted shorter rewrites receive cross-entropy training. Joint updates initialize both roles in the next round. Experiments compare SFT, GRPO, frozen self-distillation, teacher-refresh schedules, prompt placements, and inference-token controls.",
+      "evidence": "Qwen3-8B reaches 65.97% Average@12 versus 30.35% for OPSD. Adding concise learning reduces output length from 19,046 to 17,561 tokens relative to DCE alone. Qwen3-4B reaches 61.88%; Gemma cross-family results reach 63.61%. Matched-budget and frozen-teacher controls support a training benefit beyond simply generating more tokens, although an 8K truncation without a continuation cue performs poorly.",
+      "discovery_use": "Directly contributes recursive reasoning post-training: improvements in the student become supervision for subsequent updates. Verified self-rewrites and teacher-refresh controls make this relevant to learning to reason and self-improve.",
+      "limits": "The loop requires verified training solutions and answer checking; it does not autonomously discover training problems or remove external knowledge supervision. The main suite contains only 120 distinct competition problems, with 12 responses each. Teacher-schedule comparisons use single training trajectories, and selected checkpoints limit conclusions about sustained improvement. At 1.7B, concise learning increases length and late training can collapse. Broader-task gains generally use longer outputs. No first-party release was verified. The supplied body and appendices were reviewed, without independent reproduction.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "Directly contributes recursive reasoning post-training: improvements in the student become supervision for subsequent updates. Verified self-rewrites and teacher-refresh controls make this relevant to learning to reason and self-improve.",
+        "pdf_sha256": "0e0207cd9844c85d0adc0fdab2fb560e32e8a190942fba1f53b02d310b39f33e",
+        "evidence_pages": [
+          1,
+          4,
+          8,
+          20
+        ]
+      }
+    },
+    "paper-f9fb7f276f2a7a00": {
+      "institutions": [
+        "Florida State University",
+        "Texas A&M University",
+        "The University of Texas at Austin"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A misspecified Laplace working model motivates a log-determinant and absolute-residual risk. Generalized Bayes regularization tunes row-specific penalties through cross-validation. Alternating residual reweighting, Adam, and soft thresholding optimize the score while acyclicity pressure increases. Empirical Bayes thresholding and removal of small cycle edges produce the final DAG.",
+      "evidence": "Thirty-replication simulations use ER-2 graphs with 10–100 nodes, 50 or 200 observations, and mixed Uniform, Laplace, and Student-t errors. The reported plots favor MARCEDES over PC, GOLEM, ICA-LiNGAM, DirectLiNGAM, and TL in overall structure recovery. It remains applicable when some LiNGAM baselines fail for more variables than observations. The theory establishes a claimed pairwise risk separation, rather than consistency of the complete estimator.",
+      "discovery_use": "Introduces a general method for identifying unknown directed causal structure from observations. Its connection is causal representation learning, independent of whether an agent harness is supplied.",
+      "limits": "Evaluation is restricted to synthetic linear SEMs and one graph family; no real-data or agent evaluation is supplied. Initialization uses PC or DirectLiNGAM, so gains include refinement of those estimates. Optimization is nonconvex, and soft acyclicity requires final cycle removal. DAG-selection and parameter consistency remain future work. As written, uniqueness over unrestricted real matrices needs qualification: without zero-diagonal normalization, residual-row rescaling leaves the risk unchanged. The algorithm does enforce zero diagonals. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "Introduces a general method for identifying unknown directed causal structure from observations. Its connection is causal representation learning, independent of whether an agent harness is supplied.",
+        "pdf_sha256": "fba1a91eb4ca1a3bd47dc007d3b53ac2f966909e4f15031d8005d451beebd48b",
+        "evidence_pages": [
+          1,
+          4,
+          10
+        ]
+      }
+    },
+    "paper-53e3f761f6a0e8c3": {
+      "institutions": [
+        "National University of Singapore",
+        "Fudan University",
+        "The University of Sydney"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Five model backbones operate persistent paper-trading accounts over approximately 30 days. A common ReAct scaffold supports matched mechanism variants with decisions every four hours. Evaluation combines returns and risk measures with programmatic checks and model-judged trace diagnostics; supplied appendix material includes additional memory results and auditor robustness checks.",
+      "evidence": "Return rankings fluctuate substantially more than capability rankings. Tool discovery and valid invocation exhibit different bottlenecks. Gemini stores 93 memories but has lower usage quality than Grok, which stores 12. Memory reduces tail loss for all five models without uniformly improving returns. Multi-agent configurations improve returns for three of four evaluated backbones but increase downside risk for all four. Rule compliance and auditable reasoning also diverge.",
+      "discovery_use": "The primary contribution evaluates evidence gathering, tool discovery, retained experience, and coordination under externally evolving unknown conditions. Financial markets serve as the environment for general agent-capability diagnostics.",
+      "limits": "The supplied pages support a targeted body and appendix review, not an exhaustive review of all 54 pages. One market window limits regime generalization, and independent trajectory replications are not established. Several diagnostics depend on model judges, while composite scores encode design choices. Ranking stability alone does not establish measurement validity. Persistent divergent portfolios complicate causal attribution, and some model–configuration results are unavailable.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "The primary contribution evaluates evidence gathering, tool discovery, retained experience, and coordination under externally evolving unknown conditions. Financial markets serve as the environment for general agent-capability diagnostics.",
+        "pdf_sha256": "4deab047f5d3ada89e377853196e1f7872402147469945da7672c0e0754d7a03",
+        "evidence_pages": [
+          1,
+          3,
+          6
+        ]
+      }
+    },
+    "paper-480b56b9da41924d": {
+      "institutions": [
+        "Enterpret"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Three systems answer the same 30 questions over 9,432 frozen records. An anonymized comparative judge scores answer quality and analytical depth; citation audits assess sampled claim support and evidence structure. Query-level paired outcomes are primary. The treatment includes ingestion-time processing and different orchestration budgets.",
+      "evidence": "The context-graph agent scores 0.961 overall, versus 0.710 for the research agent and 0.651 for agentic retrieval, winning 27 of 30 paired comparisons against the research agent. Bespoke query-time analysis wins some comparisons, and a coarse stored praise category produces a clear graph-agent failure.",
+      "discovery_use": "The central comparison evaluates agents investigating unknown corpus-level themes, checking cited evidence, quantifying findings, and withholding unsupported conclusions. Its evidence-audit protocol is relevant to discovery evaluation, although the ranking is exploratory.",
+      "limits": "The rubric was adjusted after inspecting answers to 28 of 30 questions; fresh-question confirmation is absent. Only 127 of 913 graph-agent citations are member-audited; 786 aggregates retain traceability without member sampling. Semantic recall and rerun variance are unmeasured. One product corpus and bundled system differences limit generalization. No first-party artifact release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "The central comparison evaluates agents investigating unknown corpus-level themes, checking cited evidence, quantifying findings, and withholding unsupported conclusions. Its evidence-audit protocol is relevant to discovery evaluation, although the ranking is exploratory.",
+        "pdf_sha256": "21a0a599b8b63e295684129d52adc9e5adcd9e70e18f2d514ac95b7007758bdd",
+        "evidence_pages": [
+          1,
+          3,
+          4,
+          7
+        ]
+      }
+    },
+    "paper-7d2325553eb22ef0": {
+      "institutions": [
+        "Argonne National Laboratory",
+        "Fermi National Accelerator Laboratory",
+        "RIKEN Center for Computational Science"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A versioned Lab Notebook separates human specifications, plans, approvals, tools, and agent logs. Fourteen runs translate the same MCFM starting code under bounded CodeScribe author–reviewer loops, Claude Code loops, and parallel workflows. Verification requires benchmark sensitivity to the translated file and numerical agreement with the reference.",
+      "evidence": "Bounded author–reviewer loops settle comparable file counts at roughly one-third the cost per file of parallel workflows. A same-model Claude Code comparison reaches the same files at about 40% of the parallel workflow's cost. Architecturally enforced limits prevent observed budget violations. The study also exposes a semantic translation ambiguity that passes every benchmark and private memory that changes later runs.",
+      "discovery_use": "Provides a concrete scientific-agent harness with numerical verification, human acceptance boundaries, execution limits, and provenance. These mechanisms support reliable computational discovery workflows, although the experiment concerns software translation.",
+      "limits": "One translation task and small, uneven replication limit generalization. Work selection concentrates on three modules, and settled files are not equivalent to complete semantic verification. Private memory confounds comparisons. The numerical oracle misses unused precision-kind errors. Costs use list prices, and stopping conditions differ across configurations. The cited notebook archive could not be independently fetched; CodeScribe was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "Provides a concrete scientific-agent harness with numerical verification, human acceptance boundaries, execution limits, and provenance. These mechanisms support reliable computational discovery workflows, although the experiment concerns software translation.",
+        "pdf_sha256": "56463e642876d47ce5eb4da87eee4d5656b86f9dac9c8e240ce84bfd82b228a5",
+        "evidence_pages": [
+          1,
+          2,
+          11
+        ]
+      }
+    },
+    "paper-a13bbb297eb54c7e": {
+      "institutions": [
+        "MATS",
+        "ELLIS Institute Tübingen",
+        "Max Planck Institute for Intelligent Systems",
+        "Tübingen AI Center"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses 222 tasks from 18 benchmark families, retaining native scoring while removing native time limits. Three independent duration requests per task are timed externally. Additional experiments swap harnesses, compare forecasts with separate natural runs, inspect transcripts, and progressively remove timing cues from retrospective estimates.",
+      "evidence": "Across 1,991 main runs, Astra, Sol, and Fable finish within 5% of requested time in 63%, 39%, and 4% of runs, respectively. Harness swaps preserve much of the model difference. Fourteen of 158 classifiable Astra transcripts explicitly sleep after apparent completion. Longer requests improve native scores on only about one-quarter of tasks. Forecasts generally overestimate runtime, while removing temporal cues substantially worsens retrospective estimates.",
+      "discovery_use": "Evaluates time budgeting and sustained work in long-horizon agents, including research reproduction and model post-training tasks. It distinguishes elapsed runtime from productive investigation, a concrete requirement for evaluating autonomous discovery.",
+      "limits": "Each task receives one run per requested duration, mixing instruction effects with stochastic variation. Only three main agents, one instruction wording, and maximum reasoning effort are tested. Provider latency affects runtime, and only four tasks receive requests beyond 8.3 hours. Transcript classifications cannot fully observe reasoning or determine the value of rechecking. Some native grading requires reconstruction or modified judging conditions, including PaperBench's judge and reproduction budget.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "Evaluates time budgeting and sustained work in long-horizon agents, including research reproduction and model post-training tasks. It distinguishes elapsed runtime from productive investigation, a concrete requirement for evaluating autonomous discovery.",
+        "pdf_sha256": "be7d28563a98d1750ca6ed719b902af0dea65fdc68c16f02ee1e8b1f8b94bedd",
+        "evidence_pages": [
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    "paper-d0f8ebef91a045e3": {
+      "institutions": [
+        "Sola Security"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The agent iterates over an exploitation hypothesis using structured queries, graph traversal, catalog search, and neighborhood exploration. An evidence policy requires observable, relevant facts and a higher bar for raising severity. A field study covers 9,967 HIGH findings; independent cloud API probes check selected decisive facts, while LLM judges classify reasoning patterns.",
+      "evidence": "The agent re-grades 75.1% of findings: 58.5% downward and 16.6% upward. Beyond-resource evidence decides 49.0% of traced verdicts. Live checks confirm 99.4% of decidable facts, with an 81.8% lower bound when unchecked live findings count as wrong. Pattern-label agreement reaches Krippendorff’s alpha of 0.90.",
+      "discovery_use": "The agent explicitly formulates exploitation hypotheses, gathers previously unexamined environmental evidence, revises assessments, and checks decisive facts against live infrastructure. This provides a concrete hypothesis-driven investigation and verification contribution.",
+      "limits": "Fact confirmation does not validate severity grades or exploitation likelihood. Live verification covers one platform and five resource types; other-product and policy evidence remains outside that check. Recall and agent rerun consistency are unmeasured. The observational study has no controlled agent baseline and is concentrated on AWS HIGH findings. The supplied repository hints concern cited tools, not this system; no first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "sci_methods",
+        "rationale": "The agent explicitly formulates exploitation hypotheses, gathers previously unexamined environmental evidence, revises assessments, and checks decisive facts against live infrastructure. This provides a concrete hypothesis-driven investigation and verification contribution.",
+        "pdf_sha256": "769a15c7749caf1579441eacc07b2e9b9b78950bfaf57d3dd2da64d2d70e3d03",
+        "evidence_pages": [
+          1,
+          3,
+          4,
+          7
+        ]
+      }
+    },
+    "paper-94dad5340d5493a7": {
+      "institutions": [
+        "Ant International",
+        "Ant Group"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A persistent repository stores typed nodes, relations, and referenced tool observations. A lightweight historical index guides Progressive State Access, while Incremental State Update maintains current-request states. The agent policy remains fixed. Evaluation compares full context, retrieval memories, state tracking, and a hybrid on MemoryArena and policy-constrained service tasks.",
+      "evidence": "Against the same-model full-context baseline, average MemoryArena success improves by 4.55 percentage points with 43.2% fewer tokens. Average service-task pass rate improves by 13.95 points with 40.6% fewer tokens. Ablations support complementary roles for incremental maintenance and selective access, although removing selective access slightly improves shopping progress.",
+      "discovery_use": "Persistent, evidence-linked agent memory directly supports revisiting prior conclusions when new information changes an investigation. This is a concrete discovery-enabling systems contribution.",
+      "limits": "Shopping and travel success remain low at 5.33% and 0.74%. Progressive Web Search is excluded because of annotation concerns. Ablations replace whole mechanisms and do not isolate individual design choices. Benchmarks do not establish discovery performance or deployment safety. The manuscript promises a future code release; no first-party implementation was verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "Persistent, evidence-linked agent memory directly supports revisiting prior conclusions when new information changes an investigation. This is a concrete discovery-enabling systems contribution.",
+        "pdf_sha256": "547769c35bdb36ba4a15a7c454e33bb90f6893c7e3ab6b5ce7ecaab9e5cb0245",
+        "evidence_pages": [
+          1,
+          5,
+          8
+        ]
+      }
     }
   }
 }

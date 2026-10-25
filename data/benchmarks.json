@@ -2083,6 +2083,73 @@
       "name": "SciExam for ENSO: Can AI Agents Build Climate Models?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.10513"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 lists the code repository https://github.com/RaymondVoldemortFu/LiveMACE; availability was not independently checked.",
+        "Agents can gather external information and dynamically retrieve tools."
+      ],
+      "focus": "Persistent simulated paper-trading accounts receive live cryptocurrency and U.S. equity prices and external information. Every four hours, agents may reason, call tools, gather evidence, and issue zero or more simulated trading actions. Configurations add tool discovery, persistent memory, hierarchical rules, or manager-led collaboration. Live market observations are real data; paper trades do not establish physical experimentation.",
+      "limits": "Approximately one month of market conditions is observed. Portfolios diverge persistently, and independent trajectory replications are not established. Several process scores depend on model judges and composite-score choices. Supplied pages cover selected body and appendix material.",
+      "training": {
+        "reward": "A parameter-training reward or optimization loop is not established. Evaluation uses cumulative returns and risk measures, programmatic checks of calls and rules, and model-judged trace diagnostics. Tool, memory, rule, and collaboration scores summarize these measurements; page 44 identifies the primary rule auditor and alternative-auditor checks.",
+        "reset": "Page 3 explicitly specifies a non-resettable account state. Positions and account state persist between rounds, and the underlying interaction has no task-defined terminal state.",
+        "branching": "State cloning, counterfactual replay, and branching from a common intermediate account state are not established. Matched configurations maintain separate persistent accounts."
+      },
+      "evaluation_family": "other",
+      "id": "paper-53e3f761f6a0e8c3",
+      "resource_id": "paper-53e3f761f6a0e8c3",
+      "name": "LiveMACE: Process-Aware Evaluation of LLM Agent Capabilities in Evolving Markets",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.09872"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Thirty fixed questions are evaluated over a frozen corpus of 9,432 public feedback records.",
+        "Query contracts, family invariants, and evaluator prompts are hidden from candidate systems.",
+        "Pages 12–13 describe a reproducibility package separate from the manuscript and absent from its source archive; public release availability is not established."
+      ],
+      "focus": "Agents investigate a fixed corpus using semantic search, record inspection, exact aggregation, segment comparison, optional corpus classification, or traversal of a persistent customer context graph. Tool results provide evidence from recorded public feedback. This evaluates corpus analysis and cited synthesis; it does not collect new physical measurements.",
+      "limits": "The rubric was calibrated using answers to 28 of 30 questions. Only 127 of 913 context-graph citations were member-audited; 786 aggregates retain traceability without member sampling. Semantic recall and rerun variance are unmeasured. One corpus and bundled architecture and budget differences limit generalization.",
+      "training": {
+        "reward": "A candidate-training reward or parameter-update loop is not established. A comparative gpt-5.5 judge scores answer quality, analytical depth, and evidence strength; a separate gpt-5.5 citation judge assesses sampled claim–record support. The overall evaluator equally averages quality, depth, and evidence quality, with paired query outcomes primary.",
+        "reset": "Page 4 states that each query executes in a fresh conversation. The corpus remains frozen, while the context graph's ingestion-time summaries, predictions, and relationships persist across questions. Query-specific assignments from the other systems are not shared across questions.",
+        "branching": "Checkpoint branching or cloning of intermediate executions is not established. Specialist delegation and a bounded verification/revision loop are described, but they do not establish environment-state branching."
+      },
+      "evaluation_family": "other",
+      "id": "paper-480b56b9da41924d",
+      "resource_id": "paper-480b56b9da41924d",
+      "name": "From Retrieval to Customer Context: Evaluating Frontier-Model Systems for Voice-of-Customer Analysis",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.09375"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 10 states that code is available at https://github.com/michaelofengenden/agenttimebench and run data at https://agenttimebench.com; availability was not independently checked.",
+        "Files, tools, and network access follow each constituent benchmark; ProgramBench has no internet, while GPQA and Humanity’s Last Exam receive only a callable clock."
+      ],
+      "focus": "Measures duration-following, runtime forecasting, and retrospective elapsed-time estimation across 222 tasks from 18 benchmark families in native agent harnesses. Agents execute computation and interact with software environments. The suite includes actual research reproduction and model post-training experiments, alongside coding, computer use, question answering, and other tasks. An external supervisor measures wall-clock runtime.",
+      "limits": "One run per task, agent, and requested duration leaves instruction effects mixed with stochastic variation. Provider latency affects elapsed time. Three main agents and one duration instruction are evaluated. Only four tasks receive requests beyond 8.3 hours. Some grades were reconstructed after the campaign; PaperBench uses a changed judge and a four-hour H100 reproduction budget.",
+      "training": {
+        "reward": "No training loop for the evaluated agent policies is established. Evaluation combines externally measured duration adherence, forecast and retrospective error, transcript labels, and each task's native grader. Native scores include hidden tests, state checks, model judges, reproduction rubrics, and post-trained-model test accuracy. PostTrainBench tasks execute model post-training, but their training reward or loss is not established by these pages.",
+        "reset": "Every main run starts in a new Docker container with a fresh agent session and workspace. Three duration conditions use separate fresh runs. Forecasts and natural-runtime executions also use separate sessions. Native time caps and budgets are removed; duration-following retains a hidden administrative cutoff at twice the task's largest requested duration.",
+        "branching": "Retrospective experiments explicitly fork completed sessions for Oracle, Native, and Context-only conditions; Replay and Scrubbed rebuild transcripts through an API. Branching or rollback of the underlying task environment during main task execution is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-a13bbb297eb54c7e",
+      "resource_id": "paper-a13bbb297eb54c7e",
+      "name": "AgentTime: Can Agents Estimate and Control Their Own Runtime?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.09944"
     }
   ]
 }
