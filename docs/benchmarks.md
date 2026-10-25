@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**106 usage profiles** · Updated **2026-10-25**
+**109 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -707,6 +707,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Dating the Model: Hidden Dates in System Prompts Affect LLM Evaluation](#paper-64e370b96218d353) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [The Marathon of Scientific Reasoning: Robustness of Scientific Agents to Perturbations in Multi-Turn Interactions](#paper-4c7b45ef0c27315b) | Synthetic data | Analysis + tools | Paper-described |
 | [FinAutoRubric: Expert-Guided Automatic Rubric Generation for Evaluating Financial Research Agents](#paper-8daca2e781dd8746) | Real data | Analysis + tools | Paper-described |
+| [The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks](#paper-f56bdaf671cb8be4) | Real data | Offline data | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1697,6 +1698,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-f56bdaf671cb8be4"></a>
+
+<details>
+<summary>The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks — details</summary>
+
+[Work](../README.md#paper-f56bdaf671cb8be4) · [Source](https://arxiv.org/pdf/2609.25804)
+
+**Focus:** Fixed decision questions mined from recorded software-engineering and machine-learning research trajectories. The evaluated model receives a task, trajectory prefix and two candidate directions, then selects one without seeing or executing the continuations. Recorded test results and native research scores determine labels. These are records of computation, not simulated scientific feedback or new physical measurements. Separate end-to-end experiments execute software-repair tasks.
+
+**Openness:** `Benchmark dataset released at https://huggingface.co/datasets/wenbopan/taste-bench.`, `Evaluation code, protocol and recorded model results released at https://github.com/wbopan/tastebench.`
+
+**New physical measurements:** No
+
+**Limits:** The main benchmark evaluates judgments over existing records rather than executing research experiments. Recorded outcomes also depend on subsequent execution and environment conditions. Generated questions undergo model filtering, which retains 10.8% of candidates. End-to-end advice uses earlier runs on the same evaluation tasks; research-task execution transfer is not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Labels identify the candidate supported by recorded tests or native research scores, with unanimous confirmation from four filtering judges. Evaluation requires correct answers under both candidate orders and averages engineering and research accuracy equally. Advisor training uses teacher-generated reasoning and choices, token-level KL distillation into LoRA adapters, and subsequent answer-label cross-entropy calibration. An online environment reward for advisor training is not established. Separate executor evaluation uses official SWE-bench Pro patch acceptance. |
+| Reset | Each fixed question is presented independently in two reversed candidate orders. An executable environment reset or checkpoint-restoration interface is not established. |
+| Branching | Construction uses recorded parallel attempts and abandoned directions followed by recovery within a recorded run. Evaluation permits only choosing between supplied candidates. Live branching, continuation execution and environment cloning are not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -1734,6 +1758,8 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [Reward Hacking Challenges Oversight of Autonomous Research Agents](#paper-3e1c96441442a7d4) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [CompMat-Bench: Benchmarking AI Agents for Computational Materials Science](#paper-721958fe0d5a8c2d) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Predictive Credit: Measuring What Scientific Explanations Add to Experimental Forecasts](#paper-476e87c36ff94c5c) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [AutoPDEBench: Benchmarking LLM Auto-Research for Neural PDE Solver Design](#paper-8564d528b4a46811) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [WhatWorkedBench: Benchmarking Experimental Understanding in AI Agents](#paper-f30aa5f207baccbb) | Executed programs + evaluators | Finite-pool queries | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -2353,6 +2379,52 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | No forecaster policy-training reward is established. Evaluation scores forecasts against executed child-minus-parent outcomes using point MAE, direction accuracy, coverage, interval width, and a proper central-80-percent interval score. Repeat drift, delivery, integrity, donor alignment, and prespecified gates provide additional checks. Underlying experiments fit models with assigned feature, objective, regularization, or budget changes. |
 | Reset | Frozen states, seeds, data splits, cards, and outcomes support repeated forecast calls and replay comparisons. An interactive environment reset or checkpoint-restoration API is not established. |
 | Branching | Description, matched, and donor contexts share each state, intervention, and outcome; component swaps and paired mechanism controls are also tested. Arbitrary agent-controlled branching of experimental trajectories is not established. |
+
+</details>
+
+<a id="paper-8564d528b4a46811"></a>
+
+<details>
+<summary>AutoPDEBench: Benchmarking LLM Auto-Research for Neural PDE Solver Design — details</summary>
+
+[Work](../README.md#paper-8564d528b4a46811) · [Source](https://arxiv.org/pdf/2609.32245)
+
+**Focus:** Iteratively design and execute neural PDE solver experiments across 25 datasets. Agents produce architecture, training-loss, and configuration files, train candidates, observe validation outcomes, and commit the best validated candidate for held-out testing.
+
+**Openness:** `Page 1 states that code and datasets are fully open-sourced at Github; availability was not independently verified.`
+
+**New physical measurements:** No
+
+**Limits:** Feedback comes from executed model training and evaluation on fixed datasets. These include simulation data and recorded real measurements; querying a physical apparatus or acquiring new physical measurements is not part of the stated agent protocol. GPU memory is constrained, but training time, inference time, FLOPs, and parameter count are unrestricted. The reference search uses five rounds, with selected studies extending to 30.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Each candidate trains on the disjoint training split using its generated loss and hyperparameters. The agent receives validation metrics only, with RMSE as the primary evaluation metric and supplementary dataset-specific metrics. The best validation result selects the candidate for held-out testing. Agent-policy reinforcement learning or a separate policy-training reward is not established. |
+| Reset | Repeated candidate training runs and debugging retries are supported. An explicit environment reset API, restoration of identical initialization, and checkpoint rollback semantics are not established. |
+| Branching | Alternative candidate designs across rounds are supported. Page 6 explicitly permits systems with dynamic delegation or parallel search. Checkpoint-based branching from an identical intermediate training state is not established. |
+
+</details>
+
+<a id="paper-f30aa5f207baccbb"></a>
+
+<details>
+<summary>WhatWorkedBench: Benchmarking Experimental Understanding in AI Agents — details</summary>
+
+[Work](../README.md#paper-f30aa5f207baccbb) · [Source](https://arxiv.org/pdf/2609.27490)
+
+**Focus:** Evaluate quantitative understanding acquired through budgeted computational experiments. Agents inspect workflow code, select configurations with four or six binary options, and submit predictions for every legal configuration. References cover 36 task conditions on 30 sources across eight workflow families.
+
+**Openness:** `Page 10 states that a public repository provides tasks, evaluator-only references, episode semantics, native operations, prepared inputs, numerical controls, and audits; availability was not independently verified.`
+
+**New physical measurements:** No
+
+**Limits:** Outcomes originate from exhaustive native CPU execution on fixed source data, implementations, seeds, and evaluation cohorts. During agent episodes, measurement tools return cached native outcomes from this finite pool. Archived datasets, waveforms, and images supply inputs; no new physical measurements are acquired. Agents also execute bounded numerical calculations. The small deterministic configuration spaces and interface-dependent delivery results limit broader conclusions.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Agent-policy training and a training reward are not established. Final evaluation restores authoritative measured cells and scores conditional-effect MAE and normalized recovery, plus pair-interaction error, grid error, selection regret, strict reconstruction, and delivery. Missing delivery receives zero recovery and strict-reconstruction credit. |
+| Reset | Frozen implementations, seeds, and cohorts support reproducible episode replay. Every numerical calculation starts a fresh Python process. Repeated measurements are free and return the same cached outcomes. An agent-accessible episode reset or rollback API is not established. |
+| Branching | All 16 or 64 configurations are legal and can be queried adaptively or in batches under the distinct-measurement budget. Alternative configurations share fixed source data and evaluation conditions. Forking an intermediate episode or checkpoint is not established. |
 
 </details>
 

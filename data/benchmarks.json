@@ -2379,6 +2379,70 @@
       "name": "FinAutoRubric: Expert-Guided Automatic Rubric Generation for Evaluating Financial Research Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2609.35744"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 states that code and datasets are fully open-sourced at Github; availability was not independently verified."
+      ],
+      "focus": "Iteratively design and execute neural PDE solver experiments across 25 datasets. Agents produce architecture, training-loss, and configuration files, train candidates, observe validation outcomes, and commit the best validated candidate for held-out testing.",
+      "limits": "Feedback comes from executed model training and evaluation on fixed datasets. These include simulation data and recorded real measurements; querying a physical apparatus or acquiring new physical measurements is not part of the stated agent protocol. GPU memory is constrained, but training time, inference time, FLOPs, and parameter count are unrestricted. The reference search uses five rounds, with selected studies extending to 30.",
+      "training": {
+        "reward": "Each candidate trains on the disjoint training split using its generated loss and hyperparameters. The agent receives validation metrics only, with RMSE as the primary evaluation metric and supplementary dataset-specific metrics. The best validation result selects the candidate for held-out testing. Agent-policy reinforcement learning or a separate policy-training reward is not established.",
+        "reset": "Repeated candidate training runs and debugging retries are supported. An explicit environment reset API, restoration of identical initialization, and checkpoint rollback semantics are not established.",
+        "branching": "Alternative candidate designs across rounds are supported. Page 6 explicitly permits systems with dynamic delegation or parallel search. Checkpoint-based branching from an identical intermediate training state is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-8564d528b4a46811",
+      "resource_id": "paper-8564d528b4a46811",
+      "name": "AutoPDEBench: Benchmarking LLM Auto-Research for Neural PDE Solver Design",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.32245"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "finite-pool-query",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 10 states that a public repository provides tasks, evaluator-only references, episode semantics, native operations, prepared inputs, numerical controls, and audits; availability was not independently verified."
+      ],
+      "focus": "Evaluate quantitative understanding acquired through budgeted computational experiments. Agents inspect workflow code, select configurations with four or six binary options, and submit predictions for every legal configuration. References cover 36 task conditions on 30 sources across eight workflow families.",
+      "limits": "Outcomes originate from exhaustive native CPU execution on fixed source data, implementations, seeds, and evaluation cohorts. During agent episodes, measurement tools return cached native outcomes from this finite pool. Archived datasets, waveforms, and images supply inputs; no new physical measurements are acquired. Agents also execute bounded numerical calculations. The small deterministic configuration spaces and interface-dependent delivery results limit broader conclusions.",
+      "training": {
+        "reward": "Agent-policy training and a training reward are not established. Final evaluation restores authoritative measured cells and scores conditional-effect MAE and normalized recovery, plus pair-interaction error, grid error, selection regret, strict reconstruction, and delivery. Missing delivery receives zero recovery and strict-reconstruction credit.",
+        "reset": "Frozen implementations, seeds, and cohorts support reproducible episode replay. Every numerical calculation starts a fresh Python process. Repeated measurements are free and return the same cached outcomes. An agent-accessible episode reset or rollback API is not established.",
+        "branching": "All 16 or 64 configurations are legal and can be queried adaptively or in batches under the distinct-measurement budget. Alternative configurations share fixed source data and evaluation conditions. Forking an intermediate episode or checkpoint is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-f30aa5f207baccbb",
+      "resource_id": "paper-f30aa5f207baccbb",
+      "name": "WhatWorkedBench: Benchmarking Experimental Understanding in AI Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.27490"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Benchmark dataset released at https://huggingface.co/datasets/wenbopan/taste-bench.",
+        "Evaluation code, protocol and recorded model results released at https://github.com/wbopan/tastebench."
+      ],
+      "focus": "Fixed decision questions mined from recorded software-engineering and machine-learning research trajectories. The evaluated model receives a task, trajectory prefix and two candidate directions, then selects one without seeing or executing the continuations. Recorded test results and native research scores determine labels. These are records of computation, not simulated scientific feedback or new physical measurements. Separate end-to-end experiments execute software-repair tasks.",
+      "limits": "The main benchmark evaluates judgments over existing records rather than executing research experiments. Recorded outcomes also depend on subsequent execution and environment conditions. Generated questions undergo model filtering, which retains 10.8% of candidates. End-to-end advice uses earlier runs on the same evaluation tasks; research-task execution transfer is not established.",
+      "training": {
+        "reward": "Labels identify the candidate supported by recorded tests or native research scores, with unanimous confirmation from four filtering judges. Evaluation requires correct answers under both candidate orders and averages engineering and research accuracy equally. Advisor training uses teacher-generated reasoning and choices, token-level KL distillation into LoRA adapters, and subsequent answer-label cross-entropy calibration. An online environment reward for advisor training is not established. Separate executor evaluation uses official SWE-bench Pro patch acceptance.",
+        "reset": "Each fixed question is presented independently in two reversed candidate orders. An executable environment reset or checkpoint-restoration interface is not established.",
+        "branching": "Construction uses recorded parallel attempts and abandoned directions followed by recovery within a recorded run. Evaluation permits only choosing between supplied candidates. Live branching, continuation execution and environment cloning are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-f56bdaf671cb8be4",
+      "resource_id": "paper-f56bdaf671cb8be4",
+      "name": "The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.25804"
     }
   ]
 }

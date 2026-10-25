@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T13:25:18-04:00",
+  "updated_at": "2026-10-25T14:14:01-04:00",
   "window_start": "2026-09-26",
   "window_end": "2026-10-25",
   "window_days": 30,
@@ -1340,11 +1340,21 @@
       "url": "https://arxiv.org/abs/2610.28074",
       "published_at": "2026-10-20",
       "kind": "paper",
-      "summary": "Slot-JEPA reorganizes dense visual features into stable semantic slots and changing spatial masks. Transition memory and transport-based goal costs make predicted action consequences more useful for visual planning.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-20. The supplied metadata agrees with the PDF v1 dateline and arXiv submission history: 20 Oct 2026, 11:53:42 UTC.",
+      "summary": "Slot-JEPA factorizes dense visual features into stable semantic slots and changing spatial masks. A transition-memory predictor reuses relevant past interactions, while transport-based goal costs improve planning over large spatial displacements.",
+      "date_evidence": "The primary arXiv submission history identifies v1 at 2026-10-20 11:53:42 UTC, establishing the original preprint event.",
+      "relevance": "Introduces reusable object-structured world states, action-effect prediction, and retrieval of observed transitions. These enable agents to reason about unfamiliar layouts and consequences using retained experience, although scientific discovery is not directly evaluated.",
       "review_status": "approved",
-      "relevance": "Provides reusable object-structured world representations, action-outcome prediction, and experience retrieval for agents planning in unfamiliar environments. This concretely supports the collection’s world-model direction, although it does not establish causal identification.",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28074"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/KID-7391/Slot-JEPA"
+        }
+      ],
       "id": "fccc1ba3d58415fb"
     },
     {
@@ -1366,15 +1376,47 @@
       ]
     },
     {
+      "title": "Self-Credit: Credit Assignment for Long-Horizon Agentic RL via Intra-group Rescaling",
+      "url": "https://arxiv.org/abs/2610.28388",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "Self-Credit turns an agent’s cited summaries into turn-level learning signals. Comparisons across successful and unsuccessful rollouts refine those signals before policy optimization, combining context compression with credit assignment.",
+      "date_evidence": "The primary arXiv history records v1 at 2026-10-20 15:38:21 UTC. The manuscript's October 21 date is later than this original preprint event.",
+      "relevance": "Provides a concrete training mechanism for learning which evidence-seeking actions matter during extended investigations. Search and deep-research evaluations connect credit assignment directly to agents learning to gather and retain useful knowledge.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28388"
+        }
+      ],
+      "id": "1ff51f6d4550cdeb"
+    },
+    {
       "title": "Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition",
       "url": "https://arxiv.org/abs/2610.28578",
       "published_at": "2026-10-20",
       "kind": "paper",
-      "summary": "Sage-A1.5 develops a 35B mixture-of-experts agent whose learned orchestration and verification behaviors support sustained scientific investigation across tools and parallel research tasks.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-20. The supplied page 1 arXiv v1 dateline agrees with the original arXiv submission metadata.",
+      "summary": "Sage-A1.5 is a 35B mixture-of-experts agent trained to compose domain skills over extended investigations. It learns delegation and intermediate verification, then combines specialized teachers into a unified model. Scientific applications demonstrate inspectable computational research workflows.",
+      "date_evidence": "The primary arXiv submission history identifies v1 at 2026-10-20 17:32:48 UTC, establishing the original preprint event.",
+      "relevance": "Directly trains scientific information gathering, evidence verification, strategy revision, and research coordination. Its primary contribution is incorporating these discovery capabilities into an agent policy through unified post-training.",
       "review_status": "approved",
-      "relevance": "The primary contribution trains agents to coordinate investigations, assess evidence, and revise research strategies. Its scientific training pipeline and feedback-guided experiments directly address learning to discover and verify knowledge.",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28578"
+        },
+        {
+          "label": "Project",
+          "url": "https://alpha-innovator.github.io/Sage-A1.5"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/InternScience/Sage-A1.5"
+        }
+      ],
       "id": "6495ca94a6fbbabb"
     },
     {
@@ -1479,11 +1521,21 @@
       "url": "https://arxiv.org/abs/2610.28554",
       "published_at": "2026-10-20",
       "kind": "paper",
-      "summary": "OverSeer jointly predicts multiple agents’ views and stationary auxiliary views, using the latter as a shared spatial reference for preserving environmental history and cross-agent consistency.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-20, confirmed by original arXiv submission metadata and the supplied page 1 v1 dateline. The internal October 21 manuscript date is not substituted.",
+      "summary": "OverSeer jointly generates multiple agents’ egocentric videos and fixed auxiliary camera streams. The auxiliary streams provide a stable shared reference, while a residual autoencoder compresses changes relative to an initial scene anchor.",
+      "date_evidence": "The primary arXiv history records v1 at 2026-10-20 17:17:59 UTC. The manuscript's October 21 date is later than this original preprint event.",
+      "relevance": "Addresses persistent shared world representations under partial observation, including unseen regions and off-screen events. These are concrete foundations for agents reasoning about unknown world states, with explicit consistency evaluations.",
       "review_status": "approved",
-      "relevance": "The primary contribution improves shared predictive world representations beyond individual agents’ observations. Maintaining unseen events and persistent environmental state directly supports the world-model representation direction of the collection.",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28554"
+        },
+        {
+          "label": "Project",
+          "url": "https://runjiali-rl.github.io/OverSeer/"
+        }
+      ],
       "id": "b30aedba981183d1"
     },
     {
@@ -1549,11 +1601,37 @@
       "url": "https://arxiv.org/abs/2610.28594",
       "published_at": "2026-10-20",
       "kind": "paper",
-      "summary": "Video-Point Model jointly predicts future camera views and persistent 3D point trajectories. Shared motion supervision improves geometric coherence, visual forecasting, and an action-generating robot extension.",
-      "source": "Codex full-text screened",
-      "date_evidence": "2026-10-20. The supplied original paper date agrees with the PDF v1 dateline and arXiv submission history: v1 submitted 20 October 2026 at 17:45:45 UTC.",
+      "summary": "Video-Point Model jointly predicts multi-view videos and persistent 3D point trajectories. Geometric supervision improves visual forecasts and transfers to robot action generation. The paper also introduces aligned training data and a forecasting benchmark.",
+      "date_evidence": "The primary arXiv submission history identifies v1 at 2026-10-20 17:45:45 UTC, establishing the original preprint event.",
+      "relevance": "Develops a predictive world representation that preserves physical point identity across viewpoints and forecasts unobserved motion. This concretely supports agents anticipating unknown action consequences, although autonomous discovery itself is not evaluated.",
       "review_status": "approved",
-      "relevance": "Learns a persistent geometric representation for forecasting unobserved world evolution and demonstrates benefits for robot action learning. Its concrete discovery connection is predictive world representation, without establishing causal identification.",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28594"
+        },
+        {
+          "label": "Project",
+          "url": "https://rootyjeon.github.io/video-point-model/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/rootyJeon/VPM"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/rooty2020/VPM-Data"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/rooty2020/VP-WorldBench"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/rooty2020/VPM-DROID"
+        }
+      ],
       "id": "b2edd9dbadf5564e"
     },
     {
@@ -10473,6 +10551,28 @@
       ]
     },
     {
+      "title": "DISCERN: Can AI Agents Work Like Scientists and Guide Discovery?",
+      "url": "https://arxiv.org/abs/2609.33357",
+      "published_at": "2026-09-27",
+      "kind": "paper",
+      "summary": "DISCERN evaluates complementary scientific judgments across 203 life-science tasks. It distinguishes recognizing evidence problems from acting on them, and distinguishes willingness to propose hypotheses from their assessed quality.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the primary arXiv v1 submission history. It is preserved exactly rather than replaced with a revision or indexing date.",
+      "review_status": "approved",
+      "relevance": "Introduces a direct evaluation of scientific agents' data checking, analytical verification, evidence-grounded hypotheses, and revision under conflicting evidence.",
+      "id": "88426e5a70ebe4e1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.33357"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/discern-bench-anon/discern-benchmark"
+        }
+      ]
+    },
+    {
       "title": "COEVO: Co-Evolving Context and Parameters for Recursive Self-Improvement",
       "url": "https://arxiv.org/abs/2609.33398",
       "published_at": "2026-09-27",
@@ -10651,6 +10751,42 @@
       ]
     },
     {
+      "title": "LLM sequential decision making under uncertainty in biochemical domains",
+      "url": "https://arxiv.org/abs/2609.33061",
+      "published_at": "2026-09-26",
+      "kind": "paper",
+      "summary": "The study separates biochemical prior knowledge from experimental feedback to explain why LLM optimizers often fail to explore effectively. It identifies dependence on candidates already present in context as a recurring limitation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history. The September 29 manuscript date is not the original publication timestamp; the preserved timestamp falls on September 26 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly investigates how scientific agents select experiments, update beliefs, and explore unknown candidates under limited budgets. Its behavioral diagnostics and controlled interventions inform discovery-agent design.",
+      "id": "bf706b858234e243",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.33061"
+        }
+      ]
+    },
+    {
+      "title": "EvoAD: Self-Evolving Autonomous Driving via Latent World-Model Guided Post-hoc Reflection",
+      "url": "https://arxiv.org/abs/2610.23886",
+      "published_at": "2026-09-26",
+      "kind": "paper",
+      "summary": "EvoAD augments a fixed driving planner with learned trajectory evaluation and feedback-conditioned corrections. It retains improved experiences for later reflection rounds without updating the base planner.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the primary arXiv v1 submission history and the September 26 date printed on the supplied first page. The exact original timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Contributes a concrete mechanism for feedback-driven improvement with retained experience: latent-world-model evaluation, episodic memory, and retrieval-conditioned behavioral refinement. This connects directly to continual discovery and self-improvement despite its driving-specific setting.",
+      "id": "f128cef6245387b0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.23886"
+        }
+      ]
+    },
+    {
       "title": "Counterfactual Self-Evolving Agents for Evidence-Grounded Reasoning",
       "url": "https://arxiv.org/abs/2609.32870",
       "published_at": "2026-09-26",
@@ -10687,6 +10823,28 @@
         {
           "label": "Code",
           "url": "https://github.com/mohamed495/CBOED"
+        }
+      ]
+    },
+    {
+      "title": "AutoPDEBench: Benchmarking LLM Auto-Research for Neural PDE Solver Design",
+      "url": "https://arxiv.org/abs/2609.32245",
+      "published_at": "2026-09-26",
+      "kind": "paper",
+      "summary": "AutoPDEBench tests whether research agents can identify physical modeling bottlenecks and construct specialized neural solvers across 25 challenging datasets. It includes a reference planner–coder–debugger system and retains unresolved cases.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the primary arXiv v1 submission history. The exact September 26 timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Provides open scientific modeling challenges and a controlled protocol for agents to iteratively design, test, and improve specialized neural solvers. Autonomous research is the evaluated capability, rather than merely an application label.",
+      "id": "8564d528b4a46811",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.32245"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/RuoyanLi2002/AutoPDEBench-Benchmarking-LLM-Auto-Research-for-Neural-PDE-Solver-Design"
         }
       ]
     },
@@ -11599,11 +11757,21 @@
       "url": "https://arxiv.org/abs/2610.28074",
       "published_at": "2026-10-20",
       "kind": "paper",
-      "summary": "Slot-JEPA reorganizes dense visual features into stable semantic slots and changing spatial masks. Transition memory and transport-based goal costs make predicted action consequences more useful for visual planning.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-20. The supplied metadata agrees with the PDF v1 dateline and arXiv submission history: 20 Oct 2026, 11:53:42 UTC.",
+      "summary": "Slot-JEPA factorizes dense visual features into stable semantic slots and changing spatial masks. A transition-memory predictor reuses relevant past interactions, while transport-based goal costs improve planning over large spatial displacements.",
+      "date_evidence": "The primary arXiv submission history identifies v1 at 2026-10-20 11:53:42 UTC, establishing the original preprint event.",
+      "relevance": "Introduces reusable object-structured world states, action-effect prediction, and retrieval of observed transitions. These enable agents to reason about unfamiliar layouts and consequences using retained experience, although scientific discovery is not directly evaluated.",
       "review_status": "approved",
-      "relevance": "Provides reusable object-structured world representations, action-outcome prediction, and experience retrieval for agents planning in unfamiliar environments. This concretely supports the collection’s world-model direction, although it does not establish causal identification.",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28074"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/KID-7391/Slot-JEPA"
+        }
+      ],
       "id": "fccc1ba3d58415fb"
     },
     {
@@ -11625,15 +11793,47 @@
       ]
     },
     {
+      "title": "Self-Credit: Credit Assignment for Long-Horizon Agentic RL via Intra-group Rescaling",
+      "url": "https://arxiv.org/abs/2610.28388",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "Self-Credit turns an agent’s cited summaries into turn-level learning signals. Comparisons across successful and unsuccessful rollouts refine those signals before policy optimization, combining context compression with credit assignment.",
+      "date_evidence": "The primary arXiv history records v1 at 2026-10-20 15:38:21 UTC. The manuscript's October 21 date is later than this original preprint event.",
+      "relevance": "Provides a concrete training mechanism for learning which evidence-seeking actions matter during extended investigations. Search and deep-research evaluations connect credit assignment directly to agents learning to gather and retain useful knowledge.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28388"
+        }
+      ],
+      "id": "1ff51f6d4550cdeb"
+    },
+    {
       "title": "Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition",
       "url": "https://arxiv.org/abs/2610.28578",
       "published_at": "2026-10-20",
       "kind": "paper",
-      "summary": "Sage-A1.5 develops a 35B mixture-of-experts agent whose learned orchestration and verification behaviors support sustained scientific investigation across tools and parallel research tasks.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-20. The supplied page 1 arXiv v1 dateline agrees with the original arXiv submission metadata.",
+      "summary": "Sage-A1.5 is a 35B mixture-of-experts agent trained to compose domain skills over extended investigations. It learns delegation and intermediate verification, then combines specialized teachers into a unified model. Scientific applications demonstrate inspectable computational research workflows.",
+      "date_evidence": "The primary arXiv submission history identifies v1 at 2026-10-20 17:32:48 UTC, establishing the original preprint event.",
+      "relevance": "Directly trains scientific information gathering, evidence verification, strategy revision, and research coordination. Its primary contribution is incorporating these discovery capabilities into an agent policy through unified post-training.",
       "review_status": "approved",
-      "relevance": "The primary contribution trains agents to coordinate investigations, assess evidence, and revise research strategies. Its scientific training pipeline and feedback-guided experiments directly address learning to discover and verify knowledge.",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28578"
+        },
+        {
+          "label": "Project",
+          "url": "https://alpha-innovator.github.io/Sage-A1.5"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/InternScience/Sage-A1.5"
+        }
+      ],
       "id": "6495ca94a6fbbabb"
     },
     {
@@ -11711,11 +11911,21 @@
       "url": "https://arxiv.org/abs/2610.28554",
       "published_at": "2026-10-20",
       "kind": "paper",
-      "summary": "OverSeer jointly predicts multiple agents’ views and stationary auxiliary views, using the latter as a shared spatial reference for preserving environmental history and cross-agent consistency.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-20, confirmed by original arXiv submission metadata and the supplied page 1 v1 dateline. The internal October 21 manuscript date is not substituted.",
+      "summary": "OverSeer jointly generates multiple agents’ egocentric videos and fixed auxiliary camera streams. The auxiliary streams provide a stable shared reference, while a residual autoencoder compresses changes relative to an initial scene anchor.",
+      "date_evidence": "The primary arXiv history records v1 at 2026-10-20 17:17:59 UTC. The manuscript's October 21 date is later than this original preprint event.",
+      "relevance": "Addresses persistent shared world representations under partial observation, including unseen regions and off-screen events. These are concrete foundations for agents reasoning about unknown world states, with explicit consistency evaluations.",
       "review_status": "approved",
-      "relevance": "The primary contribution improves shared predictive world representations beyond individual agents’ observations. Maintaining unseen events and persistent environmental state directly supports the world-model representation direction of the collection.",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28554"
+        },
+        {
+          "label": "Project",
+          "url": "https://runjiali-rl.github.io/OverSeer/"
+        }
+      ],
       "id": "b30aedba981183d1"
     },
     {
@@ -11781,11 +11991,37 @@
       "url": "https://arxiv.org/abs/2610.28594",
       "published_at": "2026-10-20",
       "kind": "paper",
-      "summary": "Video-Point Model jointly predicts future camera views and persistent 3D point trajectories. Shared motion supervision improves geometric coherence, visual forecasting, and an action-generating robot extension.",
-      "source": "Codex full-text screened",
-      "date_evidence": "2026-10-20. The supplied original paper date agrees with the PDF v1 dateline and arXiv submission history: v1 submitted 20 October 2026 at 17:45:45 UTC.",
+      "summary": "Video-Point Model jointly predicts multi-view videos and persistent 3D point trajectories. Geometric supervision improves visual forecasts and transfers to robot action generation. The paper also introduces aligned training data and a forecasting benchmark.",
+      "date_evidence": "The primary arXiv submission history identifies v1 at 2026-10-20 17:45:45 UTC, establishing the original preprint event.",
+      "relevance": "Develops a predictive world representation that preserves physical point identity across viewpoints and forecasts unobserved motion. This concretely supports agents anticipating unknown action consequences, although autonomous discovery itself is not evaluated.",
       "review_status": "approved",
-      "relevance": "Learns a persistent geometric representation for forecasting unobserved world evolution and demonstrates benefits for robot action learning. Its concrete discovery connection is predictive world representation, without establishing causal identification.",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28594"
+        },
+        {
+          "label": "Project",
+          "url": "https://rootyjeon.github.io/video-point-model/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/rootyJeon/VPM"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/rooty2020/VPM-Data"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/rooty2020/VP-WorldBench"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/rooty2020/VPM-DROID"
+        }
+      ],
       "id": "b2edd9dbadf5564e"
     },
     {
@@ -20353,6 +20589,28 @@
       ]
     },
     {
+      "title": "DISCERN: Can AI Agents Work Like Scientists and Guide Discovery?",
+      "url": "https://arxiv.org/abs/2609.33357",
+      "published_at": "2026-09-27",
+      "kind": "paper",
+      "summary": "DISCERN evaluates complementary scientific judgments across 203 life-science tasks. It distinguishes recognizing evidence problems from acting on them, and distinguishes willingness to propose hypotheses from their assessed quality.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the primary arXiv v1 submission history. It is preserved exactly rather than replaced with a revision or indexing date.",
+      "review_status": "approved",
+      "relevance": "Introduces a direct evaluation of scientific agents' data checking, analytical verification, evidence-grounded hypotheses, and revision under conflicting evidence.",
+      "id": "88426e5a70ebe4e1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.33357"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/discern-bench-anon/discern-benchmark"
+        }
+      ]
+    },
+    {
       "title": "COEVO: Co-Evolving Context and Parameters for Recursive Self-Improvement",
       "url": "https://arxiv.org/abs/2609.33398",
       "published_at": "2026-09-27",
@@ -20531,6 +20789,42 @@
       ]
     },
     {
+      "title": "LLM sequential decision making under uncertainty in biochemical domains",
+      "url": "https://arxiv.org/abs/2609.33061",
+      "published_at": "2026-09-26",
+      "kind": "paper",
+      "summary": "The study separates biochemical prior knowledge from experimental feedback to explain why LLM optimizers often fail to explore effectively. It identifies dependence on candidates already present in context as a recurring limitation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the primary arXiv v1 submission history. The September 29 manuscript date is not the original publication timestamp; the preserved timestamp falls on September 26 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly investigates how scientific agents select experiments, update beliefs, and explore unknown candidates under limited budgets. Its behavioral diagnostics and controlled interventions inform discovery-agent design.",
+      "id": "bf706b858234e243",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.33061"
+        }
+      ]
+    },
+    {
+      "title": "EvoAD: Self-Evolving Autonomous Driving via Latent World-Model Guided Post-hoc Reflection",
+      "url": "https://arxiv.org/abs/2610.23886",
+      "published_at": "2026-09-26",
+      "kind": "paper",
+      "summary": "EvoAD augments a fixed driving planner with learned trajectory evaluation and feedback-conditioned corrections. It retains improved experiences for later reflection rounds without updating the base planner.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the primary arXiv v1 submission history and the September 26 date printed on the supplied first page. The exact original timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Contributes a concrete mechanism for feedback-driven improvement with retained experience: latent-world-model evaluation, episodic memory, and retrieval-conditioned behavioral refinement. This connects directly to continual discovery and self-improvement despite its driving-specific setting.",
+      "id": "f128cef6245387b0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.23886"
+        }
+      ]
+    },
+    {
       "title": "Counterfactual Self-Evolving Agents for Evidence-Grounded Reasoning",
       "url": "https://arxiv.org/abs/2609.32870",
       "published_at": "2026-09-26",
@@ -20567,6 +20861,28 @@
         {
           "label": "Code",
           "url": "https://github.com/mohamed495/CBOED"
+        }
+      ]
+    },
+    {
+      "title": "AutoPDEBench: Benchmarking LLM Auto-Research for Neural PDE Solver Design",
+      "url": "https://arxiv.org/abs/2609.32245",
+      "published_at": "2026-09-26",
+      "kind": "paper",
+      "summary": "AutoPDEBench tests whether research agents can identify physical modeling bottlenecks and construct specialized neural solvers across 25 challenging datasets. It includes a reference planner–coder–debugger system and retains unresolved cases.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv Atom timestamp matches the primary arXiv v1 submission history. The exact September 26 timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Provides open scientific modeling challenges and a controlled protocol for agents to iteratively design, test, and improve specialized neural solvers. Autonomous research is the evaluated capability, rather than merely an application label.",
+      "id": "8564d528b4a46811",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.32245"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/RuoyanLi2002/AutoPDEBench-Benchmarking-LLM-Auto-Research-for-Neural-PDE-Solver-Design"
         }
       ]
     },
