@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-572-2563eb?style=flat-square" alt="572 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-573-2563eb?style=flat-square" alt="573 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-98-0f766e?style=flat-square" alt="98 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -77,7 +77,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 
 | Topic | Research question | Works |
 | --- | --- | ---: |
-| 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 34 |
+| 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 35 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 60 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 47 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 85 |
@@ -108,6 +108,8 @@ Each work appears once under its primary contribution; see the [classification g
   Nenad Tomašev et al. · Google DeepMind
 - <a id="paper-663c45b308182702"></a>**Audit the Scaffold, Not the Checkpoint: A Stationarity Dichotomy for Recursive Self-Improvement in Agentic Coding** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.34924)* · [Paper](https://arxiv.org/abs/2609.34924)<br>
   Sebastian Bobadilla-Suarez, Bob Suh, Ryan Fortin · OnCorps
+- <a id="paper-e7d4b4cbecd5681d"></a>**Building Trustworthy Household Robots through Open-World Safety** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.14034)* · [Paper](https://arxiv.org/abs/2610.14034)<br>
+  Yu-Lin Tsai et al. · University of California, Berkeley
 - <a id="causal-agents"></a>**Causal Discovery in the Era of Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2606.23608)* · [Paper](https://arxiv.org/abs/2606.23608)<br>
   Yujia Zheng et al. · Carnegie Mellon University; Mohamed bin Zayed University of Artificial Intelligence
 - <a id="paper-7fabe26ca5c43e1f"></a>**Co-Recursive Semantic Self-Extension: A Mathematical Foundation for Open-Ended Intelligence** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31097)* · [Paper](https://arxiv.org/abs/2610.31097)<br>
