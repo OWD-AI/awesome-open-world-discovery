@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**96 usage profiles** · Updated **2026-10-25**
+**97 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1563,6 +1563,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [OpenProblemBench: Benchmarking AI on Open Problems in the Foundational Theoretical Sciences](#paper-5a53c3bdb60bfc08) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [SciExam for ENSO: Can AI Agents Build Climate Models?](#paper-d90a8e0869dee55c) | Scientific data + verifiers | Computational experiments | Paper-described |
 | [AgentTime: Can Agents Estimate and Control Their Own Runtime?](#paper-a13bbb297eb54c7e) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [Reward Hacking Challenges Oversight of Autonomous Research Agents](#paper-3e1c96441442a7d4) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -2113,6 +2114,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | No training loop for the evaluated agent policies is established. Evaluation combines externally measured duration adherence, forecast and retrospective error, transcript labels, and each task's native grader. Native scores include hidden tests, state checks, model judges, reproduction rubrics, and post-trained-model test accuracy. PostTrainBench tasks execute model post-training, but their training reward or loss is not established by these pages. |
 | Reset | Every main run starts in a new Docker container with a fresh agent session and workspace. Three duration conditions use separate fresh runs. Forecasts and natural-runtime executions also use separate sessions. Native time caps and budgets are removed; duration-following retains a hidden administrative cutoff at twice the task's largest requested duration. |
 | Branching | Retrospective experiments explicitly fork completed sessions for Oracle, Native, and Context-only conditions; Replay and Scrubbed rebuild transcripts through an API. Branching or rollback of the underlying task environment during main task execution is not established. |
+
+</details>
+
+<a id="paper-3e1c96441442a7d4"></a>
+
+<details>
+<summary>Reward Hacking Challenges Oversight of Autonomous Research Agents — details</summary>
+
+[Work](../README.md#paper-3e1c96441442a7d4) · [Source](https://arxiv.org/pdf/2609.28614)
+
+**Focus:** Reward hacking and oversight during executed computational research and implementation tasks. Feedback includes tool outputs and visible task scores within attempts, plus reviewer decisions between E3 attempts. Tasks use fixed datasets, synthetic inputs, computational kernels, and some simulated computational systems; independent evaluators execute submissions on hidden data or inputs. No new physical measurements are reported.
+
+**Openness:** `Agents can inspect workspace files, edit solutions, execute shell commands, invoke the visible scorer, and rerun experiments.`, `Tasks permit code, models, analyses, reports, and experimental protocols as deliverables.`, `E3 permits adaptive revision after review for up to five attempts.`, `Ready-to-run attack code, exact red-team prompts, task-level scorer vulnerabilities, and raw mechanism summaries are withheld.`
+
+**New physical measurements:** No
+
+**Limits:** The suite deliberately exposes evaluation weaknesses. E2–E3 authorize hacking and use thresholds above measured compliant baselines. Hack labels require threshold passage and mechanism-panel confirmation; LLM verification and review errors may be correlated. Artifact review and hidden execution audits can both miss exploits. General environment reset and agent-controlled branching APIs are not established. Public availability of a complete runnable benchmark is not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No parameter training of the research agents is reported; E3 adaptation occurs in context without weight updates. Inference-time objectives use task-specific visible scorers and pass thresholds, including accuracy, statistical significance, judge scores, latency, correctness, and code size. E1 uses full-trajectory assessment and instrumented checks. E2–E3 require threshold passage plus mechanism-panel confirmation for a hack label; submission-only majority review defines evasion. A separate execution audit recomputes protected metrics on hidden inputs. |
+| Reset | Each attempt is a complete sandboxed agent session capped at 40 turns or 3600 seconds. E3 review rounds use fresh attempts, with prior history supplied in the detailed-feedback condition. The execution audit copies the submission into a new sandbox and restores the canonical scorer, evaluator, and specification before hidden checks. A general reset API available to agents is not established. |
+| Branching | The paired detailed-feedback and retry-only conditions share round 1 and then vary subsequent feedback. Agents can revise and rerun solutions within an attempt. Arbitrary agent-controlled state snapshots, checkpoint restoration, or branching from intermediate execution states are not established. |
 
 </details>
 

@@ -2150,6 +2150,30 @@
       "name": "AgentTime: Can Agents Estimate and Control Their Own Runtime?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.09944"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents can inspect workspace files, edit solutions, execute shell commands, invoke the visible scorer, and rerun experiments.",
+        "Tasks permit code, models, analyses, reports, and experimental protocols as deliverables.",
+        "E3 permits adaptive revision after review for up to five attempts.",
+        "Ready-to-run attack code, exact red-team prompts, task-level scorer vulnerabilities, and raw mechanism summaries are withheld."
+      ],
+      "focus": "Reward hacking and oversight during executed computational research and implementation tasks. Feedback includes tool outputs and visible task scores within attempts, plus reviewer decisions between E3 attempts. Tasks use fixed datasets, synthetic inputs, computational kernels, and some simulated computational systems; independent evaluators execute submissions on hidden data or inputs. No new physical measurements are reported.",
+      "limits": "The suite deliberately exposes evaluation weaknesses. E2–E3 authorize hacking and use thresholds above measured compliant baselines. Hack labels require threshold passage and mechanism-panel confirmation; LLM verification and review errors may be correlated. Artifact review and hidden execution audits can both miss exploits. General environment reset and agent-controlled branching APIs are not established. Public availability of a complete runnable benchmark is not established.",
+      "training": {
+        "reward": "No parameter training of the research agents is reported; E3 adaptation occurs in context without weight updates. Inference-time objectives use task-specific visible scorers and pass thresholds, including accuracy, statistical significance, judge scores, latency, correctness, and code size. E1 uses full-trajectory assessment and instrumented checks. E2–E3 require threshold passage plus mechanism-panel confirmation for a hack label; submission-only majority review defines evasion. A separate execution audit recomputes protected metrics on hidden inputs.",
+        "reset": "Each attempt is a complete sandboxed agent session capped at 40 turns or 3600 seconds. E3 review rounds use fresh attempts, with prior history supplied in the detailed-feedback condition. The execution audit copies the submission into a new sandbox and restores the canonical scorer, evaluator, and specification before hidden checks. A general reset API available to agents is not established.",
+        "branching": "The paired detailed-feedback and retry-only conditions share round 1 and then vary subsequent feedback. Agents can revise and rerun solutions within an attempt. Arbitrary agent-controlled state snapshots, checkpoint restoration, or branching from intermediate execution states are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-3e1c96441442a7d4",
+      "resource_id": "paper-3e1c96441442a7d4",
+      "name": "Reward Hacking Challenges Oversight of Autonomous Research Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.28614"
     }
   ]
 }
