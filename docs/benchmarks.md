@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**45 usage profiles** · Updated **2026-10-24**
+**48 usage profiles** · Updated **2026-10-24**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -414,6 +414,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Auditing the Product, Not the Recursion: The Evaluation Evidence Behind Recursive Self-Improvement Claims](#paper-81e8d8901cbd7168) | Real data | Data analysis | Paper-described |
 | [Benchmarking and Error Analysis of Deep Search and Deep Research LLM Agents](#paper-31224f0f7655c123) | Real data | Analysis + tools | Paper-described |
 | [VX-One: Typed, Calibrated Decision Heads for Real-Time Perimeter Triage - An empirical study of unknown-attack honesty, cascade gray zones, and calibration under drift](#paper-1313ca747d97581e) | Real data | Offline data | Paper-described |
+| [The Scientific Research Taste Benchmark (SciTaste-Bench): A Multi-Disciplinary Benchmark for Assessing Large Language Models' Judgment of Research Taste in Scientific Papers](#paper-1b71ddb115ba5e37) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -737,6 +738,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-1b71ddb115ba5e37"></a>
+
+<details>
+<summary>The Scientific Research Taste Benchmark (SciTaste-Bench): A Multi-Disciplinary Benchmark for Assessing Large Language Models' Judgment of Research Taste in Scientific Papers — details</summary>
+
+[Work](../README.md#paper-1b71ddb115ba5e37) · [Source](https://arxiv.org/pdf/2610.28653)
+
+**Focus:** Judgment of published papers against a seven-dimensional bibliometric index across six disciplines. Fixed paper records are evaluated without tools, with native search, with nine structured bibliometric tools, or with both tools and search. Structured tools query NASA ADS and OpenAlex in real time and return recorded scholarly metadata; they do not perform scientific experiments.
+
+**Openness:** `The paper claims release of the selected and backup datasets, evaluation harness, scoring code, prompts, agent configuration, and weight-derivation artifacts on Hugging Face.`, `Release accessibility is not established by the supplied PDF text.`
+
+**New physical measurements:** No
+
+**Limits:** Targets are bibliometric proxies rather than independent expert judgments. Citation Dynamics and Journal Impact contribute 44.8% of the composite score. Weights derived from quantum-physics papers are reused across disciplines without field-specific validation. Each discipline has 50 selected papers, failed responses are omitted from metrics, and metadata can drift. No simulator, executed research intervention, or new physical measurement is described.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Model-training reward is not established. Evaluation compares predicted composite and dimension scores with fixed bibliometric targets using correlation, absolute and squared error, bias, dimension accuracy, and WAPE-based grades. Regression training derives index weights; it is separate from training the evaluated LLMs. |
+| Reset | Environment reset or state restoration is not established. The harness supports resuming by bibcode and retrying transient failures. |
+| Branching | Environment cloning or branching from an intermediate state is not established. Four predefined evaluation modes and repeatable paper-level requests are described. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -755,6 +779,8 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [Into the Unknown](#profile-into-the-unknown) | Executed programs + evaluators | Computational experiments | Data + code |
 | [VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement](#paper-282f8f39baa392ae) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [ST-Bench: A Spatial-Temporal Benchmark for Multi-Agent System Generation on Scientific Research Tasks](#paper-5bd5dfea78d8efef) | Real data | Analysis + code | Paper-described |
+| [Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild?](#paper-d8639c0b4eb9ace3) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [Retrieval Augmented Generation Compositionality](#paper-ee84b521258fee34) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -937,6 +963,52 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Pages 7 and 17 define a continuous evaluator-side reward averaged over query metrics: 0.10 numeric sanity + 0.40 inequality-target satisfaction + 0.50 cached-reference agreement, clipped to [0, 1] and adjusted for metric polarity. A zero candidate value against a nonzero reference receives zero reward. Missing references cause the remaining terms to be renormalized; page 17 reports weights of 0.40 and 0.60. Per-task and per-category optimization use training and validation query pools. At test time, pages 6 and 15–16 score each task as realistic-output rate times mean metric pass rate among realistic outputs, then sum across tasks. Realistic outputs require parsable finite metrics, at least one positive value, and no −1 sentinel. |
 | Reset | Not established: the supplied body does not specify workspace cleanup, random-state reset, or restoration between attempts. Repeated candidate evaluation on fixed staged datasets is described. |
 | Branching | Candidate-workflow search is supported, including AFlow's Monte Carlo tree search over operator graphs on page 7. Environment snapshotting, cloning, rollback, and branching from an intermediate execution state are not established. |
+
+</details>
+
+<a id="paper-d8639c0b4eb9ace3"></a>
+
+<details>
+<summary>Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild? — details</summary>
+
+[Work](../README.md#paper-d8639c0b4eb9ace3) · [Source](https://arxiv.org/pdf/2610.28763)
+
+**Focus:** AGENT4SCI evaluates iterative improvement of scientific ML models across 20 benchmarks, 25 tasks, and 11 domains. Feedback comes from executed training, inference, and metric computations on existing datasets. Agents modify code, launch experiments, train models, inspect results, and submit artifacts for separate held-out evaluation (pages 2–5). The described interaction performs computational research experiments; it does not acquire new physical measurements.
+
+**Openness:** `Agents choose code changes, model modifications, and experiments within a specified scientific ML task and target metric.`, `Training and available validation data are accessible; held-out test data and final score computation are separated from the hill-climbing agent.`, `Each standard run receives eight H200 GPUs and twelve hours.`, `Page 1 reports code and data available on GitHub and Hugging Face; release completeness and licensing are not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** Existing scientific datasets can contain recorded measurements or simulated data; complete per-task provenance is not established by the supplied pages. Held-out metric improvement imperfectly verifies scientific insight, and auditing cannot exclude subtle gaming. Long-run variance, default single-agent harness coverage, skill overfitting, and the absence of a human-researcher baseline limit interpretation. Missing-checkpoint reruns can inflate results, and some standardized baselines differ from published settings (pages 19, 26, and 31).
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Agent-policy training or an RL reward is not established. During evaluation, agents optimize task-specific training and validation objectives through executed experiments. A separate evaluation agent runs submitted artifacts on the sequestered test set using standardized metrics; performance is reported as signed relative improvement over the reproduced baseline. An auditing agent separately checks trajectories and artifacts for misconduct (pages 4–6). |
+| Reset | Each run starts from a verified reproduced baseline in an isolated environment. The full hill-climbing process is rerun when no evaluable checkpoint is saved (page 5). A general environment-reset or snapshot-restoration interface is not established. |
+| Branching | Agents may explore multiple experimental variants; the experiment-management skills discuss concurrent jobs and resource allocation (page 8). Snapshot-based branching of environment state or agent trajectories is not established. |
+
+</details>
+
+<a id="paper-ee84b521258fee34"></a>
+
+<details>
+<summary>Retrieval Augmented Generation Compositionality — details</summary>
+
+[Work](../README.md#paper-ee84b521258fee34) · [Source](https://arxiv.org/pdf/2610.29722)
+
+**Focus:** Executed computational experiments on RAG pipeline composition. Researchers can register a component, declare configuration sweeps, and run complete pipelines against fixed retrieval and question-answering datasets. Eight pipeline factors, targeted ablations, corpus scaling, and seeded reruns produce measured retrieval quality, generated-answer faithfulness, latency, and cost. Optional agentic loops retrieve, verify, and refine within a pipeline run.
+
+**Openness:** `The paper reports a public LASAGNA framework release supporting component registration and configured evaluation sweeps.`, `Paper-specific design matrices, profiles, per-query results, and analysis scripts are available from the authors on request rather than in the framework release.`, `Scaled corpora are described through a fixed construction recipe and seed rather than distributed materialized dumps.`
+
+**New physical measurements:** No
+
+**Limits:** Experiments operate on a constructed English test bed using recorded benchmark documents and queries; they do not generate new physical measurements or use a physical simulator. Query samples are small, headline generators and judges are proprietary, and absolute faithfulness depends on judge and answer length. The full interaction model is underidentified; the focused hierarchical interaction is small and below the declared magnitude threshold. Artifact availability limits independent reproduction.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A model-training reward is not established. Evaluation returns document-level NDCG@10 against benchmark relevance labels; RAGAS faithfulness and answer relevance judged primarily by GPT-5.1; exact match, token F1, latency, and cost; and a joint retrieval–faithfulness–latency measure. Human annotation and additional LLM judges assess evaluator sensitivity. Paired statistical tests and hierarchical analyses compare executed configurations. |
+| Reset | Repeated seeded executions and isolated session configurations are described. The SPEED profile uses a fresh database with its own 384-dimensional collection. General checkpoint restoration or arbitrary environment-state reset is not established. |
+| Branching | Configuration sweeps support alternative pipeline compositions and component substitutions from fixed settings. Runtime state cloning or branching from an intermediate execution checkpoint is not established. |
 
 </details>
 
