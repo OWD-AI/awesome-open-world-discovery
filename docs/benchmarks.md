@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**66 usage profiles** · Updated **2026-10-24**
+**67 usage profiles** · Updated **2026-10-24**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -543,6 +543,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [VerifierBench: Benchmarking the Generation of Executable Verifiers for LLM Agents](#paper-644098a7aa74502f) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [Deep Search in Real-World Web Environments](#paper-d26e59a1cb2b6340) | Real data | Analysis + tools | Paper-described |
 | [Data World: Scaling Data Environments from Scratch](#paper-8b5e7afcd33dcbed) | Synthetic data | Analysis + code | Paper-described |
+| [HSPR: Recovering Software-Agent Benchmark Scores via Hierarchical Posterior Inference](#paper-d3835393933ca7ee) | Real data | Finite-pool queries | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1070,6 +1071,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Pages 5–7: positive and negative atomic rubric items cover data computation and insight discovery; net points are normalized to [0, 1]. Evaluation uses Gemini-3.8-Flash in a single pass over archived reports. GSPO training uses the model's own rollouts and rubric rewards judged by the Qwen3.6-35B-A3B base model, without task-solving demonstrations. |
 | Reset | Page 16: each training rollout runs in a separate isolated sandbox containing Python and data-analysis packages. A reset API or restoration of an intermediate environment state is not established. |
 | Branching | Page 17: training samples eight responses per prompt. This establishes multiple rollouts, while checkpoint cloning and branching from an intermediate interaction state are not established. |
+
+</details>
+
+<a id="paper-d3835393933ca7ee"></a>
+
+<details>
+<summary>HSPR: Recovering Software-Agent Benchmark Scores via Hierarchical Posterior Inference — details</summary>
+
+[Work](../README.md#paper-d3835393933ca7ee) · [Source](https://arxiv.org/pdf/2610.24611)
+
+**Focus:** Recover full software-agent benchmark scores by adaptively revealing a budgeted subset of archived binary task outcomes. A probabilistic posterior guides acquisition and estimates unrevealed outcomes; the feedback itself consists of recorded outcomes.
+
+**Openness:** `The paper reports publicly available code and project resources.`, `Evaluation uses public PTA-IRT response matrices for SWE-bench Lite, Verified, Full, and Pro.`
+
+**New physical measurements:** No
+
+**Limits:** The reported environment replays fixed response matrices without rerunning software agents. It supplies neither simulator observations nor new physical measurements. Historical coverage, within-group exchangeability, and possible shared model families or scaffolds constrain interpretation. Query budgets exclude historical collection, source fitting, and configuration selection costs.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | An agent-training reward is not established. HSPR fits logistic response factors and residual structure from historical responses. Source-only validation selects settings using score MAE. Target evaluation compares estimates with complete archived outcomes using MAE, maximum absolute error, and Kendall’s τb. Acquisition targets posterior score variance or latent-state variance reduction. |
+| Reset | Each target query path begins with an initialized posterior and empty observation history. Five seeded HSPR paths are evaluated per target, with distinct tasks within each path. An interactive environment reset interface is not established. |
+| Branching | Independent seeded query paths and alternative acquisition controls are evaluated against the same fixed archived outcomes. Snapshot, state cloning, and within-trajectory branching support are not established. |
 
 </details>
 

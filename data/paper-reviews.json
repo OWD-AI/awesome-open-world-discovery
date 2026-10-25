@@ -10776,6 +10776,526 @@
           19
         ]
       }
+    },
+    "paper-a54a51900eb1699c": {
+      "institutions": [
+        "IST Austria"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Estimates log-density Hessians using Stein or diffusion estimators, recovers candidate neighborhoods, and repeatedly identifies sinks using conditional Hessian-row covariance ranks. Local covariance and regression-residual estimators serve different model regimes. Evaluation covers synthetic additive noise models, Sachs protein measurements, and DREAM4 networks.",
+      "evidence": "CHess improves several truncated-data results, but superiority is not uniform. In the main five-node Gumbel experiment at 10% retention, CHess-Stein obtains arrow F1 0.76 versus DirectLiNGAM's 0.64. Appendix ten-node lognormal results instead favor DirectLiNGAM under selection. Sachs results favor diffusion-based CHess in the main selected setting, although per-condition results are mixed.",
+      "discovery_use": "Develops a method for recovering unknown causal structure from selected observations, directly supporting discovery representations. Inclusion reflects relevance; the claimed general guarantees require scrutiny.",
+      "limits": "Requires identifiable additive noise models, genericity conditions, and hard selection; linear Gaussian structure remains unidentified. Score preservation holds inside the selected region, and severe truncation complicates estimation. My reading identifies proof concerns: conditioning induces noise dependence despite independence language in the sketches, and the nonlinear proof fixes child co-parents not necessarily included among the conditioned neighbors. Sachs mixes perturbational contexts, and its main-text retention/sample counts conflict with the appendix. Results do not establish universal robustness.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "causality",
+        "rationale": "Develops a method for recovering unknown causal structure from selected observations, directly supporting discovery representations. Inclusion reflects relevance; the claimed general guarantees require scrutiny.",
+        "pdf_sha256": "21ebcb057ee19a64d9607c729677d5f7ea891fb4490ab27f01ac01df94ffba91",
+        "evidence_pages": [
+          1,
+          3,
+          10
+        ]
+      }
+    },
+    "paper-c5f5637b6166e690": {
+      "institutions": [
+        "Ant Group",
+        "Zhejiang University",
+        "HKUST"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Each researcher investigates the complete task with a fixed campaign harness. Shared experiences retain observations, interpretations, conditions, uncertainty, and sources. Proactive unresolved-problem sharing is limited to one additional recipient. Post-campaign review proposes versioned revisions to orientation, knowledge, and skills. Tests compare research systems and parallel configurations on harness optimization, GPU kernels, and AI research.",
+      "evidence": "Under reported allocations, Terminal Bench resolution rises by 2.2 percentage points for both backbones. Mean KernelBench speedup increases from 1.74 to 2.30 and from 6.28 to 8.59. Sharing plus specialized roles achieves the lowest latency in all seven comparable task–backbone pairs; sharing alone worsens two Luna results.",
+      "discovery_use": "Contributes coordination, conditional experience sharing, and researcher harness revision for persistent autonomous investigations.",
+      "limits": "Resource allowances are per researcher, so the baseline comparison does not establish equal-compute efficiency. Results lack repeated-run uncertainty. Configuration comparisons do not isolate individual mechanisms, scaling curves, or research diversity. Gains from cross-campaign harness evolution remain unmeasured. Recipient verification is prescribed rather than enforced, and revision acceptance does not require demonstrated future improvement. The public repository explicitly cites this paper, establishing its association.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "Contributes coordination, conditional experience sharing, and researcher harness revision for persistent autonomous investigations.",
+        "pdf_sha256": "3f37355e681283d941dfa1ba29aaae796c3f119588cb8c1814f2e3a4755a6e27",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-e7b1d34663a13626": {
+      "institutions": [
+        "University of Southern California",
+        "Virginia Tech"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Anchors the first unsafe target version, retrieves candidate agents by function similarity, and tests onset and most-similar versions using behavioral fingerprints. Temporal ranking selects candidates, and recursive tracing follows revised intermediates upstream. Evaluation hides recorded adoption provenance and compares against similarity, onset, unsafe-reproduction, and exhaustive fingerprint baselines.",
+      "evidence": "The method obtains 96.8% exact attribution on 158 queries from 85 controlled scenarios, versus 77.2% for exhaustive fingerprint matching. Multiple representatives and recursion work jointly; either alone remains near 75%. Frozen-method checks recover 34/34 additional routing origins and 9/11 additional fault-family queries. Removing true-source archives produces 128 alternative-agent attributions and seven NONE outputs, none recovering the missing origin.",
+      "discovery_use": "Provides retrospective verification and provenance recovery for self-evolving agents that share executable procedures, a concrete requirement for trustworthy retained experience and self-improvement.",
+      "limits": "Core histories contain 3–7 agents, controlled routing faults, and one introducing event per queried lineage; the method was refined on that core set. Behavioral equivalence does not establish ancestry, especially across branches or convergent revisions. Accuracy is sensitive to candidate coverage, falling to 58.9% at K=2. Missing archives can remain undetected. Surrounding code is homogeneous, and direct candidate execution reproduces replacement-test predictions. The author-linked anonymous code destination resolves, but its contents were not readable through the web reader.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "Provides retrospective verification and provenance recovery for self-evolving agents that share executable procedures, a concrete requirement for trustworthy retained experience and self-improvement.",
+        "pdf_sha256": "6813245d099abca131a0aef5b2d3fe21d753c4853b99b0c67604765f08e99481",
+        "evidence_pages": [
+          1,
+          2,
+          9
+        ]
+      }
+    },
+    "paper-e10b8d841147a1b9": {
+      "institutions": [
+        "Tencent AMS",
+        "Xiaohongshu",
+        "University of Chinese Academy of Sciences",
+        "State Key Laboratory of General Artificial Intelligence, School of Intelligence Science and Technology, Peking University",
+        "Tencent Hunyuan",
+        "CCSE lab, Beihang University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Verification-Aware Tree Search combines a solver for affordable bundles of outstanding checks, a scorer predicting the return of further edits and checks, and a policy choosing work. Group Verification Optimization trains the drafter, scorer, and policy between searches while keeping the verification contract fixed. Experiments compare scientific optimization, system improvement, and separate coding, prompt, and workflow profiles.",
+      "evidence": "The main five-domain scientific comparison reports terminal gains 33.3–40.0% above Janus. A separate evaluation reports advantages in all 50 scientific backbone–task pairs. Four-task system scores exceed MetaRSI-v1 by 1.85–2.38 percentage points across twenty backbones. Coding validation reaches 69.4% versus HGM’s 64.3%, with a 20.8% lower target-cost index. Starting-artifact controls support an effect from learning the improver beyond retaining better agents.",
+      "discovery_use": "Directly advances recursive agent improvement by learning how to allocate limited resources between proposing revisions and obtaining evidence sufficient to adopt them. Evaluation includes scientific optimization tasks.",
+      "limits": "Cost endpoints differ across profiles: the main scientific cost index increases from 148.1 to 158.7, and lower target cost does not establish lower total expenditure. Additional planning can reduce net return, and batching sometimes increases verification cost. Learning guarantees neither causal attribution to individual edits nor monotonic improvement. Review covers supplied pages 1–16 of 47 and two representative images; detailed experimental and theoretical appendices were unavailable.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "open_ended",
+        "rationale": "Directly advances recursive agent improvement by learning how to allocate limited resources between proposing revisions and obtaining evidence sufficient to adopt them. Evaluation includes scientific optimization tasks.",
+        "pdf_sha256": "03b0023aab7c9c371ef402c489ceb9063952c18662a530d34b877d04a9d19c86",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-c749e943da3bd0cf": {
+      "institutions": [
+        "Geek+"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "SENSE reconstructs an executable scene, while PLAN searches simulated trajectories and proposes bounded action chunks and parameter revisions. A harness accepts replayable revisions when measured residuals on the latest record do not worsen beyond tolerance, gates each chunk in the updated nominal twin, and requires fresh completion confirmation. A dual-control formulation explains when probing can repay its planning, execution, and evidence-incorporation costs.",
+      "evidence": "Towel and toaster demonstrations show parameter revision and structural reconstruction during execution. Raising a modeled toaster support reduces bread-depth residual from 22.4 to 1.5 mm; changing bread thickness reduces another depth residual from 201 to 11 mm and closure residual from 0.076 to 0.035. Subsequent chunks execute without reconstruction. The probing proposition establishes a conditional cost threshold, rather than an experimentally measured improvement in probing behavior.",
+      "discovery_use": "Provides an explicit executable world representation that agents revise using physical measurements, with informative actions chosen to distinguish uncertain physical hypotheses. This directly connects world modeling, experimentation, and verification.",
+      "limits": "Evidence consists of limited demonstrations without systematic reconstruction-only or learned-baseline comparisons. Replay checks constrain only the latest record and do not identify unique physical parameters or guarantee improvement on earlier records. Conditional coordinate scans can disagree with the joint consistency set. Missing measurements impose no constraint. Gates check a nominal simulator and planner-specified predicates, without contact-force bounds or unconditional physical safety guarantees. Inference latency restricts operation to quasi-static tasks; downstream post-training benefits remain prospective. Only pages 2 and 9 were visually inspected. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "causality",
+        "rationale": "Provides an explicit executable world representation that agents revise using physical measurements, with informative actions chosen to distinguish uncertain physical hypotheses. This directly connects world modeling, experimentation, and verification.",
+        "pdf_sha256": "c2805480cfca295b1c0cbfdd17a2d8c3639fb1b4bbda4d300bf4adb471ebe80f",
+        "evidence_pages": [
+          1,
+          8,
+          12
+        ]
+      }
+    },
+    "paper-0f5aefdeeb0a0bf5": {
+      "institutions": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "School of Advanced Interdisciplinary Sciences, University of Chinese Academy of Sciences",
+        "School of Computer Science and Communication Engineering, Jiangsu University of Science and Technology",
+        "AICOMO",
+        "College of Computer Science, Inner Mongolia University",
+        "Tencent Hunyuan"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The Questioner derives reference answers and source intervals from video-memory records, then filters questions using probes with and without supporting evidence. Solver diagnosis compares ordinary observations with source evidence and expanded context. Candidate harnesses compete on identical generated validation questions; accepted changes persist into later rounds. Evaluation uses disjoint videos, three standard benchmarks, and a fixed 400-question benchmark subset.",
+      "evidence": "After three rounds, Qwen gains 2.8, 2.4, and 1.5 percentage points on LongVideoBench, MMVU, and Video-Holmes; Gemini gains 0.6, 1.5, and 0.5 points. On the dedicated subset, Qwen improves from 66.0% to 69.5%. Transferring Gemini’s evolved harness to Qwen yields 67.8%. Removing validation or question filtering lowers overall performance. The retained changes concern strategies and hyperparameters.",
+      "discovery_use": "Introduces an agent harness that generates tasks from unlabeled observations, diagnoses evidence-acquisition failures, and retains validated procedural changes. These mechanisms support learning how to investigate unknown visual information.",
+      "limits": "Reference answers inherit potential errors from model-generated memory; supporting-memory probes do not independently establish visual truth. Reasoning accuracy on the dedicated subset falls from 72.2% to 67.8%, and progress is not monotonic across benchmarks. Although the framework supports four component types, skills and tools remain unchanged in the three-round experiments. Two backbones and short runs provide limited evidence for sustained evolution, and accepting any positive validation difference provides no statistical significance guarantee. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "Introduces an agent harness that generates tasks from unlabeled observations, diagnoses evidence-acquisition failures, and retains validated procedural changes. These mechanisms support learning how to investigate unknown visual information.",
+        "pdf_sha256": "00f3a754a2668f2d86d17f24fe29c4a5616aa54646a4bc119e10b49581ea4f96",
+        "evidence_pages": [
+          1,
+          6,
+          9
+        ]
+      }
+    },
+    "paper-308a2c9d337c0bc8": {
+      "institutions": [
+        "Virginia Tech",
+        "NEC Laboratories America"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7,
+        38
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A Pareto archive retains specification bundles with complementary per-entity pass rates. Dependency constraints prioritize callees before callers, and a discounted-UCB bandit allocates refinement effort among eligible entities. Different subsets of failing tests produce alternative revisions; each child regenerates and tests the entire module. Search uses generated tests validated against reference implementations, while final evaluation uses hidden ground-truth tests.",
+      "evidence": "On 20 Python modules containing 247 entities, SpecForge achieves solve rates of 88.9–94.9% across five backbones, averaging 5.7 percentage points above DOCSEARCH. GPT-4o convergence plots show substantially steadier progress than iterative or monolithic baselines. Specifications yield 65.7% Java solve rate versus 39.7% with source alone, rising to 76.2% when combined with source. New-feature pass rates reach 74.5% on easy and 51.7% on hard instances.",
+      "discovery_use": "Studies how agents accumulate reusable behavioral knowledge through execution feedback while managing interference between local refinements. Its retained specifications and transfer experiments concretely address feedback-driven improvement.",
+      "limits": "The improvement procedure stays fixed, and the loop requires a reference implementation to validate generated tests. Main-loop evaluation covers only 20 Python modules; Java is a downstream target. Tests establish sampled behavioral agreement rather than complete semantic correctness. The feature study covers 27 instances and supplies target signatures and docstrings, so it does not demonstrate inferring entirely unspecified requirements. Rollout-axis plots do not establish equal token expenditure and show no uncertainty intervals. This is a targeted review of supplied sections, including limitations on page 38, rather than every appendix page.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "adaptation",
+        "rationale": "Studies how agents accumulate reusable behavioral knowledge through execution feedback while managing interference between local refinements. Its retained specifications and transfer experiments concretely address feedback-driven improvement.",
+        "pdf_sha256": "c93cc680ca220e47bdaf4d5bf5cdb16a428ec5d7c5bd2a0cfe42ca6fdad11ffa",
+        "evidence_pages": [
+          1,
+          4,
+          7,
+          38
+        ]
+      }
+    },
+    "paper-afdbb707d7a14074": {
+      "institutions": [
+        "Virginia Tech",
+        "NEC Laboratories America"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Quality-diversity search maintains a Pareto front over coverage and mutation score within each test-count niche. An online log-space landing kernel corrects the mismatch between requested and generated sizes. A size-annealing UCB rule allocates generation calls, favoring smaller suites after sufficient quality is reached. Evaluation uses 129 Python modules, three backbones, held-out mutants, and 470 human-verified revisions across eight mini-swe-agent harness modules.",
+      "evidence": "At 50 calls per module, TeSearch reports the highest delivered hypervolume on each backbone and the smallest suites among compared LLM-based methods. It rejects 59.9% of behavior-changing harness revisions versus 25.3% for repository tests. It incorrectly rejects 4.0% of equivalent revisions, versus zero for repository tests. Mean decision time is 3.5 seconds versus 5.9 seconds, with no model call during the decision.",
+      "discovery_use": "Optimizes executable verification signals for agents modifying their own harnesses. Its direct evaluation of revision acceptance makes it relevant to reliable self-improvement and knowledge preservation.",
+      "limits": "The harness experiment evaluates a curated acceptance decision on one agent, not sustained autonomous evolution or improved downstream task success. Detecting behavioral divergence does not determine whether a deliberate behavioral change is beneficial. Roughly 40% of divergent revisions remain undetected. Coverage and mutation score are proxies, and test count does not fully measure suite complexity. The 3.5-second decision excludes upfront generation and mutation-testing costs. Pynguin results cover only 40 supported modules. Only pages 1 and 2 were visually inspected; the supplied text covers all 16 pages.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "sci_methods",
+        "rationale": "Optimizes executable verification signals for agents modifying their own harnesses. Its direct evaluation of revision acceptance makes it relevant to reliable self-improvement and knowledge preservation.",
+        "pdf_sha256": "958ca73a34cca57a4f6d4e977e3eff70161fb15cb3fa70476d9a73f978755979",
+        "evidence_pages": [
+          1,
+          3,
+          5
+        ]
+      }
+    },
+    "paper-cf7a39add6564008": {
+      "institutions": [
+        "Bake AI",
+        "University of Notre Dame",
+        "University of Washington",
+        "Stevens Institute of Technology",
+        "Scale AI",
+        "NVIDIA",
+        "Carnegie Mellon University",
+        "MIT",
+        "Cohere Labs",
+        "The Ohio State University",
+        "Microsoft",
+        "UC Santa Barbara",
+        "Stanford University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A curator supplies a problem, reference, and budget. Each campaign fixes feasibility checks, normalization, objective, and a meaningful improvement threshold. The agent experiments on branches, records lessons and dead ends, and resumes stored work across sessions. Separate review assesses research direction; isolated verifiers check artifacts using exact arithmetic, controlled rounding, or finite certificates where required. Model weights remain fixed.",
+      "evidence": "The report counts 100 improved constructions and 20 numerical-bound records, plus a separate Tuza theorem extension. Reported results include an approximately 84-fold narrower n-queens interval and certified Cohn–Elkies separations in dimensions 10 and 11. On 30 FrontierOR tasks, Épi-turbo scores 53.96 versus 51.21 for the same-model Codex baseline at approximately 64% of model cost, primarily through faster generated programs.",
+      "discovery_use": "Directly contributes an autonomous research system that sustains investigations, develops alternative methods, retains experimental lessons, and verifies mathematical discoveries through explicit artifacts.",
+      "limits": "The mathematical campaigns lack controlled component ablations and comprehensive matched-budget agent comparisons. Curators provide questions and sometimes published starting constructions; record comparisons use references available September 16. FrontierOR has one run per task and no significance claim. Codex produces better objective values on 61 comparable instances versus 18 for Épi-turbo; Épi-turbo also has one infeasible result. Released artifacts support checking final claims but do not independently reproduce the entire research process.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "Directly contributes an autonomous research system that sustains investigations, develops alternative methods, retains experimental lessons, and verifies mathematical discoveries through explicit artifacts.",
+        "pdf_sha256": "0ddaa6e7f1f2729204f3ee6a5ad291b44593191a3219771ce63cf2a4b865480b",
+        "evidence_pages": [
+          1,
+          4,
+          13
+        ]
+      }
+    },
+    "paper-94d2abf0fb9eec2d": {
+      "institutions": [
+        "Institute of Medical Philosophy & Future AI (IMPF-AI)",
+        "Shanghai Medical College, Fudan University",
+        "Guangdong Provincial Key Laboratory of New Drug Screening and Guangdong–Hong Kong–Macao Joint Laboratory for New Drug Screening, School of Pharmaceutical Sciences, Southern Medical University",
+        "Department of Computer Science, Tunghai University, Taichung, Taiwan",
+        "Shanghai Ziranerran Traditional Chinese Medicine Foundation",
+        "Li Ka Shing Faculty of Medicine, The University of Hong Kong",
+        "Fuyao University of Science and Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        11,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A scientific compiler checks typed plans, permissions, statistical obligations, and evidence scope. A trusted kernel mediates execution, while release gates validate provenance and claim wording. Evaluation combines one network-pharmacology case study with layer-wise and gate-wise mutation-test ablations.",
+      "evidence": "Changing the enrichment background from the whole annotation set to assayed proteins changes significant pathways from 66 of 1,684 to zero of 959. An active/inactive screening analysis identifies nine of 468 pathways, retained as hypotheses. The combined governance stack releases zero of 121 constructed erroneous outputs versus seven with the kernel alone, while retaining ten compliant controls.",
+      "discovery_use": "The primary contribution is a scientific-agent architecture that checks executable research plans, evidence provenance, and claim support. Its concrete discovery connection is preventing unsupported interpretations and preserving informative negative results.",
+      "limits": "The mutation corpus was constructed by gate developers and informed repairs, making it regression evidence rather than held-out generalization. Ten compliant controls weakly constrain over-refusal. One case study does not demonstrate general autonomous discovery or clinical validity. Registry counts describe inventories rather than validated capabilities. The inspected public repository lists README files; implementation availability claimed in the paper was not established. Studio availability could not be verified.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "The primary contribution is a scientific-agent architecture that checks executable research plans, evidence provenance, and claim support. Its concrete discovery connection is preventing unsupported interpretations and preserving informative negative results.",
+        "pdf_sha256": "21b215103c936641effdfd12da17b1ce442fdea0bd743dc35d3299120a0265d6",
+        "evidence_pages": [
+          1,
+          4,
+          11,
+          13
+        ]
+      }
+    },
+    "paper-d1c8322a1b1949b1": {
+      "institutions": [
+        "School of Information, Renmin University of China, Beijing, China",
+        "Key Laboratory of Data Engineering and Knowledge Engineering, Beijing, China",
+        "Engineering Research Center of Database and Business Intelligence, Beijing, China",
+        "Beijing Key Laboratory of Intelligent Database Systems and Applications, Beijing, China",
+        "Beijing Academy of Artificial Intelligence, Beijing, China"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A frozen agent retrieves category-compatible skills ranked by relevance and historical utility. Selected trajectories undergo category-wise Map–Reduce analysis to propose library operations. Selection-set validation gates updates, while confidence and utility govern retirement and name-based graveyard blocking.",
+      "evidence": "Across four benchmarks and three target models, SELM generally improves over static skills and prior evolution methods. Claude without a harness reaches 50.7% SkillsBench hard accuracy versus 48.2% for Memento-Skills. Removing validation reduces the reported SpreadsheetBench ablation score from 56.5% to 42.5%. SELM does not lead every harness setting.",
+      "discovery_use": "The central contribution is retaining, revising, retrieving, and retiring experience-derived agent skills. This directly supports continual discovery through feedback-driven adaptation without changing model weights.",
+      "limits": "Experiments use libraries of at most 30 skills; cross-benchmark transfer is untested, and retirement blocks exact names rather than semantic duplicates. Utility assigns task rewards to co-retrieved skills without identifying individual causal contributions. Reporting inconsistencies include 56.8% versus 56.5% SpreadsheetBench results, incorrect prose about utility-ablation drops, and differing confidence-retirement thresholds. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "adaptation",
+        "rationale": "The central contribution is retaining, revising, retrieving, and retiring experience-derived agent skills. This directly supports continual discovery through feedback-driven adaptation without changing model weights.",
+        "pdf_sha256": "75b8c7bc9f8d07b9d675812c72662a3d02e0a7f0674ea8c92cbb2b5f132ba99b",
+        "evidence_pages": [
+          1,
+          4,
+          7,
+          15
+        ]
+      }
+    },
+    "paper-48d5ab7e8e8c0f56": {
+      "institutions": [
+        "Seoul National University",
+        "University of California, Los Angeles",
+        "University of North Carolina at Chapel Hill",
+        "University of Houston",
+        "Snowflake AI Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Validated SQL or search seeds supply bridge entities around which the missing source is synthesized. Membership, execution, intersection, and model-based checks reduce shortcuts. Successful teacher trajectories support supervised fine-tuning; a balanced 700-task subset supports reinforcement learning with tool-use hard gates and five-vote judge rewards.",
+      "evidence": "Overall HybridDeepResearch pass@8 rises from 30.83% to 60.83%, exceeding Qwen3.5-397B-A17B by 8.33 points while remaining below Claude Sonnet 4.6 and GLM-5.2. Average success across eight attempts rises to 27.19%. Held-out search and SQL results improve over the base model. Curated RL data outperforms the full 21,000-task pool, and behavior analysis shows fewer redundant searches and more reading.",
+      "discovery_use": "Explicitly trains research agents to discover missing bridge entities, gather evidence across heterogeneous sources, and avoid answering through shortcuts. This is a concrete learning-to-investigate contribution.",
+      "limits": "Hybrid evaluation contains 120 hard questions and primarily uses a local corpus, limiting conclusions about arbitrary live enterprise settings. Five-vote agreement reduces judge variability without proving correctness. RL lowers SQL2S pass@8 from 35% to 30% despite improving average success. Required bridge entities remain unretrieved in 22.2% of S2SQL rollouts, and premature guessing persists. Supplied text covers pages 1–16 and 36 of 38, so appendix review is targeted. No first-party release for this specific paper was verified.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "learning",
+        "rationale": "Explicitly trains research agents to discover missing bridge entities, gather evidence across heterogeneous sources, and avoid answering through shortcuts. This is a concrete learning-to-investigate contribution.",
+        "pdf_sha256": "77305386c9c3e7ea8c18c163c6f672af0d0b11164209facee979aa39933aca53",
+        "evidence_pages": [
+          1,
+          5,
+          8
+        ]
+      }
+    },
+    "paper-d3835393933ca7ee": {
+      "institutions": [
+        "Soochow University",
+        "Singapore Management University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Historical responses fit logistic ability and residual factors and define identical-response groups. A hierarchical Beta–Bernoulli model updates target-specific group rates and latent state. Posterior-guided queries collect informative outcomes, followed by a predictive score median and source-selected calibration.",
+      "evidence": "At a 10% execution budget, HSPR reports the lowest MAE on three of four SWE-bench banks and the lowest maximum error on all four. Equal-bank macro MAE is 1.664 percentage points versus 2.478 for PTA-IRT. Replacing adaptive queries with uniform queries raises macro MAE to 3.085. Removing group uncertainty raises it to 1.808, but that aggregate difference's confidence interval includes zero.",
+      "discovery_use": "HSPR contributes an adaptive evaluation protocol for autonomous software agents, estimating capability from limited executions while representing uncertainty. It is relevant evaluation infrastructure, although it does not directly measure scientific discovery.",
+      "limits": "Evaluation replays archived response matrices rather than rerunning agents. Configuration splits can share model families or scaffolds, leaving stronger distribution shifts untested. Uncertainty is conditional on historical coverage and exchangeability assumptions. Several baselines are adapted ports. Task counts exclude historical collection and configuration-selection costs and do not establish monetary savings. The acquisition identity does not prove optimal final absolute error.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "benchmarks",
+        "rationale": "HSPR contributes an adaptive evaluation protocol for autonomous software agents, estimating capability from limited executions while representing uncertainty. It is relevant evaluation infrastructure, although it does not directly measure scientific discovery.",
+        "pdf_sha256": "75076716814a87915f7ee079cbda83aee6de5d6383f862f467ac7d54707b0bfd",
+        "evidence_pages": [
+          1,
+          4,
+          6,
+          9
+        ]
+      }
+    },
+    "paper-fd98d0ad6f9d37a7": {
+      "institutions": [
+        "ERNIE Team, Baidu",
+        "Independent Researcher"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A fusion layer connects recursive applications of the backbone's final layer and output head. Dynamic Depth Sampling trains longer prediction horizons less frequently. Comparisons use a common 10B-total, 1B-active MoE backbone, matched training recipes, downstream benchmarks, and speculative decoding tests.",
+      "evidence": "ECHO-1.5 achieves a fourteen-task pretrained average of 36.34 versus 35.22 for MTP-1 and 36.36 for ECHO-3. Its halved cost concerns incremental MTP overhead, not total training. After supervised finetuning, reported averages are 37.88 and 38.37 for two ECHO variants versus 36.27 for MTP-Instruct. Serving tests report stronger draft acceptance on high-entropy tasks.",
+      "discovery_use": "Direct multi-horizon pretraining improves reasoning and code capabilities relevant to learning to discover. This is a training contribution, with an indirect connection to discovery; the paper does not demonstrate autonomous scientific investigation.",
+      "limits": "Evidence covers one backbone family, two pretraining runs for the depth-one comparison, and one finetuning seed. Training corpora are proprietary, and five pretrained benchmark rows depend on unpublished internal scoring. Serving throughput excludes prefill, and DSpark's confidence scheduler is disabled. The depth-extrapolation sweep uses a separate greedy harness. Scientific discovery success and causal inference are not evaluated.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "learning",
+        "rationale": "Direct multi-horizon pretraining improves reasoning and code capabilities relevant to learning to discover. This is a training contribution, with an indirect connection to discovery; the paper does not demonstrate autonomous scientific investigation.",
+        "pdf_sha256": "e3b839e47d5c1fcd7827c8a35323db9af2f40284e464583d6baa50300e6277d0",
+        "evidence_pages": [
+          1,
+          6,
+          9,
+          17
+        ]
+      }
+    },
+    "paper-025c299892959576": {
+      "institutions": [
+        "National University of Singapore",
+        "Agency for Science, Technology and Research (A*STAR)",
+        "SenseTime Group Inc."
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A meta-agent diagnoses execution feedback, coordinates historical harness selection and editing, and selects or TIES-merges archived checkpoints. Candidate pairs undergo validation, rejection-sampled trajectory generation, and full-parameter supervised fine-tuning. Validated improvements advance while unsuccessful outcomes remain archived. TIMR measures observable interface violations.",
+      "evidence": "The evolved 9B agent reaches 70.78% responsible-agent accuracy on TraceElephant, 14.16 points above DeepSeek-V4-Pro. It achieves 80.85% Spider Safe-EX and 75.51% HomeBench valid-instruction success. Harness-only, model-only, and latest-only ablations support complementary benefits from joint adaptation and historical reuse. Rankings remain metric-dependent: several baselines outperform it on decisive-step attribution and OOD BIRD execution.",
+      "discovery_use": "Directly studies recursive agent improvement through feedback, historical harness reuse, checkpoint inheritance, and model adaptation. Its concrete contribution is discovering stronger model–harness combinations within a task family.",
+      "limits": "Results establish domain specialization rather than improvement across unrelated domains. TIMR does not measure reasoning quality or establish that fewer interface errors cause performance gains. The same validation set repeatedly guides selection and promotion. Candidate-budget studies use single three-round runs; headline API expenditures omit a complete accounting of GPU training costs. Public first-party code and a linked HomeBench checkpoint destination were verified.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "open_ended",
+        "rationale": "Directly studies recursive agent improvement through feedback, historical harness reuse, checkpoint inheritance, and model adaptation. Its concrete contribution is discovering stronger model–harness combinations within a task family.",
+        "pdf_sha256": "19c9d28c42dbb2c8144e4e12bc4fcb8054692e10a4b8c0b422e9f4edd44adff0",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-008b443e8ade0e00": {
+      "institutions": [
+        "LUMIA Lab, School of Artificial Intelligence, Shanghai Jiao Tong University",
+        "Shanghai Artificial Intelligence Laboratory"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A causal Transformer predicts memory slots from pooled preceding chunks. Offline retrieved embeddings supervise prediction; gated cross-attention fuses predicted memory into selected decoder layers. Added modules train jointly with language-modeling and memory-prediction losses while the backbone stays frozen.",
+      "evidence": "Six-task QA means improve over the strongest compared baselines by 3.07 points on Mistral and 2.66 on Qwen3, corresponding to 12.71% and 11.19% relative gains. Domain-adaptation means improve over the base models by 6.51 and 4.38 points. Target construction uses 32 times fewer queries and 2048 times fewer returned neighbor slots; measured training takes approximately 24 versus 64 hours on 16 A800 GPUs.",
+      "discovery_use": "Contributes a concrete mechanism for acquiring external knowledge and integrating it into reasoning with a frozen language model. This supports discovery training and memory, although autonomous discovery itself is not evaluated.",
+      "limits": "Knowledge acquisition is offline rather than continual. Frozen weights do not guarantee preserved behavior: Qwen3 WebQA declines. QA inference uses fixed prompt-derived memory without refreshing it during answer generation, differing from preceding-chunk training. Ablations are single runs. Retrieval counts measure returned slots, not bytes, FLOPs, or elapsed construction time. No released first-party artifact was verified; the paper promises code.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "learning",
+        "rationale": "Contributes a concrete mechanism for acquiring external knowledge and integrating it into reasoning with a frozen language model. This supports discovery training and memory, although autonomous discovery itself is not evaluated.",
+        "pdf_sha256": "25172e28e40f8ef3fd199b4fcb56d2d2f3969e2ec2899be5ea4d0beeb9c5a9ae",
+        "evidence_pages": [
+          1,
+          3,
+          7
+        ]
+      }
     }
   }
 }

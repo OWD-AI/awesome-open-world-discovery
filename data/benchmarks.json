@@ -1464,6 +1464,28 @@
       "name": "ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.18088"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "finite-pool-query",
+      "new_physical_experiments": false,
+      "openness": [
+        "The paper reports publicly available code and project resources.",
+        "Evaluation uses public PTA-IRT response matrices for SWE-bench Lite, Verified, Full, and Pro."
+      ],
+      "focus": "Recover full software-agent benchmark scores by adaptively revealing a budgeted subset of archived binary task outcomes. A probabilistic posterior guides acquisition and estimates unrevealed outcomes; the feedback itself consists of recorded outcomes.",
+      "limits": "The reported environment replays fixed response matrices without rerunning software agents. It supplies neither simulator observations nor new physical measurements. Historical coverage, within-group exchangeability, and possible shared model families or scaffolds constrain interpretation. Query budgets exclude historical collection, source fitting, and configuration selection costs.",
+      "training": {
+        "reward": "An agent-training reward is not established. HSPR fits logistic response factors and residual structure from historical responses. Source-only validation selects settings using score MAE. Target evaluation compares estimates with complete archived outcomes using MAE, maximum absolute error, and Kendall’s τb. Acquisition targets posterior score variance or latent-state variance reduction.",
+        "reset": "Each target query path begins with an initialized posterior and empty observation history. Five seeded HSPR paths are evaluated per target, with distinct tasks within each path. An interactive environment reset interface is not established.",
+        "branching": "Independent seeded query paths and alternative acquisition controls are evaluated against the same fixed archived outcomes. Snapshot, state cloning, and within-trajectory branching support are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-d3835393933ca7ee",
+      "resource_id": "paper-d3835393933ca7ee",
+      "name": "HSPR: Recovering Software-Agent Benchmark Scores via Hierarchical Posterior Inference",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.24611"
     }
   ]
 }
