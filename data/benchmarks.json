@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-25",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -682,6 +682,145 @@
       "status": "public-data-code",
       "evidence": "https://github.com/prometheus-eval/into-the-unknown",
       "evaluation_family": "computational-research"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents can revise persistent policy code, tools, skills and notes while model weights remain fixed.",
+        "Robot interaction is restricted to the supplied observation and control tools.",
+        "The task suite, native grading and interaction budgets are predefined."
+      ],
+      "focus": "Feedback-driven policy revision on 18 simulated RoboDojo manipulation tasks, with separate tests of retained experience, unseen layouts and cross-task workspace transfer.",
+      "limits": "Simulation outcomes are not new physical measurements. Main improvement chains are largely unreplicated, first-success stopping does not measure repeated reliability, and model-runtime configurations differ. Transfer tests cover limited subsets. The interaction budget excludes time, tokens and money.",
+      "training": {
+        "reward": "No model-weight training occurs. Each judged attempt returns a native score in [0, 1], a success flag and a failure reason to guide workspace revision. Five evaluation axes measure initial performance, gain timing, attained score, budget savings and recovery from failure. Main runs allow up to 17 refinement rounds and stop at first native success.",
+        "reset": "The main protocol repeats attempts at layout 0 and seed 0 while retaining the committed workspace. The ablation starts a new conversation each round, varies layouts and includes independent no-history attempts. Arbitrary simulator snapshot restoration is not established.",
+        "branching": "Frozen workspaces are tested on multiple held-out layouts, and pooled workspaces initialize cross-task runs. Interactive branching from an identical saved simulator state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-4f6e0f0aac76178e",
+      "resource_id": "paper-4f6e0f0aac76178e",
+      "name": "Where is Physical RSI capability from? An Observational Scaling Law of LLM-as-policy",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.26848"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Research agents choose experiments that modify training data and trainer code across all five tasks.",
+        "Inference harness editing is permitted for Terminal-Bench 2.1 and SWE-bench Verified.",
+        "Agents may transform or synthesize data from authorized workspace resources; validation material cannot become training data.",
+        "External network access is blocked, and hidden tests and grader code are isolated."
+      ],
+      "focus": "Executed machine-learning research experiments that iteratively improve a target model and, where permitted, its inference harness using validation scores and execution trajectories.",
+      "limits": "Each configuration has one research run per task, so research-run variability is not established. Comparisons combine researcher models and coding frameworks. Harness editing covers only two tasks, and aggregate scores combine heterogeneous protocols. Eight A100 GPUs and 16- or 24-hour budgets constrain each run.",
+      "training": {
+        "reward": "Research feedback consists of validation scores, per-task scores, graded-task denominators and execution trajectories. No fixed research-agent learning reward or researcher weight-update procedure is established. Target-model training is editable; all evaluated research agents use supervised fine-tuning, with some also merging models. An isolated grader evaluates the selected system once on hidden tests, with no feedback for further revision. Final scores use task-native success rates, Toolathlon pass@3 and AIME average@4; execution failures and timeouts score zero.",
+        "reset": "Each research run starts from the same Qwen3.5-9B-Base model and task-specific initial resources. Documented experiments train afresh from the base or continue earlier checkpoints. A general environment reset API is not established.",
+        "branching": "Candidate snapshots, retained candidate directories, reuse of earlier models and model merging support comparison of alternative research paths. Arbitrary restoration of the complete running environment and a dedicated parallel branching interface are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-282f8f39baa392ae",
+      "resource_id": "paper-282f8f39baa392ae",
+      "name": "VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.26342"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "The evaluated commercial agent performs open-ended web retrieval and report synthesis.",
+        "The study fixes one cybersecurity prompt and issues it ten times.",
+        "Analysis uses the resulting reports and resolved citation identifiers; cited-page contents are excluded from entity-overlap analysis."
+      ],
+      "focus": "Self-consistency of entities, citation URLs and entity-citation edges across ten reports generated through repeated API prompting, followed by analysis of the recorded outputs.",
+      "limits": "One system, prompt and domain are studied. Retrieval and generation variability are conflated, and web drift cannot be excluded. Exact URL agreement does not establish semantic evidence equivalence or factual correctness. Extraction and canonicalization lack a full annotation audit. The 45 report pairs share ten underlying reports.",
+      "training": {
+        "reward": "No training reward, model adaptation or feedback-driven policy revision is established. Evaluation computes pairwise Jaccard overlap and cumulative discovery curves averaged over 1,000 report orderings. Entity canonicalization uses three voting runs.",
+        "reset": "The same prompt is submitted in ten repeated API calls. A controlled reset of agent memory, retrieval state or the indexed web is not established.",
+        "branching": "Controlled branching from a shared saved agent or retrieval state is not established. Permutations reorder existing reports for analysis rather than create new interactive trajectories."
+      },
+      "evaluation_family": "other",
+      "id": "paper-e5da3aa895bba2db",
+      "resource_id": "paper-e5da3aa895bba2db",
+      "name": "Self-Consistency of Entity Sets and Citations in a Deep Research System under Repeated Prompting",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.26421"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Eight goal-shifted test variants with 400 released episodes per variant.",
+        "Open-source Python library with dataset collection, model training, prediction evaluation, and planning evaluation APIs and CLI."
+      ],
+      "focus": "Simulation benchmark for compositional dynamics prediction and goal-shifted planning across TwoRoom, Push-T, Insert-Peg, and Cube. Models train on fixed base-task trajectories; evaluation combines recorded simulator trajectories with interactive simulator control. No new physical measurements are reported.",
+      "limits": "AnyGoal variants are used solely as test sets. Finite-sample support checks do not prove exact support inclusion. Prediction errors use model-specific representation spaces. Complete task-success predicates, simulator reset APIs, and simulator snapshot support are not established by the supplied pages.",
+      "training": {
+        "reward": "Models train only on base datasets, using their respective predictive objectives; a common training reward is not established. Evaluation measures native-space rollout MSE at 5- and 25-step horizons and task planning success over seeds 0, 1, and 2. A shared CEM-based MPC planner executes each full 25-step sequence before replanning. Complete planning cost functions and success predicates are not established.",
+        "reset": "Episode-based evaluation samples 100 episodes per seed for prediction scoring. User-accessible reset, replay, and restoration of arbitrary simulator states are not established.",
+        "branching": "Fixed-state action interventions compare model predictions under alternative actions. This establishes counterfactual prediction queries; simulator trajectory cloning or restoration for interactive branching is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-118197ae3e94acd7",
+      "resource_id": "paper-118197ae3e94acd7",
+      "name": "AnyGoal: On World Model Generalization Beyond Expert Rollouts",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.26844"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose probe inputs and whether to probe before sequential evaluation batches.",
+        "Procedural generation spans four scenario domains and four specified rule families.",
+        "The paper provides 256 evaluation episodes and states that 1,000 training episodes are provided.",
+        "Code release under MIT and dataset distribution under a Creative Commons license are announced."
+      ],
+      "focus": "Proactive hidden-rule discovery and adaptation to unannounced rule drift. Deterministic synthetic rules generate action utilities; scenario labels do not represent real experiments or new physical measurements.",
+      "limits": "Agents know the candidate rule families. Drift is restricted to within-family factor replacement and direction reversal. Each episode has 12 batches of 8 cases. Page 16 allows at most one probe call per window with at most 16 cases, while pages 14–15 give inconsistent additional budget descriptions. Live physical interaction and executed research experimentation are absent.",
+      "training": {
+        "reward": "Probe Batch returns utilities for all four actions on agent-designed cases; Submit Action Batch returns utility feedback for selected actions. A fixed utility function rewards action anchors close to the hidden intervention score. Evaluation uses exact optimal-action accuracy, utility-based calibrated accuracy, and factor/change recognition against known rules. A training set is provided, but a policy-training algorithm or optimization run is not established.",
+        "reset": "Episodes begin with task descriptions, field ranges, action choices, and rule-family definitions. Agent-requested episode reset, rewind, or state restoration is not established.",
+        "branching": "Dataset construction creates a shared pre-drift prefix followed by IID and targeted post-drift branches. Agent-controlled runtime branching or cloning is not established; runtime presents a fixed sequence of batches."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ee2ff832ad1772a4",
+      "resource_id": "paper-ee2ff832ad1772a4",
+      "name": "AdaExploreBench: Benchmarking LLM Agents for Proactive Exploration and Test-time Adaptation in Evolving Environments",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.25950"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Systems choose preprocessing, analysis methods, models, tools, and workflow structure within a specified scientific objective and dataset scope.",
+        "Queries provide staged Parquet files and named numerical metrics. Files are shared across queries within a task; query scopes vary.",
+        "Source citations are withheld from evaluated systems. Cached single-agent reference values are used by the training evaluator."
+      ],
+      "focus": "Executed scientific data analysis and modeling on fixed recorded Earth science datasets, including training and comparing predictive models. The benchmark contains 100 tasks and 2,067 scoped queries, with 492 held out for testing. Eleven general-control tasks use synthetic or general tabular data. These are computational research tasks; the environment does not collect new physical measurements or simulate a physical laboratory.",
+      "limits": "The evaluator grades reported numerical metrics. Its finite-value, positive-number, and sentinel checks do not independently establish correct code execution or computation. Test queries reuse the same underlying tasks and files, establishing scope generalization rather than unseen-task transfer. Reported inference costs omit workflow-training costs, and token accounting is incomplete.",
+      "training": {
+        "reward": "Pages 7 and 17 define a continuous evaluator-side reward averaged over query metrics: 0.10 numeric sanity + 0.40 inequality-target satisfaction + 0.50 cached-reference agreement, clipped to [0, 1] and adjusted for metric polarity. A zero candidate value against a nonzero reference receives zero reward. Missing references cause the remaining terms to be renormalized; page 17 reports weights of 0.40 and 0.60. Per-task and per-category optimization use training and validation query pools. At test time, pages 6 and 15–16 score each task as realistic-output rate times mean metric pass rate among realistic outputs, then sum across tasks. Realistic outputs require parsable finite metrics, at least one positive value, and no −1 sentinel.",
+        "reset": "Not established: the supplied body does not specify workspace cleanup, random-state reset, or restoration between attempts. Repeated candidate evaluation on fixed staged datasets is described.",
+        "branching": "Candidate-workflow search is supported, including AFlow's Monte Carlo tree search over operator graphs on page 7. Environment snapshotting, cloning, rollback, and branching from an intermediate execution state are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-5bd5dfea78d8efef",
+      "resource_id": "paper-5bd5dfea78d8efef",
+      "name": "ST-Bench: A Spatial-Temporal Benchmark for Multi-Agent System Generation on Scientific Research Tasks",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.07763"
     }
   ]
 }
