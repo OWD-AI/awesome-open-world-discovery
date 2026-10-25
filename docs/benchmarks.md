@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**64 usage profiles** · Updated **2026-10-24**
+**65 usage profiles** · Updated **2026-10-24**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1095,6 +1095,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [Retrieval Augmented Generation Compositionality](#paper-ee84b521258fee34) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research](#paper-045c2b8bd847ae46) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [FrontierCS 2: A Benchmark for Computer Science R&D](#paper-72af933c20feb3a7) | Scientific data + verifiers | Computational experiments | Paper-described |
+| [Auto-MD-bench: Evaluating Autoresearch Agents for Real-World Medical Tasks](#paper-4e611eaf34efb11a) | Executed programs + evaluators | Analysis + code | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -1369,6 +1370,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | A benchmark-level policy-training procedure or training reward is not established. During a run, each submitted patch receives a development-suite score and a sanitized count of workloads meeting each metric threshold, without reference scores or raw evaluator output. Development scores do not determine the result. The agent selects one final patch; passing requires meeting every reference-derived metric threshold on every final workload. The judge also assigns a task-specific 0–100 final score; no saved final submission scores zero. FCI combines metric outcomes and score margins for reporting. |
 | Reset | Each run starts from the supplied repository with the contribution removed. An explicit environment-reset or checkpoint-restore API is not established. |
 | Branching | Agents may develop and compare multiple patches within task budgets and choose one final submission. Explicit same-state environment forks or checkpoint branching are not established. |
+
+</details>
+
+<a id="paper-4e611eaf34efb11a"></a>
+
+<details>
+<summary>Auto-MD-bench: Evaluating Autoresearch Agents for Real-World Medical Tasks — details</summary>
+
+[Work](../README.md#paper-4e611eaf34efb11a) · [Source](https://arxiv.org/pdf/2610.25069)
+
+**Focus:** Executed autonomous model-development experiments on 15 medical prediction tasks from 10 recorded clinical datasets, covering survival analysis, classification, and sequential prediction. Feedback comes from code execution and validation on supplied training records. Final evaluation also measures calibration and population shift.
+
+**Openness:** `Agents choose modeling and validation procedures, write and execute code, train models, and revise them using execution results and internal validation scores.`, `Tasks, supplied clinical records, test sets, prediction targets, submission formats, and primary metrics are fixed.`, `Runs have a 12-hour budget, eight CPU threads, 16 GB RAM, and an isolated container without internet access.`, `Test features are supplied, but test outcomes and test scores remain unavailable during development.`
+
+**New physical measurements:** No
+
+**Limits:** Pages 3–5 and 12–16 establish computation over fixed clinical records, rather than a simulator or new physical measurements. Hidden test evaluation occurs after development and cannot guide agent search. Scope is structured medical prediction on CPU resources; prospective clinical outcomes are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A benchmark-wide policy-training reward is not established. During development, agents use execution results and self-computed validation metrics. Autoresearch retains changes only when its internal validation primary metric improves. After each run, an external evaluator scores selected predictions against hidden outcomes using survival concordance, AUROC, minimum sensitivity/positive predictive value, or sequential alarm utility. Scores are normalized against null predictions; invalid submissions receive zero in penalized reporting. ECE, external validation, subgroup analyses, and methodological audits provide additional evaluation. |
+| Reset | Page 5 establishes three repetitions per agent-task pair, each using a dedicated virtual machine; page 12 states that test sets remain fixed across runs. Arbitrary environment snapshot restoration or checkpoint reset support is not established. |
+| Branching | Pages 5 and 14 establish greedy tree search for AIDE and best-first tree search for AI Scientist v2, including multiple drafts and workers for the latter. Page 16 establishes KEEP or exact REVERT of experimental changes for Autoresearch. General environment cloning or arbitrary state branching support is not established. |
 
 </details>
 

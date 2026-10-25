@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T22:08:40-04:00",
+  "updated_at": "2026-10-24T22:30:10-04:00",
   "window_start": "2026-09-25",
   "window_end": "2026-10-24",
   "window_days": 30,
@@ -2142,18 +2142,6 @@
       ]
     },
     {
-      "title": "HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL",
-      "url": "https://arxiv.org/abs/2610.26426",
-      "published_at": "2026-10-19",
-      "kind": "paper",
-      "summary": "HarnessRL jointly adapts task sampling, privileged rollout guidance, and reward rubrics during policy training. A memory-backed proposer and critic seek to maintain useful learning signals as policy capabilities change.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-19. The arXiv submission history records v1 at 13:53:38 UTC that day, corroborating the supplied date and PDF page 1.",
-      "review_status": "approved",
-      "relevance": "Contributes an adaptive training harness that diagnoses failures, proposes interventions, and measures their effects before acceptance. This provides a concrete mechanism for learning with evolving curricula and verification, relevant to discovery training and self-improving systems.",
-      "id": "0182cce120aad869"
-    },
-    {
       "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
       "url": "https://arxiv.org/abs/2610.26770",
       "published_at": "2026-10-19",
@@ -2810,6 +2798,28 @@
       ]
     },
     {
+      "title": "HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL",
+      "url": "https://arxiv.org/abs/2610.26426",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "HarnessRL adapts the training conditions around an evolving policy when rubric rewards become uninformative or misleading. Its memory and critic help distinguish recurring failures and evaluate proposed repairs.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-19T00:00:00.000Z. PDF page 1 and the primary arXiv submission history confirm 19 October 2026; the supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Coordinates exploration guidance, task sampling, and evaluator repair using retained experience and measured interventions. This directly supports adaptive training and self-improvement relevant to learning to discover.",
+      "id": "0182cce120aad869",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26426"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Tongyi-ConvAI/Qwen-Character/tree/main/HarnessRL"
+        }
+      ]
+    },
+    {
       "title": "Formally Verified Autoresearch for Analyzing the Expressivity of Multi-Head Attention",
       "url": "https://arxiv.org/abs/2610.25341",
       "published_at": "2026-10-18",
@@ -2876,6 +2886,72 @@
         {
           "label": "Code",
           "url": "https://github.com/deng34567/DAGLoop"
+        }
+      ]
+    },
+    {
+      "title": "Compile Once, Run Cheap: Frozen, Portable Skills for Embodied Agents, and What Recursive Self-Improvement Adds",
+      "url": "https://arxiv.org/abs/2610.25114",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Skill-RSI separates offline model-driven skill authoring from inexpensive execution, packaging qualified robot programs as immutable artifacts that run without their author.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-18T08:46:13Z. The PDF v1 dateline agrees with 18 October; the manuscript's 17 October date is not substituted.",
+      "review_status": "approved",
+      "relevance": "The paper contributes an agent harness for generating, testing, qualifying, and retaining executable skills, with controlled measurements separating inheritance, feedback, and selection. This directly supports verified capability acquisition and reusable experience in discovery agents.",
+      "id": "83d8f02ebb01f589",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.25114"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Orillusion/embodied-skill-rsi"
+        }
+      ]
+    },
+    {
+      "title": "Breaking Diffusion: Parallel Reasoning with Draft Refinement",
+      "url": "https://arxiv.org/abs/2610.26542",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Draft Refinement Language Models combine parallel answer revision with candidate scoring by the same denoiser. They improve structured reasoning without requiring a separate scoring model.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-19T00:00:00.000Z. PDF page 1 and the primary arXiv submission history confirm 19 October 2026; the supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Trains a model to revise complete candidate solutions and assess their contextual support. This provides a concrete mechanism for learned search and self-evaluation relevant to discovery reasoning.",
+      "id": "5abf8c8643b1a01d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26542"
+        }
+      ]
+    },
+    {
+      "title": "Auto-MD-bench: Evaluating Autoresearch Agents for Real-World Medical Tasks",
+      "url": "https://arxiv.org/abs/2610.25069",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Auto-MD-bench evaluates autonomous medical model development beyond discrimination, combining hidden-test performance, calibration, population-shift evaluation, and analysis of agents' development records.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-18T07:19:05Z; the PDF v1 dateline corroborates 18 October 2026.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is evaluation of autonomous research agents conducting model development, including methodological errors, calibration, and transfer beyond their optimization metric. This directly measures whether agent experimentation produces reliable knowledge and usable results.",
+      "id": "4e611eaf34efb11a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.25069"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Edwin0080/Auto-MD-bench"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Edwin0080/Auto-MD-bench"
         }
       ]
     },
@@ -3409,18 +3485,18 @@
       "url": "https://arxiv.org/abs/2610.20431",
       "published_at": "2026-10-14",
       "kind": "paper",
-      "summary": "SwarmRSI evolves the research states shared by scientific agents. It preserves unsuccessful experiments and partially useful programs so later agents can revisit hypotheses, repair implementations, and combine complementary solutions. Self-improvement occurs through inherited research experience under fixed search operators.",
-      "date_evidence": "The opened primary arXiv record identifies v1 as submitted on 14 October 2026 at 16:21:45 UTC. Its 19 October 2026 v2 date is a revision. The supplied PDF page 1 independently displays the v1 date of 14 October 2026.",
-      "relevance": "Directly studies scientific agents improving subsequent research through retained hypotheses, experimental evidence, implementation repair, and component reuse. Its primary contribution is an experimentally evaluated mechanism for cumulative research self-improvement.",
-      "review_status": "approved",
+      "summary": "SwarmRSI treats scientific progress as evolution of shared research states containing hypotheses, programs, evidence, and unresolved needs. It preserves unsuccessful work so later agents can repair its implementation or reuse useful components.",
       "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history. The October 19 revision is not the original publication date.",
+      "review_status": "approved",
+      "relevance": "Contributes an explicit scientific research process for revising hypotheses, repairing implementations, testing complementary components, and retaining experimental evidence across agents and tasks.",
+      "id": "f3fe009c2d3e7e40",
       "links": [
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.20431"
         }
-      ],
-      "id": "f3fe009c2d3e7e40"
+      ]
     },
     {
       "title": "Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents",
@@ -3478,16 +3554,138 @@
       "content_label": "Blog · video not reviewed"
     },
     {
+      "title": "Reflect After Failure: Brain-Inspired Self-Evolving Agents for Embodied Spatial Intelligence",
+      "url": "https://arxiv.org/abs/2610.20312",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "HiMeco diagnoses perception, exploration, and planning failures, then consolidates attempts into reusable strategies and executable skills. A frozen planner uses this external memory to gather better evidence during later embodied interactions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history. The cover’s month-only date is less precise than this original timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly connects active acquisition of unknown spatial evidence with feedback-driven strategy and skill retention, offering a concrete mechanism for learning from discovery failures.",
+      "id": "55ab01be48315197",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.20312"
+        }
+      ]
+    },
+    {
+      "title": "MMLA-RSI: Recursive Self-Improvement through RTT and RTMA",
+      "url": "https://arxiv.org/abs/2610.20294",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "MMLA-RSI specifies two recursive routes: a numerical updater adapts the policy proposing its successor, and a memory manager selects the evidence available to proposals of its successor. Independent admission installs a candidate in the same learning role for the next generation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history and the October 14 cover date.",
+      "review_status": "approved",
+      "relevance": "Provides a substantive formal construction and evaluation framework for learning mechanisms that participate in generating their successors. This is relevant foundational work on learning to improve discovery, despite absent evidence of successful recursive chains.",
+      "id": "12f2f100744d125c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.20294"
+        }
+      ]
+    },
+    {
+      "title": "Evolve Together, Fall into Place: How Social Scaffolding Shapes Self-Evolving Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.19799",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "AGORA investigates how team composition and social organization affect agent evolution. Its strongest teams often consolidate execution under a capable leader that previously learned within the team.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-14T08:42:05Z.",
+      "review_status": "approved",
+      "relevance": "Directly studies how coordination, authority, and retained experience shape self-improving agent harnesses.",
+      "id": "f8f021c90e8a1d58",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19799"
+        }
+      ]
+    },
+    {
       "title": "Amortizing Sequential Experimental Design in Reasoning LLMs",
       "url": "https://arxiv.org/abs/2610.20832",
       "published_at": "2026-10-14",
       "kind": "paper",
-      "summary": "Trains an LLM’s action-selection reasoning with information-gain rewards so it can conduct sequential Bayesian experimental design more cheaply and generalize its information-gathering behavior to unseen categories and clinical dialogue.",
-      "date_evidence": "The arXiv page says “Submitted on 14 Oct 2026”; submission history lists v1 at 2026-10-14 19:15:58 UTC.",
-      "relevance": "Directly advances adaptive experiment selection, a core capability for discovery agents operating under limited evidence and budgets.",
+      "summary": "AR-BED moves Bayesian experimental-design computation into reasoning-model training. An independently specified hypothesis distribution and semantic likelihood model reward questions for reducing uncertainty, including information obtainable through subsequent interactions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-14T19:15:58Z.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "381c08cf57748156"
+      "relevance": "Trains transferable information-gathering policies that reason about hypotheses and select informative experiments, directly supporting learning to discover.",
+      "id": "381c08cf57748156",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.20832"
+        }
+      ]
+    },
+    {
+      "title": "AdaRSI: On-Demand Recursive Self-Improvement for Embodied Agents",
+      "url": "https://arxiv.org/abs/2610.20474",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "AdaRSI first improves the agent's tools and procedures, then probes persistent failures to decide which executor sub-steps require training. It retains specialized policies and experience that guide subsequent improvement.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-14T16:51:09Z.",
+      "review_status": "approved",
+      "relevance": "Implements feedback-driven agent self-improvement through failure investigation, harness revision, and selective acquisition of missing embodied skills.",
+      "id": "f351b48e981eb372",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.20474"
+        }
+      ]
+    },
+    {
+      "title": "Who Improves the Robot? Toward Physical Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2610.18842",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "This conceptual survey separates robot capability changes from changes to the procedures that produce them. Its L0–L5 framework distinguishes retained autonomy, transfer across tasks, and independently verified recursive gain.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-13T17:57:04Z.",
+      "review_status": "approved",
+      "relevance": "Provides definitions and evidence standards for autonomous physical self-improvement, including verification of whether agents improve how they learn.",
+      "id": "207da96ea3ec4712",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18842"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/SAIL-Research-Lab/Physical-RSI"
+        }
+      ]
+    },
+    {
+      "title": "VideoHarness-SRSI: Structured Recursive Self-Improvement for Video Understanding Harness",
+      "url": "https://arxiv.org/abs/2610.19424",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "VHarness-SRSI organizes automated video-harness evolution around better experimental evidence. It addresses validation overfitting, diluted search budgets, and premature abandonment of promising mechanisms while keeping the executor model frozen.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history. The October 16 revision and October 19 cover date are later dates. The original timestamp falls on October 13 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly studies how agents discover better executable harnesses through iterative experiments, with concrete mechanisms for improving the reliability and transfer of self-improvement.",
+      "id": "1e6847de2c470a1b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19424"
+        },
+        {
+          "label": "Project",
+          "url": "https://zihaolinqz.github.io/VHarness-SRSI/"
+        }
+      ]
     },
     {
       "title": "Self-Evolving Agent Harness",
@@ -3512,6 +3710,24 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "9ea07ad21e399cd7"
+    },
+    {
+      "title": "STRATA: Self-Maintaining Structured Experience Graphs for Self-Evolving Language Agents",
+      "url": "https://arxiv.org/abs/2610.19386",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "STRATA maintains agent experience as a typed hierarchy of reusable atomic capabilities, task workflows, and broader abstractions. Retrieval, reflection, consolidation, forgetting, and explicit warnings jointly govern how prior experience affects future action.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history. Its UTC date is October 14, while its America/New_York date is October 13.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete agent-memory architecture for retaining, abstracting, and correcting experience, supporting continued learning and reducing harmful transfer during subsequent investigations and interactions.",
+      "id": "65df409d4e89a361",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19386"
+        }
+      ]
     },
     {
       "title": "ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch",
@@ -3574,6 +3790,28 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "d352987183caa5d8"
+    },
+    {
+      "title": "Verifier-Harness Co-Evolution for Training-Free Self-Improvement on Open-Ended Tasks",
+      "url": "https://arxiv.org/abs/2610.17609",
+      "published_at": "2026-10-12",
+      "kind": "paper",
+      "summary": "UCoE evolves executable verifier criteria and aggregation alongside a fixed actor's procedural memory. Controlled response edits test verifier discrimination before the verifier guides repairs and decides which experience persists.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies original publication as 2026-10-13T02:29:40Z, corresponding to October 12 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Adapts verification and retained agent experience together, directly addressing unreliable feedback in continuing knowledge and harness improvement.",
+      "id": "d753212771182899",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.17609"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/tianyi0216/Unified-Co-Evolution"
+        }
+      ]
     },
     {
       "title": "Recursive Self-Improvement through Collective Intelligence",
@@ -6259,18 +6497,6 @@
       ]
     },
     {
-      "title": "HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL",
-      "url": "https://arxiv.org/abs/2610.26426",
-      "published_at": "2026-10-19",
-      "kind": "paper",
-      "summary": "HarnessRL jointly adapts task sampling, privileged rollout guidance, and reward rubrics during policy training. A memory-backed proposer and critic seek to maintain useful learning signals as policy capabilities change.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-19. The arXiv submission history records v1 at 13:53:38 UTC that day, corroborating the supplied date and PDF page 1.",
-      "review_status": "approved",
-      "relevance": "Contributes an adaptive training harness that diagnoses failures, proposes interventions, and measures their effects before acceptance. This provides a concrete mechanism for learning with evolving curricula and verification, relevant to discovery training and self-improving systems.",
-      "id": "0182cce120aad869"
-    },
-    {
       "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
       "url": "https://arxiv.org/abs/2610.26770",
       "published_at": "2026-10-19",
@@ -6927,6 +7153,28 @@
       ]
     },
     {
+      "title": "HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL",
+      "url": "https://arxiv.org/abs/2610.26426",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "HarnessRL adapts the training conditions around an evolving policy when rubric rewards become uninformative or misleading. Its memory and critic help distinguish recurring failures and evaluate proposed repairs.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-19T00:00:00.000Z. PDF page 1 and the primary arXiv submission history confirm 19 October 2026; the supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Coordinates exploration guidance, task sampling, and evaluator repair using retained experience and measured interventions. This directly supports adaptive training and self-improvement relevant to learning to discover.",
+      "id": "0182cce120aad869",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26426"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Tongyi-ConvAI/Qwen-Character/tree/main/HarnessRL"
+        }
+      ]
+    },
+    {
       "title": "Formally Verified Autoresearch for Analyzing the Expressivity of Multi-Head Attention",
       "url": "https://arxiv.org/abs/2610.25341",
       "published_at": "2026-10-18",
@@ -6993,6 +7241,72 @@
         {
           "label": "Code",
           "url": "https://github.com/deng34567/DAGLoop"
+        }
+      ]
+    },
+    {
+      "title": "Compile Once, Run Cheap: Frozen, Portable Skills for Embodied Agents, and What Recursive Self-Improvement Adds",
+      "url": "https://arxiv.org/abs/2610.25114",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Skill-RSI separates offline model-driven skill authoring from inexpensive execution, packaging qualified robot programs as immutable artifacts that run without their author.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-18T08:46:13Z. The PDF v1 dateline agrees with 18 October; the manuscript's 17 October date is not substituted.",
+      "review_status": "approved",
+      "relevance": "The paper contributes an agent harness for generating, testing, qualifying, and retaining executable skills, with controlled measurements separating inheritance, feedback, and selection. This directly supports verified capability acquisition and reusable experience in discovery agents.",
+      "id": "83d8f02ebb01f589",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.25114"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Orillusion/embodied-skill-rsi"
+        }
+      ]
+    },
+    {
+      "title": "Breaking Diffusion: Parallel Reasoning with Draft Refinement",
+      "url": "https://arxiv.org/abs/2610.26542",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Draft Refinement Language Models combine parallel answer revision with candidate scoring by the same denoiser. They improve structured reasoning without requiring a separate scoring model.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-19T00:00:00.000Z. PDF page 1 and the primary arXiv submission history confirm 19 October 2026; the supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Trains a model to revise complete candidate solutions and assess their contextual support. This provides a concrete mechanism for learned search and self-evaluation relevant to discovery reasoning.",
+      "id": "5abf8c8643b1a01d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26542"
+        }
+      ]
+    },
+    {
+      "title": "Auto-MD-bench: Evaluating Autoresearch Agents for Real-World Medical Tasks",
+      "url": "https://arxiv.org/abs/2610.25069",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Auto-MD-bench evaluates autonomous medical model development beyond discrimination, combining hidden-test performance, calibration, population-shift evaluation, and analysis of agents' development records.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives the original publication timestamp as 2026-10-18T07:19:05Z; the PDF v1 dateline corroborates 18 October 2026.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is evaluation of autonomous research agents conducting model development, including methodological errors, calibration, and transfer beyond their optimization metric. This directly measures whether agent experimentation produces reliable knowledge and usable results.",
+      "id": "4e611eaf34efb11a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.25069"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Edwin0080/Auto-MD-bench"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Edwin0080/Auto-MD-bench"
         }
       ]
     },
@@ -7483,18 +7797,18 @@
       "url": "https://arxiv.org/abs/2610.20431",
       "published_at": "2026-10-14",
       "kind": "paper",
-      "summary": "SwarmRSI evolves the research states shared by scientific agents. It preserves unsuccessful experiments and partially useful programs so later agents can revisit hypotheses, repair implementations, and combine complementary solutions. Self-improvement occurs through inherited research experience under fixed search operators.",
-      "date_evidence": "The opened primary arXiv record identifies v1 as submitted on 14 October 2026 at 16:21:45 UTC. Its 19 October 2026 v2 date is a revision. The supplied PDF page 1 independently displays the v1 date of 14 October 2026.",
-      "relevance": "Directly studies scientific agents improving subsequent research through retained hypotheses, experimental evidence, implementation repair, and component reuse. Its primary contribution is an experimentally evaluated mechanism for cumulative research self-improvement.",
-      "review_status": "approved",
+      "summary": "SwarmRSI treats scientific progress as evolution of shared research states containing hypotheses, programs, evidence, and unresolved needs. It preserves unsuccessful work so later agents can repair its implementation or reuse useful components.",
       "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history. The October 19 revision is not the original publication date.",
+      "review_status": "approved",
+      "relevance": "Contributes an explicit scientific research process for revising hypotheses, repairing implementations, testing complementary components, and retaining experimental evidence across agents and tasks.",
+      "id": "f3fe009c2d3e7e40",
       "links": [
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.20431"
         }
-      ],
-      "id": "f3fe009c2d3e7e40"
+      ]
     },
     {
       "title": "Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents",
@@ -7539,16 +7853,138 @@
       "id": "b16db32e289347ac"
     },
     {
+      "title": "Reflect After Failure: Brain-Inspired Self-Evolving Agents for Embodied Spatial Intelligence",
+      "url": "https://arxiv.org/abs/2610.20312",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "HiMeco diagnoses perception, exploration, and planning failures, then consolidates attempts into reusable strategies and executable skills. A frozen planner uses this external memory to gather better evidence during later embodied interactions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history. The cover’s month-only date is less precise than this original timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly connects active acquisition of unknown spatial evidence with feedback-driven strategy and skill retention, offering a concrete mechanism for learning from discovery failures.",
+      "id": "55ab01be48315197",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.20312"
+        }
+      ]
+    },
+    {
+      "title": "MMLA-RSI: Recursive Self-Improvement through RTT and RTMA",
+      "url": "https://arxiv.org/abs/2610.20294",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "MMLA-RSI specifies two recursive routes: a numerical updater adapts the policy proposing its successor, and a memory manager selects the evidence available to proposals of its successor. Independent admission installs a candidate in the same learning role for the next generation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history and the October 14 cover date.",
+      "review_status": "approved",
+      "relevance": "Provides a substantive formal construction and evaluation framework for learning mechanisms that participate in generating their successors. This is relevant foundational work on learning to improve discovery, despite absent evidence of successful recursive chains.",
+      "id": "12f2f100744d125c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.20294"
+        }
+      ]
+    },
+    {
+      "title": "Evolve Together, Fall into Place: How Social Scaffolding Shapes Self-Evolving Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.19799",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "AGORA investigates how team composition and social organization affect agent evolution. Its strongest teams often consolidate execution under a capable leader that previously learned within the team.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-14T08:42:05Z.",
+      "review_status": "approved",
+      "relevance": "Directly studies how coordination, authority, and retained experience shape self-improving agent harnesses.",
+      "id": "f8f021c90e8a1d58",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19799"
+        }
+      ]
+    },
+    {
       "title": "Amortizing Sequential Experimental Design in Reasoning LLMs",
       "url": "https://arxiv.org/abs/2610.20832",
       "published_at": "2026-10-14",
       "kind": "paper",
-      "summary": "Trains an LLM’s action-selection reasoning with information-gain rewards so it can conduct sequential Bayesian experimental design more cheaply and generalize its information-gathering behavior to unseen categories and clinical dialogue.",
-      "date_evidence": "The arXiv page says “Submitted on 14 Oct 2026”; submission history lists v1 at 2026-10-14 19:15:58 UTC.",
-      "relevance": "Directly advances adaptive experiment selection, a core capability for discovery agents operating under limited evidence and budgets.",
+      "summary": "AR-BED moves Bayesian experimental-design computation into reasoning-model training. An independently specified hypothesis distribution and semantic likelihood model reward questions for reducing uncertainty, including information obtainable through subsequent interactions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-14T19:15:58Z.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "381c08cf57748156"
+      "relevance": "Trains transferable information-gathering policies that reason about hypotheses and select informative experiments, directly supporting learning to discover.",
+      "id": "381c08cf57748156",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.20832"
+        }
+      ]
+    },
+    {
+      "title": "AdaRSI: On-Demand Recursive Self-Improvement for Embodied Agents",
+      "url": "https://arxiv.org/abs/2610.20474",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "AdaRSI first improves the agent's tools and procedures, then probes persistent failures to decide which executor sub-steps require training. It retains specialized policies and experience that guide subsequent improvement.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-14T16:51:09Z.",
+      "review_status": "approved",
+      "relevance": "Implements feedback-driven agent self-improvement through failure investigation, harness revision, and selective acquisition of missing embodied skills.",
+      "id": "f351b48e981eb372",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.20474"
+        }
+      ]
+    },
+    {
+      "title": "Who Improves the Robot? Toward Physical Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2610.18842",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "This conceptual survey separates robot capability changes from changes to the procedures that produce them. Its L0–L5 framework distinguishes retained autonomy, transfer across tasks, and independently verified recursive gain.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication timestamp as 2026-10-13T17:57:04Z.",
+      "review_status": "approved",
+      "relevance": "Provides definitions and evidence standards for autonomous physical self-improvement, including verification of whether agents improve how they learn.",
+      "id": "207da96ea3ec4712",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.18842"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/SAIL-Research-Lab/Physical-RSI"
+        }
+      ]
+    },
+    {
+      "title": "VideoHarness-SRSI: Structured Recursive Self-Improvement for Video Understanding Harness",
+      "url": "https://arxiv.org/abs/2610.19424",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "VHarness-SRSI organizes automated video-harness evolution around better experimental evidence. It addresses validation overfitting, diluted search budgets, and premature abandonment of promising mechanisms while keeping the executor model frozen.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history. The October 16 revision and October 19 cover date are later dates. The original timestamp falls on October 13 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly studies how agents discover better executable harnesses through iterative experiments, with concrete mechanisms for improving the reliability and transfer of self-improvement.",
+      "id": "1e6847de2c470a1b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19424"
+        },
+        {
+          "label": "Project",
+          "url": "https://zihaolinqz.github.io/VHarness-SRSI/"
+        }
+      ]
     },
     {
       "title": "Self-Evolving Agent Harness",
@@ -7573,6 +8009,24 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "9ea07ad21e399cd7"
+    },
+    {
+      "title": "STRATA: Self-Maintaining Structured Experience Graphs for Self-Evolving Language Agents",
+      "url": "https://arxiv.org/abs/2610.19386",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "STRATA maintains agent experience as a typed hierarchy of reusable atomic capabilities, task workflows, and broader abstractions. Retrieval, reflection, consolidation, forgetting, and explicit warnings jointly govern how prior experience affects future action.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp matches the arXiv v1 submission history. Its UTC date is October 14, while its America/New_York date is October 13.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete agent-memory architecture for retaining, abstracting, and correcting experience, supporting continued learning and reducing harmful transfer during subsequent investigations and interactions.",
+      "id": "65df409d4e89a361",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19386"
+        }
+      ]
     },
     {
       "title": "ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch",
@@ -7609,6 +8063,28 @@
       "review_status": "approved",
       "source": "Codex source-checked",
       "id": "d352987183caa5d8"
+    },
+    {
+      "title": "Verifier-Harness Co-Evolution for Training-Free Self-Improvement on Open-Ended Tasks",
+      "url": "https://arxiv.org/abs/2610.17609",
+      "published_at": "2026-10-12",
+      "kind": "paper",
+      "summary": "UCoE evolves executable verifier criteria and aggregation alongside a fixed actor's procedural memory. Controlled response edits test verifier discrimination before the verifier guides repairs and decides which experience persists.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies original publication as 2026-10-13T02:29:40Z, corresponding to October 12 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Adapts verification and retained agent experience together, directly addressing unreliable feedback in continuing knowledge and harness improvement.",
+      "id": "d753212771182899",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.17609"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/tianyi0216/Unified-Co-Evolution"
+        }
+      ]
     },
     {
       "title": "HarnessTTT: Learn to Optimize Harness at Test-Time for Scientific Discovery",

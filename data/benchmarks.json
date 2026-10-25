@@ -1416,6 +1416,30 @@
       "name": "SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.26659"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose modeling and validation procedures, write and execute code, train models, and revise them using execution results and internal validation scores.",
+        "Tasks, supplied clinical records, test sets, prediction targets, submission formats, and primary metrics are fixed.",
+        "Runs have a 12-hour budget, eight CPU threads, 16 GB RAM, and an isolated container without internet access.",
+        "Test features are supplied, but test outcomes and test scores remain unavailable during development."
+      ],
+      "focus": "Executed autonomous model-development experiments on 15 medical prediction tasks from 10 recorded clinical datasets, covering survival analysis, classification, and sequential prediction. Feedback comes from code execution and validation on supplied training records. Final evaluation also measures calibration and population shift.",
+      "limits": "Pages 3–5 and 12–16 establish computation over fixed clinical records, rather than a simulator or new physical measurements. Hidden test evaluation occurs after development and cannot guide agent search. Scope is structured medical prediction on CPU resources; prospective clinical outcomes are not established.",
+      "training": {
+        "reward": "A benchmark-wide policy-training reward is not established. During development, agents use execution results and self-computed validation metrics. Autoresearch retains changes only when its internal validation primary metric improves. After each run, an external evaluator scores selected predictions against hidden outcomes using survival concordance, AUROC, minimum sensitivity/positive predictive value, or sequential alarm utility. Scores are normalized against null predictions; invalid submissions receive zero in penalized reporting. ECE, external validation, subgroup analyses, and methodological audits provide additional evaluation.",
+        "reset": "Page 5 establishes three repetitions per agent-task pair, each using a dedicated virtual machine; page 12 states that test sets remain fixed across runs. Arbitrary environment snapshot restoration or checkpoint reset support is not established.",
+        "branching": "Pages 5 and 14 establish greedy tree search for AIDE and best-first tree search for AI Scientist v2, including multiple drafts and workers for the latter. Page 16 establishes KEEP or exact REVERT of experimental changes for Autoresearch. General environment cloning or arbitrary state branching support is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-4e611eaf34efb11a",
+      "resource_id": "paper-4e611eaf34efb11a",
+      "name": "Auto-MD-bench: Evaluating Autoresearch Agents for Real-World Medical Tasks",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.25069"
     }
   ]
 }
