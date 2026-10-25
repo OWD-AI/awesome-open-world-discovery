@@ -17499,6 +17499,39 @@
           16
         ]
       }
+    },
+    "paper-8202760640131977": {
+      "institutions": [
+        "Nanyang Technological University",
+        "Institute of Science Tokyo",
+        "Sony AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Trains a joint-embedding predictive architecture on approximately 1.85 million GUI transitions using an EMA target encoder, spatially grounded action tokens, change-weighted prediction loss, regularization, inverse dynamics, and short rollout training. Evaluation uses donor-paired credential screens whose legitimate and hijacked occurrences are pixel-identical, plus benign-mismatch controls, retrieval diagnostics, and action counterfactuals.",
+      "evidence": "The training-free integrity score reaches 0.987 RSWT AUC at 17.1 milliseconds per decision. A separately supervised residual head reaches 0.953 Harm AUC, whereas the integrity score reaches only 0.513 on that task. Future-state retrieval exceeds a nearest-training-transition baseline, and predictions respond to changes in action type and target coordinates.",
+      "discovery_use": "The paper develops an action-conditioned world representation that agents can compare directly with observations to verify environmental transitions. This concretely supports detecting violations of learned expectations and distinguishing harmful from benign surprises.",
+      "limits": "RSWT is a constructed diagnostic with 222 donor pairs, rather than comprehensive deployment evidence. Harm interpretation requires labeled supervision, and prompted VLM harm comparisons reuse a transition-consistency prompt. Ablations use smaller models and one seed. Adaptive adversarial difficulty and end-to-end agent protection are not established. The official repository reports slightly different harm-head numbers from the reviewed PDF. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "The paper develops an action-conditioned world representation that agents can compare directly with observations to verify environmental transitions. This concretely supports detecting violations of learned expectations and distinguishing harmful from benign surprises.",
+        "pdf_sha256": "7c4a8677e993baec3910c66712ef0bd9ac56f0b0c4d301b987904315bf41bff7",
+        "evidence_pages": [
+          1,
+          4,
+          5,
+          9
+        ]
+      }
     }
   }
 }

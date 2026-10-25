@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-523-2563eb?style=flat-square" alt="523 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-524-2563eb?style=flat-square" alt="524 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-93-0f766e?style=flat-square" alt="93 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -78,7 +78,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 32 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 55 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 56 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 44 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 78 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 79 |
@@ -246,6 +246,8 @@ Each work appears once under its primary contribution; see the [classification g
   Zheyu Zhang, Gjergji Kasneci · Technical University of Munich; Munich Center for Machine Learning (MCML)
 - <a id="paper-a77e0de913ae3ba2"></a>**Residual-Based Causal Discovery via Pretrained In-Context Quantile Regression** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29530)* · [Paper](https://arxiv.org/abs/2610.29530) · [Code](https://github.com/causality-lab/loscar)<br>
   Daniel Klippert, Quang Nhat Huynh, Alexander Marx · TU Dortmund University; Research Center Trustworthy Data Science and Security, University Alliance Ruhr; University of M¨unster
+- <a id="paper-8202760640131977"></a>**Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.11942)* · [Paper](https://arxiv.org/abs/2610.11942) · [Code](https://github.com/jiamingzhang94/lgwm) · [Dataset](https://huggingface.co/datasets/jiamingzz/lgwm-data) · [HF Model](https://huggingface.co/jiamingzz/lgwm)<br>
+  Jiaming Zhang et al. · Nanyang Technological University; Institute of Science Tokyo; Sony AI
 - <a id="paper-9a7fdd3c6dd57014"></a>**Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26855)* · [Paper](https://arxiv.org/abs/2610.26855) · [Project](https://ropedia.github.io/ropedia-w0/) · [Code](https://github.com/Ropedia/ropedia-w0) · [HF Model](https://huggingface.co/ropedia-ai/Ropedia-W0)<br>
   Tianqi Liu et al. · Nanyang Technological University; Ropedia; Duke University; +2 institutions
 - <a id="paper-a293907f11982b44"></a>**Sample Dependence-Aware Blind Source Separation for Linear Causal Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06656)* · [Paper](https://arxiv.org/abs/2610.06656)<br>
