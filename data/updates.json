@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T10:02:00-04:00",
+  "updated_at": "2026-10-25T10:36:05-04:00",
   "window_start": "2026-09-26",
   "window_end": "2026-10-25",
   "window_days": 30,
@@ -7950,6 +7950,40 @@
       ]
     },
     {
+      "title": "VideoResearchAgent: Grounded Task Synthesis and Sim-to-Real RL for Open-Web Video Research",
+      "url": "https://arxiv.org/abs/2610.04911",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "VideoResearchAgent combines evidence-grounded task synthesis, a local video simulator, and randomized retrieval training to improve open-web video investigation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata gives the original publication timestamp exactly; PDF page 1 confirms v1 dated 4 October 2026. The timestamp belongs to 3 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to discover previously unspecified video sources, navigate for evidence, recover from retrieval failures, and verify answers through visual observations.",
+      "id": "f25291638fa3e4c7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04911"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Ralph-Zhou/VideoResearchAgent"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/VideoResearchAgent/VideoResearchAgent-Data"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/VideoResearchAgent/VideoResearchAgent-4B-SFT"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/VideoResearchAgent/VideoResearchAgent-4B-RL"
+        }
+      ]
+    },
+    {
       "title": "VCLMU: Mechanism-Centric Virtual Cell World Modeling for Perturbation Response",
       "url": "https://arxiv.org/abs/2610.04475",
       "published_at": "2026-10-03",
@@ -7982,6 +8016,36 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.04469"
+        }
+      ]
+    },
+    {
+      "title": "Self-Evaluating Recursive Agents",
+      "url": "https://arxiv.org/abs/2610.04902",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "SERA trains one shared policy to delegate, execute, and evaluate recursive work. Parents commit task-specific rubrics before child execution, and verified counterfactual outcomes train those rubrics to distinguish success from failure.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv submission history identifies v1 at 4 October 2026, 03:28:07 UTC; supplied PDF page 1 confirms the v1 calendar date.",
+      "review_status": "approved",
+      "relevance": "Trains recursive agents to invent subtasks and evaluate their own intermediate work against externally grounded criteria. This directly supports learning to decompose and verify investigations, although scientific research transfer remains untested.",
+      "id": "e55ba0ce535c45d0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04902"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/OliverLeeXZ/SERA"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/OliverLeeXZ/SERA/blob/main/Dataset/README.md"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Litux12138/SERA"
         }
       ]
     },
@@ -8038,6 +8102,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.04291"
+        }
+      ]
+    },
+    {
+      "title": "GitSwarm: Decentralized Compounding Inference",
+      "url": "https://arxiv.org/abs/2610.04862",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "GitSwarm organizes inference as an accumulating research history. Asynchronous workers preserve competing approaches and experimental evidence in a branchable repository with explicit dependencies.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata gives the original publication timestamp exactly; PDF page 1 confirms v1 dated 4 October 2026. The timestamp belongs to 3 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Provides persistent memory and decentralized coordination for agents conducting experiments, preserving negative findings, revisiting hypotheses, and combining discoveries across independent episodes.",
+      "id": "aa714b09dd384ec0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04862"
+        },
+        {
+          "label": "Project",
+          "url": "https://veds12.github.io/git-swarm/"
         }
       ]
     },
@@ -8202,6 +8288,28 @@
       ]
     },
     {
+      "title": "PsyEvo: A Personalized Counseling Agent That Self-Evolves at Test Time",
+      "url": "https://arxiv.org/abs/2610.02885",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "PsyEvo separates client-specific skill learning from population-level response adaptation while keeping the language-model backbone frozen.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp, corroborated by the arXiv v1 submission history: 2026-10-02T06:23:23Z.",
+      "review_status": "approved",
+      "relevance": "Its primary methodological contribution is feedback-driven agent adaptation: exploring intervention choices, retaining individual experience, and updating a shared policy during deployment.",
+      "id": "9752f967ba715846",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.02885"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Lingxi-mental-health/PsyEvo"
+        }
+      ]
+    },
+    {
       "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
       "url": "https://allenai.org/blog/astabrief",
       "published_at": "2026-10-02",
@@ -8229,6 +8337,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.03258"
+        }
+      ]
+    },
+    {
+      "title": "IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation",
+      "url": "https://arxiv.org/abs/2610.04074",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "IdeaScientist separates scientific ideation into trainable stages and evaluates proposals using a literature cutoff, reconstructed human research directions, automated judgments, and a small human comparison.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp, corroborated by arXiv v1: 2026-10-02T21:35:55Z. The October 9 revision and October 14 manuscript date are later dates.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to identify research gaps, transfer mechanisms across fields, and formulate grounded scientific hypotheses and evaluation plans.",
+      "id": "b62cde245db5c0cf",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04074"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/jiarui-liu/IdeaScientist"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Jerry999/SvalbardIdeaVault"
         }
       ]
     },
@@ -8273,6 +8407,28 @@
         {
           "label": "Code",
           "url": "https://github.com/Mercury7353/self-evaluation-bench"
+        }
+      ]
+    },
+    {
+      "title": "Continual Graph Memory for Mathematical Research Agents",
+      "url": "https://arxiv.org/abs/2610.02945",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "Ansatz combines persistent proof records, an exploration graph, evidence-based curation, and scoped recall to support extended mathematical research.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp, corroborated by arXiv v1: 2026-10-02T07:38:09Z. The October 5 header is not the original publication date.",
+      "review_status": "approved",
+      "relevance": "A research-agent harness explicitly organizes mathematical exploration, verifies candidate knowledge, and transfers prior experience across investigations.",
+      "id": "d90f6364ce9b753e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.02945"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/uclanlp/continual-graph-memory"
         }
       ]
     },
@@ -8449,6 +8605,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.01161"
+        }
+      ]
+    },
+    {
+      "title": "Building Trustworthy Household Robots through Open-World Safety",
+      "url": "https://arxiv.org/abs/2610.14034",
+      "published_at": "2026-10-01",
+      "kind": "paper",
+      "summary": "This position paper distinguishes whether safety constraints remain appropriate from whether a safe response remains feasible, and argues that both must persist across unfamiliar situations and task changes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp, corroborated by the arXiv v1 submission history: 2026-10-01T05:51:27Z.",
+      "review_status": "approved",
+      "relevance": "The agenda concretely connects open-world agents to resolving unknown physical relationships, verifying retained knowledge, and adaptively discovering failures through stateful testing.",
+      "id": "e7d4b4cbecd5681d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.14034"
         }
       ]
     },
@@ -17246,6 +17420,40 @@
       ]
     },
     {
+      "title": "VideoResearchAgent: Grounded Task Synthesis and Sim-to-Real RL for Open-Web Video Research",
+      "url": "https://arxiv.org/abs/2610.04911",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "VideoResearchAgent combines evidence-grounded task synthesis, a local video simulator, and randomized retrieval training to improve open-web video investigation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata gives the original publication timestamp exactly; PDF page 1 confirms v1 dated 4 October 2026. The timestamp belongs to 3 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to discover previously unspecified video sources, navigate for evidence, recover from retrieval failures, and verify answers through visual observations.",
+      "id": "f25291638fa3e4c7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04911"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Ralph-Zhou/VideoResearchAgent"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/VideoResearchAgent/VideoResearchAgent-Data"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/VideoResearchAgent/VideoResearchAgent-4B-SFT"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/VideoResearchAgent/VideoResearchAgent-4B-RL"
+        }
+      ]
+    },
+    {
       "title": "VCLMU: Mechanism-Centric Virtual Cell World Modeling for Perturbation Response",
       "url": "https://arxiv.org/abs/2610.04475",
       "published_at": "2026-10-03",
@@ -17278,6 +17486,36 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.04469"
+        }
+      ]
+    },
+    {
+      "title": "Self-Evaluating Recursive Agents",
+      "url": "https://arxiv.org/abs/2610.04902",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "SERA trains one shared policy to delegate, execute, and evaluate recursive work. Parents commit task-specific rubrics before child execution, and verified counterfactual outcomes train those rubrics to distinguish success from failure.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv submission history identifies v1 at 4 October 2026, 03:28:07 UTC; supplied PDF page 1 confirms the v1 calendar date.",
+      "review_status": "approved",
+      "relevance": "Trains recursive agents to invent subtasks and evaluate their own intermediate work against externally grounded criteria. This directly supports learning to decompose and verify investigations, although scientific research transfer remains untested.",
+      "id": "e55ba0ce535c45d0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04902"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/OliverLeeXZ/SERA"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/OliverLeeXZ/SERA/blob/main/Dataset/README.md"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Litux12138/SERA"
         }
       ]
     },
@@ -17322,6 +17560,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.04291"
+        }
+      ]
+    },
+    {
+      "title": "GitSwarm: Decentralized Compounding Inference",
+      "url": "https://arxiv.org/abs/2610.04862",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "GitSwarm organizes inference as an accumulating research history. Asynchronous workers preserve competing approaches and experimental evidence in a branchable repository with explicit dependencies.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata gives the original publication timestamp exactly; PDF page 1 confirms v1 dated 4 October 2026. The timestamp belongs to 3 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Provides persistent memory and decentralized coordination for agents conducting experiments, preserving negative findings, revisiting hypotheses, and combining discoveries across independent episodes.",
+      "id": "aa714b09dd384ec0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04862"
+        },
+        {
+          "label": "Project",
+          "url": "https://veds12.github.io/git-swarm/"
         }
       ]
     },
@@ -17486,6 +17746,28 @@
       ]
     },
     {
+      "title": "PsyEvo: A Personalized Counseling Agent That Self-Evolves at Test Time",
+      "url": "https://arxiv.org/abs/2610.02885",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "PsyEvo separates client-specific skill learning from population-level response adaptation while keeping the language-model backbone frozen.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp, corroborated by the arXiv v1 submission history: 2026-10-02T06:23:23Z.",
+      "review_status": "approved",
+      "relevance": "Its primary methodological contribution is feedback-driven agent adaptation: exploring intervention choices, retaining individual experience, and updating a shared policy during deployment.",
+      "id": "9752f967ba715846",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.02885"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Lingxi-mental-health/PsyEvo"
+        }
+      ]
+    },
+    {
       "title": "Mapping and Advancing the Scalability-Accuracy Frontier of Nonlinear Causal Discovery",
       "url": "https://arxiv.org/abs/2610.03258",
       "published_at": "2026-10-02",
@@ -17500,6 +17782,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.03258"
+        }
+      ]
+    },
+    {
+      "title": "IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation",
+      "url": "https://arxiv.org/abs/2610.04074",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "IdeaScientist separates scientific ideation into trainable stages and evaluates proposals using a literature cutoff, reconstructed human research directions, automated judgments, and a small human comparison.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp, corroborated by arXiv v1: 2026-10-02T21:35:55Z. The October 9 revision and October 14 manuscript date are later dates.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to identify research gaps, transfer mechanisms across fields, and formulate grounded scientific hypotheses and evaluation plans.",
+      "id": "b62cde245db5c0cf",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04074"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/jiarui-liu/IdeaScientist"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Jerry999/SvalbardIdeaVault"
         }
       ]
     },
@@ -17544,6 +17852,28 @@
         {
           "label": "Code",
           "url": "https://github.com/Mercury7353/self-evaluation-bench"
+        }
+      ]
+    },
+    {
+      "title": "Continual Graph Memory for Mathematical Research Agents",
+      "url": "https://arxiv.org/abs/2610.02945",
+      "published_at": "2026-10-02",
+      "kind": "paper",
+      "summary": "Ansatz combines persistent proof records, an exploration graph, evidence-based curation, and scoped recall to support extended mathematical research.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp, corroborated by arXiv v1: 2026-10-02T07:38:09Z. The October 5 header is not the original publication date.",
+      "review_status": "approved",
+      "relevance": "A research-agent harness explicitly organizes mathematical exploration, verifies candidate knowledge, and transfers prior experience across investigations.",
+      "id": "d90f6364ce9b753e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.02945"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/uclanlp/continual-graph-memory"
         }
       ]
     },
@@ -17694,6 +18024,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.01161"
+        }
+      ]
+    },
+    {
+      "title": "Building Trustworthy Household Robots through Open-World Safety",
+      "url": "https://arxiv.org/abs/2610.14034",
+      "published_at": "2026-10-01",
+      "kind": "paper",
+      "summary": "This position paper distinguishes whether safety constraints remain appropriate from whether a safe response remains feasible, and argues that both must persist across unfamiliar situations and task changes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original timestamp, corroborated by the arXiv v1 submission history: 2026-10-01T05:51:27Z.",
+      "review_status": "approved",
+      "relevance": "The agenda concretely connects open-world agents to resolving unknown physical relationships, verifying retained knowledge, and adaptively discovering failures through stateful testing.",
+      "id": "e7d4b4cbecd5681d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.14034"
         }
       ]
     },

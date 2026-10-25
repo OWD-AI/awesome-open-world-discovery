@@ -2174,6 +2174,28 @@
       "name": "Reward Hacking Challenges Oversight of Autonomous Research Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2609.28614"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 provides the code URL https://github.com/HQ-Lin/EvoPathBench.",
+        "Page 4 describes a release containing 1,800 streams; repository accessibility, release completeness, and licensing are not established from supplied pages."
+      ],
+      "focus": "EvoPathBench measures artifact-level generalization, retention, and rule adaptation across five-update market streams while keeping the base model, tools, and executor fixed. Public Binance Spot trading records are combined with procedurally generated, calibrated market trajectories. Agents make trading decisions in episodes of 24 market steps and three decisions. In the exogenous layer, actions change holdings and cash but do not change the market path. In the endogenous layer, orders interact with five fixed opponents through a call auction, and order imbalance affects later prices. Feedback comes from simulated trading outcomes and post-episode feedback, without new physical measurements or live-market execution.",
+      "limits": "The supplied pages cover one controlled market domain and five updates per stream. Exact action syntax, the numerical episode-score formula, and detailed implementation are not established because the relevant later appendix pages were not supplied. Recorded market data and calibrated simulation do not establish real-market profitability. The agent tasks are simulated trading decisions rather than executed research experiments.",
+      "training": {
+        "reward": "Learning episodes expose actions, observations, and feedback, followed by updates to persistent memories or skills. Some methods use paired internal validation rollouts before accepting updates. A shared numerical training reward and its formula are not established in the supplied pages. Evaluation freezes artifacts and scores read-only copies on hidden held-out episodes unavailable to the updater. Reported measures include capability evolution gain against a non-evolving baseline, artifact state-use effects, retention losses, and post-reversal revision gains.",
+        "reset": "Each evolution path starts from its method's initial artifact state. Episode-local interaction history is cleared after each task while permitted artifacts persist through the stream. Held-out evaluations cannot update artifacts. Execution repeats preserve the artifact state and environment realization while independently executing the model. Arbitrary simulator-state reset support is not established.",
+        "branching": "Read-only checkpoint copies, artifact-access interventions, paired internal validation rollouts, and comparisons among candidate artifact updates are described. Candidate updates and the current artifact are independently evaluated on unseen episodes. General simulator snapshot branching or arbitrary counterfactual continuation from any market step is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-5356077cb77fa887",
+      "resource_id": "paper-5356077cb77fa887",
+      "name": "Beyond Endpoint Performance: Process-Level Evaluation of Self-Evolving Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.24663"
     }
   ]
 }

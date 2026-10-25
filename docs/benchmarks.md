@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**97 usage profiles** · Updated **2026-10-25**
+**98 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -677,6 +677,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents](#paper-5687d10cf290fed0) | Synthetic data | Analysis + tools | Paper-described |
 | [LiveMACE: Process-Aware Evaluation of LLM Agent Capabilities in Evolving Markets](#paper-53e3f761f6a0e8c3) | Real data | Interactive simulator | Paper-described |
 | [From Retrieval to Customer Context: Evaluating Frontier-Model Systems for Voice-of-Customer Analysis](#paper-480b56b9da41924d) | Real data | Analysis + tools | Paper-described |
+| [Beyond Endpoint Performance: Process-Level Evaluation of Self-Evolving Agents](#paper-5356077cb77fa887) | Synthetic data | Interactive simulator | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1526,6 +1527,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | A candidate-training reward or parameter-update loop is not established. A comparative gpt-5.5 judge scores answer quality, analytical depth, and evidence strength; a separate gpt-5.5 citation judge assesses sampled claim–record support. The overall evaluator equally averages quality, depth, and evidence quality, with paired query outcomes primary. |
 | Reset | Page 4 states that each query executes in a fresh conversation. The corpus remains frozen, while the context graph's ingestion-time summaries, predictions, and relationships persist across questions. Query-specific assignments from the other systems are not shared across questions. |
 | Branching | Checkpoint branching or cloning of intermediate executions is not established. Specialist delegation and a bounded verification/revision loop are described, but they do not establish environment-state branching. |
+
+</details>
+
+<a id="paper-5356077cb77fa887"></a>
+
+<details>
+<summary>Beyond Endpoint Performance: Process-Level Evaluation of Self-Evolving Agents — details</summary>
+
+[Work](../README.md#paper-5356077cb77fa887) · [Source](https://arxiv.org/pdf/2609.24663)
+
+**Focus:** EvoPathBench measures artifact-level generalization, retention, and rule adaptation across five-update market streams while keeping the base model, tools, and executor fixed. Public Binance Spot trading records are combined with procedurally generated, calibrated market trajectories. Agents make trading decisions in episodes of 24 market steps and three decisions. In the exogenous layer, actions change holdings and cash but do not change the market path. In the endogenous layer, orders interact with five fixed opponents through a call auction, and order imbalance affects later prices. Feedback comes from simulated trading outcomes and post-episode feedback, without new physical measurements or live-market execution.
+
+**Openness:** `Page 1 provides the code URL https://github.com/HQ-Lin/EvoPathBench.`, `Page 4 describes a release containing 1,800 streams; repository accessibility, release completeness, and licensing are not established from supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** The supplied pages cover one controlled market domain and five updates per stream. Exact action syntax, the numerical episode-score formula, and detailed implementation are not established because the relevant later appendix pages were not supplied. Recorded market data and calibrated simulation do not establish real-market profitability. The agent tasks are simulated trading decisions rather than executed research experiments.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Learning episodes expose actions, observations, and feedback, followed by updates to persistent memories or skills. Some methods use paired internal validation rollouts before accepting updates. A shared numerical training reward and its formula are not established in the supplied pages. Evaluation freezes artifacts and scores read-only copies on hidden held-out episodes unavailable to the updater. Reported measures include capability evolution gain against a non-evolving baseline, artifact state-use effects, retention losses, and post-reversal revision gains. |
+| Reset | Each evolution path starts from its method's initial artifact state. Episode-local interaction history is cleared after each task while permitted artifacts persist through the stream. Held-out evaluations cannot update artifacts. Execution repeats preserve the artifact state and environment realization while independently executing the model. Arbitrary simulator-state reset support is not established. |
+| Branching | Read-only checkpoint copies, artifact-access interventions, paired internal validation rollouts, and comparisons among candidate artifact updates are described. Candidate updates and the current artifact are independently evaluated on unseen episodes. General simulator snapshot branching or arbitrary counterfactual continuation from any market step is not established. |
 
 </details>
 
