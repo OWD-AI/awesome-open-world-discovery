@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**48 usage profiles** · Updated **2026-10-24**
+**49 usage profiles** · Updated **2026-10-24**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -415,6 +415,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Benchmarking and Error Analysis of Deep Search and Deep Research LLM Agents](#paper-31224f0f7655c123) | Real data | Analysis + tools | Paper-described |
 | [VX-One: Typed, Calibrated Decision Heads for Real-Time Perimeter Triage - An empirical study of unknown-attack honesty, cascade gray zones, and calibration under drift](#paper-1313ca747d97581e) | Real data | Offline data | Paper-described |
 | [The Scientific Research Taste Benchmark (SciTaste-Bench): A Multi-Disciplinary Benchmark for Assessing Large Language Models' Judgment of Research Taste in Scientific Papers](#paper-1b71ddb115ba5e37) | Real data | Analysis + tools | Paper-described |
+| [CellTrack-Bench: Microscopic Cell Tracking Benchmark for Vision-Language Models](#paper-e461db7393754058) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -758,6 +759,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Model-training reward is not established. Evaluation compares predicted composite and dimension scores with fixed bibliometric targets using correlation, absolute and squared error, bias, dimension accuracy, and WAPE-based grades. Regression training derives index weights; it is separate from training the evaluated LLMs. |
 | Reset | Environment reset or state restoration is not established. The harness supports resuming by bibcode and retrying transient failures. |
 | Branching | Environment cloning or branching from an intermediate state is not established. Four predefined evaluation modes and repeatable paper-level requests are described. |
+
+</details>
+
+<a id="paper-e461db7393754058"></a>
+
+<details>
+<summary>CellTrack-Bench: Microscopic Cell Tracking Benchmark for Vision-Language Models — details</summary>
+
+[Work](../README.md#paper-e461db7393754058) · [Source](https://arxiv.org/pdf/2610.31566)
+
+**Focus:** Scientific visual reasoning on recorded microscopy: link cells across two frames, repair supplied tracker graphs, and flag decisions for review. Tool feedback consists of deterministic crops from fixed images. Existing annotations supply evaluation targets; no new physical measurements are collected.
+
+**Openness:** `Models choose regions to inspect within fixed adjacent-frame microscopy items.`, `Predictions are constrained to supplied cells, candidate links, and structured task answers.`
+
+**New physical measurements:** No
+
+**Limits:** Segmentation and candidate neighborhoods are supplied. Shared tracker errors determine the selected cases, so results do not measure full-sequence tracking performance. Inspection utility uses simulated oracle correction of flagged sources. The frozen harness uses one completion per item and a shared 8,192-token reasoning/tool budget with 2,048 tokens reserved for the answer. Dataset licenses prevent redistribution of benchmark items; reconstruction code and stored outputs are released.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No model-training reward is defined; the paper presents an evaluation benchmark rather than a training method. The evaluator compares structured predictions with existing annotations using dataset-macro per-item F1, proximity-residual and division F1, and Subgraph-LNK graph-edit scores. Repair utility measures improvement over the supplied graph; inspection utility assumes oracle replacement of flagged sources' outgoing links. These scores are evaluation outcomes; online score feedback to the model is not established. |
+| Reset | Evaluation uses separate requests for fixed items. An environment reset, checkpoint restoration, or resumable episode mechanism is not established. |
+| Branching | Models may request multiple crops of fixed images. Counterfactual environment rollouts, state forks, and checkpoint branching are not established. Biological lineage branches are annotation targets, not execution branches. |
 
 </details>
 

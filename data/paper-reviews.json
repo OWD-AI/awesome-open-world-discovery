@@ -8011,6 +8011,528 @@
           33
         ]
       }
+    },
+    "paper-b7765a43c46af2b6": {
+      "institutions": [
+        "University of Science and Technology of China",
+        "Joy Future Academy, JD"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        11,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Macro planning defines regional structure; Micro planning specializes tiles using terrain and accepted neighboring commitments. A joint constraint solver resolves typed probability distributions into executable plans. Deterministic generators compile geometry, directional scheduling prepares approaching regions, and revision checks protect persistent records from stale asynchronous updates.",
+      "evidence": "On 100 fixed planner distributions, joint resolution increases hard-constraint success from 37% to 100%. Grounded interpretation succeeds on 76 of 80 bilingual requests. Directional prefetch reduces total route waiting to 3.52 seconds, and compilation optimization accelerates dense forests by 3.24 times.",
+      "discovery_use": "Persistent, inspectable world representations connect exploration, grounded actions, validated spatial plans, and retained state across revisits. This provides concrete world-model infrastructure for open-world discovery, although autonomous knowledge discovery and causal identification are not demonstrated.",
+      "limits": "Planning ablations use one run per variant without sampling-variance estimates. Prefetch measures backend readiness and excludes browser installation. Interaction tests hold world facts fixed and do not isolate a complete edit–evict–revisit cycle. Generation vocabulary and controllers are bounded; reconstruction requires compatible versions. Long-term record storage and inactive-actor simulation remain unresolved. The official repository currently advertises implementation code as forthcoming.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "causality",
+        "rationale": "Persistent, inspectable world representations connect exploration, grounded actions, validated spatial plans, and retained state across revisits. This provides concrete world-model infrastructure for open-world discovery, although autonomous knowledge discovery and causal identification are not demonstrated.",
+        "pdf_sha256": "de2f0636e0ef0325ba50e357874393f26790b839b05707889a9166d3f980127c",
+        "evidence_pages": [
+          1,
+          3,
+          11,
+          12
+        ]
+      }
+    },
+    "paper-f5ebfafb83c6121b": {
+      "institutions": [
+        "miHoYo Honkai AI R&D Team",
+        "College AI, Tsinghua University",
+        "University of Chinese Academy of Sciences",
+        "MMLab, The University of Hong Kong",
+        "National University of Singapore",
+        "Peking University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7,
+        10,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Twenty training trunks and annealed branches produce 120 conditions spanning four Qwen3.5 sizes, six budgets of 50–1,600 gameplay hours, and five mixtures. Causal next-token training supervises keyboard–mouse actions with sparse retrospective rationales and a fixed general-data share. Evaluation combines held-out action losses, four gameplay benchmarks, paused and real-time protocols, and scaling-law holdouts.",
+      "evidence": "At 1,600 hours, mixed-game models average roughly 2.8 times the related-world OGA score of Minecraft-only models. All 20 OOD-loss curves worsen after their early improvement. Minecraft and in-corpus loss fits achieve R² of 0.982 and 0.995; those fits do not imply distant-world scaling. GameScaling-9B-S3 scores 25.3 in real time versus 19.2 for the best tested frontier model.",
+      "discovery_use": "The controlled training study directly tests how embodied agents transfer learned behavior to unfamiliar worlds with different mechanics. Its evidence identifies limits of imitation-based pretraining for learning to explore and act beyond familiar environments.",
+      "limits": "The grid uses one training seed, and bootstrap intervals do not estimate training-seed variance. Most diversity changes redistribute exposure within a fixed game inventory rather than add worlds. Behavior cloning supplies no direct success feedback. Real-time comparisons incorporate different serving infrastructure and default reasoning policies. Published Minecraft baselines use unmatched protocols. Public releases provide inference code and selected weights, without training code or the assembled corpus.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "learning",
+        "rationale": "The controlled training study directly tests how embodied agents transfer learned behavior to unfamiliar worlds with different mechanics. Its evidence identifies limits of imitation-based pretraining for learning to explore and act beyond familiar environments.",
+        "pdf_sha256": "3b46e20c111f0093dbc426754d7000b88325023fc9ec19852fd8edce2c24fd3a",
+        "evidence_pages": [
+          1,
+          4,
+          7,
+          10,
+          14
+        ]
+      }
+    },
+    "paper-66f56984b6446ca0": {
+      "institutions": [
+        "UC Santa Barbara",
+        "Pennsylvania State University",
+        "LinkedIn"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Runs an 80-iteration search with discounted UCB researcher selection, independent technical and contextual review, implementation checks, and FLOP-matched candidate training. Organizational ablations remove profiles, private memory, or adaptive selection. The strongest architecture is evaluated at 1.3B parameters.",
+      "evidence": "The main run evaluated 63 candidates and found CFDN with utility 1.04, versus 0.54 without backgrounds, 0.56 with fresh memory, and 0.76 with uniform selection. At 1.3B, CFDN leads the compared models on aggregate language modeling, reasoning, and retrieval categories.",
+      "discovery_use": "Directly studies autonomous scientific discovery: persistent researchers propose falsifiable architectural hypotheses, review and implement experiments, share evidence, and adaptively allocate research opportunities.",
+      "limits": "Evidence comes from one architecture family and agent configuration, without repeated search runs establishing variability. Two ablations share the main run's initial 16 iterations. Search retrieval uses a teacher-forced proxy; full evaluation uses generation. At 150M, full reasoning accuracy slightly trails GDN2, and larger-scale aggregate gains hide individual-task regressions. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "Directly studies autonomous scientific discovery: persistent researchers propose falsifiable architectural hypotheses, review and implement experiments, share evidence, and adaptively allocate research opportunities.",
+        "pdf_sha256": "55b29852e553eb2aa66e2769f7c24f7b951a215b510104a5b9f55f5845260a2e",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-02f41708e47efed6": {
+      "institutions": [
+        "KTH Royal Institute of Technology",
+        "Data Machine Elite",
+        "˙Izmir Institute of Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Two evolutionary islands retain kernel programs, ideas, and measured performance. Local modification, cross-island combination, and global exploration generate candidates through a restricted kernel API. Discovery uses 30 simulated tasks; 20 held-out tasks evaluate transfer. Initialization, acquisition function, and evaluation budgets remain fixed across kernels.",
+      "evidence": "The discovered kernel combines individual-user similarity with pairwise interaction terms. After 40 BO iterations, the normalized objective reaches 0.7046 versus 0.5885 for the strongest standard kernel on discovery tasks, a 19.7% relative improvement. Held-out performance is 0.6482 versus 0.5962, an 8.7% relative improvement.",
+      "discovery_use": "The paper demonstrates a concrete algorithm-discovery loop: an LLM proposes executable covariance structures, optimization experiments evaluate them, and performance feedback guides further search. This connects directly to discovering and improving methods, despite the narrow wireless demonstration.",
+      "limits": "Only kernel discovery is implemented; automatic decisions about when to adapt, broader component evolution, and long-term digital-twin operation remain proposals. Held-out tasks share the same underlying system distribution. The report does not establish performance under substantial distribution changes or quantify search cost and uncertainty sufficiently for broader claims. No first-party release was verified. Only pages 2 and 3 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "open_ended",
+        "rationale": "The paper demonstrates a concrete algorithm-discovery loop: an LLM proposes executable covariance structures, optimization experiments evaluate them, and performance feedback guides further search. This connects directly to discovering and improving methods, despite the narrow wireless demonstration.",
+        "pdf_sha256": "2873aeb8488a76ae595e5cbb474c9dd5af5ce366a06ef9504397eb6d56863796",
+        "evidence_pages": [
+          1,
+          5,
+          6
+        ]
+      }
+    },
+    "paper-c474fbc2967f22ed": {
+      "institutions": [
+        "The Hong Kong University of Science and Technology",
+        "Peking University",
+        "Huawei Noah’s Ark Lab"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The authors examine 120 endpoints using marker frequency, position, spelling, chaining, and usage distributions. Clean and arithmetic-error prefixes measure marker sensitivity and false alarms. Additional experiments seed markers through supervised training and follow their survival under GRPO; blind audits compare automated revision judgments with expert consensus.",
+      "evidence": "Across 18 zero-RL runs from bases lacking the marker, accuracy gains have a median of 42.9 percentage points, while 17 runs retain near-absence. Trace fine-tuning introduces the marker in 13 of 14 examined models. Released RL-Zero recipes amplify inherited markers, while the authors' GRPO recipe can erase a seeded marker. One automated judge reverses the human-labelled revision trend.",
+      "discovery_use": "The study tests whether apparent reflective reasoning is acquired through reinforcement learning or inherited from training data. Its checkpoint comparisons, controlled training interventions, and error-detection diagnostics directly inform training and verification of reasoning capabilities used by discovery agents.",
+      "limits": "Provenance comparisons are observational, and checkpoint-series intervals measure evaluation sampling rather than training-run variance. Lexical markers do not measure reflection itself. Training experiments concern English mathematics and models up to 32B; injected errors and consensus audits have limited coverage. The advertised anonymous artifact destination could not be verified. This is a targeted review of supplied sections, including page 26, rather than all 36 pages; only pages 1 and 4 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "learning",
+        "rationale": "The study tests whether apparent reflective reasoning is acquired through reinforcement learning or inherited from training data. Its checkpoint comparisons, controlled training interventions, and error-detection diagnostics directly inform training and verification of reasoning capabilities used by discovery agents.",
+        "pdf_sha256": "b2b5192f7aa177207b290666f46e0d1953bd048b917c0189ebcff4726d571fb2",
+        "evidence_pages": [
+          1,
+          4,
+          9
+        ]
+      }
+    },
+    "paper-bd5dfa376cbe2ce7": {
+      "institutions": [
+        "The University of Hong Kong",
+        "Zhejiang University",
+        "Fudan University",
+        "LIGHTSPEED",
+        "Independent Researcher"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        17,
+        27
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Capability-constrained subtask schemas guide planning. Working, episodic, procedural, and world memories preserve verified state and useful experience. The VLA uses separate normalization and mouse-token representations for GUI and non-GUI control, followed by knowledge training, imitation, and environment-feedback RL. Evaluation covers atomic tasks, completion detection, and 14 goal-only long-horizon tasks.",
+      "evidence": "MineStudio average success reaches 85.0% versus 65.0% for OpenHA Text/CoA. OpenHA average success improves only from 36.8% to 37.4%, with weaker GUI and combat scores. Holding the VLA fixed, the full harness increases long-horizon goal success from 10.7% to 25.0%. The specialized completion detector achieves 0.863 accuracy and F1.",
+      "discovery_use": "HiSTEVE contributes an evaluated harness for exploration, persistent environmental memory, visual verification, recovery, and replanning in a partially observed open world. Its matched-controller experiments concretely connect orchestration to sustained exploratory agency.",
+      "limits": "Atomic schemas are manually defined, and deployment experience does not produce parametric continual learning. Planning depends on an external VLM. The harness ablation combines several mechanisms and does not isolate each memory or recovery component. Long-horizon recovery and open-ended success remain 14.3%, with substantial reported variability. The author-listed repository returned 404, so no public release was verified. Only pages 4 and 8 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "HiSTEVE contributes an evaluated harness for exploration, persistent environmental memory, visual verification, recovery, and replanning in a partially observed open world. Its matched-controller experiments concretely connect orchestration to sustained exploratory agency.",
+        "pdf_sha256": "c8a6f7bd01adc3a7af60546ce413eb7878a7a832acdb2a421bba917125f79e58",
+        "evidence_pages": [
+          1,
+          5,
+          17,
+          27
+        ]
+      }
+    },
+    "paper-7fabe26ca5c43e1f": {
+      "institutions": [
+        "GaiaLogic Unipessoal Lda.",
+        "Nanyang Technological University, Singapore",
+        "University of Macau"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        16,
+        29,
+        45
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Models cognition as partial evaluation over consistent, effectively axiomatized systems interpreting arithmetic. Separates unresolved but decidable propositions from formally independent ones, then connects reflective extension and goal selection to a Kolmogorov-complexity analysis of accumulated histories.",
+      "evidence": "Under the explicitly assumed persistent algorithmic novelty condition, accumulated history complexity grows at least linearly. The framework distinguishes local reasoning convergence from continuing representational extension and proposes evaluating trajectories of conceptual change rather than fixed task snapshots.",
+      "discovery_use": "Directly addresses how agents could generate new representations, questions, and purposes beyond a fixed inferential framework. Include as conditional theoretical foundations, with its architectural claims distinguished from established guarantees.",
+      "limits": "Persistent algorithmic novelty is assumed; logical independence and branching alone do not establish it. The supplied sections provide no implemented agent or empirical evaluation. Biological analogies do not validate the mathematics. This targeted review does not cover every intervening proof, so broad claims about necessary architectural laws remain unverified.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "foundations",
+        "rationale": "Directly addresses how agents could generate new representations, questions, and purposes beyond a fixed inferential framework. Include as conditional theoretical foundations, with its architectural claims distinguished from established guarantees.",
+        "pdf_sha256": "d41bc644d3904c5f2137d0762667ff051359157b6d81102a4883f942b3158f9f",
+        "evidence_pages": [
+          1,
+          16,
+          29,
+          45
+        ]
+      }
+    },
+    "paper-e461db7393754058": {
+      "institutions": [
+        "Biohub"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        8,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Mines shared errors from three trackers using held-out dataset predictions. Constructs local two-frame tasks with supplied segmentation, sequence-disjoint validation and test partitions, and dataset sampling caps. Selects a crop-tool harness using validation data, then evaluates 22 models with fixed budgets and graph, division, proximity-residual, and review-budget metrics.",
+      "evidence": "The full benchmark contains 1,537 neighborhoods and 9,041 annotated linking decisions from 13 contributing datasets among 15 sources. The leaderboard uses 244 hard test neighborhoods. GPT-5.6 sol reports Subgraph-LNK 0.767 versus 0.493 for nearest-centroid matching and improves repair LNK by 0.412. All evaluated open-weight models fall below the nearest-centroid graph score; six of thirteen worsen repair performance.",
+      "discovery_use": "Evaluates scientific visual reasoning and evidence inspection on biological events that specialized trackers mishandle. Its controlled tool harness and shortcut-resistant evaluation concretely test capabilities relevant to scientific discovery workflows.",
+      "limits": "Tracker-error mining deliberately disadvantages those trackers and does not measure their full-sequence performance. Segmentation and candidate neighborhoods are supplied. Inspection utility assumes oracle correction of flagged sources. Harness selection primarily uses one model, evaluations use one completion, and token truncation affects some systems. Dataset licenses prevent redistribution of benchmark items; the verified release provides reconstruction code and stored outputs.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "benchmarks",
+        "rationale": "Evaluates scientific visual reasoning and evidence inspection on biological events that specialized trackers mishandle. Its controlled tool harness and shortcut-resistant evaluation concretely test capabilities relevant to scientific discovery workflows.",
+        "pdf_sha256": "6c79f054724562f8a0f8f2a9fa13c027ac317b9be7b60269da9d0b6b868bed35",
+        "evidence_pages": [
+          1,
+          2,
+          8,
+          9
+        ]
+      }
+    },
+    "paper-655737c5db5ee3dd": {
+      "institutions": [
+        "National Laboratory of Solid State Microstructures, School of Physics and, Collaborative Innovation Center of Advanced Microstructures,, Nanjing University",
+        "Shanghai Innovation Institute",
+        "College of Computer Science and Artificial Intelligence,, Fudan University",
+        "Shanghai Research Institute for Intelligent Autonomous Systems,, Tongji University",
+        "BEDI Cloud"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        4,
+        38,
+        47
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Retrieves 64 compatible historical sources from a library of 15,409 records. Evolves a staged quality-and-diversity selection policy and an Adam-based optimizer with shorter momentum, time-dependent updates, and numerical safeguards. Compares the resulting policy with classical and agentic optimization baselines on eight detector topologies.",
+      "evidence": "Reports mean loss 0.204 ± 0.101 versus 0.452 ± 0.150 for NAAdam and 0.540 ± 0.263 for GEPA, with lower losses on all eight main-comparison targets. Ablations support contributions from initialization selection, optimizer evolution, and scientific guidance. These percentages concern the reported objective, not equivalent percentage improvements in physical detector sensitivity.",
+      "discovery_use": "Makes the scientific search procedure itself an object of agent-driven improvement, coupling historical experience with execution feedback. This is a direct contribution to learning how to discover, although evaluation independence requires clarification.",
+      "limits": "Main text says held-out outcomes never reach the evolvers, but the supplied optimizer-development prompt explicitly uses an eight-held-out-topology panel; their relationship is unresolved. The reported standard deviations describe topology variation, not repeated-seed uncertainty. Matched execution budgets do not establish equal total development cost. Evidence covers one differentiable simulator and depends on historical-library coverage; laboratory transfer and global convergence are unestablished. Review was targeted, not exhaustive across all 50 pages.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "open_ended",
+        "rationale": "Makes the scientific search procedure itself an object of agent-driven improvement, coupling historical experience with execution feedback. This is a direct contribution to learning how to discover, although evaluation independence requires clarification.",
+        "pdf_sha256": "54be2e0024f9d5c9d6b5caaedf00f9c95e7fa48c37a1ea9c87a03ca703e86cde",
+        "evidence_pages": [
+          1,
+          2,
+          4,
+          38,
+          47
+        ]
+      }
+    },
+    "paper-ce88f69c0203ec29": {
+      "institutions": [
+        "WeChat Vision, Tencent Inc."
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6,
+        26
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Builds on Qwen3-VL with coordinate tokens and an instance token connected to a 9.6M-parameter pixel decoder. A knowledge graph guides acquisition; localization experts and VLM verification produce annotations. Training combines three supervised stages, segmentation and matting training, and uncertainty-selected GRPO.",
+      "evidence": "The 4B model reports mean detection F1 of 55.3 on LVIS and 71.3 on Dense200, versus 50.7 and 58.7 for LocateAnything. Absent-target rejection reaches 96.4% on the internal WeRef-Bench and 67.4% on RefCOCOg-Rej. Ref-ZOM rejection reaches 86.0%. Results support improved grounding and rejection, rather than demonstrated continual acquisition of unknown classes.",
+      "discovery_use": "Contributes training methods for open-vocabulary recognition, grounded target verification, and rejection of absent targets. Its reviewed error feedback also directs acquisition toward semantic gaps. These concretely support reliable perception in discovery agents, although autonomous discovery of unknown categories is not evaluated.",
+      "limits": "Inference is single-turn, and the authors acknowledge reduced general capabilities and limited complex reasoning. RL evaluates boxes rather than mask or alpha quality. Some evaluations are internal benchmarks. The supplied results lack ablations isolating the data engine, curriculum, and RL contributions. Dataset names recur across training sources and evaluation, making split isolation important despite the stated separation policy. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "learning",
+        "rationale": "Contributes training methods for open-vocabulary recognition, grounded target verification, and rejection of absent targets. Its reviewed error feedback also directs acquisition toward semantic gaps. These concretely support reliable perception in discovery agents, although autonomous discovery of unknown categories is not evaluated.",
+        "pdf_sha256": "d0bca4135c89e6e95322f4b4f1f92f3d6591ee797e10eab114ed9c305eb6a22c",
+        "evidence_pages": [
+          1,
+          4,
+          6,
+          26
+        ]
+      }
+    },
+    "paper-ff5ed4b91b994247": {
+      "institutions": [
+        "HIT (Shenzhen)",
+        "Show Lab, NUS",
+        "Ping An Tech"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Learns RGB and skeleton transition VAEs, grounds RGB kinematic latents with a frozen skeleton decoder, and swaps paired skeleton latents into RGB reconstruction. Separate conditioning pathways and branch dropout train a Cosmos-based world model. An action adapter predicts kinematic latents; deployment uses zero residual and no future observations.",
+      "evidence": "On DROID, ADE improves from DreamDojo's 51.11 to 41.15 pixels and LPIPS from 0.1473 to 0.1310. Removing skeleton supervision or swap reconstruction raises ADE above 64 pixels. Kinematic probes support motion specialization. Open-loop policy evaluation reports 63.02% balanced accuracy and 0.5347 rank correlation, but only 33.33% success recall.",
+      "discovery_use": "Directly contributes structured action-conditioned world representations for predicting intervention consequences and evaluating robot policies. This supports agents investigating possible actions through simulation, although causal identification and autonomous exploration are not established.",
+      "limits": "DROID predictions span only 0.8 seconds. Motion metrics exclude invalid trajectories and can compare different subsets; video fidelity includes the initial conditioning frame. AgiBot results are mixed: SkeLAM has worse ADE and LPIPS than DreamDojo. Policy evidence contains seven policies and only nine real successes among 105 episodes. Human transfer is qualitative, and neither complete disentanglement nor closed-loop policy evaluation is established. The verified GitHub repository contains the project website rather than training code.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "causality",
+        "rationale": "Directly contributes structured action-conditioned world representations for predicting intervention consequences and evaluating robot policies. This supports agents investigating possible actions through simulation, although causal identification and autonomous exploration are not established.",
+        "pdf_sha256": "fef7cce03f5bc960cc0553ffd586b403a334ae2a7d365dbc2a46302c394ddc0a",
+        "evidence_pages": [
+          1,
+          6,
+          18
+        ]
+      }
+    },
+    "paper-26bdab7224d77ff2": {
+      "institutions": [
+        "Plurai"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Begins with an undecomposed policy and a human-labeled seed pool. Execution traces guide attribution of errors to predicates, input slicing, or composition. Adversaries generate counterexamples, independently teacher-labeled before admission. Search runs for at most eight rounds and selects the program with the best seed-pool score.",
+      "evidence": "SCOPE achieves or ties the highest score in 10 of 12 task-executor settings. With the weakest executor it scores 0.85, 0.82, 0.87, and 0.78 across the four tasks; AFlow beats it on Escalation at 0.86. Adversarial generation significantly helps three tasks but not Escalation. Programs transfer across executors, with prediction changes on 5–7% of Tile-match samples versus 26–37% for compared frontier judges.",
+      "discovery_use": "Provides a concrete automated improvement loop that discovers counterexamples, diagnoses component failures, and jointly revises executable reasoning programs and their curriculum. This is relevant to improving agent verification harnesses, including research-agent plan checks, despite evaluation being limited to policy enforcement.",
+      "limits": "Improvement is bounded compilation against a fixed policy, not unbounded scientific discovery. Correctness depends on a strong teacher rather than formal verification. Only four small tasks are evaluated; research-plan checks concern permitted tools and formatting rather than scientific validity. Seed-pool model selection can favor overfitting. Reported cost ratios assume inexpensive input pricing and negligible output cost, and do not establish compilation-cost amortization. The table contradicts its caption's claim of winning every weakest-executor task.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "open_ended",
+        "rationale": "Provides a concrete automated improvement loop that discovers counterexamples, diagnoses component failures, and jointly revises executable reasoning programs and their curriculum. This is relevant to improving agent verification harnesses, including research-agent plan checks, despite evaluation being limited to policy enforcement.",
+        "pdf_sha256": "54b1d9a894ddcd2256ffca0ec743c9e3425a2b0122c1d169fc95967837370da1",
+        "evidence_pages": [
+          1,
+          4,
+          6,
+          10
+        ]
+      }
+    },
+    "paper-c397688c68ae69b3": {
+      "institutions": [
+        "University of Maryland, College Park",
+        "University of Pittsburgh",
+        "The University of Texas at Dallas"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A frozen executor runs role chains assessed by a separate task validator. The router can add, prune, replace, or reorder roles, with on-demand specialist synthesis. SECPO compares edited and unchanged executions during training and adds their reward difference to edit-token advantages. Useful role specifications accumulate during training; inference restarts from seed roles.",
+      "evidence": "The reported seven-benchmark average is 67.1 versus W4S's 62.4. Multi-hop QA scores reach 55.6, 43.5, and 42.1 F1. SECPO improves these by 2.1–2.6 points over GRPO, but slightly trails it on MBPP and ties on HumanEval. Training chain executions increase from 9.1 to 13.5 per question. Transfer experiments support adaptation across related benchmarks and executor models.",
+      "discovery_use": "Contributes learned agent coordination that responds to validation failures by changing collaboration structure and synthesizing missing specialists. Its edit-level feedback mechanism concretely supports adaptive discovery harnesses and evidence reasoning, although autonomous scientific discovery is not evaluated.",
+      "limits": "Every domain requires a validator supplying verdicts and deficits. Training adds counterfactual executions, and inference costs exceed training-free pipelines. MATH uses twenty sampled chains and coding uses ten with test-based selection, so reported scores include substantial candidate selection. Simultaneous-edit ablations also introduce train-test mismatch. Training-grown role libraries are not retained at inference. The main text suggests domain-specific WebShop training, whereas the appendix specifies transfer from the MBPP router. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "Contributes learned agent coordination that responds to validation failures by changing collaboration structure and synthesizing missing specialists. Its edit-level feedback mechanism concretely supports adaptive discovery harnesses and evidence reasoning, although autonomous scientific discovery is not evaluated.",
+        "pdf_sha256": "575682004663c67dae82c3624074f57221b16db1bc698fa52dabcc4354c3b644",
+        "evidence_pages": [
+          1,
+          4,
+          7,
+          9
+        ]
+      }
+    },
+    "paper-dfbccdacbb319eab": {
+      "institutions": [
+        "University of Oxford",
+        "NUS",
+        "NTU",
+        "University of California, Merced"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        11,
+        65
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Defines latent world state, observed video, and represented state using a partially observable dynamical-system formulation. Classifies world models by prediction space and transition interface, and organizes evaluation evidence from plausible outputs through decision utility.",
+      "evidence": "The synthesis identifies persistent state, valid intervention responses, action fidelity, and downstream decisions as stronger evidence than perceptual quality. It recommends shortcut controls for video understanding and matched-resource comparisons for claims of beneficial unification.",
+      "discovery_use": "Provides a conceptual framework for world representations, action-conditioned prediction, and evidence needed to establish planning and causal capabilities. These are direct foundations for agents investigating partially observed environments.",
+      "limits": "This is conceptual synthesis rather than a new experimentally validated model. World consistency is an evaluation target, not an operational metric. The supplied sections support the framework assessment but omit most detailed world-model and future-challenge chapters; this is a targeted review of the 102-page PDF.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "foundations",
+        "rationale": "Provides a conceptual framework for world representations, action-conditioned prediction, and evidence needed to establish planning and causal capabilities. These are direct foundations for agents investigating partially observed environments.",
+        "pdf_sha256": "3e6f49550f7b12004b9366c6cfc5615ce7ac5a4592945e32bc891fc138d17598",
+        "evidence_pages": [
+          1,
+          11,
+          65
+        ]
+      }
+    },
+    "paper-c97a20989ff958e4": {
+      "institutions": [
+        "Department of Computer Science and Technology, Tsinghua University",
+        "School of Information, Renmin University of China",
+        "Zhipu AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses an Analyzer to maintain evidence records and propose violations, a different-backbone Verifier to validate findings and search for omissions, and deterministic middleware to enforce coverage and evidence formatting. Runtime monitoring uses a resident Analyzer and Supervisor. Evaluation includes 60 expert-annotated trajectories, 300 observational trajectories, and 60 matched intervention reruns.",
+      "evidence": "Post-hoc detection reaches 85.2% instance-level F1, but type-exact F1 is 72.5%. Automated auditing identifies 3,964 accepted findings across 299 of 300 observational trajectories. Runtime intervention reduces mean remaining findings from 14.9 to 9.4, a reported 36.8% decrease. Removing either auditing agent reduces detection performance.",
+      "discovery_use": "Provides an evidence-grounded verification and intervention harness specifically for autonomous research agents. It directly addresses whether apparent discoveries are supported by valid experiments and faithful reporting.",
+      "limits": "Prevalence and intervention outcomes are automated judgments rather than exhaustive human verification. Finding-to-annotation matching also uses an LLM. Tasks primarily cover mathematics and machine learning, with deliberately accessible test files and unenforced resource limits. Eight intervention pairs have more findings than controls. Detection gaps, delayed feedback, and incomplete repairs remain; specialized research-agent frameworks are outside the evaluated sample.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "Provides an evidence-grounded verification and intervention harness specifically for autonomous research agents. It directly addresses whether apparent discoveries are supported by valid experiments and faithful reporting.",
+        "pdf_sha256": "230947cf2d8b14227a25be333eef9e2ba337f8da84df5fd24820a2a102a03787",
+        "evidence_pages": [
+          1,
+          3,
+          6,
+          9
+        ]
+      }
+    },
+    "paper-50201f413f6c1220": {
+      "institutions": [
+        "Luo Lab Undergraduate Division (LUD), Xi’an Jiaotong University",
+        "Shanghai Jiao Tong University",
+        "Zhejiang University",
+        "The Chinese University of Hong Kong"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Indexes timestamped history in 256-token windows with 32-token overlap, retrieves 128 candidates, and reranks to 15 evidence items. Evaluates four memory benchmarks, retrieval and representation ablations, evidence coverage, dependency paths, complete-store controls, and ingestion costs.",
+      "evidence": "Ranks first among compared memory systems in six of seven settings, with gains of 0.13–5.53 points. Removing reranking costs 3.92 points on MemoryAgentBench. RAW-RAG supplies the highest measured evidence coverage on MEME and MemoryAgentBench. The evaluated fact extraction, summary, and graph additions reduce overall accuracy.",
+      "discovery_use": "Directly studies agent memory and preservation of evidence needed to reconstruct changing knowledge and supporting dependencies. It supplies a useful systems baseline for discovery agents, although its experiments concern recorded conversations.",
+      "limits": "Results cover offline conversation rather than autonomous discovery or interactive operational memory. Some comparisons retain published baseline scores. Coverage judgments and reader capability affect interpretation; complete-store gaps do not isolate information loss alone. Ingestion timings exclude answer generation and evaluation. Storage, deletion, privacy, and repeated reasoning remain concerns. Only selected appendix sections were supplied.",
+      "classification_review": {
+        "date": "2026-10-24",
+        "category": "systems",
+        "rationale": "Directly studies agent memory and preservation of evidence needed to reconstruct changing knowledge and supporting dependencies. It supplies a useful systems baseline for discovery agents, although its experiments concern recorded conversations.",
+        "pdf_sha256": "7e5d208d9af9a44f3ad1e65b57576e0ddb9855330e16340c5d0063193366a042",
+        "evidence_pages": [
+          1,
+          4,
+          10
+        ]
+      }
     }
   }
 }
