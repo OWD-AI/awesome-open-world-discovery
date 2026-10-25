@@ -1879,6 +1879,30 @@
       "name": "Harness-Delta Attribution: Dissecting Gains From Harness Evolution",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.22466"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed set of 227 statements from four open-source textbooks.",
+        "Multiple faithful Lean encodings are allowed; canonical Lean targets are unavailable.",
+        "The paper reports releasing benchmark data, system outputs, judge grades, trajectories, human labels, Lean checks, and evaluation code.",
+        "Code uses the MIT License; statements retain their source licenses."
+      ],
+      "focus": "Faithful natural-language-to-Lean statement translation. Feedback comes from executed Lean compilation and library queries, with final semantic grading by language models. The environment uses fixed textbook inputs and executed computation, without simulation or new physical measurements.",
+      "limits": "Semantic acceptance is a proxy rather than proof of equivalence. The benchmark contains no research-level mathematics, has uneven domain coverage and 18 flagged statements, and may overlap model training data. Human audits cover only two systems. Search and compiler feedback partially overlap through Lean library queries.",
+      "training": {
+        "reward": "No benchmark policy-training reward or parameter-update procedure is established. Final acceptance requires Lean compilation and faithfulness grades of at least 9 from both GPT-5.2 and Gemini-2.5-Pro. Semantic judging applies only to the final statement. During agent execution, enabled tools provide drafting, library or web search, and compiler diagnostics; runs stop at the first REPL pass, an allowed success declaration, or 24 steps.",
+        "reset": "The same statements are evaluated across eight tool configurations. An environment reset API, checkpoint restoration, or replay support is not established.",
+        "branching": "Separate tool configurations and completed outputs are compared. Agent-controlled branching, workspace forking, or branching from saved execution states is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ec27d50c3bb0542a",
+      "resource_id": "paper-ec27d50c3bb0542a",
+      "name": "Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2606.31002"
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**84 usage profiles** · Updated **2026-10-25**
+**85 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -646,6 +646,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists](#paper-dd2dc379979e7af0) | Synthetic data | Analysis + code | Paper-described |
 | [BlenderWorld: Benchmarking Visual Agents for 3D Creation from Real-World References](#paper-ecf2a0572888b64b) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [Harness-Delta Attribution: Dissecting Gains From Harness Evolution](#paper-f34ad45741b405ff) | Executed programs + evaluators | Analysis + tools | Paper-described |
+| [Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization](#paper-ec27d50c3bb0542a) | Executed programs + evaluators | Analysis + code | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1334,6 +1335,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Harness evolution optimizes task-specific search-set scores while keeping executor weights fixed. The proposer receives scored trajectories and execution evidence. LiveMath uses accuracy; ALFWorld uses episode success within 50 environment steps; CREATE uses Creative Utility rewarding valid and diverse answers; SWE-bench uses success rate. For Meta-Harness, search feedback includes per-instance scores, trajectories and logs, while validation feedback exposes only an aggregate score. Detailed evaluator implementations are not established. |
 | Reset | Repeated evaluation of baseline and candidate harnesses on fixed task sets is established. Exact environment reset procedures, snapshot restoration and rollback support are not established. |
 | Branching | Candidate-level branching is explicit: each iteration proposes k harnesses, evaluates candidates and retains versioned history and feedback. Compute matching may repeat baseline runs and aggregate their outputs. Branching or cloning intermediate simulator and tool states is not established. |
+
+</details>
+
+<a id="paper-ec27d50c3bb0542a"></a>
+
+<details>
+<summary>Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization — details</summary>
+
+[Work](../README.md#paper-ec27d50c3bb0542a) · [Source](https://arxiv.org/pdf/2606.31002)
+
+**Focus:** Faithful natural-language-to-Lean statement translation. Feedback comes from executed Lean compilation and library queries, with final semantic grading by language models. The environment uses fixed textbook inputs and executed computation, without simulation or new physical measurements.
+
+**Openness:** `Fixed set of 227 statements from four open-source textbooks.`, `Multiple faithful Lean encodings are allowed; canonical Lean targets are unavailable.`, `The paper reports releasing benchmark data, system outputs, judge grades, trajectories, human labels, Lean checks, and evaluation code.`, `Code uses the MIT License; statements retain their source licenses.`
+
+**New physical measurements:** No
+
+**Limits:** Semantic acceptance is a proxy rather than proof of equivalence. The benchmark contains no research-level mathematics, has uneven domain coverage and 18 flagged statements, and may overlap model training data. Human audits cover only two systems. Search and compiler feedback partially overlap through Lean library queries.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No benchmark policy-training reward or parameter-update procedure is established. Final acceptance requires Lean compilation and faithfulness grades of at least 9 from both GPT-5.2 and Gemini-2.5-Pro. Semantic judging applies only to the final statement. During agent execution, enabled tools provide drafting, library or web search, and compiler diagnostics; runs stop at the first REPL pass, an allowed success declaration, or 24 steps. |
+| Reset | The same statements are evaluated across eight tool configurations. An environment reset API, checkpoint restoration, or replay support is not established. |
+| Branching | Separate tool configurations and completed outputs are compared. Agent-controlled branching, workspace forking, or branching from saved execution states is not established. |
 
 </details>
 
