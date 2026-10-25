@@ -2035,6 +2035,54 @@
       "name": "SciCurateBench: Curating Experimental Data from Heterogeneous Scientific Literature with Verbal-Action Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.14393"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Solvers investigate 82 unresolved mathematics and theoretical physics problems with supplied background, assumptions, prior progress, and references.",
+        "Local computation is available; network retrieval is disabled in the primary setting.",
+        "The protocol allows up to 12 hours without a fixed token budget and requires one final submission per model–problem pair.",
+        "Additional conditions vary the harness or enable solver web access."
+      ],
+      "focus": "Open theoretical research using proofs, constructions, and computational investigations. The body documents executed finite-field searches, symbolic calculations, numerical checks, and simulations; these produce computational evidence rather than new physical measurements. Four independent model judges assess frozen arguments without reference solutions.",
+      "limits": "Judgments do not independently establish scientific correctness or novelty. Judges may share errors, task coverage is uneven, literature searches may miss existing solutions, and relevant statements may occur in training data. Resources and execution software vary, and single runs do not establish variance or causal harness effects.",
+      "training": {
+        "reward": "A training reward or parameter-training protocol is not established. Final evaluators assign Solved, Partial, Unsolved, or Incomplete; partial progress is graded trivial, nontrivial, or breakthrough. They check task obligations, assumptions, quantifiers, proof steps, and supporting computations, with targeted recomputation and source checks permitted under their access policies. These final reviews are not established as feedback available during solver runs.",
+        "reset": "Agent-session reset, rollback, and repeatable environment-reset support are not established. The primary comparison uses one final submission per model–problem pair.",
+        "branching": "An environment fork or resumable branching interface is not established. Solvers can investigate alternative approaches using local computation; separate harness and web-access conditions are evaluation comparisons."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-5a53c3bdb60bfc08",
+      "resource_id": "paper-5a53c3bdb60bfc08",
+      "name": "OpenProblemBench: Benchmarking AI on Open Problems in the Foundational Theoretical Sciences",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.11118"
+    },
+    {
+      "feedback": "scientific-datasets-and-hidden-verifiers",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose equations, couplings, nonlinearities, seasonal dependence, stochastic forcing, and calibration within a five-variable stochastic model interface.",
+        "Agents receive historical observations for 1980–2014, scientific guidance, a background paper, and unit scales.",
+        "Primary runs use isolated offline containers with six hours of eligible time; package installation is the only permitted network use.",
+        "Agents develop their own diagnostics before model development; these become read-only, and hidden graders and held-out observations remain inaccessible."
+      ],
+      "focus": "Executed computational research on stochastic ENSO models using recorded climate observations. Agents process data, create diagnostics, and repeatedly implement, simulate, calibrate, and revise models. Hidden graders execute each submitted model for free simulations, variable reconstruction, and held-out forecasts. The benchmark collects no new physical measurements.",
+      "limits": "Each system and information-access condition runs once. Comparisons describe particular artifacts and confound models, scaffolds, and settings. Small differences do not establish rankings. Reconstruction does not establish causal identification, and post-hoc structural reductions reuse graders for selection. Agents are promised best-checkpoint scoring, while the primary comparison uses final checkpoints.",
+      "training": {
+        "reward": "A parameter-training reward is not established. Phase A returns data-processing discrepancy feedback. During model development, agents receive results only from their own frozen diagnostics, which report observed quantities and discrepancies. Hidden scores are withheld until after the run. The final evaluator computes C = 0.3 S + 0.3 D + 0.4 P for statistical properties, reconstruction, and forecasting against persistence; invalid or non-finite models fail the validity gate.",
+        "reset": "The grader supports simulations initialized from the zero state and forecasts reinitialized from observed monthly states, with stochastic draws supplied through its random generator. Agent-session reset or checkpoint rollback support is not established. Phase A permits up to four data-check attempts.",
+        "branching": "Agents can explore alternative model structures and revisions. The harness saves distinct submission checkpoints every five minutes, at turn ends, and at run completion. Resumable environment forks or a checkpoint-restoration interface are not established; hidden grading occurs after the run."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-d90a8e0869dee55c",
+      "resource_id": "paper-d90a8e0869dee55c",
+      "name": "SciExam for ENSO: Can AI Agents Build Climate Models?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.10513"
     }
   ]
 }

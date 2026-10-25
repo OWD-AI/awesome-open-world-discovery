@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**91 usage profiles** · Updated **2026-10-25**
+**93 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1512,6 +1512,8 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training](#paper-aa059e79208dfb82) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists](#paper-31ad9246f9a10e34) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?](#paper-1663c6679dab72c8) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [OpenProblemBench: Benchmarking AI on Open Problems in the Foundational Theoretical Sciences](#paper-5a53c3bdb60bfc08) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [SciExam for ENSO: Can AI Agents Build Climate Models?](#paper-d90a8e0869dee55c) | Scientific data + verifiers | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -1993,6 +1995,52 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Model-weight training and a training reward are not established. During research, pilots return candidate responses, grading results, costs, and agreement with visible development references. Independent assessment scores frozen evaluators using 100 times Lin’s concordance correlation coefficient and pairwise agreement with target-reference scores; these results are not returned for further revision. |
 | Reset | Not established: the supplied body does not specify environment reset, checkpoint restoration, or budget replenishment. |
 | Branching | Not established: iterative revisions and smaller pilot suites are allowed, but environment cloning, checkpoint branching, and a rollback protocol are not specified. |
+
+</details>
+
+<a id="paper-5a53c3bdb60bfc08"></a>
+
+<details>
+<summary>OpenProblemBench: Benchmarking AI on Open Problems in the Foundational Theoretical Sciences — details</summary>
+
+[Work](../README.md#paper-5a53c3bdb60bfc08) · [Source](https://arxiv.org/pdf/2610.11118)
+
+**Focus:** Open theoretical research using proofs, constructions, and computational investigations. The body documents executed finite-field searches, symbolic calculations, numerical checks, and simulations; these produce computational evidence rather than new physical measurements. Four independent model judges assess frozen arguments without reference solutions.
+
+**Openness:** `Solvers investigate 82 unresolved mathematics and theoretical physics problems with supplied background, assumptions, prior progress, and references.`, `Local computation is available; network retrieval is disabled in the primary setting.`, `The protocol allows up to 12 hours without a fixed token budget and requires one final submission per model–problem pair.`, `Additional conditions vary the harness or enable solver web access.`
+
+**New physical measurements:** No
+
+**Limits:** Judgments do not independently establish scientific correctness or novelty. Judges may share errors, task coverage is uneven, literature searches may miss existing solutions, and relevant statements may occur in training data. Resources and execution software vary, and single runs do not establish variance or causal harness effects.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or parameter-training protocol is not established. Final evaluators assign Solved, Partial, Unsolved, or Incomplete; partial progress is graded trivial, nontrivial, or breakthrough. They check task obligations, assumptions, quantifiers, proof steps, and supporting computations, with targeted recomputation and source checks permitted under their access policies. These final reviews are not established as feedback available during solver runs. |
+| Reset | Agent-session reset, rollback, and repeatable environment-reset support are not established. The primary comparison uses one final submission per model–problem pair. |
+| Branching | An environment fork or resumable branching interface is not established. Solvers can investigate alternative approaches using local computation; separate harness and web-access conditions are evaluation comparisons. |
+
+</details>
+
+<a id="paper-d90a8e0869dee55c"></a>
+
+<details>
+<summary>SciExam for ENSO: Can AI Agents Build Climate Models? — details</summary>
+
+[Work](../README.md#paper-d90a8e0869dee55c) · [Source](https://arxiv.org/pdf/2610.10513)
+
+**Focus:** Executed computational research on stochastic ENSO models using recorded climate observations. Agents process data, create diagnostics, and repeatedly implement, simulate, calibrate, and revise models. Hidden graders execute each submitted model for free simulations, variable reconstruction, and held-out forecasts. The benchmark collects no new physical measurements.
+
+**Openness:** `Agents choose equations, couplings, nonlinearities, seasonal dependence, stochastic forcing, and calibration within a five-variable stochastic model interface.`, `Agents receive historical observations for 1980–2014, scientific guidance, a background paper, and unit scales.`, `Primary runs use isolated offline containers with six hours of eligible time; package installation is the only permitted network use.`, `Agents develop their own diagnostics before model development; these become read-only, and hidden graders and held-out observations remain inaccessible.`
+
+**New physical measurements:** No
+
+**Limits:** Each system and information-access condition runs once. Comparisons describe particular artifacts and confound models, scaffolds, and settings. Small differences do not establish rankings. Reconstruction does not establish causal identification, and post-hoc structural reductions reuse graders for selection. Agents are promised best-checkpoint scoring, while the primary comparison uses final checkpoints.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A parameter-training reward is not established. Phase A returns data-processing discrepancy feedback. During model development, agents receive results only from their own frozen diagnostics, which report observed quantities and discrepancies. Hidden scores are withheld until after the run. The final evaluator computes C = 0.3 S + 0.3 D + 0.4 P for statistical properties, reconstruction, and forecasting against persistence; invalid or non-finite models fail the validity gate. |
+| Reset | The grader supports simulations initialized from the zero state and forecasts reinitialized from observed monthly states, with stochastic draws supplied through its random generator. Agent-session reset or checkpoint rollback support is not established. Phase A permits up to four data-check attempts. |
+| Branching | Agents can explore alternative model structures and revisions. The harness saves distinct submission checkpoints every five minutes, at turn ends, and at run completion. Resumable environment forks or a checkpoint-restoration interface are not established; hidden grading occurs after the run. |
 
 </details>
 
