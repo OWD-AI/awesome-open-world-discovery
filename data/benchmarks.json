@@ -1946,6 +1946,29 @@
       "name": "Evaluating Agentic Capabilities Before Post-Training: An End-to-End Approach",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.19425"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed collection of 203 bilingual tasks with 4,014 expert-written rubrics.",
+        "Agents retrieve existing web information and synthesize open-ended reports.",
+        "The paper states that LIFESEARCH is open-source; a release destination is not established by the supplied pages."
+      ],
+      "focus": "Information retrieval, source verification, numerical reasoning, conflict handling, and report synthesis across seven life and productivity domains. The fixed task set is executed in a ReAct-style harness with web search through Serper, page retrieval through Jina Reader, and code execution. Each decision may issue multiple tool calls. Tool observations supply interaction feedback; final reports receive rubric judgments. This evaluates research over existing information, without establishing executed scientific research experiments or new physical measurements.",
+      "limits": "The interaction label refers to tool execution on fixed benchmark tasks; retrieved web contents are live rather than a documented frozen dataset. Code execution is available, but its use does not establish scientific experimentation. The autonomous harness supplies no user replies. Numerical iteration limits, tool budgets, and reproducible web snapshots are not established by the supplied pages. Fixed factual and temporal rubrics can age.",
+      "training": {
+        "reward": "A training reward or policy-training procedure is not established. The evaluator is Gemini 3.1 Pro with low reasoning effort and zero temperature, applying one Pass/Fail grading pass per report's rubrics. Scores normalize annotator-weighted rubric satisfaction within each task, then average uniformly across tasks (pages 6–7).",
+        "reset": "Three independent agent runs per task are reported (pages 7–8). Environment reset, checkpoint restoration, and deterministic replay of web observations are not established.",
+        "branching": "Multiple tool calls within a decision are allowed (page 7). Checkpoint branching, cloned environment states, and counterfactual replay are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-979463277edcf993",
+      "resource_id": "paper-979463277edcf993",
+      "name": "LifeSearch: Benchmarking Deep Research Agents for Real-World Life and Productivity",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.18092"
     }
   ]
 }

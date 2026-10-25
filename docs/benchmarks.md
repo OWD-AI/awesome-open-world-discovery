@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**87 usage profiles** · Updated **2026-10-25**
+**88 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -649,6 +649,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization](#paper-ec27d50c3bb0542a) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat](#paper-c643418cbbaee3ee) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Evaluating Agentic Capabilities Before Post-Training: An End-to-End Approach](#paper-2693639d7f34414f) | Executed programs + evaluators | Analysis + tools | Paper-described |
+| [LifeSearch: Benchmarking Deep Research Agents for Real-World Life and Productivity](#paper-979463277edcf993) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1406,6 +1407,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | ASAP evaluates frozen models without weight updates or reward optimization. Original task verifiers assess final patches or answers; software patches use the official grader. Pass@k measures repeated-sampling success, and Intersection@n measures success across every run. At most one recovery hint is supplied for each structural failure type. |
 | Reset | Eight independent rollouts per model and task are reported, with the same instance prefix across models. Arbitrary mid-trajectory environment reset, rollback and exact state-restoration mechanisms are not established. |
 | Branching | Repeated independent sampling is supported. Snapshot-based branching from intermediate states is not established. Grader-based preference pairs from intermediate repository states are suggested as future data synthesis. |
+
+</details>
+
+<a id="paper-979463277edcf993"></a>
+
+<details>
+<summary>LifeSearch: Benchmarking Deep Research Agents for Real-World Life and Productivity — details</summary>
+
+[Work](../README.md#paper-979463277edcf993) · [Source](https://arxiv.org/pdf/2610.18092)
+
+**Focus:** Information retrieval, source verification, numerical reasoning, conflict handling, and report synthesis across seven life and productivity domains. The fixed task set is executed in a ReAct-style harness with web search through Serper, page retrieval through Jina Reader, and code execution. Each decision may issue multiple tool calls. Tool observations supply interaction feedback; final reports receive rubric judgments. This evaluates research over existing information, without establishing executed scientific research experiments or new physical measurements.
+
+**Openness:** `Fixed collection of 203 bilingual tasks with 4,014 expert-written rubrics.`, `Agents retrieve existing web information and synthesize open-ended reports.`, `The paper states that LIFESEARCH is open-source; a release destination is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** The interaction label refers to tool execution on fixed benchmark tasks; retrieved web contents are live rather than a documented frozen dataset. Code execution is available, but its use does not establish scientific experimentation. The autonomous harness supplies no user replies. Numerical iteration limits, tool budgets, and reproducible web snapshots are not established by the supplied pages. Fixed factual and temporal rubrics can age.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or policy-training procedure is not established. The evaluator is Gemini 3.1 Pro with low reasoning effort and zero temperature, applying one Pass/Fail grading pass per report's rubrics. Scores normalize annotator-weighted rubric satisfaction within each task, then average uniformly across tasks (pages 6–7). |
+| Reset | Three independent agent runs per task are reported (pages 7–8). Environment reset, checkpoint restoration, and deterministic replay of web observations are not established. |
+| Branching | Multiple tool calls within a decision are allowed (page 7). Checkpoint branching, cloned environment states, and counterfactual replay are not established. |
 
 </details>
 
