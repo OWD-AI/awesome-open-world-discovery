@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -1534,6 +1534,76 @@
       "name": "EdgeKernelBench: Unified LLM-Driven Kernel Generation for Edge Backends",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.24648"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Procedurally sampled layouts and hidden rules, with tens of millions of possible rule sets.",
+        "Agents discover mechanisms through their own actions and adapt to other agents.",
+        "Code, prompts and harness are stated to be available."
+      ],
+      "focus": "Environmental and social adaptation in two simulated sequential social dilemmas. Feedback consists of local observations, action effects, individual apple rewards, and harness-recorded evidence; no new physical measurements are involved.",
+      "limits": "Two bounded game families, three configurations per environment, five agents, and five trials of at most 400 steps. Communication is prohibited; agents cannot see hidden rules or other agents’ prompts and scores. Memory is scaffolded and inference settings differ across models.",
+      "training": {
+        "reward": "OpenCleanup rewards only the agent’s own apple consumption, at one point per apple. OpenHarvest assigns hidden color-and-stage rewards of 1, 0.5 or 0.25. Evaluation measures returns, discovered rules, cleaning participation, orchard lifetime and return inequality. Parameter training is not reported; training adaptive policies remains future work.",
+        "reset": "Each episode fixes one sampled configuration across five trials. Environment state and agent positions reset between trials while rule evidence, trial summaries and rewritten lessons persist. OpenCleanup restores pollution and empties hands; OpenHarvest restores unripe apples.",
+        "branching": "Alternative actions and procedural configurations are supported. Agent-accessible state cloning, rollback or branching from a saved state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-bc9b70a35a8d90a3",
+      "resource_id": "paper-bc9b70a35a8d90a3",
+      "name": "OpenSocialJax: Evaluating Social Adaptation in Sequential Social Dilemmas with Open-Ended Environmental Dynamics",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.13710"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Unseen advanced tasks recombine skills from basic tasks.",
+        "Action choices and reachable states are restricted to precomputed graphs.",
+        "Code and dataset are stated to be available."
+      ],
+      "focus": "Compositional transfer from basic household tasks to advanced tasks. Evaluation uses recorded TongSim images and deterministic offline state-transition graphs. Agents choose candidate actions and receive the corresponding next image and options; the simulator does not run during evaluation, and no new physical measurements occur.",
+      "limits": "168 basic and 100 advanced tasks across six domestic scenes. Interaction is bounded by predefined optimal, executable-detour and invalid action options. This tests compositional transfer; long-term retention and resistance to forgetting are not established. Main results lack uncertainty estimates.",
+      "training": {
+        "reward": "No benchmark-specific parameter training is reported. Agents learn through retained basic-task trajectories or self-written skill summaries. The evaluator checks whether the predefined goal state is reached within the step budget and reports binary task completion averaged as success rate. A separate scalar training reward is not established.",
+        "reset": "Each task begins at its predefined initial graph state. Default learning budgets allow shortest-path length plus six steps; testing allows plus three. An agent-controlled reset or retry operation within a task is not established.",
+        "branching": "Precomputed branches include alternative executable actions and detours with deterministic successors. Arbitrary new actions, state cloning, rollback and agent-controlled replay from intermediate states are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-97aa05f1d051eb67",
+      "resource_id": "paper-97aa05f1d051eb67",
+      "name": "EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.13021"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose formulations, algorithms, solver implementations, diagnostic computations, and revisions within fixed tasks.",
+        "Agents receive an initial brief and all input files and may query ORSIM throughout problem solving.",
+        "Client information comes from a closed fact catalog; each query can disclose at most three non-brief facts.",
+        "The client fact catalog and final evaluators are hidden from agents."
+      ],
+      "focus": "End-to-end operations research on 31 instances across 10 industrial scenarios, including information acquisition, executed diagnostic experiments, evidence interpretation, and solution revision. Feedback combines executed solver computations with ORSIM replies drawn from recorded client facts. ORSIM simulates client dialogue rather than physical processes. Industrial input files and accepted expert deliveries are recorded materials; benchmark execution does not collect new physical measurements.",
+      "limits": "Tasks and client facts are fixed. ORSIM cannot supply OR expertise. Final hidden evaluation occurs after submission; access to that evaluator during experimentation is not established. Expert references are accepted deliveries rather than proven optima. Research-chain annotation concerns observable linked investigations and does not establish causal benefits of individual actions.",
+      "training": {
+        "reward": "Training or reinforcement-learning rewards are not established; the supplied body reports evaluation of existing models. Final evaluation uses hidden programmatic feasibility checks and independently recomputed objectives. Strict feasibility requires all official cases to pass. Deployment-Adjusted Quality assigns zero to infeasible instances and otherwise uses expert-relative objective quality. Page 33 additionally describes an LLM judge for modeling choices on Tasks 26–31 after deterministic checks.",
+        "reset": "Five runs per model–task pair are reported. An agent-accessible episode reset or checkpoint restoration mechanism is not established.",
+        "branching": "Agents can revise solutions and execute diagnostic experiments. Environment cloning, checkpoint forks, and an agent-accessible branching mechanism are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-5d861400b2f29a95",
+      "resource_id": "paper-5d861400b2f29a95",
+      "name": "OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.24087"
     }
   ]
 }
