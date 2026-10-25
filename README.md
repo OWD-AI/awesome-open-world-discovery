@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-554-2563eb?style=flat-square" alt="554 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-556-2563eb?style=flat-square" alt="556 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-97-0f766e?style=flat-square" alt="97 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -82,8 +82,8 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 47 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 81 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 84 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 101 |
-| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 61 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 102 |
+| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 62 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 88 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
@@ -910,6 +910,8 @@ Each work appears once under its primary contribution; see the [classification g
   Jingwen Bai et al. · Beijing Ou Rui Ling Shi Technology Co., Ltd.; ChangingTek Robotics Technology (Suzhou) Co., Ltd.; Shanghai Yunfan Intelligent Control Robot Technology Co., Ltd.
 - <a id="paper-1bad7b8c664a2eb2"></a>**DeepRewind: Predicting and Repairing Premature Commitments in Deep Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.36344)* · [Paper](https://arxiv.org/abs/2609.36344) · [Code](https://github.com/AmirAbaskohi/DeepRewind)<br>
   Amirhossein Abaskohi et al. · University of British Columbia
+- <a id="paper-a0694d5560c4572c"></a>**Demonstration of a Structured Agentic Workflow for Applied Quantum Computing Research** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.05304)* · [Paper](https://arxiv.org/abs/2610.05304) · [Project](https://haiqu.ai/agenticos)<br>
+  Dikshant Dulal, Maxence Grandadam, Maciej Koch-Janusz, Mykola Maksymenko · Haiqu, Inc.
 - <a id="paper-92174196b7146b88"></a>**Design Anything, Design at Scale** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24771)* · [Paper](https://arxiv.org/abs/2610.24771) · [Code](https://github.com/Gemus-AI/DesignAnything) · [Dataset](https://huggingface.co/datasets/Gemus-AI/DesignAnything-Bench)<br>
   Xuchao Ren et al. · Tsinghua University; Beijing Institute of Fashion Technology; Massachusetts Institute of Technology; +1 institutions
 - <a id="paper-7d2325553eb22ef0"></a>**Designing Collaborative AI-Driven Workflows for Scientific Software Engineering** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.09995)* · [Paper](https://arxiv.org/abs/2610.09995) · [Code](https://github.com/Lab-Notebooks/CodeScribe)<br>
@@ -1130,6 +1132,8 @@ Each work appears once under its primary contribution; see the [classification g
   Zhuoshi Pan et al. · Tsinghua University; Z.AI Co., Ltd.; Shanghai Jiao Tong University; +2 institutions
 - <a id="h05"></a>**HELIX: Model-Harness Co-evolution for Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2608.13951)* · [Paper](https://arxiv.org/abs/2608.13951) · [Code](https://github.com/HKUDS/HELIX)<br>
   Tianyu Fan, Chao Huang · The University of Hong Kong
+- <a id="paper-ca73ad6631f866e6"></a>**HERA: Harness-Environment Co-Evolution for Reliable Agentic Abstention** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06563)* · [Paper](https://arxiv.org/abs/2610.06563) · [Project](https://hera-bench.github.io/) · [Code](https://github.com/lhannnn/HERA-Bench)<br>
+  Han Luo et al. · University of Washington; University of Leeds; Carnegie Mellon University; +2 institutions
 - <a id="paper-a297723d20b70cb4"></a>**Heterogeneous Agentic Coevolution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.16078)* · [Paper](https://arxiv.org/abs/2610.16078) · [Project](https://wenqian-ye.github.io/hace/)<br>
   Wenqian Ye et al. · Meta AI; University of Virginia
 - <a id="hyperagents"></a>**Hyperagents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2603.19461)* · [Paper](https://arxiv.org/abs/2603.19461) · [Code](https://github.com/facebookresearch/Hyperagents)<br>
