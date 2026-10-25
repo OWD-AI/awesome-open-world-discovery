@@ -1744,6 +1744,74 @@
       "name": "Competence-Based Evaluation of Logical Reasoning in Large Language Models",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.22894"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose data construction, training recipes, model operations, experiment sequences, and final candidates within task permissions.",
+        "Agents can inspect multimodal media, modify code and configurations, execute training and evaluation, and retain models.",
+        "Development feedback exposes candidate scores, permitted examples, and execution diagnostics; final test instances, answers, and scores remain sealed during research."
+      ],
+      "focus": "Autonomous multimodal post-training across eight tasks, measuring target and non-target performance, candidate progress and selection, and research integrity. Feedback comes from executed training and evaluation on datasets, not new physical measurements.",
+      "limits": "Pages 4–6 and 13 establish separate research and verifier containers, eight GPUs, a default 24-hour loop budget, and three independent loops per configuration and task. Evaluation-example access does not authorize training on those examples. Candidate, non-target, and audit analyses cover one selected loop per pair. Agent parameter training and a common target-model loss are not established.",
+      "training": {
+        "reward": "Pages 4–5 establish development scores and diagnostics as research feedback. Final independent evaluation uses answer accuracy or resolved-instance rate, with target and non-target comparisons against the base. No RL training reward for the research agent is established; the agent chooses the target model's training recipe. MMResearch screens and confirms candidates using development data before promotion (pages 16–17).",
+        "reset": "Independent loops start with fresh histories and the same base model and budget (page 6). MMResearch supports restoring its checkpoint and memory (pages 16–17). Arbitrary environment rollback is not established. Audit reset replaces a flagged loop's reported score with the base score; it is a scoring adjustment.",
+        "branching": "Interventions may use permitted prior candidates, and multiple candidates can be retained (page 4). MMResearch preserves the incumbent unless confirmation supports promotion (page 16). Environment snapshot forks or a general branching interface are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-aa059e79208dfb82",
+      "resource_id": "paper-aa059e79208dfb82",
+      "name": "MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.05398"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents iteratively inspect public observations and execute analyses before submitting an open-form mechanistic hypothesis.",
+        "Conditions preserve empirical sampling patterns, grouping, and auxiliary measurements; responses are synthesized by a fixed numerical mechanism with added noise.",
+        "The generating mechanism and hidden comparison observations are withheld. An interactive mechanism-query interface is not established."
+      ],
+      "focus": "Mechanistic hypothesis generation from fixed observations across 300 tasks. This is analysis of synthetic responses instantiated on empirical dataset conditions, rather than collection of new measurements or agent-controlled research experiments.",
+      "limits": "Pages 5–7 establish fixed mechanism construction, public and hidden observation splits, and a 30-minute terminal budget for general agents. The specified mechanism is a controlled realization of paper claims, not a reconstruction of the empirical dataset's actual generating mechanism. Final scores depend on a fixed LLM interpreter and do not establish a unique causal explanation. Online evaluator access during agent analysis is not established.",
+      "training": {
+        "reward": "No agent parameter-training reward is established. On page 6, a separate fixed LLM interprets each submitted hypothesis on hidden matched comparisons; a deterministic evaluator computes Mechanism Consequence Agreement and Mechanism Consequence Negative Log-Likelihood against directions from the fixed generating mechanism. Page 7 identifies the interpreter and assigns missing or invalid outputs the empty-control result.",
+        "reset": "Public observations and the generating mechanism are fixed before evaluation (page 5). A reset or state-restoration API is not established.",
+        "branching": "Agents may execute iterative analyses, and an AutoDiscovery search procedure is evaluated (pages 2 and 7). Environment snapshot branching or agent-controlled counterfactual experiment execution is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-dd2dc379979e7af0",
+      "resource_id": "paper-dd2dc379979e7af0",
+      "name": "From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.05197"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents write code and call tools against supplied task files within isolated sandboxes.",
+        "Questions and answer formats are fixed; web, search and retrieval access are disabled."
+      ],
+      "focus": "Audit whether computational biology agents and evaluators respond appropriately to verified changes in evidence. Executed analyses use recorded single-cell datasets and synthetic genetics datasets, including preserved, withdrawn and reversed versions. These are computational experiments over fixed data, without new physical measurements.",
+      "limits": "Coverage is limited to 18 selected BAIS-SD questions and four synthetic GeneBench-Pro problems. Evaluators retain the original key after edits. Behavioral responsiveness does not establish internal reasoning or sufficient scientific quality.",
+      "training": {
+        "reward": "A training reward is not established; this is an evaluation audit. BAIS-SD uses exact set matching with half credit for a strict subset; GeneBench-Pro requires every reported quantity to meet tolerance. Process judges assess condensed trajectories against the original key. Evidence-grounded accuracy, its strict variant, invariance, responsiveness and evaluator flip AUC provide additional audit measures.",
+        "reset": "Every run starts in a fresh sandbox containing only its task files, with the same prompt across data versions and a 40-minute limit. Mid-run reset or snapshot restoration is not established.",
+        "branching": "Independent runs on original, null, withdrawal and flip versions support paired counterfactual comparisons. Branching from an intermediate execution state is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-31ad9246f9a10e34",
+      "resource_id": "paper-31ad9246f9a10e34",
+      "name": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.04915"
     }
   ]
 }

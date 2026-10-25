@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T01:51:13-04:00",
+  "updated_at": "2026-10-25T02:48:25-04:00",
   "window_start": "2026-09-26",
   "window_end": "2026-10-25",
   "window_days": 30,
@@ -4032,6 +4032,32 @@
       ]
     },
     {
+      "title": "Terminal-RSI: Recursive Self-Improving Terminal Agents via Recursive Self-Rewrite and Policy-Refine",
+      "url": "https://arxiv.org/abs/2610.22192",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "Terminal-RSI alternates supervised rewriting of successful terminal trajectories with actor–critic policy refinement. It preserves critic weights across rewrites, recalibrates values, and adjusts rewards to favor complete verification over partial progress.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies original publication as 2026-10-15T16:43:56Z; the extracted v1 date on page 1 is consistent.",
+      "review_status": "approved",
+      "relevance": "Studies recursive improvement from an agent's verified execution successes, with replay, policy refinement, and scientific-workflow evaluation. This is directly relevant to learning to discover and retaining improved investigative behavior, although only bounded cycles are demonstrated.",
+      "id": "7a7bff6d71371f1c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22192"
+        },
+        {
+          "label": "Project",
+          "url": "https://jyyang26.github.io/terminal-rsi/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/jyyang26/Terminal-RSI"
+        }
+      ]
+    },
+    {
       "title": "Self-Evolving Coding Agents via Harness-Policy Optimization",
       "url": "https://arxiv.org/abs/2610.22791",
       "published_at": "2026-10-15",
@@ -4072,6 +4098,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.22029"
+        }
+      ]
+    },
+    {
+      "title": "RSIFlow: Adaptive Self-Improvement Workflows with an Evolving Meta-Agent",
+      "url": "https://arxiv.org/abs/2610.21791",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "RSIFlow couples task-agent improvement with an evolving meta-agent harness that learns reusable guidance from successful and unsuccessful update attempts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary submission history verifies original v1 publication on 15 October 2026 at 12:45:08 UTC, consistent with the supplied PDF.",
+      "review_status": "approved",
+      "relevance": "Directly studies recursive self-improvement: an agent diagnoses changing bottlenecks, selects interventions, and retains intervention evidence to improve its own future improvement procedures.",
+      "id": "93034516b473593c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21791"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/1HUAN1/RSI-Flow"
         }
       ]
     },
@@ -4152,6 +4200,80 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.21887"
+        }
+      ]
+    },
+    {
+      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
+      "url": "https://arxiv.org/abs/2610.22344",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "MLExpert trains a 35B mixture-of-experts model for sustained experimental optimization. It combines executable research tasks, persistent experiment state, outcome-filtered demonstrations, and reinforcement learning from intermediate experiment results.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-15T17:56:32Z; page 1 independently displays the matching v1 date.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to organize experiments, interpret execution feedback, and improve scientific and machine learning solutions over long horizons. The contribution concretely connects post-training to autonomous discovery capability.",
+      "id": "03627392f7accc23",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22344"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/InternScience/MLExpert"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/InternScience/MLExpert"
+        }
+      ]
+    },
+    {
+      "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
+      "url": "https://arxiv.org/abs/2610.22273",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "Librarian Agents trains a builder to organize documents into a reusable hierarchy of synthetic files with source references. A frozen answering agent searches the constructed workspace, allowing corpus-level reasoning to serve multiple future questions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies original v1 publication on 15 October 2026 at 17:35:17 UTC, consistent with the supplied date and PDF page 1.",
+      "review_status": "approved",
+      "relevance": "Learns reusable agent memory for deep research and cross-document reasoning, including provenance paths for checking synthesized claims. Its concrete contribution is constructing evidence workspaces before future questions are known.",
+      "id": "1d9cf5babf2989a2",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22273"
+        },
+        {
+          "label": "Project",
+          "url": "https://librarian-agents.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/teresaz05/librarian-agents"
+        }
+      ]
+    },
+    {
+      "title": "Learning to Think and Explore in 3D World",
+      "url": "https://arxiv.org/abs/2610.21783",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "Act3D learns to move a camera through reconstructed scenes, gather new observations, and answer spatial questions from an initially incomplete view.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary submission history verifies original v1 on 15 October 2026 at 12:38:48 UTC. The PDF’s 19 October date identifies v2.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to discover missing task-relevant evidence through action under partial observability, jointly learning information acquisition and reasoning.",
+      "id": "bc757bb51b5cc488",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21783"
+        },
+        {
+          "label": "Project",
+          "url": "https://williamium3000.github.io/act3d/"
         }
       ]
     },
@@ -6218,28 +6340,92 @@
       ]
     },
     {
+      "title": "InterMimicGen: Scaling Humanoid Loco-Manipulation through Self-Evolving Motion Imitation",
+      "url": "https://arxiv.org/abs/2610.06850",
+      "published_at": "2026-10-05",
+      "kind": "paper",
+      "summary": "InterMimicGen converts human-object interaction recordings into robot references and repeatedly expands their executable variations while improving the tracking policy.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original publication timestamp is 2026-10-05T17:59:50Z; the PDF identifies the original version as 5 October 2026.",
+      "review_status": "approved",
+      "relevance": "The primary contribution includes an execution-validated learning loop that expands robot competence beyond seed demonstrations. This is relevant to feedback-driven self-improvement, although the expansion preserves existing task semantics.",
+      "id": "47d9c27401b76abb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.06850"
+        },
+        {
+          "label": "Project",
+          "url": "https://sirui-xu.github.io/InterMimicGen/"
+        }
+      ]
+    },
+    {
       "title": "Fork-and-Flush: Escaping Idea Basins in Autoresearch Agents",
       "url": "https://arxiv.org/abs/2610.07447",
       "published_at": "2026-10-05",
       "kind": "paper",
-      "summary": "Studies why independent autoresearch runs settle into different local idea regions and proposes branching and selective context removal to encourage broader exploration beyond an agent’s current trajectory.",
-      "date_evidence": "The opened arXiv source verifies the title under identifier 2610.07447 and reports the original submission date as 2026-10-05.",
-      "relevance": "Directly addresses exploration collapse and idea diversity in open-ended autonomous research.",
+      "summary": "Fork-and-flush periodically branches an ongoing research agent from its accumulated files with fresh conversational contexts, then continues from the strongest branch.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp and the arXiv v1 submission history both identify 2026-10-05T21:55:52Z.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "e14cabb1256a4b15"
+      "relevance": "This directly improves autonomous research-agent exploration through a harness intervention, with externally scored experiments and comparisons against serial and independent parallel search.",
+      "id": "e14cabb1256a4b15",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.07447"
+        }
+      ]
     },
     {
       "title": "Evolving in Thought Space: Training a Small Model at Test Time Unlocks Better Discoveries",
       "url": "https://arxiv.org/abs/2610.06269",
       "published_at": "2026-10-05",
       "kind": "paper",
-      "summary": "Guidance-TTT adapts a compact model at test time to suggest high-level strategy changes while a stronger frozen model implements complete executable solutions. This separates strategic learning from implementation and reduces the cost of discovery-time policy updates.",
-      "date_evidence": "The arXiv source page explicitly states “Submitted on 5 Oct 2026”; it also notes a later v2 revision on 12 Oct 2026, so the original paper date is retained.",
-      "relevance": "Directly concerns test-time discovery training, verifier-guided search and a practical division between evolving strategy and frozen execution.",
+      "summary": "Guidance-TTT trains a small model to suggest changes to archived solutions while a stronger frozen model implements those changes and an executable verifier evaluates them.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp is 2026-10-05T13:04:05Z. The supplied PDF is v2 dated 12 October 2026, which is a revision date and is not substituted for original publication.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "d0a1aad7216e9e1d"
+      "relevance": "The primary contribution is learning to discover better executable solutions through verifier-driven test-time updates to a strategic guidance policy.",
+      "id": "d0a1aad7216e9e1d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.06269"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Human-Agent-Society/reef/tree/main/recipes/tttd/examples/guidance_ttt"
+        },
+        {
+          "label": "Project",
+          "url": "https://www.reefinfra.ai/docs/user-guide/recipes/guidance-ttt/"
+        }
+      ]
+    },
+    {
+      "title": "Beyond Successor Accuracy: State Retention for Recursive Self-Improvement in Recommendation",
+      "url": "https://arxiv.org/abs/2610.07105",
+      "published_at": "2026-10-05",
+      "kind": "paper",
+      "summary": "The paper argues that useful behavior can remain distributed across predecessor and successor models, and proposes diagnostics for deciding which model-pair family to retain.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp is 2026-10-05T15:03:27Z. The WSDM 2027 running header is a conference date, not the original publication date.",
+      "review_status": "approved",
+      "relevance": "Its central contribution concerns retaining useful experience across recursive self-improvement updates, with a controlled diagnostic and retention rule. That connection extends beyond ordinary recommendation accuracy, although evidence remains domain-specific.",
+      "id": "94ab554ffc39816c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.07105"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Jinfeng-Xu/RecRSI"
+        }
+      ]
     },
     {
       "title": "Two Room-Temperature Antiferromagnetic Semiconductor Candidates",
@@ -6273,28 +6459,62 @@
       ]
     },
     {
+      "title": "Recursive Self-Improvement of Visuomotor Policies through Local Recovery Supervision",
+      "url": "https://arxiv.org/abs/2610.05151",
+      "published_at": "2026-10-04",
+      "kind": "paper",
+      "summary": "A fixed tool-using teacher repairs failures of a visuomotor student. Student continuation tests determine demonstration length, and action-quality assessment determines which continuous segments become training data.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp and arXiv v1 submission history both identify 2026-10-04T11:54:02Z.",
+      "review_status": "approved",
+      "relevance": "The method turns an agent's observed failures into verified corrective experience for subsequent parameter updates. This directly addresses feedback-driven self-improvement, with preliminary rather than sustained-recursion evidence.",
+      "id": "cb72119b3b1f3079",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.05151"
+        }
+      ]
+    },
+    {
+      "title": "MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training",
+      "url": "https://arxiv.org/abs/2610.05398",
+      "published_at": "2026-10-04",
+      "kind": "paper",
+      "summary": "MMPostTrainBench tests whether research agents can deliver reliable model improvements across eight multimodal tasks. Its companion framework, MMResearch, connects media observations to hypotheses, experiments, memory, and checkpoint selection.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication as 2026-10-04T17:32:58Z, consistent with the PDF v1 date. Its America/New_York publication day is October 4.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates autonomous research agents conducting multimodal post-training, including experimental progress, knowledge retention, candidate selection, and research integrity.",
+      "id": "aa059e79208dfb82",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.05398"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/sod1010/MMPostTrainBench"
+        }
+      ]
+    },
+    {
       "title": "From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists",
       "url": "https://arxiv.org/abs/2610.05197",
       "published_at": "2026-10-04",
       "kind": "paper",
-      "summary": "Introduces MechHypoBench, which tests whether AI scientists can infer mechanisms from complex empirical observations across 14 fields and 17.98 million records. Generated hypotheses are evaluated through predictions under withheld conditions, revealing a substantial mechanism-recovery gap.",
-      "date_evidence": "arXiv submission history: v1 submitted 4 October 2026 at 13:10:47 UTC.",
-      "relevance": "A focused discovery evaluation for moving beyond correlations toward falsifiable mechanistic hypotheses.",
+      "summary": "MechHypoBench measures whether scientific agents can turn complex observations into open-form mechanistic hypotheses. It scores the consequences implied by those hypotheses rather than their textual resemblance to reference explanations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata records the original publication timestamp as 2026-10-04T13:10:47Z, matching the October 4 v1 date and primary arXiv record. Its America/New_York day is October 4.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "dd2dc379979e7af0"
-    },
-    {
-      "title": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
-      "url": "https://arxiv.org/abs/2610.04915",
-      "published_at": "2026-10-04",
-      "kind": "paper",
-      "summary": "Tests whether AI-scientist answers actually follow supplied evidence by withdrawing or reversing evidence in benchmark data. High ordinary accuracy fell sharply under an evidence-grounded metric, showing that prior knowledge and shortcuts can masquerade as scientific reasoning.",
-      "date_evidence": "arXiv submission history: v1 submitted 4 October 2026 at 03:50:36 UTC.",
-      "relevance": "Provides a concrete discovery-evaluation protocol for separating evidence-grounded inference from recall or answer-key exploitation.",
-      "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "31ad9246f9a10e34"
+      "relevance": "The primary contribution evaluates agents discovering mechanistic explanations from observations and verifying their implications under withheld conditions.",
+      "id": "dd2dc379979e7af0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.05197"
+        }
+      ]
     },
     {
       "title": "AI learned to dig deep. The next discoveries need it to dig wide",
@@ -6314,12 +6534,18 @@
       "url": "https://arxiv.org/abs/2610.04756",
       "published_at": "2026-10-03",
       "kind": "paper",
-      "summary": "Develops an anytime-valid detector for deciding when iterative self-evolution should stop and a change-point method for selecting an earlier artifact when late updates overfit. Reported experiments substantially reduce compute while preserving unseen-test performance.",
-      "date_evidence": "arXiv source page submission history identifies the initial October 3, 2026 version; candidate metadata agrees.",
-      "relevance": "Supplies principled stopping and checkpoint-selection machinery for bounded recursive self-improvement.",
+      "summary": "The paper adds sequential stopping and earlier-artifact selection to self-evolving prompt and skill systems. It uses candidate-versus-incumbent evaluation outcomes to detect sustained low improvement and estimate where useful evolution ended.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp and primary submission history agree on 2026-10-03T20:47:53Z. Both UTC and America/New_York publication days are October 3.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "76e8130f572b6405"
+      "relevance": "Addresses when persistent agent self-improvement should stop and which learned artifact to retain, directly contributing to reliable and resource-aware recursive improvement.",
+      "id": "76e8130f572b6405",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04756"
+        }
+      ]
     },
     {
       "title": "VCLMU: Mechanism-Centric Virtual Cell World Modeling for Perturbation Response",
@@ -6350,6 +6576,24 @@
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "id": "95f2c46863e1dec4"
+    },
+    {
+      "title": "ForkPilot: Self-Evolving Policy for Retrospective Search in Long-Horizon Agents",
+      "url": "https://arxiv.org/abs/2610.04889",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "ForkPilot learns when an interactive agent should revisit earlier states, explore alternative continuations, or skip retrospective search. Its discovery connection is experience-driven improvement of exploration and belief revision, evaluated on general interactive tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv timestamp, confirmed by submission history, is 2026-10-04T02:53:58Z. This corresponds to October 3 in America/New_York, explaining the supplied calendar date.",
+      "review_status": "approved",
+      "relevance": "Learns from completed agent experience to improve subsequent search allocation and revises exploration decisions as new evidence reveals unknown environment states and recovery opportunities.",
+      "id": "65f2aa74e4cbffb5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04889"
+        }
+      ]
     },
     {
       "title": "EvoCast: Reliable Autonomous Research Agents for Iterative Forecasting Architecture Evolution",
@@ -6398,6 +6642,24 @@
         {
           "label": "Code",
           "url": "https://github.com/ft2023/CURIO"
+        }
+      ]
+    },
+    {
+      "title": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
+      "url": "https://arxiv.org/abs/2610.04915",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "The paper introduces verified data counterfactuals and evidence-grounded accuracy to distinguish correct answers that track observations from answers that persist despite contradictory or missing evidence.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata and primary submission history identify 2026-10-04T03:50:36Z as the original publication. Its America/New_York calendar day is October 3.",
+      "review_status": "approved",
+      "relevance": "Directly tests whether scientific agents derive conclusions from supplied evidence and whether evaluation rewards evidence-responsive reasoning, a central requirement for verifying discoveries.",
+      "id": "31ad9246f9a10e34",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04915"
         }
       ]
     },
@@ -10304,6 +10566,32 @@
       ]
     },
     {
+      "title": "Terminal-RSI: Recursive Self-Improving Terminal Agents via Recursive Self-Rewrite and Policy-Refine",
+      "url": "https://arxiv.org/abs/2610.22192",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "Terminal-RSI alternates supervised rewriting of successful terminal trajectories with actor–critic policy refinement. It preserves critic weights across rewrites, recalibrates values, and adjusts rewards to favor complete verification over partial progress.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies original publication as 2026-10-15T16:43:56Z; the extracted v1 date on page 1 is consistent.",
+      "review_status": "approved",
+      "relevance": "Studies recursive improvement from an agent's verified execution successes, with replay, policy refinement, and scientific-workflow evaluation. This is directly relevant to learning to discover and retaining improved investigative behavior, although only bounded cycles are demonstrated.",
+      "id": "7a7bff6d71371f1c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22192"
+        },
+        {
+          "label": "Project",
+          "url": "https://jyyang26.github.io/terminal-rsi/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/jyyang26/Terminal-RSI"
+        }
+      ]
+    },
+    {
       "title": "Self-Evolving Coding Agents via Harness-Policy Optimization",
       "url": "https://arxiv.org/abs/2610.22791",
       "published_at": "2026-10-15",
@@ -10344,6 +10632,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.22029"
+        }
+      ]
+    },
+    {
+      "title": "RSIFlow: Adaptive Self-Improvement Workflows with an Evolving Meta-Agent",
+      "url": "https://arxiv.org/abs/2610.21791",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "RSIFlow couples task-agent improvement with an evolving meta-agent harness that learns reusable guidance from successful and unsuccessful update attempts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary submission history verifies original v1 publication on 15 October 2026 at 12:45:08 UTC, consistent with the supplied PDF.",
+      "review_status": "approved",
+      "relevance": "Directly studies recursive self-improvement: an agent diagnoses changing bottlenecks, selects interventions, and retains intervention evidence to improve its own future improvement procedures.",
+      "id": "93034516b473593c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21791"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/1HUAN1/RSI-Flow"
         }
       ]
     },
@@ -10424,6 +10734,80 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.21887"
+        }
+      ]
+    },
+    {
+      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
+      "url": "https://arxiv.org/abs/2610.22344",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "MLExpert trains a 35B mixture-of-experts model for sustained experimental optimization. It combines executable research tasks, persistent experiment state, outcome-filtered demonstrations, and reinforcement learning from intermediate experiment results.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-15T17:56:32Z; page 1 independently displays the matching v1 date.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to organize experiments, interpret execution feedback, and improve scientific and machine learning solutions over long horizons. The contribution concretely connects post-training to autonomous discovery capability.",
+      "id": "03627392f7accc23",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22344"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/InternScience/MLExpert"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/InternScience/MLExpert"
+        }
+      ]
+    },
+    {
+      "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
+      "url": "https://arxiv.org/abs/2610.22273",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "Librarian Agents trains a builder to organize documents into a reusable hierarchy of synthetic files with source references. A frozen answering agent searches the constructed workspace, allowing corpus-level reasoning to serve multiple future questions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies original v1 publication on 15 October 2026 at 17:35:17 UTC, consistent with the supplied date and PDF page 1.",
+      "review_status": "approved",
+      "relevance": "Learns reusable agent memory for deep research and cross-document reasoning, including provenance paths for checking synthesized claims. Its concrete contribution is constructing evidence workspaces before future questions are known.",
+      "id": "1d9cf5babf2989a2",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22273"
+        },
+        {
+          "label": "Project",
+          "url": "https://librarian-agents.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/teresaz05/librarian-agents"
+        }
+      ]
+    },
+    {
+      "title": "Learning to Think and Explore in 3D World",
+      "url": "https://arxiv.org/abs/2610.21783",
+      "published_at": "2026-10-15",
+      "kind": "paper",
+      "summary": "Act3D learns to move a camera through reconstructed scenes, gather new observations, and answer spatial questions from an initially incomplete view.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary submission history verifies original v1 on 15 October 2026 at 12:38:48 UTC. The PDF’s 19 October date identifies v2.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to discover missing task-relevant evidence through action under partial observability, jointly learning information acquisition and reasoning.",
+      "id": "bc757bb51b5cc488",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.21783"
+        },
+        {
+          "label": "Project",
+          "url": "https://williamium3000.github.io/act3d/"
         }
       ]
     },
@@ -12328,28 +12712,92 @@
       ]
     },
     {
+      "title": "InterMimicGen: Scaling Humanoid Loco-Manipulation through Self-Evolving Motion Imitation",
+      "url": "https://arxiv.org/abs/2610.06850",
+      "published_at": "2026-10-05",
+      "kind": "paper",
+      "summary": "InterMimicGen converts human-object interaction recordings into robot references and repeatedly expands their executable variations while improving the tracking policy.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original publication timestamp is 2026-10-05T17:59:50Z; the PDF identifies the original version as 5 October 2026.",
+      "review_status": "approved",
+      "relevance": "The primary contribution includes an execution-validated learning loop that expands robot competence beyond seed demonstrations. This is relevant to feedback-driven self-improvement, although the expansion preserves existing task semantics.",
+      "id": "47d9c27401b76abb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.06850"
+        },
+        {
+          "label": "Project",
+          "url": "https://sirui-xu.github.io/InterMimicGen/"
+        }
+      ]
+    },
+    {
       "title": "Fork-and-Flush: Escaping Idea Basins in Autoresearch Agents",
       "url": "https://arxiv.org/abs/2610.07447",
       "published_at": "2026-10-05",
       "kind": "paper",
-      "summary": "Studies why independent autoresearch runs settle into different local idea regions and proposes branching and selective context removal to encourage broader exploration beyond an agent’s current trajectory.",
-      "date_evidence": "The opened arXiv source verifies the title under identifier 2610.07447 and reports the original submission date as 2026-10-05.",
-      "relevance": "Directly addresses exploration collapse and idea diversity in open-ended autonomous research.",
+      "summary": "Fork-and-flush periodically branches an ongoing research agent from its accumulated files with fresh conversational contexts, then continues from the strongest branch.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp and the arXiv v1 submission history both identify 2026-10-05T21:55:52Z.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "e14cabb1256a4b15"
+      "relevance": "This directly improves autonomous research-agent exploration through a harness intervention, with externally scored experiments and comparisons against serial and independent parallel search.",
+      "id": "e14cabb1256a4b15",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.07447"
+        }
+      ]
     },
     {
       "title": "Evolving in Thought Space: Training a Small Model at Test Time Unlocks Better Discoveries",
       "url": "https://arxiv.org/abs/2610.06269",
       "published_at": "2026-10-05",
       "kind": "paper",
-      "summary": "Guidance-TTT adapts a compact model at test time to suggest high-level strategy changes while a stronger frozen model implements complete executable solutions. This separates strategic learning from implementation and reduces the cost of discovery-time policy updates.",
-      "date_evidence": "The arXiv source page explicitly states “Submitted on 5 Oct 2026”; it also notes a later v2 revision on 12 Oct 2026, so the original paper date is retained.",
-      "relevance": "Directly concerns test-time discovery training, verifier-guided search and a practical division between evolving strategy and frozen execution.",
+      "summary": "Guidance-TTT trains a small model to suggest changes to archived solutions while a stronger frozen model implements those changes and an executable verifier evaluates them.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp is 2026-10-05T13:04:05Z. The supplied PDF is v2 dated 12 October 2026, which is a revision date and is not substituted for original publication.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "d0a1aad7216e9e1d"
+      "relevance": "The primary contribution is learning to discover better executable solutions through verifier-driven test-time updates to a strategic guidance policy.",
+      "id": "d0a1aad7216e9e1d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.06269"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Human-Agent-Society/reef/tree/main/recipes/tttd/examples/guidance_ttt"
+        },
+        {
+          "label": "Project",
+          "url": "https://www.reefinfra.ai/docs/user-guide/recipes/guidance-ttt/"
+        }
+      ]
+    },
+    {
+      "title": "Beyond Successor Accuracy: State Retention for Recursive Self-Improvement in Recommendation",
+      "url": "https://arxiv.org/abs/2610.07105",
+      "published_at": "2026-10-05",
+      "kind": "paper",
+      "summary": "The paper argues that useful behavior can remain distributed across predecessor and successor models, and proposes diagnostics for deciding which model-pair family to retain.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp is 2026-10-05T15:03:27Z. The WSDM 2027 running header is a conference date, not the original publication date.",
+      "review_status": "approved",
+      "relevance": "Its central contribution concerns retaining useful experience across recursive self-improvement updates, with a controlled diagnostic and retention rule. That connection extends beyond ordinary recommendation accuracy, although evidence remains domain-specific.",
+      "id": "94ab554ffc39816c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.07105"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Jinfeng-Xu/RecRSI"
+        }
+      ]
     },
     {
       "title": "Second-Order Problem Solving for Recursive Self-Improvement in Formal Verification",
@@ -12370,40 +12818,80 @@
       ]
     },
     {
+      "title": "Recursive Self-Improvement of Visuomotor Policies through Local Recovery Supervision",
+      "url": "https://arxiv.org/abs/2610.05151",
+      "published_at": "2026-10-04",
+      "kind": "paper",
+      "summary": "A fixed tool-using teacher repairs failures of a visuomotor student. Student continuation tests determine demonstration length, and action-quality assessment determines which continuous segments become training data.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied Atom original timestamp and arXiv v1 submission history both identify 2026-10-04T11:54:02Z.",
+      "review_status": "approved",
+      "relevance": "The method turns an agent's observed failures into verified corrective experience for subsequent parameter updates. This directly addresses feedback-driven self-improvement, with preliminary rather than sustained-recursion evidence.",
+      "id": "cb72119b3b1f3079",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.05151"
+        }
+      ]
+    },
+    {
+      "title": "MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training",
+      "url": "https://arxiv.org/abs/2610.05398",
+      "published_at": "2026-10-04",
+      "kind": "paper",
+      "summary": "MMPostTrainBench tests whether research agents can deliver reliable model improvements across eight multimodal tasks. Its companion framework, MMResearch, connects media observations to hypotheses, experiments, memory, and checkpoint selection.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata identifies the original publication as 2026-10-04T17:32:58Z, consistent with the PDF v1 date. Its America/New_York publication day is October 4.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates autonomous research agents conducting multimodal post-training, including experimental progress, knowledge retention, candidate selection, and research integrity.",
+      "id": "aa059e79208dfb82",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.05398"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/sod1010/MMPostTrainBench"
+        }
+      ]
+    },
+    {
       "title": "From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists",
       "url": "https://arxiv.org/abs/2610.05197",
       "published_at": "2026-10-04",
       "kind": "paper",
-      "summary": "Introduces MechHypoBench, which tests whether AI scientists can infer mechanisms from complex empirical observations across 14 fields and 17.98 million records. Generated hypotheses are evaluated through predictions under withheld conditions, revealing a substantial mechanism-recovery gap.",
-      "date_evidence": "arXiv submission history: v1 submitted 4 October 2026 at 13:10:47 UTC.",
-      "relevance": "A focused discovery evaluation for moving beyond correlations toward falsifiable mechanistic hypotheses.",
+      "summary": "MechHypoBench measures whether scientific agents can turn complex observations into open-form mechanistic hypotheses. It scores the consequences implied by those hypotheses rather than their textual resemblance to reference explanations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata records the original publication timestamp as 2026-10-04T13:10:47Z, matching the October 4 v1 date and primary arXiv record. Its America/New_York day is October 4.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "dd2dc379979e7af0"
-    },
-    {
-      "title": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
-      "url": "https://arxiv.org/abs/2610.04915",
-      "published_at": "2026-10-04",
-      "kind": "paper",
-      "summary": "Tests whether AI-scientist answers actually follow supplied evidence by withdrawing or reversing evidence in benchmark data. High ordinary accuracy fell sharply under an evidence-grounded metric, showing that prior knowledge and shortcuts can masquerade as scientific reasoning.",
-      "date_evidence": "arXiv submission history: v1 submitted 4 October 2026 at 03:50:36 UTC.",
-      "relevance": "Provides a concrete discovery-evaluation protocol for separating evidence-grounded inference from recall or answer-key exploitation.",
-      "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "31ad9246f9a10e34"
+      "relevance": "The primary contribution evaluates agents discovering mechanistic explanations from observations and verifying their implications under withheld conditions.",
+      "id": "dd2dc379979e7af0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.05197"
+        }
+      ]
     },
     {
       "title": "When Is Enough Enough in Self-Evolving LLM Systems?",
       "url": "https://arxiv.org/abs/2610.04756",
       "published_at": "2026-10-03",
       "kind": "paper",
-      "summary": "Develops an anytime-valid detector for deciding when iterative self-evolution should stop and a change-point method for selecting an earlier artifact when late updates overfit. Reported experiments substantially reduce compute while preserving unseen-test performance.",
-      "date_evidence": "arXiv source page submission history identifies the initial October 3, 2026 version; candidate metadata agrees.",
-      "relevance": "Supplies principled stopping and checkpoint-selection machinery for bounded recursive self-improvement.",
+      "summary": "The paper adds sequential stopping and earlier-artifact selection to self-evolving prompt and skill systems. It uses candidate-versus-incumbent evaluation outcomes to detect sustained low improvement and estimate where useful evolution ended.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp and primary submission history agree on 2026-10-03T20:47:53Z. Both UTC and America/New_York publication days are October 3.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "76e8130f572b6405"
+      "relevance": "Addresses when persistent agent self-improvement should stop and which learned artifact to retain, directly contributing to reliable and resource-aware recursive improvement.",
+      "id": "76e8130f572b6405",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04756"
+        }
+      ]
     },
     {
       "title": "VCLMU: Mechanism-Centric Virtual Cell World Modeling for Perturbation Response",
@@ -12420,6 +12908,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.04475"
+        }
+      ]
+    },
+    {
+      "title": "ForkPilot: Self-Evolving Policy for Retrospective Search in Long-Horizon Agents",
+      "url": "https://arxiv.org/abs/2610.04889",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "ForkPilot learns when an interactive agent should revisit earlier states, explore alternative continuations, or skip retrospective search. Its discovery connection is experience-driven improvement of exploration and belief revision, evaluated on general interactive tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original arXiv timestamp, confirmed by submission history, is 2026-10-04T02:53:58Z. This corresponds to October 3 in America/New_York, explaining the supplied calendar date.",
+      "review_status": "approved",
+      "relevance": "Learns from completed agent experience to improve subsequent search allocation and revises exploration decisions as new evidence reveals unknown environment states and recovery opportunities.",
+      "id": "65f2aa74e4cbffb5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04889"
         }
       ]
     },
@@ -12470,6 +12976,24 @@
         {
           "label": "Code",
           "url": "https://github.com/ft2023/CURIO"
+        }
+      ]
+    },
+    {
+      "title": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
+      "url": "https://arxiv.org/abs/2610.04915",
+      "published_at": "2026-10-03",
+      "kind": "paper",
+      "summary": "The paper introduces verified data counterfactuals and evidence-grounded accuracy to distinguish correct answers that track observations from answers that persist despite contradictory or missing evidence.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata and primary submission history identify 2026-10-04T03:50:36Z as the original publication. Its America/New_York calendar day is October 3.",
+      "review_status": "approved",
+      "relevance": "Directly tests whether scientific agents derive conclusions from supplied evidence and whether evaluation rewards evidence-responsive reasoning, a central requirement for verifying discoveries.",
+      "id": "31ad9246f9a10e34",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.04915"
         }
       ]
     },

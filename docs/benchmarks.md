@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**78 usage profiles** · Updated **2026-10-25**
+**81 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -643,6 +643,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Pre-Registered Genesis Accounting for Recursive Self-Improvement: First Audited Operator-Genesis Events in a Physics-Discovery Runtime](#paper-0d36244bb44988af) | Real data | Data analysis | Paper-described |
 | [EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents](#paper-97aa05f1d051eb67) | Synthetic data | Offline data | Paper-described |
 | [GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations](#paper-c8f0a1e7ad6a901d) | Executed programs + evaluators | Offline data | Paper-described |
+| [From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists](#paper-dd2dc379979e7af0) | Synthetic data | Analysis + code | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1265,6 +1266,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-dd2dc379979e7af0"></a>
+
+<details>
+<summary>From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists — details</summary>
+
+[Work](../README.md#paper-dd2dc379979e7af0) · [Source](https://arxiv.org/pdf/2610.05197)
+
+**Focus:** Mechanistic hypothesis generation from fixed observations across 300 tasks. This is analysis of synthetic responses instantiated on empirical dataset conditions, rather than collection of new measurements or agent-controlled research experiments.
+
+**Openness:** `Agents iteratively inspect public observations and execute analyses before submitting an open-form mechanistic hypothesis.`, `Conditions preserve empirical sampling patterns, grouping, and auxiliary measurements; responses are synthesized by a fixed numerical mechanism with added noise.`, `The generating mechanism and hidden comparison observations are withheld. An interactive mechanism-query interface is not established.`
+
+**New physical measurements:** No
+
+**Limits:** Pages 5–7 establish fixed mechanism construction, public and hidden observation splits, and a 30-minute terminal budget for general agents. The specified mechanism is a controlled realization of paper claims, not a reconstruction of the empirical dataset's actual generating mechanism. Final scores depend on a fixed LLM interpreter and do not establish a unique causal explanation. Online evaluator access during agent analysis is not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No agent parameter-training reward is established. On page 6, a separate fixed LLM interprets each submitted hypothesis on hidden matched comparisons; a deterministic evaluator computes Mechanism Consequence Agreement and Mechanism Consequence Negative Log-Likelihood against directions from the fixed generating mechanism. Page 7 identifies the interpreter and assigns missing or invalid outputs the empty-control result. |
+| Reset | Public observations and the generating mechanism are fixed before evaluation (page 5). A reset or state-restoration API is not established. |
+| Branching | Agents may execute iterative analyses, and an AutoDiscovery search procedure is evaluated (pages 2 and 7). Environment snapshot branching or agent-controlled counterfactual experiment execution is not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -1293,6 +1317,8 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners](#paper-5d861400b2f29a95) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [DataSense-Bench: The First Step Toward an AI Scientist](#paper-ec30270490ea6cac) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [RSI-Forge: From Research Papers to Environments for Recursive Self-Improvement](#paper-b92b08173531b188) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training](#paper-aa059e79208dfb82) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists](#paper-31ad9246f9a10e34) | Executed programs + evaluators | Analysis + code | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -1705,6 +1731,52 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | No solver weight training is performed. Development evaluators provide feedback during solving; held-out scores are withheld until grading. A scoring program is deterministic for fixed evaluation inputs, with normalized score (v − w)/(u − w), where w is the starting-solution score and u is the target. Automated validity checks enforce interfaces, correctness and resource limits; a separate model judge assigns zero reward to rule-violating submissions (pages 4–5, 11, 18). |
 | Reset | Three successive sessions start with fresh contexts. Only saved solution files, versions, logs and notes carry over; live workspace, conversational context and shell history do not. The prior submission is inherited regardless of score. Arbitrary environment snapshots or simulator-state restoration are not established (pages 8, 18). |
 | Branching | Solvers can retain and test alternative code versions, and every saved runnable version, including abandoned versions, is later replayed on held-out data. These held-out scores are not returned during solving. Automatic search-tree branching or runtime state cloning is not established (pages 8–9, 18). |
+
+</details>
+
+<a id="paper-aa059e79208dfb82"></a>
+
+<details>
+<summary>MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training — details</summary>
+
+[Work](../README.md#paper-aa059e79208dfb82) · [Source](https://arxiv.org/pdf/2610.05398)
+
+**Focus:** Autonomous multimodal post-training across eight tasks, measuring target and non-target performance, candidate progress and selection, and research integrity. Feedback comes from executed training and evaluation on datasets, not new physical measurements.
+
+**Openness:** `Agents choose data construction, training recipes, model operations, experiment sequences, and final candidates within task permissions.`, `Agents can inspect multimodal media, modify code and configurations, execute training and evaluation, and retain models.`, `Development feedback exposes candidate scores, permitted examples, and execution diagnostics; final test instances, answers, and scores remain sealed during research.`
+
+**New physical measurements:** No
+
+**Limits:** Pages 4–6 and 13 establish separate research and verifier containers, eight GPUs, a default 24-hour loop budget, and three independent loops per configuration and task. Evaluation-example access does not authorize training on those examples. Candidate, non-target, and audit analyses cover one selected loop per pair. Agent parameter training and a common target-model loss are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Pages 4–5 establish development scores and diagnostics as research feedback. Final independent evaluation uses answer accuracy or resolved-instance rate, with target and non-target comparisons against the base. No RL training reward for the research agent is established; the agent chooses the target model's training recipe. MMResearch screens and confirms candidates using development data before promotion (pages 16–17). |
+| Reset | Independent loops start with fresh histories and the same base model and budget (page 6). MMResearch supports restoring its checkpoint and memory (pages 16–17). Arbitrary environment rollback is not established. Audit reset replaces a flagged loop's reported score with the base score; it is a scoring adjustment. |
+| Branching | Interventions may use permitted prior candidates, and multiple candidates can be retained (page 4). MMResearch preserves the incumbent unless confirmation supports promotion (page 16). Environment snapshot forks or a general branching interface are not established. |
+
+</details>
+
+<a id="paper-31ad9246f9a10e34"></a>
+
+<details>
+<summary>Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists — details</summary>
+
+[Work](../README.md#paper-31ad9246f9a10e34) · [Source](https://arxiv.org/pdf/2610.04915)
+
+**Focus:** Audit whether computational biology agents and evaluators respond appropriately to verified changes in evidence. Executed analyses use recorded single-cell datasets and synthetic genetics datasets, including preserved, withdrawn and reversed versions. These are computational experiments over fixed data, without new physical measurements.
+
+**Openness:** `Agents write code and call tools against supplied task files within isolated sandboxes.`, `Questions and answer formats are fixed; web, search and retrieval access are disabled.`
+
+**New physical measurements:** No
+
+**Limits:** Coverage is limited to 18 selected BAIS-SD questions and four synthetic GeneBench-Pro problems. Evaluators retain the original key after edits. Behavioral responsiveness does not establish internal reasoning or sufficient scientific quality.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward is not established; this is an evaluation audit. BAIS-SD uses exact set matching with half credit for a strict subset; GeneBench-Pro requires every reported quantity to meet tolerance. Process judges assess condensed trajectories against the original key. Evidence-grounded accuracy, its strict variant, invariance, responsiveness and evaluator flip AUC provide additional audit measures. |
+| Reset | Every run starts in a fresh sandbox containing only its task files, with the same prompt across data versions and a 40-minute limit. Mid-run reset or snapshot restoration is not established. |
+| Branching | Independent runs on original, null, withdrawal and flip versions support paired counterfactual comparisons. Branching from an intermediate execution state is not established. |
 
 </details>
 
