@@ -1070,6 +1070,146 @@
       "name": "CellTrack-Bench: Microscopic Cell Tracking Benchmark for Vision-Language Models",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.31566"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Code and data release is stated.",
+        "The body describes released criteria, evaluator code, harness configurations, trajectories, and versioned source metadata.",
+        "Benchmark evidence and evaluator decisions remain hidden from evaluated agents."
+      ],
+      "focus": "Video-centered research reports using recorded source videos and retrieved public web, image, video, and document evidence. Agents inspect media, retrieve sources, write HTML, and execute browser and artifact checks. These checks execute computation; the task does not execute scientific experiments or obtain new physical measurements.",
+      "limits": "The benchmark has 50 bilingual tasks and 6,414 criteria. Each attempt allows 64K tokens, 500 agent iterations, and 10 hours; each task allows at most three complete attempts. Web evidence can change. Scores depend on audited evidence, a fixed model judge, deterministic checks, gates, and coverage saturation.",
+      "training": {
+        "reward": "A training reward is not established. Evaluation uses binary semantic and visual judgments from GPT-5.6 Sol plus deterministic program and browser checks. Non-gate model criteria receive one judgment; gates use three votes. Content, citation, and presentation receive weights 0.50, 0.30, and 0.20. Workflow validation supplies repair feedback, while benchmark criteria and decisions are hidden during execution.",
+        "reset": "Up to three complete report attempts per task are allowed. Restoration of an identical tool, browser, filesystem, or web state is not established.",
+        "branching": "The reference workflow supports parallel evidence branches and reader subagents sharing structured results. Checkpoint restoration and counterfactual environment branching are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-66cadadf2737fc2b",
+      "resource_id": "paper-66cadadf2737fc2b",
+      "name": "Beyond Watching and Searching: Benchmarking Agents for Video-centered Deep Research Reports",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.31158"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Public availability of the proposal corpus, surveys, synthetic training corpus, and evaluation code is not established by the supplied pages."
+      ],
+      "focus": "Evaluation of recorded student research proposals, human ratings, collaboration labels, and participant surveys. A separate synthetic methodology corpus trains a provenance classifier. The human study collects proposals and perceptions; proposed scientific experiments are not executed as benchmark actions.",
+      "limits": "The real corpus contains 70 initial and revised proposals from 35 teams covering 20 questions. Both collaboration conditions address the same question in only one case, limiting causal interpretation. Synthetic provenance labels proxy information access. Survey comparisons use available responses rather than fully paired observations.",
+      "training": {
+        "reward": "The provenance classifier receives supervised collaboration labels on 2,000 synthetic methodologies, using QLoRA fine-tuning of Qwen3-14B. An interaction reward is not established. Evaluation uses human and four LLM judges' 1–5 rubric scores and within-question rankings, score and rank agreement metrics, and provenance accuracy and macro-F1 on the held-out real proposals.",
+        "reset": "Reset support is not established. Initial and revised proposals are recorded submissions one week apart, rather than environment resets.",
+        "branching": "Branching or checkpoint restoration is not established. Collaboration conditions and submission versions are observational records for analysis."
+      },
+      "evaluation_family": "other",
+      "id": "paper-3abe80f754180570",
+      "resource_id": "paper-3abe80f754180570",
+      "name": "Beyond Better Ideas: How Human-AI Collaboration Shapes Scientific Ideas and Human Perceptions",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.30568"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "The benchmark dataset is stated to be publicly available.",
+        "Historical retrieval uses a fixed collection of 1,081 papers.",
+        "Some agent configurations can search the public web and retrieve question source papers."
+      ],
+      "focus": "Retrospective binary ML method selection from published astronomy comparisons. Models answer directly, retrieve historical literature, search the web, or receive a masked source-pipeline description. They do not train and compare the candidate scientific methods, run simulations, or acquire new physical measurements.",
+      "limits": "The dataset contains 500 expert-reviewed questions from 346 papers. Inclusion requires a clear performance difference and an author explanation; difficulty reflects explanation completeness. Source-paper exposure can affect results. Retrieval agents allow up to six searches with three results per search; Self-Ask allows six follow-up questions and CRITIC three verification rounds.",
+      "training": {
+        "reward": "Task-specific model training or an interaction reward is not established. Final A/B choices are scored by accuracy against source-supported answers, reported overall and by difficulty. Retrieval supplies literature observations, and CRITIC critiques and revises its own answers; access to correctness feedback during an attempt is not established.",
+        "reset": "Each request contains one question. Explicit environment reset, state restoration, and reproducible web snapshots are not established.",
+        "branching": "Sequential retrieval, follow-up questions, and answer revision are supported. Checkpoint restoration or counterfactual experiment branching is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-9b70877a4edd3d9e",
+      "resource_id": "paper-9b70877a4edd3d9e",
+      "name": "Astro2Method: Benchmarking LLMs on Machine Learning Method Selection in Astronomy",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.30282"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Public arena accepts any model or agent harness.",
+        "Agents choose features and executable scoring programs without a predefined factor library.",
+        "Research uses a fixed data release and date-scoped access; 2024 assessment observations and feedback remain sealed.",
+        "Dataset licensing and complete evaluator source availability are not established by the supplied pages."
+      ],
+      "focus": "Executable quantitative research on recorded daily and Level-2 market observations for 3,042 stocks. Agents write Python strategies, inspect bounded backtest feedback, revise candidates, and freeze one program. Portfolio execution is simulated, including order-book-based market-impact estimates; no live trading or new physical measurements are reported.",
+      "limits": "At most five research evaluations on 2022–2023; one frozen assessment on sealed 2024 data. Strategies declare at most 300 features. Evidence covers one market universe and one sealed year. The out-of-sample score combination is unpublished, and a training-contamination audit is not established.",
+      "training": {
+        "reward": "No benchmark-prescribed policy-training algorithm or training reward is established. Participants may define training and validation splits within 2022–2023. Research feedback comprises aggregate return, signal-quality and coverage statistics, plus execution errors. The cash-account evaluator builds a Top-75 equal-weight long portfolio with lot constraints and simulated costs. In-sample score is 90Q + 10D, where Q emphasizes excess return and D measures qualifying feature diversity; total score is 0.3 Sin + 0.7 Sout. Sout uses an unpublished combination. The one-shot track receives no performance feedback.",
+        "reset": "Candidate backtests repeatedly evaluate the fixed research period. An explicit environment-reset, checkpoint, or rollback interface is not established.",
+        "branching": "Agents may evaluate and compare up to five candidate strategies before committing one. Same-state trajectory branching or checkpoint-fork support is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-045c2b8bd847ae46",
+      "resource_id": "paper-045c2b8bd847ae46",
+      "name": "Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.30113"
+    },
+    {
+      "feedback": "scientific-datasets-and-hidden-verifiers",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents implement research contributions inside supplied repositories, with edits restricted to allowed files.",
+        "Agents may run local experiments and submit candidate patches during a five-hour run.",
+        "The judge keeps the evaluator, human reference, and final workloads private.",
+        "The agent sandbox has no network access except through the driver.",
+        "A code repository is identified; more than 100 additional tasks remain private."
+      ],
+      "focus": "Executed computer-science research experiments across 48 tasks and 13 domains. Agents replace removed contributions, run computational experiments, and use hidden-judge feedback to improve patches against the original authors' implementations. Tasks include training, software performance measurements, correctness checks, and simulation workloads; new physical measurements are not reported.",
+      "limits": "Five hours per task, allowed-file restrictions, task-specific CPU/GPU budgets, and development-evaluation caps. One run per reported agent and task. Most final suites add held-out workloads; Structured LWE instead uses 200 public instances without a held-out part. Model and harness effects are confounded, and public source papers leave contamination unresolved.",
+      "training": {
+        "reward": "A benchmark-level policy-training procedure or training reward is not established. During a run, each submitted patch receives a development-suite score and a sanitized count of workloads meeting each metric threshold, without reference scores or raw evaluator output. Development scores do not determine the result. The agent selects one final patch; passing requires meeting every reference-derived metric threshold on every final workload. The judge also assigns a task-specific 0–100 final score; no saved final submission scores zero. FCI combines metric outcomes and score margins for reporting.",
+        "reset": "Each run starts from the supplied repository with the contribution removed. An explicit environment-reset or checkpoint-restore API is not established.",
+        "branching": "Agents may develop and compare multiple patches within task budgets and choose one final submission. Explicit same-state environment forks or checkpoint branching are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-72af933c20feb3a7",
+      "resource_id": "paper-72af933c20feb3a7",
+      "name": "FrontierCS 2: A Benchmark for Computer Science R&D",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.29932"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose action sequences through shared motion primitives, navigation, manipulation, dialogue, and memory tools.",
+        "NPC information depends on spatial access, availability, and episode-authorized knowledge.",
+        "Task requirements and scoring remain private.",
+        "The paper identifies a code repository; license and complete release availability are not established by the supplied pages."
+      ],
+      "focus": "Interactive embodied service tasks in Isaac Sim and PhysX using one G1 robot body, simulated objects, and embodied NPCs. Feedback includes RGB-D, LiDAR, motion residuals, contact information, action outcomes, delivered dialogue, and world events. Contact, friction, grasp retention, collisions, and falls are measured inside simulation; no new physical robot measurements are reported.",
+      "limits": "360 episodes across 30 indoor scenes and two service-task families, with a 100-decision cap. Five paired conditions vary perception, disruptions, task updates, human coordination, and intent understanding. Physical contact and grasp outcomes are simulated. Real-robot transfer is future work. Semantic scoring partly uses a fixed model judge; observed replanning does not establish retained learning.",
+      "training": {
+        "reward": "All evaluated model weights remain frozen; benchmark-specific training, parameter updates, and a policy-training reward are not established. The evaluator scores five dependency-checked stages against requirements active when evidence was produced. Progress averages eligible stage quality; plans and reports use a fixed semantic judge, while observation, information receipt, and physical outcomes use binary checks. Success requires a correct complete report or accepted handover with prerequisites fulfilled and no terminal fall or object loss. Efficiency, collisions, falls, and decision/token costs are reported separately.",
+        "reset": "Episode reset and synchronization are explicitly supported by the physics runtime on page 4. Arbitrary mid-episode checkpoint restoration is not established.",
+        "branching": "Paired conditions and matched execution interventions support comparisons across episodes. Forking alternative futures from an identical saved simulator state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-aa18c0346e5ad3a3",
+      "resource_id": "paper-aa18c0346e5ad3a3",
+      "name": "TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.30043"
     }
   ]
 }
