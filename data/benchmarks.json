@@ -1210,6 +1210,97 @@
       "name": "TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.30043"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Sequential multi-step actions within fixed benchmark task pools.",
+        "External memories, skill documents, and harness guidance evolve while model weights remain fixed.",
+        "Resume permits additional diagnostic interaction during reflection."
+      ],
+      "focus": "Failure-derived experience, source-task repair, and transfer to fixed unseen tasks across ALFWorld, τ 2-Bench-Verified, WebArena-Verified, and WebShop. Feedback comes from text-based household simulation, simulated-user tool interactions, functional benchmark websites, and simulated shopping. The real-product catalog supplies data; it does not establish live purchases or new physical measurements. These are agent task evaluations rather than executed research experiments.",
+      "limits": "Pages 12–17 establish controlled interactive environments and official evaluators. Streams are selected after three preliminary failures and differ by backbone. Held-out tasks receive one attempt per checkpoint with experience frozen. Success and Mix use separately sampled streams. General arbitrary-state branching is not established.",
+      "training": {
+        "reward": "Pages 2–3 and 15–16: under CFOE, only failed trajectories update external state. Official outcome labels, rewards, explanations, answers, and expert solutions are hidden from the execution and reflection agents; interaction observations, state changes, action outcomes, and execution errors remain available. The controller uses verifier judgments to select failures. Pages 13 and 17: evaluation uses task success for ALFWorld, τ 2-Bench-Verified, and WebArena-Verified, and mean official 0–1 reward for WebShop. τ 2-Bench-Verified requires full reward and valid termination; WebArena-Verified requires all official checks. Page 14: SkillOpt retains controller-level validation-score acceptance. Feedback variants expose official judgments. No model-weight training reward is used.",
+        "reset": "Pages 3 and 17: each run starts with empty accumulated experience and a fresh harness. Held-out and source-recovery attempts start from each task's initial state. Recovery freezes experience immediately after an effective update and permits one retry under the original execution budget.",
+        "branching": "Pages 6–7 and 19: Resume permits 5, 10, or 20 additional diagnostic interaction turns plus one tool-free summary turn, with 10 turns in the main comparison. Initial-state retries are supported for evaluation. Snapshot cloning, arbitrary intermediate-state restoration, and systematic counterfactual branching are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6f75779fcd87792a",
+      "resource_id": "paper-6f75779fcd87792a",
+      "name": "Self-Evolving Agents Can Repair Failures but Struggle to Generalize from Them",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.22984"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 lists project and code URLs; release contents are not established from the supplied text.",
+        "Six existing benchmarks are loaded at pinned revisions; the study also constructs Integrals and OneWordQA."
+      ],
+      "focus": "Evaluate correctness and reasoning-token allocation when fixed, independent tasks from one dataset are combined in a prompt. Feedback combines existing benchmark answers with generated, symbolically verified integrals and manually checked generated factual questions. Models produce answers without environment interaction; symbolic checker execution belongs to evaluation.",
+      "limits": "This is fixed-task reasoning evaluation, with no new physical measurements or agent-executed research experiments. Compositions remain within datasets. Detailed reasoning analysis covers open-weight models. Finite trials, parsing failures, and reference grading limit interpretation; reasoning length is an imperfect measure of required computation.",
+      "training": {
+        "reward": "Pages 3 and 32 describe per-task correctness grading. Integrals are checked by differentiating answers and testing equivalence structurally, numerically, and symbolically; other tasks use reference answers. Pages 8 and 31 train a linear fragility predictor with class-balanced binary cross-entropy on whether composition performs at least as well as isolation. Batching trades token savings against an expected accuracy-loss budget of 0.5 percentage points. No new reward-based training of the evaluated language models is established.",
+        "reset": "Pages 29 and 32 describe independent samples and a single user-message prompt per trial, without few-shot examples or a system message. Tasks can be rerun in isolation or different compositions. Simulator-state reset support is not established.",
+        "branching": "Separate trials vary composition size, grouping, ordering, and forced thinking budgets. Checkpoint restoration or branching from an intermediate model or environment state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-03406ae2f3bae7d2",
+      "resource_id": "paper-03406ae2f3bae7d2",
+      "name": "On the Fragility of Tasks under Composition: Implicit Budgeting in Language Models",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.27190"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 states that the project page and dataset are publicly available.",
+        "Page 11 assigns Apache 2.0 to original scripts and annotations while preserving upstream terms.",
+        "Protected AppWorld task and solution text is omitted; metadata and reconstruction scripts are provided."
+      ],
+      "focus": "Generate an executable PASS/FAIL verifier from a fixed task instruction and software environment, self-test it, then freeze it for evaluation on hidden positive and negative candidates. State and code tasks permit actual software execution through run_public, including action replay and repository tests. Tool-call tasks inspect supplied call representations. These are software environments and constructed test cases; execution does not represent new physical measurements.",
+      "limits": "Reference agreement on finite suites does not certify semantic correctness. Generation hides reference verifiers and test cases. Cross-harness comparisons combine prompt, tool, and reasoning differences. Rankings lack repeated independent generations; repeated judgment rounds execute already fixed verifiers. The benchmark evaluates software verification rather than executed research experiments.",
+      "training": {
+        "reward": "Pages 2 and 4 establish self-test PASS/FAIL outputs as generation-time evidence and hidden reference-label agreement as evaluation. Primary normalized balanced accuracy equals TPR + TNR - 100; attack acceptance is reported separately. Missing or invalid outputs receive no correctness credit. No benchmark training reward or parameter-update procedure is established; reinforcement-learning uses are motivation.",
+        "reset": "Pages 3 and 14 establish repeated reference executions from the same reset state or initial conditions. Page 16 permits generation-time reset where supported. Page 28 documents adding a reset between AppWorld invocations to remove persistent-state contamination. Universal reset support across all backends is not established.",
+        "branching": "Agents may revise verifiers and test different candidate solutions before submission. Evaluation freezes the delivered verifier and tests multiple hidden candidates. Snapshot cloning or branching from an intermediate environment state is not established. Generation and evaluation execution budgets are separate; the Astra trace batch permits 20 generation-time run_public executions per supported task."
+      },
+      "evaluation_family": "other",
+      "id": "paper-644098a7aa74502f",
+      "resource_id": "paper-644098a7aa74502f",
+      "name": "VerifierBench: Benchmarking the Generation of Executable Verifiers for LLM Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.28679"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 labels Code and Dataset; release access and licensing are not established from the supplied text.",
+        "Pages 6 and 23 state that archived input videos are distributed with the benchmark and exposed as read-only task inputs.",
+        "Subsequent evidence is acquired from the live open Web."
+      ],
+      "focus": "Answer 200 fixed factual questions by inspecting archived audiovisual anchors and adaptively discovering evidence on live websites. Allowed tools cover search, browser navigation and interaction, downloads, video frames, and subtitles. Feedback consists of retrieved content, browser observations, and tool successes or failures. This combines recorded inputs with live information access; it produces no new physical measurements and does not execute scientific research experiments.",
+      "limits": "The task set is fixed while external Web content and interfaces can change. Final-answer equivalence scoring does not independently validate an agent's evidence chain. Human and model execution budgets differ. Recursive self-improvement is proposed as a future use and is not experimentally demonstrated.",
+      "training": {
+        "reward": "Pages 10 and 25 use Qwen3.8-27B to judge semantic equivalence and completeness against the reference answer, without external tools or independent solving. Accuracy is primary; tokens and elapsed time measure cost. Page 30 proposes using answer and execution feedback for future adaptation. An implemented training reward or training procedure is not established.",
+        "reset": "Page 23 establishes a persistent browser session during an attempt and reproducible archived input videos. A full browser or live-Web reset protocol is not established; external websites are not described as restorable benchmark states.",
+        "branching": "Agents choose search targets, tools, and subsequent actions adaptively within a 3,600-second research budget and 100 total tool calls. Snapshot restoration, cloned sessions, and branching from an intermediate execution state are not established. Tool-disabled finalization uses already collected evidence."
+      },
+      "evaluation_family": "other",
+      "id": "paper-d26e59a1cb2b6340",
+      "resource_id": "paper-d26e59a1cb2b6340",
+      "name": "Deep Search in Real-World Web Environments",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.30181"
     }
   ]
 }
