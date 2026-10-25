@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**67 usage profiles** · Updated **2026-10-24**
+**69 usage profiles** · Updated **2026-10-24**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -544,6 +544,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Deep Search in Real-World Web Environments](#paper-d26e59a1cb2b6340) | Real data | Analysis + tools | Paper-described |
 | [Data World: Scaling Data Environments from Scratch](#paper-8b5e7afcd33dcbed) | Synthetic data | Analysis + code | Paper-described |
 | [HSPR: Recovering Software-Agent Benchmark Scores via Hierarchical Posterior Inference](#paper-d3835393933ca7ee) | Real data | Finite-pool queries | Paper-described |
+| [Pre-Registered Genesis Accounting for Recursive Self-Improvement: First Audited Operator-Genesis Events in a Physics-Discovery Runtime](#paper-0d36244bb44988af) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1097,6 +1098,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-0d36244bb44988af"></a>
+
+<details>
+<summary>Pre-Registered Genesis Accounting for Recursive Self-Improvement: First Audited Operator-Genesis Events in a Physics-Discovery Runtime — details</summary>
+
+[Work](../README.md#paper-0d36244bb44988af) · [Source](https://arxiv.org/pdf/2610.14843)
+
+**Focus:** Accounts separately for generated content instances and registered operator types. Evaluates whether composed transforms exceed a restricted single-transform library on held-out scientific data.
+
+**Openness:** `Candidate transforms are compositions of depth at most two over a supplied primitive vocabulary.`, `Accepted operators persist in a registry and can be reused as bases for later compositions.`, `Problems are curated and execution is manually triggered; autonomous question selection is not established.`, `Public source data are identified; public availability of the runtime and audit artifacts is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** Feedback uses existing NIST spectroscopic records, JPL ephemeris vectors and catalog constants, and NDBC observations. Numerical search, regression, and scoring are executed on fixed data; no new physical measurements are reported. A separate synthetic target demonstrates compositional reuse. Problems, labels, grammar, and judges are supplied; primary samples are small. Blind tests on 34 variable pairs yield no closure. Downstream utility attributable specifically to the two registered operators remains unproven.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No reinforcement-learning training reward is established. The evaluator fits y = a + b T(x) by closed-form least squares and scores R2 on a random 40% holdout. Admission requires the best standard-transform R2 to be below 0.999 and the best composed-transform R2 to reach at least 0.999. Additional audits test extrapolation and downstream held-out error. |
+| Reset | Reset support is not established. Exact reruns are reported, but no environment reset, registry rollback, or checkpoint interface is described. |
+| Branching | Runtime-state branching support is not established. Search compares alternative operator compositions, but no state-forking or checkpoint branching interface is described. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -1121,6 +1145,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [FrontierCS 2: A Benchmark for Computer Science R&D](#paper-72af933c20feb3a7) | Scientific data + verifiers | Computational experiments | Paper-described |
 | [Auto-MD-bench: Evaluating Autoresearch Agents for Real-World Medical Tasks](#paper-4e611eaf34efb11a) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch](#paper-d4e79e43099df1b8) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [EdgeKernelBench: Unified LLM-Driven Kernel Generation for Edge Backends](#paper-105b4672ff4fd27c) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -1441,6 +1466,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Pages 5–6 and 17–20: the task evaluates ten required claims with 99 rubric items. A pinned claude-opus-5 judge scores frozen artifacts on 0–4 anchors, cites evidence, and issues binary met/unmet claim verdicts after execution. The overview weights design/planning 0.3, execution 0.5, and analysis/writing 0.2. During research, agents inspect computed metrics, including per-session variance-weighted R2 and offline latency. The hidden evaluator is not established as an online reward returned during optimization; an agent reinforcement-learning training procedure is not established. |
 | Reset | Pages 4–5, 7, and 14: every run begins in a fresh workspace. Stagewise evaluation starts each stage separately with paper-derived upstream inputs; end-to-end stages share the run's own evolving artifacts. Experiment reruns are allowed. Snapshot restoration of a running experiment or agent state is not established. |
 | Branching | End-to-end and stagewise runs provide separate execution conditions, and agents may revise and rerun experiments. Checkpoint branching, replay from identical execution states, and a dedicated branching interface are not established in the supplied pages. |
+
+</details>
+
+<a id="paper-105b4672ff4fd27c"></a>
+
+<details>
+<summary>EdgeKernelBench: Unified LLM-Driven Kernel Generation for Edge Backends — details</summary>
+
+[Work](../README.md#paper-105b4672ff4fd27c) · [Source](https://arxiv.org/pdf/2610.24648)
+
+**Focus:** Discover faster equivalent programs through candidate construction, compilation, execution, numerical verification and measured device performance. The benchmark has 331 canonical tasks instantiated as 650 scenarios across CPU/LLVM, GPU/CUDA and GPU/OpenCL. LEKA and Claude Code are compared on 69 instances.
+
+**Openness:** `Fixed PyTorch reference computations, interfaces, numerical tolerances and static shape profiles define each task.`, `Candidates may change algorithms, graph structure, fusion, decomposition, layouts, scheduling, memory use and target-source implementations while preserving task semantics.`, `One-shot generation returns one candidate without iterative feedback; agent evaluation permits repeated controlled evaluator calls within task-level time budgets.`, `Generation and evaluation are isolated from hidden evaluation data and scoring.`
+
+**New physical measurements:** No
+
+**Limits:** Feedback comes from executed programs and fresh hardware latency or counter measurements, rather than simulated dynamics or recorded experimental outcomes. These are computational experiments, with no new physical-world intervention experiments established. Correctness checks use three random seeds and task-specific tolerances, which do not prove equivalence. Timing excludes compilation and deployment preparation. Agent evaluation covers a 69-instance subset with one base model. Devices use different application workloads; NPUs and cooperative CPU/GPU execution are excluded.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Parameter-training rewards or weight updates are not established. The evaluator reports compilation, correctness, latency and profiling evidence. Outputs must match PyTorch structures, shapes, data types and numerical tolerances across three random seeds before timing. Candidate adoption requires verified correctness and improvement in the measured objective. Performance uses repeated paired candidate/baseline timings, median speedup, Fast@p and geometric-mean speedup. |
+| Reset | An environment reset or checkpoint API is not established. Candidate and baseline programs are warmed up and repeatedly executed with identical inputs and matched settings in the same device session. Agent optimization is bounded independently per task: 90 minutes for Level 1 and 155 minutes for Levels 2 and 3. |
+| Branching | Explicitly supported through a candidate tree retaining earlier states, derivation links and validation results. Alternative branches support comparison, rollback and continued search. Upstream edits trigger rebuilding of affected downstream implementations, while the best verified complete program is retained. |
 
 </details>
 
