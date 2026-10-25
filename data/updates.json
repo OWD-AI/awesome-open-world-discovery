@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T14:14:01-04:00",
+  "updated_at": "2026-10-25T14:38:36-04:00",
   "window_start": "2026-09-26",
   "window_end": "2026-10-25",
   "window_days": 30,
@@ -1274,6 +1274,36 @@
       ]
     },
     {
+      "title": "World Models with Configurable Perception",
+      "url": "https://arxiv.org/abs/2610.27914",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "ConfigWM uses a language query to select task-relevant visual information before learning action-conditioned dynamics. Its controlled experiments examine whether this state construction preserves physical information and planning performance as visual distractors increase.",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 20 October 2026 at 09:26:32 UTC, establishing the original preprint timestamp rather than an indexing or revision date.",
+      "relevance": "The primary contribution is a task-conditioned world representation supporting action prediction and planning under distraction. It supplies a concrete representation mechanism for discovery-capable agents, although it does not demonstrate causal structure discovery or autonomous scientific investigation.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27914"
+        },
+        {
+          "label": "Project",
+          "url": "https://configwm.github.io"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yijunshens/ConfigWM"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/YijunShen/ConfigWM"
+        }
+      ],
+      "id": "4fab9a768e49ef16"
+    },
+    {
       "title": "When Does Feedback Help? Auditing Learned Voltage-Clamp Experimental Design",
       "url": "https://arxiv.org/abs/2610.27632",
       "published_at": "2026-10-20",
@@ -1290,6 +1320,32 @@
         }
       ],
       "id": "1a7c58d5e92ffdaa"
+    },
+    {
+      "title": "Training the Whole Agent, Not Just the Model",
+      "url": "https://arxiv.org/abs/2610.28069",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "HarnessAdapt-RL jointly trains a coding policy and evolves its runtime support. Temporary mechanism-level guidance helps policy learning, while tools and hooks discovered from recurring interaction problems remain part of the deployed agent.",
+      "date_evidence": "The primary arXiv record gives original v1 submission as 20 October 2026 at 11:51:23 UTC. The manuscript provides only October 2026; the exact arXiv timestamp establishes the original preprint event.",
+      "relevance": "HarnessAdapt-RL studies learning from trajectory evidence while adapting the tools and verification feedback used during training. Its contribution to retained repair skills and policy–harness co-adaptation directly fits learning to discover and agent self-improvement.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28069"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/lingxiaotang/HarnessAdapt-RL"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/anon-review-7f3a/HarnessAdapt-RL"
+        }
+      ],
+      "id": "16ab0f9e2218180c"
     },
     {
       "title": "TraceForge: Distilling with Your Own Thinking",
@@ -1659,18 +1715,6 @@
           "url": "https://github.com/junha1125/LaLa-World"
         }
       ]
-    },
-    {
-      "title": "Harness Self-Evolution for Long-Horizon Terminal Agents",
-      "url": "https://arxiv.org/abs/2610.27435",
-      "published_at": "2026-10-20",
-      "kind": "paper",
-      "summary": "RiseHarness improves terminal-agent reliability by evolving interaction mechanisms around a fixed model. It compares successful and failed executions, connects observed problems to harness code, and retains changes supported by repeated evaluation.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-20, confirmed by the supplied PDF’s arXiv v1 stamp and primary arXiv submission metadata. The separate manuscript date of October 19, 2026 is not the original public submission date.",
-      "review_status": "approved",
-      "relevance": "RiseHarness directly studies automated, retained self-improvement: it discovers recurring execution problems, researches candidate mechanisms, modifies its harness, and evaluates successive versions. This concretely connects to recursive agent improvement and verification infrastructure.",
-      "id": "7be1f38a8edb49a3"
     },
     {
       "title": "Evolving Agent Interfaces",
@@ -2404,6 +2448,24 @@
           "url": "https://github.com/pzs19/HarnessPro"
         }
       ]
+    },
+    {
+      "title": "Harness Self-Evolution for Long-Horizon Terminal Agents",
+      "url": "https://arxiv.org/abs/2610.27435",
+      "published_at": "2026-10-19",
+      "kind": "paper",
+      "summary": "RiseHarness improves a terminal agent’s runtime harness while holding model weights fixed. It connects successful and failed executions to internal runtime behavior, then adapts designs from other frameworks and evaluates the resulting changes.",
+      "date_evidence": "The primary arXiv record identifies v1 submission as 20 October 2026 at 00:36:49 UTC. This original preprint timestamp supersedes the unverified midnight metadata; the manuscript’s October 19 date is not the submission timestamp.",
+      "relevance": "RiseHarness discovers recurring execution problems, researches candidate mechanisms, experimentally checks changes, and retains improved harnesses. This directly contributes to evidence-driven agent self-improvement and reliable verification.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27435"
+        }
+      ],
+      "id": "7be1f38a8edb49a3"
     },
     {
       "title": "Frechet Forcing: Training Long-Horizon Streaming World Models from Short Clips",
@@ -11691,6 +11753,36 @@
       ]
     },
     {
+      "title": "World Models with Configurable Perception",
+      "url": "https://arxiv.org/abs/2610.27914",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "ConfigWM uses a language query to select task-relevant visual information before learning action-conditioned dynamics. Its controlled experiments examine whether this state construction preserves physical information and planning performance as visual distractors increase.",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 20 October 2026 at 09:26:32 UTC, establishing the original preprint timestamp rather than an indexing or revision date.",
+      "relevance": "The primary contribution is a task-conditioned world representation supporting action prediction and planning under distraction. It supplies a concrete representation mechanism for discovery-capable agents, although it does not demonstrate causal structure discovery or autonomous scientific investigation.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27914"
+        },
+        {
+          "label": "Project",
+          "url": "https://configwm.github.io"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yijunshens/ConfigWM"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/YijunShen/ConfigWM"
+        }
+      ],
+      "id": "4fab9a768e49ef16"
+    },
+    {
       "title": "When Does Feedback Help? Auditing Learned Voltage-Clamp Experimental Design",
       "url": "https://arxiv.org/abs/2610.27632",
       "published_at": "2026-10-20",
@@ -11707,6 +11799,32 @@
         }
       ],
       "id": "1a7c58d5e92ffdaa"
+    },
+    {
+      "title": "Training the Whole Agent, Not Just the Model",
+      "url": "https://arxiv.org/abs/2610.28069",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "HarnessAdapt-RL jointly trains a coding policy and evolves its runtime support. Temporary mechanism-level guidance helps policy learning, while tools and hooks discovered from recurring interaction problems remain part of the deployed agent.",
+      "date_evidence": "The primary arXiv record gives original v1 submission as 20 October 2026 at 11:51:23 UTC. The manuscript provides only October 2026; the exact arXiv timestamp establishes the original preprint event.",
+      "relevance": "HarnessAdapt-RL studies learning from trajectory evidence while adapting the tools and verification feedback used during training. Its contribution to retained repair skills and policy–harness co-adaptation directly fits learning to discover and agent self-improvement.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28069"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/lingxiaotang/HarnessAdapt-RL"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/anon-review-7f3a/HarnessAdapt-RL"
+        }
+      ],
+      "id": "16ab0f9e2218180c"
     },
     {
       "title": "TraceForge: Distilling with Your Own Thinking",
@@ -12049,18 +12167,6 @@
           "url": "https://github.com/junha1125/LaLa-World"
         }
       ]
-    },
-    {
-      "title": "Harness Self-Evolution for Long-Horizon Terminal Agents",
-      "url": "https://arxiv.org/abs/2610.27435",
-      "published_at": "2026-10-20",
-      "kind": "paper",
-      "summary": "RiseHarness improves terminal-agent reliability by evolving interaction mechanisms around a fixed model. It compares successful and failed executions, connects observed problems to harness code, and retains changes supported by repeated evaluation.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Original publication: 2026-10-20, confirmed by the supplied PDF’s arXiv v1 stamp and primary arXiv submission metadata. The separate manuscript date of October 19, 2026 is not the original public submission date.",
-      "review_status": "approved",
-      "relevance": "RiseHarness directly studies automated, retained self-improvement: it discovers recurring execution problems, researches candidate mechanisms, modifies its harness, and evaluates successive versions. This concretely connects to recursive agent improvement and verification infrastructure.",
-      "id": "7be1f38a8edb49a3"
     },
     {
       "title": "Evolving Agent Interfaces",
@@ -12769,6 +12875,24 @@
           "url": "https://github.com/pzs19/HarnessPro"
         }
       ]
+    },
+    {
+      "title": "Harness Self-Evolution for Long-Horizon Terminal Agents",
+      "url": "https://arxiv.org/abs/2610.27435",
+      "published_at": "2026-10-19",
+      "kind": "paper",
+      "summary": "RiseHarness improves a terminal agent’s runtime harness while holding model weights fixed. It connects successful and failed executions to internal runtime behavior, then adapts designs from other frameworks and evaluates the resulting changes.",
+      "date_evidence": "The primary arXiv record identifies v1 submission as 20 October 2026 at 00:36:49 UTC. This original preprint timestamp supersedes the unverified midnight metadata; the manuscript’s October 19 date is not the submission timestamp.",
+      "relevance": "RiseHarness discovers recurring execution problems, researches candidate mechanisms, experimentally checks changes, and retains improved harnesses. This directly contributes to evidence-driven agent self-improvement and reliable verification.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27435"
+        }
+      ],
+      "id": "7be1f38a8edb49a3"
     },
     {
       "title": "Frechet Forcing: Training Long-Horizon Streaming World Models from Short Clips",

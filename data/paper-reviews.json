@@ -20315,6 +20315,106 @@
           16
         ]
       }
+    },
+    "paper-7be1f38a8edb49a3": {
+      "institutions": [
+        "Tencent HY LLM Frontier",
+        "Indiana University",
+        "University of Maryland, College Park",
+        "University of Georgia",
+        "National University of Singapore"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        9,
+        37
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Pair successful and failed runs of identical tasks and configurations; align agent trajectories with internal harness traces; use a Handbook mapping behavior to code; group recurring problems; research external implementations; implement and screen candidates; adopt changes after valid, complete repeated development-set evaluation. Experiments compare two main models on 100 development tasks and 89 transfer tasks, generally using four repetitions.",
+      "evidence": "On Terminal-Bench Hard, GPT-6-sol gains 5.25 percentage points in average success and 7 points in all-four-run success; DeepSeek gains 7.25 and 14 points. DeepSeek ablations favor both harness evidence and external research. Model-specific harnesses outperform swapped harnesses. Frozen-final DeepSeek transfer gains are 3.09 points in average success and 6.74 points in all-four-run success; the larger headline transfer results use a separately identified best-observed intermediate version.",
+      "discovery_use": "RiseHarness discovers recurring execution problems, researches candidate mechanisms, experimentally checks changes, and retains improved harnesses. This directly contributes to evidence-driven agent self-improvement and reliable verification.",
+      "limits": "Discovery excludes consistently failing tasks and failures before trace recording. Selected monitor boundaries and possibly incomplete Handbooks do not establish causality. Aggregate adoption can conceal regressions on previously stable tasks, and repeated selection can exploit noise. ModularRSI is evaluated as a released harness without matched re-evolution. Best-observed transfer-version reporting must be distinguished from frozen-final transfer. This was a targeted review of supplied body and appendix sections, with only two rendered pages inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "systems",
+        "rationale": "RiseHarness discovers recurring execution problems, researches candidate mechanisms, experimentally checks changes, and retains improved harnesses. This directly contributes to evidence-driven agent self-improvement and reliable verification.",
+        "pdf_sha256": "30d1105c89200d9b32e0c98b67a7187422a9048859a4938d4bacbcf57ea65c56",
+        "evidence_pages": [
+          1,
+          7,
+          9,
+          37
+        ]
+      }
+    },
+    "paper-4fab9a768e49ef16": {
+      "institutions": [
+        "East China Normal University",
+        "HKUST"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7,
+        19
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Train a DINOv2-based configurable encoder with language-conditioned Transformer layers and paired noisy–clean targets using patch-level contrastive learning. Freeze that encoder, train a state projector and action-conditioned causal Transformer, and plan with CEM-based model predictive control. Compare against world-model baselines and an architecture-matched DINOv2 encoder baseline across three environments and nine distractor levels. Additional tests use physical probes, paired-state retrieval, decoding, and query mismatch.",
+      "evidence": "At eight distractors, ConfigWM retains an average 83.8% of its clean-setting success rate, versus 42.0% for baselines. Matched-setting average success is 96.8% on Two-Room, 40.4% on Push-T, and 69.3% on OGBench-Cube. Replacing correct queries with mismatched queries reduces average planning success from 67.8% to 31.6%. Physical probing and retrieval support improved preservation of relevant state information. Real-world representation experiments reduce distractor decodability while largely preserving task-core information.",
+      "discovery_use": "The primary contribution is a task-conditioned world representation supporting action prediction and planning under distraction. It supplies a concrete representation mechanism for discovery-capable agents, although it does not demonstrate causal structure discovery or autonomous scientific investigation.",
+      "limits": "Controlled distractors are composited observations with unchanged underlying task dynamics; queries primarily select objects by color. ConfigWM receives additional noisy–clean encoder supervision, so the clean-trained dynamics experiment is not wholly unseen-distraction generalization. Clean Push-T performance is below LeWM, and the unified encoder loses performance on OGBench-Cube. Real-world scaling evaluates representations rather than closed-loop control, using synthetic edits and 300 probing cases. Representation–planning correlations do not establish causality. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "The primary contribution is a task-conditioned world representation supporting action prediction and planning under distraction. It supplies a concrete representation mechanism for discovery-capable agents, although it does not demonstrate causal structure discovery or autonomous scientific investigation.",
+        "pdf_sha256": "75a1d151f18bf8c21c4b1df2ae86ed9c36f6da9e41525f63021f40f7b4cda5f7",
+        "evidence_pages": [
+          1,
+          4,
+          7,
+          19
+        ]
+      }
+    },
+    "paper-16ab0f9e2218180c": {
+      "institutions": [
+        "Zhejiang University",
+        "LIGHTSPEED",
+        "Independent Researcher"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        4,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Train Qwen3.5-9B with GRPO on 1,058 software-repair tasks. One frozen teacher generates task-specific repair guidance from trajectory pairs; another proposes and implements tools and hooks from cross-task evidence. Compare candidate and incumbent harnesses under matched policy, tasks, skills, and rollout budget. Accept only changes improving observed pass rate or trainable-rollout rate without lowering either. Evaluate without skills or teachers on three held-out repair benchmarks, with harness swaps and fixed-harness controls.",
+      "evidence": "Pass@1 reaches 57.6%, 37.3%, and 39.7% on Verified, Multilingual, and Pro, improving over GRPO by 9.8, 12.6, and 6.4 percentage points. Mechanism-level guidance outperforms concrete hints and a general skill bank after guidance removal. Second-epoch harness evolution improves pooled performance by 2.6 points, with a task-bootstrap interval of 0.9 to 4.3 points. Removing evolved tools and hooks costs up to 7.7 points. Reusing the discovered final harness yields scores within one point of the full method.",
+      "discovery_use": "HarnessAdapt-RL studies learning from trajectory evidence while adapting the tools and verification feedback used during training. Its contribution to retained repair skills and policy–harness co-adaptation directly fits learning to discover and agent self-improvement.",
+      "limits": "Evidence covers software repair and one 9B base model. Each configuration has one training run; three evaluation repetitions and task-bootstrap intervals do not measure training-seed or harness-search variability. Candidate acceptance is not a significance test. Complete bundles do not isolate individual component effects. Total rollout use is 18,056 versus 16,928 for GRPO, with teacher costs additional; training-rollout counts alone understate cost. The reuse result depends on a previously discovered harness. Only two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "HarnessAdapt-RL studies learning from trajectory evidence while adapting the tools and verification feedback used during training. Its contribution to retained repair skills and policy–harness co-adaptation directly fits learning to discover and agent self-improvement.",
+        "pdf_sha256": "02dd20f179d0cc0ecbd0184de0eadc4c607e6cddb21b7aecb4d98ff2ec8d0073",
+        "evidence_pages": [
+          1,
+          2,
+          4,
+          10
+        ]
+      }
     }
   }
 }

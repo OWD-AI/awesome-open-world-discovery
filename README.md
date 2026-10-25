@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-612-2563eb?style=flat-square" alt="612 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-615-2563eb?style=flat-square" alt="615 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-109-0f766e?style=flat-square" alt="109 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -78,11 +78,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 36 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 66 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 67 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 52 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 94 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 95 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 90 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 108 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 109 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 66 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 100 |
 
@@ -302,6 +302,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yiyuan Pan, Changliu Liu, Jiayuan Mao · Carnegie Mellon University; University of Pennsylvania
 - <a id="paper-51b526cf48936017"></a>**World Model Interpretability: From Decoding Representations to Understanding Latent Worlds** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.25296)* · [Paper](https://arxiv.org/abs/2610.25296) · [Project](https://github.com/Jize-W/Awesome-World-Model-Interpretability)<br>
   Jize Wang et al. · School of Automation and Intelligent Sensing, Shang- hai Jiao Tong University; College of Computing and Data Science, Nanyang Technological University
+- <a id="paper-4fab9a768e49ef16"></a>**World Models with Configurable Perception** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27914)* · [Paper](https://arxiv.org/abs/2610.27914) · [Project](https://configwm.github.io) · [Code](https://github.com/yijunshens/ConfigWM) · [Dataset](https://huggingface.co/datasets/YijunShen/ConfigWM)<br>
+  Yĳun Shen et al. · East China Normal University; HKUST
 - <a id="paper-b7765a43c46af2b6"></a>**WorldStream: Streaming Interactive 3D Worlds with Hierarchical Planning and Persistent State** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28827)* · [Paper](https://arxiv.org/abs/2610.28827) · [Project](https://krennic999.github.io/WorldStream/) · [Project](https://krennic999.github.io/WorldStream/blog/)<br>
   Xiaoxiao Ma et al. · University of Science and Technology of China; Joy Future Academy, JD
 
@@ -639,6 +641,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yan Wang · Independent Researcher
 - <a id="paper-9e2f9fe91ea38fa6"></a>**Training Reasoning Models to Generate Diverse Scientific Ideas** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22324)* · [Paper](https://arxiv.org/abs/2610.22324) · [Code](https://github.com/ManyaWadhwa/diverge_ideation)<br>
   Manya Wadhwa et al. · New York University; Stony Brook University; Salesforce AI Research
+- <a id="paper-16ab0f9e2218180c"></a>**Training the Whole Agent, Not Just the Model** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28069)* · [Paper](https://arxiv.org/abs/2610.28069) · [Code](https://github.com/lingxiaotang/HarnessAdapt-RL) · [HF Model](https://huggingface.co/anon-review-7f3a/HarnessAdapt-RL)<br>
+  Lingxiao Tang, Wei Tao, Yiwen Guo, Lingfeng Bao · Zhejiang University; LIGHTSPEED; Independent Researcher
 - <a id="paper-c8f3602bba98a90b"></a>**Trinity: Self-Evolving Vision-Language Models with a Self-Verifier** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04469)* · [Paper](https://arxiv.org/abs/2610.04469)<br>
   Youngwan Lee, Yong-Ju Lee, Sung Ju Hwang · Electronics and Telecommunications Research Institute (ETRI); Korea Advanced Institute of Science and Technology (KAIST); DeepAuto.ai
 - <a id="paper-f25291638fa3e4c7"></a>**VideoResearchAgent: Grounded Task Synthesis and Sim-to-Real RL for Open-Web Video Research** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04911)* · [Paper](https://arxiv.org/abs/2610.04911) · [Code](https://github.com/Ralph-Zhou/VideoResearchAgent) · [Dataset](https://huggingface.co/datasets/VideoResearchAgent/VideoResearchAgent-Data) · [HF Model](https://huggingface.co/VideoResearchAgent/VideoResearchAgent-4B-SFT) · [HF Model](https://huggingface.co/VideoResearchAgent/VideoResearchAgent-4B-RL)<br>
@@ -1022,6 +1026,8 @@ Each work appears once under its primary contribution; see the [classification g
   Tingwen Du et al. · University of Science and Technology of China; Shanghai Artificial Intelligence Laboratory; Shanghai Jiao Tong University; +2 institutions
 - <a id="paper-aa714b09dd384ec0"></a>**GitSwarm: Decentralized Compounding Inference** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04862)* · [Paper](https://arxiv.org/abs/2610.04862) · [Project](https://veds12.github.io/git-swarm/)<br>
   Vedant Shah et al. · Meta Superintelligence Labs; Mila - Québec AI Institute; Université de Montréal; +3 institutions
+- <a id="paper-7be1f38a8edb49a3"></a>**Harness Self-Evolution for Long-Horizon Terminal Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27435)* · [Paper](https://arxiv.org/abs/2610.27435)<br>
+  Ruhan Wang et al. · Tencent HY LLM Frontier; Indiana University; University of Maryland, College Park; +2 institutions
 - <a id="h03"></a>**Harness-1: Reinforcement Learning for Search Agents with State-Externalizing Harnesses** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2606.02373)* · [Paper](https://arxiv.org/abs/2606.02373) · [Code](https://github.com/pat-jj/harness-1) · [HF Model](https://huggingface.co/pat-jj/harness-1) · [HF Dataset](https://huggingface.co/datasets/pat-jj/harness-1-train-data)<br>
   Pengcheng Jiang et al. · University of Illinois Urbana-Champaign; UC Berkeley; Chroma
 - <a id="paper-9e49e6d93707d1f6"></a>**Harness^2: Recursive Agent Harnessing for an Open World** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.14224)* · [Paper](https://arxiv.org/abs/2610.14224) · [Code](https://github.com/google-research/harness2) · [Project](https://harness2.github.io/)<br>
