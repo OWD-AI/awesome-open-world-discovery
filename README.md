@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-373-2563eb?style=flat-square" alt="373 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-374-2563eb?style=flat-square" alt="374 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-74-0f766e?style=flat-square" alt="74 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 27 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 43 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 31 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 54 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 55 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 50 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 66 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 37 |
@@ -425,6 +425,8 @@ Each work appears once under its primary contribution; see the [classification g
   Soyoung Yoon et al. · Seoul National University; University of California, Los Angeles; University of North Carolina at Chapel Hill; +2 institutions
 - <a id="paper-c474fbc2967f22ed"></a>**Inherited, Not Invented: Tracing the Provenance of Wait in Reasoning Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30882)* · [Paper](https://arxiv.org/abs/2610.30882)<br>
   Zhizhuo Kou et al. · The Hong Kong University of Science and Technology; Peking University; Huawei Noah’s Ark Lab
+- <a id="paper-ff790d2b9ae4b233"></a>**Language Models Learn to Improve Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23344)* · [Paper](https://arxiv.org/abs/2610.23344)<br>
+  Minhua Lin et al. · The Pennsylvania State University; UC Santa Cruz; Emory University; +2 institutions
 - <a id="paper-a97c1f5a709e4de6"></a>**Lean4AgenticRL: Advancing Agentic RL with Verifiable Multi-level Process Rewards** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22448)* · [Paper](https://arxiv.org/abs/2610.22448) · [Code](https://github.com/RickySkywalker/Lean4AgenticRL) · [HF Model](https://huggingface.co/amazon/LAR-27B)<br>
   Ruida Wang, Gerald Friedland, Tong Zhang, Chris Kong · Amazon Web Services; University of Illinois Urbana-Champaign
 - <a id="paper-44d308ca6f63a0d7"></a>**LeanPRM: Lean-Grounded Process Supervision for Natural Language Proof Verification** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.17697)* · [Paper](https://arxiv.org/abs/2610.17697) · [Project](https://rlafuente.com/lean-prm) · [Code](https://github.com/pavelslab-nyu/LeanPRM) · [Dataset](https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/data) · [Dataset](https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/benchmark)<br>

@@ -12732,6 +12732,39 @@
           6
         ]
       }
+    },
+    "paper-ff790d2b9ae4b233": {
+      "institutions": [
+        "The Pennsylvania State University",
+        "UC Santa Cruz",
+        "Emory University",
+        "UC Santa Barbara",
+        "Amazon"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Use DAPO with normalized predicted gains, validity checks, repetition penalties, and diversity bonuses. Periodically execute highly rated current-policy proposals and add measured outcomes to the world model's records. Evaluate four proposals per held-out research state through actual model training, including a separate model-family holdout and calibration ablations.",
+      "evidence": "LM2LM achieves pooled Avg@4 gains of 17.06 thousandths BPB for autoregressive tasks and 7.10 hundredths nats for diffusion tasks, exceeding reported baselines. Holding out Qwen3 still yields strong gains. Targeted calibration beats random calibration and prevents the static predictor's rankings from deteriorating below chance.",
+      "discovery_use": "LM2LM explicitly trains research agents to propose better experiments, using predicted outcomes calibrated by real executions. Learning research judgment and transferring it to unseen model families directly fit discovery training.",
+      "limits": "Evaluation concerns individual proposals on fixed states, not autonomous research campaigns or demonstrated recursive self-improvement. A curated mechanism library and bounded configuration space constrain exploration. Family-level outcomes vary, including negative average NanoChat gains. The 33% saving concerns data generation; reported costs exclude proposer and builder inference. Real calibration experiments remain necessary.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "learning",
+        "rationale": "LM2LM explicitly trains research agents to propose better experiments, using predicted outcomes calibrated by real executions. Learning research judgment and transferring it to unseen model families directly fit discovery training.",
+        "pdf_sha256": "93376501545eaabd3de0ed5f445c92fd268c4a3f5fac48f21e38a0255436333b",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
     }
   }
 }
