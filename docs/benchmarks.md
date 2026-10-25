@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**42 usage profiles** · Updated **2026-10-24**
+**45 usage profiles** · Updated **2026-10-24**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -411,6 +411,9 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Self-Consistency of Entity Sets and Citations in a Deep Research System under Repeated Prompting](#paper-e5da3aa895bba2db) | Real data | Data analysis | Paper-described |
 | [MMEnterprise-Bench: Evaluating Enterprise Agents over Evolving Multimodal Records](#paper-d413c98db0f6141e) | Synthetic data | Data analysis | Paper-described |
 | [EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning](#paper-ff655bd3f5066c0f) | Real data | Data analysis | Paper-described |
+| [Auditing the Product, Not the Recursion: The Evaluation Evidence Behind Recursive Self-Improvement Claims](#paper-81e8d8901cbd7168) | Real data | Data analysis | Paper-described |
+| [Benchmarking and Error Analysis of Deep Search and Deep Research LLM Agents](#paper-31224f0f7655c123) | Real data | Analysis + tools | Paper-described |
+| [VX-One: Typed, Calibrated Decision Heads for Real-Time Perimeter Triage - An empirical study of unknown-attack honesty, cascade gray zones, and calibration under drift](#paper-1313ca747d97581e) | Real data | Offline data | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -662,6 +665,75 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | A training reward or online learning loop is not established. Evaluation uses human reference options and evidence intervals. Answer accuracy scores option correctness; Coverage Grounded Score multiplies correctness by the average audio and visual evidence hit rates; Bottleneck Grounded Score multiplies correctness by the smaller modality-specific temporal IoU (pages 5–6). Failed inference, parsing, or truncated output receives zero scores and remains in the denominator (page 32). |
 | Reset | Environment reset support is not established. Inputs are fixed recordings. Human pause and replay permission is documented on page 17, but does not establish an agent environment reset interface. |
 | Branching | Agent-controlled branching or state forking is not established. Modality ablations and repeated evaluations change evaluation conditions rather than branch an interactive environment. |
+
+</details>
+
+<a id="paper-81e8d8901cbd7168"></a>
+
+<details>
+<summary>Auditing the Product, Not the Recursion: The Evaluation Evidence Behind Recursive Self-Improvement Claims — details</summary>
+
+[Work](../README.md#paper-81e8d8901cbd7168) · [Source](https://arxiv.org/pdf/2610.27610)
+
+**Focus:** Retrospective content analysis of reported RSI evaluation designs across 114 eligible studies and 20 comparison works. Evidence comes from published papers and coding decisions, rather than a simulator, executed research environment, or new physical measurements.
+
+**Openness:** `The body describes a study-level dataset, source locators, screening decisions, and a codebook. Public release availability is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** The phrase-based literature frame limits coverage. Most individual codes outside the adjudicated sample and independently coded improver comparisons lack human checking. Counts describe reported designs rather than successful improvements. A runnable agent benchmark environment is not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No agent-training reward is established. An LLM-based assistant proposes codes with supporting locators; independent human coding, third-reader adjudication, and separate blind improver-comparison coding assess the annotations. |
+| Reset | Reset support for an implemented environment is not established. Independent full-loop reruns from the same start are evaluation recommendations and coded features of reviewed studies. |
+| Branching | Branching support for an implemented environment is not established. Same-start comparisons of earlier and later improvers are proposed evaluation designs and coded features of reviewed studies. |
+
+</details>
+
+<a id="paper-31224f0f7655c123"></a>
+
+<details>
+<summary>Benchmarking and Error Analysis of Deep Search and Deep Research LLM Agents — details</summary>
+
+[Work](../README.md#paper-31224f0f7655c123) · [Source](https://arxiv.org/pdf/2610.29346)
+
+**Focus:** Process-level diagnosis of information acquisition and report synthesis. Pages 2 and 5 describe search, fetch, and termination; searches return ranked metadata and fetches return webpage text. The study executes agent workflows and then analyzes their recorded traces. It does not provide a scientific simulator or new physical measurements.
+
+**Openness:** `Fixed benchmark questions and research prompts.`, `Agents choose iterative web searches and pages to fetch.`, `Research tasks require open-ended evidence synthesis.`
+
+**New physical measurements:** No
+
+**Limits:** The interaction label denotes tool execution from fixed benchmark prompts, not a frozen web corpus. Web accessibility can change. GPT-5 diagnostic judgments lack reported human-agreement estimates. Research-framework comparisons also change backbone models. Appendix tool specifications exceed the stated minimal setup, and some judge labels differ from the main taxonomy. These are information-retrieval evaluations rather than executed research experiments.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No implemented training reward is established. Pages 3–6 describe structured parsing and GPT-5 diagnosis using a human-guided taxonomy. Page 12 evaluates search answers against normalized reference answers and research reports with RACE and FACT. Pages 7–8 propose using diagnostic labels for future training. |
+| Reset | Not established. Separate benchmark tasks are evaluated, but restoration or replay of an identical web environment is not specified. |
+| Branching | Not established. Iterative navigation is described, but checkpoint branching or counterfactual continuation from a saved environment state is not specified. |
+
+</details>
+
+<a id="paper-1313ca747d97581e"></a>
+
+<details>
+<summary>VX-One: Typed, Calibrated Decision Heads for Real-Time Perimeter Triage - An empirical study of unknown-attack honesty, cascade gray zones, and calibration under drift — details</summary>
+
+[Work](../README.md#paper-1313ca747d97581e) · [Source](https://arxiv.org/pdf/2610.30090)
+
+**Focus:** Offline evaluation of attack detection, attribution, severity, abstention, and calibration on recorded UNSW-NB15, CIC-IDS2017, and EMBER2024 data. Pages 5–6 also report executing Suricata on payload-free traffic reconstructed from recorded flows. That is executed software processing of recorded data, not a live attack environment, scientific simulator, or new physical measurement.
+
+**Openness:** `Attack families are withheld during training and tested as unseen families.`, `Temporal splits expose changes in family composition and feature distributions.`, `Classification uses fixed event features and declared candidate classes, with an unknown or abstention mechanism.`
+
+**New physical measurements:** No
+
+**Limits:** Family withholding does not establish real zero-day robustness. Severity targets are rubric-derived. Maximum-softmax abstention on UNSW/CIC is not a calibrated probability of an unseen family. Cascade metrics combine measurements under an independence assumption, and reconstruction omits payloads. Most secondary experiments use one seed. Page 3 calls the vendor comparison unexecuted, while page 7 reports results. The environment does not let a research agent choose and execute research experiments.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No interactive reinforcement-learning reward is established. Pages 2–3 specify supervised multi-task losses with modified homoscedastic balancing, unweighted gate BCE, weighted Choice training, and CORN severity estimation. Training uses AdamW and validation-loss early stopping; temperatures are fitted on validation data. Evaluation includes AUROC, FPR@95%TPR, macro-F1, calibration metrics, latency, and cascade precision/recall. Pages 9–10 evaluate recalibration and continued training using delayed labels. |
+| Reset | Not established as an environment operation. Page 3 reports checkpoint resumption, and pages 3–4 report training reruns from scratch; neither specifies restoration of a live external environment. |
+| Branching | Not established as an environment capability. Ablations and alternative calibration or retraining settings are compared, but checkpoint-based branching of an interactive environment is not specified. |
 
 </details>
 
