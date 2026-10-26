@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**110 usage profiles** · Updated **2026-10-25**
+**111 usage profiles** · Updated **2026-10-26**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -708,6 +708,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [The Marathon of Scientific Reasoning: Robustness of Scientific Agents to Perturbations in Multi-Turn Interactions](#paper-4c7b45ef0c27315b) | Synthetic data | Analysis + tools | Paper-described |
 | [FinAutoRubric: Expert-Guided Automatic Rubric Generation for Evaluating Financial Research Agents](#paper-8daca2e781dd8746) | Real data | Analysis + tools | Paper-described |
 | [The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks](#paper-f56bdaf671cb8be4) | Real data | Offline data | Paper-described |
+| [UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents](#paper-fd33ef0d1dd90a8b) | Real data | Interactive simulator | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1718,6 +1719,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Labels identify the candidate supported by recorded tests or native research scores, with unanimous confirmation from four filtering judges. Evaluation requires correct answers under both candidate orders and averages engineering and research accuracy equally. Advisor training uses teacher-generated reasoning and choices, token-level KL distillation into LoRA adapters, and subsequent answer-label cross-entropy calibration. An online environment reward for advisor training is not established. Separate executor evaluation uses official SWE-bench Pro patch acceptance. |
 | Reset | Each fixed question is presented independently in two reversed candidate orders. An executable environment reset or checkpoint-restoration interface is not established. |
 | Branching | Construction uses recorded parallel attempts and abandoned directions followed by recovery within a recorded run. Evaluation permits only choosing between supplied candidates. Live branching, continuation execution and environment cloning are not established. |
+
+</details>
+
+<a id="paper-fd33ef0d1dd90a8b"></a>
+
+<details>
+<summary>UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents — details</summary>
+
+[Work](../README.md#paper-fd33ef0d1dd90a8b) · [Source](https://arxiv.org/pdf/2610.30932)
+
+**Focus:** Evaluate shopping-user simulator fidelity using recorded human trajectories and an executable reconstruction of shopping interfaces. Replay predicts actions at logged states; Rollout executes simulated actions to advance reconstructed states. Learned user responses are model outputs. Production validation compares offline simulated ranking-policy effects with recorded production A/B outcomes. These are shopping simulations and recorded behavioral data, rather than executed scientific research experiments or new physical measurements.
+
+**Openness:** `Page 1 states that code and data are available.`, `Page 10 states that the dataset is released for non-commercial research under a data use agreement prohibiting re-identification, external personal-data linkage, and unauthorized redistribution.`, `Completeness of the public corpus release is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** The benchmark reconstructs feeds and item pages from pre-rendered views and recorded product content. Production validation covers one ranking-policy pair with a fixed simulated user pool and catalog; broader intervention fidelity and uncertainty are not established. Aggregate trajectory metrics do not establish complete trajectory equivalence. Rollouts are capped at 31 actions for single-session and 42 for cross-session evaluation. New live production experiments performed by the benchmark evaluation are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | OPTD uses dense token-level targets from a frozen SFT teacher, rather than a scalar environment reward. Training minimizes generalized Jensen–Shannon divergence to trust-region-constrained teacher distributions plus recorded-response negative log-likelihood, with grounding weight 0.1. Responses are sampled at logged real states. Evaluation measures action validity, next-action agreement, sequential distributions and mean lengths, population fidelity, aggregate outcomes, and agreement with recorded production A/B effects. |
+| Reset | Page 18 establishes independent reconstruction of each logged state for Replay and a shared initial context for Rollout. Arbitrary checkpoint restoration or a general reset API is not established. |
+| Branching | Page 3 allows actions beyond the logged path, including clicking exposed items that the real user did not click. Rollout advances according to accepted actions. Snapshot cloning, explicit branch management, and restoration to explore multiple continuations from an arbitrary state are not established. |
 
 </details>
 

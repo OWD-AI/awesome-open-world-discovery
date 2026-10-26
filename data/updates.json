@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T22:54:32-04:00",
+  "updated_at": "2026-10-26T00:23:33-04:00",
   "window_start": "2026-09-26",
   "window_end": "2026-10-25",
   "window_days": 30,
@@ -9,17 +9,12 @@
       "url": "https://x.com/Jeffkikt/status/2114208939361567055",
       "published_at": "2026-10-25",
       "kind": "x",
-      "summary": "The author announces an open-source ChatGPT-to-remote-Codex workflow used for research. It supports checking task status, sending suggestions to a fixed Codex session, and checking delivery receipts. The author explicitly says suggestions do not automatically start experiments.",
-      "date_evidence": "Supplied original permalink metadata gives datetime=2026-10-25T04:14:25.000Z, consistent with the visible timestamp 12:14 AM · Oct 25, 2026.",
-      "relevance": "Concrete infrastructure for supervising research-agent experiments, though the post does not establish autonomous discovery or self-improvement.",
+      "summary": "The author announces an open-source ChatGPT-to-remote-Codex workflow used for research, with task-status queries, suggestions to a fixed session, and delivery receipts. Suggestions do not automatically start experiments.",
+      "date_evidence": "Supplied native original-post metadata: datetime=2026-10-25T04:14:25.000Z; visible timestamp: 12:14 AM · Oct 25, 2026.",
+      "relevance": "Concrete infrastructure for researcher steering and observability of a remote research-agent session.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
-      "links": [
-        {
-          "label": "Code",
-          "url": "https://t.co/643CrxFBf1"
-        }
-      ],
+      "links": [],
       "id": "14cda1ada6520dea"
     },
     {
@@ -67,6 +62,100 @@
       "id": "7a25f7ebccef36dd"
     },
     {
+      "title": "RynnUnify: Towards Unified Embodied Brain",
+      "url": "https://arxiv.org/abs/2610.32965",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "RynnUnify connects embodied understanding, video prediction, and robot action. An additional trained agent decides whether generating a hypothetical continuation will help answer a question about unseen states or interaction consequences.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history records v1 on October 23, 2026 at 17:54:07 UTC, also October 23 in America/New_York. This supersedes the supplied Hugging Face midnight timestamp and October 22 label. The manuscript's October 26 date is not the original submission date.",
+      "review_status": "approved",
+      "relevance": "The model learns to predict unobserved physical states and selectively use those predictions in reasoning. This directly contributes world representations and learned evidence-seeking behavior relevant to discovery.",
+      "id": "e0ce81ff789e9233",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.32965"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/alibaba-damo-academy/RynnUnify"
+        },
+        {
+          "label": "Project",
+          "url": "https://alibaba-damo-academy.github.io/RynnUnify.github.io"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-Base"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-Agentic-Reasoner"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-WAM-RoboCasa"
+        }
+      ]
+    },
+    {
+      "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
+      "url": "https://arxiv.org/abs/2610.32253",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "RSIHub separates agent-evolution policies from shared execution and measurement infrastructure. Researchers compose improvement methods through reusable operators while preserving candidate lineage, evaluation conditions, and held-out evidence.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on October 23, 2026 at 07:06:07 UTC, also October 23 in America/New_York. This agrees with the supplied corrected primary-source metadata and takes precedence over the manuscript's October 22 date.",
+      "review_status": "approved",
+      "relevance": "Its primary contribution is infrastructure for agent self-improvement with protected evaluation, retained experimental evidence, and attributable candidate histories. These directly support learning and verifying improvements in discovery agents.",
+      "id": "f17d395d9610cd5a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.32253"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/simple-agent-lab/RSIHub"
+        },
+        {
+          "label": "Project",
+          "url": "https://simpleagentlab.com/rsihub/"
+        }
+      ]
+    },
+    {
+      "title": "UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents",
+      "url": "https://arxiv.org/abs/2610.30932",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "UserArena pairs real shopping histories with an executable environment and evaluates simulator fidelity from valid actions through trajectories and population behavior to outcomes. It also tests whether simulated policy comparisons reproduce a production A/B result.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history records v1 on October 22, 2026 at 08:54:16 UTC, also October 22 in America/New_York. This supersedes the supplied Hugging Face midnight timestamp and October 21 label.",
+      "review_status": "approved",
+      "relevance": "The contribution evaluates whether learned interactive world models preserve long-horizon dynamics and reproduce a real intervention's effects. This provides a concrete protocol for verifying model-based knowledge used in agent experimentation, although its demonstrated scope is shopping behavior.",
+      "id": "fd33ef0d1dd90a8b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.30932"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/RecGPT-Team/UserArena"
+        },
+        {
+          "label": "Project",
+          "url": "https://recgpt-team.github.io/UserArena-Page"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/RecGPT-Team/UserArena/blob/main/data/sessions.jsonl"
+        }
+      ]
+    },
+    {
       "title": "SageAI announces Sage-A1.5 scientific-workflow training",
       "url": "https://x.com/sageai_official/status/2113192901073309849",
       "published_at": "2026-10-22",
@@ -83,6 +172,32 @@
         }
       ],
       "id": "961eb8e27941b252"
+    },
+    {
+      "title": "SRHarness and MechBench separate formula recovery from mechanism discovery",
+      "url": "https://x.com/jiqizhixin/status/2113202702867992910",
+      "published_at": "2026-10-22",
+      "kind": "x",
+      "summary": "Jiqizhixin reports on Tsinghua’s SRHarness framework for agentic formula discovery and MechBench benchmark for evaluating physical-mechanism understanding. Its technical comparison highlights reported formula-recovery gains alongside continued difficulty explaining mechanisms. The attached diagram illustrates SRHarness’s reusable scientific actions, persistent state, and search-trajectory management.",
+      "date_evidence": "Supplied native original X metadata: datetime=2026-10-22T09:36:00.000Z; visible timestamp: 5:36 AM · Oct 22, 2026.",
+      "relevance": "Direct contributions to scientific search harnesses and evaluation of explanatory mechanisms beyond numerical curve fitting.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.35501"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.35515"
+        },
+        {
+          "label": "Project",
+          "url": "https://yuzhthu.github.io/SRHarness"
+        }
+      ],
+      "id": "a4d9ccc08a438f22"
     },
     {
       "title": "RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention",
@@ -286,6 +401,24 @@
         }
       ],
       "id": "d0718cfc743ced46"
+    },
+    {
+      "title": "CritPt v2 documents repairs to physics research evaluation",
+      "url": "https://x.com/MiniHui_zhu/status/2113176796548223466",
+      "published_at": "2026-10-22",
+      "kind": "x",
+      "summary": "CritPt’s author announces expert-reviewed repairs to its physics benchmark and reports GPT-6 Astra scoring 83.1%. The post explains corrections to problems and graders while emphasizing that solving well-posed research exercises does not establish the ability to formulate scientific questions or conduct decisive experiments. Artificial Analysis is disclosed as the evaluation partner.",
+      "date_evidence": "Supplied primary DOM evidence records native datetime=2026-10-22T07:53:03.000Z and visible “3:53 AM · Oct 22, 2026.” The page separately identifies a newer version, distinguishing this original publication timestamp from an edit date.",
+      "relevance": "Concrete benchmark-quality improvements and an explicit account of the limits of physics problem-solving as discovery evaluation.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Project",
+          "url": "https://critpt.com"
+        }
+      ],
+      "id": "fdef97a9b2954a46"
     },
     {
       "title": "Co-Recursive Semantic Self-Extension: A Mathematical Foundation for Open-Ended Intelligence",
@@ -763,9 +896,9 @@
       "url": "https://mirendil.com/news/pretraining-at-scale-without-a-pretraining-team",
       "published_at": "2026-10-21",
       "kind": "blog",
-      "summary": "Mirendil reports that one researcher working with AI agents pretrained a coding model in 3.5 months using less than $10 million in compute. Agents reportedly wrote over 99% of the code, ran experiments and diagnosed failures, while the researcher chose directions and judged results. The announcement documents agent-assisted AI research, while explicitly stopping short of claiming autonomous recursive self-improvement.",
-      "date_evidence": "The supplied complete primary-source text explicitly labels publication as October 21, 2026, 9:00 am PT, corresponding to 2026-10-21 at 16:00 UTC.",
-      "relevance": "Offers a concrete account of agents performing AI-development experiments while distinguishing execution automation from autonomous improvement of the improvement process.",
+      "summary": "Mirendil reports that one researcher working with AI agents pretrained Mirendil-Base in 3.5 months for under $10 million in compute, including experiments, agent usage and data processing. Agents reportedly wrote over 99% of the code, ran experiments and diagnosed failures, while the researcher selected directions and judged results. This is a concrete account of AI-assisted model research, not a demonstration of autonomous recursive self-improvement.",
+      "date_evidence": "The [official Mirendil article](https://mirendil.com/news/pretraining-at-scale-without-a-pretraining-team/) explicitly states “Published: October 21, 2026, 9:00 am PT,” matching the supplied original text. This is a publication label, not a crawl or revision timestamp.",
+      "relevance": "Concrete AI-assisted research and pretraining workflow with human experiment selection and trust decisions. Resource and performance statements remain vendor-reported.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "links": [
@@ -1713,6 +1846,28 @@
         {
           "label": "Code",
           "url": "https://github.com/junha1125/LaLa-World"
+        }
+      ]
+    },
+    {
+      "title": "Generalized CycleGRPO for Fine-Grained Multimodal Understanding and Grounding",
+      "url": "https://arxiv.org/abs/2610.29552",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "Generalized CycleGRPO jointly trains visual description and localization through reciprocal reconstruction across image regions, video intervals, and timestamped spatial evidence. DOVE evaluates whether descriptions distinguish specific events from similar recurrences.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original-publication metadata records 2026-10-21T00:00:00.000Z, corroborated by the PDF's v1 date of 21 October 2026. The earlier ECCV formulation is a separate work, not this extension's publication date.",
+      "review_status": "approved",
+      "relevance": "The concrete discovery-training contribution is a generate-and-test learning loop: a model proposes semantic descriptions, tests them by reconstructing their evidence, and learns both proposal and verification mappings. This provides a grounded self-evaluation mechanism relevant to learning to discover, although autonomous scientific investigation is not demonstrated.",
+      "id": "3c61df041ccddbc2",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.29552"
+        },
+        {
+          "label": "Project",
+          "url": "https://devinxzhang.github.io/Generalized-CycleGRPO-Page/"
         }
       ]
     },
@@ -4607,6 +4762,19 @@
       "id": "adee36916e192687"
     },
     {
+      "title": "Igor Kotenkov describes agent-assisted robotics-paper reproduction",
+      "url": "https://x.com/stalkermustang/status/2110837413551411231",
+      "published_at": "2026-10-15",
+      "kind": "x",
+      "summary": "Igor Kotenkov announces an effort combining frontier AI agents with robotics expertise and infrastructure to reproduce research claims through implementation, training, and real-robot evaluation. The quoted announcement says an agent was tasked with reproducing core claims from 10 recent papers, with humans reviewing and steering; successful reproduction is not established.",
+      "date_evidence": "Supplied primary-source DOM evidence identifies the original post's native time as 2026-10-15T20:57:11.000Z, matching the visible timestamp 4:57 PM · Oct 15, 2026.",
+      "relevance": "Concrete research harness connecting paper implementation, training and physical experiment evaluation.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "b6c7fb1a5b63d621"
+    },
+    {
       "title": "GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations",
       "url": "https://arxiv.org/abs/2610.22708",
       "published_at": "2026-10-15",
@@ -4763,12 +4931,13 @@
       "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery",
       "published_at": "2026-10-15",
       "kind": "blog",
-      "summary": "Google presents a researcher-guided workflow combining protein database searches, functional predictions, structural comparisons and literature checks. The identified antimicrobial peptide candidate is undergoing wet-lab validation.",
-      "date_evidence": "The primary article displays October 15, 2026.",
+      "summary": "Google DeepMind describes a researcher-guided Antigravity workflow that combines protein-function predictions, database searches, structural and genomic evidence, and literature review to prioritize antimicrobial peptide candidates and plan experiments. The authors report that selected candidates are undergoing wet-lab validation; antimicrobial activity remains unconfirmed.",
+      "date_evidence": "The [primary article](https://deepmind.google/blog/accelerating-antimicrobial-discovery/) displays October 15, 2026 above its title and byline.",
       "relevance": "Concrete discovery-agent workflow showing how human direction and multiple evidence sources guide candidate selection before experimental validation.",
       "review_status": "approved",
-      "source": "Codex source-checked",
-      "id": "3b88e63140868036"
+      "source": "Codex primary text-and-image checked",
+      "id": "3b88e63140868036",
+      "links": []
     },
     {
       "title": "When agents self-improve, what should persist?",
@@ -5380,7 +5549,7 @@
       ]
     },
     {
-      "title": "The Agentic Scientist: Orchestrating Coding Agents for Automated Scientific (Co-)Discovery",
+      "title": "The Agentic Scientist — paper linked by Sakana",
       "url": "https://arxiv.org/abs/2610.18933",
       "published_at": "2026-10-13",
       "kind": "paper",
@@ -10963,6 +11132,100 @@
   ],
   "paper_pages": [
     {
+      "title": "RynnUnify: Towards Unified Embodied Brain",
+      "url": "https://arxiv.org/abs/2610.32965",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "RynnUnify connects embodied understanding, video prediction, and robot action. An additional trained agent decides whether generating a hypothetical continuation will help answer a question about unseen states or interaction consequences.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history records v1 on October 23, 2026 at 17:54:07 UTC, also October 23 in America/New_York. This supersedes the supplied Hugging Face midnight timestamp and October 22 label. The manuscript's October 26 date is not the original submission date.",
+      "review_status": "approved",
+      "relevance": "The model learns to predict unobserved physical states and selectively use those predictions in reasoning. This directly contributes world representations and learned evidence-seeking behavior relevant to discovery.",
+      "id": "e0ce81ff789e9233",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.32965"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/alibaba-damo-academy/RynnUnify"
+        },
+        {
+          "label": "Project",
+          "url": "https://alibaba-damo-academy.github.io/RynnUnify.github.io"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-Base"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-Agentic-Reasoner"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-WAM-RoboCasa"
+        }
+      ]
+    },
+    {
+      "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
+      "url": "https://arxiv.org/abs/2610.32253",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "RSIHub separates agent-evolution policies from shared execution and measurement infrastructure. Researchers compose improvement methods through reusable operators while preserving candidate lineage, evaluation conditions, and held-out evidence.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on October 23, 2026 at 07:06:07 UTC, also October 23 in America/New_York. This agrees with the supplied corrected primary-source metadata and takes precedence over the manuscript's October 22 date.",
+      "review_status": "approved",
+      "relevance": "Its primary contribution is infrastructure for agent self-improvement with protected evaluation, retained experimental evidence, and attributable candidate histories. These directly support learning and verifying improvements in discovery agents.",
+      "id": "f17d395d9610cd5a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.32253"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/simple-agent-lab/RSIHub"
+        },
+        {
+          "label": "Project",
+          "url": "https://simpleagentlab.com/rsihub/"
+        }
+      ]
+    },
+    {
+      "title": "UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents",
+      "url": "https://arxiv.org/abs/2610.30932",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "UserArena pairs real shopping histories with an executable environment and evaluates simulator fidelity from valid actions through trajectories and population behavior to outcomes. It also tests whether simulated policy comparisons reproduce a production A/B result.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history records v1 on October 22, 2026 at 08:54:16 UTC, also October 22 in America/New_York. This supersedes the supplied Hugging Face midnight timestamp and October 21 label.",
+      "review_status": "approved",
+      "relevance": "The contribution evaluates whether learned interactive world models preserve long-horizon dynamics and reproduce a real intervention's effects. This provides a concrete protocol for verifying model-based knowledge used in agent experimentation, although its demonstrated scope is shopping behavior.",
+      "id": "fd33ef0d1dd90a8b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.30932"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/RecGPT-Team/UserArena"
+        },
+        {
+          "label": "Project",
+          "url": "https://recgpt-team.github.io/UserArena-Page"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/RecGPT-Team/UserArena/blob/main/data/sessions.jsonl"
+        }
+      ]
+    },
+    {
       "title": "RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention",
       "url": "https://arxiv.org/abs/2610.31372",
       "published_at": "2026-10-22",
@@ -12203,6 +12466,28 @@
         {
           "label": "Code",
           "url": "https://github.com/junha1125/LaLa-World"
+        }
+      ]
+    },
+    {
+      "title": "Generalized CycleGRPO for Fine-Grained Multimodal Understanding and Grounding",
+      "url": "https://arxiv.org/abs/2610.29552",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "Generalized CycleGRPO jointly trains visual description and localization through reciprocal reconstruction across image regions, video intervals, and timestamped spatial evidence. DOVE evaluates whether descriptions distinguish specific events from similar recurrences.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original-publication metadata records 2026-10-21T00:00:00.000Z, corroborated by the PDF's v1 date of 21 October 2026. The earlier ECCV formulation is a separate work, not this extension's publication date.",
+      "review_status": "approved",
+      "relevance": "The concrete discovery-training contribution is a generate-and-test learning loop: a model proposes semantic descriptions, tests them by reconstructing their evidence, and learns both proposal and verification mappings. This provides a grounded self-evaluation mechanism relevant to learning to discover, although autonomous scientific investigation is not demonstrated.",
+      "id": "3c61df041ccddbc2",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.29552"
+        },
+        {
+          "label": "Project",
+          "url": "https://devinxzhang.github.io/Generalized-CycleGRPO-Page/"
         }
       ]
     },
@@ -15707,7 +15992,7 @@
       ]
     },
     {
-      "title": "The Agentic Scientist: Orchestrating Coding Agents for Automated Scientific (Co-)Discovery",
+      "title": "The Agentic Scientist — paper linked by Sakana",
       "url": "https://arxiv.org/abs/2610.18933",
       "published_at": "2026-10-13",
       "kind": "paper",

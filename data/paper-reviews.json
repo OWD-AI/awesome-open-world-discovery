@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -20573,6 +20573,109 @@
           4,
           6,
           12
+        ]
+      }
+    },
+    "paper-e0ce81ff789e9233": {
+      "institutions": [
+        "DAMO Academy, Alibaba Group",
+        "Hupan Lab"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        14,
+        20,
+        27
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An 8B reasoner and 8B diffusion generator interact through joint attention. Training combines embodied supervision, cross-chunk scene memory, and conditioning on cached generated histories. Branch-Conditional Policy Optimization compares direct and generation-assisted answers to train reasoning and invocation decisions while freezing the generator. A separate action extension learns robot control from predictive features.",
+      "evidence": "The foundational reasoner averages 57.9 across ten embodied metrics, versus 53.2 for Cosmos 3 Nano, although RynnBrain scores higher overall. Rynn-VP improves from 45.05 to 54.80, below the composed system's 65.71. Agentic reasoning raises Rynn-GEU from 44.0 to 50.0. Robot success reaches 51.5% on 20 selected simulation tasks and 46.7% across three physical tasks.",
+      "discovery_use": "The model learns to predict unobserved physical states and selectively use those predictions in reasoning. This directly contributes world representations and learned evidence-seeking behavior relevant to discovery.",
+      "limits": "Generated continuations are model predictions rather than independent observations and can distort geometry, worsening some spatial tasks. Visual planning scores need broader validation against execution outcomes. Physical evaluation covers three tasks with 20 trials each. The supplied sections support a targeted methods, results, and limitations review; several benchmark-definition and detailed result pages were absent. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "causality",
+        "rationale": "The model learns to predict unobserved physical states and selectively use those predictions in reasoning. This directly contributes world representations and learned evidence-seeking behavior relevant to discovery.",
+        "pdf_sha256": "3ea54d3b38bef4a6e88dc9eb32e94034863f28314034951acfa6848f8e8dcc96",
+        "evidence_pages": [
+          1,
+          14,
+          20,
+          27
+        ]
+      }
+    },
+    "paper-f17d395d9610cd5a": {
+      "institutions": [
+        "University of California, Berkeley",
+        "University of Science and Technology of China",
+        "Douyin Group",
+        "Shanghai Jiao Tong University",
+        "Tongji University",
+        "Beijing Institute for General Artificial Intelligence",
+        "Simple Agent Lab"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Recipes declare operators and mutable resources within a seven-phase candidate lifecycle. Framework services enforce mutation boundaries, evaluate committed candidates, certify outcomes, and recover interrupted runs. Four policy adaptations are compared across MiniSWE and Codex on two benchmarks, with separate execution-fidelity controls and fault-injection trials.",
+      "evidence": "The largest overall gain is 13.5 percentage points for MiniSWE on Terminal Bench 2. Rankings change with agent and benchmark; some overall gains accompany sealed-task regressions. All 420 tested recovery and integrity trials satisfy their invariants. Four adaptations require no framework-source changes. Execution controls show variability and do not establish equivalence between direct and framework execution.",
+      "discovery_use": "Its primary contribution is infrastructure for agent self-improvement with protected evaluation, retained experimental evidence, and attributable candidate histories. These directly support learning and verifying improvements in discovery agents.",
+      "limits": "Evolution results use one evaluation per task and do not establish stability of close rankings. Experiments test fixed recipes; adaptive recipe revision by an outer agent remains unevaluated. Integrity depends on trusted framework, host, filesystem, and evaluator components and does not provide hostile-code containment. The first-party project page displays different result values from the supplied PDF; findings here follow the PDF. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "systems",
+        "rationale": "Its primary contribution is infrastructure for agent self-improvement with protected evaluation, retained experimental evidence, and attributable candidate histories. These directly support learning and verifying improvements in discovery agents.",
+        "pdf_sha256": "d16b71c14a1276b6faac00a307a6e7f2ce81ae93a5a7490b6a661879889d072d",
+        "evidence_pages": [
+          1,
+          5,
+          8,
+          10
+        ]
+      }
+    },
+    "paper-fd33ef0d1dd90a8b": {
+      "institutions": [
+        "Leiden University",
+        "Renmin University of China",
+        "Alibaba Group",
+        "Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        5,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The benchmark contains 64,729 sessions from 11,010 users, with user-disjoint splits and replay versus free-running rollout protocols. OPTD trains on student-generated response prefixes at logged real states. A frozen teacher receives abstract trajectory intent, with token-level trust-region constraints and a recorded-response grounding loss. Production validation compares the same ranking-policy pair using a fixed simulated user pool.",
+      "evidence": "OPTD leads all eight single-session behavioral metrics and five of eight cross-session metrics. Its simulated production effect is 0.713 times the observed effect, giving the lowest reported effect error of 0.287. It still underestimates the effect by 28.7%. The inspected official repository provides code and identifies a 535-session held-out evaluation set; that does not establish release of the complete reported corpus.",
+      "discovery_use": "The contribution evaluates whether learned interactive world models preserve long-horizon dynamics and reproduce a real intervention's effects. This provides a concrete protocol for verifying model-based knowledge used in agent experimentation, although its demonstrated scope is shopping behavior.",
+      "limits": "Production validation covers one policy pair on one platform, without reported uncertainty establishing broader intervention fidelity. Training samples response continuations at logged states rather than fully student-induced environment trajectories. Sequential metrics include aggregate decision distributions and mean lengths, which cannot establish complete trajectory equivalence. Rollouts are capped, the data are category-imbalanced, and broader scientific discovery transfer is inferred rather than tested. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "benchmarks",
+        "rationale": "The contribution evaluates whether learned interactive world models preserve long-horizon dynamics and reproduce a real intervention's effects. This provides a concrete protocol for verifying model-based knowledge used in agent experimentation, although its demonstrated scope is shopping behavior.",
+        "pdf_sha256": "8fbb1d04a63692f064a5f8363cd487c865e1cd3c76f949d844f20ebf0cd751f1",
+        "evidence_pages": [
+          1,
+          3,
+          5,
+          20
         ]
       }
     }

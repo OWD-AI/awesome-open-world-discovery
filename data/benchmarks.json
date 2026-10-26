@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -2468,6 +2468,29 @@
       "name": "SEAR: Self-Evolving Agentic Robotics",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.18792"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 states that code and data are available.",
+        "Page 10 states that the dataset is released for non-commercial research under a data use agreement prohibiting re-identification, external personal-data linkage, and unauthorized redistribution.",
+        "Completeness of the public corpus release is not established by the supplied pages."
+      ],
+      "focus": "Evaluate shopping-user simulator fidelity using recorded human trajectories and an executable reconstruction of shopping interfaces. Replay predicts actions at logged states; Rollout executes simulated actions to advance reconstructed states. Learned user responses are model outputs. Production validation compares offline simulated ranking-policy effects with recorded production A/B outcomes. These are shopping simulations and recorded behavioral data, rather than executed scientific research experiments or new physical measurements.",
+      "limits": "The benchmark reconstructs feeds and item pages from pre-rendered views and recorded product content. Production validation covers one ranking-policy pair with a fixed simulated user pool and catalog; broader intervention fidelity and uncertainty are not established. Aggregate trajectory metrics do not establish complete trajectory equivalence. Rollouts are capped at 31 actions for single-session and 42 for cross-session evaluation. New live production experiments performed by the benchmark evaluation are not established.",
+      "training": {
+        "reward": "OPTD uses dense token-level targets from a frozen SFT teacher, rather than a scalar environment reward. Training minimizes generalized Jensen–Shannon divergence to trust-region-constrained teacher distributions plus recorded-response negative log-likelihood, with grounding weight 0.1. Responses are sampled at logged real states. Evaluation measures action validity, next-action agreement, sequential distributions and mean lengths, population fidelity, aggregate outcomes, and agreement with recorded production A/B effects.",
+        "reset": "Page 18 establishes independent reconstruction of each logged state for Replay and a shared initial context for Rollout. Arbitrary checkpoint restoration or a general reset API is not established.",
+        "branching": "Page 3 allows actions beyond the logged path, including clicking exposed items that the real user did not click. Rollout advances according to accepted actions. Snapshot cloning, explicit branch management, and restoration to explore multiple continuations from an arbitrary state are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-fd33ef0d1dd90a8b",
+      "resource_id": "paper-fd33ef0d1dd90a8b",
+      "name": "UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.30932"
     }
   ]
 }

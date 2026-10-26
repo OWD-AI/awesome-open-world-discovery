@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-620-2563eb?style=flat-square" alt="620 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-110-0f766e?style=flat-square" alt="110 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-623-2563eb?style=flat-square" alt="623 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-111-0f766e?style=flat-square" alt="111 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -20,7 +20,7 @@
   <a href="https://owd-ai.github.io/awesome-open-world-discovery/">Research observatory ↗</a> · <a href="#what-is-owd">What is OWD?</a> · <a href="#why-owd">Why this focus?</a> · <a href="#updates">Latest papers</a> · <a href="#contents">Browse the list</a> · <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
-<p align="center"><sub>Literature checked through 2026-10-25 · Papers, author blogs, code, and benchmarks</sub></p>
+<p align="center"><sub>Literature checked through 2026-10-26 · Papers, author blogs, code, and benchmarks</sub></p>
 
 <a id="what-is-owd"></a>
 
@@ -54,12 +54,15 @@ Discovery involves deciding what to investigate, gathering evidence, testing exp
 
 **[Explore the research observatory →](https://owd-ai.github.io/awesome-open-world-discovery/#updates)**
 
-The latest 10 source-checked papers from our daily monitor · Updated 2026-10-25.
+The latest 10 source-checked papers from our daily monitor · Updated 2026-10-26.
 
 Visit the website for summaries, figures, today's updates, and the full research library.
 
 | Date | Paper |
 | --- | --- |
+| 2026-10-23 | [RynnUnify: Towards Unified Embodied Brain](https://arxiv.org/abs/2610.32965) |
+| 2026-10-23 | [RSIHub: A Composable Framework for Agent-Evolution Methods](https://arxiv.org/abs/2610.32253) |
+| 2026-10-22 | [UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents](https://arxiv.org/abs/2610.30932) |
 | 2026-10-22 | [RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention](https://arxiv.org/abs/2610.31372) |
 | 2026-10-22 | [Large Language Models Meet Bayesian Optimization: Towards Self-evolving Wireless Digital Twins](https://arxiv.org/abs/2610.31192) |
 | 2026-10-22 | [Inherited, Not Invented: Tracing the Provenance of Wait in Reasoning Models](https://arxiv.org/abs/2610.30882) |
@@ -67,9 +70,6 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-10-22 | [Co-Recursive Semantic Self-Extension: A Mathematical Foundation for Open-Ended Intelligence](https://arxiv.org/abs/2610.31097) |
 | 2026-10-22 | [CellTrack-Bench: Microscopic Cell Tracking Benchmark for Vision-Language Models](https://arxiv.org/abs/2610.31566) |
 | 2026-10-22 | [ADAPT for Science: A Multi-Agent System for Self-Evolving Scientific Optimization](https://arxiv.org/abs/2610.30851) |
-| 2026-10-21 | [WeVisOne-VL: Unified Visual Perception from Objects to Pixels](https://arxiv.org/abs/2610.31329) |
-| 2026-10-21 | [VX-One: Typed, Calibrated Decision Heads for Real-Time Perimeter Triage - An empirical study of unknown-attack honesty, cascade gray zones, and calibration under drift](https://arxiv.org/abs/2610.30090) |
-| 2026-10-21 | [Toward Recursive Self-Improvement in Physical AI](https://arxiv.org/abs/2610.29677) |
 
 <a id="contents"></a>
 
@@ -78,13 +78,13 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 36 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 68 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 69 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 53 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 95 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 92 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 109 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 110 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 66 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 101 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 102 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -276,6 +276,8 @@ Each work appears once under its primary contribution; see the [classification g
   Jiaming Zhang et al. · Nanyang Technological University; Institute of Science Tokyo; Sony AI
 - <a id="paper-9a7fdd3c6dd57014"></a>**Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26855)* · [Paper](https://arxiv.org/abs/2610.26855) · [Project](https://ropedia.github.io/ropedia-w0/) · [Code](https://github.com/Ropedia/ropedia-w0) · [HF Model](https://huggingface.co/ropedia-ai/Ropedia-W0)<br>
   Tianqi Liu et al. · Nanyang Technological University; Ropedia; Duke University; +2 institutions
+- <a id="paper-e0ce81ff789e9233"></a>**RynnUnify: Towards Unified Embodied Brain** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32965)* · [Paper](https://arxiv.org/abs/2610.32965) · [Code](https://github.com/alibaba-damo-academy/RynnUnify) · [Project](https://alibaba-damo-academy.github.io/RynnUnify.github.io) · [HF Model](https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-Base) · [HF Model](https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-Agentic-Reasoner) · [HF Model](https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-WAM-RoboCasa)<br>
+  Minghao Zhu et al. · DAMO Academy, Alibaba Group; Hupan Lab
 - <a id="paper-a293907f11982b44"></a>**Sample Dependence-Aware Blind Source Separation for Linear Causal Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06656)* · [Paper](https://arxiv.org/abs/2610.06656)<br>
   Cihan Eralp Kumbasar, Emin Erdem Kumbasar, T¨ulay Adali · University of Maryland Baltimore County
 - <a id="paper-3d80f1abd6ff2ffd"></a>**ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.25690)* · [Paper](https://arxiv.org/abs/2610.25690) · [Project](https://zju3dv.github.io/ScaleNav/) · [Code](https://github.com/MachEmbodied/ScaleNav)<br>
@@ -1092,6 +1094,8 @@ Each work appears once under its primary contribution; see the [classification g
   Xiaohan Wang et al. · Nanyang Technological University; Huazhong University of Science and Technology; University of Illinois Urbana-Champaign
 - <a id="paper-5946c006a4e58dd8"></a>**RSIGym: A Flexible Environment for Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.10310)* · [Paper](https://arxiv.org/abs/2610.10310) · [Code](https://github.com/evolvent-ai/RSIGym) · [Project](https://rsi-index.ai/)<br>
   Fanqing Meng et al. · Evolvent AI; National University of Singapore
+- <a id="paper-f17d395d9610cd5a"></a>**RSIHub: A Composable Framework for Agent-Evolution Methods** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32253)* · [Paper](https://arxiv.org/abs/2610.32253) · [Code](https://github.com/simple-agent-lab/RSIHub) · [Project](https://simpleagentlab.com/rsihub/)<br>
+  Zimu Wang et al. · University of California, Berkeley; University of Science and Technology of China; Douyin Group; +4 institutions
 - <a id="paper-09c8b51fd5a44907"></a>**S-Agent 2.0: Spatial Reasoning with a General Coding Agent** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28354)* · [Paper](https://arxiv.org/abs/2610.28354) · [Project](https://ropedia.github.io/S-Agent-2.0) · [Code](https://github.com/Ropedia/S-Agent-2.0)<br>
   Rui Gong et al. · Nanyang Technological University; University of Hong Kong; Ropedia
 - <a id="paper-029806d18c63cad7"></a>**Same Simulation, Different Evidence: Where Retrieved Tool Output Costs LLM Agents Accuracy** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26836)* · [Paper](https://arxiv.org/abs/2610.26836) · [Code](https://github.com/grenadeComing/same-simulation-different-evidence) · [Dataset](https://huggingface.co/datasets/grenadeComing/same-simulation-different-evidence)<br>
@@ -1505,6 +1509,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Xinyi Gao et al. · University of Chinese Academy of Sciences; Alibaba Group; Tsinghua University
 - <a id="paper-f56bdaf671cb8be4"></a>**The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.25804)* · [Paper](https://arxiv.org/abs/2609.25804) · [Code](https://github.com/wbopan/tastebench) · [Dataset](https://huggingface.co/datasets/wenbopan/taste-bench)<br>
   Wenbo Pan et al. · City University of Hong Kong; Independent Researcher; Microsoft
+- <a id="paper-fd33ef0d1dd90a8b"></a>**UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30932)* · [Paper](https://arxiv.org/abs/2610.30932) · [Code](https://github.com/RecGPT-Team/UserArena) · [Project](https://recgpt-team.github.io/UserArena-Page) · [Dataset](https://github.com/RecGPT-Team/UserArena/blob/main/data/sessions.jsonl)<br>
+  Jujia Zhao et al. · Leiden University; Renmin University of China; Alibaba Group; +1 institutions
 - <a id="paper-644098a7aa74502f"></a>**VerifierBench: Benchmarking the Generation of Executable Verifiers for LLM Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28679)* · [Paper](https://arxiv.org/abs/2610.28679) · [Project](https://verifierbench.github.io/) · [Dataset](https://huggingface.co/datasets/Catherine1213/VerifierBench) · [Code](https://github.com/DwanZhang-AI/verifier-suite)<br>
   Jianing Yin et al. · University of Pennsylvania; University of Illinois at Urbana-Champaign; University of California, Berkeley; +2 institutions
 - <a id="paper-282f8f39baa392ae"></a>**VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26342)* · [Paper](https://arxiv.org/abs/2610.26342)<br>
