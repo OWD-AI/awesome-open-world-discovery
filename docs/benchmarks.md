@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**114 usage profiles** · Updated **2026-10-26**
+**115 usage profiles** · Updated **2026-10-26**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -710,6 +710,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks](#paper-f56bdaf671cb8be4) | Real data | Offline data | Paper-described |
 | [UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents](#paper-fd33ef0d1dd90a8b) | Real data | Interactive simulator | Paper-described |
 | [PaperScorer: How Predictable Is Paper Acceptance?](#paper-f99b7ad173e24ad2) | Real data | Data analysis | Paper-described |
+| [RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation](#paper-35b9a7f119c042ee) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1766,6 +1767,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Primary training is supervised prediction of Accept or Reject. GRPO variants receive 0.8 for matching the dataset decision plus 0.2 for the required reasoning-and-answer format, using within-group relative rewards without a learned reward model. Accuracy and AUC are the primary evaluation metrics. |
 | Reset | Coding-agent runs receive isolated paper workspaces. A stateful environment reset API is not established; ordinary prediction examples are independent fixed inputs. |
 | Branching | GRPO samples a group of completions for each paper. Environment cloning, rollback, or branching scientific experiments is not established. |
+
+</details>
+
+<a id="paper-35b9a7f119c042ee"></a>
+
+<details>
+<summary>RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation — details</summary>
+
+[Work](../README.md#paper-35b9a7f119c042ee) · [Source](https://arxiv.org/pdf/2610.27782)
+
+**Focus:** Offline agreement between video judges and expert-adjudicated human ratings on 800 generated embodied-manipulation videos. Physical Adherence and Instruction Alignment receive separate 1–5 scores. General and embodied models inspect fixed videos sampled at 4 fps, with at most 32 frames, and return reasoning and scores. Primary evaluation is Pearson correlation with human ratings; exact-match accuracy and mean squared error are also reported (pages 4–6 and 18–20).
+
+**Openness:** `A project page is listed on page 1. Availability of downloadable benchmark data, training data, code, and weights is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** Feedback consists of recorded human annotations on generated videos. Initial frames and instructions come from seven real-world corpora and one simulated corpus; this does not provide an interactive simulator or new physical measurements. Training additionally includes 831 recorded real demonstrations. Online rollout selection and agentic video generation are proposed applications, not established benchmark interactions. The benchmark evaluates video judgment rather than executed research experiments (pages 5, 9 and 25).
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | SFT uses human-verified PA/IA scores and model-assisted reasoning traces from a separate set of 12,351 videos. GRPO then assigns reward 1 when a predicted score exactly matches its reference and 0 otherwise, training for 200 steps. Evaluation compares predictions with expert-adjudicated human ratings using Pearson correlation, exact-match accuracy and mean squared error (pages 5–6). |
+| Reset | Environment reset support is not established. The described interface supplies fixed videos and prompts rather than a controllable physical or simulated state. |
+| Branching | Environment-state branching support is not established. GRPO samples eight completions per prompt, but this is response sampling over fixed video inputs; no state snapshot or counterfactual execution interface is described (page 30). |
 
 </details>
 

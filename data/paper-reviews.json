@@ -20986,6 +20986,171 @@
           13
         ]
       }
+    },
+    "paper-196c956b69f1a6ef": {
+      "institutions": [
+        "Google",
+        "Ulm University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Checks candidate answers in fresh and paraphrased contexts, removes questions already solved consistently, and trains on student-generated trajectories using bounded divergence against a privileged EMA teacher. Visual OPST adds unlabeled images and augmentation-based consistency checks.",
+      "evidence": "Gemma E2B gains 10.2 MMLU points without thinking and 8.2 GSM8K points with thinking. Combined visual privileged information improves E2B VQAv2 by 6.9 points. Matched-data comparisons favor OPST over SFT and GRPO. Qwen3-4B-Base improves its four-benchmark average by 6.0 points.",
+      "discovery_use": "Directly studies iterative self-improvement through model-generated problems, an evolving curriculum, intrinsic filtering, and self-distillation. These mechanisms concretely address learning to formulate and solve new investigations.",
+      "limits": "Self-consistency cannot establish correctness or add genuinely external knowledge. Topics are hand-chosen and models are small. Retention is imperfect: the three-domain mixture loses 4.9 MATH-500 points. MMLU peaks after seven rounds and declines with further rounds. Results evaluate the EMA teacher. Visual training requires images. No first-party release was verified within the search budget.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "open_ended",
+        "rationale": "Directly studies iterative self-improvement through model-generated problems, an evolving curriculum, intrinsic filtering, and self-distillation. These mechanisms concretely address learning to formulate and solve new investigations.",
+        "pdf_sha256": "7a1a8c4f93ab585c0920dbe84a929bf3ba83ab477a4f09fe46d1f4b35ccc3905",
+        "evidence_pages": [
+          1,
+          4,
+          7,
+          10
+        ]
+      }
+    },
+    "paper-080ac6ed1ce6901d": {
+      "institutions": [
+        "Zhejiang University",
+        "Ant Group, AFu Team",
+        "Shanghai Jiao Tong University",
+        "Tongji University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        9,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Cleans open datasets, routes difficult examples through increasingly strong teachers, selects correct trajectories by answer likelihood, and identifies scale-specific RL frontier samples. Analytical and real-world specialists train with GSPO, then supervise student-generated prefixes through routed top-32-token distillation.",
+      "evidence": "Across 15 benchmarks, 4B and 9B models average 72.8 and 74.4. Expert integration improves SFT averages by 2.0 and 2.1 points. Selected MOPD variants exceed mixed-domain RL and improve every benchmark over SFT. The 9B model matches full-data SFT performance using the 124K subset.",
+      "discovery_use": "Provides concrete training methods for scientific, mathematical, chart, and grounded visual reasoning, including verified trajectory selection, capability-frontier sampling, and integration of complementary experts. These support learning capabilities needed for discovery.",
+      "limits": "Evaluation concerns existing answerable tasks, without demonstrating autonomous scientific discovery. Model judges provide verification rather than formal correctness guarantees. Data-size studies also vary teacher source and difficulty, confounding isolated scale effects. Gains over corresponding thinking models are modest, especially at 9B. The supplied pages support targeted body review, not exhaustive appendix inspection. Datasets are verified; model records appear in the official collection, but checkpoint contents could not be inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "learning",
+        "rationale": "Provides concrete training methods for scientific, mathematical, chart, and grounded visual reasoning, including verified trajectory selection, capability-frontier sampling, and integration of complementary experts. These support learning capabilities needed for discovery.",
+        "pdf_sha256": "e7e1c763545a0b9b0db9b420e6d28cae28a96d3992bd9ed04b89733eb97c6afa",
+        "evidence_pages": [
+          1,
+          7,
+          9,
+          15
+        ]
+      }
+    },
+    "paper-35b9a7f119c042ee": {
+      "institutions": [
+        "The Chinese University of Hong Kong",
+        "Westlake University",
+        "Northeastern University",
+        "University of California, San Diego",
+        "Zhejiang University",
+        "Independent"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        27
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The benchmark contains 800 videos from eight corpora and ten generators, with cross-reviewed, expert-adjudicated ratings on two axes. Comparisons cover 29 model judges and eight non-MLLM metrics. A Qwen3.5-9B judge receives SFT and GRPO training on 12,351 separate videos with human-verified scores and model-assisted rationales.",
+      "evidence": "Overall Pearson correlation reaches 0.719 versus 0.630 for the strongest baseline, with bootstrap improvement interval [0.061, 0.119]. Physical Adherence reaches 0.645 and Instruction Alignment 0.775. SFT supplies most gains; RL raises overall correlation from 0.700 to 0.719. External benchmark performance improves over the base model.",
+      "discovery_use": "RoboJudge evaluates whether automated judges can verify physical validity and task completion in embodied world-model predictions. Reliable assessment of imagined outcomes is a concrete prerequisite for agents using world models to investigate and plan.",
+      "limits": "The Physical Adherence advantage has interval [-0.011, 0.078], which includes zero. Exact score agreement remains 47.3% overall. Data emphasize indoor manipulation, and training labels may inherit model-assisted annotation biases. Physion-Eval performance declines from SFT to SFT+RL. Online rollout selection and improved agent planning remain proposed applications. Only two representative pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "benchmarks",
+        "rationale": "RoboJudge evaluates whether automated judges can verify physical validity and task completion in embodied world-model predictions. Reliable assessment of imagined outcomes is a concrete prerequisite for agents using world models to investigate and plan.",
+        "pdf_sha256": "c40c22115065dd520c52143572f88c49269ebf3fbe7d6443d33c201b9b89d923",
+        "evidence_pages": [
+          1,
+          5,
+          27
+        ]
+      }
+    },
+    "paper-572a65a52169b4df": {
+      "institutions": [
+        "Alibaba Group",
+        "Zhejiang University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "First train a Searcher–Answerer teacher using answer correctness. Freeze it and score searcher-generated tokens under the student's own subtask histories. Teacher–student log-probability differences provide searcher advantages, while group-relative outcome advantages train the Leader and Answerer. Evaluation uses Qwen3-4B, one fixed retriever, 5,000 questions across seven datasets, and four independent attempts per question.",
+      "evidence": "Macro avg@4 reaches 38.68%, versus 34.62% for Prompted Critic and 36.07% for the trained cascaded system; paired question-bootstrap intervals exclude zero. Macro pass@4 reaches 48.73%. Replacing searcher distillation with outcome-only training produces no recorded searches in the evaluated checkpoint and reduces avg@4 to 17.78%. The full method also uses more searches and input tokens.",
+      "discovery_use": "Directly improves how cooperating agents learn to acquire, summarize, and combine evidence. Its concrete discovery connection is training delegated search behavior and coordination, although evaluation covers factual question answering rather than original scientific discoveries.",
+      "limits": "Evidence concerns fixed English QA benchmarks, one backbone, and retained checkpoints. Bootstrap intervals do not measure training-seed variation; external search-agent comparisons lack paired records. Retrieval and token budgets are unmatched. Teacher preferences do not establish causal credit or source-supported answers. Historical learning curves were digitized and smoothed. No first-party release destination was verified; the supplied DrMAS project belongs to a cited baseline. Only supplied pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "learning",
+        "rationale": "Directly improves how cooperating agents learn to acquire, summarize, and combine evidence. Its concrete discovery connection is training delegated search behavior and coordination, although evaluation covers factual question answering rather than original scientific discoveries.",
+        "pdf_sha256": "c5bb2c71c8d122790494d4f6b334bc524590eef0023085f737016b11feadf4dd",
+        "evidence_pages": [
+          1,
+          4,
+          11
+        ]
+      }
+    },
+    "paper-081d2afb18f35c00": {
+      "institutions": [
+        "University of Georgia",
+        "Michigan State University",
+        "Georgia Institute of Technology",
+        "Amazon",
+        "Adobe Systems",
+        "PNNL",
+        "Texas A&M University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Construct finite schema-valid rule sets and use constrained graph traversal to obtain candidates. Lightweight retrievers combine path-level BM25 features with rule embeddings. Alternate retriever training on router-assigned queries with router updates from reciprocal-rank feedback. Compare BERT and LLM classifiers with a generative GRPO router over three STaRK datasets.",
+      "evidence": "CoRE-BERT-C achieves average Hits@1 of 54.47% and MRR of 65.97%, versus MoR's 48.93% and 58.77%. Removing retriever adaptation reduces MRR to 58.87%; fixed routers perform substantially worse. Generative routers transfer across datasets when paired with trained target-domain retrievers, although classifiers perform better overall. Multi-domain pretraining followed by target-specific fine-tuning improves generative routing overall.",
+      "discovery_use": "Learns evidence-seeking structural strategies from retrieval outcomes and jointly adapts the agent's retrieval tool. Scientific-literature and biomedical graph evaluations provide a concrete connection to learning how to find research evidence.",
+      "limits": "The system selects from predefined rules and requires query–evidence supervision; automatic rule invention remains future work. Transfer retains trained target-domain retrievers. PRIME generative training additionally uses filtered teacher demonstrations. The appendix describes hard-target BERT training, while the main formulation emphasizes expected-advantage optimization, leaving implementation ambiguity. Some baseline averages cover fewer datasets, and training-seed uncertainty is not established. The supplied API check verifies the author-linked repository despite web-reader failure. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "learning",
+        "rationale": "Learns evidence-seeking structural strategies from retrieval outcomes and jointly adapts the agent's retrieval tool. Scientific-literature and biomedical graph evaluations provide a concrete connection to learning how to find research evidence.",
+        "pdf_sha256": "858b142cedffe17349f3ca76357f7330e950b3c838e649af13096d9b7f8bf283",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
     }
   }
 }

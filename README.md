@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-632-2563eb?style=flat-square" alt="632 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-114-0f766e?style=flat-square" alt="114 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-637-2563eb?style=flat-square" alt="637 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-115-0f766e?style=flat-square" alt="115 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -65,11 +65,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-10-23 | [RSIHub: A Composable Framework for Agent-Evolution Methods](https://arxiv.org/abs/2610.32253) |
 | 2026-10-23 | [Principia: Test-Time Hypotheses to Principle Construction for Scientific Discovery](https://arxiv.org/abs/2610.32195) |
 | 2026-10-23 | [POSEIDON: Scaling Training Environments for Scientific Agents from Code Repositories](https://arxiv.org/abs/2610.32448) |
+| 2026-10-23 | [On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models](https://arxiv.org/abs/2610.32770) |
 | 2026-10-23 | [HarnessMM: Recursive Self-Improvement for Harness Token Efficiency](https://arxiv.org/abs/2610.32813) |
 | 2026-10-22 | [UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents](https://arxiv.org/abs/2610.30932) |
 | 2026-10-22 | [RSI-Opt: Recursive Self-Improvement Optimizer Agents For Model Training](https://arxiv.org/abs/2610.32026) |
 | 2026-10-22 | [RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention](https://arxiv.org/abs/2610.31372) |
-| 2026-10-22 | [PaperScorer: How Predictable Is Paper Acceptance?](https://arxiv.org/abs/2610.31791) |
 
 <a id="contents"></a>
 
@@ -80,11 +80,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 36 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 69 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 54 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 96 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 99 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 94 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 111 |
-| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 67 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 105 |
+| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 68 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 106 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -527,6 +527,8 @@ Each work appears once under its primary contribution; see the [classification g
   Wenkai Li, Wenyi Hong, Zhuoyi Yang, Jie Tang · Tsinghua University; Z.AI
 - <a id="h04"></a>**CHART: A Harness-Rotation Curriculum for Harness-Robust Search Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.22247)* · [Paper](https://arxiv.org/abs/2609.22247)<br>
   Xinlu Zhang et al. · Amazon
+- <a id="paper-081d2afb18f35c00"></a>**Co-adaptive Rule Routing and Constraining for Structured Knowledge Retrieval** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.14465)* · [Paper](https://arxiv.org/abs/2610.14465) · [Code](https://github.com/charlieqi02/Co-Adaptive-Rule-Routing-and-Constraining-Retrieval-)<br>
+  Zhisheng Qi et al. · University of Georgia; Michigan State University; Georgia Institute of Technology; +4 institutions
 - <a id="paper-127deb898376f43f"></a>**Co-Evolving Acting and Forecasting for Language Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.20597)* · [Paper](https://arxiv.org/abs/2610.20597) · [Code](https://github.com/ulab-uiuc/CoPE)<br>
   Haofei Yu et al. · University of Illinois Urbana-Champaign; University of California San Diego; Meta AI
 - <a id="paper-548da90a5e9c3395"></a>**COEVO: Co-Evolving Context and Parameters for Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.33398)* · [Paper](https://arxiv.org/abs/2609.33398)<br>
@@ -599,6 +601,10 @@ Each work appears once under its primary contribution; see the [classification g
   Sizhe Tang, Zuyuan Zhang, Zeyu Fang, Tian Lan · George Washington University
 - <a id="paper-03627392f7accc23"></a>**MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22344)* · [Paper](https://arxiv.org/abs/2610.22344) · [Code](https://github.com/InternScience/MLExpert) · [HF Model](https://huggingface.co/InternScience/MLExpert)<br>
   Shangheng Du et al. · East China Normal University; Shanghai Artificial Intelligence Laboratory
+- <a id="paper-080ac6ed1ce6901d"></a>**MMVistaReason: Toward Open-Data and Post-Training Recipes for Multimodal Reasoning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.01352)* · [Paper](https://arxiv.org/abs/2610.01352) · [Code](https://github.com/JackieForest/MMVistaReason) · [Dataset](https://huggingface.co/datasets/JackieLin0123/MMVistaReason-SFT-528K) · [Dataset](https://huggingface.co/datasets/JackieLin0123/MMVistaReason-RL-63K)<br>
+  Juekai Lin et al. · Zhejiang University; Ant Group, AFu Team; Shanghai Jiao Tong University; +1 institutions
+- <a id="paper-572a65a52169b4df"></a>**MultiAgent-OPD: End-to-End Training of Hierarchical Multi-Agent Systems with On-Policy Distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23234)* · [Paper](https://arxiv.org/abs/2610.23234)<br>
+  Yuhan Sun et al. · Alibaba Group; Zhejiang University
 - <a id="paper-2d09cb91206e5f2c"></a>**Muse Glimmer 30B: An On-Device Agentic Model** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24628)* · [Paper](https://arxiv.org/abs/2610.24628) · [HF Model](https://huggingface.co/meta-models/Muse-Glimmer-30B)<br>
   Muse Glimmer team et al. · Meta Superintelligence Labs
 - <a id="paper-f2d49208f39c3a48"></a>**My FAULT: Self-Diagnosis as Credit Assignment in Self-Evolving Agentic Reinforcement Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.01161)* · [Paper](https://arxiv.org/abs/2610.01161)<br>
@@ -1258,6 +1264,8 @@ Each work appears once under its primary contribution; see the [classification g
   Xilin Dang et al. · The Chinese University of Hong Kong; Zhongshan Hospital; Fudan University; +3 institutions
 - <a id="paper-bc10433cad9d513d"></a>**MetaShare: Failure-Aware Collective Self-Improvement for Open-Ended Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21887)* · [Paper](https://arxiv.org/abs/2610.21887)<br>
   Vishal Bhutani, Prasang Gupta, Sumanth Chundru, Kevin Paul · PricewaterhouseCoopers (PwC)
+- <a id="paper-196c956b69f1a6ef"></a>**On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32770)* · [Paper](https://arxiv.org/abs/2610.32770)<br>
+  Leon Sick et al. · Google; Ulm University
 - <a id="paper-d94a846ad662e4ea"></a>**Predict Before You Modify: Learning Improvement Dynamics for Self-Evolving Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.13991)* · [Paper](https://arxiv.org/abs/2610.13991)<br>
   Zixuan Xie, Chang Xu, Yuhua Jiang, Li Zhao · University of Virginia; Microsoft Research; Tsinghua University
 - <a id="paper-8986b52e03245503"></a>**QD-Rec: Open-Ended Evolution of Recommendations via Quality-Diversity** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23470)* · [Paper](https://arxiv.org/abs/2610.23470) · [Code](https://github.com/SakanaAI/QD-Rec) · [Project](https://pub.sakana.ai/qd-rec/)<br>
@@ -1491,6 +1499,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Ido Levy, Segev Shlomov, Leshem Choshen · IBM; Weizmann Institute of Science
 - <a id="paper-3e1c96441442a7d4"></a>**Reward Hacking Challenges Oversight of Autonomous Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.28614)* · [Paper](https://arxiv.org/abs/2609.28614)<br>
   Yue Huang et al. · Bake AI; University of Notre Dame; LMU Munich; +7 institutions
+- <a id="paper-35b9a7f119c042ee"></a>**RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27782)* · [Paper](https://arxiv.org/abs/2610.27782) · [Project](https://spherelab.ai/RoboJudge/) · [Code](https://github.com/Sphere-AI-Lab/RoboJudge)<br>
+  Siyuan Ma et al. · The Chinese University of Hong Kong; Westlake University; Northeastern University; +3 institutions
 - <a id="paper-b92b08173531b188"></a>**RSI-Forge: From Research Papers to Environments for Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.09426)* · [Paper](https://arxiv.org/abs/2610.09426)<br>
   Renxiong Wang et al. · Scale AI; University of California, Santa Cruz; University of North Carolina at Chapel Hill
 - <a id="paper-f73eeee30c4bf920"></a>**Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21082)* · [Paper](https://arxiv.org/abs/2610.21082) · [Code](https://github.com/AutoResearch-Factory/SciPIvot) · [Project](https://autoresearch-factory.github.io/SciPIvot/) · [Dataset](https://huggingface.co/datasets/sun1245/SciPIvot)<br>

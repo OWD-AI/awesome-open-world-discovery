@@ -2558,6 +2558,27 @@
       "name": "Dual Exam: Controlled Evaluation of Multimodal Agents and World Models",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.31066"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "A project page is listed on page 1. Availability of downloadable benchmark data, training data, code, and weights is not established by the supplied pages."
+      ],
+      "focus": "Offline agreement between video judges and expert-adjudicated human ratings on 800 generated embodied-manipulation videos. Physical Adherence and Instruction Alignment receive separate 1–5 scores. General and embodied models inspect fixed videos sampled at 4 fps, with at most 32 frames, and return reasoning and scores. Primary evaluation is Pearson correlation with human ratings; exact-match accuracy and mean squared error are also reported (pages 4–6 and 18–20).",
+      "limits": "Feedback consists of recorded human annotations on generated videos. Initial frames and instructions come from seven real-world corpora and one simulated corpus; this does not provide an interactive simulator or new physical measurements. Training additionally includes 831 recorded real demonstrations. Online rollout selection and agentic video generation are proposed applications, not established benchmark interactions. The benchmark evaluates video judgment rather than executed research experiments (pages 5, 9 and 25).",
+      "training": {
+        "reward": "SFT uses human-verified PA/IA scores and model-assisted reasoning traces from a separate set of 12,351 videos. GRPO then assigns reward 1 when a predicted score exactly matches its reference and 0 otherwise, training for 200 steps. Evaluation compares predictions with expert-adjudicated human ratings using Pearson correlation, exact-match accuracy and mean squared error (pages 5–6).",
+        "reset": "Environment reset support is not established. The described interface supplies fixed videos and prompts rather than a controllable physical or simulated state.",
+        "branching": "Environment-state branching support is not established. GRPO samples eight completions per prompt, but this is response sampling over fixed video inputs; no state snapshot or counterfactual execution interface is described (page 30)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-35b9a7f119c042ee",
+      "resource_id": "paper-35b9a7f119c042ee",
+      "name": "RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.27782"
     }
   ]
 }
