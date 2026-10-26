@@ -20678,6 +20678,314 @@
           20
         ]
       }
+    },
+    "paper-ff06580726cc267c": {
+      "institutions": [
+        "University of Chinese Academy of Sciences",
+        "Institute of Software, Chinese Academy of Sciences",
+        "AI Data, Alibaba Group",
+        "Qwen Team, Alibaba Group",
+        "Zhejiang University",
+        "The Hong Kong University of Science and Technology",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Experts construct containerized tasks, reference solutions, hidden programmatic checks, and weighted reporting rubrics. Ten models run three times per task through a common harness. Evaluation combines executable checks with LLM judgments and rescores intermediate workspace snapshots. Additional experiments examine harness and reasoning-effort sensitivity.",
+      "evidence": "GPT-6 Astra scores 80.9 overall, but only 26.0% of runs reach the 0.95 threshold. Reporting and execution frequently diverge. Early progress does not guarantee stability: GPT-5.6 Sol reaches useful states early but regresses more than GPT-6 Astra. Harness choice materially changes some models’ measured performance.",
+      "discovery_use": "Directly evaluates scientific agents’ ability to execute analyses, support scientific claims, and preserve verified results during research workflows.",
+      "limits": "The finite, controlled tasks assess standardized general-purpose agents rather than unrestricted autonomous research. Reporting scores depend on an LLM judge and chosen rubric weights. Harness comparisons use different clean-task subsets and therefore do not isolate causal harness effects. Snapshot timing affects opportunities to observe regressions. The author-listed repository returned 404, so a public code or dataset release could not be verified. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates scientific agents’ ability to execute analyses, support scientific claims, and preserve verified results during research workflows.",
+        "pdf_sha256": "e95e75fc9e970ea712b605a52ce0a61f6dba5ab9115d58b5df9c6fc838165962",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-d8ca89c0a96c3e80": {
+      "institutions": [
+        "KAIST",
+        "DeepAuto.ai"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Comparative hypotheses occupy edges in a graph memory. Domain-specific distances and k-medoids clustering organize inputs for principle induction. LLM retrieval selects hypotheses and principles; new oracle outcomes drive revision and reconstruction. Experiments compare optimization and prediction baselines, scaffold-held-out molecular prediction, and component ablations.",
+      "evidence": "Mean molecular optimization Avg@100 improves to 0.340 versus 0.254 for ExLLM; molecular prediction averages 69.75% accuracy and 69.03% macro-F1. Ablations support comparative evidence, principle construction, revision, and retrieval. The reported 55% oracle-budget reduction relative to ExLLM concerns the Syn-3bfo efficiency analysis. Individual metrics are not uniformly best: ExLLM has higher Valsartan AUC.",
+      "discovery_use": "Its primary contribution is an explicit observation-to-hypothesis-to-principle discovery loop, with empirical revision and reuse during subsequent investigations.",
+      "limits": "Comparative explanations and literature consistency establish plausibility, not identified causal mechanisms. Oracles include synthetic landscapes, predictors, and recorded experimental lookups; prospective laboratory discovery is not demonstrated. Oracle savings do not establish total computational savings. Results average three runs. Review covers supplied pages 1–16 of 45, without later appendix coverage or a dedicated limitations section. The verified official repository currently contains a release placeholder rather than implementation code.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "sci_methods",
+        "rationale": "Its primary contribution is an explicit observation-to-hypothesis-to-principle discovery loop, with empirical revision and reuse during subsequent investigations.",
+        "pdf_sha256": "d17a2bc83abbb7b016abde00d6abbf61b8e60dbf0b1fb61b0d6ec185d55b2b30",
+        "evidence_pages": [
+          1,
+          6,
+          7
+        ]
+      }
+    },
+    "paper-42c099672148be7f": {
+      "institutions": [
+        "The Hong Kong University of Science and Technology (Guangzhou)",
+        "Hunyuan Team, Tencent"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Repository discovery combines expanded domain keywords with scientific-data, publication, and popularity filters. Executable seed programs yield reproduction, subflow, completion, and correction tasks. A generator–validator loop repairs eligible failures. The authors audit 600 environments and fine-tune three Qwen3.5 models on 64,477 successful teacher trajectories, with repository-overlap filtering and controlled data ablations.",
+      "evidence": "PEARL contains 97,659 environments from 7,110 repositories. On 306 matched repositories, POSEIDON produces 5,370 environments versus D3-Gym’s 575. The human audit accepts 573 of 600 tasks. Qwen3.5-27B’s mean evaluation score rises from 44.3 to 51.5. Matched-size comparisons and task-removal ablations support contributions from diversity and complementary task types.",
+      "discovery_use": "Develops and evaluates scalable training supervision specifically for agents performing verifiable scientific workflows.",
+      "limits": "Source selection favors popular, published repositories and intentionally oversamples biology. Automatic validation leaves residual defects, reflected in the 27 unsuccessful or inconclusive audit cases. Benchmark language restrictions and exclusions constrain coverage; several evaluations use LLM judging. Broader repository diversity helps, but increased annotated difficulty has no consistent training benefit within the tested range. No first-party code, dataset, or model release was verified. Only pages 1–2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "learning",
+        "rationale": "Develops and evaluates scalable training supervision specifically for agents performing verifiable scientific workflows.",
+        "pdf_sha256": "3bfae4e78f0bc953fbfbf3f3f7e0fcba750ddef2fecc94d1d9bdf544f1d7f109",
+        "evidence_pages": [
+          1,
+          6,
+          17
+        ]
+      }
+    },
+    "paper-302d003c6e0122f1": {
+      "institutions": [
+        "Tsinghua University",
+        "Microsoft Research Asia (MSRA)"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Immutable action arguments, dependency checks, and public guards determine eligibility. Substitution certificates bind executed actions to omitted reasoning callbacks. Complete-task token accounting includes authorship, selection, fallback, and failures. Native-harness comparisons and MBPP ablations separate integrated configuration effects from persistent reuse and callback removal.",
+      "evidence": "On 98 HumanEval tasks, Codex retains 90.82% success with 29.54% fewer tokens; DeepSeek Harness improves from 71.43% to 85.71% with 87.93% fewer tokens. MBPP ablations report 26.91% savings over single-use graphs and 19.52% over retained callbacks. Disabling graph execution solves four more tasks than the full method, revealing a quality–cost trade-off.",
+      "discovery_use": "Contributes an inspectable agent harness mechanism for reusing resolved decisions, verifying execution, and refining configurations from feedback, within the collection’s explicit harness and RSI scope.",
+      "limits": "Large integrated savings combine graph reuse with context management and finalization. Certificates verify execution and callback omission, not semantic correctness. Companion studies use different mechanisms, populations, and cost scopes; AIME costs exceed the basic baseline. MiniWoB improvement curves use training tasks and are not held-out discovery results. Token savings establish neither latency nor energy savings. Review covers supplied pages 1–16 of 37. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "systems",
+        "rationale": "Contributes an inspectable agent harness mechanism for reusing resolved decisions, verifying execution, and refining configurations from feedback, within the collection’s explicit harness and RSI scope.",
+        "pdf_sha256": "8d66e8c11f1ed96e420c3db71e94fe75bb1c20e4dba1ae20c941024ff5ab8d0a",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-0a8f2fad6cda449e": {
+      "institutions": [
+        "Purdue University",
+        "Independent Researcher"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An archive-based meta-agent proposes and validates policies using three training tasks. Five generations produce 21 policies; selection uses training-suite scores and additional seeds. Evaluation uses fresh seeds, six held-out tasks, and three in-run models. Controls compare unedited library defaults, frozen first changes, one-decision agents, and full online adaptation.",
+      "evidence": "Opus’s training-suite summary rises from +10.48 to +14.33, while its held-out aggregate falls from +5.22 to +4.87. Cross-model transfer improves GPT-5.5’s held-out summary from −0.36 to +3.11. GPT-6.1 reduces mean Burgers error about 8.8-fold. Held-out ML transfer peaks early; continued adaptation helps both baseline and evolved agents on unseen tasks.",
+      "discovery_use": "Studies recursive improvement of optimizer agents through retained procedures, executable tools, and experiment feedback, including scientific machine-learning transfer and explicit tests of specialization.",
+      "limits": "The search uses a small fixed suite and lacks matched-budget independent-proposal and archive controls. Aggregate z-scores are descriptive and sensitive to reference variance; final cells use three seeds. One held-out description was read during evolution; exposed descendants were excluded, but indirect archive-mediated exposure remains unresolved. Stronger static optimizer baselines and full compute accounting are missing. Larger distributed training and unbounded discovery are untested. No first-party release destination was verified.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "open_ended",
+        "rationale": "Studies recursive improvement of optimizer agents through retained procedures, executable tools, and experiment feedback, including scientific machine-learning transfer and explicit tests of specialization.",
+        "pdf_sha256": "90da3d040ce363f3b59a2838ddd5dae18d286f9ac8b0031211beb9ac49b12283",
+        "evidence_pages": [
+          1,
+          3,
+          15
+        ]
+      }
+    },
+    "paper-f99b7ad173e24ad2": {
+      "institutions": [
+        "Princeton University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        10,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs balanced corpora of 24,888 ICLR submissions and 83,656 source-rendered arXiv papers. Compares text and vision supervised fine-tuning, GRPO, frontier prompting, reviewer models, coding agents, and handcrafted features. Evaluates accuracy, AUC, rating correlation, calibration, transfer, scale, and compression.",
+      "evidence": "The 7B vision models reach 68.3% ICLR accuracy and 77.5% arXiv accuracy, versus best frontier baselines of 65.6% and 68.5%. Binary supervised training outperforms the tested RL recipes. Calibration improves confidence reliability, but cross-source transfer is substantially weaker than matched-source performance. The conclusion reports improved literature retrieval and agent reviewing; their detailed application experiments were not supplied.",
+      "discovery_use": "Provides a calibrated research-evaluation signal explicitly intended to guide scientific agents, reviewing, and literature selection. Its relevance rests on evaluating research outputs, with acceptance treated as a limited proxy for scientific value.",
+      "limits": "Targeted review of supplied body and selected appendix pages, not all 50 pages. ICLR artifacts include rebuttal revisions; arXiv rejection labels are inferred from missing proceedings matches. Balanced-test accuracy requires adjustment for deployment priors. Borderline submissions and newer years remain difficult. Acceptance prediction establishes neither novelty nor scientific truth, and visual presentation effects are not causally isolated. The Hugging Face collection could not be verified as a checkpoint release.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "benchmarks",
+        "rationale": "Provides a calibrated research-evaluation signal explicitly intended to guide scientific agents, reviewing, and literature selection. Its relevance rests on evaluating research outputs, with acceptance treated as a limited proxy for scientific value.",
+        "pdf_sha256": "596ab0ca719f99030cff51739c4443e18e73047a4b434c656a24e4ca567b75b7",
+        "evidence_pages": [
+          1,
+          4,
+          10,
+          15
+        ]
+      }
+    },
+    "paper-e86c5d55b8099877": {
+      "institutions": [
+        "University of Science and Technology of China",
+        "Qwen Business Unit of Alibaba, Alibaba Token Hub",
+        "Xidian University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Keeps the image generator frozen, parses fixed requirements, and scores outputs along five dimensions. Repairs target identified defects. Candidate experiences undergo blinded comparisons with shared seeds and separate calibration and holdout trials. Judge training uses model-generated score-and-reason supervision followed by GRPO. Evaluation uses checklist strict accuracy on MindBench and a disjoint 431-request ImageReq-Bench test split.",
+      "evidence": "ImageRSI reaches 52.6% MindBench accuracy with Nano Banana Pro and 65.66% on ImageReq-Bench. Under a matched two-image budget, localized repair achieves 65.7%, versus 55.0% for resampling and 56.6% for generic feedback. Increasing the experience library from zero to 527 entries raises accuracy from 55.7% to 65.7%. Judge training raises MindBench accuracy from 38.6% to 48.2% with Qwen-Image-2.0.",
+      "discovery_use": "Contributes mechanisms for agents to verify outputs, validate transferable lessons, retain experience, and improve their verifier. These are concrete learning-to-discover capabilities, although demonstrated within bounded image-generation tasks.",
+      "limits": "All 15 supplied text pages were reviewed; only the two supplied pages were visually inspected. Recursive collection–training cycles and experience transfer between generators remain untested. Checklist evaluation and training targets depend on model judgments without a reported independent human reliability estimate. Main baseline comparisons mix generators, reproductions, and published results; matched-budget repair ablations provide stronger isolation. No first-party release was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "adaptation",
+        "rationale": "Contributes mechanisms for agents to verify outputs, validate transferable lessons, retain experience, and improve their verifier. These are concrete learning-to-discover capabilities, although demonstrated within bounded image-generation tasks.",
+        "pdf_sha256": "9b26e5afb0ae2f8fc8eeb413e182129ca6ae53a5ed90aafbf1f6deafdbe6f400",
+        "evidence_pages": [
+          1,
+          4,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-88ed6b4d7523fe2d": {
+      "institutions": [
+        "UC Santa Barbara",
+        "UC Berkeley"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Replaces test-time RL with two external memories while retaining framework parent selection, archive updates, and verifiers. Updates memories every two steps, extracts strategies from valid improving parent–child pairs, and divides candidate generation equally between direct and strategy-guided branches. Evaluates two frameworks, three models, and five mathematical tasks, with memory ablations and computation accounting.",
+      "evidence": "Reported best scores exceed published TTT results in every evaluated setting. Examples include AC2 improving from 0.9472 to 0.949248 with Qwen3-8B and Hadamard improving from 0.5764 to 0.579938 with Distill-Qwen3-8B. Both memory components help. Qwen3-8B experiments report 82.8–84.6% fewer FLOPs and 47.7–58.4% less runtime, excluding evaluation time but including memory calls.",
+      "discovery_use": "Directly studies how scientific search agents learn from evaluated attempts through retained operational lessons and algorithmic strategies, comparing memory adaptation with online weight updates on mathematical discovery tasks.",
+      "limits": "All 28 supplied text pages were reviewed; visual inspection covers only pages 1 and 4. Evidence is restricted to five numerical construction tasks with supplied verifiers. TTT comparison scores come from original papers, and serving implementations differ. The ThetaEvolve comparison uses one reported seed; repeated-run uncertainty is not established. Efficiency measurements exclude evaluator runtime and cover only Qwen3-8B in TTT-Discover. The verified author repository currently displays a README and paper PDF, without implementation files.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "adaptation",
+        "rationale": "Directly studies how scientific search agents learn from evaluated attempts through retained operational lessons and algorithmic strategies, comparing memory adaptation with online weight updates on mathematical discovery tasks.",
+        "pdf_sha256": "fb167e8a3aca39a38523d7f885d8b2ef5cebc9e2a2a6eaa9f461a38e3a2293fd",
+        "evidence_pages": [
+          1,
+          4,
+          7,
+          17
+        ]
+      }
+    },
+    "paper-817d0cefc6986b31": {
+      "institutions": [
+        "The Hong Kong University of Science and Technology",
+        "National University of Singapore",
+        "The Hong Kong Polytechnic University",
+        "The University of Tokyo",
+        "Carnegie Mellon University",
+        "University of California, Berkeley",
+        "University of Central Florida",
+        "University of North Carolina at Chapel Hill",
+        "The Chinese University of Hong Kong",
+        "University of Chicago",
+        "Princeton University",
+        "Johns Hopkins University",
+        "University of Cambridge",
+        "University of California, San Diego",
+        "The University of Hong Kong",
+        "City University of Hong Kong",
+        "University of California, Merced",
+        "Cornell University",
+        "Massachusetts Institute of Technology",
+        "University of Southern California",
+        "Stanford University",
+        "University of Maryland, College Park",
+        "Singapore Management University",
+        "Nanyang Technological University",
+        "University of Oxford",
+        "University of Edinburgh",
+        "XGEN Labs"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        12,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Evaluates ten agent configurations on 1,088 items in 15 categories and sixteen world-model configurations across eight scenarios totaling 400 cases for full coverage. Uses specification-based checks, a case-weighted Agent Index, and an eight-scenario world-model mean. A separate 150-case coupled pilot motivates component isolation.",
+      "evidence": "GPT 6 Astra leads the reported Agent Index at 31.3 and the scientific aggregate at 50.6. GPT-Image-2 leads full-coverage world-model scores at 21.7. Rankings vary with task composition, and execution and state preservation remain weak in several settings. The coupled pilot records zero task successes, which does not identify the responsible component or establish general pairing failure.",
+      "discovery_use": "Provides controlled evaluation protocols for agent execution and action-conditioned world representations, including scientific workflows and optimization tasks. Its concrete discovery connection is assessing reliable experimentation, state preservation, and agent–environment interaction.",
+      "limits": "Targeted review of supplied main-text pages and references, not all 54 pages. Configurations have differing harnesses and execution budgets. Scores mix binary and graded outcomes; scientific checkpoints share provenance with repair tasks. World-model scores lack independent stratified agreement estimates and no-op, unchanged-frame, or shuffled-action controls. Rankings lack repeated-run uncertainty. Separate scores do not establish coupled success, causal attribution, or sustained co-improvement. No first-party release destination was verified; the supplied model artifact is a baseline.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "benchmarks",
+        "rationale": "Provides controlled evaluation protocols for agent execution and action-conditioned world representations, including scientific workflows and optimization tasks. Its concrete discovery connection is assessing reliable experimentation, state preservation, and agent–environment interaction.",
+        "pdf_sha256": "1e5696d36e7800a29b843f3f87ccf2e715b31aaa3fd0ef7e6c4cf8f46b0f3873",
+        "evidence_pages": [
+          1,
+          6,
+          12,
+          13
+        ]
+      }
     }
   }
 }

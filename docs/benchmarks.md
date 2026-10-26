@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**111 usage profiles** · Updated **2026-10-26**
+**114 usage profiles** · Updated **2026-10-26**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -709,6 +709,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [FinAutoRubric: Expert-Guided Automatic Rubric Generation for Evaluating Financial Research Agents](#paper-8daca2e781dd8746) | Real data | Analysis + tools | Paper-described |
 | [The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks](#paper-f56bdaf671cb8be4) | Real data | Offline data | Paper-described |
 | [UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents](#paper-fd33ef0d1dd90a8b) | Real data | Interactive simulator | Paper-described |
+| [PaperScorer: How Predictable Is Paper Acceptance?](#paper-f99b7ad173e24ad2) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1745,6 +1746,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-f99b7ad173e24ad2"></a>
+
+<details>
+<summary>PaperScorer: How Predictable Is Paper Acceptance? — details</summary>
+
+[Work](../README.md#paper-f99b7ad173e24ad2) · [Source](https://arxiv.org/pdf/2610.31791)
+
+**Focus:** Predict recorded conference acceptance decisions from paper content. Evaluation uses balanced ICLR submissions and source-rendered arXiv papers, measuring accuracy, AUC, recalls, rating correlation, and calibration. The environment supplies recorded documents and labels; agents do not perform new scientific experiments or physical measurements.
+
+**Openness:** `Inputs are anonymized paper text or page images from fixed corpora.`, `Coding-agent baselines can inspect supplied text and images and use a prediction-schema validator in isolated workspaces without internet.`, `The supplied first page names Website, Code, and Hugging Face resources; release availability is not established by these pages.`
+
+**New physical measurements:** No
+
+**Limits:** ICLR artifacts can include rebuttal revisions. arXiv rejection labels are inferred from absence in matched proceedings. Acceptance is a noisy outcome proxy, and matched-source performance exceeds transfer performance. Coding-agent tool use supports document inspection; it does not make the benchmark an executed research experiment.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Primary training is supervised prediction of Accept or Reject. GRPO variants receive 0.8 for matching the dataset decision plus 0.2 for the required reasoning-and-answer format, using within-group relative rewards without a learned reward model. Accuracy and AUC are the primary evaluation metrics. |
+| Reset | Coding-agent runs receive isolated paper workspaces. A stateful environment reset API is not established; ordinary prediction examples are independent fixed inputs. |
+| Branching | GRPO samples a group of completions for each paper. Environment cloning, rollback, or branching scientific experiments is not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -1784,6 +1808,8 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [Predictive Credit: Measuring What Scientific Explanations Add to Experimental Forecasts](#paper-476e87c36ff94c5c) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [AutoPDEBench: Benchmarking LLM Auto-Research for Neural PDE Solver Design](#paper-8564d528b4a46811) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [WhatWorkedBench: Benchmarking Experimental Understanding in AI Agents](#paper-f30aa5f207baccbb) | Executed programs + evaluators | Finite-pool queries | Paper-described |
+| [SCI-AGENT-EXAM: Benchmarking Agents on Scientific Research Tasks](#paper-ff06580726cc267c) | Scientific data + verifiers | Analysis + code | Paper-described |
+| [Dual Exam: Controlled Evaluation of Multimodal Agents and World Models](#paper-817d0cefc6986b31) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -2449,6 +2475,52 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Agent-policy training and a training reward are not established. Final evaluation restores authoritative measured cells and scores conditional-effect MAE and normalized recovery, plus pair-interaction error, grid error, selection regret, strict reconstruction, and delivery. Missing delivery receives zero recovery and strict-reconstruction credit. |
 | Reset | Frozen implementations, seeds, and cohorts support reproducible episode replay. Every numerical calculation starts a fresh Python process. Repeated measurements are free and return the same cached outcomes. An agent-accessible episode reset or rollback API is not established. |
 | Branching | All 16 or 64 configurations are legal and can be queried adaptively or in batches under the distinct-measurement budget. Alternative configurations share fixed source data and evaluation conditions. Forking an intermediate episode or checkpoint is not established. |
+
+</details>
+
+<a id="paper-ff06580726cc267c"></a>
+
+<details>
+<summary>SCI-AGENT-EXAM: Benchmarking Agents on Scientific Research Tasks — details</summary>
+
+[Work](../README.md#paper-ff06580726cc267c) · [Source](https://arxiv.org/pdf/2610.32441)
+
+**Focus:** 120 executable scientific workflow tasks across 11 domains and seven task types. Agents produce structured answers, executable artifacts, and reports. Feedback includes actual computational execution on supplied scientific materials; tasks include simulation code, recorded datasets, and reduced semi-synthetic fixtures. These are offline computational research exercises, without new physical measurements.
+
+**Openness:** `Agents choose analysis strategies, write and repair code, and use task-specific tools within fixed offline Docker environments.`, `Visible inputs are supplied files and source snapshots; evaluator inputs, checks, and reference artifacts remain hidden.`, `The paper states that code and data are available; release availability is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** Finite expert-authored tasks with fixed resources and execution conditions. Hidden reruns test numerical correctness, schemas, perturbation robustness, and constraints. Scientific reporting additionally depends on weighted LLM judgments. An online evaluator-feedback channel to the acting agent is not established; intermediate snapshots are rescored for analysis.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | The harness writes a scalar reward combining weighted programmatic checks and human-authored rubric criteria judged by GPT-5.6 Sol. Component weights depend on task type, ranging from 0.20 to 0.70 for programmatic scoring. Missing required artifacts fail dependent criteria. Training agents with this reward is not established; the reported study evaluates models. |
+| Reset | Task Docker images are built and each model runs independently three times per task. An explicit reset API or restoration of a running environment is not established. |
+| Branching | Trajectories are replayed and workspace snapshots reconstructed and rescored after file operations. Agent-controlled branching or resuming alternative experiments from these snapshots is not established. |
+
+</details>
+
+<a id="paper-817d0cefc6986b31"></a>
+
+<details>
+<summary>Dual Exam: Controlled Evaluation of Multimodal Agents and World Models — details</summary>
+
+[Work](../README.md#paper-817d0cefc6986b31) · [Source](https://arxiv.org/pdf/2610.31066)
+
+**Focus:** Mixed evaluation of agents interacting with fixed reference environment response mechanisms and visual world models receiving fixed action interventions. The computational-research classification applies to its executed scientific optimization subset: six EdgeBench tasks with recorded submissions and judge reports. Scientific evaluation also includes 63 ALE tasks, 30 scientific code-repair workflows, and ten derived tool-choice checkpoints. Agent actions produce reference observations; world-model outputs provide generated visual state transitions. Recorded trajectories and artifacts are evaluated against task specifications. Generated simulations, recorded execution evidence, and executed computational optimization are distinct evidence sources here. New physical measurements are not established.
+
+**Openness:** `Release destination, artifact availability, and licenses are not established by the supplied pages.`
+
+**New physical measurements:** Unverified
+
+**Limits:** Supplied pages 1–16 omit the detailed execution appendices. Interaction interfaces, budgets, and histories vary across configurations. Physical-domain labels and scientific imagery do not establish physical execution. Recorded data and traces do not establish live experiments. The scientific aggregate mixes strict binary outcomes with graded optimization scores and related checkpoints. The trace archive is truncated, some endpoints and evaluator-version equivalence remain unverified, and independent stratified agreement estimates for world-model scoring are absent.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Training reward is not established; the paper reports evaluation rather than a demonstrated training loop. Agent evaluators use task-specific verifiers with strict or graded scores on a 0–100 scale. Repair and ToolChoice outcomes use strict full-pass binary scoring; EdgeBench contributes graded optimization scores, with Borden and DABIC clipped to [0,100] by Dual Exam. World-model evaluators use case-specific checks for requested effects, identity and state preservation, shared-state consistency, and rule adherence. |
+| Reset | General reset support is not established. The coupled pilot permits one attempt of at most 20 steps per case with no episode-level retries. Main-track reset and retry interfaces are not established in the supplied pages. |
+| Branching | Branching, state cloning, rollback, and counterfactual rollout support are not established. Fixed world-model intervention sequences do not by themselves establish branching support. |
 
 </details>
 

@@ -2491,6 +2491,73 @@
       "name": "UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.30932"
+    },
+    {
+      "feedback": "scientific-datasets-and-hidden-verifiers",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose analysis strategies, write and repair code, and use task-specific tools within fixed offline Docker environments.",
+        "Visible inputs are supplied files and source snapshots; evaluator inputs, checks, and reference artifacts remain hidden.",
+        "The paper states that code and data are available; release availability is not established by the supplied pages."
+      ],
+      "focus": "120 executable scientific workflow tasks across 11 domains and seven task types. Agents produce structured answers, executable artifacts, and reports. Feedback includes actual computational execution on supplied scientific materials; tasks include simulation code, recorded datasets, and reduced semi-synthetic fixtures. These are offline computational research exercises, without new physical measurements.",
+      "limits": "Finite expert-authored tasks with fixed resources and execution conditions. Hidden reruns test numerical correctness, schemas, perturbation robustness, and constraints. Scientific reporting additionally depends on weighted LLM judgments. An online evaluator-feedback channel to the acting agent is not established; intermediate snapshots are rescored for analysis.",
+      "training": {
+        "reward": "The harness writes a scalar reward combining weighted programmatic checks and human-authored rubric criteria judged by GPT-5.6 Sol. Component weights depend on task type, ranging from 0.20 to 0.70 for programmatic scoring. Missing required artifacts fail dependent criteria. Training agents with this reward is not established; the reported study evaluates models.",
+        "reset": "Task Docker images are built and each model runs independently three times per task. An explicit reset API or restoration of a running environment is not established.",
+        "branching": "Trajectories are replayed and workspace snapshots reconstructed and rescored after file operations. Agent-controlled branching or resuming alternative experiments from these snapshots is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-ff06580726cc267c",
+      "resource_id": "paper-ff06580726cc267c",
+      "name": "SCI-AGENT-EXAM: Benchmarking Agents on Scientific Research Tasks",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.32441"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Inputs are anonymized paper text or page images from fixed corpora.",
+        "Coding-agent baselines can inspect supplied text and images and use a prediction-schema validator in isolated workspaces without internet.",
+        "The supplied first page names Website, Code, and Hugging Face resources; release availability is not established by these pages."
+      ],
+      "focus": "Predict recorded conference acceptance decisions from paper content. Evaluation uses balanced ICLR submissions and source-rendered arXiv papers, measuring accuracy, AUC, recalls, rating correlation, and calibration. The environment supplies recorded documents and labels; agents do not perform new scientific experiments or physical measurements.",
+      "limits": "ICLR artifacts can include rebuttal revisions. arXiv rejection labels are inferred from absence in matched proceedings. Acceptance is a noisy outcome proxy, and matched-source performance exceeds transfer performance. Coding-agent tool use supports document inspection; it does not make the benchmark an executed research experiment.",
+      "training": {
+        "reward": "Primary training is supervised prediction of Accept or Reject. GRPO variants receive 0.8 for matching the dataset decision plus 0.2 for the required reasoning-and-answer format, using within-group relative rewards without a learned reward model. Accuracy and AUC are the primary evaluation metrics.",
+        "reset": "Coding-agent runs receive isolated paper workspaces. A stateful environment reset API is not established; ordinary prediction examples are independent fixed inputs.",
+        "branching": "GRPO samples a group of completions for each paper. Environment cloning, rollback, or branching scientific experiments is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-f99b7ad173e24ad2",
+      "resource_id": "paper-f99b7ad173e24ad2",
+      "name": "PaperScorer: How Predictable Is Paper Acceptance?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.31791"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": null,
+      "openness": [
+        "Release destination, artifact availability, and licenses are not established by the supplied pages."
+      ],
+      "focus": "Mixed evaluation of agents interacting with fixed reference environment response mechanisms and visual world models receiving fixed action interventions. The computational-research classification applies to its executed scientific optimization subset: six EdgeBench tasks with recorded submissions and judge reports. Scientific evaluation also includes 63 ALE tasks, 30 scientific code-repair workflows, and ten derived tool-choice checkpoints. Agent actions produce reference observations; world-model outputs provide generated visual state transitions. Recorded trajectories and artifacts are evaluated against task specifications. Generated simulations, recorded execution evidence, and executed computational optimization are distinct evidence sources here. New physical measurements are not established.",
+      "limits": "Supplied pages 1–16 omit the detailed execution appendices. Interaction interfaces, budgets, and histories vary across configurations. Physical-domain labels and scientific imagery do not establish physical execution. Recorded data and traces do not establish live experiments. The scientific aggregate mixes strict binary outcomes with graded optimization scores and related checkpoints. The trace archive is truncated, some endpoints and evaluator-version equivalence remain unverified, and independent stratified agreement estimates for world-model scoring are absent.",
+      "training": {
+        "reward": "Training reward is not established; the paper reports evaluation rather than a demonstrated training loop. Agent evaluators use task-specific verifiers with strict or graded scores on a 0–100 scale. Repair and ToolChoice outcomes use strict full-pass binary scoring; EdgeBench contributes graded optimization scores, with Borden and DABIC clipped to [0,100] by Dual Exam. World-model evaluators use case-specific checks for requested effects, identity and state preservation, shared-state consistency, and rule adherence.",
+        "reset": "General reset support is not established. The coupled pilot permits one attempt of at most 20 steps per case with no episode-level retries. Main-track reset and retry interfaces are not established in the supplied pages.",
+        "branching": "Branching, state cloning, rollback, and counterfactual rollout support are not established. Fixed world-model intervention sequences do not by themselves establish branching support."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-817d0cefc6986b31",
+      "resource_id": "paper-817d0cefc6986b31",
+      "name": "Dual Exam: Controlled Evaluation of Multimodal Agents and World Models",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.31066"
     }
   ]
 }
