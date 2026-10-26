@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-619-2563eb?style=flat-square" alt="619 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-109-0f766e?style=flat-square" alt="109 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-620-2563eb?style=flat-square" alt="620 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-110-0f766e?style=flat-square" alt="110 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 92 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 109 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 66 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 100 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 101 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1485,6 +1485,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Yinling Zhang et al. · The Ohio State University; Yale University; University of California, San Diego; +2 institutions
 - <a id="paper-5687d10cf290fed0"></a>**SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.35596)* · [Paper](https://arxiv.org/abs/2609.35596) · [Code](https://github.com/SEABench-Endogenous-Misalignment/SEABench)<br>
   Saswat Das et al. · University of Virginia; ELLIS Institute Tübingen; Max Planck Institute for Intelligent Systems; +1 institutions
+- <a id="paper-d8f686761184cfb8"></a>**SEAR: Self-Evolving Agentic Robotics** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.18792)* · [Paper](https://arxiv.org/abs/2610.18792) · [Code](https://github.com/Self-Evolving-Agentic-Robotics/SEAR) · [Project](https://sear.bot/)<br>
+  Xinyi Wang et al. · Luma AI
 - <a id="paper-74664ec24514d549"></a>**Search Shapes Conclusions: Auditing Evidence Selection Bias in Deep Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.39026)* · [Paper](https://arxiv.org/abs/2609.39026)<br>
   Shuyao Xiao et al. · Beijing Normal University; Ke Holdings
 - <a id="paper-e5da3aa895bba2db"></a>**Self-Consistency of Entity Sets and Citations in a Deep Research System under Repeated Prompting** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26421)* · [Paper](https://arxiv.org/abs/2610.26421)<br>

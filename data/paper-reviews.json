@@ -20544,6 +20544,37 @@
           8
         ]
       }
+    },
+    "paper-d8f686761184cfb8": {
+      "institutions": [
+        "Luma AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Experiments cover 330 simulated tasks across five families and two physics engines, plus five physical tasks. Persistent skill libraries are compared with empty-library runs and budget-matched best-of-three restarts. Frozen policies are graded separately on hidden states, usually across three independent repetitions. Additional studies transfer libraries between models, test self-exploration, and compare code policies with agent-trained VLAs.",
+      "evidence": "Libraries help most when baseline competence is intermediate, but can preserve harmful mistakes. On RoboLab, GPT-5.6-sol scores 46.9% without a library, 42.4% with its own, and 60.6% with Opus's library. Shared control routines transfer better than task-specific solutions. Camera movement reduces code-policy performance much more than VLA performance. Physical practice streaks overstate performance on operator-staged scenes; live execution improves GPT-6-astra's score but takes substantially longer.",
+      "discovery_use": "The main contribution evaluates whether autonomous agents acquire reusable knowledge from experience, separating retained learning from repeated attempts and measuring transfer beyond practiced situations.",
+      "limits": "This is a targeted review of the supplied body and selected appendix pages, not all 49 pages. Simulation generally has only three repetitions; several VLA settings and physical practice conditions have one run. Model comparisons also change coding tools, and matched wall-clock budgets do not equalize all resources. Some privileged-information shortcuts survived isolation. Physical T5 results concern newly staged instances of tasks practiced on hardware, not demonstrated simulation-to-real skill transfer. Only skills and memories persist between tasks; broader joint evolution remains proposed. The official repository currently advertises forthcoming code.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "benchmarks",
+        "rationale": "The main contribution evaluates whether autonomous agents acquire reusable knowledge from experience, separating retained learning from repeated attempts and measuring transfer beyond practiced situations.",
+        "pdf_sha256": "b68dbf6eca90bb2dab229742ae9d01902ee117c6e27a16f5d064276ec4a12eb2",
+        "evidence_pages": [
+          1,
+          4,
+          6,
+          12
+        ]
+      }
     }
   }
 }

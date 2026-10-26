@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**109 usage profiles** · Updated **2026-10-25**
+**110 usage profiles** · Updated **2026-10-25**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -2573,6 +2573,7 @@ New measurements come from a physical device. Access, throughput, preparation, a
 | [A-Lab demonstration](#profile-a-lab) | Physical measurements | Remote device jobs | Reported tooling |
 | [Robin laboratory-feedback demonstration](#profile-robin) | Physical measurements | Human-mediated laboratory | Paper-described |
 | [Virtual Lab physical validation](#profile-virtual-lab) | Physical measurements | Human-mediated laboratory | Reported tooling |
+| [SEAR: Self-Evolving Agentic Robotics](#paper-d8f686761184cfb8) | Physical measurements | Computational experiments | Paper-described |
 
 <a id="chambers-live"></a>
 
@@ -2663,6 +2664,29 @@ New measurements come from a physical device. Access, throughput, preparation, a
 | Reward / evaluator | Computational design scores differ from physical binding measurements; neither is clinical efficacy. |
 | Reset | Agent discussions can be restarted, while physical validation requires new samples and laboratory work. |
 | Branching | Multiple computational proposals can be branched; physical tests are new experiments with costs. |
+
+</details>
+
+<a id="paper-d8f686761184cfb8"></a>
+
+<details>
+<summary>SEAR: Self-Evolving Agentic Robotics — details</summary>
+
+[Work](../README.md#paper-d8f686761184cfb8) · [Source](https://arxiv.org/pdf/2610.18792)
+
+**Focus:** Reusable learning from experience across 330 simulated robotics tasks and five physical tasks. Feedback combines MuJoCo and Isaac Sim outcomes, executed VLA training and evaluation, and new physical robot observations and outcomes. Hardware results come from actual practice and operator-staged evaluations, rather than recorded datasets. The computational-research designation applies to the executed auto-research training experiments; other modes evaluate robot control.
+
+**Openness:** `Agents can write and revise control programs, run local simulations, inspect failures, install packages, and train checkpoints.`, `Auto-research agents collect teacher rollouts, curate data, fine-tune a VLA, evaluate it, and choose subsequent experiments.`, `Hardware supports frozen code policies and agents choosing commands from live observations.`, `Self-exploration permits agent-proposed practice tasks while withholding target instructions and the external judge.`, `Only code skills and written memories persist between tasks; training data and VLA checkpoints do not.`
+
+**New physical measurements:** Yes
+
+**Limits:** Simulation and hardware have different feedback and reset procedures. Simulation development budgets are one hour per code-policy task, or two hours on RoboLab; auto-research receives matched suite-level time. Hardware practice allows up to 12 hours per task. Most simulation conditions have three repetitions, but several auto-research settings have one; physical results use one practice run per agent. Some privileged-information shortcuts survived isolation. Physical T5 evaluates new states of tasks practiced on hardware and does not establish simulation-to-real transfer.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Simulation exposes unrestricted DEV seeds and judge-reported VAL success during development; protected TEST seeds are evaluated once at the end, using ten rollouts per task. A separate judge grades frozen programs or VLA checkpoints using hidden states and grading logic. Hardware practice uses an external evaluator of before-and-after images, stopping after ten consecutive successes except for Block Stacking, or at the time limit. An operator confirms evaluation verdicts. Physical scoring uses success 1, partial 0.5, failure 0, with a tower-height metric for stacking. Code-policy improvement changes programs and memories without updating LM weights; auto-research fine-tunes a VLA on collected demonstrations. A reinforcement-learning reward or exact VLA training loss is not established in the supplied pages. |
+| Reset | Each task starts in a fresh workspace. Simulation supports repeated rollouts over DEV, VAL, and TEST initial-state seeds. Hardware does not reset automatically: the agent must learn an accompanying reset task. Operators stage ten evaluation scenes per frozen code-policy task or five per live-agent task. |
+| Branching | Best-of-3 explicitly supports three independent fresh attempts at one-third of the total budget, selecting the best VAL result. Frozen policies can be replayed and regraded. Arbitrary checkpoint restoration, simulator-state cloning, and branching from an identical intermediate physical or simulated state are not established. |
 
 </details>
 
