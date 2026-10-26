@@ -1,9 +1,35 @@
 {
-  "updated_at": "2026-10-26T09:44:22-04:00",
+  "updated_at": "2026-10-26T11:18:36-04:00",
   "window_start": "2026-09-27",
   "window_end": "2026-10-26",
   "window_days": 30,
   "items": [
+    {
+      "title": "Matt Mazur documents challenges in evaluating open-ended discovery",
+      "url": "https://x.com/mhmazur/status/2114714032850473187",
+      "published_at": "2026-10-26",
+      "kind": "x",
+      "summary": "Matt Mazur’s notes report Kenneth Stanley’s argument that open-ended discovery benchmarks can narrow research by rewarding predefined objectives or output counts. Stanley reviewed limitations of existing measures and suggested evolving capability tiers, without defining a benchmark or scoring formula.",
+      "date_evidence": "Supplied native post DOM: <time datetime=\"2026-10-26T13:41:29.000Z\">9:41 AM · Oct 26, 2026</time>.",
+      "relevance": "Substantive commentary on evaluating sustained discovery without reducing it to a fixed objective or output count.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "efb22cb647404bcd"
+    },
+    {
+      "title": "HackBench commentary examines reward-hacking detection in research agents",
+      "url": "https://x.com/AIQuanting/status/2114718402648666407",
+      "published_at": "2026-10-26",
+      "kind": "x",
+      "summary": "AIQuanting examines HackBench’s evaluation of reward-hacking detection in research-agent transcripts. The author highlights sparse hacked commands, reported localization weaknesses, and a striking comparison: GLM-5.2 reportedly generated the synthetic hacks yet ranked last as a monitor.",
+      "date_evidence": "Supplied native original-post time element: datetime=\"2026-10-26T13:58:51.000Z\", displayed as \"9:58 AM · Oct 26, 2026\".",
+      "relevance": "Addresses whether research-agent evaluation can detect and localize manipulation of experimental graders.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "92f8bb4ea63ee0f1"
+    },
     {
       "title": "ziziran distinguishes infrastructure failures from failed experimental ideas",
       "url": "https://x.com/ziziran2/status/2114297201736172031",
@@ -281,9 +307,9 @@
       "url": "https://x.com/AiMechanic/status/2113767946996810064",
       "published_at": "2026-10-23",
       "kind": "x",
-      "summary": "AI:Mechanic reports testing locally generated scheduling programs on 20 unseen problems after freezing the selected program. The strongest feedback runs reduced schedule length by about 20% versus round-robin, compared with roughly 11–12% for independent attempts. One feedback run failed to transfer. The author acknowledges a weak baseline and rediscovery of a known scheduling rule, leaving feedback’s consistency unresolved.",
-      "date_evidence": "Supplied primary-source extraction records original DOM time datetime=2026-10-23T23:02:05.000Z and displayed publication time 7:02 PM · Oct 23, 2026.",
-      "relevance": "Concrete discovery-evaluation design separating search-instance gains, held-out transfer, feedback ablations and algorithmic novelty.",
+      "summary": "AI:Mechanic reports testing whether locally generated autoresearch programs transfer to unseen scheduling problems. The best feedback-guided programs reduced average finishing time by about 20% versus round-robin across 20 held-out instances, while another feedback run failed to transfer. The author cautions that the baseline is weak and the GB10 winner rediscovered a known scheduling rule.",
+      "date_evidence": "Supplied native primary-source time elements show 2026-10-23T19:57:47.000Z and 2026-10-23T23:02:05.000Z; both establish October 23, 2026, consistent with the figure's experiment date.",
+      "relevance": "Directly tests generalization and feedback consistency in an automated program-search research loop.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "links": [
@@ -1558,6 +1584,24 @@
       "source": "Codex primary text-and-image checked",
       "links": [],
       "id": "6909dea0da83c2dd"
+    },
+    {
+      "title": "Does LeWorldModel Preserve Local Action Geometry?",
+      "url": "https://arxiv.org/abs/2610.31716",
+      "published_at": "2026-10-21",
+      "kind": "paper",
+      "summary": "The paper audits local action sensitivity in pretrained LeWorldModel by comparing matched simulated and predicted responses. It finds substantial directional and magnitude errors, with conclusions strongly dependent on perturbation scale and measurement space.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-10-22T00:00:00.000Z and is preserved. The original arXiv submission history independently confirms v1 on October 22, 2026. The supplied midnight timestamp belongs to October 21 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "It provides a concrete protocol for verifying whether a learned world model preserves the effects of action interventions. This supports discovery agents that depend on reliable world representations for exploration and planning, while identifying what the diagnostic cannot establish.",
+      "id": "ab11c98f74e97bb4",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.31716"
+        }
+      ]
     },
     {
       "title": "David Hendrickson discusses local Sage-A1.5 research agents",
@@ -3652,6 +3696,28 @@
           "url": "https://github.com/VerifiedMechanisms/automlr"
         }
       ]
+    },
+    {
+      "title": "Doodling in Autoresearch",
+      "url": "https://nuglifeleoji.github.io/blog/2026/doodling-in-autoresearch",
+      "published_at": "2026-10-18",
+      "kind": "blog",
+      "summary": "Changxiu Ji proposes treating memory organization, role-specific context, agent coordination, and evaluation as connected optimization targets for automated research. His commentary compares existing approaches and suggests turning experiment histories into reusable lessons, adapting agent roles, and calibrating cheap evaluation proxies with occasional expensive checks. These are design proposals, not demonstrated improvements from a new system.",
+      "date_evidence": "Supplied primary-source extraction preserves the original blog time element datetime=\"2026-10-18T07:00:00+00:00\", displayed as October 18, 2026.",
+      "relevance": "Identifies concrete optimization targets for continual research systems: memory organization, coordination and evaluator design.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://nuglifeleoji.github.io/blog/2026/doodling-in-autoresearch"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.07625"
+        }
+      ],
+      "id": "6af6f7c7e592727b"
     },
     {
       "title": "Deep Search in Real-World Web Environments",
@@ -12271,6 +12337,24 @@
         }
       ],
       "id": "cc8cdd0ee81ef8b9"
+    },
+    {
+      "title": "Does LeWorldModel Preserve Local Action Geometry?",
+      "url": "https://arxiv.org/abs/2610.31716",
+      "published_at": "2026-10-21",
+      "kind": "paper",
+      "summary": "The paper audits local action sensitivity in pretrained LeWorldModel by comparing matched simulated and predicted responses. It finds substantial directional and magnitude errors, with conclusions strongly dependent on perturbation scale and measurement space.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-10-22T00:00:00.000Z and is preserved. The original arXiv submission history independently confirms v1 on October 22, 2026. The supplied midnight timestamp belongs to October 21 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "It provides a concrete protocol for verifying whether a learned world model preserves the effects of action interventions. This supports discovery agents that depend on reliable world representations for exploration and planning, while identifying what the diagnostic cannot establish.",
+      "id": "ab11c98f74e97bb4",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.31716"
+        }
+      ]
     },
     {
       "title": "BrickWright: Agentic Creation of Physically Feasible Brick Builds",

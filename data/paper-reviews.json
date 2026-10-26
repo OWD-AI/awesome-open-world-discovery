@@ -21151,6 +21151,38 @@
           7
         ]
       }
+    },
+    "paper-ab11c98f74e97bb4": {
+      "institutions": [
+        "Technological School Electronic Systems (TUES)",
+        "Massachusetts Institute of Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Using a shared frozen encoder, matched finite differences perturb five-action blocks at three scales across 458 Reacher and 500 Cube states. Gram matrices measure relative sensitivity, gain, and eigenspace alignment. Isotropic, rotated, and shuffled-state references calibrate agreement. Eight held-out directions per state test response-magnitude prediction in embedding, pixel, and physical-state spaces.",
+      "evidence": "At the smallest scale, median leading-direction errors are approximately 36° for Reacher and 42° for Cube; normalized Gram discrepancies are 0.465 and 0.508. Cube beats all three discrepancy references, while Reacher fails to beat isotropy. Held-out embedding errors are 33.2% and 56.4% for model Grams versus 17.0% and 28.0% for environment Grams. Tenfold larger perturbations reduce discrepancy by approximately 70% and 47%. Oracle gain correction substantially improves magnitude prediction.",
+      "discovery_use": "It provides a concrete protocol for verifying whether a learned world model preserves the effects of action interventions. This supports discovery agents that depend on reliable world representations for exploration and planning, while identifying what the diagnostic cannot establish.",
+      "limits": "Only one checkpoint per environment is evaluated. Gram agreement cannot establish signed outcome direction, goal-directed action choice, or closed-loop control success. Results depend on scale, encoder, and coordinate weighting; rendering and dynamics contributions remain unresolved. Cube replay tolerances were amended after observed discrepancies, and a failed production gate required an unchanged retry. Historical estimates are superseded. No associated first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "benchmarks",
+        "rationale": "It provides a concrete protocol for verifying whether a learned world model preserves the effects of action interventions. This supports discovery agents that depend on reliable world representations for exploration and planning, while identifying what the diagnostic cannot establish.",
+        "pdf_sha256": "8b3b37bb165fd5c521995d641919be899629d7d1babbfe4c59039223cbead463",
+        "evidence_pages": [
+          1,
+          2,
+          4,
+          7
+        ]
+      }
     }
   }
 }

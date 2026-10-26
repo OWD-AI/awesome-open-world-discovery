@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-637-2563eb?style=flat-square" alt="637 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-115-0f766e?style=flat-square" alt="115 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-638-2563eb?style=flat-square" alt="638 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-116-0f766e?style=flat-square" alt="116 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 94 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 111 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 68 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 106 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 107 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1429,6 +1429,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Xiaomin Yu et al. · HKUST(GZ); FDU; UW; +11 institutions
 - <a id="discern"></a>**DISCERN: Can AI Agents Work Like Scientists and Guide Discovery?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.33357)* · [Paper](https://arxiv.org/abs/2609.33357) · [HF Dataset](https://huggingface.co/datasets/discern-bench-anon/discern-benchmark)<br>
   Nan Huang et al. · University of California San Diego
+- <a id="paper-ab11c98f74e97bb4"></a>**Does LeWorldModel Preserve Local Action Geometry?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31716)* · [Paper](https://arxiv.org/abs/2610.31716)<br>
+  Vasil Vasilev, Siddharth Nayak · Technological School Electronic Systems (TUES); Massachusetts Institute of Technology
 - <a id="paper-e15c7d3de5e7f265"></a>**DrugTargetWorld: A Synthetic Biobank for Training and Benchmarking AI Scientists** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.09558)* · [Paper](https://arxiv.org/abs/2610.09558) · [Code](https://github.com/sammargolis/DrugTargetWorld) · [Project](https://drugtargetworld.vercel.app/) · [Dataset](https://huggingface.co/datasets/sammargolis/drugtargetworld-assets)<br>
   Samuel Margolis et al. · Stanford University; Brown University
 - <a id="paper-817d0cefc6986b31"></a>**Dual Exam: Controlled Evaluation of Multimodal Agents and World Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31066)* · [Paper](https://arxiv.org/abs/2610.31066)<br>

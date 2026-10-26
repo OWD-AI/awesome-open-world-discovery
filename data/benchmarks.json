@@ -2579,6 +2579,28 @@
       "name": "RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.27782"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Uses released LeWM checkpoints and original datasets as sampling anchors.",
+        "Availability of a first-party benchmark code or artifact release is not established by the supplied pages."
+      ],
+      "focus": "Evaluates frozen world-model action sensitivity against newly executed MuJoCo simulator counterfactuals for Reacher and OGBench Cube. Recorded actions establish contexts; perturbed five-action blocks generate fresh rendered images, embeddings, and simulated physical states. This is a world-model diagnostic rather than an agent research-task benchmark.",
+      "limits": "One checkpoint per environment; fixed anchor banks and three perturbation scales. Gram agreement measures response magnitudes but does not establish signed outcome direction, planning, or closed-loop control. Results depend on output metrics and coordinate weights. Cube replay tolerances were amended after observed image differences, and completion required an unchanged retry after a failed gate. Physical-state outputs are simulated quantities, not new physical measurements.",
+      "training": {
+        "reward": "No training is performed and no training reward is established. Evaluation uses normalized Gram discrepancy, sensitivity gain, eigenspace angles, and held-out response WAPE, calibrated against isotropic, rotated, and shuffled-state references.",
+        "reset": "Simulator snapshot restoration is supported. Full native simulator data and mutable wrapper state are restored before each branch without an intervening forward call. Primary-bank checks require exact image replay and qpos/qvel agreement within 10−12; subsequent Cube response validation permits documented image tolerances while retaining the physical-state tolerance.",
+        "branching": "Counterfactual rollouts branch from the same live step-10 simulator state. Matched positive and negative coordinate perturbations and eight held-out directions per anchor are evaluated across three scales. General-purpose agent-controlled branching is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ab11c98f74e97bb4",
+      "resource_id": "paper-ab11c98f74e97bb4",
+      "name": "Does LeWorldModel Preserve Local Action Geometry?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.31716"
     }
   ]
 }
