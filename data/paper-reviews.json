@@ -20415,6 +20415,104 @@
           10
         ]
       }
+    },
+    "paper-f46e042d0f23b6f7": {
+      "institutions": [
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        19,
+        30,
+        35
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Adds parallel memory attention, stable Gated DeltaNet-2 updates, and densely routed Mixture-of-Storage experts. Memory parameters learn through continued pretraining and full-context-teacher distillation while backbone weights remain fixed during native-memory training. Evaluation compares textual and parametric memory approaches using isolated histories.",
+      "evidence": "Across 11 memory benchmarks, Flash and Nano average 50.6 and 47.0, exceeding the strongest evaluated parametric baseline by 12.5 and 8.9 points. Strong textual-memory systems remain substantially better on demanding long-history tasks. Nano reports 1.86 times faster end-to-end inference and approximately 66 times smaller persistent state at 128K history. Supplied prose reports experience-guided coding gains but omits the detailed agentic result tables.",
+      "discovery_use": "Introduces learned persistent memory for retaining information and reusing procedural experience across agent tasks. This is a concrete mechanism for continual discovery support, although autonomous experience acquisition and self-improvement remain unproven.",
+      "limits": "Fixed memory capacity sacrifices historical detail. Procedural experience is externally constructed and retrieved; autonomous continual learning remains future work. Storage comparisons exclude shared weights and differ from total runtime GPU memory. Memory preparation adds computation. The page-2 agent benchmark chart evaluates backbone preparation without native memory. Review used selected methods, evaluation, and limitation pages, not all 66 pages.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "adaptation",
+        "rationale": "Introduces learned persistent memory for retaining information and reusing procedural experience across agent tasks. This is a concrete mechanism for continual discovery support, although autonomous experience acquisition and self-improvement remain unproven.",
+        "pdf_sha256": "3ac2c5c2bd2fc108b4150824127bf851f5219c34ab4a7845f25e48060e05c001",
+        "evidence_pages": [
+          1,
+          7,
+          19,
+          30,
+          35
+        ]
+      }
+    },
+    "paper-7420a54429f1ece0": {
+      "institutions": [
+        "Tsinghua University",
+        "AgiBot",
+        "Infinigence AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        9,
+        19,
+        34
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "FERT encodes observations with frozen visual features and joint state. Short failure contexts retrieve successful trajectory intervals using constrained subsequence dynamic time warping. Retrieved action chunks receive higher sampling priority for flow-matching fine-tuning. FATS separates robot execution, cloud inference, training, and local fault recovery. Policies are evaluated over 120 trials per task on two held-out robots.",
+      "evidence": "The supplied results report 93.3–99.2% success across five tasks. Phone packaging improves from 79.2% to 98.3% with 96 training robots. A 16-robot ablation reports 86.7% with failure-guided retrieval versus 64.2% without it. Larger fleets generally improve performance when collection time per robot is fixed, also increasing total experience.",
+      "discovery_use": "Provides a concrete feedback-driven learning loop in which deployed agents retain shared successful experience and use failures to target subsequent improvement. This directly fits continual discovery through experience, despite evaluation on fixed manipulation tasks.",
+      "limits": "Humans still supply outcome labels and environment resets, and initialization uses demonstrations and corrective actions. Experiments cover task-specific policies on one robot platform, without establishing long-term retention, heterogeneous transfer, or discovery of new tasks. Baselines differ in supervision and collection regimes. The theoretical guarantee is local and conditional. Supplied pages omit most detailed result tables and system traces, so their complete curves and uncertainty were not inspected. The official project links RLinf as code, but a paper-specific FERT release was not verified.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "adaptation",
+        "rationale": "Provides a concrete feedback-driven learning loop in which deployed agents retain shared successful experience and use failures to target subsequent improvement. This directly fits continual discovery through experience, despite evaluation on fixed manipulation tasks.",
+        "pdf_sha256": "892f50e4617322729262115a43af413247cdbed1881d352c9781bcaf951928ce",
+        "evidence_pages": [
+          1,
+          9,
+          19,
+          34
+        ]
+      }
+    },
+    "paper-b9a6b3cf4345027c": {
+      "institutions": [
+        "Ropedia",
+        "NTU",
+        "HKUST",
+        "PKU"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Stereo RGB and IMU support geometric reconstruction. Complementary image and point-cloud detectors generate static objects, followed by geometric filtering and VLM verification. Interaction descriptions guide object identity association, mask tracking, and world-coordinate trajectory recovery. Evidence-linked records generate approximately 80,000 QA pairs for Qwen3.5-4B fine-tuning.",
+      "evidence": "ScanNet AP25 reaches 0.68 versus 0.40 for the strongest evaluated baseline. Tracking HOTA reaches 54.31% on ADT and 43.14% on HoliWorld-Bench, versus 36.00% and 15.13%. Fine-tuning raises Token F1 from 16.35% to 78.02% on HoliWorld-Bench and from 18.29% to 66.39% on EgoDynamic4D. Static ablations show little geometric benefit from VLM verification; its contribution is primarily semantic.",
+      "discovery_use": "Builds persistent, evidence-linked world records connecting objects, geometry, and interaction histories, then tests whether these records teach spatial and temporal reasoning. This is a concrete contribution to grounded knowledge representation for discovery-capable agents.",
+      "limits": "Dynamic processing assumes at most one moving object at a time. Perception evaluations use 20 sequences per dataset, and matched-box mIoU must be interpreted alongside detection AP. The experiments establish grounded perception and QA improvements, without testing autonomous investigation or causal intervention. The official repository says implementation code will not be open-sourced and marks model and data releases as coming soon; the verified public artifact pages do not establish released weights or usable data.",
+      "classification_review": {
+        "date": "2026-10-25",
+        "category": "causality",
+        "rationale": "Builds persistent, evidence-linked world records connecting objects, geometry, and interaction histories, then tests whether these records teach spatial and temporal reasoning. This is a concrete contribution to grounded knowledge representation for discovery-capable agents.",
+        "pdf_sha256": "662205d62ea53fd4c6ea3540608942f90bfb49124a19f65bf1a001a62dacf6f5",
+        "evidence_pages": [
+          1,
+          3,
+          8
+        ]
+      }
     }
   }
 }

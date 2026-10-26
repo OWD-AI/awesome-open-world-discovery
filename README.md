@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-615-2563eb?style=flat-square" alt="615 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-618-2563eb?style=flat-square" alt="618 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-109-0f766e?style=flat-square" alt="109 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -78,10 +78,10 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 36 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 67 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 68 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 52 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 95 |
-| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 90 |
+| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 92 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 109 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 66 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 100 |
@@ -230,6 +230,8 @@ Each work appears once under its primary contribution; see the [classification g
   Keyu Li, Ruoxu Tan · School of Mathematical Sciences and School of Economics and Management, Tongji University
 - <a id="paper-d6361dc4d470facb"></a>**Generalizing Identifiability Results in Causal Discovery from Complete Data to Missing Data Settings** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19211)* · [Paper](https://arxiv.org/abs/2610.19211)<br>
   Matteo Ceriscioli, Shohei Shimizu, Mallika Gupta, Karthika Mohan · Oregon State University, Causal Intelligence and Reasoning Lab, Corvallis, USA; RIKEN Advanced Intelligence Project, Causal Inference Team, Tokyo, Japan; The University of Osaka, Reasoning for Intelligence Department, Osaka, Japan; +1 institutions
+- <a id="paper-b9a6b3cf4345027c"></a>**Holi-World: Building Holistic World Intelligence from Human-Ego Experience** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26549)* · [Paper](https://arxiv.org/abs/2610.26549) · [Project](https://github.com/Ropedia/holi-world) · [HF Model](https://huggingface.co/ropedia-ai/holiworld-vl) · [Dataset](https://huggingface.co/datasets/ropedia-ai/holiworld-data)<br>
+  Hao Li et al. · Ropedia; NTU; HKUST; +1 institutions
 - <a id="paper-cff6e82a848858e5"></a>**Identifying ODEs from Unstructured Data with Causal Representation Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.37083)* · [Paper](https://arxiv.org/abs/2609.37083)<br>
   Alessandro Trenta, Riccardo Massidda, Davide Bacciu, Sara Magliacane · University of Pisa; Saarland Informatics Campus; Saarland University; +1 institutions
 - <a id="paper-d4efb0c6a2ce0b19"></a>**ITSY: Causal Discovery From Irregular Time-Series Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.23516)* · [Paper](https://arxiv.org/abs/2609.23516)<br>
@@ -775,6 +777,8 @@ Each work appears once under its primary contribution; see the [classification g
   Haoyang Luo et al. · ShanghaiTech University, Shanghai, China; InstAdapt, Shanghai, China
 - <a id="paper-47d9c27401b76abb"></a>**InterMimicGen: Scaling Humanoid Loco-Manipulation through Self-Evolving Motion Imitation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06850)* · [Paper](https://arxiv.org/abs/2610.06850) · [Project](https://sirui-xu.github.io/InterMimicGen/)<br>
   Yucheng Zhang et al. · University of Illinois Urbana-Champaign; NVIDIA
+- <a id="paper-7420a54429f1ece0"></a>**Learning from Fleet Experience: A Collective Learning Paradigm for Robots** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.25736)* · [Paper](https://arxiv.org/abs/2610.25736) · [Project](https://cel-robot-learning.github.io/)<br>
+  Chao Yu et al. · Tsinghua University; AgiBot; Infinigence AI
 - <a id="paper-f67c24c899266324"></a>**Learning to Compose: Recursive Self-Improvement of Shared Executable Stacks for Zero-Shot Long-Horizon Robot Manipulation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24464)* · [Paper](https://arxiv.org/abs/2610.24464) · [Code](https://github.com/cocacola-lab/Recursia) · [Project](https://cocacola-lab.github.io/Recursia-website/)<br>
   Yangzhi Chen et al. · Beijing Jiaotong University; New York University; University of Southern California; +2 institutions
 - <a id="t11"></a>**Learning to Discover at Test Time** · *[ICML 2026](https://proceedings.mlr.press/v306/yuksekgonul26a.html)* · [Paper](https://arxiv.org/html/2601.16175v1) · [Code](https://github.com/test-time-training/discover) · [Project](https://test-time-training.github.io/discover)<br>
@@ -783,6 +787,8 @@ Each work appears once under its primary contribution; see the [classification g
   Zhihui Chen, Mengling Feng · National University of Singapore
 - <a id="paper-bf157ba63fabe951"></a>**Memory as Belief: Bayesian Evolution of Memory for Self-Evolving LLM Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.25119)* · [Paper](https://arxiv.org/abs/2610.25119)<br>
   Yiming Xu et al. · School of Computer Science and Technology, Xi’an Jiaotong University; Shaanxi Provincial Key Laboratory of Big Data Knowledge Engineering, Xi’an Jiaotong University; University of Virginia, Charlottesville, Virginia, USA; +1 institutions
+- <a id="paper-f46e042d0f23b6f7"></a>**MemT-1.0: Towards Memory-Native Evolution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26825)* · [Paper](https://arxiv.org/abs/2610.26825) · [Code](https://github.com/MemTensor/MemT-1.0) · [HF Model](https://huggingface.co/MemTensor/MemT-1.0-Nano)<br>
+  MemTensor Team et al. · NVIDIA
 - <a id="paper-4f24e668bd567dab"></a>**More Memory, Worse Agents: Error Reproduction and Anti-Persistence in LLM Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27406)* · [Paper](https://arxiv.org/abs/2610.27406)<br>
   Ruhan Wang, Kishan Panaganti, Dongruo Zhou · Indiana University; Tencent HY
 - <a id="paper-bb11c7dcbd6603d3"></a>**MOVE: Multimodal Open-world Verification and Expansion for Graph Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00268)* · [Paper](https://arxiv.org/abs/2610.00268)<br>
