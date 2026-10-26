@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**116 usage profiles** · Updated **2026-10-26**
+**117 usage profiles** · Updated **2026-10-26**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1858,6 +1858,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [WhatWorkedBench: Benchmarking Experimental Understanding in AI Agents](#paper-f30aa5f207baccbb) | Executed programs + evaluators | Finite-pool queries | Paper-described |
 | [SCI-AGENT-EXAM: Benchmarking Agents on Scientific Research Tasks](#paper-ff06580726cc267c) | Scientific data + verifiers | Analysis + code | Paper-described |
 | [Dual Exam: Controlled Evaluation of Multimodal Agents and World Models](#paper-817d0cefc6986b31) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making](#paper-01623fe5218eb9ef) | Real data | Analysis + code | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -2569,6 +2570,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Training reward is not established; the paper reports evaluation rather than a demonstrated training loop. Agent evaluators use task-specific verifiers with strict or graded scores on a 0–100 scale. Repair and ToolChoice outcomes use strict full-pass binary scoring; EdgeBench contributes graded optimization scores, with Borden and DABIC clipped to [0,100] by Dual Exam. World-model evaluators use case-specific checks for requested effects, identity and state preservation, shared-state consistency, and rule adherence. |
 | Reset | General reset support is not established. The coupled pilot permits one attempt of at most 20 steps per case with no episode-level retries. Main-track reset and retry interfaces are not established in the supplied pages. |
 | Branching | Branching, state cloning, rollback, and counterfactual rollout support are not established. Fixed world-model intervention sequences do not by themselves establish branching support. |
+
+</details>
+
+<a id="paper-01623fe5218eb9ef"></a>
+
+<details>
+<summary>JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making — details</summary>
+
+[Work](../README.md#paper-01623fe5218eb9ef) · [Source](https://arxiv.org/pdf/2610.19589)
+
+**Focus:** Historical racing records support executed computational experiments in predictive modeling and evidence acquisition. Agents construct and revise programs, receive released recorded outcomes, and forecast subsequent races under a replay clock. Program executes saved predictors; Adaptive Acquisition executes an evidence collector before a fresh per-race LLM forecast. Outcomes are fixed historical records. Betting settlement is retrospective; no new physical measurements or live bets occur.
+
+**Openness:** `Page 1 identifies a code repository.`, `Pages 3 and 12 describe a restricted SDK and sandbox with no external network access.`, `Page 9 states that raw database files and private identifier mappings remain on the evaluation host; public release is subject to permission verification.`
+
+**New physical measurements:** No
+
+**Limits:** The evaluation uses 324 races over ten shared historical days. Evidence is time-gated, pseudonymized, restricted to 97 factual fields, and priced. Odds, expert ratings, and unreleased outcomes are withheld. Resource budgets constrain construction, revision, and execution. Synthetic utility is not strictly proper. Repeated runs share historical outcomes and do not provide independent temporal replications.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Model-training reward or weight optimization is not established. The evaluator releases finishing orders and forecast feedback after sealing predictions. Metrics include smoothed log gain relative to uniform, Top-1, Top-3, and delivery. Program net utility is 100 times accumulated log gain plus an eligible delivery bonus based on Top-1 improvement over uniform, minus priced evidence, tool-call, and CPU costs. Provider fees and retrospective betting returns are reported separately. Candidate validation checks interfaces and resources without selecting by predictive accuracy. |
+| Reset | Pages 4 and 12 establish fresh construction/revision conversation contexts with persistent source, fitted parameters, notes, ledger, and validation feedback; historical training arrays cannot persist on disk. Adaptive Acquisition uses fresh per-race forecasting sessions and retains its validated acquisition program and released summaries. Arbitrary environment reset or replay-to-checkpoint support is not established. |
+| Branching | Page 4 establishes paired daily-revision and frozen trajectories sharing the same initial predictor, schedule, and tariff. Page 15 also identifies three matched frozen acquisition controls. General agent-controlled snapshot branching or counterfactual changes to race outcomes are not established. |
 
 </details>
 

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T14:24:54-04:00",
+  "updated_at": "2026-10-26T16:02:42-04:00",
   "window_start": "2026-09-27",
   "window_end": "2026-10-26",
   "window_days": 30,
@@ -483,6 +483,54 @@
         {
           "label": "Code",
           "url": "https://github.com/zlab-princeton/PaperScorer"
+        }
+      ]
+    },
+    {
+      "title": "PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean",
+      "url": "https://arxiv.org/abs/2610.31810",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "PaperFormalizer converts mathematical papers into reviewed statement dependency graphs and linked Lean developments. Authors resolve ambiguous interpretations and consequential repairs, while agents perform transcription, review, planning, proof construction, and reporting.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 22 October 2026 at 18:46:53 UTC, agreeing with the PDF’s v1 date. This authoritative timestamp supersedes the supplied midnight metadata.",
+      "review_status": "approved",
+      "relevance": "Directly contributes an agent workflow for finding, repairing, and formally verifying gaps in research mathematics, with author oversight and reusable verified knowledge.",
+      "id": "d762df67a1c93fa4",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.31810"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Jiyuan-Tan/PaperFormalizer"
+        },
+        {
+          "label": "Project",
+          "url": "https://paperformalizer.org"
+        }
+      ]
+    },
+    {
+      "title": "On the Token Collapse Phenomenon in Textual Graph Soft Prompting",
+      "url": "https://arxiv.org/abs/2610.31572",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "The paper finds that graph-derived soft prompts can become nearly constant while question-answering accuracy remains strong. It separates representation variability, recoverable content, downstream use, and task performance, and proposes a training procedure that reduces collapse.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 22 October 2026 at 17:13:03 UTC, agreeing with the PDF’s v1 date. This authoritative timestamp supersedes the supplied midnight metadata.",
+      "review_status": "approved",
+      "relevance": "Provides concrete tests of whether relational knowledge representations contain graph information and causally influence answers, directly informing reliable structured knowledge use by discovery agents.",
+      "id": "bed2b1a28486dea6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.31572"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/difra100/Token_Collapse_KGQA"
         }
       ]
     },
@@ -1324,6 +1372,36 @@
       "source": "Codex primary text-and-image checked",
       "id": "da58e2acae5f31a7",
       "links": []
+    },
+    {
+      "title": "LLM2Cert: LLM Synthesis of Certificates with SMT/Lean Verification",
+      "url": "https://arxiv.org/abs/2610.30524",
+      "published_at": "2026-10-21",
+      "kind": "paper",
+      "summary": "LLM2Cert searches for Lyapunov functions, barrier certificates, and feedback policies, then verifies their proof obligations using complementary SMT and Lean backends. DynaCertBench supplies 105 stability, attraction-region, invariance, and safety instances.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 21 October 2026 at 23:09:46 UTC, agreeing with the PDF’s v1 date. This authoritative timestamp supersedes the supplied midnight metadata.",
+      "review_status": "approved",
+      "relevance": "Directly implements discovery of mathematical certificates through candidate proposals, counterexamples, and proof repair, with exact verification targets and an accompanying benchmark of unresolved synthesis problems.",
+      "id": "dd39f6104750943c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.30524"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/FormalCert-AI/llm2cert"
+        },
+        {
+          "label": "Project",
+          "url": "https://formalcert-ai.github.io/llm2cert/"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/FormalCert-AI/llm2cert/tree/main/data"
+        }
+      ]
     },
     {
       "title": "Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought",
@@ -2890,6 +2968,32 @@
       "id": "0ed8e563cfef8c1c"
     },
     {
+      "title": "Judging the Justification: Decision Certificate Supervision for Generative Reward Models",
+      "url": "https://arxiv.org/abs/2610.27528",
+      "published_at": "2026-10-19",
+      "kind": "paper",
+      "summary": "DeCert scores generative judges’ rationales for soundness, coverage of material issues, and support for the final verdict. It converts these assessments into supervised targets and preference pairs, including pairs with identical correct verdicts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 20 October 2026 at 02:44:46 UTC, agreeing with the PDF’s v1 date. This authoritative timestamp supersedes the supplied midnight metadata and falls on 19 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Contributes training for evidence-grounded verification: judges learn to distinguish supported reasoning from unsupported justifications even when verdicts agree. This is relevant to evaluating agents’ knowledge claims, although discovery workflows are not directly tested.",
+      "id": "8d7f564fd9f13e27",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27528"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/UConn-DSIS/DeCert"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/gqbond/DeCert-Llama-3.1-8B"
+        }
+      ]
+    },
+    {
       "title": "Holi-World: Building Holistic World Intelligence from Human-Ego Experience",
       "url": "https://arxiv.org/abs/2610.26549",
       "published_at": "2026-10-19",
@@ -3508,6 +3612,28 @@
       ]
     },
     {
+      "title": "Predictive Closure: A Set-Level Characterization of JEPA's Feature Selection",
+      "url": "https://arxiv.org/abs/2610.27364",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Predictive closure characterizes JEPA feature selection jointly: an unpredictable feature can remain useful when its current value predicts other represented features.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-19T00:00:00.000Z, preserved verbatim. PDF page 1 and the original arXiv submission record confirm 19 October 2026.",
+      "review_status": "approved",
+      "relevance": "Explains which interacting features predictive world models retain and how training interventions steer them. This directly informs representations available to agents for planning and discovering environmental relationships.",
+      "id": "07f581e485bcadb4",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27364"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Mosh0110/predictive-closure"
+        }
+      ]
+    },
+    {
       "title": "PVBench: Quantifying Physical Plausibility in Video Generation with Object-Level Physical Measurements",
       "url": "https://arxiv.org/abs/2610.26711",
       "published_at": "2026-10-18",
@@ -3702,19 +3828,23 @@
       "url": "https://nuglifeleoji.github.io/blog/2026/doodling-in-autoresearch",
       "published_at": "2026-10-18",
       "kind": "blog",
-      "summary": "Changxiu Ji proposes treating memory organization, role-specific context, agent coordination, and evaluation as connected optimization targets for automated research. His commentary compares existing approaches and suggests turning experiment histories into reusable lessons, adapting agent roles, and calibrating cheap evaluation proxies with occasional expensive checks. These are design proposals, not demonstrated improvements from a new system.",
-      "date_evidence": "Supplied primary-source extraction preserves the original blog time element datetime=\"2026-10-18T07:00:00+00:00\", displayed as October 18, 2026.",
-      "relevance": "Identifies concrete optimization targets for continual research systems: memory organization, coordination and evaluator design.",
+      "summary": "Changxiu Ji argues that automated research systems should jointly optimize shared memory, role-specific context, agent coordination, and evaluation. The post compares existing approaches and proposes learning how experiment records become reusable knowledge, how agents cooperate, and how cheap evaluation proxies stay calibrated through expensive checks.",
+      "date_evidence": "Supplied primary-source extraction records the visible publication date October 18, 2026 and its time element datetime=2026-10-18T07:00:00+00:00.",
+      "relevance": "Directly addresses memory, coordination and evaluation as components of a continually improving discovery harness.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "links": [
         {
-          "label": "Announcement",
-          "url": "https://nuglifeleoji.github.io/blog/2026/doodling-in-autoresearch"
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.07625"
         },
         {
           "label": "Paper",
-          "url": "https://arxiv.org/abs/2610.07625"
+          "url": "https://arxiv.org/abs/2610.07447"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.17184"
         }
       ],
       "id": "6af6f7c7e592727b"
@@ -5493,7 +5623,8 @@
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "id": "6e6aab638b2a9ab0",
-      "content_label": "Blog · video not reviewed"
+      "content_label": "Blog · video not reviewed",
+      "links": []
     },
     {
       "title": "Reflect After Failure: Brain-Inspired Self-Evolving Agents for Embodied Spatial Intelligence",
@@ -6210,6 +6341,28 @@
         {
           "label": "Dataset",
           "url": "https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/benchmark"
+        }
+      ]
+    },
+    {
+      "title": "JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making",
+      "url": "https://arxiv.org/abs/2610.19589",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "JockeyBench uses historical horse racing to evaluate persistent forecasting programs and adaptive evidence acquisition under controlled information release and resource costs.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-14T00:00:00.000Z, preserved verbatim. The original arXiv version stamp on PDF page 1 confirms 14 October 2026.",
+      "review_status": "approved",
+      "relevance": "Evaluates agents that acquire evidence, build predictive programs, and revise them after feedback. Frozen controls and separate cost, prediction, and decision metrics provide a concrete evaluation of discovering useful signals and improving retained procedures.",
+      "id": "01623fe5218eb9ef",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19589"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/HKUST-KnowComp/JockeyBench"
         }
       ]
     },
@@ -7413,6 +7566,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.11754"
+        }
+      ]
+    },
+    {
+      "title": "What Git Does Not Record: Provenance Legibility in Two AI-Assisted Research Repositories",
+      "url": "https://arxiv.org/abs/2610.28655",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "An audit of two research repositories shows that current files and AI commit trailers provide incomplete, sometimes misleading evidence of research processes and model involvement.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-09T00:00:00.000Z, preserved verbatim. PDF page 1 and the original arXiv submission record confirm 9 October 2026.",
+      "review_status": "approved",
+      "relevance": "Identifies concrete failures in the evidence retained by AI-assisted research workflows and derives capture requirements for auditable research-agent systems. Its connection is verification infrastructure, rather than improved discovery performance.",
+      "id": "8f34f3543ab3e50d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28655"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ktwu01/git-provenance-auditor"
         }
       ]
     },
@@ -8643,7 +8818,8 @@
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "id": "48388c8501e0d4d8",
-      "content_label": "Blog · video not reviewed"
+      "content_label": "Blog · video not reviewed",
+      "links": []
     },
     {
       "title": "Second-Order Problem Solving for Recursive Self-Improvement in Formal Verification",
@@ -8972,7 +9148,8 @@
       "relevance": "Useful public-facing synthesis that distinguishes levels of RSI and cautions against treating partial research automation as full autonomous self-improvement.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
-      "id": "95f2c46863e1dec4"
+      "id": "95f2c46863e1dec4",
+      "links": []
     },
     {
       "title": "Local Fisher Information Enables Sparse Causal Discovery",
@@ -11038,7 +11215,8 @@
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "id": "3e80dc7c8a5185be",
-      "content_label": "Blog · video not reviewed"
+      "content_label": "Blog · video not reviewed",
+      "links": []
     },
     {
       "title": "The Statistical Cost of Causal Discovery with Feedback",
@@ -11581,6 +11759,54 @@
         {
           "label": "Code",
           "url": "https://github.com/zlab-princeton/PaperScorer"
+        }
+      ]
+    },
+    {
+      "title": "PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean",
+      "url": "https://arxiv.org/abs/2610.31810",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "PaperFormalizer converts mathematical papers into reviewed statement dependency graphs and linked Lean developments. Authors resolve ambiguous interpretations and consequential repairs, while agents perform transcription, review, planning, proof construction, and reporting.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 22 October 2026 at 18:46:53 UTC, agreeing with the PDF’s v1 date. This authoritative timestamp supersedes the supplied midnight metadata.",
+      "review_status": "approved",
+      "relevance": "Directly contributes an agent workflow for finding, repairing, and formally verifying gaps in research mathematics, with author oversight and reusable verified knowledge.",
+      "id": "d762df67a1c93fa4",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.31810"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Jiyuan-Tan/PaperFormalizer"
+        },
+        {
+          "label": "Project",
+          "url": "https://paperformalizer.org"
+        }
+      ]
+    },
+    {
+      "title": "On the Token Collapse Phenomenon in Textual Graph Soft Prompting",
+      "url": "https://arxiv.org/abs/2610.31572",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "The paper finds that graph-derived soft prompts can become nearly constant while question-answering accuracy remains strong. It separates representation variability, recoverable content, downstream use, and task performance, and proposes a training procedure that reduces collapse.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 22 October 2026 at 17:13:03 UTC, agreeing with the PDF’s v1 date. This authoritative timestamp supersedes the supplied midnight metadata.",
+      "review_status": "approved",
+      "relevance": "Provides concrete tests of whether relational knowledge representations contain graph information and causally influence answers, directly informing reliable structured knowledge use by discovery agents.",
+      "id": "bed2b1a28486dea6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.31572"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/difra100/Token_Collapse_KGQA"
         }
       ]
     },
@@ -12165,6 +12391,36 @@
         }
       ],
       "id": "994c8a84ad65793d"
+    },
+    {
+      "title": "LLM2Cert: LLM Synthesis of Certificates with SMT/Lean Verification",
+      "url": "https://arxiv.org/abs/2610.30524",
+      "published_at": "2026-10-21",
+      "kind": "paper",
+      "summary": "LLM2Cert searches for Lyapunov functions, barrier certificates, and feedback policies, then verifies their proof obligations using complementary SMT and Lean backends. DynaCertBench supplies 105 stability, attraction-region, invariance, and safety instances.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 21 October 2026 at 23:09:46 UTC, agreeing with the PDF’s v1 date. This authoritative timestamp supersedes the supplied midnight metadata.",
+      "review_status": "approved",
+      "relevance": "Directly implements discovery of mathematical certificates through candidate proposals, counterexamples, and proof repair, with exact verification targets and an accompanying benchmark of unresolved synthesis problems.",
+      "id": "dd39f6104750943c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.30524"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/FormalCert-AI/llm2cert"
+        },
+        {
+          "label": "Project",
+          "url": "https://formalcert-ai.github.io/llm2cert/"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/FormalCert-AI/llm2cert/tree/main/data"
+        }
+      ]
     },
     {
       "title": "Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought",
@@ -13565,6 +13821,32 @@
       "id": "0ed8e563cfef8c1c"
     },
     {
+      "title": "Judging the Justification: Decision Certificate Supervision for Generative Reward Models",
+      "url": "https://arxiv.org/abs/2610.27528",
+      "published_at": "2026-10-19",
+      "kind": "paper",
+      "summary": "DeCert scores generative judges’ rationales for soundness, coverage of material issues, and support for the final verdict. It converts these assessments into supervised targets and preference pairs, including pairs with identical correct verdicts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history identifies v1 as 20 October 2026 at 02:44:46 UTC, agreeing with the PDF’s v1 date. This authoritative timestamp supersedes the supplied midnight metadata and falls on 19 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Contributes training for evidence-grounded verification: judges learn to distinguish supported reasoning from unsupported justifications even when verdicts agree. This is relevant to evaluating agents’ knowledge claims, although discovery workflows are not directly tested.",
+      "id": "8d7f564fd9f13e27",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27528"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/UConn-DSIS/DeCert"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/gqbond/DeCert-Llama-3.1-8B"
+        }
+      ]
+    },
+    {
       "title": "Holi-World: Building Holistic World Intelligence from Human-Ego Experience",
       "url": "https://arxiv.org/abs/2610.26549",
       "published_at": "2026-10-19",
@@ -14179,6 +14461,28 @@
         {
           "label": "Model",
           "url": "https://huggingface.co/ropedia-ai/Ropedia-W0"
+        }
+      ]
+    },
+    {
+      "title": "Predictive Closure: A Set-Level Characterization of JEPA's Feature Selection",
+      "url": "https://arxiv.org/abs/2610.27364",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "Predictive closure characterizes JEPA feature selection jointly: an unpredictable feature can remain useful when its current value predicts other represented features.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-19T00:00:00.000Z, preserved verbatim. PDF page 1 and the original arXiv submission record confirm 19 October 2026.",
+      "review_status": "approved",
+      "relevance": "Explains which interacting features predictive world models retain and how training interventions steer them. This directly informs representations available to agents for planning and discovering environmental relationships.",
+      "id": "07f581e485bcadb4",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27364"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Mosh0110/predictive-closure"
         }
       ]
     },
@@ -16689,6 +16993,28 @@
       ]
     },
     {
+      "title": "JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making",
+      "url": "https://arxiv.org/abs/2610.19589",
+      "published_at": "2026-10-13",
+      "kind": "paper",
+      "summary": "JockeyBench uses historical horse racing to evaluate persistent forecasting programs and adaptive evidence acquisition under controlled information release and resource costs.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-14T00:00:00.000Z, preserved verbatim. The original arXiv version stamp on PDF page 1 confirms 14 October 2026.",
+      "review_status": "approved",
+      "relevance": "Evaluates agents that acquire evidence, build predictive programs, and revise them after feedback. Frozen controls and separate cost, prediction, and decision metrics provide a concrete evaluation of discovering useful signals and improving retained procedures.",
+      "id": "01623fe5218eb9ef",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19589"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/HKUST-KnowComp/JockeyBench"
+        }
+      ]
+    },
+    {
       "title": "JevGPT: Thinking Fast and Slow in Autonomous Research",
       "url": "https://arxiv.org/abs/2610.18272",
       "published_at": "2026-10-13",
@@ -17849,6 +18175,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.11754"
+        }
+      ]
+    },
+    {
+      "title": "What Git Does Not Record: Provenance Legibility in Two AI-Assisted Research Repositories",
+      "url": "https://arxiv.org/abs/2610.28655",
+      "published_at": "2026-10-08",
+      "kind": "paper",
+      "summary": "An audit of two research repositories shows that current files and AI commit trailers provide incomplete, sometimes misleading evidence of research processes and model involvement.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at is 2026-10-09T00:00:00.000Z, preserved verbatim. PDF page 1 and the original arXiv submission record confirm 9 October 2026.",
+      "review_status": "approved",
+      "relevance": "Identifies concrete failures in the evidence retained by AI-assisted research workflows and derives capture requirements for auditable research-agent systems. Its connection is verification infrastructure, rather than improved discovery performance.",
+      "id": "8f34f3543ab3e50d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.28655"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ktwu01/git-provenance-auditor"
         }
       ]
     },

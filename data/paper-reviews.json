@@ -21183,6 +21183,227 @@
           7
         ]
       }
+    },
+    "paper-d762df67a1c93fa4": {
+      "institutions": [
+        "Stanford University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Separate agents audit natural-language statements, generate counterexamples and repairs, search existing libraries, scaffold Lean statements, and fill proofs with independent faithfulness reviews. Author-approved results can enter a personal toolkit. Evaluation consists of three papers written by the system’s authors.",
+      "evidence": "The detailed treatment-effects case reports Lean proofs for all seven revised results, repairs to five results, 94 explicit interpretations, and four further author-resolved ambiguities. Another case proves twelve optimal-transport results as printed. The neural-causal-model case proves 20 of 29 results and refutes two without claim-preserving repairs. These cases demonstrate research verification and repair, rather than autonomous discovery of new theorems.",
+      "discovery_use": "Directly contributes an agent workflow for finding, repairing, and formally verifying gaps in research mathematics, with author oversight and reusable verified knowledge.",
+      "limits": "The evaluation uses three author-owned papers without controlled baselines, systematic cost measurements, or demonstrated speedups from toolkit reuse. Lean validates formal statements; correspondence to author intent still requires semantic review. Some cited results remain explicit assumptions, including a rate used in the detailed case. The introduction’s broad formalization language should therefore be read alongside the partial completion reported for the neural-causal-model case. All ten supplied text pages were reviewed; only the two supplied images were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "systems",
+        "rationale": "Directly contributes an agent workflow for finding, repairing, and formally verifying gaps in research mathematics, with author oversight and reusable verified knowledge.",
+        "pdf_sha256": "7747096b09bdffe7cb908fcef7574a05bf29b43d0f1f781843fb74cc07ba974c",
+        "evidence_pages": [
+          1,
+          3,
+          7
+        ]
+      }
+    },
+    "paper-bed2b1a28486dea6": {
+      "institutions": [
+        "Sapienza University of Rome, Rome, Italy",
+        "ISTI-CNR, Pisa, Italy",
+        "University of Cambridge, Cambridge, UK",
+        "University of Pisa, Pisa, Italy"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The audit combines token geometry, matched graph-free controls, fixed-weight token replacement and graph corruption, gold-answer likelihood, and held-out decoding probes. Three GraphQA benchmarks, multiple encoders, two LLM families, and later graph-prompting implementations are examined. A contrastively aligned frozen encoder feeds separate graph-token and shared-prompt pathways.",
+      "evidence": "Baseline token cosines range from 0.985 to 0.998 despite more variable encoder outputs. In the default Llama configuration, graph-free constant prompts match or exceed G-Retriever, while token substitutions remain below the prespecified answer-effect threshold. Removing verbalized graphs causes much larger losses. The proposed pipeline reduces collapse, but graph use and accuracy can diverge: Llama SceneGraphs accuracy falls from 81.35% to 72.50% despite a resolved graph-replacement effect.",
+      "discovery_use": "Provides concrete tests of whether relational knowledge representations contain graph information and causally influence answers, directly informing reliable structured knowledge use by discovery agents.",
+      "limits": "This is evidence about graph-language interfaces, not discovery of real-world causal structure. Detailed analysis covers three QA datasets; later-method audits use controlled WebQSP adaptations. Proposed causes remain associative. Graph swapping tests graph-question pairing rather than fact-level reasoning, and probes measure recoverability rather than use. Numerical decoding instability motivates effect-size thresholds, and reported significance tests are unadjusted. Review covered supplied pages 1–16 of 55, including methods, results, limitations, and selected protocol appendices; the remaining appendices were not reviewed.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "causality",
+        "rationale": "Provides concrete tests of whether relational knowledge representations contain graph information and causally influence answers, directly informing reliable structured knowledge use by discovery agents.",
+        "pdf_sha256": "6e6570ffe13404814c2028a9e6c1876e3a86699c57c181731e45b9a6ba8a2438",
+        "evidence_pages": [
+          1,
+          6,
+          9
+        ]
+      }
+    },
+    "paper-dd39f6104750943c": {
+      "institutions": [
+        "Institute of Software, Chinese Academy of Sciences (CAS)",
+        "School of Advanced Interdisciplinary Sciences, University of Chinese Academy of Sciences",
+        "Language Technologies Institute, School of Computer Science, Carnegie Mellon University",
+        "Computing + Mathematical Sciences Department, California Institute of Technology",
+        "Department of Computer Science, University of Oxford",
+        "Gigaton Technologies Ltd",
+        "Institute of Geographic Sciences and Natural Resources Research, CAS",
+        "University of Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An LLM proposes symbolic candidates. Sampled-state screening rejects obvious violations, and a router dispatches fixed obligations to SMT or Lean. SMT counterexamples and structured Lean compiler diagnostics guide subsequent proposals or proof repairs. Acceptance requires every obligation to have an SMT unsat verdict or an audited Lean proof. Experiments include end-to-end baselines and fixed-candidate backend comparisons.",
+      "evidence": "The full system verifies 81/105 instances, compared with 57 for SMT-only and 60 for Lean-only configurations. The reconstructed no-feedback subset contains 63 successes, giving an 18-instance gain. On 51 baseline-supported systems, LLM2Cert verifies 40 versus 19 native baseline successes, of which 11 survive strict rechecking. On the 81 selected fixed certificates, All-SMT verifies 59 and All-Lean 64. Structured repair completes 21/26 initially failed obligations versus 17 with raw diagnostics and one with generic retry.",
+      "discovery_use": "Directly implements discovery of mathematical certificates through candidate proposals, counterexamples, and proof repair, with exact verification targets and an accompanying benchmark of unresolved synthesis problems.",
+      "limits": "The fixed-candidate analysis selects certificates already solved by the full system, so it does not estimate general backend coverage. External baselines support only subsets, and one-shot results are reconstructed rather than an independent rerun. Acceptance retains trust in SMT solvers and faithful encodings; only Lean-handled obligations receive kernel-checked proofs. The benchmark is curated, primarily deterministic, and does not optimize certified-region size. Review covered supplied pages 1–16 of 59, including the main experiments and limitations, without exhaustive appendix inspection.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "sci_methods",
+        "rationale": "Directly implements discovery of mathematical certificates through candidate proposals, counterexamples, and proof repair, with exact verification targets and an accompanying benchmark of unresolved synthesis problems.",
+        "pdf_sha256": "b5c569fbcbfcbb456f6122db1c10aaeec862e5d81ad167429918d8db5d463077",
+        "evidence_pages": [
+          1,
+          4,
+          9
+        ]
+      }
+    },
+    "paper-8d7f564fd9f13e27": {
+      "institutions": [
+        "School of Computing, University of Connecticut",
+        "NEC Labs America"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Judgments are represented as dependent atomic claims. Grounding and inference checks propagate validity, an independent analyzer identifies material issues, and criterion intervals yield a conservative verdict-support score. Certificate scores and known preference labels rank sampled judgments. Two 8B model families receive SFT followed by DPO, evaluated on preference accuracy, rationale quality, evidence edits, and response-order robustness.",
+      "evidence": "Compared with outcome-only training, RM-Bench accuracy rises from 63.3% to 67.0% for Llama and from 73.5% to 76.2% for Qwen; JudgeBench also improves. Llama’s HelpSteer3 accuracy rises from 63.9% to 73.0%, and correctness under both response orders rises from 45.2% to 60.0%. Rationale-pair ablations improve reference-based rationale scores. Counterfactual evidence adaptation rises from 64.5% to 88.9%, while stale rationales decrease.",
+      "discovery_use": "Contributes training for evidence-grounded verification: judges learn to distinguish supported reasoning from unsupported justifications even when verdicts agree. This is relevant to evaluating agents’ knowledge claims, although discovery workflows are not directly tested.",
+      "limits": "Decision certificates are assessed by fallible learned analyzers rather than formal proof checkers. The selected issue analyzer has reported F1 of 0.288 on the human-annotated comparison, limiting grounding reliability. Experiments cover two 8B families and pairwise judging, without downstream RL or scientific-discovery evaluations. Evidence-sensitive explanations do not establish faithfulness to latent decision processes. Coverage remains difficult, and score aggregation trades harmful-edit detection against false positives. All 21 supplied text pages were reviewed; only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "learning",
+        "rationale": "Contributes training for evidence-grounded verification: judges learn to distinguish supported reasoning from unsupported justifications even when verdicts agree. This is relevant to evaluating agents’ knowledge claims, although discovery workflows are not directly tested.",
+        "pdf_sha256": "f62e1b8257d55758d35224ec0b34803e27e47fcceb00cbcc6fc588455f048b09",
+        "evidence_pages": [
+          1,
+          4,
+          9
+        ]
+      }
+    },
+    "paper-07f581e485bcadb4": {
+      "institutions": [
+        "Bar-Ilan University",
+        "University of California, Berkeley",
+        "Allen Institute for AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Derives a feature-set objective maximizing temporal mutual information under fixed latent-distribution and Gaussian prediction-error assumptions. Tests selection and steering predictions with controlled CIFAR-10 collage sequences, three-dimensional latents, and held-out decoding probes. Most experiments use three training seeds; auxiliary reconstruction uses one.",
+      "evidence": "Increasing an unpredictable light’s predictive usefulness improves its decoding. Strengthening one predictive pair displaces an unchanged competing pair. Enlarging a predictive cycle reduces its representation. Reconstruction and predictor side information can strengthen an untargeted predictive partner.",
+      "discovery_use": "Explains which interacting features predictive world models retain and how training interventions steer them. This directly informs representations available to agents for planning and discovering environmental relationships.",
+      "limits": "The exact information-theoretic equivalence requires restrictive distribution and prediction-error assumptions; without the Gaussian assumption, prediction loss optimizes a lower bound. Synthetic experiments establish qualitative effects, not gains in natural-data planning or discovery. Cycle size changes tile scale and layout. Probes do not establish position binding. Side information adds encoder capacity and produces some feature asymmetries unexplained by the characterization. Genuine action conditioning remains untested.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "causality",
+        "rationale": "Explains which interacting features predictive world models retain and how training interventions steer them. This directly informs representations available to agents for planning and discovering environmental relationships.",
+        "pdf_sha256": "b114d69a751120780e1f27b5531e6628a57c57d70ef0fe4f250974f9c7b52f22",
+        "evidence_pages": [
+          1,
+          4,
+          9
+        ]
+      }
+    },
+    "paper-01623fe5218eb9ef": {
+      "institutions": [
+        "The Hong Kong University of Science and Technology",
+        "Tsy Capital Limited",
+        "Independent researcher",
+        "Hong Kong Baptist University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Provides time-gated, pseudonymized factual records through priced tools while withholding odds, expert ratings, and future outcomes. Compares daily program revision against matched frozen initial programs across 28 configurations and 324 races over ten days. A four-model comparison contrasts reusable predictors with evidence collectors followed by fresh per-race LLM forecasts.",
+      "evidence": "The paper reports seven significant revision gains and two declines after multiple-testing correction. Strong final forecasting scores can occur without revision gains. Every configuration loses money on average under retrospective capped-Kelly settlement. Program has higher mean betting profit and lower research fees than Adaptive Acquisition for all four compared models, although both workflows lose on average.",
+      "discovery_use": "Evaluates agents that acquire evidence, build predictive programs, and revise them after feedback. Frozen controls and separate cost, prediction, and decision metrics provide a concrete evaluation of discovering useful signals and improving retained procedures.",
+      "limits": "This is a targeted review of supplied pages 1–16 of 39; later statistical, settlement, diagnostic, and release appendices were not inspected. Results share one historical evaluation window, and workflow cohorts are small and unequal. Revision contrasts include debugging and additional analysis, not outcome learning alone. Model and scaffold effects are confounded. Synthetic utility is not strictly proper; betting results exclude research and provider fees. Raw data redistribution is restricted. The current public repository describes a release profile and result snapshot that differ from the supplied paper cohort.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "benchmarks",
+        "rationale": "Evaluates agents that acquire evidence, build predictive programs, and revise them after feedback. Frozen controls and separate cost, prediction, and decision metrics provide a concrete evaluation of discovering useful signals and improving retained procedures.",
+        "pdf_sha256": "a13324246b46e272035733b20b7450afc6359d1fa7c5da228bb8f03749719a07",
+        "evidence_pages": [
+          1,
+          4,
+          7
+        ]
+      }
+    },
+    "paper-8f34f3543ab3e50d": {
+      "institutions": [
+        "The University of Texas at Austin",
+        "University of California, Los Angeles",
+        "University of Oxford"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Audits fixed census commits in two repositories from one investigator. Measures gross inserted lines versus current visibility, revision survival through blame, alternative history queries, disclosure trailer coverage, and within-repository file baselines. Separately codes what evidence supports reconstructing the origins of standing rules.",
+      "evidence": "Standing rules retain 85.6% of gross committed lines, compared with 21.8% for the running scratchpad. Revision survival differs much less. One trailer key captures only 66 of 121 commits carrying any AI trailer in Project A; only one of 39 scratchpad-changing commits carries it in Project B. The resulting requirements include recording acceptance events, exposing narrative history, and separating involvement from tool identity.",
+      "discovery_use": "Identifies concrete failures in the evidence retained by AI-assisted research workflows and derives capture requirements for auditable research-agent systems. Its connection is verification infrastructure, rather than improved discovery performance.",
+      "limits": "Two repositories from one author establish failure cases, not prevalence or causal effects. Tool, project, period, and trace format are confounded. Scratchpad edits are an imperfect proxy for agent activity. The temporal boundary was selected after inspection. Line counts measure gross insertions rather than distinct episodes, and results depend on history queries. Qualitative coding is outcome-aware and performed by the repository author. Proposed capture requirements are not evaluated as an implemented research harness.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "systems",
+        "rationale": "Identifies concrete failures in the evidence retained by AI-assisted research workflows and derives capture requirements for auditable research-agent systems. Its connection is verification infrastructure, rather than improved discovery performance.",
+        "pdf_sha256": "17e7c38077e9317ed4271582cf7482f1f79781d880799b393f500cc6cc99b12f",
+        "evidence_pages": [
+          1,
+          6,
+          9
+        ]
+      }
     }
   }
 }
