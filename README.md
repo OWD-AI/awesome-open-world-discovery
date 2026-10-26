@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-618-2563eb?style=flat-square" alt="618 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-619-2563eb?style=flat-square" alt="619 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-109-0f766e?style=flat-square" alt="109 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -79,7 +79,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 36 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 68 |
-| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 52 |
+| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 53 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 95 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 92 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 109 |
@@ -412,6 +412,8 @@ Each work appears once under its primary contribution; see the [classification g
   Danial Noori Zadeh, Devanshu Prasad, Mohamed B. Elamien · Department of Electrical and Computer Engineering, McMaster University
 - <a id="paper-c70675c50ebe2aee"></a>**MultiEcho: An Experimental Science of Learned Worlds** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.33347)* · [Paper](https://arxiv.org/abs/2609.33347)<br>
   Meng Zhu, Airui Zhang · SHIHAO XINRUI Group
+- <a id="paper-456c7c8f7dcbfa06"></a>**Null Controls Are Necessary but Not Sufficient: Evaluating Acceptance Guards for Scientific Discovery and Interpretability** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22445)* · [Paper](https://arxiv.org/abs/2610.22445) · [Project](https://real-project-aether.github.io/project-aether/)<br>
+  Tianyu Wu · Project Aether
 - <a id="paper-c0e89760c2e30631"></a>**Open-ended Scientific Discovery with Possibilistic Reasoning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.11289)* · [Paper](https://arxiv.org/abs/2610.11289)<br>
   Anita Yang et al. · Lattice Lab, Toyota Motor Corporation, Japan; Department of Computer Science, University of Tokyo, Japan; EPIC Lab, College of Computing & Data Science, Nanyang Technological University, Singapore; +2 institutions
 - <a id="paper-e943a5c4fbfc9794"></a>**Pre-registered tests of solid-state-physics-inspired LLM compression: a cluster-level negative result at small-language-model scale** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.34292)* · [Paper](https://arxiv.org/abs/2609.34292)<br>
