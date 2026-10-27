@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T05:03:33-04:00",
+  "updated_at": "2026-10-27T06:05:51-04:00",
   "window_start": "2026-09-28",
   "window_end": "2026-10-27",
   "window_days": 30,
@@ -521,6 +521,36 @@
       ]
     },
     {
+      "title": "RSI Arena: Towards Recursive Self-Improvement with Human Feedback",
+      "url": "https://arxiv.org/abs/2610.33624",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "RSI Arena studies whether research agents can independently turn a shared base model into useful assistants and then improve their submissions using users’ judgments. It provides evidence about autonomous research feasibility and the differences between capability, preference, and safety improvements.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-24T11:54:45Z; the first-page version stamp corroborates October 24, 2026.",
+      "review_status": "approved",
+      "relevance": "Introduces a concrete evaluation protocol for autonomous model-development agents, including sustained experimentation, resource constraints, and subsequent improvement using human feedback.",
+      "id": "7f92942419dc62bc",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33624"
+        },
+        {
+          "label": "Project",
+          "url": "https://rsiarena.org/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/RSIArena/RSIAgent-Aspen-Stage1"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/RSIArena/RSIAgent-Aspen-Stage2"
+        }
+      ]
+    },
+    {
       "title": "PACE: Research Proving Agent for Adaptive Conjecture Exploration",
       "url": "https://arxiv.org/abs/2610.33690",
       "published_at": "2026-10-24",
@@ -561,6 +591,46 @@
         {
           "label": "Dataset",
           "url": "https://github.com/AIforIP/PatEx-Gym/tree/main/bench"
+        }
+      ]
+    },
+    {
+      "title": "More: Mode-Optimized Reasoning with Self-Adaptive Effort for Self-Evolving Agents",
+      "url": "https://arxiv.org/abs/2610.33684",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "MORE teaches a shared proposer–solver policy to choose among four reasoning forms while regulating their token costs. Its contribution is a training mechanism that adapts reasoning behavior as the agent’s competence and generated task distribution change.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives 2026-10-24T14:03:20Z as the original publication timestamp. The official arXiv submission history independently confirms that exact v1 timestamp.",
+      "review_status": "approved",
+      "relevance": "Trains agents to generate verifiable learning tasks and jointly improve reasoning-mode selection and computational effort, directly connecting post-training with learning to discover and solve new tasks.",
+      "id": "e2843f98db0b548f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33684"
+        }
+      ]
+    },
+    {
+      "title": "LegoSR: A Unified Framework for Self-improving Agent-Guided Scientific Discovery",
+      "url": "https://arxiv.org/abs/2610.33465",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "LegoSR makes heterogeneous equation-discovery methods interoperable and adds a controller that decides which experiments to run next. Its discovery contribution combines shared equation objects, numerical checks, structured search history, and lessons transferred between tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-24T05:36:55Z; the first-page version stamp corroborates October 24, 2026.",
+      "review_status": "approved",
+      "relevance": "Provides an agent harness explicitly designed to discover and verify scientific equations through solver coordination, experimental feedback, partial hypotheses, and retained experience.",
+      "id": "fc3b7e421ef0a1e9",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33465"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Scientific-Artificial-Intelligence-Lab/kd"
         }
       ]
     },
@@ -849,6 +919,28 @@
       ]
     },
     {
+      "title": "Optimal Correction Sets for Provable Redress of Contestable Causal Discovery",
+      "url": "https://arxiv.org/abs/2610.33138",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "OptABA-PC treats incompatible conditional-independence test outcomes as an explicit evidence-repair problem. It identifies which facts to release, explains those releases through conflicts, and supports principled revisions when a user contests a decision.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-23T16:01:53Z; the first-page version stamp corroborates October 23, 2026.",
+      "review_status": "approved",
+      "relevance": "Directly improves causal discovery by making conflicting empirical evidence repairable, inspectable, and revisable with formal guarantees connecting retained evidence to returned causal graphs.",
+      "id": "28263e185eb4c918",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33138"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/briziorusso/ArgCausalDisco"
+        }
+      ]
+    },
+    {
       "title": "On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models",
       "url": "https://arxiv.org/abs/2610.32770",
       "published_at": "2026-10-23",
@@ -863,6 +955,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.32770"
+        }
+      ]
+    },
+    {
+      "title": "Mycelium: A Meta-Study of Hallucination Detection Across Provenance, Typology, and Granularities",
+      "url": "https://arxiv.org/abs/2610.33608",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "Mycelium organizes hallucination detection benchmarks by provenance, error typology, and annotation granularity. It explains how evidence conditions, output alignment, and scoring rules change the capability being measured.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Preserved the supplied original_published_at timestamp. The original PDF and arXiv v1 submission history independently confirm 24 October 2026; the supplied midnight timestamp comes from Hugging Face publication metadata.",
+      "review_status": "approved",
+      "relevance": "Provides a measurement framework for knowledge verification, explaining when hallucination detector results support generalization claims. This directly informs verification components used by discovery agents.",
+      "id": "1c4fe91ded721a1e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33608"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/lmeribal/mycelium"
         }
       ]
     },
@@ -922,6 +1036,28 @@
       "source": "Codex primary text-and-image checked",
       "links": [],
       "id": "70e7097634bebb61"
+    },
+    {
+      "title": "Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL",
+      "url": "https://arxiv.org/abs/2610.33512",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "FORK addresses rubric reward hacking by balancing required-content coverage with the precision of generated content. It trains models to answer more concisely while reducing unnecessary and incorrect statements.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Preserved the supplied original_published_at timestamp. The original PDF and arXiv v1 submission history confirm 24 October 2026; the supplied midnight timestamp comes from Hugging Face publication metadata.",
+      "review_status": "approved",
+      "relevance": "Contributes a post-training objective that rewards necessary, factually correct content and evaluates transfer to scholarly question answering. This is a concrete training contribution to reliable knowledge generation, although autonomous investigation is not tested.",
+      "id": "f403a911c87fbaff",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33512"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JHKim631/FORK"
+        }
+      ]
     },
     {
       "title": "Distill, Debate, Discover: Grounding Multi-Agent Research Ideation in Graph-Distilled Insights",
@@ -1004,6 +1140,32 @@
         {
           "label": "Code",
           "url": "https://github.com/aigc3d/World-in-Context"
+        }
+      ]
+    },
+    {
+      "title": "VibeGame: Prompt-to-Game Development with AI-Native Engine and Self-Evolving Adversarial Agent Team",
+      "url": "https://arxiv.org/abs/2610.33106",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "VibeGame creates playable 2D games through a structured engine interface and an eight-role agent team. It combines static auditing, controlled play-testing, final review, and reuse of accepted project experience.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp matches arXiv v1 submission history: 22 October 2026 at 18:03:17 UTC. The manuscript's 27 October date is not the original publication event.",
+      "review_status": "approved",
+      "relevance": "Contributes an agent harness combining controllable execution, independent behavioral verification, and retained validated experience. These mechanisms concretely support agents discovering failures and improving subsequent work beyond ordinary game-generation tooling.",
+      "id": "8324cd60ab31faa0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33106"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/tettethu/VibeGame"
+        },
+        {
+          "label": "Project",
+          "url": "https://vibegame.tettet.org/"
         }
       ]
     },
@@ -5229,6 +5391,28 @@
         {
           "label": "Code",
           "url": "https://github.com/CaoYuanpu/ProD"
+        }
+      ]
+    },
+    {
+      "title": "Organon : From Evolutionary Search to Recursive Self-Improving Agents for Scientific Discovery",
+      "url": "https://arxiv.org/abs/2610.33046",
+      "published_at": "2026-10-16",
+      "kind": "paper",
+      "summary": "Organon maintains one persistent research agent while allowing its operational components to change during program search. Candidate populations and experimental histories survive component replacement and reversal.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp matches arXiv v1 submission history: 17 October 2026 at 02:27:47 UTC. This corresponds to 16 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly studies discovery agents that revise their search policies, diagnostic tools, memory, coordination, and revision procedures during computational investigations.",
+      "id": "685e075936202295",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33046"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/cheikh025/Organon"
         }
       ]
     },
@@ -12508,6 +12692,36 @@
       ]
     },
     {
+      "title": "RSI Arena: Towards Recursive Self-Improvement with Human Feedback",
+      "url": "https://arxiv.org/abs/2610.33624",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "RSI Arena studies whether research agents can independently turn a shared base model into useful assistants and then improve their submissions using users’ judgments. It provides evidence about autonomous research feasibility and the differences between capability, preference, and safety improvements.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-24T11:54:45Z; the first-page version stamp corroborates October 24, 2026.",
+      "review_status": "approved",
+      "relevance": "Introduces a concrete evaluation protocol for autonomous model-development agents, including sustained experimentation, resource constraints, and subsequent improvement using human feedback.",
+      "id": "7f92942419dc62bc",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33624"
+        },
+        {
+          "label": "Project",
+          "url": "https://rsiarena.org/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/RSIArena/RSIAgent-Aspen-Stage1"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/RSIArena/RSIAgent-Aspen-Stage2"
+        }
+      ]
+    },
+    {
       "title": "PACE: Research Proving Agent for Adaptive Conjecture Exploration",
       "url": "https://arxiv.org/abs/2610.33690",
       "published_at": "2026-10-24",
@@ -12548,6 +12762,46 @@
         {
           "label": "Dataset",
           "url": "https://github.com/AIforIP/PatEx-Gym/tree/main/bench"
+        }
+      ]
+    },
+    {
+      "title": "More: Mode-Optimized Reasoning with Self-Adaptive Effort for Self-Evolving Agents",
+      "url": "https://arxiv.org/abs/2610.33684",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "MORE teaches a shared proposer–solver policy to choose among four reasoning forms while regulating their token costs. Its contribution is a training mechanism that adapts reasoning behavior as the agent’s competence and generated task distribution change.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom metadata gives 2026-10-24T14:03:20Z as the original publication timestamp. The official arXiv submission history independently confirms that exact v1 timestamp.",
+      "review_status": "approved",
+      "relevance": "Trains agents to generate verifiable learning tasks and jointly improve reasoning-mode selection and computational effort, directly connecting post-training with learning to discover and solve new tasks.",
+      "id": "e2843f98db0b548f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33684"
+        }
+      ]
+    },
+    {
+      "title": "LegoSR: A Unified Framework for Self-improving Agent-Guided Scientific Discovery",
+      "url": "https://arxiv.org/abs/2610.33465",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "LegoSR makes heterogeneous equation-discovery methods interoperable and adds a controller that decides which experiments to run next. Its discovery contribution combines shared equation objects, numerical checks, structured search history, and lessons transferred between tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-24T05:36:55Z; the first-page version stamp corroborates October 24, 2026.",
+      "review_status": "approved",
+      "relevance": "Provides an agent harness explicitly designed to discover and verify scientific equations through solver coordination, experimental feedback, partial hypotheses, and retained experience.",
+      "id": "fc3b7e421ef0a1e9",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33465"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Scientific-Artificial-Intelligence-Lab/kd"
         }
       ]
     },
@@ -12792,6 +13046,28 @@
       ]
     },
     {
+      "title": "Optimal Correction Sets for Provable Redress of Contestable Causal Discovery",
+      "url": "https://arxiv.org/abs/2610.33138",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "OptABA-PC treats incompatible conditional-independence test outcomes as an explicit evidence-repair problem. It identifies which facts to release, explains those releases through conflicts, and supports principled revisions when a user contests a decision.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary-source arXiv Atom metadata identifies the original publication timestamp as 2026-10-23T16:01:53Z; the first-page version stamp corroborates October 23, 2026.",
+      "review_status": "approved",
+      "relevance": "Directly improves causal discovery by making conflicting empirical evidence repairable, inspectable, and revisable with formal guarantees connecting retained evidence to returned causal graphs.",
+      "id": "28263e185eb4c918",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33138"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/briziorusso/ArgCausalDisco"
+        }
+      ]
+    },
+    {
       "title": "On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models",
       "url": "https://arxiv.org/abs/2610.32770",
       "published_at": "2026-10-23",
@@ -12810,6 +13086,28 @@
       ]
     },
     {
+      "title": "Mycelium: A Meta-Study of Hallucination Detection Across Provenance, Typology, and Granularities",
+      "url": "https://arxiv.org/abs/2610.33608",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "Mycelium organizes hallucination detection benchmarks by provenance, error typology, and annotation granularity. It explains how evidence conditions, output alignment, and scoring rules change the capability being measured.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Preserved the supplied original_published_at timestamp. The original PDF and arXiv v1 submission history independently confirm 24 October 2026; the supplied midnight timestamp comes from Hugging Face publication metadata.",
+      "review_status": "approved",
+      "relevance": "Provides a measurement framework for knowledge verification, explaining when hallucination detector results support generalization claims. This directly informs verification components used by discovery agents.",
+      "id": "1c4fe91ded721a1e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33608"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/lmeribal/mycelium"
+        }
+      ]
+    },
+    {
       "title": "HarnessMM: Recursive Self-Improvement for Harness Token Efficiency",
       "url": "https://arxiv.org/abs/2610.32813",
       "published_at": "2026-10-23",
@@ -12824,6 +13122,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.32813"
+        }
+      ]
+    },
+    {
+      "title": "Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL",
+      "url": "https://arxiv.org/abs/2610.33512",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "FORK addresses rubric reward hacking by balancing required-content coverage with the precision of generated content. It trains models to answer more concisely while reducing unnecessary and incorrect statements.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Preserved the supplied original_published_at timestamp. The original PDF and arXiv v1 submission history confirm 24 October 2026; the supplied midnight timestamp comes from Hugging Face publication metadata.",
+      "review_status": "approved",
+      "relevance": "Contributes a post-training objective that rewards necessary, factually correct content and evaluates transfer to scholarly question answering. This is a concrete training contribution to reliable knowledge generation, although autonomous investigation is not tested.",
+      "id": "f403a911c87fbaff",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33512"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JHKim631/FORK"
         }
       ]
     },
@@ -12890,6 +13210,32 @@
         {
           "label": "Code",
           "url": "https://github.com/aigc3d/World-in-Context"
+        }
+      ]
+    },
+    {
+      "title": "VibeGame: Prompt-to-Game Development with AI-Native Engine and Self-Evolving Adversarial Agent Team",
+      "url": "https://arxiv.org/abs/2610.33106",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "VibeGame creates playable 2D games through a structured engine interface and an eight-role agent team. It combines static auditing, controlled play-testing, final review, and reuse of accepted project experience.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp matches arXiv v1 submission history: 22 October 2026 at 18:03:17 UTC. The manuscript's 27 October date is not the original publication event.",
+      "review_status": "approved",
+      "relevance": "Contributes an agent harness combining controllable execution, independent behavioral verification, and retained validated experience. These mechanisms concretely support agents discovering failures and improving subsequent work beyond ordinary game-generation tooling.",
+      "id": "8324cd60ab31faa0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33106"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/tettethu/VibeGame"
+        },
+        {
+          "label": "Project",
+          "url": "https://vibegame.tettet.org/"
         }
       ]
     },
@@ -16596,6 +16942,28 @@
         {
           "label": "Code",
           "url": "https://github.com/CaoYuanpu/ProD"
+        }
+      ]
+    },
+    {
+      "title": "Organon : From Evolutionary Search to Recursive Self-Improving Agents for Scientific Discovery",
+      "url": "https://arxiv.org/abs/2610.33046",
+      "published_at": "2026-10-16",
+      "kind": "paper",
+      "summary": "Organon maintains one persistent research agent while allowing its operational components to change during program search. Candidate populations and experimental histories survive component replacement and reversal.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp matches arXiv v1 submission history: 17 October 2026 at 02:27:47 UTC. This corresponds to 16 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly studies discovery agents that revise their search policies, diagnostic tools, memory, coordination, and revision procedures during computational investigations.",
+      "id": "685e075936202295",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33046"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/cheikh025/Organon"
         }
       ]
     },

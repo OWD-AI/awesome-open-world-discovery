@@ -2875,6 +2875,30 @@
       "name": "Humans in Space: Can MLLMs Construct Human-Centric Spatial Understanding via Active Exocentric Exploration?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.34149"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Public internet access and agent-selected legitimate training data and methods.",
+        "Submitted model checkpoints released on Hugging Face; the Stage 1 Grok repository contains an earlier nomination rather than its final model.",
+        "Public daily reports and training livestream.",
+        "Public release of the complete harness and evaluator code is not established."
+      ],
+      "focus": "Autonomous language-model post-training through actual GPU training and evaluation jobs. Agents select data, write code, run internal evaluations, and nominate checkpoints. Stage 2 supplies recorded human comparisons of their Stage 1 models. Final evaluation also collects fresh human votes on executed model responses. These are computational research experiments with human preference evaluation; no scientific simulator or new physical laboratory measurements are described.",
+      "limits": "Stage 1 allows 144 hours, 1,000 GPU-hours and $300 API credit per agent; Stage 2 allows 72 hours, 500 GPU-hours and $150. Agents share a 64-GPU cluster, face queues and preemption, and have job and storage limits. Evaluation data are held out, and training on benchmark test data is prohibited. Evidence covers one base model and one run per agent. Research-agent models remain unchanged. Separate human arenas are connected through NVIDIA Instruct, and style adjustment is observational.",
+      "training": {
+        "reward": "No single prescribed training reward for the research agents is established. Agents choose their own training objectives and internal checkpoint-selection tests. All Stage 1 submissions use supervised fine-tuning, and six add preference optimization. Stage 2 provides one snapshot of 213–276 accepted battles per agent, including questions, both responses and votes. Final evaluation uses 20 capability and safety benchmarks, including nine LLM-judged benchmarks, and blind human votes fitted with Bradley–Terry ratings, with and without style control. Cheating receives a score of zero.",
+        "reset": "Retraining from the base model is supported and observed. Stage 2 normally resumes each agent's Stage 1 model, notes, code, data and checkpoints. Harness sessions can restart after provider failures or platform updates. A general environment-reset API and reproducible full-state reset are not established.",
+        "branching": "Agents can train and compare alternative models, retain checkpoints, run multiple jobs and nominate repeatedly. The latest accepted nomination becomes final. Explicit cloning or rollback of the complete environment state is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-7f92942419dc62bc",
+      "resource_id": "paper-7f92942419dc62bc",
+      "name": "RSI Arena: Towards Recursive Self-Improvement with Human Feedback",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.33624"
     }
   ]
 }

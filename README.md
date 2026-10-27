@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-676-2563eb?style=flat-square" alt="676 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-128-0f766e?style=flat-square" alt="128 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-684-2563eb?style=flat-square" alt="684 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-129-0f766e?style=flat-square" alt="129 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -77,14 +77,14 @@ Visit the website for summaries, figures, today's updates, and the full research
 
 | Topic | Research question | Works |
 | --- | --- | ---: |
-| 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 39 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 72 |
+| 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 73 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 57 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 107 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 109 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 96 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 115 |
-| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 71 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 119 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 117 |
+| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 72 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 120 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -140,6 +140,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ruochen Li, Zhiyu Chen · University of Texas at Dallas
 - <a id="paper-1178f409c73ca56a"></a>**Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30108)* · [Paper](https://arxiv.org/abs/2610.30108) · [Project](https://showlab.github.io/Awesome-Multimodal-Embodied-Agent)<br>
   Yanzhe Chen et al. · Show Lab, National University of Singapore
+- <a id="paper-1c4fe91ded721a1e"></a>**Mycelium: A Meta-Study of Hallucination Detection Across Provenance, Typology, and Granularities** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33608)* · [Paper](https://arxiv.org/abs/2610.33608) · [Code](https://github.com/lmeribal/mycelium)<br>
+  Julia Belikova, Elisei Rykov · Skoltech; Sber AI Lab
 - <a id="paper-ec9a86ab8654e080"></a>**On the Tip of the Tongue: First-Token Cueing as a Behavioral Probe of Recall Failures in LLMs** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23400)* · [Paper](https://arxiv.org/abs/2610.23400)<br>
   Jaewon Sok et al. · Seoul National University
 - <a id="paper-94d5d577ef0fe3a4"></a>**Open-world AI: a Tale of Three Requirements** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.20782)* · [Paper](https://arxiv.org/abs/2610.20782) · [Code](https://github.com/facebookresearch/MemoryMosaics)<br>
@@ -266,6 +268,8 @@ Each work appears once under its primary contribution; see the [classification g
   Kurt Butler et al. · The University of Edinburgh; Causality in Healthcare AI Hub (CHAI); University College London
 - <a id="paper-33f13c12a6d20792"></a>**Oneira: From Open-Ended Generation to Open-World Interaction in Video World Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.01614)* · [Paper](https://arxiv.org/abs/2610.01614) · [Project](https://madaoer.github.io/projects/oneira/) · [Code](https://github.com/Madaoer/Oneira) · [HF Model](https://huggingface.co/Madaoer-Otaku/Oneira_example_weights) · [Dataset](https://huggingface.co/datasets/Madaoer-Otaku/Oneira_example_data)<br>
   Xindi Yang et al. · Monash University; University of Bristol; Dalian University of Technology; +2 institutions
+- <a id="paper-28263e185eb4c918"></a>**Optimal Correction Sets for Provable Redress of Contestable Causal Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33138)* · [Paper](https://arxiv.org/abs/2610.33138) · [Code](https://github.com/briziorusso/ArgCausalDisco)<br>
+  Fabrizio Russo et al. · Imperial College London, London, United Kingdom; University of Calabria, Rende, Italy
 - <a id="paper-b30aedba981183d1"></a>**OverSeer: Multi-Agent World Models Beyond What Agents See** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28554)* · [Paper](https://arxiv.org/abs/2610.28554) · [Project](https://runjiali-rl.github.io/OverSeer/)<br>
   Runjia Li et al. · Meta AI; University of Oxford
 - <a id="paper-c30ad45a06557efa"></a>**Physis-Lang: Self-Evolving Language as a Physical Representation for Video World Model** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.40358)* · [Paper](https://arxiv.org/abs/2609.40358) · [Project](https://elemmire1.github.io/physis-lang/)<br>
@@ -573,6 +577,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yingjian Zhu et al. · School of Artificial Intelligence, University of Chinese Academy of Sciences; State Key Laboratory of Multimodal Artificial Intelligence Systems (MAIS), Institute of Automation, Chinese Academy of Sciences; Alibaba Token Hub, Alibaba Group; +1 institutions
 - <a id="paper-424fdb621545a108"></a>**DynaFlow: Learning Free-Form Multi-Agent Orchestration** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34467)* · [Paper](https://arxiv.org/abs/2610.34467) · [Code](https://github.com/amiya-special/Dynaflow) · [Project](https://amiya-special.github.io/DynaFlow-website)<br>
   Ruhao Liu, Qi Li, Shizun Wang, Xinchao Wang · National University of Singapore
+- <a id="paper-f403a911c87fbaff"></a>**Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33512)* · [Paper](https://arxiv.org/abs/2610.33512) · [Code](https://github.com/JHKim631/FORK)<br>
+  Hyun Ryu et al. · KAIST AI; Carnegie Mellon University Language Technologies Institute
 - <a id="paper-fd98d0ad6f9d37a7"></a>**ECHO: Efficient Causal Self-Recursion Beyond Auxiliary Multi-Token Prediction** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24766)* · [Paper](https://arxiv.org/abs/2610.24766) · [Code](https://github.com/ernie-research/ECHO)<br>
   Yuxuan Zhou et al. · ERNIE Team, Baidu; Independent Researcher
 - <a id="paper-6c921d13d0b14a4e"></a>**Evolve on Graph: Self-Evolving Knowledge Graph Reasoning without Question Annotations** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35598)* · [Paper](https://arxiv.org/abs/2610.35598) · [Project](https://szy5.github.io/EoG/) · [Code](https://github.com/Szy5/EoG) · [HF Model](https://huggingface.co/Bobzong/EoG)<br>
@@ -631,6 +637,8 @@ Each work appears once under its primary contribution; see the [classification g
   Shangheng Du et al. · East China Normal University; Shanghai Artificial Intelligence Laboratory
 - <a id="paper-080ac6ed1ce6901d"></a>**MMVistaReason: Toward Open-Data and Post-Training Recipes for Multimodal Reasoning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.01352)* · [Paper](https://arxiv.org/abs/2610.01352) · [Code](https://github.com/JackieForest/MMVistaReason) · [Dataset](https://huggingface.co/datasets/JackieLin0123/MMVistaReason-SFT-528K) · [Dataset](https://huggingface.co/datasets/JackieLin0123/MMVistaReason-RL-63K)<br>
   Juekai Lin et al. · Zhejiang University; Ant Group, AFu Team; Shanghai Jiao Tong University; +1 institutions
+- <a id="paper-e2843f98db0b548f"></a>**More: Mode-Optimized Reasoning with Self-Adaptive Effort for Self-Evolving Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33684)* · [Paper](https://arxiv.org/abs/2610.33684)<br>
+  Dianxing Shi, Dingjie Fu, Tianyu Lei, Wangjie Qiu · Beihang University; Huazhong University of Technology
 - <a id="paper-572a65a52169b4df"></a>**MultiAgent-OPD: End-to-End Training of Hierarchical Multi-Agent Systems with On-Policy Distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23234)* · [Paper](https://arxiv.org/abs/2610.23234)<br>
   Yuhan Sun et al. · Alibaba Group; Zhejiang University
 - <a id="paper-2d09cb91206e5f2c"></a>**Muse Glimmer 30B: An On-Device Agentic Model** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24628)* · [Paper](https://arxiv.org/abs/2610.24628) · [HF Model](https://huggingface.co/meta-models/Muse-Glimmer-30B)<br>
@@ -1112,6 +1120,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yasheng Sun et al. · King Abdullah University of Science and Technology (KAUST)
 - <a id="paper-6f2e8465da82c5f3"></a>**Large Knowledge Model: A Knowledge Foundation for Agentic Science at Scale** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.27297)* · [Paper](https://arxiv.org/abs/2609.27297) · [Project](https://lkm.bohrium.com/web/en) · [Code](https://github.com/dptech-corp/bohrium-skills)<br>
   Yuan Huang et al. · DP Technology; Institute of Theoretical Physics, Chinese Academy of Sciences; International Center for Quantum Materials, School of Physics, Peking University; +4 institutions
+- <a id="paper-fc3b7e421ef0a1e9"></a>**LegoSR: A Unified Framework for Self-improving Agent-Guided Scientific Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33465)* · [Paper](https://arxiv.org/abs/2610.33465) · [Code](https://github.com/Scientific-Artificial-Intelligence-Lab/kd)<br>
+  Hao Mao et al. · The Hong Kong Polytechnic University, Hong Kong SAR, China; Amazon Web Services, Seattle, USA; University of Washington, Seattle, USA; +3 institutions
 - <a id="paper-1d9cf5babf2989a2"></a>**Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22273)* · [Paper](https://arxiv.org/abs/2610.22273) · [Project](https://librarian-agents.github.io/) · [Code](https://github.com/teresaz05/librarian-agents)<br>
   Anikait Singh et al. · Stanford University; Carnegie Mellon University
 - <a id="paper-79115fb39819fd02"></a>**MaD-RSI: Model-as-Data for Recursive Self-Improvement of Agent Harnesses** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28201)* · [Paper](https://arxiv.org/abs/2610.28201)<br>
@@ -1190,6 +1200,8 @@ Each work appears once under its primary contribution; see the [classification g
   Sijie Zhao et al. · The University of Tokyo; RIKEN; Stanford University
 - <a id="paper-8bd50ae4a7caaa00"></a>**Topological Coherence for Self-evolving Multi-agent Systems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.37953)* · [Paper](https://arxiv.org/abs/2609.37953)<br>
   Sen Zhao et al. · Chongqing University of Posts and Telecommunications; Towngas
+- <a id="paper-8324cd60ab31faa0"></a>**VibeGame: Prompt-to-Game Development with AI-Native Engine and Self-Evolving Adversarial Agent Team** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33106)* · [Paper](https://arxiv.org/abs/2610.33106) · [Code](https://github.com/tettethu/VibeGame) · [Project](https://vibegame.tettet.org/)<br>
+  Wenbo Hu et al. · PRLab, Nanjing University; S-Lab, Nanyang Technological University; Liblib.ai
 - <a id="paper-0f5aefdeeb0a0bf5"></a>**VideoEvoHarness: Self Evolving Agent Harness from Unlabeled Videos for Video Understanding** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.15389)* · [Paper](https://arxiv.org/abs/2610.15389) · [Code](https://github.com/Wei-Xin-Xu/VideoEvoHarness)<br>
   Weixin Xu et al. · Institute of Automation, Chinese Academy of Sciences; School of Advanced Interdisciplinary Sciences, University of Chinese Academy of Sciences; School of Computer Science and Communication Engineering, Jiangsu University of Science and Technology; +3 institutions
 - <a id="paper-e34289be07a8d724"></a>**VPEvolve: A Self-Evolving Virtual Process Engineer for Computational Lithography** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.32473)* · [Paper](https://arxiv.org/abs/2609.32473) · [Project](https://true-litianyi.github.io/VPEVOLVE/) · [Code](https://github.com/True-Litianyi/VPEVOLVE_code)<br>
@@ -1314,6 +1326,8 @@ Each work appears once under its primary contribution; see the [classification g
   Vishal Bhutani, Prasang Gupta, Sumanth Chundru, Kevin Paul · PricewaterhouseCoopers (PwC)
 - <a id="paper-196c956b69f1a6ef"></a>**On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32770)* · [Paper](https://arxiv.org/abs/2610.32770)<br>
   Leon Sick et al. · Google; Ulm University
+- <a id="paper-685e075936202295"></a>**Organon : From Evolutionary Search to Recursive Self-Improving Agents for Scientific Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33046)* · [Paper](https://arxiv.org/abs/2610.33046) · [Code](https://github.com/cheikh025/Organon)<br>
+  Cheikh Ahmed et al. · Huawei Technologies Canada; Huawei Technologies
 - <a id="paper-d94a846ad662e4ea"></a>**Predict Before You Modify: Learning Improvement Dynamics for Self-Evolving Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.13991)* · [Paper](https://arxiv.org/abs/2610.13991)<br>
   Zixuan Xie, Chang Xu, Yuhua Jiang, Li Zhao · University of Virginia; Microsoft Research; Tsinghua University
 - <a id="paper-8986b52e03245503"></a>**QD-Rec: Open-Ended Evolution of Recommendations via Quality-Diversity** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23470)* · [Paper](https://arxiv.org/abs/2610.23470) · [Code](https://github.com/SakanaAI/QD-Rec) · [Project](https://pub.sakana.ai/qd-rec/)<br>
@@ -1573,6 +1587,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Yue Huang et al. · Bake AI; University of Notre Dame; LMU Munich; +7 institutions
 - <a id="paper-35b9a7f119c042ee"></a>**RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27782)* · [Paper](https://arxiv.org/abs/2610.27782) · [Project](https://spherelab.ai/RoboJudge/) · [Code](https://github.com/Sphere-AI-Lab/RoboJudge)<br>
   Siyuan Ma et al. · The Chinese University of Hong Kong; Westlake University; Northeastern University; +3 institutions
+- <a id="paper-7f92942419dc62bc"></a>**RSI Arena: Towards Recursive Self-Improvement with Human Feedback** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33624)* · [Paper](https://arxiv.org/abs/2610.33624) · [Project](https://rsiarena.org/) · [HF Model](https://huggingface.co/RSIArena/RSIAgent-Aspen-Stage1) · [HF Model](https://huggingface.co/RSIArena/RSIAgent-Aspen-Stage2)<br>
+  Yue Huang et al. · Bake AI; University of Notre Dame; University of California, Los Angeles; +8 institutions
 - <a id="paper-b92b08173531b188"></a>**RSI-Forge: From Research Papers to Environments for Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.09426)* · [Paper](https://arxiv.org/abs/2610.09426)<br>
   Renxiong Wang et al. · Scale AI; University of California, Santa Cruz; University of North Carolina at Chapel Hill
 - <a id="paper-f73eeee30c4bf920"></a>**Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21082)* · [Paper](https://arxiv.org/abs/2610.21082) · [Code](https://github.com/AutoResearch-Factory/SciPIvot) · [Project](https://autoresearch-factory.github.io/SciPIvot/) · [Dataset](https://huggingface.co/datasets/sun1245/SciPIvot)<br>

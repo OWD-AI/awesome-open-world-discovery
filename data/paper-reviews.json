@@ -22371,6 +22371,268 @@
           21
         ]
       }
+    },
+    "paper-7f92942419dc62bc": {
+      "institutions": [
+        "Bake AI",
+        "University of Notre Dame",
+        "University of California, Los Angeles",
+        "Stanford University",
+        "NVIDIA Research",
+        "New York University",
+        "University of Washington",
+        "University of California, Santa Barbara",
+        "Scale AI",
+        "Hugging Face",
+        "Massachusetts Institute of Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        16,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Ten agents selected data, implemented training, evaluated alternatives, and nominated checkpoints within a shared cluster. Stage 1 allowed 144 hours, 1,000 GPU-hours, and $300 per agent; Stage 2 supplied each agent’s human-comparison records and allowed another 72 hours, 500 GPU-hours, and $150. Evaluation combined 20 benchmarks with blind pairwise human votes and Bradley–Terry ratings, including statistical controls for response style.",
+      "evidence": "All ten agents produced working assistants. The strongest Stage 1 submission closed a median 76% of the base-to-Instruct gap across 12 selected capability benchmarks, rising to 87% after Stage 2. Eight agents improved their style-controlled rating relative to the common reference, with a median gain of 28 points. Benchmark improvements were modest and did not track preference improvements; some submissions became less safe.",
+      "discovery_use": "Introduces a concrete evaluation protocol for autonomous model-development agents, including sustained experimentation, resource constraints, and subsequent improvement using human feedback.",
+      "limits": "One base model and one run per agent establish feasibility more clearly than reliability. The research agents themselves remained unchanged, so successor models never conducted the next research cycle. Stage comparisons use separate human arenas connected through NVIDIA Instruct, rather than direct comparisons between stages. Style adjustment is observational, and the reference used reasoning disabled. Supplied body sections support a targeted review; only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "Introduces a concrete evaluation protocol for autonomous model-development agents, including sustained experimentation, resource constraints, and subsequent improvement using human feedback.",
+        "pdf_sha256": "127d1ea62bb6e6930db71dbcc87c1166bf36d8eaf3845c2020ed281d73dfa249",
+        "evidence_pages": [
+          1,
+          2,
+          16,
+          18
+        ]
+      }
+    },
+    "paper-e2843f98db0b548f": {
+      "institutions": [
+        "Beihang University",
+        "Huazhong University of Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        9,
+        18,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Stage 1 formats 10,826 AQuA-RAT questions into 43,304 supervised records spanning direct answers, short reasoning, long reasoning, and code. Stage 2 generates executable input-recovery, output-prediction, and function-induction tasks. MATE-PPO updates the mode token and response jointly using execution rewards, online difficulty clusters, mode utilities, and evolving budget bands. Evaluation covers Qwen2.5 Base and Coder models from 3B to 14B.",
+      "evidence": "The two 7B variants report overall averages of 60.1 and 57.3, compared with 56.9 and 54.4 for their AZR counterparts. Additional scales improve all reported aggregate measures over matched AZR variants. Across eight backbone–benchmark pairs, average response length falls 48.0% and evaluation wall time falls 45.1%. Adaptive routing improves coding accuracy over fixed long reasoning while using fewer tokens, but slightly trails that fixed mode on other evaluated aggregates.",
+      "discovery_use": "Trains agents to generate verifiable learning tasks and jointly improve reasoning-mode selection and computational effort, directly connecting post-training with learning to discover and solve new tasks.",
+      "limits": "Only Stage 2 avoids curated data; Stage 1 uses supervised questions and model-generated rationales. The four modes and verifier-defined task families bound the demonstrated self-evolution. Internal reward/controller components lack fine-grained ablations. Some headline baseline scores retain their original reporting protocols, while MORE’s 7B results average three seeds. Timing metrics are coarse. No paper-specific public release was verified; the hinted repository is a cited baseline. Visual review covers only the two supplied pages.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "learning",
+        "rationale": "Trains agents to generate verifiable learning tasks and jointly improve reasoning-mode selection and computational effort, directly connecting post-training with learning to discover and solve new tasks.",
+        "pdf_sha256": "4739432f3b6cb4e4471cd51d557bef7880c50b4d0c5ca5c60f23fa76a8911d53",
+        "evidence_pages": [
+          1,
+          9,
+          18,
+          23
+        ]
+      }
+    },
+    "paper-fc3b7e421ef0a1e9": {
+      "institutions": [
+        "The Hong Kong Polytechnic University, Hong Kong SAR, China",
+        "Amazon Web Services, Seattle, USA",
+        "University of Washington, Seattle, USA",
+        "Beijing EEO Education Technology, Beijing, China",
+        "Jiangxi University of Finance and Economics, Nanchang, China",
+        "Eastern Institute of Technology, Ningbo, China"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        10,
+        21
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Seven solvers exchange candidates through an Equation Intermediate Representation and accept partially specified equations called Sketches. An LLM controller uses solver cards, diagnostics, a within-task discovery tree, and an across-task experience library to select solvers and revise searches. Evaluation uses 134 symbolic-regression problems, 40 ODE targets, and 17 PDE problems, comparing three agent runs against a matched generic agent and a union of 21 expert-tuned solver runs.",
+      "evidence": "Algebraic recovery is similar across approaches. At 5% noise, ODE coverage rises from 30.0% for the generic agent to 40.0%; PDE coverage rises from 52.9% to 82.4%, matching the solver union. PDE median execution times fall 51–59%. Case studies demonstrate diagnosing derivative errors, switching solvers, testing term necessity, and refining coefficients through weak-form regression.",
+      "discovery_use": "Provides an agent harness explicitly designed to discover and verify scientific equations through solver coordination, experimental feedback, partial hypotheses, and retained experience.",
+      "limits": "Recovery coverage measures success in any of three runs, not per-run reliability. The solver union uses different execution and tuning resources from the agents. Solver cards, workflow guidance, and memory are added together, preventing attribution of gains specifically to retained experience. Across-task lessons require external reference grading. Benchmarks use established equations and simulated data; real experimental-data validation remains future work. At 25% noise, the illustrated recovery needs researcher-supplied structure. Visual review covers only the two supplied pages.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "systems",
+        "rationale": "Provides an agent harness explicitly designed to discover and verify scientific equations through solver coordination, experimental feedback, partial hypotheses, and retained experience.",
+        "pdf_sha256": "3d3963ed4025cd8f286772f693116f6aa8bbf231acac023c595afe594f198701",
+        "evidence_pages": [
+          1,
+          8,
+          10,
+          21
+        ]
+      }
+    },
+    "paper-28263e185eb4c918": {
+      "institutions": [
+        "Imperial College London, London, United Kingdom",
+        "University of Calabria, Rende, Italy"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        6,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Strictly positive release costs are optimized through Answer Set Programming weak constraints. A compact Bayes-ball encoding checks causal consistency without enumerating active paths. The paper proves correspondences between optimal stable models and minimum-cost correction sets, graph fidelity, conflict certificates, and hard or graded fact contestation. Experiments compare repair mechanisms on identical CI traces across small benchmark and synthetic networks.",
+      "evidence": "Relative to heuristic ABA-PC, all seven datasets with differing outcomes retain more true facts and improve mean graph F1 and structural distance over saved compatible graph sets. FactF1 declines on Survey and slightly on Cancer, so selection improvement is not uniform across metrics. All 742 tested reinstatement requests on networks with at most six variables yield minimum-cost consistent repairs. MPC and FGS often have better graph accuracy, while OptABA-PC improves over the closest ASP baseline.",
+      "discovery_use": "Directly improves causal discovery by making conflicting empirical evidence repairable, inspectable, and revisable with formal guarantees connecting retained evidence to returned causal graphs.",
+      "limits": "Consistency and optimal repair do not guarantee the generating causal graph, and a contested false fact can be enforced. Costs express preferences rather than calibrated probabilities. Experiments use modest variable sets; 32 of 400 optimization runs return incumbents without proved optimality, so exact optimal-repair guarantees do not automatically apply to those outputs. Compatible graph enumeration is time-limited. Supplied pages support a targeted methods/results review, not exhaustive inspection of the remaining appendices.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "causality",
+        "rationale": "Directly improves causal discovery by making conflicting empirical evidence repairable, inspectable, and revisable with formal guarantees connecting retained evidence to returned causal graphs.",
+        "pdf_sha256": "ac20e01e9e77c0f0702337e89ef92a7100536c91dd9b1f05d704e42753be9e48",
+        "evidence_pages": [
+          1,
+          2,
+          6,
+          8
+        ]
+      }
+    },
+    "paper-1c4fe91ded721a1e": {
+      "institutions": [
+        "Skoltech",
+        "Sber AI Lab"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Formalizes detector scores as properties of detector–benchmark pairs, surveys benchmark and detector designs, and compares six localization metrics using 154 English Mu-SHROOM examples and 1,665 annotator-level span sets. Introduces directional Span Coverage F1 and tests majority versus union references, nested boundaries, partial overlaps, and one-character predictions.",
+      "evidence": "Boundary-nested disagreements constitute 22.3% of eligible annotation pairs. Changing majority references to union references raises macro Span Coverage F1 from 0.410 to 0.750 while exact span F1 falls from 0.288 to 0.071. The results demonstrate that metrics encode different localization semantics rather than interchangeable notions of correctness.",
+      "discovery_use": "Provides a measurement framework for knowledge verification, explaining when hallucination detector results support generalization claims. This directly informs verification components used by discovery agents.",
+      "limits": "The empirical analysis covers one language and dataset, with annotator predictions serving as localization probes rather than a broad detector comparison. One-character predictions achieve perfect containment scores while recovering only 3.1% of reference characters, so overlap-sensitive metrics remain necessary. No end-to-end discovery-agent evaluation is provided.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "foundations",
+        "rationale": "Provides a measurement framework for knowledge verification, explaining when hallucination detector results support generalization claims. This directly informs verification components used by discovery agents.",
+        "pdf_sha256": "df5001525db54bdcbe3bea7f8371ad31b1489a9c0122cbe7050d452279e68cf0",
+        "evidence_pages": [
+          1,
+          6,
+          7
+        ]
+      }
+    },
+    "paper-f403a911c87fbaff": {
+      "institutions": [
+        "KAIST AI",
+        "Carnegie Mellon University Language Technologies Institute"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Splits responses into substantive sentence-like units, distributes rubric credits across matching units, and uses a model-selected threshold to assess necessity. A separate correctness judgment combines with necessity to define precision. GRPO optimizes an F-beta combination of precision and rubric recall, primarily on Qwen2.5-7B-Instruct using medical and science data.",
+      "evidence": "On RubricHub-Medical, FORK with beta 1 achieves 53.2% precision versus 25.5% for standard coverage reward, with response lengths of 3,533 versus 9,195 characters. Win rates against the base policy are 68.0% in-domain and 74.1% on HealthBench. On ResearchQA, FORK achieves 67.1% preference wins, but recall is 58.9% versus 64.4% for standard coverage reward. The abstract's 10.6% and 22.1% comparison values belong to OnlineRubrics, not the standard reward.",
+      "discovery_use": "Contributes a post-training objective that rewards necessary, factually correct content and evaluates transfer to scholarly question answering. This is a concrete training contribution to reliable knowledge generation, although autonomous investigation is not tested.",
+      "limits": "Training and evaluation depend on LLM judgments rather than independent factual verification or human preference measurements. Necessity agreement is moderate, and judge prompts materially change absolute win rates. Evidence primarily concerns one policy model and two domains; optimal beta remains unresolved. Scholarly answering does not establish improved hypothesis generation or experimental discovery.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "learning",
+        "rationale": "Contributes a post-training objective that rewards necessary, factually correct content and evaluates transfer to scholarly question answering. This is a concrete training contribution to reliable knowledge generation, although autonomous investigation is not tested.",
+        "pdf_sha256": "2dd11d1a5bcce653c03861b96e85338e85b7309c62a4792e3029a6c0e741dd37",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-8324cd60ab31faa0": {
+      "institutions": [
+        "PRLab, Nanjing University",
+        "S-Lab, Nanyang Technological University",
+        "Liblib.ai"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        40
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Represents project dependencies in schema-validated text and exposes frame-synchronous runtime inspection and action control. Separates implementation from auditor, player, and reviewer roles. Distills accepted projects into skeletons, modules, and collaboration contracts. Evaluates 30 adapted GameCraft-Bench tasks, component ablations, and a blind study with 30 participants.",
+      "evidence": "With GPT-6.1-Sol, the overall score is 72.99 versus 68.80 for the strongest baseline. Human comparisons yield a mean overall win rate of 72.7%. On ten weaker-model ablation tasks, removing the engine or adversarial review reduces scores by 10.33 and 4.63 points. Experience from five separate tasks improves the weaker model by 2.92 points.",
+      "discovery_use": "Contributes an agent harness combining controllable execution, independent behavioral verification, and retained validated experience. These mechanisms concretely support agents discovering failures and improving subsequent work beyond ordinary game-generation tooling.",
+      "limits": "Evaluation covers 2D games with a 24-hour allowance per task and recording-based rubric scoring, not sustained commercial gameplay. Engine and instruction changes prevent direct comparison with original GameCraft-Bench scores. Crucially, accumulated experience across different game types can lower performance; main results therefore exclude accumulated experience. The small transfer ablation does not establish reliable continual improvement.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "systems",
+        "rationale": "Contributes an agent harness combining controllable execution, independent behavioral verification, and retained validated experience. These mechanisms concretely support agents discovering failures and improving subsequent work beyond ordinary game-generation tooling.",
+        "pdf_sha256": "63631951dcd077e35b896025354417b8562a686166ae0f0048ac3f0b5ffb6512",
+        "evidence_pages": [
+          1,
+          7,
+          40
+        ]
+      }
+    },
+    "paper-685e075936202295": {
+      "institutions": [
+        "Huawei Technologies Canada",
+        "Huawei Technologies"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Alternates bounded evolutionary search horizons with evidence-driven capability revisions. Replaceable runtime components govern selection, variation, internal evaluation, survival, tools, and coordination while the official evaluator remains fixed. Compares four search systems on 21 algorithmic, kernel, mathematical, and systems tasks with at most 100 candidate attempts per task.",
+      "evidence": "Organon leads all ten ALE-Bench Lite tasks, averaging 2,478.6 private performance versus EvoX's 2,056.3, a 20.5% improvement. It wins three of four kernel workloads and the autocorrelation task, but trails competitors on circle packing and Heilbronn construction. Recorded trajectories show diagnostic development, correction of faulty policies, and withdrawal of ineffective revisions.",
+      "discovery_use": "Directly studies discovery agents that revise their search policies, diagnostic tools, memory, coordination, and revision procedures during computational investigations.",
+      "limits": "The supplied pages cover methods, results, and the analysis protocol through page 16 of 32; later appendices were not reviewed. One trajectory per task and no controlled revision ablations prevent causal attribution of gains to self-modification. Equal candidate allowances do not equalize total compute, diagnostics, or revision overhead, and some candidates used another model. Cross-task retention and compounding improvement remain future work; several systems margins are very small.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "open_ended",
+        "rationale": "Directly studies discovery agents that revise their search policies, diagnostic tools, memory, coordination, and revision procedures during computational investigations.",
+        "pdf_sha256": "7c1e45b7f17d09eeac669a8d336f340be1dac4996ffdc92a3f52d7a9fd59c03b",
+        "evidence_pages": [
+          1,
+          5,
+          16
+        ]
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**128 usage profiles** · Updated **2026-10-27**
+**129 usage profiles** · Updated **2026-10-27**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -2123,6 +2123,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [SCI-AGENT-EXAM: Benchmarking Agents on Scientific Research Tasks](#paper-ff06580726cc267c) | Scientific data + verifiers | Analysis + code | Paper-described |
 | [Dual Exam: Controlled Evaluation of Multimodal Agents and World Models](#paper-817d0cefc6986b31) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making](#paper-01623fe5218eb9ef) | Real data | Analysis + code | Paper-described |
+| [RSI Arena: Towards Recursive Self-Improvement with Human Feedback](#paper-7f92942419dc62bc) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -2857,6 +2858,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Model-training reward or weight optimization is not established. The evaluator releases finishing orders and forecast feedback after sealing predictions. Metrics include smoothed log gain relative to uniform, Top-1, Top-3, and delivery. Program net utility is 100 times accumulated log gain plus an eligible delivery bonus based on Top-1 improvement over uniform, minus priced evidence, tool-call, and CPU costs. Provider fees and retrospective betting returns are reported separately. Candidate validation checks interfaces and resources without selecting by predictive accuracy. |
 | Reset | Pages 4 and 12 establish fresh construction/revision conversation contexts with persistent source, fitted parameters, notes, ledger, and validation feedback; historical training arrays cannot persist on disk. Adaptive Acquisition uses fresh per-race forecasting sessions and retains its validated acquisition program and released summaries. Arbitrary environment reset or replay-to-checkpoint support is not established. |
 | Branching | Page 4 establishes paired daily-revision and frozen trajectories sharing the same initial predictor, schedule, and tariff. Page 15 also identifies three matched frozen acquisition controls. General agent-controlled snapshot branching or counterfactual changes to race outcomes are not established. |
+
+</details>
+
+<a id="paper-7f92942419dc62bc"></a>
+
+<details>
+<summary>RSI Arena: Towards Recursive Self-Improvement with Human Feedback — details</summary>
+
+[Work](../README.md#paper-7f92942419dc62bc) · [Source](https://arxiv.org/pdf/2610.33624)
+
+**Focus:** Autonomous language-model post-training through actual GPU training and evaluation jobs. Agents select data, write code, run internal evaluations, and nominate checkpoints. Stage 2 supplies recorded human comparisons of their Stage 1 models. Final evaluation also collects fresh human votes on executed model responses. These are computational research experiments with human preference evaluation; no scientific simulator or new physical laboratory measurements are described.
+
+**Openness:** `Public internet access and agent-selected legitimate training data and methods.`, `Submitted model checkpoints released on Hugging Face; the Stage 1 Grok repository contains an earlier nomination rather than its final model.`, `Public daily reports and training livestream.`, `Public release of the complete harness and evaluator code is not established.`
+
+**New physical measurements:** No
+
+**Limits:** Stage 1 allows 144 hours, 1,000 GPU-hours and $300 API credit per agent; Stage 2 allows 72 hours, 500 GPU-hours and $150. Agents share a 64-GPU cluster, face queues and preemption, and have job and storage limits. Evaluation data are held out, and training on benchmark test data is prohibited. Evidence covers one base model and one run per agent. Research-agent models remain unchanged. Separate human arenas are connected through NVIDIA Instruct, and style adjustment is observational.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No single prescribed training reward for the research agents is established. Agents choose their own training objectives and internal checkpoint-selection tests. All Stage 1 submissions use supervised fine-tuning, and six add preference optimization. Stage 2 provides one snapshot of 213–276 accepted battles per agent, including questions, both responses and votes. Final evaluation uses 20 capability and safety benchmarks, including nine LLM-judged benchmarks, and blind human votes fitted with Bradley–Terry ratings, with and without style control. Cheating receives a score of zero. |
+| Reset | Retraining from the base model is supported and observed. Stage 2 normally resumes each agent's Stage 1 model, notes, code, data and checkpoints. Harness sessions can restart after provider failures or platform updates. A general environment-reset API and reproducible full-state reset are not established. |
+| Branching | Agents can train and compare alternative models, retain checkpoints, run multiple jobs and nominate repeatedly. The latest accepted nomination becomes final. Explicit cloning or rollback of the complete environment state is not established. |
 
 </details>
 
