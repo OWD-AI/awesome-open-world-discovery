@@ -21751,6 +21751,190 @@
           5
         ]
       }
+    },
+    "paper-9fbe7130605b3a7c": {
+      "institutions": [
+        "Carnegie Mellon University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Reviews 97 tasks across four services. A paired study freezes instructions and verifier code while varying initial requirements across 48 families, using complete outcome panels and replay witnesses. An execution study branches four stopping policies from 88 saved openings across 22 families. Reference predicates, API evidence, family bootstraps, acceptance profiles, and amortized costs connect verification to delivery.",
+      "evidence": "Joint tests retain 82/96 Flash and 79/96 Pro source programs. Reuse-minus-rebuild balanced-accuracy intervals include zero for both models. Programs with error-free deployment panels correctly deliver both openings in 32/33 assignments, versus 1/11 with panel errors. Neutral continuation achieves the highest correct delivery among the tested generic-feedback policies; verifier gating can cause regressions or withhold valid work.",
+      "discovery_use": "Evaluates whether agent verifiers recover changed requirements from current evidence and whether their decisions support correct execution. This directly concerns reliable verification under changing conditions.",
+      "limits": "The panel–delivery association is exploratory and does not establish causality. Execution covers 22 families and two model variants with thinking disabled. Gates combine judgments, generic feedback, and stopping, so their components are not separately identified. Reference semantics include inspected exclusions and preservation-label changes. Results establish conformity to a declared task contract rather than scientific truth. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "Evaluates whether agent verifiers recover changed requirements from current evidence and whether their decisions support correct execution. This directly concerns reliable verification under changing conditions.",
+        "pdf_sha256": "e9af0c7e797e6298722f7c3406074625c31b483c4126b444eb423355074a5c30",
+        "evidence_pages": [
+          1,
+          2,
+          6
+        ]
+      }
+    },
+    "paper-e5af65d8ed72be8d": {
+      "institutions": [
+        "Westlake University",
+        "Ant International"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Generate under-supported capability paths and execute them in native environments. Check argument provenance, execution validity, terminal success, and workflow order. Retain errors as context while masking their imitation loss, select trajectories for structural coverage, and normalize training weight per complete interaction.",
+      "evidence": "All five Qwen3 scales improve on Tau1, Tau2, and BFCL, with reported three-benchmark mean gains of 16.9–29.8 percentage points. Matched 8B comparisons favor each component; parent normalization gives the largest isolated gain, 8.04 points. Structural selection covers 942 additional paths at matched budgets. Increasing support depth does not monotonically improve performance.",
+      "discovery_use": "Contributes a concrete training procedure for evidence acquisition, tool discovery, and feedback-guided recovery, with supervision restricted to decisions justified by agent-visible information. This connects directly to learning to discover and verify, although evaluation uses operational tool tasks.",
+      "limits": "Each task and ablation arm runs once. Tau1 Airline uses seen task identities, limiting generalization claims. External checkpoints differ in training data and compute. Targeted expansion does not hold token volume fixed, and several BFCL Live Simple scores decline. Scientific discovery transfer is untested. Review covers supplied pages 1–16 and two rendered pages, not all 30 PDF pages.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "learning",
+        "rationale": "Contributes a concrete training procedure for evidence acquisition, tool discovery, and feedback-guided recovery, with supervision restricted to decisions justified by agent-visible information. This connects directly to learning to discover and verify, although evaluation uses operational tool tasks.",
+        "pdf_sha256": "927a24beb338a98107115e7a18850d1afdba110188fd93c2cb1724885f1e7492",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-7387918ad74d1502": {
+      "institutions": [
+        "Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences",
+        "Dalian University of Technology",
+        "Shenzhen University of Advanced Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Evaluate 1,000 applications against temporally filtered corpora of approximately one million patents and 52,000 papers. Measure report quality, decisions, statutory grounds, and reference recall through search, inspection, and selection. PASS ranks teacher trajectories using visit-based query behavior, evidence grounding, and outcome quality, retaining approximately 3,000 for supervised training.",
+      "evidence": "PatEx-Agent improves report score from 3.79 to 5.41, Search-R from 23.2% to 38.7%, and Select-R from 12.0% to 18.2%. A size-matched random-trajectory control performs substantially worse. The strongest evaluated agent reaches only 48.7% Search-R and 32.4% Select-R, exposing substantial evidence-discovery bottlenecks.",
+      "discovery_use": "Evaluates agents discovering unknown prior art through adaptive search, inspecting evidence, and producing traceable novelty assessments. Its process-level evaluation and search-training contribution clearly exceed an ordinary patent-domain application.",
+      "limits": "Examiner-reference recall can penalize valid alternative evidence, and document visits provide imperfect relevance signals. The reported 88.2% rejection prevalence makes a binary always-reject baseline stronger than the best reported decision accuracy, 87.6%. Increased absolute selection recall does not establish improved conversion conditional on retrieval. Report quality relies on LLM judges. The verified public release contains only 100 tasks and the runtime, excluding training data and the task-construction pipeline.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "Evaluates agents discovering unknown prior art through adaptive search, inspecting evidence, and producing traceable novelty assessments. Its process-level evaluation and search-training contribution clearly exceed an ordinary patent-domain application.",
+        "pdf_sha256": "271c79aa28116b96aae0cfdd9f4001bab22dfb0a64df55d3c5385e6174a3aa13",
+        "evidence_pages": [
+          1,
+          5,
+          10
+        ]
+      }
+    },
+    "paper-3545268c96046966": {
+      "institutions": [
+        "University of Pennsylvania"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Build a recommendation graph or retrieve from a fixed contribution graph. Distill three insights and supporting findings, initialize three experts, select a problem through anonymous Borda voting, and iteratively draft, criticize, revise, and synthesize a proposal. Compare against three research-ideation pipelines on 100 NLP topics.",
+      "evidence": "InsightAgents obtains the highest average Elo under both judges in both knowledge settings, especially for novelty, significance, and expected effectiveness. AI Scientist-v2 leads on feasibility. Removing debate yields the largest ablation decline, with a 33.0% comparison score against the full system. Human assessment on ten topics broadly supports the main ranking.",
+      "discovery_use": "Directly addresses scientific problem identification and proposal development by grounding debating agents in distinct, evidence-linked research perspectives.",
+      "limits": "Proposals are not experimentally executed, so perceived research quality is not demonstrated scientific discovery. Evaluation is restricted to NLP and mainly uses LLM judges. Human coverage is small, and exact human–LLM agreement is only 63.7–65.0%. Costs are unmatched; removing debate also removes rounds and the separate critic. Literature grounding principally uses abstracts. Review is targeted to supplied pages, not all 35 PDF pages.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "sci_methods",
+        "rationale": "Directly addresses scientific problem identification and proposal development by grounding debating agents in distinct, evidence-linked research perspectives.",
+        "pdf_sha256": "c68d132809a8b5cdaec3cb8bf643ce8b5a178f625cf8932fea0bb1359885bfab",
+        "evidence_pages": [
+          1,
+          4,
+          9
+        ]
+      }
+    },
+    "paper-e6112360ce8388d8": {
+      "institutions": [
+        "Coral AI Labs",
+        "Università di Trento",
+        "Harvard University",
+        "University of Cambridge",
+        "King’s College London",
+        "University of Hull"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A model verifier classifies program changes into directions and methods. The board estimates per-direction improvement yield, adds exploration bonuses, values opening new directions, and recommends staffing. Claims limit duplication and crowding; credit rewards improvement over a direction’s own best while accounting for borrowed programs.",
+      "evidence": "Against the better reproduced single-agent or four-agent baseline, Coral Discovery reports six wins, one tie, and two losses across nine tasks. Kernel reaches 1095 cycles versus the reproduced baseline’s 1138, and Polyominoes reaches 91.78 versus 80.55. Direction analysis connects most gains to approaches absent from the four-agent baseline.",
+      "discovery_use": "Introduces coordination and credit mechanisms that help autonomous research agents explore distinct solution mechanisms, retain promising alternatives, and verify progress against executable evaluators.",
+      "limits": "Headline results select the best of three runs without reporting dispersion. Some numerical wins are tiny, including EPLB at acknowledged noise level. Published comparisons use different access conditions. Direction labels rely on the same model family, and bundled coordination changes lack isolated component ablations. Exploration loses on two tasks; evaluation budgets do not establish equal total compute. No first-party code release was verified within the research limit.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "systems",
+        "rationale": "Introduces coordination and credit mechanisms that help autonomous research agents explore distinct solution mechanisms, retain promising alternatives, and verify progress against executable evaluators.",
+        "pdf_sha256": "f66a3c684a1bc8c16082ce72766c64ed34765ca6b631125324756d77ecae4562",
+        "evidence_pages": [
+          1,
+          5,
+          12
+        ]
+      }
+    },
+    "paper-0e0b59c299f9b99b": {
+      "institutions": [
+        "Nanjing University",
+        "Shanghai AI Laboratory"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Six research roles share typed memory and iterate through diagnosis, intervention, training, evaluation, deployment, and reflection. Five gates check builds, compatibility, comparisons, held-out seeds, and live behavior. The resulting 18M-parameter PPO agent is evaluated against calibrated opponents, on live games, and through TavernBench. An opponent-calibration ablation and simulator-tool comparisons probe selected mechanisms.",
+      "evidence": "Across 20 days, the authors report about 10,000 experiments, 23 delivered versions, and 184 fixes from live feedback. Simulator first-place rate rises from 1.9% to 41.5%. Logged live rating rises from 6,000 to 14,007, with later leaderboard records near 15,000. On the shared 368-task evaluation, TavernAgent achieves 91% play accuracy versus 63% for the best tested LLM; simulator tools substantially improve LLM decisions.",
+      "discovery_use": "Studies research agents that select investigations, test interventions, correct their simulator and policies, and retain lessons that change subsequent research procedures. The game provides an external feedback loop for discovery and self-improvement.",
+      "limits": "This is one project, game, and patch, without controlled ablations of the complete research harness or its self-improvement mechanisms. Humans set goals, resolve mechanics, and execute named key presses; 418 human messages were recorded. The strongest player comparison uses twenty estimated leaderboard records rather than a controlled match. Client failures affect live statistics. LLM latency is estimated from external medians, and interfaces differ. The verified release omits trained weights and training code. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "open_ended",
+        "rationale": "Studies research agents that select investigations, test interventions, correct their simulator and policies, and retain lessons that change subsequent research procedures. The game provides an external feedback loop for discovery and self-improvement.",
+        "pdf_sha256": "1dbebcb9cb67aba30bb0328b98fd6b7a19a6811880cfd7f64c8babea89583c89",
+        "evidence_pages": [
+          1,
+          5,
+          16
+        ]
+      }
     }
   }
 }

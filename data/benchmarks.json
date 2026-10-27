@@ -2737,6 +2737,53 @@
       "name": "AlphaIdeaBench: Benchmarking Automated Research Idea Generation under Feasibility Constraints with Peer Review Alignment",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.33644"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Actors execute ordinary service API operations in enterprise-service replicas.",
+        "Verifier construction permits initial-state reads and bounded debugging; assessment uses frozen programs with read-only before/after API access.",
+        "Instructions, states, programs, reference rules and action histories are described as released."
+      ],
+      "focus": "Reusable acceptance programs under changed initial requirements, followed by verification-guided continuation and delivery in replicated Web services.",
+      "limits": "These are software-state executions, not scientific simulations or new physical measurements. Reference predicates define task-contract conformity. The panel–delivery association is exploratory; gate decisions, generic feedback and stopping are evaluated together.",
+      "training": {
+        "reward": "A learned training reward is not established. Construction variants use bounded execution feedback. The host reference predicate evaluates completion; verifier outputs are Pass, Fail, Unknown or Error. Balanced accuracy measures valid acceptance and failure rejection, with Unknown and Error receiving zero correctness credit. Execution evaluation separates correct, incorrect, withheld and unresolved delivery.",
+        "reset": "Canonical snapshots and exact row deltas reconstruct saved business states. Every verifier assessment uses a fresh read-only sandbox. Execution openings preserve initial state, current business state and complete interaction history.",
+        "branching": "Explicitly supported: four policies branch from each of 88 saved openings. Gates allow at most two continuations. Executed writes persist within a branch when delivery is withheld."
+      },
+      "evaluation_family": "other",
+      "id": "paper-9fbe7130605b3a7c",
+      "resource_id": "paper-9fbe7130605b3a7c",
+      "name": "AgentProofBench: Benchmarking Reusable Verifiers for Web Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.34634"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents adapt queries through Boolean, BM25 and dense retrieval over fixed patent and paper corpora filtered by filing date.",
+        "Search returns metadata, titles and abstracts; visit tools expose richer document content.",
+        "Agents use workspace Read and Write tools and choose when to submit an Office Action and references.",
+        "Evaluation rubrics are hidden during execution."
+      ],
+      "focus": "Adaptive prior-art discovery, evidence inspection and novelty assessment using existing patent prosecution records and document corpora.",
+      "limits": "Tool execution retrieves and processes recorded documents; it does not run research experiments or obtain new physical measurements. Examiner-reference recall can miss valid alternative evidence. Office Action quality uses LLM judges, and document visits are implicit relevance signals.",
+      "training": {
+        "reward": "Training uses supervised fine-tuning, not an established reinforcement-learning reward. PASS filters feasibility and ranks teacher trajectories using visit-based query efficiency, query progression, LLM-assessed evidence grounding and outcome quality. SFT supervises model output tokens while masking system, user and harness messages. Benchmark evaluators measure artifact format, three-judge Office Action quality, decision accuracy, statutory-ground F1 and search/visit/select recall against recorded examiner references.",
+        "reset": "Each task runs in an isolated sandbox with separate preparation, execution and evaluation stages. An explicit reset or checkpoint-restoration interface is not established.",
+        "branching": "Checkpoint branching and counterfactual replay are not established. Parallel search or visit calls are permitted, but do not establish branching support."
+      },
+      "evaluation_family": "other",
+      "id": "paper-7387918ad74d1502",
+      "resource_id": "paper-7387918ad74d1502",
+      "name": "Novel or Not? PatEx-Gym: Agentic Prior-Art Search for Novelty Assessment in Patent Examination",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.33503"
     }
   ]
 }
