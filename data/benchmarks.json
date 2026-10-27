@@ -2624,6 +2624,28 @@
       "name": "JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.19589"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Code and data are stated to be publicly released.",
+        "Released components include screen recordings, workflow documents, chat logs with recorded tool calls, optional input/output files, human ratings and rubrics, annotated workflow graphs, and survey responses."
+      ],
+      "focus": "Recognizing and forecasting whether professionals adopt, modify, or reject agent outputs, and predicting collaboration satisfaction and output quality from recorded professional workflows. Models receive video, graphs, chat, or combinations under fixed temporal cutoffs and context lengths; they return labels or ratings without intervening in the recorded workflow.",
+      "limits": "Feedback comes from recorded human behavior, human adoption annotations, and professional ratings. This is neither an interactive simulator nor an environment for executing research experiments or collecting new physical measurements. Recorded tool calls do not establish tool execution by evaluated models. Ratings and adoption labels are imbalanced; model subsets and video processing differ. Simulated-user sandboxes are future work.",
+      "training": {
+        "reward": "Training reward is not established; no benchmark training procedure is demonstrated. Evaluation compares predictions with human adoption labels using macro precision, recall, and F1, and with professional ratings using mean absolute error, exact and within-1 accuracy, and Spearman correlation. Process-level reward modeling is proposed as a possible application.",
+        "reset": "Environment reset support is not established. Repeated prediction runs on fixed recordings do not establish interactive state resets.",
+        "branching": "Interactive or counterfactual branching support is not established. Recorded workflow graphs represent concurrent activities and repeated actions, rather than executable alternative trajectories."
+      },
+      "evaluation_family": "other",
+      "id": "paper-c4824adae163f399",
+      "resource_id": "paper-c4824adae163f399",
+      "name": "Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.21109"
     }
   ]
 }

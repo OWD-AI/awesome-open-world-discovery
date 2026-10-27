@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**117 usage profiles** · Updated **2026-10-26**
+**118 usage profiles** · Updated **2026-10-26**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -735,6 +735,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents](#paper-fd33ef0d1dd90a8b) | Real data | Interactive simulator | Paper-described |
 | [PaperScorer: How Predictable Is Paper Acceptance?](#paper-f99b7ad173e24ad2) | Real data | Data analysis | Paper-described |
 | [RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation](#paper-35b9a7f119c042ee) | Real data | Data analysis | Paper-described |
+| [Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows](#paper-c4824adae163f399) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1814,6 +1815,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | SFT uses human-verified PA/IA scores and model-assisted reasoning traces from a separate set of 12,351 videos. GRPO then assigns reward 1 when a predicted score exactly matches its reference and 0 otherwise, training for 200 steps. Evaluation compares predictions with expert-adjudicated human ratings using Pearson correlation, exact-match accuracy and mean squared error (pages 5–6). |
 | Reset | Environment reset support is not established. The described interface supplies fixed videos and prompts rather than a controllable physical or simulated state. |
 | Branching | Environment-state branching support is not established. GRPO samples eight completions per prompt, but this is response sampling over fixed video inputs; no state snapshot or counterfactual execution interface is described (page 30). |
+
+</details>
+
+<a id="paper-c4824adae163f399"></a>
+
+<details>
+<summary>Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows — details</summary>
+
+[Work](../README.md#paper-c4824adae163f399) · [Source](https://arxiv.org/pdf/2610.21109)
+
+**Focus:** Recognizing and forecasting whether professionals adopt, modify, or reject agent outputs, and predicting collaboration satisfaction and output quality from recorded professional workflows. Models receive video, graphs, chat, or combinations under fixed temporal cutoffs and context lengths; they return labels or ratings without intervening in the recorded workflow.
+
+**Openness:** `Code and data are stated to be publicly released.`, `Released components include screen recordings, workflow documents, chat logs with recorded tool calls, optional input/output files, human ratings and rubrics, annotated workflow graphs, and survey responses.`
+
+**New physical measurements:** No
+
+**Limits:** Feedback comes from recorded human behavior, human adoption annotations, and professional ratings. This is neither an interactive simulator nor an environment for executing research experiments or collecting new physical measurements. Recorded tool calls do not establish tool execution by evaluated models. Ratings and adoption labels are imbalanced; model subsets and video processing differ. Simulated-user sandboxes are future work.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Training reward is not established; no benchmark training procedure is demonstrated. Evaluation compares predictions with human adoption labels using macro precision, recall, and F1, and with professional ratings using mean absolute error, exact and within-1 accuracy, and Spearman correlation. Process-level reward modeling is proposed as a possible application. |
+| Reset | Environment reset support is not established. Repeated prediction runs on fixed recordings do not establish interactive state resets. |
+| Branching | Interactive or counterfactual branching support is not established. Recorded workflow graphs represent concurrent activities and repeated actions, rather than executable alternative trajectories. |
 
 </details>
 

@@ -21404,6 +21404,37 @@
           9
         ]
       }
+    },
+    "paper-c4824adae163f399": {
+      "institutions": [
+        "University of Minnesota"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        9,
+        26
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Fifty professionals across forty occupations contribute approximately 115 hours of recordings across 100 workflows. Human-reviewed temporal graphs connect meaningful actions and dependencies, yielding 692 adoption annotations. Models receive video, graphs, chat, or combinations, with controlled forecasting cutoffs and context lengths. Evaluation uses macro-F1, rating error, rank correlation, majority-label baselines, and mode-rating baselines.",
+      "evidence": "Forecasting remains substantially harder than recognizing an observed response. On the common forecasting subset, Claude scores 0.533 macro-F1 and GPT-6 scores 0.511. Video-only rating predictors do not beat the mode baseline on mean absolute error; some graph-containing conditions improve that metric, while agreement with expert rankings remains limited. Longer context gives inconsistent gains. Models frequently overpredict adoption or high ratings.",
+      "discovery_use": "Kolab evaluates whether long-horizon agents can recognize expert feedback, anticipate the use of their contributions, and assess workflow quality. This provides a concrete evaluation resource for feedback extraction and verification in collaborative discovery systems, although scientific discovery performance is not directly measured.",
+      "limits": "The study primarily records Claude-assisted professional work, with encouraged interaction frequency and a small, uneven occupational sample. Adoption labels and ratings are imbalanced, and some model results use different subsets or frame-sampling procedures. Main-text video-only baseline conclusions should not be generalized to every modality combination. Workflow associations are descriptive rather than causal. The benchmark measures retrospective understanding and forecasting, without demonstrating improved agent behavior or scientific discoveries. All supplied text was considered; only the two supplied image pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-26",
+        "category": "benchmarks",
+        "rationale": "Kolab evaluates whether long-horizon agents can recognize expert feedback, anticipate the use of their contributions, and assess workflow quality. This provides a concrete evaluation resource for feedback extraction and verification in collaborative discovery systems, although scientific discovery performance is not directly measured.",
+        "pdf_sha256": "3ddfd153d40a87ef41b978e3cc9b735c2a7da2b90e5569eff72e909681f03adf",
+        "evidence_pages": [
+          1,
+          2,
+          9,
+          26
+        ]
+      }
     }
   }
 }

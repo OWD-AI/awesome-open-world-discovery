@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-645-2563eb?style=flat-square" alt="645 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-117-0f766e?style=flat-square" alt="117 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-646-2563eb?style=flat-square" alt="646 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-118-0f766e?style=flat-square" alt="118 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 94 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 113 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 68 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 108 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 109 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1477,6 +1477,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Seungone Kim et al. · Carnegie Mellon University; University of Minnesota; Stanford University; +13 institutions
 - <a id="paper-01623fe5218eb9ef"></a>**JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19589)* · [Paper](https://arxiv.org/abs/2610.19589) · [Code](https://github.com/HKUST-KnowComp/JockeyBench)<br>
   Zhongwei Xie et al. · The Hong Kong University of Science and Technology; Tsy Capital Limited; Independent researcher; +1 institutions
+- <a id="paper-c4824adae163f399"></a>**Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21109)* · [Paper](https://arxiv.org/abs/2610.21109) · [Project](https://minnesotanlp.github.io/kolab/)<br>
+  Shirley Anugrah Hayati et al. · University of Minnesota
 - <a id="paper-2f1aa49aeba545c1"></a>**Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00609)* · [Paper](https://arxiv.org/abs/2610.00609) · [Code](https://github.com/vals-ai/legal-research-bench)<br>
   Katrina Drozdov, Oliver Chen, Langston Nashold, Rayan Krishnan · Vals AI
 - <a id="paper-979463277edcf993"></a>**LifeSearch: Benchmarking Deep Research Agents for Real-World Life and Productivity** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.18092)* · [Paper](https://arxiv.org/abs/2610.18092)<br>
