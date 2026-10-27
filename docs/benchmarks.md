@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**124 usage profiles** · Updated **2026-10-27**
+**128 usage profiles** · Updated **2026-10-27**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -857,6 +857,10 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation](#paper-35b9a7f119c042ee) | Real data | Data analysis | Paper-described |
 | [Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows](#paper-c4824adae163f399) | Real data | Data analysis | Paper-described |
 | [Novel or Not? PatEx-Gym: Agentic Prior-Art Search for Novelty Assessment in Patent Examination](#paper-7387918ad74d1502) | Real data | Analysis + tools | Paper-described |
+| [Trial by Trace: Benchmarking AI Agent Harnesses for Reliability and Failure Attribution](#paper-712abb20a14f30f7) | Executed programs + evaluators | Analysis + tools | Paper-described |
+| [WORTH Benchmark: Evidence Discovery under Not-Fully-Cooperative Information -- A Two-Episode Pilot](#paper-3c56ba0d896a7404) | Synthetic data | Data analysis | Paper-described |
+| [How Do Coding-Agent Harnesses Self-Evolve? An Empirical Study of Retrospective Adaptation](#paper-7a9367ad16e43eeb) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [Humans in Space: Can MLLMs Construct Human-Centric Spatial Understanding via Active Exocentric Exploration?](#paper-8e919583fc15a7ec) | Real data | Finite-pool queries | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -1982,6 +1986,98 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Training uses supervised fine-tuning, not an established reinforcement-learning reward. PASS filters feasibility and ranks teacher trajectories using visit-based query efficiency, query progression, LLM-assessed evidence grounding and outcome quality. SFT supervises model output tokens while masking system, user and harness messages. Benchmark evaluators measure artifact format, three-judge Office Action quality, decision accuracy, statutory-ground F1 and search/visit/select recall against recorded examiner references. |
 | Reset | Each task runs in an isolated sandbox with separate preparation, execution and evaluation stages. An explicit reset or checkpoint-restoration interface is not established. |
 | Branching | Checkpoint branching and counterfactual replay are not established. Parallel search or visit calls are permitted, but do not establish branching support. |
+
+</details>
+
+<a id="paper-712abb20a14f30f7"></a>
+
+<details>
+<summary>Trial by Trace: Benchmarking AI Agent Harnesses for Reliability and Failure Attribution — details</summary>
+
+[Work](../README.md#paper-712abb20a14f30f7) · [Source](https://arxiv.org/pdf/2610.32285)
+
+**Focus:** Harness reliability across 95 software tasks: 46 single-turn, 45 fixed multi-turn, and four simulator-driven tasks. Feedback comes from executed tools and processes, persisted artifacts, authoritative environment state, and declared stateful simulator services. Recorded traces support subsequent evaluation.
+
+**Openness:** `Agents choose native execution strategies within task-defined prompts, fixtures, allowed tools, and resource budgets.`, `The paper describes released tasks, configurations, traces, verdicts, and evidence archives.`
+
+**New physical measurements:** No
+
+**Limits:** These are software reliability tasks rather than executed research experiments. One selected execution per cell includes recovery replacements. Task revisions, runtime settings, and judge budgets vary. Missing selected evidence can yield zero without establishing a defect. Unexercised Harness criteria depend on Agent outcomes. Candidate attribution links require further manual validation.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No training reward or demonstrated optimization loop is established. Evaluation combines deterministic task verifiers with criterion-specific semantic judgments by deepseek-v4-flash. Separate Agent and Harness pass fractions each contribute 50 points; combined passage requires every criterion to pass. |
+| Reset | Each run initializes a frozen task state in a task-scoped container and captures a private workspace baseline. Arbitrary mid-run state restoration is not established. |
+| Branching | Branching from saved execution states is not established. Preserved archives support inspection and offline rescoring; the paper explicitly says offline scoring does not replay the Agent. |
+
+</details>
+
+<a id="paper-3c56ba0d896a7404"></a>
+
+<details>
+<summary>WORTH Benchmark: Evidence Discovery under Not-Fully-Cooperative Information -- A Two-Episode Pilot — details</summary>
+
+[Work](../README.md#paper-3c56ba0d896a7404) · [Source](https://arxiv.org/pdf/2610.27597)
+
+**Focus:** Evidence discovery and participant attribution from two fixed, professionally authored Chinese mystery narratives. Evaluation uses author-designated clue sets and frozen scoring rules, rather than simulator interaction, tool execution, or new physical measurements.
+
+**Openness:** `Models select evidence from complete unmarked stories, choose participants from fixed candidate lists, and provide explanations.`, `Responses have fixed clue quotas and a structured format; external tools, search, and administrator questions are prohibited.`, `Evidence-cueing and evidence-modification conditions are proposed but unimplemented.`
+
+**New physical measurements:** No
+
+**Limits:** Only two stories and five runs per model per episode are evaluated. Author-designated clues are not exhaustive valid evidence, and participant definitions and case scope introduce ambiguity. Invalid selections are excluded rather than scored as failures. Product configurations vary, prior exposure cannot be ruled out, and human records have not been cleaned or analyzed.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No model training is established. The evaluator awards clue-overlap points and participant rewards or penalties. Episode 01 gives each key clue three points, correct participants seven/five/five points, and incorrect participants minus five. Episode 02 gives clues one to four points, correct participants two points each, and incorrect participants minus two to minus eight. Explanations receive no independent score. |
+| Reset | Each run uses a fresh dialogue without prior history, with memory and personalization disabled. The complete prompt is supplied in one turn. An interactive environment reset mechanism is not established. |
+| Branching | Branching support is not established. Each run submits one structured response without multi-turn interaction or alternative answers. |
+
+</details>
+
+<a id="paper-7a9367ad16e43eeb"></a>
+
+<details>
+<summary>How Do Coding-Agent Harnesses Self-Evolve? An Empirical Study of Retrospective Adaptation — details</summary>
+
+[Work](../README.md#paper-7a9367ad16e43eeb) · [Source](https://arxiv.org/pdf/2610.34938)
+
+**Focus:** Transfer of retained harness adaptations between coding issues. Feedback comes from actual shell commands, tests, and repository operations in Docker containers. Recorded traces are subsequently labeled for behavioral recurrence; this is software execution rather than physical experimentation.
+
+**Openness:** `Agents modify repository source code and run existing tests for supplied SWE-bench Verified issues.`, `Persistent harness changes include context files, hooks, and lint or CI configuration within permitted locations.`, `Humans select adaptations and later issues that reproduce targeted environment problems.`
+
+**New physical measurements:** No
+
+**Limits:** Later issues are deliberately selected to reproduce targeted problems. Five sessions per harness support descriptive comparisons. Behavioral recurrence is distinct from task quality. The study does not establish an autonomous adaptation loop or executed scientific research experimentation.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No scalar training reward or model-parameter training is established. The primary evaluator records recurrence of a targeted action, with problem exposure, adaptation coverage, loading, and consultation tracked separately. LLM labelers and the first author assess traces. Task success against hidden benchmark tests and elapsed time are secondary outcomes. |
+| Reset | Each issue session starts in a fresh Docker container with its repository snapshot and dependencies. Transfer comparisons use five fresh sessions per harness. Original sessions and containers are resumed for retrospectives and implementation. An in-session checkpoint or reset interface is not established. |
+| Branching | Original and adapted harnesses are compared in separate fresh containers for the same issue. Arbitrary branching from intermediate execution states is not established. |
+
+</details>
+
+<a id="paper-8e919583fc15a7ec"></a>
+
+<details>
+<summary>Humans in Space: Can MLLMs Construct Human-Centric Spatial Understanding via Active Exocentric Exploration? — details</summary>
+
+[Work](../README.md#paper-8e919583fc15a7ec) · [Source](https://arxiv.org/pdf/2610.34149)
+
+**Focus:** Active evidence acquisition and spatial reasoning over synchronized static frames from ten existing multi-view datasets. Each query reveals a recorded camera view rather than moving a physical camera or advancing a physical simulation. Passive controls supply selected views upfront.
+
+**Openness:** `Models choose whether to answer or acquire another view from a finite camera ring.`, `Standard exploration permits adjacent left or right moves; an expanded condition permits shifts of one or two views.`, `Previously queried perspectives may be revisited, and visual history is retained by default.`
+
+**New physical measurements:** No
+
+**Limits:** The benchmark contains 316 scenes and 2,525 annotated questions with a discrete camera interface. It does not collect new physical measurements during agent interaction or evaluate temporal exploration. GRPO training simplifies interaction to a single-turn answer-or-move decision, so it does not establish training of the full multi-turn exploration process.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Evaluation accuracy matches the final option against the annotated answer, using rule-based parsing with an LLM extraction fallback. Exploration reward is correctness multiplied by exp(-0.1 times the step count), averaged across questions. GRPO uses accuracy reward weight 1.0, format reward weight 0.5, and action reward weight from 0.05 to 1.4 on a balanced mixture of active and passive tasks. The training corpus contains 19,370 synthesized QA pairs from 86 scenes. |
+| Reset | Each Active item begins at a designated occluded view of a fixed recorded scene. Active and Passive comparisons reuse the same question and ground truth. An explicit training reset API or reset of intermediate interaction history is not established. |
+| Branching | Models may choose left or right views and revisit perspectives. Alternative exploration policies and matched-view controls are evaluated separately. Snapshot branching from an intermediate history is not established; GRPO samples groups of candidate outputs for single-turn training. |
 
 </details>
 
