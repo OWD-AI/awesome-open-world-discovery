@@ -2945,6 +2945,28 @@
       "name": "Assessing the CAD Capabilities of General-Purpose AI Models: A Case Study of GPT-6 Astra",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.24451"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose GUI action sequences within 130 fixed tasks.",
+        "Agents can ask free-form clarification questions through ask_user."
+      ],
+      "focus": "Inferring user preferences from synthetic activity history and asking for unavailable information while completing personalized mobile tasks. An executable iOS simulator supplies screenshots and mock-app state changes; an LLM supplies simulated-user replies.",
+      "limits": "Pages 4–6 and 15–17 establish 26 mock apps, one fictional persona, seeded synthetic history, hidden profile and task context, and a 50-step episode limit. These are simulated digital activities, not recorded real-user activity or new physical measurements. User replies and scoring depend on LLMs. Arbitrary state branching is not established.",
+      "training": {
+        "reward": "A training reward is not established. For evaluation, Claude Sonnet 5 judges binary task-rubric criteria from execution trajectories, screenshots, final answers, the hidden profile and task context. Completion and personalization scores are macro-averaged criterion fractions; full success requires every criterion to pass. An LLM interaction judge measures micro-aggregated recall and precision of ask-only information requests, penalizing unnecessary and repeated requests (pages 5–6 and 19–21).",
+        "reset": "Each episode starts in a freshly seeded iOS simulator. Declarative task-specific data, history and profile overrides are applied at setup and reverted afterwards (pages 6 and 15).",
+        "branching": "Snapshot restoration or branching from intermediate states is not established. Declarative task variants are supported (page 15)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-44155a8b99014187",
+      "resource_id": "paper-44155a8b99014187",
+      "name": "iPrefBench: A User-Centric Benchmark for Personalized Mobile Use Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.34735"
     }
   ]
 }

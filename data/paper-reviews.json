@@ -22924,6 +22924,190 @@
           18
         ]
       }
+    },
+    "paper-44155a8b99014187": {
+      "institutions": [
+        "The Ohio State University",
+        "Apple"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs 130 tasks across 26 mock iOS apps around one persona with 3,051 activity events. Omitted requirements are annotated as history-inferable or ask-only. Seven agents use a shared GUI harness and simulated user. Evaluation combines task rubrics with clarification recall and precision, supported by human and alternative-judge validation.",
+      "evidence": "Action completion reaches 91.6%, while full task success peaks at 47.7%. Table 1 reports maximum clarification recall of 44.2%, although the prose says 44.3%. Pre-execution clarification raises Sonnet's success from 39.2% to 53.8% and recall from 25.7% to 85.0%, while precision falls from 60.4% to 42.5%. Additional history improves inference without reliably improving recognition of ask-only unknowns.",
+      "discovery_use": "Directly evaluates agents recognizing unresolved information and deciding whether to infer from evidence or acquire missing knowledge through questions.",
+      "limits": "One synthetic persona, mock apps, and deliberately clarified historical patterns limit generalization to ambiguous real histories. Simulation and scoring depend on LLMs despite validation. Specialized GUI models were excluded after context or action failures. The supplied visuals illustrate the design rather than independently showing result plots. No first-party release was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates agents recognizing unresolved information and deciding whether to infer from evidence or acquire missing knowledge through questions.",
+        "pdf_sha256": "e204dbcadc6562cfc75ab0af424590ce85fe9116404da8c48e23181c0b4e87aa",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-612d122323ff66e0": {
+      "institutions": [
+        "Cornell University",
+        "Alibaba Group"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Compares 17 designs spanning initial instructions, execution reminders, completion gates, and independent review across seven coding models. A shared critic examines changes or trajectories and returns findings for agent repair. Selected Terminal-Bench and SWE-bench tasks use automatic grading; 18 VisualBench tasks use blinded human comparisons. Additional experiments vary critic count and review rounds.",
+      "evidence": "Independent-review designs improve average accuracy by 5.9–9.5 percentage points on Terminal-Bench and 3.9–6.6 on SWE, at 1.13–1.25 and 1.00–1.04 times baseline cost. VisualBench net preferences reach 13.2–23.8 points. Completion rejection can help but costs substantially more. Full trajectories do not consistently improve review outcomes. More rounds or critics add up to approximately 3.5 accuracy points.",
+      "discovery_use": "Provides a concrete study of agent harnesses that detect overlooked defects through independent checks and use evidence to guide revision, directly supporting verification capability.",
+      "limits": "Coding tasks are small, deliberately selected subsets rather than complete benchmark evaluations. Results use one critic model and provider-specific pricing. VisualBench has 18 internal tasks and internal raters. Aggregate improvements coexist with model-level regressions, and the supplied tables do not establish statistical significance for every contrast. This is a targeted review of supplied sections, not all 65 pages. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "systems",
+        "rationale": "Provides a concrete study of agent harnesses that detect overlooked defects through independent checks and use evidence to guide revision, directly supporting verification capability.",
+        "pdf_sha256": "83dc9f397c7520c42ab29f50291162ba08835dc8caa5b090156349039cf1436a",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-be6027ef734ec5cb": {
+      "institutions": [
+        "University of Maryland, College Park",
+        "Carnegie Mellon University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Trains recurrent PPO policies for 50 million decisions under shared embodiment, architecture, and training settings. Policies select seven primitives in randomized arenas. Frozen policies undergo nine 30-minute tethered-ball evaluations with vision and odor masked. Analyses compare turn bias, future-turn decoding, behavioral predictability, and selected PCA component relationships against biological recordings and controls.",
+      "evidence": "DIAYN reaches 82.1% internal future-turn decoding accuracy versus 66.5% for fly IPS, and behavioral decoding reaches 74.7% versus 60.5%. Its relationship between internal and behavioral predictability and its range of turning biases resemble the flies. Nine of 20 objectives generate no turns or only one direction. Selected DIAYN component correlations with angular and forward velocity approach the biological values.",
+      "discovery_use": "Studies autonomous exploration and unsupervised skill discovery without external task rewards, using biological behavior and internal representations to constrain intrinsic objectives.",
+      "limits": "Each method has one training seed; fold variability is not training-run uncertainty. Fixed primitives restrict exploration largely to planar locomotion. Several algorithms differ from their original implementations, and the extrinsic control has a smaller budget. Layer and PCA-pair selection can favor apparent correspondence. Turn-level cross-validation does not establish generalization across independent animals or rollouts. Functional similarity does not demonstrate biological causation or unlimited open-ended discovery.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "open_ended",
+        "rationale": "Studies autonomous exploration and unsupervised skill discovery without external task rewards, using biological behavior and internal representations to constrain intrinsic objectives.",
+        "pdf_sha256": "31260002ffc5cc437cd78c023eb4cccb8d23ecea7dc81514257f3abb9f4d6dce",
+        "evidence_pages": [
+          1,
+          7,
+          23
+        ]
+      }
+    },
+    "paper-0268ace042e4dcb9": {
+      "institutions": [
+        "Tel Aviv University",
+        "The Open University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6,
+        30
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Generates class attributes with an LLM, optionally filters them, and grounds them using SAM 3. Replay training combines classification, concept-region relevance supervision, and cosine stability of stored background saliency. Experiments use ResNet-18 and ViT-B, five principal benchmarks, five runs, matched replay buffers, attribution controls, component ablations, and additional debiasing and transfer tests.",
+      "evidence": "On CUB with ViT-B, C3L reports 83.65% accuracy and 2.92 forgetting versus 78.09% and 4.17 for the attribution-matched RRR control. On ImageNet-R, accuracy reaches 82.74%; a 200-example buffer retains 80.40%. Both regularizers contribute. Separate sparse fine-tuning raises ViT ObjectNet accuracy from 33.92% to 58.04%. Ground-truth part guidance also improves retention without foundation-model preprocessing.",
+      "discovery_use": "Directly addresses retaining useful semantic knowledge during sequential learning and preventing feedback from reinforcing spurious explanations, a concrete continual-discovery capability.",
+      "limits": "The setting uses labeled class increments and known training boundaries, rather than autonomous unknown-class discovery. Foundation-model priors and grounding errors remain relevant despite controls. The crowding-out mechanism is a hypothesis, not a guarantee. Background stability preserves relative spurious patterns even when their magnitude decreases. Localization partly rewards the training objective, and OOD validation uses additional images beyond the 2,500 fine-tuning examples. Remaining appendix pages and unrendered figures were not inspected.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "adaptation",
+        "rationale": "Directly addresses retaining useful semantic knowledge during sequential learning and preventing feedback from reinforcing spurious explanations, a concrete continual-discovery capability.",
+        "pdf_sha256": "17d25e96cfd92db0e983ad58b991f777ec422f0670a8c5841f6071e02cf5d2ae",
+        "evidence_pages": [
+          1,
+          5,
+          6,
+          30
+        ]
+      }
+    },
+    "paper-5f578362e97630cb": {
+      "institutions": [
+        "University of Waterloo",
+        "University of North Carolina at Chapel Hill",
+        "University of British Columbia"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Four source attempts supply bounded process records and artifacts to one same-model coach call. The resulting guidance connects facts, actions, and pitfalls. A student restarts from the initial environment and verifies or adjusts the guidance. Evaluation covers terminal, database, mobile, and document-research tasks, with comparisons against unguided execution, reflection, selection, and aggregation.",
+      "evidence": "Mean benchmark success improves by 9.9 percentage points for GPT and 8.8 for Claude. On matched BrowseComp-Plus subsets, construction tokens fall by 98.2% and 95.5% relative to adapted AggAgent; combined construction and execution tokens fall by 15.7% and 35.4%, excluding source generation. Process records improve Claude success from 85.0% to 88.3% while reducing mean student steps from 14.6 to 9.1.",
+      "discovery_use": "Directly advances agents’ reuse of discovered facts, operational knowledge, and failures. Fresh execution requires checking retained experience against current observations, providing a concrete mechanism for learning to investigate more effectively.",
+      "limits": "Experience reuse is task-specific; cross-task retention and continual learning are not established. Source-inclusive token costs average about five times unguided execution. Benefits are inconsistent when all sources fail. Several ablations use selected BrowseComp-Plus subsets, and larger source pools also increase input length. Limited repeated executions constrain reliability claims. Findings were reviewed from supplied text, without reproduction.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "adaptation",
+        "rationale": "Directly advances agents’ reuse of discovered facts, operational knowledge, and failures. Fresh execution requires checking retained experience against current observations, providing a concrete mechanism for learning to investigate more effectively.",
+        "pdf_sha256": "283a84769a205b3506ecaa2f78c3e631c7638a98f0648690fed1c9b0cc70ca4b",
+        "evidence_pages": [
+          1,
+          3,
+          7
+        ]
+      }
+    },
+    "paper-03aea9589c54c66f": {
+      "institutions": [
+        "Case Western Reserve University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        8,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Paraphrase activation differences are projected into a shared space and decomposed through a covariance-based spectral operator. Bottom eigenvectors define approximately invariant content readouts; top eigenvectors identify high-disagreement directions. Multi-layer graphs provide a harmonic-mass diagnostic. Experiments compare held-out CounterFact retrieval, coordinate and subspace ablations, steering baselines, and representation-training variants.",
+      "evidence": "Twenty-dimensional content readouts exceed LEACE-preserved representations by a mean 17.1 percentage points across eight architectures. Joint paraphrase constraints add approximately 6.5 points, with controls attributing gains to connectivity rather than cycles. Coordinate ablations produce 5.6–26.5 times greater output changes than controls. Harmonic mass correlates with steering fragility across six architectures. Specific sheaf transition and cycle terms do not consistently improve training over simpler multi-layer regularization.",
+      "discovery_use": "Provides a concrete representation-level contribution to verifying factual consistency across contexts, with held-out knowledge retrieval and activation interventions. Its relevance is foundational support for reliable knowledge representations; autonomous discovery and external causal-world modeling are not demonstrated.",
+      "limits": "The empirical operator is a projected second-moment matrix, not the full sheaf Laplacian; its low-energy content space approximates a kernel. Spectral H1 directions are not algebraic cohomology classes. Ablation controls do not fully match removed activation energy. Out-of-domain projections lose roughly 25 retrieval points. The fragility association involves only six architectures, holonomy fails a shuffled-null test, and steering gains depend on architecture and magnitude.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "causality",
+        "rationale": "Provides a concrete representation-level contribution to verifying factual consistency across contexts, with held-out knowledge retrieval and activation interventions. Its relevance is foundational support for reliable knowledge representations; autonomous discovery and external causal-world modeling are not demonstrated.",
+        "pdf_sha256": "c635a5b3e9a582fc99ff2ff93400b09fce526854e3349b05b3e92e4024117c2e",
+        "evidence_pages": [
+          1,
+          7,
+          8,
+          10
+        ]
+      }
     }
   }
 }
