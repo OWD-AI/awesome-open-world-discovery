@@ -2899,6 +2899,52 @@
       "name": "RSI Arena: Towards Recursive Self-Improvement with Human Feedback",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.33624"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose their experimental procedure, measurement conditions and analysis.",
+        "Agents write code for perception, control and reusable tools through the allowed interface.",
+        "T0 and T1 are released evaluation levels; T2 supplies skills from successful runs of the same experiments and is diagnostic only.",
+        "The paper reports releasing the benchmark and evaluation code."
+      ],
+      "focus": "Thirty simulated quantitative experiments across five disciplines and 14 apparatus platforms. Agents manipulate apparatus, read camera-visible instruments and infer hidden parameters or produce predictions or configurations. Pages 4–5 describe Isaac Sim, additional physical solvers, instrument noise and quantization, camera feedback and exported instrument records.",
+      "limits": "These are simulated teaching-laboratory experiments with familiar physical laws and randomized unknowns. They generate simulated measurements rather than new physical measurements. Interaction is constrained by task rules, interface level, a 200–1500 second simulated-time budget and a wall-clock limit. The first submission ends the episode. Transfer to real laboratories is not established.",
+      "training": {
+        "reward": "Pages 5–7 define a terminal evaluator: success requires every submitted quantity within tolerance, genuine episode evidence, valid measurement conditions and the required final bench state. A process score weights six milestones by 10, 10, 10, 10, 30 and 30. Use of these scores as an agent-training reward, or availability of an online reward during an episode, is not established.",
+        "reset": "Pages 6–7 and 16 establish seeded instance generation and reproducible instances with hidden parameters drawn per instance. An agent-accessible reset or retry operation within a scored episode is not established; submission is allowed once.",
+        "branching": "State snapshots, rollback and branching from an intermediate simulator state are not established. The public interface on page 17 lists observation, motion, instrument-record and submission tools without a branching operation."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6162f96ecddc8088",
+      "resource_id": "paper-6162f96ecddc8088",
+      "name": "EmbodiedLab: Benchmarking Embodied Agents That Act to Know",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.35385"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "The paper states that the appendix provides task instructions, case descriptions, procedures, verification criteria and detailed results.",
+        "Downloadable code and evaluation data availability is not established by the supplied pages."
+      ],
+      "focus": "CAD understanding, generation, editing and autonomous checking across 55 main cases drawn from engineering practice. The agent reads supplied models, drawings, images or requirements and executes modeling and checking operations. Feedback comes from executed computation and geometry inspection; the evaluation does not report new physical measurements.",
+      "limits": "A selected case study of one tool-enabled system. Within-run checks and revisions are allowed, but independent verification remains necessary. Listed requirements and valid individual solids do not establish complete functionality. Editing is evaluated only for initially valid reconstructions. These are engineering task executions; an environment for conducting research experiments is not established.",
+      "training": {
+        "reward": "No training reward or model-training procedure is established. Page 4 describes independent evaluation using geometric comparisons, solid-validity checks and task-specific engineering requirements. Page 10 defines a passing edit as an effective parameter change, correct dependent updates, valid solids and restoration to the original state.",
+        "reset": "Page 4 establishes an independent conversation with memoryless working mode for each run. Page 10 tests restoration of edited models to their original state. A complete reset of the server, filesystem or installed tools between runs is not established.",
+        "branching": "Page 4 permits multiple execution, checking and revision cycles within a conversational turn. Explicit environment snapshots, state cloning and branching from a saved execution state are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-016b2d7e0ace0f55",
+      "resource_id": "paper-016b2d7e0ace0f55",
+      "name": "Assessing the CAD Capabilities of General-Purpose AI Models: A Case Study of GPT-6 Astra",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.24451"
     }
   ]
 }

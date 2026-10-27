@@ -22633,6 +22633,297 @@
           16
         ]
       }
+    },
+    "paper-f1ed6530207c60ff": {
+      "institutions": [
+        "Google"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses training-free Claim Checklists with revision rules and three schedules: before every reply, selectively when uncertain, or before final submission. Evaluates five Gemini models across eight benchmarks, with timing ablations, stubbornness prompts, conversation trackers, tool verification and checkpointing controls.",
+      "evidence": "Pooled patch-review false reversals fall from 12.25% to 0.02%. In controlled report review, post-review pass rate rises from 58% to 89%, versus 65% when recording after feedback. Benefits are less consistent during unfinished coding: pooled mixed-feedback task pass falls from 43.8% to 36.2% with On-Demand recording, despite lower overhead. Draft-First improves reasoning calibration, while coding controls attribute most autonomous coding gains to checkpointing and review.",
+      "discovery_use": "Contributes a concrete verification and belief-revision procedure: agents preserve evidence-backed claims while investigating genuine corrections. This supports reliable knowledge verification in discovery workflows, although autonomous scientific discovery is not directly evaluated.",
+      "limits": "Only Gemini models and mostly brief simulated complaints are tested. Confidence is self-reported, thresholds are hand chosen, and checklists can preserve unfinished work or absorb earlier mistaken complaints. Several task-completion gains lack statistical support; pooled mid-session results contradict a universal improvement claim. Confidence products are heuristics for potentially dependent claims. Supplied text covers all 30 pages; only pages 1 and 4 were visually inspected. No independent reproduction was performed.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "sci_methods",
+        "rationale": "Contributes a concrete verification and belief-revision procedure: agents preserve evidence-backed claims while investigating genuine corrections. This supports reliable knowledge verification in discovery workflows, although autonomous scientific discovery is not directly evaluated.",
+        "pdf_sha256": "3d2a1f32b48bcee730a6a385e2add79162ceef57f9724e4e3b6e39a513fa021a",
+        "evidence_pages": [
+          1,
+          4,
+          8,
+          14
+        ]
+      }
+    },
+    "paper-6162f96ecddc8088": {
+      "institutions": [
+        "HexaFuture Inc.",
+        "Tsinghua University",
+        "National University of Singapore",
+        "Peking University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses randomized hidden parameters, camera observations and robot control. Success requires accurate answers, genuine episode evidence, valid measurement conditions and the required final bench state. Six model-and-harness combinations are evaluated with native control and added perception/planning; weaker agents also receive diagnostic manipulation skills distilled from successful runs.",
+      "evidence": "At native control, the strongest reported success rate is 43.3%, followed by 40.0% and 28.3%. Added perception and planning improve success by 1.7–10 percentage points; diagnostic manipulation skills add 10–26.7 points for weaker agents. Acting, observing and restoring account for 75–100% of attributed failures. Strong agents obtain accurate results in 51.7–55.0% of runs, showing that bench restoration materially affects the final ranking.",
+      "discovery_use": "Directly evaluates discovery through embodied experimentation: agents choose procedures, manipulate apparatus, collect evidence and infer hidden quantities. Randomized instance parameters and evidence-bound scoring make the unknowns concrete and verifiable.",
+      "limits": "The benchmark uses simulated teaching-laboratory physics and familiar laws with unknown parameters, so it does not establish discovery of novel scientific laws or transfer to real laboratories. Model and developer harness are evaluated together. Run-count and uncertainty reporting is insufficient for precise ranking confidence. T2 partly reuses solutions from the same experiments and is excluded from the released protocol. Supplied text covers all 19 pages; only pages 1 and 2 were visually inspected. No independent reproduction was performed.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates discovery through embodied experimentation: agents choose procedures, manipulate apparatus, collect evidence and infer hidden quantities. Randomized instance parameters and evidence-bound scoring make the unknowns concrete and verifiable.",
+        "pdf_sha256": "b153dbadde89657ddad9f2325574bb9d6f9f023a33e5ffcca78a230626300b95",
+        "evidence_pages": [
+          1,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "paper-ce1931d0c82b17af": {
+      "institutions": [
+        "T´el´ecom Paris, Institut Polytechnique de Paris",
+        "Nokia Bell Labs"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The analysis studies token masking and renormalization with fixed reasoning traces, assuming the correct answer remains admissible. Experiments compare JSON, two-step formatting, and trigger-based formatting across ten solving models plus an extractor, using arithmetic, letter concatenation, extended concatenation, and AIME problems. Ablations separate format, validity, and reasoning constraints.",
+      "evidence": "Matched comparisons generally preserve or improve accuracy. Validity constraints provide more consistent gains than format constraints, including 17.4 percentage points for one LastLetter setting. Reasoning constraints have mixed effects: Qwen3.5-4B falls from 62.2% to 55.6% on AIME. Trigger-based formatting limits additional tokens, although token counts do not measure total computational overhead.",
+      "discovery_use": "Task-derived validity constraints and controlled reasoning comparisons directly inform how agents generate valid candidate answers and preserve reasoning while enforcing verifiable interfaces.",
+      "limits": "The probability guarantee assumes sound constraints and fixed reasoning; it does not establish universal improvement under greedy decoding or changed reasoning trajectories. Validity experiments concentrate on simple answer spaces, and strict extraction contributes to measured gains. Complex schemas and scientific discovery tasks remain untested. The manuscript promises supplementary code; no paper-specific public release was verified. Litelines is an existing implementation dependency.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "sci_methods",
+        "rationale": "Task-derived validity constraints and controlled reasoning comparisons directly inform how agents generate valid candidate answers and preserve reasoning while enforcing verifiable interfaces.",
+        "pdf_sha256": "7dde95623e77c27493d795179d2d2881bde8bc6e6c762d5ee3ad6ba236bfaaea",
+        "evidence_pages": [
+          1,
+          2,
+          12
+        ]
+      }
+    },
+    "paper-1858a2655b0e1621": {
+      "institutions": [
+        "securagen.ai"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        9,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A network-isolated Raspberry Pi runs five Qwen2.5 configurations over 300 questions spanning answerable, in-topic unanswerable, and held-out-corpus conditions. Shared retrieval supports paired comparisons of self-abstention, output validation, calibrated gating, and NLI verification. Additional tests evaluate signed-pack activation, nine update attacks, and poisoning of 30 previously correct questions.",
+      "evidence": "Retrieval scores separate corpus gaps well, with AUROC 0.97, but in-topic unanswerability poorly, with AUROC 0.68. Output validation lowers the smallest model’s answered-query risk from 0.81 to 0.46 by rerouting malformed outputs. Gating sacrifices some correct answers; the tested NLI verifier adds little. Layered pack checks reject all nine specified update attacks, yet signed poisoning reduces targeted correctness from 30/30 to 0/30, with 13 injected answers surviving support checks.",
+      "discovery_use": "The experiments directly test recognition of missing knowledge, evidence verification, abstention, and trustworthy knowledge updates. These are concrete components of agents that must identify unknowns and verify acquired information.",
+      "limits": "One device, model family, corpus split, and small question sample limit generalization. Labels were not checked against the entire corpus. Mean calibration thresholds lack the split-specific formal guarantee, which concerns answer retention rather than correctness. Energy is estimated, cache effects are uncontrolled, and network namespaces do not reproduce physical air-gap threats. The author-listed code/data deposit could not be independently accessed, so no release link is retained.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "systems",
+        "rationale": "The experiments directly test recognition of missing knowledge, evidence verification, abstention, and trustworthy knowledge updates. These are concrete components of agents that must identify unknowns and verify acquired information.",
+        "pdf_sha256": "f7a5381f4c1cbe214f6f20a747f37bd7cbcecd0e6a9f9be5fa282cd929e571e5",
+        "evidence_pages": [
+          1,
+          9,
+          14
+        ]
+      }
+    },
+    "paper-2688a4b095ad2a70": {
+      "institutions": [
+        "University of Hong Kong",
+        "UC Berkeley"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Column routing selects attention parameters and context subsequences once per block; expert routing operates within columns. Experiments compare dense, MoE, and NESTOR models at four scales from 100M to 1B active parameters. Domain adaptation uses four corpora, frozen sparse-model routers, and conditions with no replay or 25% replay. Separate context-extension runs reach 64k tokens. A stylized hierarchical regression model analyzes efficiency and forgetting.",
+      "evidence": "Fitted loss-compute curves estimate that MoE requires 1.13–1.29 times NESTOR's compute to match its loss, versus 3.1–4.1 times for dense models. Domain adaptation produces similar target-domain gains, with 3% less forgetting than MoE without replay and 5% less with replay. Longer contexts increase the equal-compute advantage when saved FLOPs purchase additional training tokens.",
+      "discovery_use": "Directly studies acquiring new domain knowledge while retaining prior knowledge. Its continual-pretraining experiments and analysis of interference provide a concrete contribution to retained learning for discovery-capable agents.",
+      "limits": "The retention improvement over MoE is modest. Results measure held-out language loss, with no demonstrated downstream discovery or post-training gains. Compute multipliers are fitted estimates rather than measured wall-clock speedups; excluding attention FLOPs reverses the small per-token compute advantage at 4k. The theory assumes supplied routing labels and simplified linear models. This was a targeted review of the supplied body and selected appendix pages, not all 44 pages.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "adaptation",
+        "rationale": "Directly studies acquiring new domain knowledge while retaining prior knowledge. Its continual-pretraining experiments and analysis of interference provide a concrete contribution to retained learning for discovery-capable agents.",
+        "pdf_sha256": "bbcf944c6a1d010a89336e78fee1dc7eaea2e928ed0190e4efca170a198f4651",
+        "evidence_pages": [
+          1,
+          6,
+          7,
+          10
+        ]
+      }
+    },
+    "paper-7745a2c4bef6fedf": {
+      "institutions": [
+        "Peking University",
+        "Beijing Institute for General Artificial Intelligence",
+        "NVIDIA",
+        "Tsinghua University",
+        "University of Wisconsin–Madison"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        10,
+        25
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Linear probes and mask, shuffle, replace, and inject interventions identify declining layer and timestep signals using norm-matched controls. Three training stages learn structured teacher delta tokens, fit frozen VGM projectors, and update selected LoRA adapters using pose and alignment losses. Evaluation covers intrinsic geometry, visual quality, conditioned trajectory accuracy, Fast-WAM transfer, and representation and adapter-placement ablations.",
+      "evidence": "Against Wan2.2, reprojection error falls from 8.4 to 6.5 pixels and smoothness rises from 0.71 to 0.88, with broadly preserved visual quality. CausalAlign leads six of seven main geometry/motion metrics; FantasyWorld has slightly better depth-flow consistency. Fast-WAM average success rises from 43.5% to 54.2%, tying ABot-M0.5's reported average. Matched adapter-placement experiments favor diagnosed layers, but temporal-modulation comparisons remain uncertain.",
+      "discovery_use": "Uses controlled interventions to investigate internal world representations and improve geometric state retention, then tests transfer to embodied action. This directly contributes to understanding and strengthening world representations relevant to discovery-capable agents.",
+      "limits": "The interventions concern model internals, not identification of environmental causal laws. Probe features come from noised real videos, while interventions use free-running generation. Tested probes cannot establish that motion information is absent from every possible representation. Main geometry and WAM tables lack uncertainty intervals; intrinsic metrics depend on frozen estimators and compare methods with different conditioning interfaces. Temporal-modulation confidence intervals include zero, and some placement studies use only 32 scenes.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "causality",
+        "rationale": "Uses controlled interventions to investigate internal world representations and improve geometric state retention, then tests transfer to embodied action. This directly contributes to understanding and strengthening world representations relevant to discovery-capable agents.",
+        "pdf_sha256": "fda525a7947ad9ad16b1dfacff447b51a4f8a4266aabaa8b2d30b36327059961",
+        "evidence_pages": [
+          1,
+          6,
+          10,
+          25
+        ]
+      }
+    },
+    "paper-016b2d7e0ace0f55": {
+      "institutions": [
+        "State Key Laboratory of CAD&CG, Zhejiang University, China",
+        "Design and Manufacturing Automation Lab"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        11,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Fifty-five main cases cover six task types drawn from engineering practice. Independent conversations use the reported MAX-reasoning agent with a Linux tool environment and usually web search. Outputs undergo geometric and validity checks plus task-specific requirement inspection. Only initially valid parametric reconstructions receive ten prescribed dimension edits. Supplementary conditions vary search access and input information.",
+      "evidence": "The paper reports correct candidate-class assignments for 12/12 parts and fully correct feature recognition for 3/6 cases. Drawing reconstruction yields valid components in 6/8 cases, but only one of three multipart cases assembles successfully. All 12 text cases satisfy listed requirements, while 11 pass validity checks and implicit functional defects remain. Six of 11 parametric reconstructions qualify for editing; 52/60 eligible edits pass, but only 4/11 original cases pass validity and every edit. Refinement sometimes introduces additional errors.",
+      "discovery_use": "Provides a bounded evaluation of autonomous engineering design, checking, and iterative refinement against independently checked constraints. Its concrete connection to discovery is measuring whether an agent can develop and verify designs reliably; it does not establish autonomous scientific discovery.",
+      "limits": "This is a small, selected-case study of one tool-enabled system, without comparative model baselines or repeated-run uncertainty. Results cannot isolate the base model from tools, search, and environment setup. Listed requirement scores do not establish full functionality, and editing success is conditional on initial validity. Some tasks take hours. The review covers supplied main-body and selected appendix pages, not the entire 194-page report. An official project page was verified, but no downloadable code or evaluation dataset release was established.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "Provides a bounded evaluation of autonomous engineering design, checking, and iterative refinement against independently checked constraints. Its concrete connection to discovery is measuring whether an agent can develop and verify designs reliably; it does not establish autonomous scientific discovery.",
+        "pdf_sha256": "ae48973a5d86783842918e503e11c50e194e80cf932080ae0f37cd3d0842a30e",
+        "evidence_pages": [
+          1,
+          4,
+          11,
+          14
+        ]
+      }
+    },
+    "paper-26d90efac0c84106": {
+      "institutions": [
+        "Zhejiang University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The agent marks image points, which are tracked with optical flow and back-projected using depth. A constraint solver generates candidate poses, filters infeasible inverse kinematics, plans trajectories, and executes them. Incremental control tools support recovery. Evaluation covers five instances of each of ten BEHAVIOR tasks and lifting 100 objects, with VLA, world-action-model, and predefined-pick baselines.",
+      "evidence": "The reported mean BEHAVIOR q-score is 44.539%, versus 34.838% for G0.5 and 31.635% for RLC. These are subgoal-based scores, not full-task success percentages. RoboHarness configurations lift 68–86 of 100 objects; Faster-WAM lifts 61. Results support the usefulness of a geometric interface, but do not isolate interface design from model capability and prompting.",
+      "discovery_use": "Provides an enabling harness for open-world embodied agents: visual grounding, geometric constraints, and execution feedback let pretrained agents manipulate unfamiliar objects without additional robot-policy training.",
+      "limits": "BEHAVIOR evaluation uses only ten tasks and five instances per task, with human-written task-specific procedures and behavioral boundaries. The agent still suffers grounding failures. Object comparisons use different embodiments and floor versus tabletop settings, while robot-data hours involve estimates. Evidence is simulation-based. The completeness argument concerns ideal geometry and does not guarantee feasible or stable manipulation; page 6 does not establish unique ray-surface intersections for arbitrary object shapes.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "systems",
+        "rationale": "Provides an enabling harness for open-world embodied agents: visual grounding, geometric constraints, and execution feedback let pretrained agents manipulate unfamiliar objects without additional robot-policy training.",
+        "pdf_sha256": "ccdaf5f1a4621a470cde849226e56e9afd06532340c058670ff3f25b3db18718",
+        "evidence_pages": [
+          1,
+          5,
+          7,
+          8
+        ]
+      }
+    },
+    "paper-9cb4fd90a578a1f8": {
+      "institutions": [
+        "University of Chinese Academy of Sciences",
+        "Independent Researcher",
+        "University of California, Santa Cruz",
+        "Tsinghua University",
+        "National University of Singapore",
+        "Chinese Information Processing Laboratory, Institute of Software, Chinese Academy of Sciences",
+        "School of Advanced Interdisciplinary Sciences, University of Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Seven models are evaluated with and without supplied skills on 607 tasks from three benchmarks. A performance-based rule selects 103 skill-sensitive pairs. Trajectory analysis identifies tool execution, context management, instruction following, and verification failures. A fixed meta-skill guides either one-shot external rewriting or five rounds of self-revision using trajectories and verifier feedback. Loadability and answer-leakage gates reject invalid revisions.",
+      "evidence": "On the selected pairs, skills improve GPT-5.6-luna by 31.1 points but reduce Gemma-4-E4B by 8.8 points. Kimi-K3 adaptation improves three weak executors by 5.1–14.1 points over original skills and by 5.1–6.0 points over generic rewriting. After five self-revision rounds, aggregate scores improve by 2.0–5.1 points over the corresponding loop without the meta-skill across seven executors. Improvements are neither monotonic nor universal across individual benchmarks.",
+      "discovery_use": "Directly studies feedback-driven agent improvement through retained procedural guidance. Its capability-aware skill revisions provide a concrete mechanism for improving harness self-evolution without updating model parameters.",
+      "limits": "The 103 pairs are selected specifically for stronger-model benefit and weak-model headroom; all 607 tasks show no clear tier pattern. The meta-skill is developed from failures on the same selected testbed, without demonstrated transfer to unseen tasks. Every model-task-condition cell runs once, limiting precision. Some executor-by-benchmark results regress, including an 18.8-point DocOps drop for Qwen3.5-plus. Retrieval, progressive disclosure, long-term retention, and unbounded improvement are untested. Code release is promised after review; no implementation release was verified.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "adaptation",
+        "rationale": "Directly studies feedback-driven agent improvement through retained procedural guidance. Its capability-aware skill revisions provide a concrete mechanism for improving harness self-evolution without updating model parameters.",
+        "pdf_sha256": "14cec9345c97f17613cff91feb92060bbaba2fec236a2c2e681fa3393f762765",
+        "evidence_pages": [
+          1,
+          6,
+          9,
+          18
+        ]
+      }
     }
   }
 }
