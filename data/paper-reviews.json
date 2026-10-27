@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -21433,6 +21433,322 @@
           2,
           9,
           26
+        ]
+      }
+    },
+    "paper-6737b9769e0ac469": {
+      "institutions": [
+        "New York University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Extract conclusion-bearing claims, run support and skeptic agents over cited documents, consolidate evidence into claim-specific aspects, and assign a five-point smoothing score. Evaluation covers seven systems and four research benchmarks, with human validation on 73 claims and report-regeneration interventions.",
+      "evidence": "Mean scores range from 1.66 to 3.27 across system–dataset combinations. Providing full documents together with calibration instructions reduces materially smoothed claims from approximately 29% to 12% for Luna and 61% to 25% for Sonnet. Extracted evidence also improves independently rubric-scored report revisions.",
+      "discovery_use": "Directly evaluates whether research agents preserve uncertainty, conflicting findings, and evidential scope when synthesizing knowledge. This addresses verification of discovery outputs beyond citation-level factuality.",
+      "limits": "Assessment is restricted to cited documents and depends on model-based extraction and judging. Human validation is small; only 62% of judge-flagged material cases cross the same threshold for one annotator. Appendix agreement prose conflicts with its tables. Browsing traces do not reveal all content seen by every system. The verified repository currently says pipeline and data are forthcoming. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates whether research agents preserve uncertainty, conflicting findings, and evidential scope when synthesizing knowledge. This addresses verification of discovery outputs beyond citation-level factuality.",
+        "pdf_sha256": "ffd9aef983dfa1ff3c68af1ac41f239ec8b5cc74d39b2329a8c4a1103891ec96",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-47e008c461c64eb6": {
+      "institutions": [
+        "Shanghai Jiao Tong University",
+        "The University of Hong Kong",
+        "The Hong Kong University of Science and Technology (Guangzhou)",
+        "Tsinghua University",
+        "The Chinese University of Hong Kong",
+        "Zhejiang University",
+        "Sun Yat-sen University",
+        "Central South University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        12,
+        59
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Conceptual synthesis defines work openness and persistence, five capability families, and five work forms. Selected body sections review harness-aware training, joint model–harness adaptation, outcome-based benchmark evaluation, and interacting execution and capability-improvement loops.",
+      "evidence": "The framework separates what an agent must discover from when its responsibility ends. It identifies evidence tracing, state continuity, dependency discovery, and re-verification as recurring requirements. Its evaluation tables distinguish answer quality, artifact correctness, workflow completion, and environment-state changes.",
+      "discovery_use": "The survey explicitly treats discovering task-relevant objects, interfaces, rules, and dependencies during execution as a core agent capability. Its treatment of verification, retained experience, and model–harness improvement provides a concrete foundation for open-world discovery systems.",
+      "limits": "This is a survey and research agenda, without a new controlled demonstration that its taxonomy improves discovery. Much coverage concerns ordinary productivity work, so relevance rests on its substantive openness, verification, and improvement framework. The supplied sections support a targeted review, not exhaustive reading of all 91 pages. The companion repository is a reading list rather than an implemented agent.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "foundations",
+        "rationale": "The survey explicitly treats discovering task-relevant objects, interfaces, rules, and dependencies during execution as a core agent capability. Its treatment of verification, retained experience, and model–harness improvement provides a concrete foundation for open-world discovery systems.",
+        "pdf_sha256": "55158b04513f0b3979bc51a134b5813178a07e5cdd028288e32de8ba5cd0c85c",
+        "evidence_pages": [
+          1,
+          12,
+          59
+        ]
+      }
+    },
+    "paper-27096c6218492feb": {
+      "institutions": [
+        "Gaoling School of Artificial Intelligence, Renmin University of China",
+        "University of Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        12,
+        56
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Defines diagnosis, proposal, evaluation, and implementation stages, including their application to the updater itself. A versioned literature audit separates demonstrated outcomes from discussion and missing evidence. Evaluation sections propose paired continuations with matched starting states and budgets, protected reporting tests, and longitudinal joint checks.",
+      "evidence": "The reviewed evidence supports capability outcomes more directly than joint longitudinal preservation of constraints and intervention effectiveness. Successful successor systems alone do not establish that an updated improvement mechanism is better. The proposed comparisons separate updater effects from additional resources and inherited starting-state advantages.",
+      "discovery_use": "Provides operational definitions and evidence requirements for agents improving their own learning and improvement mechanisms. Independent verification, retained gains, and controlled assessment of revised updaters directly support research on learning to discover.",
+      "limits": "This is an evidence synthesis and evaluation proposal, not a new validated RSI implementation. Its strict distinction between policy, bias, and updater depends on component function. Evidence from related persistent-update systems cannot automatically establish recursive improvement. Supplied PDF sections were supplemented with the official HTML evaluation and coding sections; only the two supplied images were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "foundations",
+        "rationale": "Provides operational definitions and evidence requirements for agents improving their own learning and improvement mechanisms. Independent verification, retained gains, and controlled assessment of revised updaters directly support research on learning to discover.",
+        "pdf_sha256": "8620bf884efd791616a5a21364f63f586c7d02e6dda3d8dfe8ce8b77c6313360",
+        "evidence_pages": [
+          1,
+          12,
+          56
+        ]
+      }
+    },
+    "paper-7879d80f8ba77ad5": {
+      "institutions": [
+        "Google",
+        "University of California, Santa Barbara",
+        "University of California, Santa Cruz",
+        "Stanford University",
+        "University of Oxford",
+        "Emory University",
+        "Columbia University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs 4,100 evaluation samples and 85,000 training samples spanning explicit, implicit, and dynamic intents. Adaptive streaming supervised training and localized GRPO optimize response timing and content. The harness maintains intent lifecycles and hierarchical memory. Pointwise and continuous trajectory evaluations separate local decisions from accumulated errors.",
+      "evidence": "The main trajectory table reports RL content F1 scores of 10.83, 19.13, and 8.91 for explicit, implicit, and dynamic intents, exceeding the listed baselines on that metric. Timing superiority is not universal. Harness ablations show the clearest benefits on dynamic intents, with some regressions elsewhere. Performance deteriorates during longer interactions.",
+      "discovery_use": "Contributes concrete mechanisms for inferring unstated user needs from emerging evidence and updating intent and environment representations during sustained interaction. Its discovery connection is online inference and state maintenance under changing goals.",
+      "limits": "Main and appendix tables disagree on category assignments and several numerical results, limiting confidence in headline aggregate gains. Harness improvements are mixed across metrics and intent types. Evaluation uses annotated recorded streams and model-judged content, leaving richer feedback between assistance, user behavior, and environment changes untested. The project is verified by the supplied first-party HTTP check, but no paper-specific checkpoint or dataset release was established. Review covers supplied body sections, not every appendix.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "systems",
+        "rationale": "Contributes concrete mechanisms for inferring unstated user needs from emerging evidence and updating intent and environment representations during sustained interaction. Its discovery connection is online inference and state maintenance under changing goals.",
+        "pdf_sha256": "c65ee225dd40e0ef5b916e8aaa6c4890bf8bd52724725670ae1ff3e3732c76c0",
+        "evidence_pages": [
+          1,
+          5,
+          6
+        ]
+      }
+    },
+    "paper-ade9af525e3953af": {
+      "institutions": [
+        "Zhejiang University",
+        "University College London"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Builds 1,588 validated multi-turn tasks across 42 domains and six ecosystem states using capability-preserving interface adaptations, splits, and merges. Dynamic programming supplies step- and cost-minimal reference paths. Evaluation measures database-state success, retrieval, path efficiency, improvement discovery, and degradation adaptation. Controlled studies compare skill methods and ablate maintenance and provisioning.",
+      "evidence": "The strongest evaluated model or harness reaches 42.27% task success. Existing skill methods provide initial gains without consistently improving adaptation. With DeepSeek-V3.2, STEWARD averages 39.04% success versus SkillOpt’s 36.36%; competing methods consume 1.2–5.5 times its maintenance tokens from the second version onward. Incremental maintenance and combined tool–skill search outperform their isolated alternatives.",
+      "discovery_use": "Explicitly evaluates discovery of newly efficient tool-use paths and adaptation of retained procedural knowledge as tool ecosystems change. Its metrics distinguish successful execution from finding improved capabilities.",
+      "limits": "Ecosystems change between episodes and remain fixed during each episode. Transformations preserve underlying capabilities, limiting coverage of genuinely new or permanently lost capabilities. Reference optima cover the constructed realization space, and execution costs are model-assigned proxies. Success requires covering gold database changes without explicitly excluding additional changes. Main controlled comparisons use one task model, and maintenance-token savings do not establish total runtime savings. Only supplied body sections and two images were reviewed.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "Explicitly evaluates discovery of newly efficient tool-use paths and adaptation of retained procedural knowledge as tool ecosystems change. Its metrics distinguish successful execution from finding improved capabilities.",
+        "pdf_sha256": "dbd3cc5478afee93b105ebb2570ac5473c4da82afe3b27674b409a3067b6e217",
+        "evidence_pages": [
+          1,
+          4,
+          9
+        ]
+      }
+    },
+    "paper-43d941c286c670db": {
+      "institutions": [
+        "Zhejiang University",
+        "School of Engineering, Westlake University",
+        "Institute of Advanced Technology, Westlake Institute for Advanced Study",
+        "Huawei Noah’s Ark Lab"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An Agentic Reference Graph organizes valid task transitions and incorporates purified, environment-verified successful rollouts. Positive advantages are masked on unsupported actions; negative advantages are weighted by downstream non-advancement counts. Experiments combine ProAS with GRPO, DAPO, and GiGPO on two model sizes across ALFWorld and WebShop, with three seeds and graph-quality ablations.",
+      "evidence": "The largest GRPO ALFWorld improvement is 70.3% to 87.0%. Peak reported success reaches 94.3% on ALFWorld and 70.8% on WebShop. Reaching fixed success thresholds takes up to 2.44 times fewer training steps. Incomplete and teacher-derived reference graphs retain benefits, while random annotations substantially degrade performance.",
+      "discovery_use": "ProAS provides a concrete mechanism for learning from verified agent trajectories: newly successful solution paths expand a reference graph that guides subsequent credit assignment. This is relevant to learning improved investigation strategies, although discovery-specific transfer remains untested.",
+      "limits": "Evaluation covers two structured environments with reference annotations or successful teacher trajectories, not scientific discovery. Best checkpoints are selected on the same 128-task validation sets used for reporting. Threshold-step speedup is not equivalent to wall-clock speedup. The intervention examples confound prefix and remaining horizon. Universal improvement claims overstate Table 1: 7B GiGPO WebShop success falls from 70.3% to 70.1%, and static graphs outperform evolving graphs on one ablation metric.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "learning",
+        "rationale": "ProAS provides a concrete mechanism for learning from verified agent trajectories: newly successful solution paths expand a reference graph that guides subsequent credit assignment. This is relevant to learning improved investigation strategies, although discovery-specific transfer remains untested.",
+        "pdf_sha256": "7932af36091024ce4920356737c630270660126e245b1136aaa0221c2ba6c688",
+        "evidence_pages": [
+          1,
+          5,
+          17
+        ]
+      }
+    },
+    "paper-1be99c75669dc696": {
+      "institutions": [
+        "Peking University",
+        "Nankai University",
+        "Fudan University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Versioned evidence records track assumptions, dependencies, and support assessments. A context composer separates established premises from exploratory material and outstanding obligations. Refined conjecture investigation repairs mechanisms, revises statements, or splits objectives. Independent review evaluates final proofs against original targets. Evaluation uses 51 reconstruction tasks, six open cases, historical-abstract search controls, and workflow ablations.",
+      "evidence": "PACE achieves Proof Score 75.16, weighted obligation completion 60.75%, and 20 completed proofs out of 51, compared with 17 for Iteris. Human and LLM reviewers score its submissions above both baselines on all six open cases. Results include conditional optimization bounds and a reported fully resolved exact-BFGS construction. Removing revision-triggered revalidation lowers C1 human scoring from 6 to 2.",
+      "discovery_use": "The primary contribution directly supports mathematical discovery through conjecture revision, proof and refutation probes, explicit unresolved obligations, and revalidation of evidence after assumptions change. Its benchmark also evaluates open research problems.",
+      "limits": "This targeted review does not cover every appendix or generated proof. Known-proof correctness relies on natural-language LLM review rather than formal certification. Native workflow budgets and stopping rules differ; supplied pages do not establish compute-matched comparisons. Workflow ablations cover one open case. Several research outcomes retain substantial unresolved gaps. Frozen retrieval limits answer access but cannot eliminate model-pretraining contamination; full-web results may include answer retrieval. No first-party artifact release was verified.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "sci_methods",
+        "rationale": "The primary contribution directly supports mathematical discovery through conjecture revision, proof and refutation probes, explicit unresolved obligations, and revalidation of evidence after assumptions change. Its benchmark also evaluates open research problems.",
+        "pdf_sha256": "6f8a35854ccd8dac4c0cfe980e8705df566ce474f1dce5fec9055eb15d926843",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-69d6a9490f99edc5": {
+      "institutions": [
+        "Meta",
+        "Duke University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A kinematic human body, collision-aware navigation and manipulation, and 36 semantic action primitives ground dialogue in simulator actions. Twelve assistant models are evaluated with a fixed human-model executor. Final-state predicates determine complete success and partial completion. Additional analyses examine errors, action efficiency, memory augmentation, and alternative human-model pairings.",
+      "evidence": "The strongest evaluated assistant passes 41.7% of tasks, compared with 100% for the oracle assistant under the stated executor protocol. Best Guidance and Planning success reaches only 20% and 25%. Perception and memory account for 70.4%–85.7% of categorized initial errors. Agents sometimes actively request new viewpoints or revealed labels. Simple memory augmentation helps some categories but harms others.",
+      "discovery_use": "The environment evaluates agents actively obtaining missing information, tracking changing world states, and adjusting guidance through feedback, with independently checkable simulator outcomes. This supplies a concrete evaluation setting for embodied information discovery and verification.",
+      "limits": "The human executor is an MLLM constrained to follow assistance; its silent-assistant failure rate therefore does not establish a natural human baseline. Kinematic execution and fixed action primitives simplify real interaction. Action-efficiency comparisons use different subsets of individually passed tasks. The supplied pages omit the appendix's real-participant validation, preventing assessment of that evidence. The public release lists 44 scenes and 6,831 used objects, below the paper's broader asset counts.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "The environment evaluates agents actively obtaining missing information, tracking changing world states, and adjusting guidance through feedback, with independently checkable simulator outcomes. This supplies a concrete evaluation setting for embodied information discovery and verification.",
+        "pdf_sha256": "b11c36b3af11cbd50102e23873b350bdc0099e8eb38829b8714bff681705ae3e",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-424fdb621545a108": {
+      "institutions": [
+        "National University of Singapore"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses two-stage supervised fine-tuning of Qwen3.5-27B: teacher-distilled first-turn reasoning and workflow actions, followed by continued training on 712 curated examples. JavaScript workflows express roles, parallelism, dependencies, and verification. Evaluation compares Direct, Dynamic, and Forced modes against single-agent methods and transferred AFlow workflows on 688 questions across six benchmark sets.",
+      "evidence": "Forced accuracy reaches 88.08%, compared with 75.87% for the untrained Forced agent and 77.18% for the strongest evaluated baseline. Dynamic achieves 87.94% while answering 47.1% directly. Explicit downstream consumption of upstream outputs rises from 12.6% to 97.7%. GPQA results improve over the untrained workflow agent but remain below Self-Refine and AFlow.",
+      "discovery_use": "Trains an agent to organize evidence gathering, independent verification, and information transfer through executable workflows. Its concrete contribution is learning coordination capabilities relevant to research and discovery agents.",
+      "limits": "Evaluation concerns questions with known answers rather than new scientific findings. Retrieval access differs across baselines, and AFlow workflows are transferred without task-specific search. The required equal-size random-subset continuation control is mentioned but no result is supplied, weakening attribution to curation. Main text reports 2,031 Stage 1 examples, while Appendix C reports 2,257. First-turn supervision, one backbone, and absent uncertainty estimates limit broader conclusions. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "learning",
+        "rationale": "Trains an agent to organize evidence gathering, independent verification, and information transfer through executable workflows. Its concrete contribution is learning coordination capabilities relevant to research and discovery agents.",
+        "pdf_sha256": "38173819e2754cbc5c92036dda5bbe819c8d32f27408abbae49e78aaaa3284ab",
+        "evidence_pages": [
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    "paper-1e05076c941c1de8": {
+      "institutions": [
+        "Singapore Management University",
+        "The Hong Kong Polytechnic University",
+        "Hangzhou Dianzi University",
+        "City University of Hong Kong",
+        "NetEase, Inc.",
+        "The Hong Kong University of Science and Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses 100 tasks split between workshop calls and survey open problems. Eight adapted harnesses share one backbone, and eight backbones are tested within CoI-Agent. Gemini scores final proposals under a common budget and schema. Novelty meta-evaluation compares abstract-based judgments with model-mapped reviewer comments on 600 papers. A second judge checks ranking stability, and three topics receive budget variations.",
+      "evidence": "CoI-Agent scores 4.31 overall, narrowly above SciMON at 4.29; SciMON leads method and insight novelty. Scenario novelty remains low across harnesses. Problem and method scores agree within one point with mapped reviews on roughly 94–97% of items, while scenario alignment is weaker. A second judge preserves the top harness but changes the top backbone. Budget changes alter proposed settings on expensive topics.",
+      "discovery_use": "Directly evaluates scientific ideation on workshop research directions and survey-stated open problems, including falsifiability, novelty, and resource feasibility. It clearly qualifies as discovery evaluation.",
+      "limits": "Reviewer-derived targets are generated by an LLM rather than direct human axis ratings; the production judge also performs that mapping in a separate pass. Validity and feasibility have no human reference, and proposals are not executed. One scoring repeat, near-ceiling dimensions, and no reported ranking uncertainty limit strong comparisons. Budget experiments cover only three topics. The author-listed repository could not be independently fetched, so no release link is retained. Only pages 1 and 3 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates scientific ideation on workshop research directions and survey-stated open problems, including falsifiability, novelty, and resource feasibility. It clearly qualifies as discovery evaluation.",
+        "pdf_sha256": "9ab9cfd74b04db9eabc250592fdfba73efcde65d0a4fe7bd9c084dd503f19834",
+        "evidence_pages": [
+          1,
+          3,
+          5
         ]
       }
     }

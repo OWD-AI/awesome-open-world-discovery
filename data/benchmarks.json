@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -2646,6 +2646,97 @@
       "name": "Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.21109"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Open-ended research questions and report synthesis.",
+        "Scoring evidence is restricted to documents cited by each report."
+      ],
+      "focus": "Measures whether report conclusions preserve the strength, scope, qualifications, and conflicting evidence in cited documents. Report-generation conditions allow web retrieval; scoring analyzes collected reports and cited text. Revision conditions use supplied documents or extracted evidence with web search disabled.",
+      "limits": "Feedback is model-based judgment over real document text, rather than a simulator, executed research experiment, or new physical measurement. Assessment depends on evidence extraction and judging and excludes uncited evidence. Human validation covers 73 claims. Browsing traces do not fully establish all document content seen by every system.",
+      "training": {
+        "reward": "A training reward or policy-training procedure is not established. GPT-5-mini performs extraction and evidence organization; GPT-5 assigns a 1–5 smoothing score using the minimum semantic repair rubric. Additional evaluation uses human annotations and GPT-5 scoring against expert-written report rubrics.",
+        "reset": "Report regeneration and revision under alternative evidence and instruction conditions are described. Environment reset support is not established.",
+        "branching": "Alternative evidence and instruction conditions are compared. Saved-state branching or environment-fork support is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6737b9769e0ac469",
+      "resource_id": "paper-6737b9769e0ac469",
+      "name": "Quantifying Claim Smoothing by LLM Research Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.35793"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "User intents and target database changes are fixed.",
+        "Agents choose tool paths and request missing information through dialogue.",
+        "Tool interfaces evolve between episodes while preserving underlying capabilities."
+      ],
+      "focus": "Stateful software-service simulation with executable MCP functions over mock databases. Agents receive tool results or errors and replies from an LLM user following a private task handbook. Tool calls change database state; this is executed service computation, with no new physical measurements.",
+      "limits": "Each ecosystem version remains fixed during an episode. Transformations preserve base capabilities. Reference optima cover the constructed realization space, and execution costs are LLM-assigned proxies. Success checks coverage of required database changes without explicitly excluding additional changes.",
+      "training": {
+        "reward": "Pages 5 and 7 define binary success by whether agent-produced database changes include all gold changes. Successful training trajectories verified by this state evaluator support skill-library maintenance. Retrieval, path efficiency, improvement discovery, and degradation adaptation are additional evaluation metrics. Backbone reinforcement-learning updates are not established.",
+        "reset": "Page 5 starts each task-version episode from its specified initial external state; page 19 also describes MCP initialization for evaluation. Skills persist across ecosystem versions. Arbitrary mid-episode reset support is not established.",
+        "branching": "Alternative tool realizations and action paths are supported. Snapshotting, state cloning, rollback, and branching from an intermediate execution state are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ade9af525e3953af",
+      "resource_id": "paper-ade9af525e3953af",
+      "name": "Δτ-Bench: Pushing Agents Toward a Moving Capability",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.34238"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Task goals and final-state checks are predefined.",
+        "Assistants choose natural-language guidance, silence, or termination.",
+        "Guidance can request new viewpoints, reveal labels, and redirect subsequent simulated actions."
+      ],
+      "focus": "Closed-loop assistance in Isaac Sim. An MLLM Human executor interprets assistant guidance through 36 action primitives. Actions update simulated object states and rendered first-person observations; invalid actions return failure reasons. The main benchmark uses simulation rather than recorded video or new physical measurements.",
+      "limits": "Human execution is model-driven and instructed to follow assistance. The body is kinematically controlled, with predefined semantic actions. Supplied pages mention a real-participant appendix but do not supply its results, so physical validation is not established from these pages. Action-efficiency comparisons use each model’s individually passed tasks.",
+      "training": {
+        "reward": "Pages 5–7 define task success as satisfying every required final-state predicate and Mean Completion Rate as the fraction of objectives completed. Capability checks also use simulator state. Page 16 proposes using state-based rewards for training; an implemented training reward schedule or optimization experiment is not established.",
+        "reset": "Page 5 defines complete initial scenes and predefined warmup actions. Page 25 specifies loading the exact TaskPack with a fresh-process configuration and capturing the score baseline after opening actions. Arbitrary mid-episode reset support is not established.",
+        "branching": "Different guidance and Human actions produce different subsequent simulator states. Snapshotting, cloning, rollback, and explicit branching from a saved intermediate state are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-69d6a9490f99edc5",
+      "resource_id": "paper-69d6a9490f99edc5",
+      "name": "InteractiveWorld: A Verifiable Human-Centric Environment for Building Better Interactive MLLM Assistants",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.33966"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents formulate research questions, hypotheses, methods, and verification plans within supplied scholarly contexts.",
+        "Harnesses may retrieve literature, debate, and rewrite internally.",
+        "The output schema and resource envelope are fixed."
+      ],
+      "focus": "Scores final written research proposals for 100 workshop-call and survey-open-problem tasks. Gemini 3.7 Flash evaluates twelve validity, novelty, and feasibility dimensions. Existing reviewer comments provide recorded evidence for novelty meta-evaluation through a separate model mapping. Proposed simulations, computations, and physical trials are plans rather than executed research experiments.",
+      "limits": "Only final JSON proposals are scored; internal traces and proposed experiments are not evaluated through execution. Reviewer-derived novelty targets are LLM mappings rather than direct human axis ratings. Validity and feasibility lack human references. The main study uses one scoring repeat, and a second judge changes the top backbone.",
+      "training": {
+        "reward": "Pages 4–6 and 15 define integer scores from 1 to 5 on twelve rubric dimensions, with an unweighted overall mean. The production evaluator is Gemini 3.7 Flash; GPT-5 mini provides a separate ranking check. An environment training reward, policy optimization procedure, or online evaluator-feedback training loop is not established.",
+        "reset": "Each proposal is evaluated against its supplied task context, schema, and resource envelope. Agent-state reset semantics, persistent memory across tasks, and a reset API are not established.",
+        "branching": "Internal retrieval, debate, and rewriting are allowed. Explicit environment-state branching, snapshotting, rollback, and controlled forks of an investigation are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-1e05076c941c1de8",
+      "resource_id": "paper-1e05076c941c1de8",
+      "name": "AlphaIdeaBench: Benchmarking Automated Research Idea Generation under Feasibility Constraints with Peer Review Alignment",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.33644"
     }
   ]
 }
