@@ -3057,6 +3057,97 @@
       "name": "Can LLMs Uncover Hidden Physical Laws through Free Exploration?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.37649"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Public histories and action definitions support fitting and evaluating new forecasters.",
+        "The paper describes released outcome records, frozen splits, scoring tools, manifests and baseline predictions.",
+        "Continuation actions, retrieval conditions and budgets are specified."
+      ],
+      "focus": "Predict the incremental value of search from saved public histories. The reusable benchmark evaluates predictions against recorded computational executions. Its collection process executed LLM continuations and retrieval calls; it does not involve physical measurements or scientific simulation.",
+      "limits": "Future forecasters are evaluated using separate recorded outcomes; an unrestricted live execution service is not established. Results depend on reference-equivalence judgments, cached evidence, selected question populations and conditional generation independence. Free labeled selection draws measure decision opportunity without charging their acquisition.",
+      "training": {
+        "reward": "Development execution outcomes supervise probability calibration and gain regressors. Main outcomes are binary reference-equivalent correctness, using automatic rules and fixed Flash semantic judgments; collection tasks use set F1 against curated items. Evaluation reports Brier error, generation-noise-corrected gain error and utility equal to reward minus priced prediction and continuation tokens. Online reinforcement learning of the actor is not established.",
+        "reset": "Saved public histories support repeated continuations from the same checkpoint, with cached responses fixing evidence for identical queries and retrieval parameters. Repetitions are distinct generation requests. Exact random-state restoration and arbitrary environment rollback are not established.",
+        "branching": "THINK and SEARCH are executed repeatedly from the same saved history. Additional conditions compare STOP, alternative retrieval backends, and collection actions SAME and SWITCH at a pending query. General arbitrary branching beyond these defined continuations is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-8eef102a256c1741",
+      "resource_id": "paper-8eef102a256c1741",
+      "name": "SearchHorizonBench: A Benchmark for Search Value in AI Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.34714"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Models vary reasoning effort while tasks, prompts and harness remain fixed within each configuration.",
+        "Terminal and repository tasks permit multi-turn shell interaction under fixed harnesses.",
+        "The paper supplies a code repository address."
+      ],
+      "focus": "Measure the accuracy, cost and behavior of reasoning-effort settings on fixed math and science questions and executed terminal and software-repair tasks. Single-call questions provide answer scores; agentic tasks execute commands and evaluate resulting artifacts. The DeepSWE extension analyzes recorded computational rollouts. No physical measurements are involved.",
+      "limits": "Agentic tasks have one execution per effort setting in the main study, and SWE-Bench Pro uses a 44-instance pilot. Original repository history exposes reference fixes; the corrected environment removes history and restricts network access. Reconstructed laddering assumes reliable external verdicts. These tasks do not constitute a benchmark of research experimentation.",
+      "training": {
+        "reward": "No benchmark-specific model-training reward is established; the study changes inference effort. AIME scores the extracted integer and GPQA the selected answer letter. Terminal tasks require their verifier to pass. Repository patches require fail-to-pass and pass-to-pass tests; evaluator-passed SWE-Bench Pro executions costing over $5 count as failures. Costs include billed tokens, with a separate modeled waiting-cost analysis.",
+        "reset": "Laddering uses at most one fresh highest-effort retry after an unsuccessful initial attempt, reconstructed from saved executions and charged in full. It does not continue the initial trajectory. In-episode snapshot restoration and arbitrary environment reset support are not established.",
+        "branching": "Separate executions compare effort settings on the same tasks. Routing and laddering combine recorded attempts; arbitrary branching from intermediate agent histories is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-fea13ed16e4d86a0",
+      "resource_id": "paper-fea13ed16e4d86a0",
+      "name": "What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.34491"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents discover Hugging Face datasets at run time and select training entries.",
+        "Agents select parent checkpoints and bounded training hyperparameters.",
+        "Model pools, candidate data and written principles persist across five rounds; the implementation also retains conversation history.",
+        "The paper supplies a code repository address."
+      ],
+      "focus": "Autonomous post-training research through executed LoRA training and evaluation. Agents curate data, choose recipes and parent models, submit training runs, inspect proxy results and revise subsequent experiments. Feedback comes from computed model performance on fixed datasets, with held-out generalization evaluation after the run. No scientific simulator or physical measurements are used.",
+      "limits": "Runs contain five rounds, each capped at 15M training tokens and 40,000 entries. Generalization items are hidden and training entries undergo overlap screening. Coverage is limited to small models, five English-language domains and three agent systems. Training-seed repetitions do not establish independent curation variability. Documentation conflicts over whether written principles are the sole cross-round evidence channel.",
+      "training": {
+        "reward": "Each submitted checkpoint receives one epoch of LoRA supervised fine-tuning with AdamW. Agents choose learning rate, rank, batch size, sequence length and warmup within bounds. The agent receives per-domain proxy scores and per-item outputs, correctness and training diagnostics; gold answers are withheld. Final and proxy-best checkpoints are evaluated on held-out accuracy. A scalar reinforcement-learning reward or training procedure for the research agent itself is not established.",
+        "reset": "A round can restart training from the initial model or a saved earlier checkpoint. Candidate data, model pools, principles and session history persist. A complete reset of the agent session or arbitrary restoration of all environment state is not established.",
+        "branching": "Agents explicitly select a parent from the model pool, allowing descendants of earlier checkpoints and recovery from a regressed lineage. This supports model-training branches; arbitrary forks of the complete agent and data-store state are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-86045855267404ca",
+      "resource_id": "paper-86045855267404ca",
+      "name": "ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.34386"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 18 promises release of code, templates, generated discussions, memories, and model outputs upon publication. Availability of a released artifact is not established by the supplied pages."
+      ],
+      "focus": "CrossProfile tests disclosure, memory selection, and final decisions over constructed facts. Sixty templates yield 480 ownership variants, each with four agents, three options, and twelve facts. Controlled discussions disclose every assigned fact; natural discussions permit initial votes, two rounds of messages, and final votes. A separate decision call receives the task, options, and selected or summarized memory. Feedback comes from a constructed answer key, not a scientific simulator, recorded physical observations, executed research experiments, or new physical measurements.",
+      "limits": "The additive, equally weighted answer key and fixed four-agent design constrain interpretation. Ownership also changes presentation, holder tags, and token costs. Natural-discussion disclosure uses string-matching heuristics. Several controls are exploratory. The supplied pages do not establish an interactive external environment or evaluator feedback returned during discussion.",
+      "training": {
+        "reward": "Model training and a training reward are not established. Evaluation scores agreement with a withheld answer key: favorable facts add one, unfavorable facts subtract one, and irrelevant facts contribute zero. A verifier checks the template structure and unique best option. Invalid decisions count as wrong after one format retry. Answer keys and role labels are withheld from generation and memory policies, except evaluator roles supplied to the oracle-relevance control.",
+        "reset": "Independent tasks and repeated seeded runs are reported. A stateful environment reset API or checkpoint restoration mechanism is not established.",
+        "branching": "Matched ownership variants and memory-policy comparisons reuse fixed fact content; some diagnostics rebuild memories from existing discussions. Interactive state cloning, rollback, or branching from an environment checkpoint is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6db59b8a686567fc",
+      "resource_id": "paper-6db59b8a686567fc",
+      "name": "Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.37624"
     }
   ]
 }

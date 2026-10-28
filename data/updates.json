@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T05:14:53-04:00",
+  "updated_at": "2026-10-28T07:15:14-04:00",
   "window_start": "2026-09-29",
   "window_end": "2026-10-28",
   "window_days": 30,
@@ -229,6 +229,66 @@
       "id": "c529ea5dac62b20e"
     },
     {
+      "title": "Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception",
+      "url": "https://arxiv.org/abs/2610.37037",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "EvidenceConnect synthesizes compositional questions over related image regions, checks answer agreement across model families, and tests dependence on the selected evidence. Reinforcement learning on these single-image questions improves evidence integration across perception, spatial reasoning, long-context understanding, and agent benchmarks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at metadata specifies 2026-10-27T00:00:00.000Z; PDF page 1 dates arXiv v1 to 27 October 2026. The supplied exact timestamp is preserved; earlier artifact releases are separate version events.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is post-training models to locate, bind, and combine visual evidence using automatically checked supervision. Transfer to multimodal agents and long-context tasks establishes a concrete connection to learning evidence-gathering and verification capabilities needed for discovery.",
+      "id": "011638e46489f0f9",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37037"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/inclusionAI/Zooming-without-Zooming-v2"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/inclusionAI/ZwZ2-RL-VQA"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/inclusionAI/ZwZ2-4B"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/inclusionAI/ZwZ2-9B"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/inclusionAI/ZwZ2-27B"
+        }
+      ]
+    },
+    {
+      "title": "Your Policy Is Secretly a Harness: The Decision Geometry of Agent Interfaces",
+      "url": "https://arxiv.org/abs/2610.37255",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "The paper explains harness transfer through an optimal-return ceiling and a policy’s mismatch to that optimum. A revised interface can offer better decisions while initially degrading a trained model, and adaptation can reverse the apparent ranking from a frozen-model comparison.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at metadata specifies 2026-10-27T00:00:00.000Z; PDF page 1 dates arXiv v1 to 27 October 2026. The supplied exact timestamp is preserved, corresponding to 26 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "The paper directly studies agent harnesses and how post-training interacts with interface changes. Its decomposition and controlled adaptation experiments inform the design and evaluation of discovery agents whose tools, verification routines, and workflows evolve.",
+      "id": "097e9580778f8999",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37255"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/2020-qqtcg/HRP"
+        }
+      ]
+    },
+    {
       "title": "Work Agents: Systems, Capabilities, and Optimization",
       "url": "https://arxiv.org/abs/2610.35845",
       "published_at": "2026-10-26",
@@ -315,6 +375,36 @@
       ]
     },
     {
+      "title": "RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions",
+      "url": "https://arxiv.org/abs/2610.36791",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "RynnWorld-Latent learns visual dynamics across human, robot, and simulated videos through shared latent actions. Target-robot adaptation enables prediction from native controls and generation of synthetic demonstrations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary record confirms initial submission on October 27, 2026. The supplied original_published_at timestamp is preserved; the manuscript's October 28 date is not used as the publication date.",
+      "review_status": "approved",
+      "relevance": "Develops transferable action-conditioned world representations and synthetic experience for robot learning, providing a concrete foundation for agents predicting and investigating unfamiliar interactions.",
+      "id": "3efc09e769e337d1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.36791"
+        },
+        {
+          "label": "Project",
+          "url": "https://alibaba-damo-academy.github.io/RynnWorld-Latent.github.io"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/alibaba-damo-academy/RynnWorld-Latent"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Alibaba-DAMO-Academy/RynnWorld-Latent"
+        }
+      ]
+    },
+    {
       "title": "RoboDoctor: Training-Free Recursive Self-Improvement for Robot Policies",
       "url": "https://arxiv.org/abs/2610.35604",
       "published_at": "2026-10-26",
@@ -359,6 +449,24 @@
       ]
     },
     {
+      "title": "Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions",
+      "url": "https://arxiv.org/abs/2610.37624",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "The paper introduces a diagnostic benchmark showing that rarity and topical relevance are unreliable substitutes for decision-useful evidence. It separates failures arising during discussion, memory compression, and interpretation, including inappropriate reliance on how many agents are attributed a claim.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at metadata specifies 2026-10-27T00:00:00.000Z; PDF page 1 dates arXiv v1 to 27 October 2026, also confirmed by the primary abstract record. The supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "CrossProfile directly evaluates whether agent teams preserve and correctly integrate distributed evidence. Its controlled ownership changes distinguish information disclosure, memory selection, and reader bias, making it useful for evaluating discovery systems that consolidate observations from multiple agents.",
+      "id": "6db59b8a686567fc",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37624"
+        }
+      ]
+    },
+    {
       "title": "RSIV-Harness: A Recursive Self-Improvement Harness Framework for Open-Domain Conversational Text-to-Visualization",
       "url": "https://arxiv.org/abs/2610.35316",
       "published_at": "2026-10-26",
@@ -395,6 +503,50 @@
         {
           "label": "Code",
           "url": "https://github.com/tiasa2/SmoothScore"
+        }
+      ]
+    },
+    {
+      "title": "PhysEvolve: Verifier-grounded Self-evolution for Physical Reasoning with Executable Worlds",
+      "url": "https://arxiv.org/abs/2610.34921",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "PhysEvolve trains a shared vision-language proposer and solver using physical worlds authored by the model. A fixed simulator validates those worlds, executes interventions, and constructs questions with discrete answers, allowing the training distribution to evolve without letting the policy choose its own labels.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 at 2026-10-26T06:50:45Z. The original date is therefore established despite the supplied warning about unverified midnight metadata.",
+      "review_status": "approved",
+      "relevance": "Introduces a model-driven loop that proposes executable environments, verifies counterfactual outcomes, and adapts its training curriculum. This directly connects self-generated investigations and externally grounded verification to learning causal reasoning.",
+      "id": "fc5a10f6f455d6ce",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34921"
+        },
+        {
+          "label": "Project",
+          "url": "https://yelonhu.github.io/physevolve-page/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yelonhu/PhysEvolve"
+        }
+      ]
+    },
+    {
+      "title": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
+      "url": "https://arxiv.org/abs/2610.37381",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "PDRVLA learns compact physical tokens from intermediate vision-language features and supplies them to a robot action policy. Future-feature prediction and a frozen video world model supervise these tokens during training, allowing deployment without generating future video.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at metadata specifies 2026-10-27T00:00:00.000Z; PDF page 1 dates arXiv v1 to 27 October 2026, also confirmed by the primary abstract record. The supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The central contribution is learning predictive representations of future appearance, geometry, and motion for embodied action. This provides a concrete world-representation connection to discovery-capable agents, although it does not establish causal identification or autonomous physical experimentation.",
+      "id": "9012c023703e1f65",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37381"
         }
       ]
     },
@@ -705,6 +857,28 @@
       "id": "951fd8a3113f6ed2"
     },
     {
+      "title": "What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents",
+      "url": "https://arxiv.org/abs/2610.34491",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "The study audits whether additional reasoning effort delivers useful task-level improvements, measuring success, complete execution costs, behavioral changes, and verification-guided retries.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-25 18:33:17 UTC, rather than the supplied midnight timestamp. Its America/New_York date is 2026-10-25.",
+      "review_status": "approved",
+      "relevance": "Provides concrete evaluation methods for reasoning allocation, external verification, and distinguishing independent problem solving from reference-answer retrieval, all relevant to reliable discovery agents.",
+      "id": "fea13ed16e4d86a0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34491"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/KaiserWhoLearns/ReasoningEffortLLM"
+        }
+      ]
+    },
+    {
       "title": "Thinking-in-Bets at Test Time Reduces Sycophantic Revisions in LLM Agents",
       "url": "https://arxiv.org/abs/2610.34654",
       "published_at": "2026-10-25",
@@ -727,7 +901,7 @@
       ]
     },
     {
-      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -788,7 +962,7 @@
       ]
     },
     {
-      "title": "Skill^{infty}: Recursive Self-Improvement for Agent Skill Optimization",
+      "title": "Skill∞: Recursive Self-Improvement for Agent Skill Optimization",
       "url": "https://arxiv.org/abs/2610.35434",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -806,6 +980,32 @@
         {
           "label": "Code",
           "url": "https://github.com/taowangcheng/Skill-Infinity"
+        }
+      ]
+    },
+    {
+      "title": "SearchHorizonBench: A Benchmark for Search Value in AI Agents",
+      "url": "https://arxiv.org/abs/2610.34714",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "SearchHorizonBench measures when an agent should search for more information instead of answering from existing evidence. It provides repeated executions, histories, costs, and evaluation tools that separate answer-success prediction, search-gain prediction, and decision utility.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 at 2026-10-26T02:04:38Z. This resolves the supplied midnight metadata to an exact timestamp, corresponding to October 25 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates whether agents can estimate the value of acquiring further evidence. Paired continuations distinguish general answer confidence from the incremental benefit of search, making this a concrete evaluation of discovery decisions.",
+      "id": "8eef102a256c1741",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34714"
+        },
+        {
+          "label": "Project",
+          "url": "https://ethanning.github.io/SearchHorizonBench/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/EthanNing/SearchHorizonBench"
         }
       ]
     },
@@ -880,6 +1080,58 @@
       ]
     },
     {
+      "title": "ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?",
+      "url": "https://arxiv.org/abs/2610.34386",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "ParetoRSI-Gym benchmarks repeated autonomous data curation and model training across five domains, exposing trade-offs between improvement, regression, and checkpoint selection.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-25 15:40:21 UTC, resolving the previously unverified Hugging Face date. Its America/New_York date is 2026-10-25.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates autonomous research agents performing feedback-driven post-training experiments, testing whether iterative self-improvement transfers across capabilities and survives held-out evaluation.",
+      "id": "86045855267404ca",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34386"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/haojinw0027/ParetoRSI-GYM"
+        }
+      ]
+    },
+    {
+      "title": "Memory Tax: Dissecting the Net Value of Agent Memory",
+      "url": "https://arxiv.org/abs/2610.34073",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "Memory Tax evaluates the marginal value of constructed memory against raw-history retrieval, separating useful restructuring from evidence losses introduced during storage and access.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-25 05:29:05 UTC, replacing the supplied midnight timestamp. Its America/New_York date is 2026-10-25.",
+      "review_status": "approved",
+      "relevance": "Examines whether agent memory preserves and exposes evidence needed for reliable knowledge use, with concrete extensions to retained task experience and world-model consistency.",
+      "id": "2761afa9050a76fb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34073"
+        },
+        {
+          "label": "Project",
+          "url": "https://hexuan21.github.io/MemoryTax/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/hexuan21/MemoryTax"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/hexuan21/MemoryTax-Res"
+        }
+      ]
+    },
+    {
       "title": "Learning and Reasoning with Geometry: How Generation Helps Spatial Understanding",
       "url": "https://arxiv.org/abs/2610.36022",
       "published_at": "2026-10-25",
@@ -900,6 +1152,37 @@
           "url": "https://github.com/hku-sail/GeoUG"
         }
       ]
+    },
+    {
+      "title": "Harness-Model Collaboration for Long-Horizon Continual Learning",
+      "url": "https://arxiv.org/abs/2610.34724",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "HaMo combines persistent strategy memory with continual model adaptation so agents can reuse prior experience immediately and gradually learn to apply it in changing contexts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-26 02:21:20 UTC, replacing the unverified Hugging Face midnight timestamp. Its America/New_York date is 2026-10-25.",
+      "review_status": "approved",
+      "relevance": "Directly addresses how agents accumulate reusable procedural knowledge and retain execution competence across task streams, including scientific experimentation.",
+      "id": "e09d1f0886d47146",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34724"
+        }
+      ]
+    },
+    {
+      "title": "GPU autoresearch commentary identifies validation latency",
+      "url": "https://x.com/sayyss1/status/2114207751215915297",
+      "published_at": "2026-10-25",
+      "kind": "x",
+      "summary": "The author reports that their GPU-kernel autoresearch agents spend about 89% of their time waiting for validation results, identifying feedback latency as a bottleneck. They say batching fixes and test runs helps, but favor accuracy over speed.",
+      "date_evidence": "Supplied initial-version DOM timestamp: 2026-10-25T04:09:42.000Z; visible publication time: 12:09 AM · Oct 25, 2026. This identifies the original version rather than the later edit.",
+      "relevance": "Identifies experimental-feedback latency as a bottleneck in automated research loops.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "20bd62846e15cc8d"
     },
     {
       "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration",
@@ -1265,6 +1548,32 @@
         {
           "label": "Code",
           "url": "https://github.com/haoyu-zhao/Continual-Learning-Exam"
+        }
+      ]
+    },
+    {
+      "title": "ChronoReplay: One Answer Interface Is Not Enough for Streaming Spatial Intelligence",
+      "url": "https://arxiv.org/abs/2610.34283",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "ChronoReplay post-trains a spatial vision-language model using chronological episodes and balanced heterogeneous supervision. It improves several spatial reasoning interfaces while separately measuring the effect of inference-time frame selection.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary record confirms initial submission on October 25, 2026. The supplied exact original_published_at timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Trains agents to retain and reuse spatial knowledge accumulated during exploration across categorical, metric, and temporal queries. The concrete discovery connection is preserving historical evidence so newly posed questions can be answered from prior observations.",
+      "id": "22597e1e3381338d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34283"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yihaohu0118/ChronoReplay"
+        },
+        {
+          "label": "Project",
+          "url": "https://yihaohu0118.github.io/ChronoReplay/"
         }
       ]
     },
@@ -1830,6 +2139,28 @@
         }
       ],
       "id": "a905520b9fd37dc3"
+    },
+    {
+      "title": "Ψ-0.6: Adaptive Streams of Thought in a Unified Vision-Language World Model",
+      "url": "https://arxiv.org/abs/2610.32177",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "Ψ-0.6 uses one transformer to generate and interpret language, imagery, geometry, and motion. Its predictions become intermediate reasoning steps, while a learned policy selects useful representation streams for visual question answering.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary record confirms initial submission on October 23, 2026. The supplied exact original_published_at timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Integrates world prediction with counterfactual reasoning and learns which geometric representations help answer unfamiliar questions. These are direct mechanisms for investigating hypothetical outcomes and learning how to reason about unknown physical situations.",
+      "id": "14628d0452b3d705",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.32177"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/neuroailab/psi-0.6"
+        }
+      ]
     },
     {
       "title": "World-in-Context: Interactive Video World Modeling with In-Context Conditioning",
@@ -12765,6 +13096,66 @@
       ]
     },
     {
+      "title": "Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception",
+      "url": "https://arxiv.org/abs/2610.37037",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "EvidenceConnect synthesizes compositional questions over related image regions, checks answer agreement across model families, and tests dependence on the selected evidence. Reinforcement learning on these single-image questions improves evidence integration across perception, spatial reasoning, long-context understanding, and agent benchmarks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at metadata specifies 2026-10-27T00:00:00.000Z; PDF page 1 dates arXiv v1 to 27 October 2026. The supplied exact timestamp is preserved; earlier artifact releases are separate version events.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is post-training models to locate, bind, and combine visual evidence using automatically checked supervision. Transfer to multimodal agents and long-context tasks establishes a concrete connection to learning evidence-gathering and verification capabilities needed for discovery.",
+      "id": "011638e46489f0f9",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37037"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/inclusionAI/Zooming-without-Zooming-v2"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/inclusionAI/ZwZ2-RL-VQA"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/inclusionAI/ZwZ2-4B"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/inclusionAI/ZwZ2-9B"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/inclusionAI/ZwZ2-27B"
+        }
+      ]
+    },
+    {
+      "title": "Your Policy Is Secretly a Harness: The Decision Geometry of Agent Interfaces",
+      "url": "https://arxiv.org/abs/2610.37255",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "The paper explains harness transfer through an optimal-return ceiling and a policy’s mismatch to that optimum. A revised interface can offer better decisions while initially degrading a trained model, and adaptation can reverse the apparent ranking from a frozen-model comparison.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at metadata specifies 2026-10-27T00:00:00.000Z; PDF page 1 dates arXiv v1 to 27 October 2026. The supplied exact timestamp is preserved, corresponding to 26 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "The paper directly studies agent harnesses and how post-training interacts with interface changes. Its decomposition and controlled adaptation experiments inform the design and evaluation of discovery agents whose tools, verification routines, and workflows evolve.",
+      "id": "097e9580778f8999",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37255"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/2020-qqtcg/HRP"
+        }
+      ]
+    },
+    {
       "title": "Work Agents: Systems, Capabilities, and Optimization",
       "url": "https://arxiv.org/abs/2610.35845",
       "published_at": "2026-10-26",
@@ -12851,6 +13242,36 @@
       ]
     },
     {
+      "title": "RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions",
+      "url": "https://arxiv.org/abs/2610.36791",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "RynnWorld-Latent learns visual dynamics across human, robot, and simulated videos through shared latent actions. Target-robot adaptation enables prediction from native controls and generation of synthetic demonstrations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary record confirms initial submission on October 27, 2026. The supplied original_published_at timestamp is preserved; the manuscript's October 28 date is not used as the publication date.",
+      "review_status": "approved",
+      "relevance": "Develops transferable action-conditioned world representations and synthetic experience for robot learning, providing a concrete foundation for agents predicting and investigating unfamiliar interactions.",
+      "id": "3efc09e769e337d1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.36791"
+        },
+        {
+          "label": "Project",
+          "url": "https://alibaba-damo-academy.github.io/RynnWorld-Latent.github.io"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/alibaba-damo-academy/RynnWorld-Latent"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Alibaba-DAMO-Academy/RynnWorld-Latent"
+        }
+      ]
+    },
+    {
       "title": "RoboDoctor: Training-Free Recursive Self-Improvement for Robot Policies",
       "url": "https://arxiv.org/abs/2610.35604",
       "published_at": "2026-10-26",
@@ -12895,6 +13316,24 @@
       ]
     },
     {
+      "title": "Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions",
+      "url": "https://arxiv.org/abs/2610.37624",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "The paper introduces a diagnostic benchmark showing that rarity and topical relevance are unreliable substitutes for decision-useful evidence. It separates failures arising during discussion, memory compression, and interpretation, including inappropriate reliance on how many agents are attributed a claim.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at metadata specifies 2026-10-27T00:00:00.000Z; PDF page 1 dates arXiv v1 to 27 October 2026, also confirmed by the primary abstract record. The supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "CrossProfile directly evaluates whether agent teams preserve and correctly integrate distributed evidence. Its controlled ownership changes distinguish information disclosure, memory selection, and reader bias, making it useful for evaluating discovery systems that consolidate observations from multiple agents.",
+      "id": "6db59b8a686567fc",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37624"
+        }
+      ]
+    },
+    {
       "title": "RSIV-Harness: A Recursive Self-Improvement Harness Framework for Open-Domain Conversational Text-to-Visualization",
       "url": "https://arxiv.org/abs/2610.35316",
       "published_at": "2026-10-26",
@@ -12931,6 +13370,50 @@
         {
           "label": "Code",
           "url": "https://github.com/tiasa2/SmoothScore"
+        }
+      ]
+    },
+    {
+      "title": "PhysEvolve: Verifier-grounded Self-evolution for Physical Reasoning with Executable Worlds",
+      "url": "https://arxiv.org/abs/2610.34921",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "PhysEvolve trains a shared vision-language proposer and solver using physical worlds authored by the model. A fixed simulator validates those worlds, executes interventions, and constructs questions with discrete answers, allowing the training distribution to evolve without letting the policy choose its own labels.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 at 2026-10-26T06:50:45Z. The original date is therefore established despite the supplied warning about unverified midnight metadata.",
+      "review_status": "approved",
+      "relevance": "Introduces a model-driven loop that proposes executable environments, verifies counterfactual outcomes, and adapts its training curriculum. This directly connects self-generated investigations and externally grounded verification to learning causal reasoning.",
+      "id": "fc5a10f6f455d6ce",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34921"
+        },
+        {
+          "label": "Project",
+          "url": "https://yelonhu.github.io/physevolve-page/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yelonhu/PhysEvolve"
+        }
+      ]
+    },
+    {
+      "title": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
+      "url": "https://arxiv.org/abs/2610.37381",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "PDRVLA learns compact physical tokens from intermediate vision-language features and supplies them to a robot action policy. Future-feature prediction and a frozen video world model supervise these tokens during training, allowing deployment without generating future video.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original_published_at metadata specifies 2026-10-27T00:00:00.000Z; PDF page 1 dates arXiv v1 to 27 October 2026, also confirmed by the primary abstract record. The supplied exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The central contribution is learning predictive representations of future appearance, geometry, and motion for embodied action. This provides a concrete world-representation connection to discovery-capable agents, although it does not establish causal identification or autonomous physical experimentation.",
+      "id": "9012c023703e1f65",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37381"
         }
       ]
     },
@@ -13153,6 +13636,28 @@
       ]
     },
     {
+      "title": "What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents",
+      "url": "https://arxiv.org/abs/2610.34491",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "The study audits whether additional reasoning effort delivers useful task-level improvements, measuring success, complete execution costs, behavioral changes, and verification-guided retries.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-25 18:33:17 UTC, rather than the supplied midnight timestamp. Its America/New_York date is 2026-10-25.",
+      "review_status": "approved",
+      "relevance": "Provides concrete evaluation methods for reasoning allocation, external verification, and distinguishing independent problem solving from reference-answer retrieval, all relevant to reliable discovery agents.",
+      "id": "fea13ed16e4d86a0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34491"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/KaiserWhoLearns/ReasoningEffortLLM"
+        }
+      ]
+    },
+    {
       "title": "Thinking-in-Bets at Test Time Reduces Sycophantic Revisions in LLM Agents",
       "url": "https://arxiv.org/abs/2610.34654",
       "published_at": "2026-10-25",
@@ -13175,7 +13680,7 @@
       ]
     },
     {
-      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -13223,7 +13728,7 @@
       ]
     },
     {
-      "title": "Skill^{infty}: Recursive Self-Improvement for Agent Skill Optimization",
+      "title": "Skill∞: Recursive Self-Improvement for Agent Skill Optimization",
       "url": "https://arxiv.org/abs/2610.35434",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -13241,6 +13746,32 @@
         {
           "label": "Code",
           "url": "https://github.com/taowangcheng/Skill-Infinity"
+        }
+      ]
+    },
+    {
+      "title": "SearchHorizonBench: A Benchmark for Search Value in AI Agents",
+      "url": "https://arxiv.org/abs/2610.34714",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "SearchHorizonBench measures when an agent should search for more information instead of answering from existing evidence. It provides repeated executions, histories, costs, and evaluation tools that separate answer-success prediction, search-gain prediction, and decision utility.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 at 2026-10-26T02:04:38Z. This resolves the supplied midnight metadata to an exact timestamp, corresponding to October 25 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates whether agents can estimate the value of acquiring further evidence. Paired continuations distinguish general answer confidence from the incremental benefit of search, making this a concrete evaluation of discovery decisions.",
+      "id": "8eef102a256c1741",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34714"
+        },
+        {
+          "label": "Project",
+          "url": "https://ethanning.github.io/SearchHorizonBench/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/EthanNing/SearchHorizonBench"
         }
       ]
     },
@@ -13315,6 +13846,58 @@
       ]
     },
     {
+      "title": "ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?",
+      "url": "https://arxiv.org/abs/2610.34386",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "ParetoRSI-Gym benchmarks repeated autonomous data curation and model training across five domains, exposing trade-offs between improvement, regression, and checkpoint selection.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-25 15:40:21 UTC, resolving the previously unverified Hugging Face date. Its America/New_York date is 2026-10-25.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates autonomous research agents performing feedback-driven post-training experiments, testing whether iterative self-improvement transfers across capabilities and survives held-out evaluation.",
+      "id": "86045855267404ca",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34386"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/haojinw0027/ParetoRSI-GYM"
+        }
+      ]
+    },
+    {
+      "title": "Memory Tax: Dissecting the Net Value of Agent Memory",
+      "url": "https://arxiv.org/abs/2610.34073",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "Memory Tax evaluates the marginal value of constructed memory against raw-history retrieval, separating useful restructuring from evidence losses introduced during storage and access.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-25 05:29:05 UTC, replacing the supplied midnight timestamp. Its America/New_York date is 2026-10-25.",
+      "review_status": "approved",
+      "relevance": "Examines whether agent memory preserves and exposes evidence needed for reliable knowledge use, with concrete extensions to retained task experience and world-model consistency.",
+      "id": "2761afa9050a76fb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34073"
+        },
+        {
+          "label": "Project",
+          "url": "https://hexuan21.github.io/MemoryTax/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/hexuan21/MemoryTax"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/hexuan21/MemoryTax-Res"
+        }
+      ]
+    },
+    {
       "title": "Learning and Reasoning with Geometry: How Generation Helps Spatial Understanding",
       "url": "https://arxiv.org/abs/2610.36022",
       "published_at": "2026-10-25",
@@ -13333,6 +13916,24 @@
         {
           "label": "Code",
           "url": "https://github.com/hku-sail/GeoUG"
+        }
+      ]
+    },
+    {
+      "title": "Harness-Model Collaboration for Long-Horizon Continual Learning",
+      "url": "https://arxiv.org/abs/2610.34724",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "HaMo combines persistent strategy memory with continual model adaptation so agents can reuse prior experience immediately and gradually learn to apply it in changing contexts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-26 02:21:20 UTC, replacing the unverified Hugging Face midnight timestamp. Its America/New_York date is 2026-10-25.",
+      "review_status": "approved",
+      "relevance": "Directly addresses how agents accumulate reusable procedural knowledge and retain execution competence across task streams, including scientific experimentation.",
+      "id": "e09d1f0886d47146",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34724"
         }
       ]
     },
@@ -13687,6 +14288,32 @@
         {
           "label": "Code",
           "url": "https://github.com/haoyu-zhao/Continual-Learning-Exam"
+        }
+      ]
+    },
+    {
+      "title": "ChronoReplay: One Answer Interface Is Not Enough for Streaming Spatial Intelligence",
+      "url": "https://arxiv.org/abs/2610.34283",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "ChronoReplay post-trains a spatial vision-language model using chronological episodes and balanced heterogeneous supervision. It improves several spatial reasoning interfaces while separately measuring the effect of inference-time frame selection.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary record confirms initial submission on October 25, 2026. The supplied exact original_published_at timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Trains agents to retain and reuse spatial knowledge accumulated during exploration across categorical, metric, and temporal queries. The concrete discovery connection is preserving historical evidence so newly posed questions can be answered from prior observations.",
+      "id": "22597e1e3381338d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34283"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yihaohu0118/ChronoReplay"
+        },
+        {
+          "label": "Project",
+          "url": "https://yihaohu0118.github.io/ChronoReplay/"
         }
       ]
     },
@@ -14131,6 +14758,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.33281"
+        }
+      ]
+    },
+    {
+      "title": "Ψ-0.6: Adaptive Streams of Thought in a Unified Vision-Language World Model",
+      "url": "https://arxiv.org/abs/2610.32177",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "Ψ-0.6 uses one transformer to generate and interpret language, imagery, geometry, and motion. Its predictions become intermediate reasoning steps, while a learned policy selects useful representation streams for visual question answering.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary record confirms initial submission on October 23, 2026. The supplied exact original_published_at timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Integrates world prediction with counterfactual reasoning and learns which geometric representations help answer unfamiliar questions. These are direct mechanisms for investigating hypothetical outcomes and learning how to reason about unknown physical situations.",
+      "id": "14628d0452b3d705",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.32177"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/neuroailab/psi-0.6"
         }
       ]
     },
