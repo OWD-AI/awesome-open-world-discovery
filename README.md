@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-733-2563eb?style=flat-square" alt="733 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-143-0f766e?style=flat-square" alt="143 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-736-2563eb?style=flat-square" alt="736 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-144-0f766e?style=flat-square" alt="144 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -80,11 +80,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 81 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 120 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 122 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 124 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 134 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 135 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -551,6 +551,8 @@ Each work appears once under its primary contribution; see the [classification g
   Zhiheng Xi et al. · Fudan University; ByteDance Seed; Shanghai Innovation Institute
 - <a id="paper-c916585f0ec11b72"></a>**AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28589)* · [Paper](https://arxiv.org/abs/2610.28589) · [Code](https://github.com/xinxinliu-ai/AgenticRoboRL) · [Project](https://l-codingspace.github.io/AgenticRoboRL/) · [HF Model](https://huggingface.co/ciciciciliu/AgenticRoboRL-Qwen3.5-9B/tree/main/rl-v006)<br>
   Xinxin Liu et al. · University of Central Florida; University of Southern California; Michigan State University
+- <a id="paper-684b05c65090965c"></a>**AlphaBet: Reinforcement Learning for LLM Event Forecasting Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22684)* · [Paper](https://arxiv.org/abs/2610.22684) · [Code](https://github.com/AlphaBet-Agent/AlphaBet) · [Project](https://alphabet-agent.github.io/) · [HF Model](https://huggingface.co/liqinye/AlphaBet_memory-free) · [HF Model](https://huggingface.co/liqinye/AlphaBet_memory-on) · [Dataset](https://huggingface.co/datasets/liqinye/Forecast-Dojo)<br>
+  Liqin Ye et al. · Georgia Institute of Technology; Amazon
 - <a id="paper-552b5951a6b715ab"></a>**AlphaDiverse: Post-Training Local Quantitative Research Agents for Diverse Exploration in Alpha Factor Mining** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.29014)* · [Paper](https://arxiv.org/abs/2609.29014)<br>
   Qingzhuo Wang, Zikun Wei, Zhihua Wei, Wen Shen · Tongji University; Shanghai Non-convex Intelligent Technology
 - <a id="paper-381c08cf57748156"></a>**Amortizing Sequential Experimental Design in Reasoning LLMs** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.20832)* · [Paper](https://arxiv.org/abs/2610.20832)<br>
@@ -631,6 +633,8 @@ Each work appears once under its primary contribution; see the [classification g
   Xiaoqiang Wang et al. · Alibaba Token Hub, Alibaba Group; Université de Montréal; Mila - Quebec AI Institute
 - <a id="paper-990a9823b1d96f35"></a>**Hindsight Structured Advice Distillation: Steering Executor Agents with Advisors Trained on Their Failures and Task Characteristics** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.13000)* · [Paper](https://arxiv.org/abs/2610.13000) · [Project](https://samaya.ai/blog/hindsight-structured-advice-distillation)<br>
   O. Ozan Koyluoglu · Samaya AI
+- <a id="paper-a0d49b24cd3e2ace"></a>**How Much Does the Hint Matter? Scope Conditions for Hindsight Self-Distillation in Financial Reasoning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.36082)* · [Paper](https://arxiv.org/abs/2610.36082) · [Code](https://github.com/johnnyhyu/fin-sd) · [Dataset](https://github.com/johnnyhyu/fin-sd/tree/main/data)<br>
+  Johnny Yu, Cyril Gorlla · University of California, Berkeley; CTGT
 - <a id="paper-48d5ab7e8e8c0f56"></a>**HybridResearcher: Bridging the Structured-Unstructured Boundary for Deep Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24899)* · [Paper](https://arxiv.org/abs/2610.24899)<br>
   Soyoung Yoon et al. · Seoul National University; University of California, Los Angeles; University of North Carolina at Chapel Hill; +2 institutions
 - <a id="paper-b62cde245db5c0cf"></a>**IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04074)* · [Paper](https://arxiv.org/abs/2610.04074) · [Code](https://github.com/jiarui-liu/IdeaScientist) · [Dataset](https://huggingface.co/datasets/Jerry999/SvalbardIdeaVault)<br>
@@ -1733,6 +1737,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Juan S. Santillana · Independent research
 - <a id="paper-fea13ed16e4d86a0"></a>**What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34491)* · [Paper](https://arxiv.org/abs/2610.34491) · [Code](https://github.com/KaiserWhoLearns/ReasoningEffortLLM)<br>
   Kaiser Sun et al. · Johns Hopkins University; Together AI; Cornell University
+- <a id="paper-8a0eeb5ba9e784b8"></a>**What Outcome RL Buys: Finishing, Reliability, Rarely Reach** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34894)* · [Paper](https://arxiv.org/abs/2610.34894) · [Code](https://github.com/shanyang-me/outcome-rl-buys) · [Project](https://shanyang.me/what-outcome-rl-buys/)<br>
+  Shan Yang · Individual Researcher
 - <a id="paper-f30aa5f207baccbb"></a>**WhatWorkedBench: Benchmarking Experimental Understanding in AI Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.27490)* · [Paper](https://arxiv.org/abs/2609.27490) · [Project](https://ethanning.github.io/WhatWorkedBench/) · [Code](https://github.com/EthanNing/WhatWorkedBench)<br>
   Jingjie Ning, Xueqi Li, Yibo Kong, Dongting Li · Carnegie Mellon University; Tsinghua University
 - <a id="paper-4f6e0f0aac76178e"></a>**Where is Physical RSI capability from? An Observational Scaling Law of LLM-as-policy** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26848)* · [Paper](https://arxiv.org/abs/2610.26848) · [Project](https://physrsi-eval.github.io/)<br>

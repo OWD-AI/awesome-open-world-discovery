@@ -24189,6 +24189,97 @@
           15
         ]
       }
+    },
+    "paper-8a0eeb5ba9e784b8": {
+      "institutions": [
+        "Individual Researcher"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Compares 20 released RL models with their thinking bases using matched prompts, graders, token budgets, and eight samples per problem. An exact pass@1 decomposition separates finishing, reliability, and mirrored reach. Additional sampling, trace comparisons, grading audits, and an 8B controlled physics-training probe test the interpretation.",
+      "evidence": "Finishing accounts for 82% of change at 4k and 8k tokens. Where bases already finish, reliability improves consistently. Net reach remains at most 2.1 percentage points across four physics and math sets; only five of 144 checked RL-only physics wins survive the specified audits. Supplying physics knowledge in the small controlled probe does not establish transfer beyond plain RL.",
+      "discovery_use": "Provides an evaluation protocol for distinguishing improved execution from expanded problem-solving ability after reinforcement learning. This directly informs whether training creates capabilities needed for discovery.",
+      "limits": "Reach is a finite-sample operational measure, not proof of absent knowledge. Requiring every base sample to finish assigns some potentially novel successes to behavior; relaxing this notably changes ProRL v2. Base-filtered physics questions, strict answer formatting, shared model ancestry, and limited human trace validation constrain conclusions. The controlled treatments use one seed each. This was a targeted text review through page 16 of 27; later appendices were not supplied.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "benchmarks",
+        "rationale": "Provides an evaluation protocol for distinguishing improved execution from expanded problem-solving ability after reinforcement learning. This directly informs whether training creates capabilities needed for discovery.",
+        "pdf_sha256": "8aa0daefad0097788ed374a4b8d24e73f931219438bb95d0cb2fec857e592baa",
+        "evidence_pages": [
+          1,
+          4,
+          7
+        ]
+      }
+    },
+    "paper-a0d49b24cd3e2ace": {
+      "institutions": [
+        "University of California, Berkeley",
+        "CTGT"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses ground-truth answers to identify the first conceptual error in failed student trajectories, truncates before that error, and minimizes reverse KL over a 100-token student rollout against a hint-conditioned teacher. Re-mines failures and refreshes the teacher each epoch. Tests GPT-OSS-20B against base, SFT, full-solution distillation, and several ablations.",
+      "evidence": "Across five seeds, Fin-SD reaches 72.19% accuracy versus 69.16% for base on 238 FinanceReasoning Hard problems. Generic feedback reaches 72.52%, and a 120B hint writer provides no measurable accuracy advantage. Fin-SD uses 9.5% fewer evaluation tokens than full-solution distillation. Single-run general capability and compliance audits show mostly small changes.",
+      "discovery_use": "Studies a transferable mechanism for learning from verified reasoning failures: localized hindsight self-distillation. Its controls clarify whether improvement requires new information or better use of existing knowledge, a concrete question for discovery training.",
+      "limits": "Evidence covers one student family and a small, synthetic, convention-heavy corpus. Seventeen training-source formulas overlap solutions of 22 evaluation items. The generic-feedback arm retains error localization and filtering, so it does not isolate localization as the causal mechanism. External models generate data and judge answers despite no external teacher gradient. Single-run compliance results do not establish deployment suitability; chemistry accuracy drops 5.47 points.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "learning",
+        "rationale": "Studies a transferable mechanism for learning from verified reasoning failures: localized hindsight self-distillation. Its controls clarify whether improvement requires new information or better use of existing knowledge, a concrete question for discovery training.",
+        "pdf_sha256": "7abe901ce495772b42cc61a91b1ea4b020da2bda9448b14fef3ea4db75ff88d3",
+        "evidence_pages": [
+          1,
+          6,
+          8
+        ]
+      }
+    },
+    "paper-684b05c65090965c": {
+      "institutions": [
+        "Georgia Institute of Technology",
+        "Amazon"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8,
+        32
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "GLM-4.5-Air is trained on 1,028 resolved events comprising 3,965 event–date tasks. The agent searches date-restricted news, reads articles, and uses sandboxed computation before reporting outcome probabilities. Training uses negative Brier reward plus interface penalties and mean-centered GRPO without standard-deviation normalization. Optional notebooks carry information across dates. Evaluation covers 230 Forecast-Dojo events and 343 FutureX questions. Single-date training, memory, reward normalization, and frozen evidence–reader swaps provide controlled comparisons.",
+      "evidence": "The memory-free variant improves Forecast-Dojo accuracy from 41.6% to 50.5% and Brier from 0.731 to 0.626; FutureX accuracy rises from 51.3% to 57.9% and Brier falls from 0.612 to 0.528. With readers held fixed, trained-agent evidence improves Brier by 0.011–0.016. With evidence held fixed, the trained reader improves over the base reader by 0.058–0.060. Multi-date training outperforms single-date training, especially at longer horizons. Memory adds no further improvement. Removing reward standardization improves proper scores without a significant accuracy difference.",
+      "discovery_use": "The primary contribution trains an agent to seek useful evidence about unresolved events and translate it into probabilistic beliefs. Its controlled evidence-swapping experiments establish a concrete connection to learning to discover information, beyond improving prediction from fixed inputs.",
+      "limits": "This is a targeted review of supplied body and appendix sections, with visual inspection limited to pages 1–2. Results concern one trained backbone, predefined outcomes, prediction-market questions, and an English news corpus. FutureX uses controlled offline retrieval; its Brier calculation excludes free-form and unusable probability reports. BLF averages probability vectors across trials, whereas other agents average rollout scores. Memory training lacks explicit credit assignment from later rewards to earlier notebook actions. The normalization theorem concerns fixed-context, score-only local updates, not calibration of the complete agent. Training is costly: a reported memory-free run takes about 62 hours using 136 H200 GPUs including retrieval infrastructure. The released dataset requires filtering to match the paper's training subset, and the news corpus and retrieval indexes are not hosted.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "learning",
+        "rationale": "The primary contribution trains an agent to seek useful evidence about unresolved events and translate it into probabilistic beliefs. Its controlled evidence-swapping experiments establish a concrete connection to learning to discover information, beyond improving prediction from fixed inputs.",
+        "pdf_sha256": "e9476e7bb9f81c165d8594d3e234ef2c0b698618f88c5aa64eae550b0069303b",
+        "evidence_pages": [
+          1,
+          5,
+          8,
+          32
+        ]
+      }
     }
   }
 }

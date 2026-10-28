@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T15:20:06-04:00",
+  "updated_at": "2026-10-28T16:53:39-04:00",
   "window_start": "2026-09-29",
   "window_end": "2026-10-28",
   "window_days": 30,
@@ -166,6 +166,19 @@
           "url": "https://mle-world.github.io/"
         }
       ]
+    },
+    {
+      "title": "Cong Lu compares one versus eight local research agents",
+      "url": "https://x.com/cong_ml/status/2115107206152769745",
+      "published_at": "2026-10-27",
+      "kind": "x",
+      "summary": "Cong Lu reports that eight research agents averaged 2.3 times as many valid experiments per research hour as one agent across three tasks. The attached chart shows better final mean results for eight agents on circle packing, job scheduling, and bike demand prediction after six hours, averaging two runs per task.",
+      "date_evidence": "Supplied primary-source reading records native datetime 2026-10-27T15:43:49.000Z and visible timestamp 11:43 AM · Oct 27, 2026, with no edit label.",
+      "relevance": "Evaluates parallel research throughput and solution progress. Nearby author thread context describes sharing the best program and rotating instructions to diversify exploration.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "b385dbec3bcd9aa3"
     },
     {
       "title": "Can LLMs Uncover Hidden Physical Laws through Free Exploration?",
@@ -883,6 +896,32 @@
       "id": "951fd8a3113f6ed2"
     },
     {
+      "title": "What Outcome RL Buys: Finishing, Reliability, Rarely Reach",
+      "url": "https://arxiv.org/abs/2610.34894",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "The paper separates outcome-RL gains into finishing within a token budget, reliability after finishing, and net coverage of problems the base model leaves unsolved. Across released reasoning models, most gains reflect finishing or reliability rather than demonstrated expansion of the solvable problem set.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Preserved the supplied original_published_at timestamp. The primary arXiv record confirms initial submission on 26 October 2026 at 06:14:49 UTC. The PDF's 27 October footer is a manuscript date, not the original publication date.",
+      "review_status": "approved",
+      "relevance": "Provides an evaluation protocol for distinguishing improved execution from expanded problem-solving ability after reinforcement learning. This directly informs whether training creates capabilities needed for discovery.",
+      "id": "8a0eeb5ba9e784b8",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34894"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/shanyang-me/outcome-rl-buys"
+        },
+        {
+          "label": "Project",
+          "url": "https://shanyang.me/what-outcome-rl-buys/"
+        }
+      ]
+    },
+    {
       "title": "What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents",
       "url": "https://arxiv.org/abs/2610.34491",
       "published_at": "2026-10-25",
@@ -927,7 +966,7 @@
       ]
     },
     {
-      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -1194,6 +1233,32 @@
         {
           "label": "Code",
           "url": "https://github.com/hku-sail/GeoUG"
+        }
+      ]
+    },
+    {
+      "title": "How Much Does the Hint Matter? Scope Conditions for Hindsight Self-Distillation in Financial Reasoning",
+      "url": "https://arxiv.org/abs/2610.36082",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "Fin-SD trains a reasoner using a frozen copy of itself conditioned on feedback at a localized mistake. In financial reasoning experiments, generic feedback matches targeted critiques, suggesting that the location of supervision matters more than critique content under these conditions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Preserved the supplied original_published_at timestamp. The primary arXiv record confirms initial submission on 26 October 2026 at 18:07:20 UTC. The November ICAIF conference designation does not establish an earlier publication date.",
+      "review_status": "approved",
+      "relevance": "Studies a transferable mechanism for learning from verified reasoning failures: localized hindsight self-distillation. Its controls clarify whether improvement requires new information or better use of existing knowledge, a concrete question for discovery training.",
+      "id": "a0d49b24cd3e2ace",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.36082"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/johnnyhyu/fin-sd"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/johnnyhyu/fin-sd/tree/main/data"
         }
       ]
     },
@@ -2754,6 +2819,19 @@
         }
       ],
       "id": "fdef97a9b2954a46"
+    },
+    {
+      "title": "Cong Lu reports Flint-driven NanoChat training experiments",
+      "url": "https://x.com/cong_ml/status/2113201695559647590",
+      "published_at": "2026-10-22",
+      "kind": "x",
+      "summary": "Cong Lu reports that Recursive’s new 40B open model Flint drove NanoChat training research across more than 700 experiments. The attached chart shows Flint reaching 0.9797 best validation BPB after 732 attempts, versus historical Haiku 4.5 at 0.9770 and Sonnet 4.6 at 0.9744 under the same attempt budget; lower is better.",
+      "date_evidence": "Supplied primary-source metadata gives native datetime 2026-10-22T09:32:00.000Z and visible timestamp 5:32 AM · Oct 22, 2026, with no edit label.",
+      "relevance": "Concrete automated pretraining-research campaign with a fixed experiment budget. Nearby thread setup specifies five-minute H100 training experiments.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "46db645e5dfb65ef"
     },
     {
       "title": "Co-Recursive Semantic Self-Extension: A Mathematical Foundation for Open-Ended Intelligence",
@@ -8202,6 +8280,44 @@
       ]
     },
     {
+      "title": "AlphaBet: Reinforcement Learning for LLM Event Forecasting Agents",
+      "url": "https://arxiv.org/abs/2610.22684",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "AlphaBet trains one forecasting policy across multiple dates before an event resolves. Outcome feedback rewards both evidence gathering and probability reporting. The paper combines an agentic training framework, a forecasting-regret decomposition, and an analysis of how GRPO reward standardization can distort probabilistic learning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is preserved exactly. The primary arXiv record identifies the first version as submitted on 2026-10-15 at 21:54:31 UTC, and PDF page 1 also states 15 Oct 2026. These corroborate the original UTC publication day; the supplied midnight timestamp is metadata rather than the arXiv submission time.",
+      "review_status": "approved",
+      "relevance": "The primary contribution trains an agent to seek useful evidence about unresolved events and translate it into probabilistic beliefs. Its controlled evidence-swapping experiments establish a concrete connection to learning to discover information, beyond improving prediction from fixed inputs.",
+      "id": "684b05c65090965c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22684"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AlphaBet-Agent/AlphaBet"
+        },
+        {
+          "label": "Project",
+          "url": "https://alphabet-agent.github.io/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/liqinye/AlphaBet_memory-free"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/liqinye/AlphaBet_memory-on"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/liqinye/Forecast-Dojo"
+        }
+      ]
+    },
+    {
       "title": "AdaRSI: On-Demand Recursive Self-Improvement for Embodied Agents",
       "url": "https://arxiv.org/abs/2610.20474",
       "published_at": "2026-10-14",
@@ -10605,6 +10721,19 @@
           "url": "https://arxiv.org/abs/2610.11118"
         }
       ]
+    },
+    {
+      "title": "Molecule describes infrastructure for agentic scientific economies",
+      "url": "https://x.com/Molecule_sci/status/2107813151911936428",
+      "published_at": "2026-10-07",
+      "kind": "x",
+      "summary": "Molecule connects autonomous scientific discovery’s validation bottleneck to its Onchain Lab infrastructure. It says Labs already support expiring, revocable agent permissions and pay-per-query data access, while royalty escrow and revenue distribution remain planned modules.",
+      "date_evidence": "Supplied exact-permalink native metadata gives datetime=2026-10-07T12:39:51.000Z, matching the visible 8:39 AM · Oct 7, 2026 timestamp; no edit label was present.",
+      "relevance": "Concrete infrastructure proposal connecting autonomous hypothesis generation to scarce experimental validation, access control, provenance and credit allocation.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "864c0673c9af950a"
     },
     {
       "title": "LiveMACE: Process-Aware Evaluation of LLM Agent Capabilities in Evolving Markets",
@@ -13781,6 +13910,32 @@
       ]
     },
     {
+      "title": "What Outcome RL Buys: Finishing, Reliability, Rarely Reach",
+      "url": "https://arxiv.org/abs/2610.34894",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "The paper separates outcome-RL gains into finishing within a token budget, reliability after finishing, and net coverage of problems the base model leaves unsolved. Across released reasoning models, most gains reflect finishing or reliability rather than demonstrated expansion of the solvable problem set.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Preserved the supplied original_published_at timestamp. The primary arXiv record confirms initial submission on 26 October 2026 at 06:14:49 UTC. The PDF's 27 October footer is a manuscript date, not the original publication date.",
+      "review_status": "approved",
+      "relevance": "Provides an evaluation protocol for distinguishing improved execution from expanded problem-solving ability after reinforcement learning. This directly informs whether training creates capabilities needed for discovery.",
+      "id": "8a0eeb5ba9e784b8",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34894"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/shanyang-me/outcome-rl-buys"
+        },
+        {
+          "label": "Project",
+          "url": "https://shanyang.me/what-outcome-rl-buys/"
+        }
+      ]
+    },
+    {
       "title": "What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents",
       "url": "https://arxiv.org/abs/2610.34491",
       "published_at": "2026-10-25",
@@ -13825,7 +13980,7 @@
       ]
     },
     {
-      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -14079,6 +14234,32 @@
         {
           "label": "Code",
           "url": "https://github.com/hku-sail/GeoUG"
+        }
+      ]
+    },
+    {
+      "title": "How Much Does the Hint Matter? Scope Conditions for Hindsight Self-Distillation in Financial Reasoning",
+      "url": "https://arxiv.org/abs/2610.36082",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "Fin-SD trains a reasoner using a frozen copy of itself conditioned on feedback at a localized mistake. In financial reasoning experiments, generic feedback matches targeted critiques, suggesting that the location of supervision matters more than critique content under these conditions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Preserved the supplied original_published_at timestamp. The primary arXiv record confirms initial submission on 26 October 2026 at 18:07:20 UTC. The November ICAIF conference designation does not establish an earlier publication date.",
+      "review_status": "approved",
+      "relevance": "Studies a transferable mechanism for learning from verified reasoning failures: localized hindsight self-distillation. Its controls clarify whether improvement requires new information or better use of existing knowledge, a concrete question for discovery training.",
+      "id": "a0d49b24cd3e2ace",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.36082"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/johnnyhyu/fin-sd"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/johnnyhyu/fin-sd/tree/main/data"
         }
       ]
     },
@@ -20243,6 +20424,44 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.20832"
+        }
+      ]
+    },
+    {
+      "title": "AlphaBet: Reinforcement Learning for LLM Event Forecasting Agents",
+      "url": "https://arxiv.org/abs/2610.22684",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "AlphaBet trains one forecasting policy across multiple dates before an event resolves. Outcome feedback rewards both evidence gathering and probability reporting. The paper combines an agentic training framework, a forecasting-regret decomposition, and an analysis of how GRPO reward standardization can distort probabilistic learning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is preserved exactly. The primary arXiv record identifies the first version as submitted on 2026-10-15 at 21:54:31 UTC, and PDF page 1 also states 15 Oct 2026. These corroborate the original UTC publication day; the supplied midnight timestamp is metadata rather than the arXiv submission time.",
+      "review_status": "approved",
+      "relevance": "The primary contribution trains an agent to seek useful evidence about unresolved events and translate it into probabilistic beliefs. Its controlled evidence-swapping experiments establish a concrete connection to learning to discover information, beyond improving prediction from fixed inputs.",
+      "id": "684b05c65090965c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22684"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AlphaBet-Agent/AlphaBet"
+        },
+        {
+          "label": "Project",
+          "url": "https://alphabet-agent.github.io/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/liqinye/AlphaBet_memory-free"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/liqinye/AlphaBet_memory-on"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/liqinye/Forecast-Dojo"
         }
       ]
     },

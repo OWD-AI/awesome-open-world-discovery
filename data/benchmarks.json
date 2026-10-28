@@ -3218,6 +3218,28 @@
       "name": "Scientific capabilities and deployment sustainability of small-scale LLMs in biological wastewater treatment",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2609.25774"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 identifies a project page, code, and released tables.",
+        "The main comparison uses released models."
+      ],
+      "focus": "Evaluates reasoning on fixed text-only physics and mathematics problems using reference-answer checkers. Separates pass@1 changes into finishing, reliability, and net reach. These are question-answering tasks; the environment provides no scientific simulator or physical measurements.",
+      "limits": "Eight samples per problem ordinarily determine reach; additional sampling and grading audits cover selected subsets. Physics filtering, strict answer formatting, shared model ancestry, and limited human validation constrain interpretation. Supplied pages end at page 16; detailed controlled-training and checker appendices are unavailable.",
+      "training": {
+        "reward": "Outcome RL rewards correct final answers. Physics uses the paper's outcome reward, and MATH-500 uses symbolic equivalence. Unfinished derivations score zero in the stated explanation of group-relative credit. The controlled probe uses GSPO; its complete reward formula is not established in the supplied pages. A separate setup-reward treatment gamed its scorer. Evaluation measures pass@1, finishing, reliability, and net reach, with answer-judge regrading as an audit.",
+        "reset": "Repeated generation from the same fixed prompts and separate resampling runs are established. A stateful environment reset interface or training-checkpoint reset protocol is not established.",
+        "branching": "Multiple sampled answers per problem are established. Branching from saved intermediate reasoning or restoring environment states is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-8a0eeb5ba9e784b8",
+      "resource_id": "paper-8a0eeb5ba9e784b8",
+      "name": "What Outcome RL Buys: Finishing, Reliability, Rarely Reach",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.34894"
     }
   ]
 }
