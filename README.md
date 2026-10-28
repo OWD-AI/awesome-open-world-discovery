@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-730-2563eb?style=flat-square" alt="730 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-732-2563eb?style=flat-square" alt="732 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-142-0f766e?style=flat-square" alt="142 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,9 +80,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 81 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 119 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 120 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 123 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 124 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 133 |
 
@@ -669,6 +669,8 @@ Each work appears once under its primary contribution; see the [classification g
   Dianxing Shi, Dingjie Fu, Tianyu Lei, Wangjie Qiu · Beihang University; Huazhong University of Technology
 - <a id="paper-572a65a52169b4df"></a>**MultiAgent-OPD: End-to-End Training of Hierarchical Multi-Agent Systems with On-Policy Distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23234)* · [Paper](https://arxiv.org/abs/2610.23234)<br>
   Yuhan Sun et al. · Alibaba Group; Zhejiang University
+- <a id="paper-944d13815486272b"></a>**Multiscale Policy Optimization for Long-Horizon LLM Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35013)* · [Paper](https://arxiv.org/abs/2610.35013)<br>
+  Tao Ren et al. · Peking University; IQuest Research; Tsinghua University; +3 institutions
 - <a id="paper-2d09cb91206e5f2c"></a>**Muse Glimmer 30B: An On-Device Agentic Model** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24628)* · [Paper](https://arxiv.org/abs/2610.24628) · [HF Model](https://huggingface.co/meta-models/Muse-Glimmer-30B)<br>
   Muse Glimmer team et al. · Meta Superintelligence Labs
 - <a id="paper-f2d49208f39c3a48"></a>**My FAULT: Self-Diagnosis as Credit Assignment in Self-Evolving Agentic Reinforcement Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.01161)* · [Paper](https://arxiv.org/abs/2610.01161)<br>
@@ -1150,6 +1152,8 @@ Each work appears once under its primary contribution; see the [classification g
   Tingwen Du et al. · University of Science and Technology of China; Shanghai Artificial Intelligence Laboratory; Shanghai Jiao Tong University; +2 institutions
 - <a id="paper-aa714b09dd384ec0"></a>**GitSwarm: Decentralized Compounding Inference** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04862)* · [Paper](https://arxiv.org/abs/2610.04862) · [Project](https://veds12.github.io/git-swarm/)<br>
   Vedant Shah et al. · Meta Superintelligence Labs; Mila - Québec AI Institute; Université de Montréal; +3 institutions
+- <a id="paper-4a9dc70ee129d6d0"></a>**h1: A Taste of the Bitter Lesson in Automated Theorem Proving** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35962)* · [Paper](https://arxiv.org/abs/2610.35962)<br>
+  Skander Moalla et al. · FAIR at Meta; EPFL; CERMICS, ENPC, Institut Polytechnique de Paris; +1 institutions
 - <a id="paper-7be1f38a8edb49a3"></a>**Harness Self-Evolution for Long-Horizon Terminal Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27435)* · [Paper](https://arxiv.org/abs/2610.27435)<br>
   Ruhan Wang et al. · Tencent HY LLM Frontier; Indiana University; University of Maryland, College Park; +2 institutions
 - <a id="h03"></a>**Harness-1: Reinforcement Learning for Search Agents with State-Externalizing Harnesses** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2606.02373)* · [Paper](https://arxiv.org/abs/2606.02373) · [Code](https://github.com/pat-jj/harness-1) · [HF Model](https://huggingface.co/pat-jj/harness-1) · [HF Dataset](https://huggingface.co/datasets/pat-jj/harness-1-train-data)<br>

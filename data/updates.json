@@ -1,9 +1,22 @@
 {
-  "updated_at": "2026-10-28T10:29:45-04:00",
+  "updated_at": "2026-10-28T12:08:46-04:00",
   "window_start": "2026-09-29",
   "window_end": "2026-10-28",
   "window_days": 30,
   "items": [
+    {
+      "title": "Autoresearch follow-up reports inference gains and vLLM bugs",
+      "url": "https://x.com/artuskg/status/2115339268273127511",
+      "published_at": "2026-10-28",
+      "kind": "x",
+      "summary": "Artus reports that an autoresearch loop optimizing Qwen 3.8 on RTX PRO 6000 Blackwell roughly doubled 27B decoding throughput and surfaced vLLM bugs. The accompanying figures document quality checks, rejected configurations and compute expenditure.",
+      "date_evidence": "Supplied native original-post DOM metadata gives datetime=2026-10-28T07:05:57.000Z and visible “3:05 AM · Oct 28, 2026,” with no edit label. This establishes the original publication date rather than the figures’ revision date.",
+      "relevance": "Provides an ongoing research-loop case study connecting optimization gains, validation and compute expenditure.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "35398fd76a773b0c"
+    },
     {
       "title": "naklecha reports autonomous kernel-optimization experiments",
       "url": "https://x.com/naklecha/status/2115172803997483508",
@@ -769,6 +782,19 @@
       ]
     },
     {
+      "title": "Agent-driven inference experiments distinguish adopted and rejected variants",
+      "url": "https://x.com/artuskg/status/2114617496879943942",
+      "published_at": "2026-10-26",
+      "kind": "x",
+      "summary": "Artus Krohn-Grimberghe reports using Claude and Astra in an iterative inference-optimization campaign with explicit quality gates and rejected configurations. He reports adopted decode-speed gains of 1.68–1.71× for two-GPU Flash Next, 1.69–1.74× for one-GPU Flash Next, and 1.91–2.01× for 27B, plus a lossy 27B variant reaching 2.28–2.34×. The tables document revoked variants and distinguish decode throughput from end-to-end performance: adopted 27B configurations remain slower than stock on full 256K requests.",
+      "date_evidence": "Supplied native article metadata gives datetime=2026-10-26T07:17:53.000Z, matching the visible 3:17 AM · Oct 26, 2026 timestamp. The tables' revision timestamps are not used as publication evidence.",
+      "relevance": "Documents experimental search with quality gates, rejected hypotheses and separate throughput versus end-to-end evaluation.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "9a76e4407ab29c7a"
+    },
+    {
       "title": "Δτ-Bench: Pushing Agents Toward a Moving Capability",
       "url": "https://arxiv.org/abs/2610.34238",
       "published_at": "2026-10-25",
@@ -901,7 +927,7 @@
       ]
     },
     {
-      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -962,7 +988,7 @@
       ]
     },
     {
-      "title": "Skill∞: Recursive Self-Improvement for Agent Skill Optimization",
+      "title": "Skill^{infty}: Recursive Self-Improvement for Agent Skill Optimization",
       "url": "https://arxiv.org/abs/2610.35434",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -1098,6 +1124,24 @@
         {
           "label": "Code",
           "url": "https://github.com/haojinw0027/ParetoRSI-GYM"
+        }
+      ]
+    },
+    {
+      "title": "Multiscale Policy Optimization for Long-Horizon LLM Agents",
+      "url": "https://arxiv.org/abs/2610.35013",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "MPO separates credit propagation across assistant turns from credit allocation among tokens within a turn. It improves trained search and tool-use agents while retaining useful performance gains as additional attempts are sampled.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved. The primary arXiv v1 submission history and PDF page 1 confirm October 26, 2026.",
+      "review_status": "approved",
+      "relevance": "MPO contributes a concrete training method for agents that investigate questions through repeated search, tool calls, and environment feedback. Its credit assignment addresses the long horizons and sparse outcome rewards involved in learning to discover answers.",
+      "id": "944d13815486272b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35013"
         }
       ]
     },
@@ -1288,6 +1332,24 @@
       "source": "Codex primary text-and-image checked",
       "links": [],
       "id": "25ddd7688a33e210"
+    },
+    {
+      "title": "h1: A Taste of the Bitter Lesson in Automated Theorem Proving",
+      "url": "https://arxiv.org/abs/2610.35962",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "h1 keeps a general language model working on Lean proofs through tool feedback and repeated reflection. The study tests whether an efficient simple loop can match specialized proving workflows as inference budgets increase.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved. Primary arXiv v1 history confirms October 25, 2026. The October 28 date printed inside the manuscript is not substituted for its original publication date.",
+      "review_status": "approved",
+      "relevance": "h1 directly contributes an agent harness for mechanically verified mathematical discovery. Its persistent proof development, external validation, reflection, and cost-controlled comparisons connect system design to solving open conjectures and detecting incorrect formalizations.",
+      "id": "4a9dc70ee129d6d0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35962"
+        }
+      ]
     },
     {
       "title": "Trajectory2Gym: Decision-Grounded Compositional Interaction Synthesis for Tool-Use Agents",
@@ -3209,9 +3271,9 @@
       "url": "https://mirendil.com/news/pretraining-at-scale-without-a-pretraining-team",
       "published_at": "2026-10-21",
       "kind": "blog",
-      "summary": "Mirendil reports that one researcher working with AI agents pretrained Mirendil-Base in 3.5 months for under $10 million in total compute costs. According to the lab, agents wrote over 99% of the code, ran experiments and diagnosed failures, while the researcher chose directions, assessed evidence and intervened as needed. This describes human-directed, agent-assisted model research; fully autonomous recursive self-improvement remains a future ambition.",
-      "date_evidence": "The supplied complete official article explicitly displays “Published: October 21, 2026, 9:00 am PT,” supporting the original publication date of 2026-10-21.",
-      "relevance": "Concrete account of agents performing model-development research while humans select directions and assess evidence.",
+      "summary": "Mirendil reports that one researcher used AI agents to build and pretrain a coding model in 3.5 months for under $10 million in compute. Agents reportedly wrote over 99% of the code, ran experiments and diagnosed failures, while the researcher directed the work and judged results. Using Mirendil models to help build successors remains a planned next step.",
+      "date_evidence": "The supplied complete primary-source text explicitly states: Published: October 21, 2026, 9:00 am PT. This establishes the original publication date as 2026-10-21.",
+      "relevance": "Concrete account of research agents supporting pretraining and experiment execution, with human judgment retained.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "links": [
@@ -9415,6 +9477,24 @@
       ]
     },
     {
+      "title": "ARIS author reports adversarial research-agent benchmark results",
+      "url": "https://x.com/WShuiyin/status/2109310248255385643",
+      "published_at": "2026-10-11",
+      "kind": "x",
+      "summary": "The ARIS author reports that pairing DeepSeek V4 Pro-preview with GLM 5.1 for adversarial research collaboration improved PseudoBench resistance from 10.5% to 30.9%, approaching the chart’s Codex result of 32.1%. The announcement also reports research-workflow benchmark results and updates for theory proofs and Lean verification. These are author-reported results.",
+      "date_evidence": "Supplied primary reading evidence records the native X edit-history DOM timestamp for initial version 2109309945435058366 as 2026-10-11T15:47:34.000Z. The current version is explicitly marked last edited at 15:48:46Z.",
+      "relevance": "Tests adversarial review, verifiability and traceability within automated research workflows; also announces proof workflows with Lean verification.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep"
+        }
+      ],
+      "id": "5aed3441e806a2fa"
+    },
+    {
       "title": "Triage-PiEvo: Evidence Admission for Principle-Evolving Scientific Agents",
       "url": "https://arxiv.org/abs/2610.14683",
       "published_at": "2026-10-10",
@@ -10747,6 +10827,19 @@
           "url": "https://arxiv.org/abs/2610.07763"
         }
       ]
+    },
+    {
+      "title": "Pretraining practitioner identifies interaction effects in autoresearch",
+      "url": "https://x.com/menhguin/status/2107677049238519958",
+      "published_at": "2026-10-06",
+      "kind": "x",
+      "summary": "Minh Nhat Nguyen argues from his pretraining experience that autoresearch benefits from close human supervision to assess interactions among changes, effects across model scales and datasets, downstream post-training consequences, and production-serving constraints.",
+      "date_evidence": "Supplied native original DOM timestamp: 2026-10-07T03:39:01.000Z, corresponding to the displayed 11:39 PM on October 6, 2026 in America/New_York. No edit label was reported.",
+      "relevance": "Identifies concrete experimental-design requirements for automated pretraining research: interaction ablations, scale transfer and production constraints.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "37f6c38f07ec774b"
     },
     {
       "title": "OpenESM: Energy-Steered Models Are Scalable Foundation Learners",
@@ -13732,7 +13825,7 @@
       ]
     },
     {
-      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -13780,7 +13873,7 @@
       ]
     },
     {
-      "title": "Skill∞: Recursive Self-Improvement for Agent Skill Optimization",
+      "title": "Skill^{infty}: Recursive Self-Improvement for Agent Skill Optimization",
       "url": "https://arxiv.org/abs/2610.35434",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -13916,6 +14009,24 @@
         {
           "label": "Code",
           "url": "https://github.com/haojinw0027/ParetoRSI-GYM"
+        }
+      ]
+    },
+    {
+      "title": "Multiscale Policy Optimization for Long-Horizon LLM Agents",
+      "url": "https://arxiv.org/abs/2610.35013",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "MPO separates credit propagation across assistant turns from credit allocation among tokens within a turn. It improves trained search and tool-use agents while retaining useful performance gains as additional attempts are sampled.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved. The primary arXiv v1 submission history and PDF page 1 confirm October 26, 2026.",
+      "review_status": "approved",
+      "relevance": "MPO contributes a concrete training method for agents that investigate questions through repeated search, tool calls, and environment feedback. Its credit assignment addresses the long horizons and sparse outcome rewards involved in learning to discover answers.",
+      "id": "944d13815486272b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35013"
         }
       ]
     },
@@ -14078,6 +14189,24 @@
         {
           "label": "Code",
           "url": "https://github.com/EthanNing/AgentProofBench"
+        }
+      ]
+    },
+    {
+      "title": "h1: A Taste of the Bitter Lesson in Automated Theorem Proving",
+      "url": "https://arxiv.org/abs/2610.35962",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "h1 keeps a general language model working on Lean proofs through tool feedback and repeated reflection. The study tests whether an efficient simple loop can match specialized proving workflows as inference budgets increase.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved. Primary arXiv v1 history confirms October 25, 2026. The October 28 date printed inside the manuscript is not substituted for its original publication date.",
+      "review_status": "approved",
+      "relevance": "h1 directly contributes an agent harness for mechanically verified mathematical discovery. Its persistent proof development, external validation, reflection, and cost-controlled comparisons connect system design to solving open conjectures and detecting incorrect formalizations.",
+      "id": "4a9dc70ee129d6d0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35962"
         }
       ]
     },

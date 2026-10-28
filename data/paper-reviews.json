@@ -24093,6 +24093,72 @@
           5
         ]
       }
+    },
+    "paper-944d13815486272b": {
+      "institutions": [
+        "Peking University",
+        "IQuest Research",
+        "Tsinghua University",
+        "Renmin University of China",
+        "The University of Hong Kong",
+        "Independent Researcher"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Turn-level generalized advantage estimation uses boundary critic values to propagate terminal rewards. A centered local token correction preserves each turn's mean credit. Complete-turn importance ratios control weighting and clipping, while a stop-gradient construction retains token-specific gradients. Experiments compare two Qwen3 scales against six RL baselines across search, tool use, and automation.",
+      "evidence": "MPO leads all nine reported main metrics at both model scales. BrowseComp-Plus pass@1 reaches 48.08% for 4B and 50.32% for 30B-A3B, exceeding the strongest non-MPO baselines by 4.33 and 3.59 percentage points. Replacing turn ratios with token ratios lowers every reported metric. Removing local refinement also substantially reduces search performance.",
+      "discovery_use": "MPO contributes a concrete training method for agents that investigate questions through repeated search, tool calls, and environment feedback. Its credit assignment addresses the long horizons and sparse outcome rewards involved in learning to discover answers.",
+      "limits": "Training comparisons and ablation configurations use single runs; five repeated evaluations do not measure training-seed uncertainty. Best-checkpoint selection adds uncertainty about generalization. Two training datasets are proprietary. Critic-structure evidence comes from one search run, and theoretical bounds concern constrained surrogates rather than a guarantee for the implemented clipped update. Scientific discovery itself is not directly evaluated. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "learning",
+        "rationale": "MPO contributes a concrete training method for agents that investigate questions through repeated search, tool calls, and environment feedback. Its credit assignment addresses the long horizons and sparse outcome rewards involved in learning to discover answers.",
+        "pdf_sha256": "2701760a40b7ea7c5dd7433ecd522ab0e4a0fc806eed66604c9b9e05ae92fe01",
+        "evidence_pages": [
+          1,
+          8,
+          12
+        ]
+      }
+    },
+    "paper-4a9dc70ee129d6d0": {
+      "institutions": [
+        "FAIR at Meta",
+        "EPFL",
+        "CERMICS, ENPC, Institut Polytechnique de Paris",
+        "New York University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The agent edits a persistent Lean file, receives compiler feedback, and optionally searches Mathlib or tests proof fragments. An external validator checks submissions against the original statement. Rejected proofs trigger transcript compaction and reflection before continued work. Evaluation compares cost–success curves, matched-model harnesses, and ablations of tools, prompts, reflection intervals, and reasoning effort.",
+      "evidence": "The authors report eight settled targets among 236 selected open Formal Conjectures problems, plus several detected misformalizations. Benchmark results include 90/100 FATE-X and 78/100 solved Formal Conjectures problems with GPT-5.6 Sol. On five jointly solvable Erdős problems, an extended attempt reaches 82.5% success at lower reported cost than three APN-basic attempts. Interface and reflection ablations show substantial gains.",
+      "discovery_use": "h1 directly contributes an agent harness for mechanically verified mathematical discovery. Its persistent proof development, external validation, reflection, and cost-controlled comparisons connect system design to solving open conjectures and detecting incorrect formalizations.",
+      "limits": "This is a targeted review of supplied pages 1–16 of 53; detailed proof appendices were unavailable. Black-box training exposure remains uncertain, some baseline costs are estimated, and comparison claims use an August 27 cutoff. The five-problem Erdős comparison excludes Erdős 125, where h1 repeatedly times out. The harness handles single Lean files, and broader tool or codebase generalization is untested. No first-party harness release was verified.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "systems",
+        "rationale": "h1 directly contributes an agent harness for mechanically verified mathematical discovery. Its persistent proof development, external validation, reflection, and cost-controlled comparisons connect system design to solving open conjectures and detecting incorrect formalizations.",
+        "pdf_sha256": "6a1544d5577f3581a99d2a7ad86baedf96acf4cb2a8d2b8187a1ddda2733c059",
+        "evidence_pages": [
+          1,
+          4,
+          5
+        ]
+      }
     }
   }
 }
