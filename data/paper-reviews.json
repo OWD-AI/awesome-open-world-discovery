@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -23203,6 +23203,254 @@
           6,
           12,
           18
+        ]
+      }
+    },
+    "paper-e37e7605cf26a455": {
+      "institutions": [
+        "StepFun",
+        "FinStep",
+        "Renmin University of China",
+        "University of Adelaide",
+        "Zhejiang University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "LLM workflows group 3,079 Chinese financial reports into 99 types and construct questions, required results, binary checkpoints and negative criteria. Ten agents answer matched research requests in a fixed browsing harness. Two judge pipelines independently align passages and score completeness. Evaluation includes reference subsets, an author audit, repeat judgments, content deletion and padding.",
+      "evidence": "Individual reports cover a median 54% of their type’s questions. Restricting evaluation to task-source-supported questions raises completeness by 10.5 points and changes aggregate rankings. Judges achieve checkpoint kappa 0.71 and ranking tau 0.87, despite an 8-point score-level difference. Deletions reduce targeted scores; padding produces no detectable increase within relatively wide intervals.",
+      "discovery_use": "Directly evaluates deep research agents’ analytical coverage, with evidence-linked judgments and experiments showing how reference selection changes agent rankings.",
+      "limits": "Completeness does not establish factual correctness or sound reasoning. Generic validity rules have weak agreement. Validation is confined to Chinese financial research, and the human audit is neither independent nor comprehensive. There is no flat-checklist ablation; reference experiments restrict an existing atlas rather than regenerate rubrics. Agents run once per task. Public materials are promised after review; no release was verified.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates deep research agents’ analytical coverage, with evidence-linked judgments and experiments showing how reference selection changes agent rankings.",
+        "pdf_sha256": "e735b2dae9a1b42812ce630855fd6fbf797e0bb123d76b4ae22a1c37ffec367d",
+        "evidence_pages": [
+          1,
+          3,
+          6
+        ]
+      }
+    },
+    "paper-30b045ab4b6612bf": {
+      "institutions": [
+        "University of Science and Technology of China",
+        "National University of Singapore"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Seven model–harness combinations tackle six recommendation tasks, with three trials per combination and task. Each run receives one H200 GPU and 12 hours, without Internet access or hidden-test feedback. Final predictions receive hidden-test evaluation. Recorded experiments are classified by modification strategy, and final code changes receive novelty ratings. One agent configuration also receives an external idea library.",
+      "evidence": "Agents beat baselines in 35 of 42 settings, averaging 16.1% relative improvement. Engineering modifications account for a reported 91.7% of 4,425 segmented experiments. Mean final novelty is 2.42/4, with novelty and gains correlated at 0.79. Injected ideas improve scores by a reported average 13.35% over the explicit self-generated-idea condition.",
+      "discovery_use": "Provides a concrete autonomous research benchmark requiring hypothesis generation, implementation, experimentation and revision, and measures the gap between engineering gains and algorithmic novelty.",
+      "limits": "Six tasks and three trials limit generality; baseline reproduction quality varies. Relative gains across saturated AUC and less saturated ranking metrics are not directly comparable. Novelty measures departure from the supplied baseline, not originality in the literature. Judge independence is unclear, and correlation does not establish causation. Idea injection tests one agent configuration. The verified author repository currently exposes only a README, so executable code and trajectories were not verified.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "benchmarks",
+        "rationale": "Provides a concrete autonomous research benchmark requiring hypothesis generation, implementation, experimentation and revision, and measures the gap between engineering gains and algorithmic novelty.",
+        "pdf_sha256": "53d2000b03080d990e9ca2764e57d31aa770646fefcaa3fc1e9e553f800a1f01",
+        "evidence_pages": [
+          1,
+          3,
+          11
+        ]
+      }
+    },
+    "paper-c597ebcff760d449": {
+      "institutions": [
+        "The University of Tokyo",
+        "National Institute of Informatics"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A current-observation backbone and action expert receive action supervision plus cosine-distance alignment to frozen future features. The prediction head and future anchor are removed after training. Matched FastWAM and ImageWAM comparisons hold architecture and training settings fixed. Experiments vary future offsets, target encoders and backbones, with action-only controls and repeated runs for selected configurations.",
+      "evidence": "Selected JAM configurations raise LIBERO-Plus success from 55.31% to 64.54% for Wan and from 65.27% to 79.95% for Ovis-U1. Qwen foresight improves its matched action-only result from 77.03% to 81.14%. Future targets outperform current-position targets. Cached targets reduce estimated online training FLOPs by 73.0% and 36.8% in the two matched families.",
+      "discovery_use": "Contributes predictive representation training that improves agents’ robustness to unfamiliar conditions, with controlled comparisons separating future supervision from visual generation.",
+      "limits": "Evaluation is entirely simulated. Cross-backbone comparisons confound architecture, interfaces and pretraining. Future-target choices and benefits depend on the backbone, and some perturbation categories worsen. Cost estimates exclude one-time target extraction and several operations. Independent training repeats cover selected configurations rather than every comparison. The method does not demonstrate active exploration, causal identification or planning with imagined futures.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "learning",
+        "rationale": "Contributes predictive representation training that improves agents’ robustness to unfamiliar conditions, with controlled comparisons separating future supervision from visual generation.",
+        "pdf_sha256": "0591bf03606db6a73938f561ec1152b45e933cf9d8566abb5dd952b43947f090",
+        "evidence_pages": [
+          1,
+          4,
+          10
+        ]
+      }
+    },
+    "paper-f11c120345a76678": {
+      "institutions": [
+        "NVIDIA",
+        "KAIST"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Supervised training grounds discrete Chain-of-Dynamics tokens in normalized human and robot motions and learns token-conditioned future DINO features. RL samples four candidate token sequences and rewards agreement with observed future features, emphasizing changing image patches. Only the VLM updates during RL, with supervised replay. Deployment uses a continuous action expert without generating reasoning tokens or future predictions.",
+      "evidence": "Cumulative ablations raise LIBERO-PRO success from 40.1% to 55.6%; future prediction contributes the largest step, while RL raises 54.4% to 55.6%. Real-robot evaluation records 60/60 in-domain and 52/60 out-of-domain successes. Controlled human-data scaling improves robustness beyond a matched robot-only control. Skill composition from human demonstrations is supported qualitatively.",
+      "discovery_use": "Introduces consequence-grounded training that evaluates candidate motion representations against observed futures, enabling agents to learn transferable behavior from videos without action labels.",
+      "limits": "Training uses one seed, and real-robot evaluation covers three tasks with small condition-level trial counts. Composition lacks a quantitative success-rate study. Observational future matching does not establish causal identification or online experimental discovery. The action expert does not directly consume generated motion tokens. Baseline protocols and inference inputs differ, and training requires substantial compute. Only the project destination was verified, not separate implementation or checkpoint releases.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "learning",
+        "rationale": "Introduces consequence-grounded training that evaluates candidate motion representations against observed futures, enabling agents to learn transferable behavior from videos without action labels.",
+        "pdf_sha256": "73c6bb19781801b97d4b2d9f678edbc53f19404fbb09d3cd31323b6deca1d49f",
+        "evidence_pages": [
+          1,
+          5,
+          18
+        ]
+      }
+    },
+    "paper-fc860eb46913be72": {
+      "institutions": [
+        "University of Washington",
+        "University of Illinois at Urbana-Champaign",
+        "University of Oxford",
+        "Columbia University",
+        "New York University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Supervised fine-tuning of Qwen3.5-4B on 497,056 execution records predicts exception class, terminal output, validation metric and submission status. Five search policies use these predictions within AIDE. Exception-token probabilities supply an empirical uncertainty signal for exploration and execution gating; new predicted best candidates are always executed. Evaluation uses held-out programs and agent runs across 17 tasks with three seeds.",
+      "evidence": "Terminal-output semantic agreement reaches 77.9% on 1,700 held-out programs, versus 41.1% for the strongest prompted baseline. Ungated UCB reaches mean leaderboard percentile 52.1 versus 45.4 for Base AIDE. Gated Sequential reaches 55.4, a 22.1% relative increase over Base AIDE. Gating reduces real execution time by 30–40% relative to corresponding ungated policies; final submissions remain selected using real validation scores.",
+      "discovery_use": "Learns an executable-experiment outcome model that directly supports research-agent candidate exploration, debugging and selective verification through real experiments.",
+      "limits": "Main evaluation uses tasks seen during fine-tuning and benefits from roughly 500,000 prior executions unavailable to Base AIDE. Base AIDE with corpus access is untested. Unseen-task prediction reaches 53.3%, with evidence dominated by failures rather than successful training outcomes. Terminal agreement is judged semantically, not exact log reproduction. Three seeds and reported uncertainty warrant caution about individual policy rankings. Review is targeted; many appendix pages were not supplied.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "causality",
+        "rationale": "Learns an executable-experiment outcome model that directly supports research-agent candidate exploration, debugging and selective verification through real experiments.",
+        "pdf_sha256": "b032b4c999b25896a5f5d368057b410380f48458adb9453569c93df360e5ffcc",
+        "evidence_pages": [
+          1,
+          6,
+          10
+        ]
+      }
+    },
+    "paper-12ca4a45f1a3899a": {
+      "institutions": [
+        "Tencent Hy"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        10,
+        22
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Adapts an 8B video diffusion backbone using structured captions, action-aware causal attention and camera-pose conditioning. Training progresses through causal generation, action alignment, camera control, generated-history segment forcing and four-step distillation. A vision-language prompt enhancer converts interaction history into segment conditions. Human comparisons evaluate text interaction, navigation, interleaved control and spatial memory.",
+      "evidence": "For text interaction, reported prompt-following win rates are 65.0% against Happy Oyster and 75.0% against adapted LingBot-World v2; physical-plausibility win rates are 45.0% and 68.3%. The body reports favorable camera-control comparisons but smaller advantages. Spatial memory remains below Genie 3. These results support interactive controllability rather than verified physical prediction or demonstrated autonomous discovery.",
+      "discovery_use": "Contributes an interactive world representation with temporally scoped actions, retained history and evaluation of action consequences and spatial memory, providing a concrete environment-modeling direction for exploratory agents.",
+      "limits": "Temporal attention causality does not establish physical causality. Human comparisons accommodate heterogeneous interfaces, initialize image-requiring baselines from Hy-Nomas output and adapt LingBot for some tasks. No downstream agent discovery or robot execution success is established. The supplied sections omit detailed benchmark definitions and several result pages, so conclusions are restricted to the available methods, evaluation and discussion.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "causality",
+        "rationale": "Contributes an interactive world representation with temporally scoped actions, retained history and evaluation of action consequences and spatial memory, providing a concrete environment-modeling direction for exploratory agents.",
+        "pdf_sha256": "1db2f952e60806785c25659c92c6683ed077111d5260e890d0c7544ed302d7c7",
+        "evidence_pages": [
+          1,
+          3,
+          10,
+          22
+        ]
+      }
+    },
+    "paper-9b37a0eba72ea3b0": {
+      "institutions": [
+        "University of Illinois, Urbana-Champaign"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Typed claim extraction, same-dimension embedding retrieval, graded entailment, and aggregation produce a profile for a stronger verdict judge. Seven existing checks are adapted to shared reference pools. Four datasets contain 1,060 proposals, with source-removal controls, attribution metrics, ablations, clustered uncertainty estimates, and label audits.",
+      "evidence": "ClaimNov catches 367 of 380 disguises and names the source in 366, with 1.5% rejection on the designated later-realized set. Removing its profile raises that rate to 11.8%. It preserves 91 of 100 hybrids versus CoI-Agent's 76. Whole-proposal performance is statistically comparable to CoI-Agent under clustered analysis, while ClaimNov's native attribution trails simple retrieval on several sets.",
+      "discovery_use": "Directly evaluates whether AI-scientist novelty checks recognize established contributions while preserving novel investigations, and supplies a claim-based verification module.",
+      "limits": "Novelty labels are heuristic and restricted to English AI research with fixed literature pools. A human audit confirms only 28 of 45 designated later-realized ideas as novel; ClaimNov rejects none of the 17 judged already done, exposing a material sensitivity limitation. Generation and judging share a model family. Native attribution is weak, temporal validity decays, and the small regeneration pilot cannot establish downstream research quality. Supplied text was reviewed with only pages 1 and 3 visually inspected.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates whether AI-scientist novelty checks recognize established contributions while preserving novel investigations, and supplies a claim-based verification module.",
+        "pdf_sha256": "5af0af20c9f7104ef574c9531c470fe635274a233e8296ab7c5c649977e83a85",
+        "evidence_pages": [
+          1,
+          8,
+          20
+        ]
+      }
+    },
+    "paper-9b8a04c573ff3eb4": {
+      "institutions": [
+        "HKUST(GZ)",
+        "Alibaba Group",
+        "ZJU",
+        "HKUST"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Twelve LLMs explore 15 fixed initial scenes, including one ordinary-physics control, normally for up to 100 turns. Separate agents construct and review scenes and apparatus. A judge evaluates complete records for both law correctness and experimental support. Interventions vary guidance, turn budgets, and construction access.",
+      "evidence": "GPT-6-Astra achieves 16.7% discovery; the other eleven models achieve zero. Guidance raises discovery to 28.6%, while disabling construction reduces it to 4.8%. Increasing the turn limit does not help because exploration stops early. Three evolved scenes yield zero discoveries despite supported partial observations.",
+      "discovery_use": "Directly evaluates agents choosing research questions, testing competing explanations, and establishing unknown physical laws without assigned discovery goals.",
+      "limits": "Known simulator laws make evaluation tractable but limit conclusions about unresolved real science. Automated judging lacks independent human validation. The small scene collection and selected evolution examples do not establish sustained open-ended progress. Review covered supplied text and two rendered pages, without reproduction.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates agents choosing research questions, testing competing explanations, and establishing unknown physical laws without assigned discovery goals.",
+        "pdf_sha256": "4c458abe7addc6b40c8ace31c1947466cee445bf7bb1d6454a31497d2a0f733c",
+        "evidence_pages": [
+          1,
+          4,
+          5
         ]
       }
     }

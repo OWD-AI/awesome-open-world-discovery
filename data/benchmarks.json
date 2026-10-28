@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -2967,6 +2967,96 @@
       "name": "iPrefBench: A User-Centric Benchmark for Personalized Mobile Use Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.34735"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Pages 4 and 8 promise public materials after review.",
+        "Listed materials include provenance trees, rules, tasks, prompts, checkpoint judgments, scoring and analysis code, and a datasheet.",
+        "Independent re-judging and source verification additionally require report text and source materials."
+      ],
+      "focus": "Analytical completeness of Chinese financial reports produced by Web research agents. A fixed task set is derived from 3,079 recorded expert reports. Agents may search the Web and fetch pages in a fixed ReAct harness; final reports receive evidence-linked rubric judgments.",
+      "limits": "Recorded financial reports and Web pages supply evidence, with no new physical measurements. Completeness does not establish factual correctness, inferential validity, or executed research experiments. Generic validity judgments have limited agreement. Agents run once per task, and search has no date filter.",
+      "training": {
+        "reward": "Pages 3–4 define evaluation scores rather than an agent-training procedure. Judges align report passages to questions and assess binary checkpoints; a triggered negative criterion sets its Target score to 0. Scores average within Targets and questions, then use weights of 20 for differentiating questions and 10 for consensus questions. DeepSeek-V4.1-Flash and GPT-6-luna independently evaluate without Web access. Argument-validity diagnostics remain separate. Training rewards and online delivery of evaluator feedback to the acting agents are not established.",
+        "reset": "Page 4 specifies one agent run per task. Judge repeat runs and content perturbations are described, but actor reset and environment restoration support are not established.",
+        "branching": "Snapshot branching of agent trajectories is not established. Report deletion, padding, and rubric-subset re-scoring are offline evaluation variants."
+      },
+      "evaluation_family": "other",
+      "id": "paper-e37e7605cf26a455",
+      "resource_id": "paper-e37e7605cf26a455",
+      "name": "RubricAtlas: Mining Type-Level Rubrics from Expert Reports to Evaluate Deep Research Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.36878"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Pages 1–2 claim public implementation, benchmark code, agent trajectories, and a leaderboard.",
+        "Executable availability is not established by the supplied PDF pages."
+      ],
+      "focus": "Executed recommendation research experiments on six fixed dataset and baseline tasks. Agents inspect and edit code, run shell commands, install dependencies, launch training and validation jobs, and revise hypotheses using logs, errors, and validation metrics. Each isolated run receives one H200 GPU and a 12-hour budget, with no open Internet access.",
+      "limits": "Feedback comes from newly executed computation over recorded recommendation datasets, with no new physical measurements or live user experiments. Hidden test labels and test feedback remain inaccessible during optimization. Six tasks and three trials limit generality; novelty measures departure from the supplied baseline.",
+      "training": {
+        "reward": "Pages 2–3 specify online feedback from stdout, error traces, and public validation metrics. After the run, a task-specific verifier checks prediction format and computes hidden-test NDCG@10, Macro NDCG@10, or AUC. Page 10 calls the hidden-test metric the reward, while requiring configuration selection on public validation data. Test reward is unavailable during the run. Agent parameter training is not established. Separate LLM judgments assess modification strategies and final novelty.",
+        "reset": "Pages 2–4 specify initialization from the supplied baseline and three independent runs in isolated containers for each task–agent combination. The submission budget is a fixed 12-hour research period, with continuation after early termination. Page 10 requires the same seed for comparable experiments within a trial. Arbitrary environment snapshot reset support is not established.",
+        "branching": "Agents may retain, revise, or discard code modifications and compare experimental variants. Page 10 requires saving rollback identity before selected idea experiments and preserving the best validation-selected submission. Cloning complete intermediate agent, process, and environment states for branching is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-30b045ab4b6612bf",
+      "resource_id": "paper-30b045ab4b6612bf",
+      "name": "AutoRSE: Evaluating LLM Agents as Recommendation Engineers for Self-Evolving Recommender Systems",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.37228"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Code, prompts, generated ideas and per-item result records are described as released.",
+        "Published papers and reviews are represented by identifiers and titles rather than released source text.",
+        "Disguised and hybrid proposals are not released directly; reconstruction code is supplied."
+      ],
+      "focus": "Offline evaluation of novelty judgments and prior-art attribution using published literature, reviewer disputes and generated or rewritten proposals. Each check receives a proposal and a fixed pool of paper identifiers, titles and abstracts. Search queries retrieve only within that pool. Four datasets total 1,060 proposals; outcomes measure rejection, false alarms, source attribution and preservation of partially novel proposals (pages 4–6).",
+      "limits": "Feedback combines real publication and review records with synthetic proposals and heuristic, largely model-generated labels. It does not execute proposed scientific investigations or collect physical measurements. Pools are fixed, English-language AI literature; human auditing finds substantial label errors and a sensitivity limitation. Temporal validity and shared generation/judging model families constrain conclusions (pages 9 and 20).",
+      "training": {
+        "reward": "No agent-training reward or policy-training loop is established for the main benchmark. Checks are evaluated against constructed novelty and attribution labels, with human audits and source-removal controls. CLAIMNOV produces entailment scores and a model-judged verdict. Its use as a training reward is suggested, not demonstrated; component prompt tuning is reported (pages 3–8 and 23).",
+        "reset": "Independent evaluation on fixed proposal–pool pairs and controlled removal of source papers are established. Stateful environment reset support is not established (pages 5–6).",
+        "branching": "Source-in/source-out comparisons and ablations provide controlled alternative inputs. A small pilot permits up to three proposal regenerations after rejection. Snapshot-based environment branching is not established (pages 5–6 and 23)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-9b37a0eba72ea3b0",
+      "resource_id": "paper-9b37a0eba72ea3b0",
+      "name": "Do AI Scientists Know What's New?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.36511"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "The paper states that its project page and code are available.",
+        "Scene laws, action interfaces and pipeline prompts are supplied in the appendix."
+      ],
+      "focus": "Self-directed law discovery through executed MuJoCo experiments. Explorers receive structured positions, motion trajectories and instrument readings; they can push, throw, grasp, move, release, wait, mark locations and construct or adjust apparatus. Fifteen base scenes include an ordinary-physics control and fourteen altered laws hidden from explorers. Main runs start from fixed initial states and allow up to 100 turns (pages 2–5 and 14).",
+      "limits": "All experimental feedback is generated by simulation; there are no new physical measurements. Known programmed laws permit evaluation but limit transfer to unresolved real science. Automated report judging lacks independent human validation, and scene evolution is studied through a small selected collection (pages 8–10).",
+      "training": {
+        "reward": "No policy-training reward or model-weight training procedure is established. GPT-6.1-Sol evaluates reports against hidden reference laws and full exploration records. Discovery requires both complete law correctness and experimental support; correct guesses and supported partial findings are scored separately. Apparatus construction and scene generation also undergo compilation, tests and model review (pages 4–5).",
+        "reset": "Independent runs begin from fixed scene initial states. The supplied action interface has no reset command; resetting during exploration or restoring an arbitrary earlier state is not established (pages 5 and 14).",
+        "branching": "Separate runs and controlled comparisons from fixed initial states are established. Apparatus revisions and scene generation, refinement and composition are supported. Explorer-accessible snapshots or branching from an intermediate simulation state are not established (pages 4–8 and 14)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-9b8a04c573ff3eb4",
+      "resource_id": "paper-9b8a04c573ff3eb4",
+      "name": "Can LLMs Uncover Hidden Physical Laws through Free Exploration?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.37649"
     }
   ]
 }
