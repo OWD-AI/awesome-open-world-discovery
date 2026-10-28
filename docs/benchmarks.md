@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**140 usage profiles** · Updated **2026-10-28**
+**141 usage profiles** · Updated **2026-10-28**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -962,6 +962,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Do AI Scientists Know What's New?](#paper-9b37a0eba72ea3b0) | Real data | Data analysis | Paper-described |
 | [SearchHorizonBench: A Benchmark for Search Value in AI Agents](#paper-8eef102a256c1741) | Executed programs + evaluators | Offline data | Paper-described |
 | [What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents](#paper-fea13ed16e4d86a0) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory](#paper-9cf7f151165bcfc3) | Synthetic data | Offline data | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -2294,6 +2295,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | No benchmark-specific model-training reward is established; the study changes inference effort. AIME scores the extracted integer and GPQA the selected answer letter. Terminal tasks require their verifier to pass. Repository patches require fail-to-pass and pass-to-pass tests; evaluator-passed SWE-Bench Pro executions costing over $5 count as failures. Costs include billed tokens, with a separate modeled waiting-cost analysis. |
 | Reset | Laddering uses at most one fresh highest-effort retry after an unsuccessful initial attempt, reconstructed from saved executions and charged in full. It does not continue the initial trajectory. In-episode snapshot restoration and arbitrary environment reset support are not established. |
 | Branching | Separate executions compare effort settings on the same tasks. Routing and laddering combine recorded attempts; arbitrary branching from intermediate agent histories is not established. |
+
+</details>
+
+<a id="paper-9cf7f151165bcfc3"></a>
+
+<details>
+<summary>HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory — details</summary>
+
+[Work](../README.md#paper-9cf7f151165bcfc3) · [Source](https://arxiv.org/pdf/2610.24520)
+
+**Focus:** Infer behavioral defaults, scope, exceptions, temporal validity, and user endorsement from fixed synthetic dialogue histories. Methods ingest sessions chronologically into user-isolated memory and provide retrieved context to a shared answerer. Action selection is non-interactive. Recorded source dialogues provide construction seeds; benchmark histories and labels are synthetic. The environment supplies neither an interactive scientific simulator nor executed research experiments or new physical measurements.
+
+**Openness:** `Memory representation is unrestricted, but decisions are restricted to four supplied actions.`, `Standard methods cannot access private gold choices, habit states, evidence annotations, future sessions, or other users’ memories.`, `Code and dataset addresses are supplied on page 1; completeness of the released artifacts is not established by the supplied text.`
+
+**New physical measurements:** No
+
+**Limits:** Synthetic histories and deterministic four-choice decisions constrain realism and interaction. Method-specific context budgets and adapted implementations prevent causal architectural comparisons. Human validation measures recoverability from selected evidence rather than retrieval from full histories. Travel is not an independently sequestered generalization test.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A benchmark training reward or policy-training procedure is not established. The evaluator derives one valid action from private habit states and request constraints, then scores predictions by exact match without an LLM judge. Primary metrics are domain accuracy and their unweighted four-domain mean. |
+| Reset | Separate user-isolated memories and chronological visibility cutoffs are specified. An explicit environment reset interface or restart protocol is not established. |
+| Branching | Branching or counterfactual rollout support is not established. Methods select among fixed alternatives without changing subsequent histories or executing the selected actions. |
 
 </details>
 

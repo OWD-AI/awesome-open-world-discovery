@@ -3148,6 +3148,29 @@
       "name": "Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.37624"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Memory representation is unrestricted, but decisions are restricted to four supplied actions.",
+        "Standard methods cannot access private gold choices, habit states, evidence annotations, future sessions, or other users’ memories.",
+        "Code and dataset addresses are supplied on page 1; completeness of the released artifacts is not established by the supplied text."
+      ],
+      "focus": "Infer behavioral defaults, scope, exceptions, temporal validity, and user endorsement from fixed synthetic dialogue histories. Methods ingest sessions chronologically into user-isolated memory and provide retrieved context to a shared answerer. Action selection is non-interactive. Recorded source dialogues provide construction seeds; benchmark histories and labels are synthetic. The environment supplies neither an interactive scientific simulator nor executed research experiments or new physical measurements.",
+      "limits": "Synthetic histories and deterministic four-choice decisions constrain realism and interaction. Method-specific context budgets and adapted implementations prevent causal architectural comparisons. Human validation measures recoverability from selected evidence rather than retrieval from full histories. Travel is not an independently sequestered generalization test.",
+      "training": {
+        "reward": "A benchmark training reward or policy-training procedure is not established. The evaluator derives one valid action from private habit states and request constraints, then scores predictions by exact match without an LLM judge. Primary metrics are domain accuracy and their unweighted four-domain mean.",
+        "reset": "Separate user-isolated memories and chronological visibility cutoffs are specified. An explicit environment reset interface or restart protocol is not established.",
+        "branching": "Branching or counterfactual rollout support is not established. Methods select among fixed alternatives without changing subsequent histories or executing the selected actions."
+      },
+      "evaluation_family": "other",
+      "id": "paper-9cf7f151165bcfc3",
+      "resource_id": "paper-9cf7f151165bcfc3",
+      "name": "HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.24520"
     }
   ]
 }

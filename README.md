@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-726-2563eb?style=flat-square" alt="726 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-140-0f766e?style=flat-square" alt="140 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-728-2563eb?style=flat-square" alt="728 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-141-0f766e?style=flat-square" alt="141 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -80,11 +80,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 81 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 118 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 119 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 122 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 131 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 132 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -675,6 +675,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yihua Zhu et al. · Alibaba Group; Kyoto University; NII LLMC; +6 institutions
 - <a id="paper-15ebd2f0c38c3b18"></a>**OneSearch-VL: Unified Multimodal Deep Research Agent for Image and Video** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.12419)* · [Paper](https://arxiv.org/abs/2610.12419) · [Code](https://github.com/appletea233/OneSearch-VL) · [HF Model](https://huggingface.co/OneSearch-VL/OneSearch-VL-8B) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-VL-SFT-110K) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-VL-RL-10K) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-MI-Bench) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-Video-Bench)<br>
   Hongyu Li et al. · BUAA; CUHK; NTU; +2 institutions
+- <a id="paper-270eaf07b93973c2"></a>**OpenESM: Energy-Steered Models Are Scalable Foundation Learners** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33005)* · [Paper](https://arxiv.org/abs/2610.33005) · [Code](https://github.com/datamllab/OpenEBFM) · [HF Model](https://huggingface.co/guan-wang/EBFM-DCLM-160M)<br>
+  Yuan Pu et al. · Shanghai Artificial Intelligence Laboratory
 - <a id="paper-75eeeb130b15e1f6"></a>**PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27628)* · [Paper](https://arxiv.org/abs/2610.27628)<br>
   Pan Wang et al. · Ant International; National University of Singapore
 - <a id="paper-b489367d0862d8cb"></a>**ParaAgent: Reinforcing Parallel Acting in Open-World Tool Environments** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.33618)* · [Paper](https://arxiv.org/abs/2609.33618) · [Code](https://github.com/yueshengbin/paraagent) · [Dataset](https://huggingface.co/datasets/ShengbinYue/paraagent-sft) · [Dataset](https://huggingface.co/datasets/ShengbinYue/paraagent-rl) · [Dataset](https://huggingface.co/datasets/ShengbinYue/ToolEnv-sft) · [HF Model](https://huggingface.co/ShengbinYue/ToolEnv-14B)<br>
@@ -1599,6 +1601,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Dhananjay Ashok et al. · Information Sciences Institute, University of Southern California; Columbia University; University of Chicago; +2 institutions
 - <a id="paper-c8f0a1e7ad6a901d"></a>**GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22708)* · [Paper](https://arxiv.org/abs/2610.22708) · [Code](https://github.com/patronus-ai/globebench) · [Dataset](https://huggingface.co/datasets/PatronusAI/globebench)<br>
   Nicholas Saban, Charvi Bannur, Mariya Vasileva, Darshan Deshpande · Patronus AI
+- <a id="paper-9cf7f151165bcfc3"></a>**HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24520)* · [Paper](https://arxiv.org/abs/2610.24520) · [Code](https://github.com/LUMIA-Group/habit-bench) · [Dataset](https://huggingface.co/datasets/hollyming/HABIT-Bench)<br>
+  Junming Zhang et al. · LUMIA Lab, School of Artificial Intelligence, Shanghai Jiao Tong University; Shanghai Artificial Intelligence Laboratory; Fudan University
 - <a id="paper-f34ad45741b405ff"></a>**Harness-Delta Attribution: Dissecting Gains From Harness Evolution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22466)* · [Paper](https://arxiv.org/abs/2610.22466) · [Code](https://github.com/Wenwen-D/HarnessDeltaAttribution) · [Project](https://wenwen-d.github.io/blog/harness-delta-attribution/)<br>
   Wenxuan Ding et al. · Amazon; New York University
 - <a id="paper-7a9367ad16e43eeb"></a>**How Do Coding-Agent Harnesses Self-Evolve? An Empirical Study of Retrospective Adaptation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34938)* · [Paper](https://arxiv.org/abs/2610.34938) · [Dataset](https://zenodo.org/records/23653700)<br>

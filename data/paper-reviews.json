@@ -23973,6 +23973,68 @@
           10
         ]
       }
+    },
+    "paper-9cf7f151165bcfc3": {
+      "institutions": [
+        "LUMIA Lab, School of Artificial Intelligence, Shanghai Jiao Tong University",
+        "Shanghai Artificial Intelligence Laboratory",
+        "Fudan University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Controlled habit graphs and dialogue seeds produce 114 synthetic users, 37,152 sessions, and 3,328 four-choice probes. Methods ingest histories chronologically under user isolation. Shared answerers, retrieval baselines, compressed-history controls, private-information oracles, and sampled human review support diagnosis.",
+      "evidence": "The best memory method reaches 33.06% macro accuracy with Qwen and 33.61% with GLM, against 25% random choice. Simple retrieval performs similarly; GLM's compressed-history control reaches 41.98%. Qwen's annotated-evidence oracle reaches only 39.26–58.25% across domains, showing substantial difficulty after evidence selection.",
+      "discovery_use": "Directly evaluates agents inferring previously unstated behavioral rules from incomplete experience and checking when those rules remain valid. Its evidence-access controls distinguish retrieving observations from forming justified knowledge and applying it.",
+      "limits": "Histories are synthetic and action selection is non-interactive. Different context budgets and adapted implementations prevent architectural causal comparisons. The habit-state oracle also supplies the required action. Human validation tests recoverability from selected evidence, not retrieval from full histories. Travel is not an independently sequestered generalization test.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates agents inferring previously unstated behavioral rules from incomplete experience and checking when those rules remain valid. Its evidence-access controls distinguish retrieving observations from forming justified knowledge and applying it.",
+        "pdf_sha256": "e1f0f9fba6f0c2b7a088fa769fb01c4b28410301c7ece26689eea01771d87815",
+        "evidence_pages": [
+          1,
+          3,
+          9
+        ]
+      }
+    },
+    "paper-270eaf07b93973c2": {
+      "institutions": [
+        "Shanghai Artificial Intelligence Laboratory"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A shared Transformer has energy and generation heads. Gaussian latent states undergo deterministic energy-gradient updates before token prediction. Causal masks parallelize refinement across training positions. Experiments compare pretraining, supervised fine-tuning, QA accuracy, and held-out language modeling against GPT and diffusion baselines.",
+      "evidence": "At depth 26 on DCLM, average QA accuracy is 44.71% versus GPT's 39.79%. Across seven transfer corpora, average BPB is 1.35 versus 1.37 for GPT and 1.44 for MDLM. Gains are not universal: ESM loses on Lambada BPB, and FineWeb depth-12 average QA accuracy is below GPT.",
+      "discovery_use": "Provides a concrete training mechanism for learned search: an energy function refines latent candidates before token generation, with transfer evaluated on reasoning and knowledge tasks. This is relevant as a discovery-training foundation, although autonomous discovery remains untested.",
+      "limits": "Models reach only 1.03B parameters with 2,048-token context. Second-order differentiation and model-sharding support constrain scaling. Token-matched comparisons do not establish equal compute efficiency; the reported IsoFLOP curves concern ESM itself. Some token-saving arithmetic is inconsistent. Generation quality is measured through BPB, and scientific discovery and block-wise search remain future work.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "learning",
+        "rationale": "Provides a concrete training mechanism for learned search: an energy function refines latent candidates before token generation, with transfer evaluated on reasoning and knowledge tasks. This is relevant as a discovery-training foundation, although autonomous discovery remains untested.",
+        "pdf_sha256": "5c467b73a48e6fdf6a2e735afbf173b4b13b4f4c467bb1a3c09cbd3bcf58c45d",
+        "evidence_pages": [
+          1,
+          3,
+          8,
+          9
+        ]
+      }
     }
   }
 }
