@@ -3195,6 +3195,29 @@
       "name": "RoboJev: An Open Vision-Language Judge for Robot Success Detection",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.33718"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Open-ended generation of retrospective analyses and prospective hypotheses from fixed research abstracts.",
+        "Abstract discrimination uses original abstracts and coherently altered counterparts.",
+        "Public availability of benchmark artifacts is not established by the supplied pages."
+      ],
+      "focus": "Evaluate retrospective cognition, comprehension fidelity, and prospective extrapolation using 100 recent research abstracts. Models generate analyses and hypotheses or select abstracts through perplexity comparisons. The benchmark provides recorded literature evidence and model-judge scores; it does not establish an interactive simulator or laboratory backend.",
+      "limits": "The false physical-experiment flag applies to the benchmark tasks. Pages 2 and 6 separately report laboratory experiments supporting a human–BioWater hypothesis, so the paper includes physical follow-up beyond the fixed-data benchmark. An interface allowing evaluated models to request new measurements is not established. Deployment sustainability results are deterministic modeled scenarios, not measured deployments. Judge scores assess generated content rather than experimentally verified discovery success. Training-data exclusion is asserted, without independent verification in the supplied pages.",
+      "training": {
+        "reward": "BioWater uses Low-Rank Adaptation with specialized biological wastewater treatment knowledge; a reinforcement-learning reward is not established. Evaluation uses DeepSeek-v4-pro, GLM-5.1, MiniMax-M3, Kimi-k2.6, and Gemini3.1 Pro. The highest and lowest judge scores are discarded and the remaining three are averaged. Retrospective criteria include knowledge, originality, and conciseness; prospective criteria include novelty, rationale, and feasibility. Comprehension fidelity measures selection of the original abstract through lower perplexity and compares performance with qualified human participants.",
+        "reset": "Environment reset support is not established.",
+        "branching": "Environment state branching or checkpoint support is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-33344da2562fd600",
+      "resource_id": "paper-33344da2562fd600",
+      "name": "Scientific capabilities and deployment sustainability of small-scale LLMs in biological wastewater treatment",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2609.25774"
     }
   ]
 }

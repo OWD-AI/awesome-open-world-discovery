@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-732-2563eb?style=flat-square" alt="732 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-142-0f766e?style=flat-square" alt="142 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-733-2563eb?style=flat-square" alt="733 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-143-0f766e?style=flat-square" alt="143 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 124 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 133 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 134 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1693,6 +1693,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Yiqiao Jin et al. · Georgia Institute of Technology; University of California, Los Angeles; University of Chicago; +1 institutions
 - <a id="science-gym"></a>**Science-Gym: a simple testbed for AI-driven scientific discovery** · *[Machine Learning 2026](https://link.springer.com/article/10.1007/s10994-025-06914-x)* · [Paper](https://link.springer.com/article/10.1007/s10994-025-06914-x) · [Code](https://github.com/pibborn/science-gym)<br>
   Mattia Cerrato et al. · Johannes Gutenberg University Mainz; TU Darmstadt and hessian.AI; Max Planck Institute for Polymer Research; +2 institutions
+- <a id="paper-33344da2562fd600"></a>**Scientific capabilities and deployment sustainability of small-scale LLMs in biological wastewater treatment** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.25774)* · [Paper](https://arxiv.org/abs/2609.25774) · [Code](https://github.com/RunzeXu1314/Scientific_benchmark_BioWater)<br>
+  Run-Ze Xu et al. · Department of Civil and Environmental Engineering, Water Technology Center, Hong Kong Branch of Chinese National Engineering Research Center for Control & Treatment of Heavy Metal Pollution, The Hong Kong University of Science and Technology, Hong Kong, China; College of Environment, Hohai University, Nanjing 210098, China
 - <a id="paper-d90a8e0869dee55c"></a>**SciExam for ENSO: Can AI Agents Build Climate Models?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.10513)* · [Paper](https://arxiv.org/abs/2610.10513) · [Code](https://github.com/ylzhang2447/SciExam-ENSO-code) · [Dataset](https://github.com/ylzhang2447/SciExam-ENSO-code/tree/main/dataset)<br>
   Yinling Zhang et al. · The Ohio State University; Yale University; University of California, San Diego; +2 institutions
 - <a id="paper-5687d10cf290fed0"></a>**SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.35596)* · [Paper](https://arxiv.org/abs/2609.35596) · [Code](https://github.com/SEABench-Endogenous-Misalignment/SEABench)<br>

@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**142 usage profiles** · Updated **2026-10-28**
+**143 usage profiles** · Updated **2026-10-28**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -963,6 +963,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [SearchHorizonBench: A Benchmark for Search Value in AI Agents](#paper-8eef102a256c1741) | Executed programs + evaluators | Offline data | Paper-described |
 | [What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents](#paper-fea13ed16e4d86a0) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory](#paper-9cf7f151165bcfc3) | Synthetic data | Offline data | Paper-described |
+| [Scientific capabilities and deployment sustainability of small-scale LLMs in biological wastewater treatment](#paper-33344da2562fd600) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -2318,6 +2319,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | A benchmark training reward or policy-training procedure is not established. The evaluator derives one valid action from private habit states and request constraints, then scores predictions by exact match without an LLM judge. Primary metrics are domain accuracy and their unweighted four-domain mean. |
 | Reset | Separate user-isolated memories and chronological visibility cutoffs are specified. An explicit environment reset interface or restart protocol is not established. |
 | Branching | Branching or counterfactual rollout support is not established. Methods select among fixed alternatives without changing subsequent histories or executing the selected actions. |
+
+</details>
+
+<a id="paper-33344da2562fd600"></a>
+
+<details>
+<summary>Scientific capabilities and deployment sustainability of small-scale LLMs in biological wastewater treatment — details</summary>
+
+[Work](../README.md#paper-33344da2562fd600) · [Source](https://arxiv.org/pdf/2609.25774)
+
+**Focus:** Evaluate retrospective cognition, comprehension fidelity, and prospective extrapolation using 100 recent research abstracts. Models generate analyses and hypotheses or select abstracts through perplexity comparisons. The benchmark provides recorded literature evidence and model-judge scores; it does not establish an interactive simulator or laboratory backend.
+
+**Openness:** `Open-ended generation of retrospective analyses and prospective hypotheses from fixed research abstracts.`, `Abstract discrimination uses original abstracts and coherently altered counterparts.`, `Public availability of benchmark artifacts is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** The false physical-experiment flag applies to the benchmark tasks. Pages 2 and 6 separately report laboratory experiments supporting a human–BioWater hypothesis, so the paper includes physical follow-up beyond the fixed-data benchmark. An interface allowing evaluated models to request new measurements is not established. Deployment sustainability results are deterministic modeled scenarios, not measured deployments. Judge scores assess generated content rather than experimentally verified discovery success. Training-data exclusion is asserted, without independent verification in the supplied pages.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | BioWater uses Low-Rank Adaptation with specialized biological wastewater treatment knowledge; a reinforcement-learning reward is not established. Evaluation uses DeepSeek-v4-pro, GLM-5.1, MiniMax-M3, Kimi-k2.6, and Gemini3.1 Pro. The highest and lowest judge scores are discarded and the remaining three are averaged. Retrospective criteria include knowledge, originality, and conciseness; prospective criteria include novelty, rationale, and feasibility. Comprehension fidelity measures selection of the original abstract through lower perplexity and compares performance with qualified human participants. |
+| Reset | Environment reset support is not established. |
+| Branching | Environment state branching or checkpoint support is not established. |
 
 </details>
 
