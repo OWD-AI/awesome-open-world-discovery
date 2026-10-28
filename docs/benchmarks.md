@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**141 usage profiles** · Updated **2026-10-28**
+**142 usage profiles** · Updated **2026-10-28**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -3187,6 +3187,7 @@ Queries or analyses use measurements already collected. This does not create new
 | [as-bench replay campaigns](#asbench-replay) | Recorded experiments | Budgeted pool queries | Early project |
 | [Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](#paper-f73eeee30c4bf920) | Recorded experiments | Data analysis | Paper-described |
 | [SciCurateBench: Curating Experimental Data from Heterogeneous Scientific Literature with Verbal-Action Agents](#paper-cb2c3c5e8ea5e05f) | Recorded experiments | Analysis + code | Paper-described |
+| [RoboJev: An Open Vision-Language Judge for Robot Success Detection](#paper-6e4784f1eabea972) | Recorded experiments | Offline data | Paper-described |
 
 <a id="genedisco"></a>
 
@@ -3300,6 +3301,29 @@ Queries or analyses use measurements already collected. This does not create new
 | Reward / evaluator | Experiments are zero-shot without additional training (page 6). Iterative feedback comes from the model critic, terminating when evidence is sufficient and confidence exceeds a threshold (page 5). Final evaluation uses expert annotations: classification accuracy and F1, and structured retrieval precision, recall, and F1 with exact-pair and partial-credit scoring (pages 3–4). Curriculum transfer distills prior trajectories into guidance and initial tools (pages 8 and 15). |
 | Reset | Explicit environment reset, snapshot restoration, and rollback support are not established in the supplied text. |
 | Branching | Multiple specialized actors can execute parallel evidence-gathering strategies and aggregate observations (page 5). Branching from a shared environment checkpoint is not established. |
+
+</details>
+
+<a id="paper-6e4784f1eabea972"></a>
+
+<details>
+<summary>RoboJev: An Open Vision-Language Judge for Robot Success Detection — details</summary>
+
+[Work](../README.md#paper-6e4784f1eabea972) · [Source](https://arxiv.org/pdf/2610.33718)
+
+**Focus:** Offline success detection from recorded robot manipulation attempts. The judge consumes a task instruction, ten primary-camera frames and available final auxiliary views, then returns a calibrated success probability. Evaluation uses recorded SO-101 rollouts, unseen-domain rollouts and community videos. These records do not establish new physical measurements or interactive robot control. Training additionally includes demonstrations and simulation interaction data.
+
+**Openness:** `Released model checkpoint and inference tools.`, `Released evaluation records contain 20,628 predictions across 29 model/protocol entries.`, `Metrics and plotting code, benchmark snapshots, data explorer and interactive demo are provided.`, `Training videos and the complete historical training manifest are not fully available.`
+
+**New physical measurements:** No
+
+**Limits:** Sparse frames can miss decisive events. API baselines receive fewer frames. Test sets were inspected during development, community test labels come from one annotator, and ambiguous clips are excluded from binary metrics. Calibration worsens after transfer. Training provenance is incomplete and a record-count discrepancy remains unresolved. Policy-learning benefits and closed-loop reliability are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Judge training uses source-balanced binary cross-entropy with binary or soft success targets and a source-specific KL anchor to the base model. Evaluation reports AUROC, balanced accuracy, accuracy and calibration metrics against episode labels. A released LeRobot integration supplies a thresholded terminal reward, but its effect on policy learning was not measured. |
+| Reset | Interactive environment reset support is not established. Evaluation scores fixed recorded episodes. |
+| Branching | Environment-state branching support is not established. Prefix scoring and alternative input protocols reuse recorded video evidence. |
 
 </details>
 

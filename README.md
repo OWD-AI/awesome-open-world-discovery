@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-728-2563eb?style=flat-square" alt="728 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-141-0f766e?style=flat-square" alt="141 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-730-2563eb?style=flat-square" alt="730 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-142-0f766e?style=flat-square" alt="142 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -82,9 +82,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 119 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 122 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 123 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 132 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 133 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1080,6 +1080,8 @@ Each work appears once under its primary contribution; see the [classification g
   Aparajith Chandran et al. · Amazon
 - <a id="paper-015983a5216461e4"></a>**Autoresearch in Mixed-Integer Linear and Nonlinear Programming** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.39360)* · [Paper](https://arxiv.org/abs/2609.39360)<br>
   Yuwei Gu et al. · Chengdu University of Information Technology; Eindhoven University of Technology; Nanyang University of Technology; +2 institutions
+- <a id="paper-b403ee9911ec4e4b"></a>**Beyond Benchmarks: Can Small Open-Weight Models Get Real Coding Work Done?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34241)* · [Paper](https://arxiv.org/abs/2610.34241)<br>
+  Vaibhav Jain · Independent Researcher
 - <a id="paper-0fc21b6838fcff99"></a>**Beyond Maliciousness: Static and Runtime Attack-Surface Profiling of Agent Skills** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19264)* · [Paper](https://arxiv.org/abs/2610.19264)<br>
   Ratnesh Pandey et al. · Metano Labs; Purdue University; VulNow
 - <a id="paper-270d7139fe7e7927"></a>**Beyond Skill Evolution: Self-Evolving Context Management Policies for Long-Horizon Agent Harnesses** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.34649)* · [Paper](https://arxiv.org/abs/2609.34649)<br>
@@ -1667,6 +1669,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Ido Levy, Segev Shlomov, Leshem Choshen · IBM; Weizmann Institute of Science
 - <a id="paper-3e1c96441442a7d4"></a>**Reward Hacking Challenges Oversight of Autonomous Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.28614)* · [Paper](https://arxiv.org/abs/2609.28614)<br>
   Yue Huang et al. · Bake AI; University of Notre Dame; LMU Munich; +7 institutions
+- <a id="paper-6e4784f1eabea972"></a>**RoboJev: An Open Vision-Language Judge for Robot Success Detection** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33718)* · [Paper](https://arxiv.org/abs/2610.33718) · [HF Model](https://huggingface.co/josefchen/RoboJev-27B) · [Dataset](https://huggingface.co/datasets/josefchen/RoboJev-evals) · [Project](https://huggingface.co/spaces/josefchen/RoboJev-data) · [Project](https://huggingface.co/spaces/josefchen/RoboJev-demo)<br>
+  Josef Chen · Independent Researcher
 - <a id="paper-35b9a7f119c042ee"></a>**RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27782)* · [Paper](https://arxiv.org/abs/2610.27782) · [Project](https://spherelab.ai/RoboJudge/) · [Code](https://github.com/Sphere-AI-Lab/RoboJudge)<br>
   Siyuan Ma et al. · The Chinese University of Hong Kong; Westlake University; Northeastern University; +3 institutions
 - <a id="paper-7f92942419dc62bc"></a>**RSI Arena: Towards Recursive Self-Improvement with Human Feedback** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33624)* · [Paper](https://arxiv.org/abs/2610.33624) · [Project](https://rsiarena.org/) · [HF Model](https://huggingface.co/RSIArena/RSIAgent-Aspen-Stage1) · [HF Model](https://huggingface.co/RSIArena/RSIAgent-Aspen-Stage2)<br>
