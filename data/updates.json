@@ -1,9 +1,49 @@
 {
-  "updated_at": "2026-10-27T17:34:59-04:00",
+  "updated_at": "2026-10-27T21:07:50-04:00",
   "window_start": "2026-09-28",
   "window_end": "2026-10-27",
   "window_days": 30,
   "items": [
+    {
+      "title": "naklecha reports autonomous kernel-optimization experiments",
+      "url": "https://x.com/naklecha/status/2115172803997483508",
+      "published_at": "2026-10-27",
+      "kind": "x",
+      "summary": "Naklecha reports that one prompt launched a 16-hour autonomous kernel-optimization run using Cloudy’s autoresearch harness, conducting roughly 150 H200 experiments. They claim ninth place on Meta’s kernel leaderboard, kernels 1.57× faster than SGLang’s, and $250 in token and compute costs.",
+      "date_evidence": "Supplied original-source metadata gives datetime=2026-10-27T20:04:29.000Z, consistent with the visible timestamp 4:04 PM · Oct 27, 2026.",
+      "relevance": "A concrete report of an automated experiment loop searching for faster kernels under an external optimization challenge.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Project",
+          "url": "https://cloudy.so"
+        },
+        {
+          "label": "Project",
+          "url": "https://openkernelchallenge.dev"
+        }
+      ],
+      "id": "871876071f2d07ca"
+    },
+    {
+      "title": "Xiaoyin Chen evaluates self-evolving agents under task drift",
+      "url": "https://x.com/xiaoyin_chen66/status/2115162450660340135",
+      "published_at": "2026-10-27",
+      "kind": "x",
+      "summary": "Xiaoyin Chen and coauthors evaluate three self-evolving agent methods across four changing task streams. They report that adaptation often improves aggregate performance but can disrupt earlier or unseen tasks, while memory retrieval remains vulnerable to conflicting workflows.",
+      "date_evidence": "Supplied native original-post metadata gives datetime=2026-10-27T19:23:20.000Z, matching the visible timestamp 3:23 PM · Oct 27, 2026.",
+      "relevance": "Tests whether prompt, memory and code adaptation supports continual learning when tasks change, directly informing evaluation of continually improving research agents.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.25858"
+        }
+      ],
+      "id": "cf32c42f2b441fdf"
+    },
     {
       "title": "BAAI announces AREX-2 training for iterative research improvement",
       "url": "https://x.com/BAAIBeijing/status/2115069000098906244",
@@ -527,6 +567,28 @@
         {
           "label": "Project",
           "url": "https://amiya-special.github.io/DynaFlow-website"
+        }
+      ]
+    },
+    {
+      "title": "Did the Model Use That? Counterfactual Training Boosts Self-Attribution in Language Models",
+      "url": "https://arxiv.org/abs/2610.35295",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "CREDIT trains language models to disclose which external information changed their answers. It distinguishes causal dependence from simple agreement or citation support.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-publication metadata records 2026-10-26T00:00:00.000Z; PDF page 1 identifies v1 as 26 Oct 2026. The exact supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Counterfactual post-training teaches models to distinguish independent knowledge from dependence on supplied information. This directly supports knowledge verification by discovery agents, although autonomous research performance is not evaluated.",
+      "id": "fbc297b42e444ceb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35295"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/stanford-oval/CREDIT"
         }
       ]
     },
@@ -1291,6 +1353,28 @@
       "source": "Codex primary text-and-image checked",
       "links": [],
       "id": "70e7097634bebb61"
+    },
+    {
+      "title": "EnvLunch: The Environment as a Free Lunch for Learning to Interact",
+      "url": "https://arxiv.org/abs/2610.33817",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "EnvLunch creates training goals from executable trajectories without writing task descriptions. Agents learn to recover computations from their outputs, improving subsequent learning from limited annotated tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-publication metadata records 2026-10-24T00:00:00.000Z; PDF page 1 identifies v1 as 24 Oct 2026. The exact supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is environment-derived training for discovering hidden computations through interaction and verification. Controlled uncertainty-reduction experiments provide a concrete connection to learning how to investigate unknown environments.",
+      "id": "d3da834b254c9317",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33817"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/thinkwee/EnvLunch"
+        }
+      ]
     },
     {
       "title": "Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL",
@@ -8266,6 +8350,24 @@
       ]
     },
     {
+      "title": "How Far Can Coding Agents Go in Visual Generation?",
+      "url": "https://arxiv.org/abs/2610.19025",
+      "published_at": "2026-10-12",
+      "kind": "paper",
+      "summary": "The paper examines coding agents as visual generators and tests whether visual programs support scene understanding. Cross-interface drawing, independent pixel queries, and room revisits provide exploratory evidence for reusable scene content.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-publication metadata records 2026-10-13T00:00:00.000Z; PDF page 1 identifies v1 as 13 Oct 2026. The exact supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Executable scene representations and probes of reusable spatial structure form a substantive contribution alongside drawing evaluation. They connect to world representations that agents can inspect and reason over. Inclusion concerns this representational capability; the study does not demonstrate scientific discovery or identify a causal internal mechanism.",
+      "id": "137628e5f45d0875",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19025"
+        }
+      ]
+    },
+    {
       "title": "HarnessTTT: Learn to Optimize Harness at Test-Time for Scientific Discovery",
       "url": "https://arxiv.org/abs/2610.17370",
       "published_at": "2026-10-12",
@@ -13128,6 +13230,28 @@
       ]
     },
     {
+      "title": "Did the Model Use That? Counterfactual Training Boosts Self-Attribution in Language Models",
+      "url": "https://arxiv.org/abs/2610.35295",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "CREDIT trains language models to disclose which external information changed their answers. It distinguishes causal dependence from simple agreement or citation support.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-publication metadata records 2026-10-26T00:00:00.000Z; PDF page 1 identifies v1 as 26 Oct 2026. The exact supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Counterfactual post-training teaches models to distinguish independent knowledge from dependence on supplied information. This directly supports knowledge verification by discovery agents, although autonomous research performance is not evaluated.",
+      "id": "fbc297b42e444ceb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35295"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/stanford-oval/CREDIT"
+        }
+      ]
+    },
+    {
       "title": "Constrained Decoding: Harmful or Beneficial? Revisiting Its Impact on LLM Performance",
       "url": "https://arxiv.org/abs/2610.35328",
       "published_at": "2026-10-25",
@@ -13790,6 +13914,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.32813"
+        }
+      ]
+    },
+    {
+      "title": "EnvLunch: The Environment as a Free Lunch for Learning to Interact",
+      "url": "https://arxiv.org/abs/2610.33817",
+      "published_at": "2026-10-23",
+      "kind": "paper",
+      "summary": "EnvLunch creates training goals from executable trajectories without writing task descriptions. Agents learn to recover computations from their outputs, improving subsequent learning from limited annotated tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-publication metadata records 2026-10-24T00:00:00.000Z; PDF page 1 identifies v1 as 24 Oct 2026. The exact supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is environment-derived training for discovering hidden computations through interaction and verification. Controlled uncertainty-reduction experiments provide a concrete connection to learning how to investigate unknown environments.",
+      "id": "d3da834b254c9317",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33817"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/thinkwee/EnvLunch"
         }
       ]
     },
@@ -19962,6 +20108,24 @@
         {
           "label": "Code",
           "url": "https://anonymous.4open.science/r/origin-in-self-evovling-multi-agent-8818/README.md"
+        }
+      ]
+    },
+    {
+      "title": "How Far Can Coding Agents Go in Visual Generation?",
+      "url": "https://arxiv.org/abs/2610.19025",
+      "published_at": "2026-10-12",
+      "kind": "paper",
+      "summary": "The paper examines coding agents as visual generators and tests whether visual programs support scene understanding. Cross-interface drawing, independent pixel queries, and room revisits provide exploratory evidence for reusable scene content.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-publication metadata records 2026-10-13T00:00:00.000Z; PDF page 1 identifies v1 as 13 Oct 2026. The exact supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Executable scene representations and probes of reusable spatial structure form a substantive contribution alongside drawing evaluation. They connect to world representations that agents can inspect and reason over. Inclusion concerns this representational capability; the study does not demonstrate scientific discovery or identify a causal internal mechanism.",
+      "id": "137628e5f45d0875",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.19025"
         }
       ]
     },

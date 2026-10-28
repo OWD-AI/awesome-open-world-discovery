@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-699-2563eb?style=flat-square" alt="699 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-702-2563eb?style=flat-square" alt="702 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-132-0f766e?style=flat-square" alt="132 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -78,9 +78,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 75 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 76 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 109 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 111 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 100 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 120 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 73 |
@@ -244,6 +244,8 @@ Each work appears once under its primary contribution; see the [classification g
   Bryce Grant, Peng Wang · Case Western Reserve University
 - <a id="paper-b9a6b3cf4345027c"></a>**Holi-World: Building Holistic World Intelligence from Human-Ego Experience** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26549)* · [Paper](https://arxiv.org/abs/2610.26549) · [Project](https://github.com/Ropedia/holi-world) · [HF Model](https://huggingface.co/ropedia-ai/holiworld-vl) · [Dataset](https://huggingface.co/datasets/ropedia-ai/holiworld-data)<br>
   Hao Li et al. · Ropedia; NTU; HKUST; +1 institutions
+- <a id="paper-137628e5f45d0875"></a>**How Far Can Coding Agents Go in Visual Generation?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19025)* · [Paper](https://arxiv.org/abs/2610.19025)<br>
+  Hengguang Zhou et al. · University of California, Los Angeles; Tsinghua University
 - <a id="paper-cff6e82a848858e5"></a>**Identifying ODEs from Unstructured Data with Causal Representation Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.37083)* · [Paper](https://arxiv.org/abs/2609.37083)<br>
   Alessandro Trenta, Riccardo Massidda, Davide Bacciu, Sara Magliacane · University of Pisa; Saarland Informatics Campus; Saarland University; +1 institutions
 - <a id="paper-d4efb0c6a2ce0b19"></a>**ITSY: Causal Discovery From Irregular Time-Series Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.23516)* · [Paper](https://arxiv.org/abs/2609.23516)<br>
@@ -573,6 +575,8 @@ Each work appears once under its primary contribution; see the [classification g
   Rubin Wei et al. · LUMIA Lab, School of Artificial Intelligence, Shanghai Jiao Tong University; Shanghai Artificial Intelligence Laboratory
 - <a id="paper-5fc86e0f1760f581"></a>**DeLoop: Repeated Actions as Self-Supervision for Long-Horizon Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19376)* · [Paper](https://arxiv.org/abs/2610.19376) · [Project](https://github.com/cskyl/deloop)<br>
   Tianle Chen et al. · Google; Boston University; University of Washington; +2 institutions
+- <a id="paper-fbc297b42e444ceb"></a>**Did the Model Use That? Counterfactual Training Boosts Self-Attribution in Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35295)* · [Paper](https://arxiv.org/abs/2610.35295) · [Code](https://github.com/stanford-oval/CREDIT)<br>
+  Zikai Zhou et al. · Stanford University; Duke University; Emory University; +1 institutions
 - <a id="paper-0e9154958b34b909"></a>**Direct Self-Evolving Optimization: Evolving LLMs without Challenger Training** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.34279)* · [Paper](https://arxiv.org/abs/2609.34279)<br>
   Yuyang Deng, Yu Wang, Jiayun Wang · Accenture, Center for Advanced AI; Georgia Institute of Technology
 - <a id="paper-3ec8fb151cd77aab"></a>**DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32093)* · [Paper](https://arxiv.org/abs/2610.32093) · [Project](https://davian-robotics.github.io/DiscoDemo/) · [Code](https://github.com/DAVIAN-Robotics/DiscoDemo) · [Dataset](https://huggingface.co/datasets/DAVIAN-Robotics/DiscoDemo-Stage2_GenData-PnP_Banana) · [HF Model](https://huggingface.co/DAVIAN-Robotics/DiscoDemo-Stage3_SFT-PnP_Banana)<br>
@@ -589,6 +593,8 @@ Each work appears once under its primary contribution; see the [classification g
   Hyun Ryu et al. · KAIST AI; Carnegie Mellon University Language Technologies Institute
 - <a id="paper-fd98d0ad6f9d37a7"></a>**ECHO: Efficient Causal Self-Recursion Beyond Auxiliary Multi-Token Prediction** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24766)* · [Paper](https://arxiv.org/abs/2610.24766) · [Code](https://github.com/ernie-research/ECHO)<br>
   Yuxuan Zhou et al. · ERNIE Team, Baidu; Independent Researcher
+- <a id="paper-d3da834b254c9317"></a>**EnvLunch: The Environment as a Free Lunch for Learning to Interact** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33817)* · [Paper](https://arxiv.org/abs/2610.33817) · [Code](https://github.com/thinkwee/EnvLunch)<br>
+  Wei Liu, Min Gao, Yali Du, Yulan He · King’s College London; Chongqing University; The Alan Turing Institute
 - <a id="paper-6c921d13d0b14a4e"></a>**Evolve on Graph: Self-Evolving Knowledge Graph Reasoning without Question Annotations** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35598)* · [Paper](https://arxiv.org/abs/2610.35598) · [Project](https://szy5.github.io/EoG/) · [Code](https://github.com/Szy5/EoG) · [HF Model](https://huggingface.co/Bobzong/EoG)<br>
   Zongyuan Sun et al. · Beijing University of Posts and Telecommunications; University of Helsinki; University of Amsterdam; +1 institutions
 - <a id="paper-d0a1aad7216e9e1d"></a>**Evolving in Thought Space: Training a Small Model at Test Time Unlocks Better Discoveries** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06269)* · [Paper](https://arxiv.org/abs/2610.06269) · [Code](https://github.com/Human-Agent-Society/reef/tree/main/recipes/tttd/examples/guidance_ttt) · [Project](https://www.reefinfra.ai/docs/user-guide/recipes/guidance-ttt/)<br>

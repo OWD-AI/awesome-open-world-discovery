@@ -23108,6 +23108,103 @@
           10
         ]
       }
+    },
+    "paper-fbc297b42e444ceb": {
+      "institutions": [
+        "Stanford University",
+        "Duke University",
+        "Emory University",
+        "UCLA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Generate model responses and four counterfactual answers with external information removed. Label dependence using answer matching, discard ambiguous cases, rewrite only the final attribution statement, and perform one epoch of LoRA training. Evaluate four open models against prompting, reasoning-supervision, and shuffled-label controls, including unseen information types and conflicting sources.",
+      "evidence": "Final-answer attribution balanced accuracy rises from 0.49–0.80 to 0.85–0.90 across four models on TEST. Qwen3-8B reaches 0.86, versus 0.50 for reasoning-level supervision in its final answer. Gains persist among answers agreeing with suggestions and partly transfer across information types. Qwen3-8B nevertheless makes 339 attribution errors in 2,121 scored responses.",
+      "discovery_use": "Counterfactual post-training teaches models to distinguish independent knowledge from dependence on supplied information. This directly supports knowledge verification by discovery agents, although autonomous research performance is not evaluated.",
+      "limits": "Answer-change labels measure behavioral dependence rather than internal reliance, truth, or introspection. Evaluation mainly uses short-answer questions and 7–14B models. Transfer weakens under paraphrasing and fails on system-prompt notes. Competing-source attribution remains imperfect. DeepSeek model selection used TEST, making FRESH and LARGE cleaner estimates. The RL comparison omits parts of the cited method. Attribution does not itself reduce sycophancy. The author-listed OSF release could not be independently fetched.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "learning",
+        "rationale": "Counterfactual post-training teaches models to distinguish independent knowledge from dependence on supplied information. This directly supports knowledge verification by discovery agents, although autonomous research performance is not evaluated.",
+        "pdf_sha256": "d0912d46e9953fabd4309f13174ae4457b015cbb7520389ecc73d41393271770",
+        "evidence_pages": [
+          1,
+          3,
+          6,
+          10
+        ]
+      }
+    },
+    "paper-d3da834b254c9317": {
+      "institutions": [
+        "King’s College London",
+        "Chongqing University",
+        "The Alan Turing Institute"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Randomly compose valid SQL or pandas actions and expose only their final observations. Train trajectory recovery with GRPO, verifying recovered computations on hidden databases perturbed through row deletion and numeric rescaling. Compare warmed and original Qwen3.5-4B/9B models under paired downstream training conditions across thirteen benchmarks, plus synthetic-task controls and a 64-world uncertainty experiment.",
+      "evidence": "Average curve-level gains across six data-analysis benchmarks are 9.63 percentage points at 4B and 9.32 at 9B. Where matching occurs, baselines require 8–32 times more labels to reach the warmed model's smallest-budget performance. Transfer is mostly positive across seven additional benchmarks. Removing counterfactual verification produces constant-output reward hacking and lowers held-out warm-up accuracy to 16.8%, versus 46.1% with verification. Controlled probes show stronger uncertainty reduction.",
+      "discovery_use": "The primary contribution is environment-derived training for discovering hidden computations through interaction and verification. Controlled uncertainty-reduction experiments provide a concrete connection to learning how to investigate unknown environments.",
+      "limits": "Warm-up is demonstrated only with relational databases and dataframes at two model scales. Its action pool and perturbations are engineered; agreement on a few perturbed databases does not prove universal program equivalence. The method adds compute, and downstream RL still requires annotated tasks. Transfer is uneven, including a small negative result on 4B SpreadsheetBench. The uncertainty experiment is constructed, and trajectory analysis uses automated descriptions followed by manual verification.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "learning",
+        "rationale": "The primary contribution is environment-derived training for discovering hidden computations through interaction and verification. Controlled uncertainty-reduction experiments provide a concrete connection to learning how to investigate unknown environments.",
+        "pdf_sha256": "4d9cd620bc136281d68f7fee0dc985852a4b6505e6212a69e72779e96d57a77e",
+        "evidence_pages": [
+          1,
+          5,
+          10
+        ]
+      }
+    },
+    "paper-137628e5f45d0875": {
+      "institutions": [
+        "University of California, Los Angeles",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        12,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Evaluate drawing harnesses on 200 AgentDrawBench prompts using structural checklists and position-swapped perceptual judgments. Compare original images, reconstructed SVG source, and renders on 200 WorldBench questions. Probe cross-harness similarity, independent pixel predictions, and geometric consistency across viewpoints in thirty self-furnished rooms under context-removal controls.",
+      "evidence": "Canvas 2D achieves 85.8% structural fidelity versus 68.8% for GPT-image-1 and 90.7% for GPT-image-2. Its holistic win rate against GPT-image-1 is 92.0% on design/symbolic prompts but 47.7% overall. SVG-source question answering reaches 69%, versus 65% from renders and 74% from originals. Fourfold refinement yields only a 50.5% holistic win rate. Room revisits remain highly consistent after drawings are removed, while fresh-call controls perform worse.",
+      "discovery_use": "Executable scene representations and probes of reusable spatial structure form a substantive contribution alongside drawing evaluation. They connect to world representations that agents can inspect and reason over. Inclusion concerns this representational capability; the study does not demonstrate scientific discovery or identify a causal internal mechanism.",
+      "limits": "Most ablations use one proprietary agent, automated judgments have limited human verification, and harness compute and feedback are not uniformly matched. Room tests measure self-consistency against the agent's own arrangements while retaining opaque reasoning history; they do not establish context-free spatial memory. Pixel probes cover five subjects, procedural-art results are qualitative, and domain QA rankings lack significance claims. No first-party artifact release was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-10-27",
+        "category": "causality",
+        "rationale": "Executable scene representations and probes of reusable spatial structure form a substantive contribution alongside drawing evaluation. They connect to world representations that agents can inspect and reason over. Inclusion concerns this representational capability; the study does not demonstrate scientific discovery or identify a causal internal mechanism.",
+        "pdf_sha256": "b041cd59fd6e286101827d7453a487dd92a00a9234126dbff92177cb06d419b7",
+        "evidence_pages": [
+          1,
+          6,
+          12,
+          18
+        ]
+      }
     }
   }
 }
