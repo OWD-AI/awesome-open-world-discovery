@@ -23453,6 +23453,72 @@
           5
         ]
       }
+    },
+    "paper-77674d7f948270f6": {
+      "institutions": [
+        "AgiBot",
+        "BUAA",
+        "NUS"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        11,
+        24
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Use MCTS with progressive widening and disagreement-driven refinement over cached video-model contexts. Aggregate subtree outcomes into relative action-quality bins for policy training. Concurrent real-robot experience updates the world model through LoRA fine-tuning and distillation.",
+      "evidence": "Success reaches 69.33% for block extraction, 40.00% for ball tossing, and 64.44% for tabletop curling, exceeding the strongest reproduced baseline by approximately 10.67–11.85 percentage points. Frozen-model and direct-reward ablations perform worse. Deployment uses the trained policy without search.",
+      "discovery_use": "Rollback trains agents through targeted counterfactual exploration and outcome comparisons, while real interaction corrects the learned world model. This concretely connects world representations, informative investigation, and feedback-driven learning.",
+      "limits": "Each policy targets one task on one physical robot and requires a task-specific reward model. Training uses 48 H200 GPUs plus substantial initialization. Prediction error grows over long rollouts. Curling fidelity comparisons use trajectories included in adaptation, limiting generalization conclusions. Human comparisons average only three people; multi-robot scaling is untested.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "learning",
+        "rationale": "Rollback trains agents through targeted counterfactual exploration and outcome comparisons, while real interaction corrects the learned world model. This concretely connects world representations, informative investigation, and feedback-driven learning.",
+        "pdf_sha256": "d9d2906181805b3a6ac188d8ca557569ea35adf7fee894d3a07eaa0707620085",
+        "evidence_pages": [
+          1,
+          6,
+          11,
+          24
+        ]
+      }
+    },
+    "paper-56ebfe7910628572": {
+      "institutions": [
+        "The University of Hong Kong",
+        "Shanghai Jiao Tong University",
+        "ByteDance Seed"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9,
+        25
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Co-train BAGEL with spatial QA and depth or view generation. A fixed multi-scale codec represents metric depth. Supervised initialization and reinforcement learning train a draft-conditioned generation decision using correctness improvement relative to retaining the draft and an explicit generation cost. Evaluate on cue-balanced 3DCueBench and established spatial benchmarks.",
+      "evidence": "Circular accuracy reaches 97.9%, 90.8%, and 94.2% on CV-Bench-3D, 3DCueBench, and DA-2K while generating for 50.3–72.4% of questions. Accuracy stays within 0.7 points of always generating. DA3 depth readout slightly exceeds GeoUG on 3DCueBench, 90.9% versus 90.8%.",
+      "discovery_use": "GeoUG learns when to acquire an explicit geometric representation to check and revise a tentative answer. Its contribution connects representation learning with selective evidence acquisition and verification.",
+      "limits": "Generated geometry can overturn a correct draft. Before-answer comparisons change training and credit assignment as well as decision position. Benchmark balancing covers selected shortcuts, not every possible cue. Some depth evaluation uses affine alignment rather than testing absolute metric calibration. External-tool comparisons contain prompting and resolution confounds; independent reproduction was not performed.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "learning",
+        "rationale": "GeoUG learns when to acquire an explicit geometric representation to check and revise a tentative answer. Its contribution connects representation learning with selective evidence acquisition and verification.",
+        "pdf_sha256": "8582c682b19aab59a4175fb6b4f0e5713e0e642eb4bd1cf87e5f8a63e56dcdda",
+        "evidence_pages": [
+          1,
+          6,
+          9,
+          25
+        ]
+      }
     }
   }
 }

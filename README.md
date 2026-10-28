@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-710-2563eb?style=flat-square" alt="710 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-712-2563eb?style=flat-square" alt="712 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-136-0f766e?style=flat-square" alt="136 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 78 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 113 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 115 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 100 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 120 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 73 |
@@ -643,6 +643,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ruida Wang, Gerald Friedland, Tong Zhang, Chris Kong · Amazon Web Services; University of Illinois Urbana-Champaign
 - <a id="paper-44d308ca6f63a0d7"></a>**LeanPRM: Lean-Grounded Process Supervision for Natural Language Proof Verification** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.17697)* · [Paper](https://arxiv.org/abs/2610.17697) · [Project](https://rlafuente.com/lean-prm) · [Code](https://github.com/pavelslab-nyu/LeanPRM) · [Dataset](https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/data) · [Dataset](https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/benchmark)<br>
   Rodney Lafuente-Mercado et al. · University of Texas at Austin; University of California, Los Angeles; New York University
+- <a id="paper-56ebfe7910628572"></a>**Learning and Reasoning with Geometry: How Generation Helps Spatial Understanding** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.36022)* · [Paper](https://arxiv.org/abs/2610.36022) · [Code](https://github.com/hku-sail/GeoUG)<br>
+  Rui Yang et al. · The University of Hong Kong; Shanghai Jiao Tong University; ByteDance Seed
 - <a id="paper-bc757bb51b5cc488"></a>**Learning to Think and Explore in 3D World** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21783)* · [Paper](https://arxiv.org/abs/2610.21783) · [Project](https://williamium3000.github.io/act3d/)<br>
   Yijiang Li, Bingyang Wang, Nuno Vasconcelos · University of California San Diego; Georgia Institute of Technology
 - <a id="paper-0cf18f180d63c3e4"></a>**Learning What to Investigate Next: Meta-Reasoning for Long-Horizon Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.02525)* · [Paper](https://arxiv.org/abs/2610.02525)<br>
@@ -681,6 +683,8 @@ Each work appears once under its primary contribution; see the [classification g
   Huijuan Wang et al. · University of Southern California; University of California San Diego; Carnegie Mellon University
 - <a id="paper-20899a0b6ded457f"></a>**Recursive Self-Improvement via On-Policy Distillation for Reasoning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.30652)* · [Paper](https://arxiv.org/abs/2609.30652)<br>
   Shangjian Yin et al. · Meta AI; University of California, Riverside
+- <a id="paper-77674d7f948270f6"></a>**Rollback: Experience Backtracking in World Models for Policy Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.36068)* · [Paper](https://arxiv.org/abs/2610.36068) · [Project](https://rollback-wm.github.io/)<br>
+  Jiayi Luo et al. · AgiBot; BUAA; NUS
 - <a id="paper-6458fcd3e61718e0"></a>**RSIPO: Recursive Self-Improving Policy Optimization for Agentic Reinforcement Learning via Skill-Policy Co-Evolution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.15772)* · [Paper](https://arxiv.org/abs/2610.15772) · [Code](https://github.com/zfkarl/RSIPO) · [HF Model](https://huggingface.co/Karl28/RSIPO-Qwen2.5-7B-Instruct-ALFWorld) · [HF Model](https://huggingface.co/Karl28/RSIPO-Qwen2.5-7B-Instruct-Search)<br>
   Fan Zhang et al. · CUHK; THU; NUS; +5 institutions
 - <a id="paper-0687e07a2193b7e6"></a>**Rubric-CEPR: Self-Evolving Image Editing via Reward-Verified Self-Distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.12469)* · [Paper](https://arxiv.org/abs/2610.12469) · [Code](https://github.com/riteshthawkar/Rubric-CEPR) · [Project](https://riteshthawkar.github.io/Rubric-CEPR/)<br>
