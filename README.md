@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-736-2563eb?style=flat-square" alt="736 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-738-2563eb?style=flat-square" alt="738 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-144-0f766e?style=flat-square" alt="144 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,9 +80,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 81 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 122 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 123 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 124 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 125 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 135 |
 
@@ -711,6 +711,8 @@ Each work appears once under its primary contribution; see the [classification g
   Kuan Zhang et al. · miHoYo Honkai AI R&D Team; College AI, Tsinghua University; University of Chinese Academy of Sciences; +3 institutions
 - <a id="d05"></a>**Scaling Scientific Discovery Environments for Turn-Level Agentic RL** · *[arXiv 2026 (preprint)](https://arxiv.org/html/2607.28990v1)* · [Paper](https://arxiv.org/html/2607.28990v1)<br>
   Yucheng Xu et al. · Shanghai AI Laboratory
+- <a id="paper-3540af631fa21f6d"></a>**Self-Assessment Reinforcement Learning for Search-State Awareness in Retrieval-Augmented Large Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30435)* · [Paper](https://arxiv.org/abs/2610.30435)<br>
+  Taewhoo Lee et al. · Korea University; Amazon; AIGEN Sciences; +2 institutions
 - <a id="paper-1ff51f6d4550cdeb"></a>**Self-Credit: Credit Assignment for Long-Horizon Agentic RL via Intra-group Rescaling** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28388)* · [Paper](https://arxiv.org/abs/2610.28388)<br>
   Fangcong Yin et al. · Meta; New York University; Duke University
 - <a id="paper-e55ba0ce535c45d0"></a>**Self-Evaluating Recursive Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04902)* · [Paper](https://arxiv.org/abs/2610.04902) · [Code](https://github.com/OliverLeeXZ/SERA) · [Dataset](https://github.com/OliverLeeXZ/SERA/blob/main/Dataset/README.md) · [HF Model](https://huggingface.co/Litux12138/SERA)<br>
@@ -1068,6 +1070,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ali Asaria, Deep Gandhi, Tony Salomone · Transformer Lab
 - <a id="d09"></a>**Accelerating scientific discovery with Co-Scientist** · *[Nature 2026](https://www.nature.com/articles/s41586-026-10644-y)* · [Paper](https://arxiv.org/abs/2502.18864)<br>
   Juraj Gottweis et al. · Google Cloud AI Research; Google DeepMind; Google Research; +4 institutions
+- <a id="paper-e3b2d0f3070b5035"></a>**AdaPRA: Process Reward Agents with Adaptive Rubrics for Data Science** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33245)* · [Paper](https://arxiv.org/abs/2610.33245) · [Code](https://github.com/atharva-naik/AdaPRA)<br>
+  Atharva Naik et al. · Carnegie Mellon University; Microsoft
 - <a id="h02"></a>**Agent Lightning v1.0: Towards Harnessed Agentic RL** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2608.17528)* · [Paper](https://arxiv.org/abs/2608.17528) · [Code](https://github.com/microsoft/agent-lightning)<br>
   Zhiyuan He et al. · Microsoft; Fudan University; Zhejiang University; +1 institutions
 - <a id="paper-07001ea82b328e28"></a>**AIM: Agentic Idea Management for Automated Research** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.38445)* · [Paper](https://arxiv.org/abs/2609.38445) · [Project](https://imhgchoi.github.io/agentic-idea-manager/)<br>

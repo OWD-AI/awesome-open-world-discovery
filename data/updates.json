@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T17:55:42-04:00",
+  "updated_at": "2026-10-28T21:26:43-04:00",
   "window_start": "2026-09-29",
   "window_end": "2026-10-28",
   "window_days": 30,
@@ -16,6 +16,32 @@
       "source": "Codex primary text-and-image checked",
       "links": [],
       "id": "35398fd76a773b0c"
+    },
+    {
+      "title": "Apex announces model training with research trajectories",
+      "url": "https://x.com/apexin_ai/status/2115425524340478404",
+      "published_at": "2026-10-28",
+      "kind": "x",
+      "summary": "Apex Intelligence announces open-weight Apex-35B-V1.0, which it says was developed through its automated Apex Research system using custom mid-training, post-training and research trajectories. The lab reports improvements over its Qwen3.6-35B-A3B base on 20 of 21 benchmarks spanning research, agent tasks, coding and reasoning.",
+      "date_evidence": "Supplied original-post native metadata: <time datetime=\"2026-10-28T12:48:42.000Z\">8:48 AM · Oct 28, 2026</time>. This identifies original publication, not an indexing or revision date.",
+      "relevance": "Research-trajectory training and an automated research system applied to model development.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/apexin-ai/Apex-35B-V1.0"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0"
+        },
+        {
+          "label": "Announcement",
+          "url": "https://apexin.com/apex-35b"
+        }
+      ],
+      "id": "b5051abde73a0d99"
     },
     {
       "title": "naklecha reports autonomous kernel-optimization experiments",
@@ -966,7 +992,7 @@
       ]
     },
     {
-      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -2896,6 +2922,28 @@
       ]
     },
     {
+      "title": "AdaPRA: Process Reward Agents with Adaptive Rubrics for Data Science",
+      "url": "https://arxiv.org/abs/2610.33245",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "AdaPRA combines a persistent experimental workspace with a supervising process reward agent that checks evidence, identifies failures, and maintains task-specific rubrics across attempts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv v1 submission history confirms October 23, 2026. The supplied original_published_at value is preserved exactly as ISO metadata; its midnight value differs from arXiv’s submission clock time of 19:46:55 UTC.",
+      "review_status": "approved",
+      "relevance": "Contributes an agent harness that retains experiment history, actively verifies intermediate artifacts, and adapts review criteria to discovered failures. These mechanisms directly support cumulative investigation and more reliable autonomous data science.",
+      "id": "e3b2d0f3070b5035",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33245"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/atharva-naik/AdaPRA"
+        }
+      ]
+    },
+    {
       "title": "ADAPT for Science: A Multi-Agent System for Self-Evolving Scientific Optimization",
       "url": "https://arxiv.org/abs/2610.30851",
       "published_at": "2026-10-22",
@@ -4140,6 +4188,24 @@
         }
       ],
       "id": "1ff51f6d4550cdeb"
+    },
+    {
+      "title": "Self-Assessment Reinforcement Learning for Search-State Awareness in Retrieval-Augmented Large Language Models",
+      "url": "https://arxiv.org/abs/2610.30435",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "SARL uses training-time self-assessment and outcome-sensitive rewards to teach search agents to recognize information gaps without requiring an explicit assessment stage at inference.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv v1 submission history confirms October 21, 2026. The supplied original_published_at value is preserved exactly as ISO metadata; arXiv records submission at 20:46:24 UTC. The manuscript’s October 23 preprint dateline is a separate date.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to distinguish established evidence from missing information, revise incomplete investigations, and continue targeted retrieval. This is a concrete learning-to-discover contribution, evaluated on multihop and deep research tasks.",
+      "id": "3540af631fa21f6d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.30435"
+        }
+      ]
     },
     {
       "title": "Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition",
@@ -6046,9 +6112,9 @@
       "url": "https://nuglifeleoji.github.io/blog/2026/doodling-in-autoresearch",
       "published_at": "2026-10-18",
       "kind": "blog",
-      "summary": "Changxiu Ji compares approaches to memory, context, coordination, and evaluation in automated research. He proposes making the research harness itself an optimization target: learning how experiment records become reusable knowledge, how agents share work and receive context, and how occasional trusted evaluations calibrate cheaper proxies.",
-      "date_evidence": "The supplied original-article evidence identifies the visible publication date as October 18, 2026 and the time element as datetime=2026-10-18T07:00:00+00:00.",
-      "relevance": "Directly addresses continual accumulation of research knowledge and optimization of the harness governing future experiments.",
+      "summary": "Changxiu Ji argues that long-running research agents need shared experiment memory that develops reusable lessons, context tailored to each agent’s role, adaptable coordination, and cheap evaluation proxies calibrated against trusted evaluations. The post compares existing approaches and proposes learning these system designs together, presenting research directions rather than new experimental results.",
+      "date_evidence": "The supplied complete primary article displays “October 18, 2026 · Changxiu Ji”; the supplied primary reading evidence identifies this as the article’s publication time element.",
+      "relevance": "Offers concrete design questions for persistent research memory, exploration control and discovery evaluation.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "links": [
@@ -9771,6 +9837,24 @@
       ]
     },
     {
+      "title": "Autoresearch roundup describes ablation-based contribution evaluation",
+      "url": "https://x.com/yibie/status/2109060502039261586",
+      "published_at": "2026-10-10",
+      "kind": "x",
+      "summary": "Yibie’s autoresearch roundup highlights bb-autoresearch’s reported automated experiment loop and use of ablation experiments to quantify each PR’s contribution, while emphasizing that it has only been tried on toy repositories. The post also connects trace-driven agent improvements to a broader shift toward improving research and coding harnesses themselves.",
+      "date_evidence": "Supplied native original-post metadata contains <time datetime=\"2026-10-10T23:16:22.000Z\">7:16 PM · Oct 10, 2026</time>, establishing publication on October 10, 2026.",
+      "relevance": "Experiment-loop orchestration, ablation-based attribution and trace-driven harness improvement, with an explicit validation limitation.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/yibie/awesome-autoresearch"
+        }
+      ],
+      "id": "f281fe6dea571623"
+    },
+    {
       "title": "SciCurateBench: Curating Experimental Data from Heterogeneous Scientific Literature with Verbal-Action Agents",
       "url": "https://arxiv.org/abs/2610.14393",
       "published_at": "2026-10-09",
@@ -11119,6 +11203,28 @@
           "url": "https://dualverse-ai.github.io/station-open-reseach_data/"
         }
       ]
+    },
+    {
+      "title": "Yixin Dong introduces KCoral for shared GPU experiment evaluation",
+      "url": "https://x.com/yi_xin_dong/status/2107200142830907667",
+      "published_at": "2026-10-05",
+      "kind": "x",
+      "summary": "Yixin Dong introduces KCoral, a shared GPU evaluation environment for agents that iteratively develop kernels. It schedules correctness and timing evaluations across GPUs and nodes. Dong reports 2.58× evaluation throughput versus sequential local execution on a single NVIDIA B200.",
+      "date_evidence": "Supplied original-post metadata: <time datetime=\"2026-10-05T20:03:58.000Z\">4:03 PM · Oct 5, 2026</time>.",
+      "relevance": "Concrete evaluation infrastructure for scalable kernel-research agents, including shared scheduling, isolation and experimental feedback.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/mlc-ai/kcoral"
+        },
+        {
+          "label": "Announcement",
+          "url": "https://blog.mlc.ai/2026/10/05/kcoral-lightweight-benchmark-server-for-agentic-gpu-programming"
+        }
+      ],
+      "id": "a69846f3a5ded04d"
     },
     {
       "title": "Towards Robust Prehensile Manipulation in Open-Ended Environments",
@@ -13980,7 +14086,7 @@
       ]
     },
     {
-      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -15550,6 +15656,28 @@
       ]
     },
     {
+      "title": "AdaPRA: Process Reward Agents with Adaptive Rubrics for Data Science",
+      "url": "https://arxiv.org/abs/2610.33245",
+      "published_at": "2026-10-22",
+      "kind": "paper",
+      "summary": "AdaPRA combines a persistent experimental workspace with a supervising process reward agent that checks evidence, identifies failures, and maintains task-specific rubrics across attempts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv v1 submission history confirms October 23, 2026. The supplied original_published_at value is preserved exactly as ISO metadata; its midnight value differs from arXiv’s submission clock time of 19:46:55 UTC.",
+      "review_status": "approved",
+      "relevance": "Contributes an agent harness that retains experiment history, actively verifies intermediate artifacts, and adapts review criteria to discovered failures. These mechanisms directly support cumulative investigation and more reliable autonomous data science.",
+      "id": "e3b2d0f3070b5035",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.33245"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/atharva-naik/AdaPRA"
+        }
+      ]
+    },
+    {
       "title": "ADAPT for Science: A Multi-Agent System for Self-Evolving Scientific Optimization",
       "url": "https://arxiv.org/abs/2610.30851",
       "published_at": "2026-10-22",
@@ -16524,6 +16652,24 @@
         }
       ],
       "id": "1ff51f6d4550cdeb"
+    },
+    {
+      "title": "Self-Assessment Reinforcement Learning for Search-State Awareness in Retrieval-Augmented Large Language Models",
+      "url": "https://arxiv.org/abs/2610.30435",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "SARL uses training-time self-assessment and outcome-sensitive rewards to teach search agents to recognize information gaps without requiring an explicit assessment stage at inference.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv v1 submission history confirms October 21, 2026. The supplied original_published_at value is preserved exactly as ISO metadata; arXiv records submission at 20:46:24 UTC. The manuscript’s October 23 preprint dateline is a separate date.",
+      "review_status": "approved",
+      "relevance": "Directly trains agents to distinguish established evidence from missing information, revise incomplete investigations, and continue targeted retrieval. This is a concrete learning-to-discover contribution, evaluated on multihop and deep research tasks.",
+      "id": "3540af631fa21f6d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.30435"
+        }
+      ]
     },
     {
       "title": "Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition",

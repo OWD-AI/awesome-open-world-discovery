@@ -24280,6 +24280,73 @@
           32
         ]
       }
+    },
+    "paper-e3b2d0f3070b5035": {
+      "institutions": [
+        "Carnegie Mellon University",
+        "Microsoft"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An OpenHands-based harness preserves files, models, predictions, and summaries across five attempts. Offline contrastive analysis of stronger and weaker runs produces 19 seed rubrics. During execution, a separate agent checks trajectories and read-only workspace artifacts, executes diagnostics in its own workspace, reports relevant failures, and updates a per-task rubric store. Evaluation covers 38 DSPredict-Easy and 54 DSPredict-Hard competitions.",
+      "evidence": "Reported oracle best-of-five leaderboard percentiles rise from 44.5 to 69.0 on Easy and from 21.3 to 36.1 on Hard. Relative to the persistent harness alone, supervision adds 8.2 and 10.6 points. Freezing rubrics reduces Hard performance by 4.3 points. Seed rubrics transfer to harder domains, and a single-attempt experiment also improves DeepSeek-V3.2.",
+      "discovery_use": "Contributes an agent harness that retains experiment history, actively verifies intermediate artifacts, and adapts review criteria to discovered failures. These mechanisms directly support cumulative investigation and more reliable autonomous data science.",
+      "limits": "Evaluation is restricted to predictive Kaggle tasks, without open-ended scientific investigations. Main results use oracle selection across attempts. Appendix C gives supervised Easy attempts three hours versus two hours without supervision, and supervisor runtime is excluded from agent budgets; comparisons are not fully compute matched. The supervisor contributes 75% of Hard-run cost and depends on a closed model. Table 2 reports some baseline per-attempt percentiles above their best-attempt percentiles, contradicting the stated maximum-over-five definition. Rubric adaptation mostly adds criteria without measuring individual benefit. This was a targeted review of supplied pages 1–16 of 41, with visual inspection limited to pages 1 and 2.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "systems",
+        "rationale": "Contributes an agent harness that retains experiment history, actively verifies intermediate artifacts, and adapts review criteria to discovered failures. These mechanisms directly support cumulative investigation and more reliable autonomous data science.",
+        "pdf_sha256": "72bc77819cf27febfa63fc34a93990650762800581ce9393f1305f780eaf182c",
+        "evidence_pages": [
+          1,
+          5,
+          6,
+          9
+        ]
+      }
+    },
+    "paper-3540af631fa21f6d": {
+      "institutions": [
+        "Korea University",
+        "Amazon",
+        "AIGEN Sciences",
+        "University of Mas- sachusetts Amherst",
+        "Meridian Intelligence Global Inc."
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        13,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The same policy reviews completed search trajectories in an isolated context and returns a completeness judgment. Incomplete judgments trigger further reasoning and retrieval. Modified GRPO combines final-answer reward, an exponential assessment-frequency penalty, and rewards for correctness transitions. Training uses 45K examples; evaluation spans ten benchmarks with four sampled completions per query and an LLM correctness judge.",
+      "evidence": "Reports an average score of 0.429 versus ASearcher’s 0.345, a 24.3% relative improvement. Gains are strongest on multihop tasks; NQ remains below ASearcher and GAIA ties ReSeek. Reward ablations and randomized-assessment controls support the value of meaningful assessment content. Search-state evaluation finds 42% correct awareness versus 24% for Search-R1, while 51% of SARL trajectories still fail awareness criteria.",
+      "discovery_use": "Directly trains agents to distinguish established evidence from missing information, revise incomplete investigations, and continue targeted retrieval. This is a concrete learning-to-discover contribution, evaluated on multihop and deep research tasks.",
+      "limits": "Evidence concerns bounded-corpus question answering rather than novel scientific discovery or unrestricted web research. Self-assessment depends on base-model capability, and correctness-transition rewards do not directly prove evidence completeness. Training costs 2.3 times Search-R1; removing assessment at inference does not imply equal search cost. Broader-paradigm comparisons use different backbones, retrievers, or evaluation subsets. Several reported table summaries contain inconsistencies, including Table 1’s R1 average. No first-party code, dataset, project, or checkpoint release was verified within the search budget. All supplied text pages were reviewed, but only pages 1 and 3 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-28",
+        "category": "learning",
+        "rationale": "Directly trains agents to distinguish established evidence from missing information, revise incomplete investigations, and continue targeted retrieval. This is a concrete learning-to-discover contribution, evaluated on multihop and deep research tasks.",
+        "pdf_sha256": "da8cab46ecbdef1faf989c23ea991012a1d5b1fc0f28086f04a7aaa95286c86a",
+        "evidence_pages": [
+          1,
+          4,
+          13,
+          16
+        ]
+      }
     }
   }
 }
