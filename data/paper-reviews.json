@@ -24378,6 +24378,38 @@
           16
         ]
       }
+    },
+    "paper-421cc907510c173a": {
+      "institutions": [
+        "Xiaoai Plus",
+        "SeerRay Team"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7,
+        27
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A lightweight decoder combines pre-merger vision features with language-model mask-token states. Decoder pretraining precedes joint backbone fine-tuning with language, binary cross-entropy, and Dice losses. Synthetic questions undergo independent answer checks, and intermediate region references receive mask supervision. LensBench crosses instruction explicitness, target cardinality, and four visual domains.",
+      "evidence": "Reports a 5.6-point average REC gain over Qwen3.5 and leading segmentation cIoU on all eight evaluated referring splits. CountQA improves from 43.8 to 50.6. Controlled mask-supervision ablations add 0.2–1.4 points on three general perception benchmarks; grounded traces add smaller REC and RES gains. In the supplied PDF, implicit LensBench cIoU falls from 71.4 to 54.7 and ranks below several larger models.",
+      "discovery_use": "Contributes training for evidence-grounded multimodal reasoning: intermediate visual claims are associated with inspectable region masks. This is a concrete enabling connection to knowledge verification in multimodal agents, although transfer to autonomous discovery is an inference rather than an evaluated result.",
+      "limits": "Decoded masks are an output branch: they do not feed new crops or region features back into reasoning, and inspectability does not establish reasoning faithfulness. Grounding data accounts for most referring gains; trace ablations do not directly isolate gains on counting or high-resolution reasoning. Results lack reported uncertainty across repeated training runs. Implicit multi-target panoramic instructions remain difficult. No autonomous investigation or scientific discovery is evaluated. Visual inspection covered the two supplied pages.",
+      "classification_review": {
+        "date": "2026-10-29",
+        "category": "learning",
+        "rationale": "Contributes training for evidence-grounded multimodal reasoning: intermediate visual claims are associated with inspectable region masks. This is a concrete enabling connection to knowledge verification in multimodal agents, although transfer to autonomous discovery is an inference rather than an evaluated result.",
+        "pdf_sha256": "0ffa7116f2b5d09203a33a4cc718c0b051620a6724273004853d3d932a5eda32",
+        "evidence_pages": [
+          1,
+          6,
+          7,
+          27
+        ]
+      }
     }
   }
 }

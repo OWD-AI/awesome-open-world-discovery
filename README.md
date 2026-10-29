@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-739-2563eb?style=flat-square" alt="739 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-740-2563eb?style=flat-square" alt="740 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-144-0f766e?style=flat-square" alt="144 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 81 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 124 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 125 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 125 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
@@ -757,6 +757,8 @@ Each work appears once under its primary contribution; see the [classification g
   Tianming Liang et al. · WeChat Vision, Tencent Inc.
 - <a id="paper-29b6bdf1923373d0"></a>**Where Research Ideation Begins: Forward-Citation Supervision for Actionable Limitation Generation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23038)* · [Paper](https://arxiv.org/abs/2610.23038)<br>
   Liyang Zhao, Yong Cao, Haibin Ling · Westlake University; University of Tübingen
+- <a id="paper-421cc907510c173a"></a>**Xiaomi-Lens-0 Technical Report** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23279)* · [Paper](https://arxiv.org/abs/2610.23279) · [Project](https://seerray-lab.github.io/Xiaomi-Lens-0/) · [Code](https://github.com/SeerRay-Lab/Xiaomi-Lens-0) · [HF Model](https://huggingface.co/SeerRay-Lab/Xiaomi-Lens-0) · [Dataset](https://huggingface.co/datasets/SeerRay-Lab/LensBench)<br>
+  Pei Fu et al. · Xiaoai Plus; SeerRay Team
 - <a id="paper-011638e46489f0f9"></a>**Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37037)* · [Paper](https://arxiv.org/abs/2610.37037) · [Code](https://github.com/inclusionAI/Zooming-without-Zooming-v2) · [Dataset](https://huggingface.co/datasets/inclusionAI/ZwZ2-RL-VQA) · [HF Model](https://huggingface.co/inclusionAI/ZwZ2-4B) · [HF Model](https://huggingface.co/inclusionAI/ZwZ2-9B) · [HF Model](https://huggingface.co/inclusionAI/ZwZ2-27B)<br>
   Lai Wei et al. · School of Computer Science, Shanghai Jiao Tong University; Ant Group; Zhongguancun Academy; +2 institutions
 
