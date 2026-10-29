@@ -1,9 +1,40 @@
 {
-  "updated_at": "2026-10-29T08:28:28-04:00",
+  "updated_at": "2026-10-29T10:22:26-04:00",
   "window_start": "2026-09-30",
   "window_end": "2026-10-29",
   "window_days": 30,
   "items": [
+    {
+      "title": "Ryan Peters compares a swarm with a single research agent",
+      "url": "https://x.com/ryanirl/status/2115581108230443192",
+      "published_at": "2026-10-28",
+      "kind": "x",
+      "summary": "Ryan Peters shares an autoresearch comparison whose chart shows an eight-agent swarm reaching lower development median error sooner than a single agent. The comparison measures wall-clock progress, without establishing an advantage at equal compute.",
+      "date_evidence": "Supplied original-source reading records DOM time 2026-10-28T23:06:56.000Z and visible timestamp “7:06 PM · Oct 28, 2026.”",
+      "relevance": "Provides an empirical comparison of parallel versus single-agent research search in an autoresearch harness.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "84afe2e439fabd9c"
+    },
+    {
+      "title": "Matija Franklin discusses allocating scarce experimental capacity",
+      "url": "https://x.com/FranklinMatija/status/2115596468882968700",
+      "published_at": "2026-10-28",
+      "kind": "x",
+      "summary": "Matija Franklin highlights a coauthored paper arguing that easier hypothesis generation will intensify bottlenecks in experimental testing. The paper proposes institutions and market mechanisms to allocate scarce testing resources among hypotheses in autonomous scientific discovery.",
+      "date_evidence": "Supplied original-post DOM timestamp: 2026-10-29T00:07:58.000Z; visible publication time: 8:07 PM · Oct 28, 2026, consistent with America/New_York.",
+      "relevance": "Addresses experiment selection and allocation of validation capacity for autonomous scientific research.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.31562"
+        }
+      ],
+      "id": "8c3a29f349c70fe9"
+    },
     {
       "title": "Haydon Ryan reports local rustc autoresearch with explicit validation limits",
       "url": "https://x.com/haydonryan/status/2115581071173529893",
@@ -172,13 +203,13 @@
       ]
     },
     {
-      "title": "Paul Iusztin outlines CodeClimb's evaluation-driven experiment loop",
+      "title": "Paul Iusztin outlines CodeClimb’s evaluation-driven experiment loop",
       "url": "https://x.com/pauliusztin_/status/2115073530362462216",
       "published_at": "2026-10-27",
       "kind": "x",
-      "summary": "Paul Iusztin describes CodeClimb, an agent system he is building to improve code through repeated experiments. Its proposed workflow generates three sandboxed candidates, scores them with separate evaluators, uses feedback to continue searching, and reserves test data for final evaluation. He identifies GraphRAG as the initial application and promotes Inngest as the infrastructure supporting long-running experiments.",
-      "date_evidence": "Supplied native X metadata records datetime=2026-10-27T13:30:00.000Z and the visible timestamp 9:30 AM · Oct 27, 2026.",
-      "relevance": "Concrete self-improving experiment-harness design covering candidate generation, evaluation separation, checkpointing and held-out testing.",
+      "summary": "Paul Iusztin outlines CodeClimb, a work-in-progress system for generating three code experiments, scoring them with a separate evaluator, and iterating from feedback before final held-out testing. He is starting with GraphRAG and promotes Inngest for durable execution infrastructure. No measured improvements are reported.",
+      "date_evidence": "Supplied primary-source evidence records the original DOM time as 2026-10-27T13:30:00.000Z and the visible timestamp as 9:30 AM · Oct 27, 2026.",
+      "relevance": "Concrete proposed harness for iterative algorithm experiments, independent scoring, durable execution and final held-out evaluation.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "links": [],
@@ -1066,7 +1097,7 @@
       ]
     },
     {
-      "title": "Skill^{infty}: Recursive Self-Improvement for Agent Skill Optimization",
+      "title": "Skill∞: Recursive Self-Improvement for Agent Skill Optimization",
       "url": "https://arxiv.org/abs/2610.35434",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -4450,6 +4481,32 @@
       "id": "79115fb39819fd02"
     },
     {
+      "title": "LongZero: Enhancing Long-Context Reasoning in LLMs from Zero Data",
+      "url": "https://arxiv.org/abs/2610.30132",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "LongZero improves long-context reasoning by having a model generate compact fictional question specifications, expand their evidence into documents, and train on its own reasoning and retrieval tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original publication timestamp is preserved. The arXiv primary submission history corroborates October 21, 2026 as the first submission date; the supplied October 20 calendar label reflects the host's America/New_York grouping.",
+      "review_status": "approved",
+      "relevance": "LongZero directly studies learning from self-proposed tasks with constructed reference answers and ability-dependent filtering. It provides a concrete training mechanism for improving evidence retrieval and consolidation, capabilities relevant to agents learning to investigate and verify knowledge.",
+      "id": "5bbe00180687e642",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.30132"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/zhennan1/LongZero"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/zhennan1/LongZero"
+        }
+      ]
+    },
+    {
       "title": "Learning the 4D World through Point Trajectory Forecasting",
       "url": "https://arxiv.org/abs/2610.28594",
       "published_at": "2026-10-20",
@@ -4644,6 +4701,28 @@
         }
       ],
       "id": "5a683d7a781fb5bd"
+    },
+    {
+      "title": "CausGround: Causal Interaction Grounding for Adaptive Embodied Planning",
+      "url": "https://arxiv.org/abs/2610.29702",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "CausGround converts embodied interaction experience into an external library of action conditions and consequences. A frozen visual planner uses this library to identify missing prerequisites and anticipate state changes in its current environment.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original publication metadata specifies 2026-10-21T00:00:00.000Z. PDF page 1 and the primary arXiv record corroborate the original submission date of 21 October 2026. The supplied 20 October calendar label is not substituted for that timestamp.",
+      "review_status": "approved",
+      "relevance": "The primary contribution directly supports discovery of reusable environment dynamics: agents extract action preconditions and effects from interaction experience, discard incidental factors, and compose the resulting knowledge for planning.",
+      "id": "93dabf6bd2ae7320",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.29702"
+        },
+        {
+          "label": "Project",
+          "url": "https://causground.github.io"
+        }
+      ]
     },
     {
       "title": "Cache Engineering for Agents",
@@ -8030,6 +8109,32 @@
       ]
     },
     {
+      "title": "RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents",
+      "url": "https://arxiv.org/abs/2610.22507",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "RealCLI compares autonomous execution with scripted user collaboration on matched tasks. It evaluates final task outcomes separately from whether agents maintain constraints, verify claims, communicate uncertainty, and respond appropriately to interventions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original publication metadata specifies 2026-10-15T00:00:00.000Z. PDF page 1 and the primary arXiv record corroborate the original submission date of 15 October 2026. The supplied 14 October calendar label is not substituted for that timestamp.",
+      "review_status": "approved",
+      "relevance": "The benchmark concretely evaluates agents acquiring missing information, verifying environment state and unsupported claims, recovering from failures, and retaining feedback. These are transferable evaluation capabilities for discovery agents, although the tasks primarily concern general CLI collaboration.",
+      "id": "50ab1df727133df6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22507"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/RealCLI-Team/RealCLI-Benchmark-v1.0"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/RealCLI-Team/RealCLI-Benchmark-v1.0"
+        }
+      ]
+    },
+    {
       "title": "PremiseCheck: Efficient Fact-Checking of Human and AI Peer Reviews",
       "url": "https://arxiv.org/abs/2610.21046",
       "published_at": "2026-10-14",
@@ -9246,13 +9351,13 @@
       ]
     },
     {
-      "title": "Séb Krier introduces agentic economies for autonomous science",
+      "title": "Séb Krier proposes agentic economies for autonomous science",
       "url": "https://x.com/sebkrier/status/2109731677605892292",
       "published_at": "2026-10-12",
       "kind": "x",
-      "summary": "Séb Krier announces a coauthored paper arguing that autonomous science needs deliberately designed markets and institutions to allocate scarce experimental validation capacity and protect public-good research as hypothesis generation becomes cheaper.",
-      "date_evidence": "Supplied primary-source evidence records the original X DOM timestamp as 2026-10-12T19:43:23.000Z, displayed as 3:43 PM · Oct 12, 2026.",
-      "relevance": "Addresses infrastructure for selecting and validating hypotheses in autonomous research systems.",
+      "summary": "Séb Krier announces a coauthored paper arguing that autonomous science needs markets and institutions to allocate scarce experimental validation capacity as hypothesis generation becomes cheaper, while protecting public-good research.",
+      "date_evidence": "Supplied primary-source evidence records original DOM time 2026-10-12T19:43:23.000Z and visible timestamp 3:43 PM · Oct 12, 2026.",
+      "relevance": "Addresses research prioritization and resource allocation when autonomous agents generate hypotheses faster than laboratories can test them.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "links": [
@@ -13757,7 +13862,7 @@
       ]
     },
     {
-      "title": "Skill^{infty}: Recursive Self-Improvement for Agent Skill Optimization",
+      "title": "Skill∞: Recursive Self-Improvement for Agent Skill Optimization",
       "url": "https://arxiv.org/abs/2610.35434",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -16497,6 +16602,32 @@
       "id": "79115fb39819fd02"
     },
     {
+      "title": "LongZero: Enhancing Long-Context Reasoning in LLMs from Zero Data",
+      "url": "https://arxiv.org/abs/2610.30132",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "LongZero improves long-context reasoning by having a model generate compact fictional question specifications, expand their evidence into documents, and train on its own reasoning and retrieval tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original publication timestamp is preserved. The arXiv primary submission history corroborates October 21, 2026 as the first submission date; the supplied October 20 calendar label reflects the host's America/New_York grouping.",
+      "review_status": "approved",
+      "relevance": "LongZero directly studies learning from self-proposed tasks with constructed reference answers and ability-dependent filtering. It provides a concrete training mechanism for improving evidence retrieval and consolidation, capabilities relevant to agents learning to investigate and verify knowledge.",
+      "id": "5bbe00180687e642",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.30132"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/zhennan1/LongZero"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/zhennan1/LongZero"
+        }
+      ]
+    },
+    {
       "title": "Learning the 4D World through Point Trajectory Forecasting",
       "url": "https://arxiv.org/abs/2610.28594",
       "published_at": "2026-10-20",
@@ -16691,6 +16822,28 @@
         }
       ],
       "id": "5a683d7a781fb5bd"
+    },
+    {
+      "title": "CausGround: Causal Interaction Grounding for Adaptive Embodied Planning",
+      "url": "https://arxiv.org/abs/2610.29702",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "CausGround converts embodied interaction experience into an external library of action conditions and consequences. A frozen visual planner uses this library to identify missing prerequisites and anticipate state changes in its current environment.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original publication metadata specifies 2026-10-21T00:00:00.000Z. PDF page 1 and the primary arXiv record corroborate the original submission date of 21 October 2026. The supplied 20 October calendar label is not substituted for that timestamp.",
+      "review_status": "approved",
+      "relevance": "The primary contribution directly supports discovery of reusable environment dynamics: agents extract action preconditions and effects from interaction experience, discard incidental factors, and compose the resulting knowledge for planning.",
+      "id": "93dabf6bd2ae7320",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.29702"
+        },
+        {
+          "label": "Project",
+          "url": "https://causground.github.io"
+        }
+      ]
     },
     {
       "title": "Cache Engineering for Agents",
@@ -19915,6 +20068,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.20312"
+        }
+      ]
+    },
+    {
+      "title": "RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents",
+      "url": "https://arxiv.org/abs/2610.22507",
+      "published_at": "2026-10-14",
+      "kind": "paper",
+      "summary": "RealCLI compares autonomous execution with scripted user collaboration on matched tasks. It evaluates final task outcomes separately from whether agents maintain constraints, verify claims, communicate uncertainty, and respond appropriately to interventions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original publication metadata specifies 2026-10-15T00:00:00.000Z. PDF page 1 and the primary arXiv record corroborate the original submission date of 15 October 2026. The supplied 14 October calendar label is not substituted for that timestamp.",
+      "review_status": "approved",
+      "relevance": "The benchmark concretely evaluates agents acquiring missing information, verifying environment state and unsupported claims, recovering from failures, and retaining feedback. These are transferable evaluation capabilities for discovery agents, although the tasks primarily concern general CLI collaboration.",
+      "id": "50ab1df727133df6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.22507"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/RealCLI-Team/RealCLI-Benchmark-v1.0"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/RealCLI-Team/RealCLI-Benchmark-v1.0"
         }
       ]
     },

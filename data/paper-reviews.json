@@ -24410,6 +24410,108 @@
           27
         ]
       }
+    },
+    "paper-5bbe00180687e642": {
+      "institutions": [
+        "Dept. of Comp. Sci. and Tech.",
+        "Institute for AI",
+        "BNRist Center",
+        "THBI Lab",
+        "Tsinghua-Bosch Joint ML Center",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Each model generates questions, supporting facts, distractors, and reference answers before expanding them into eight documents. Answer-presence checks and mixed-success difficulty filtering select reasoning tasks. A 2:1 mixture of 2,304 reasoning questions and 1,152 self-written retrieval conversations trains each policy with rule-reward GRPO. Two Qwen models are evaluated against base models and two synthetic-data baselines across five benchmarks.",
+      "evidence": "Average benchmark scores improve from 54.68 to 57.42 for Qwen3-4B-Thinking-2507 and from 44.63 to 45.66 for Qwen3-8B, exceeding both comparison training recipes. Improvements transfer from fictional training worlds to real documents. The 2:1 mixture outperforms either data type alone; retrieval-only training reduces the 4B model's average score.",
+      "discovery_use": "LongZero directly studies learning from self-proposed tasks with constructed reference answers and ability-dependent filtering. It provides a concrete training mechanism for improving evidence retrieval and consolidation, capabilities relevant to agents learning to investigate and verify knowledge.",
+      "limits": "Appendix C documents contradictory questions that survive filtering and cause rewards to penalize context-supported answers. Answer presence does not verify complete reasoning-chain consistency. Zero data still uses pretrained knowledge, hand-designed prompts, and MRCR format and noun seeds. Iterative regeneration after training is future work. Evidence covers two related models; Qwen3-8B slightly regresses on LBv2 and often exhausts its AA-LCR output budget. Baseline context lengths and some prompts, rewards, and filtering differ. Only pages 1–2 were visually supplied; later quantitative findings were assessed from body text, without reproduction.",
+      "classification_review": {
+        "date": "2026-10-29",
+        "category": "learning",
+        "rationale": "LongZero directly studies learning from self-proposed tasks with constructed reference answers and ability-dependent filtering. It provides a concrete training mechanism for improving evidence retrieval and consolidation, capabilities relevant to agents learning to investigate and verify knowledge.",
+        "pdf_sha256": "5b5663b2a179277b2b3e18f075b7f9b04ee6862fa42ab08bc7f93e284da897ac",
+        "evidence_pages": [
+          1,
+          5,
+          17
+        ]
+      }
+    },
+    "paper-93dabf6bd2ae7320": {
+      "institutions": [
+        "East China Normal University",
+        "Beijing Academy of Artificial Intelligence (BAAI)",
+        "Northwestern Polytechnical University",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences",
+        "Institute of Automation, Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        17,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A frozen MLLM represents observations as object attributes and relations. Controlled interventions in VirtualHome identify necessary action conditions; RoboCasa and SWITCH instead use consistency across recorded trajectories. Generic and object-specific rules are retrieved through backward causal reasoning and semantic matching. Retrieved knowledge remains fixed within an episode while its grounding updates after actions.",
+      "evidence": "Across three backbones, reported VirtualHome success increases from 24.9% to 53.3%; RoboCasa replanning success increases from 43.0% to 57.0%; SWITCH accuracy increases from 25.8% to 31.9%. Component ablations favor combining causal knowledge with factorized state. On the 9B backbone, causal retrieval achieves 42.7% success versus 18.7% for semantic retrieval. Physical deployment illustrates two manipulation tasks.",
+      "discovery_use": "The primary contribution directly supports discovery of reusable environment dynamics: agents extract action preconditions and effects from interaction experience, discard incidental factors, and compose the resulting knowledge for planning.",
+      "limits": "Consistency in observational trajectories does not establish causal necessity or eliminate confounding. Library construction and evaluation separation is insufficiently specified for some environments. VirtualHome uses simulator-informed image repairs. RoboCasa evaluates recorded transitions and excludes cases where any compared method encounters an unavailable branch, limiting coverage and potentially affecting selection. Physical demonstrations provide no aggregate reliability estimate. The supplied text covers all numbered pages, but only two pages were visually inspected; results were not independently reproduced.",
+      "classification_review": {
+        "date": "2026-10-29",
+        "category": "causality",
+        "rationale": "The primary contribution directly supports discovery of reusable environment dynamics: agents extract action preconditions and effects from interaction experience, discard incidental factors, and compose the resulting knowledge for planning.",
+        "pdf_sha256": "2a1f4fff333d5e28e5d64d418767da0c0edbd6742368edd9874a282ecf48e150",
+        "evidence_pages": [
+          1,
+          7,
+          17,
+          23
+        ]
+      }
+    },
+    "paper-50ab1df727133df6": {
+      "institutions": [
+        "Beihang University",
+        "Renmin University",
+        "IQuest Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        10,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The authors construct 101 containerized tasks across ten categories. EXEC supplies complete specifications; COLLAB progressively discloses information and introduces probes. Eleven models across three harnesses are evaluated with three-run averaging. Collaboration scoring combines evidence-backed checklists, all-or-nothing scenario passes, a 75% cross-task threshold, and five dimension averages. The joint score multiplies task success by aggregate collaboration quality.",
+      "evidence": "Table 3 reports a highest model-average score of 49.2% and a peak joint collaboration score of 37.6%. Across Claude Code configurations, interactive and autonomous pass rates are similar at 46.8% and 47.4%, while many individual outcomes reverse. Reportedly, 91.0% of successful interactive trajectories miss at least one collaboration scenario. Following successive requests is much stronger than retaining earlier constraints or resolving conflicts.",
+      "discovery_use": "The benchmark concretely evaluates agents acquiring missing information, verifying environment state and unsupported claims, recovering from failures, and retaining feedback. These are transferable evaluation capabilities for discovery agents, although the tasks primarily concern general CLI collaboration.",
+      "limits": "Scripted users and model-based judges limit generalization to human collaboration; simulator audits report some deviations. Thresholded scoring is discontinuous, and multiplying aggregate scores does not measure per-run joint success. Reporting contains material inconsistencies: page 3 states 52.7% where the abstract and results state 49.2%; Table 4 gives Hy3 on Codex 2.0% collaboration quality and 8.4% joint score despite 27.7% task success, contradicting the defined product. The official repository describes artifact release as forthcoming despite also linking a dataset. All numbered text pages were supplied; only two pages were visually inspected, and no experiments were reproduced.",
+      "classification_review": {
+        "date": "2026-10-29",
+        "category": "benchmarks",
+        "rationale": "The benchmark concretely evaluates agents acquiring missing information, verifying environment state and unsupported claims, recovering from failures, and retaining feedback. These are transferable evaluation capabilities for discovery agents, although the tasks primarily concern general CLI collaboration.",
+        "pdf_sha256": "cb6b2908a4dfcb5edc63015f0d6e01207f7f4dd30ec98b10cdbb8d09126a3dbb",
+        "evidence_pages": [
+          1,
+          4,
+          10,
+          18
+        ]
+      }
     }
   }
 }

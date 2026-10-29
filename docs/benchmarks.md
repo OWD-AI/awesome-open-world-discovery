@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**144 usage profiles** · Updated **2026-10-29**
+**145 usage profiles** · Updated **2026-10-29**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -988,6 +988,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents](#paper-fea13ed16e4d86a0) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory](#paper-9cf7f151165bcfc3) | Synthetic data | Offline data | Paper-described |
 | [Scientific capabilities and deployment sustainability of small-scale LLMs in biological wastewater treatment](#paper-33344da2562fd600) | Real data | Data analysis | Paper-described |
+| [RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents](#paper-50ab1df727133df6) | Executed programs + evaluators | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -2366,6 +2367,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | BioWater uses Low-Rank Adaptation with specialized biological wastewater treatment knowledge; a reinforcement-learning reward is not established. Evaluation uses DeepSeek-v4-pro, GLM-5.1, MiniMax-M3, Kimi-k2.6, and Gemini3.1 Pro. The highest and lowest judge scores are discarded and the remaining three are averaged. Retrospective criteria include knowledge, originality, and conciseness; prospective criteria include novelty, rationale, and feasibility. Comprehension fidelity measures selection of the original abstract through lower perplexity and compares performance with qualified human participants. |
 | Reset | Environment reset support is not established. |
 | Branching | Environment state branching or checkpoint support is not established. |
+
+</details>
+
+<a id="paper-50ab1df727133df6"></a>
+
+<details>
+<summary>RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents — details</summary>
+
+[Work](../README.md#paper-50ab1df727133df6) · [Source](https://arxiv.org/pdf/2610.22507)
+
+**Focus:** General CLI task execution and collaboration with a simulated user. Feedback includes actual command results, files, application behavior, and user messages. Real CLI logs inform task construction; evaluated agents execute computation in containers. The user simulation is conversational, rather than a scientific simulator. No new physical measurements are involved. The benchmark is not specifically an evaluation of executed research experiments.
+
+**Openness:** `Fixed pool of 101 tasks with predefined goals, initial environments, and outcome verifiers.`, `Agents choose command and tool sequences within containerized environments; COLLAB additionally allows clarification and authorization requests.`, `COLLAB progressively supplies information and probes through a scripted model-based user.`, `GitHub and Hugging Face are listed on page 1; completeness of publicly released artifacts is not established by the supplied PDF text.`
+
+**New physical measurements:** No
+
+**Limits:** Runs have a 600-turn limit and time budgets of 6 hours for EXEC and 10 hours for COLLAB, with scores averaged over three trials. Model-based users and judges constrain generalization to human collaboration; trace audits report some simulator deviations. Thresholded collaboration scoring is discontinuous, and the aggregate product does not measure per-run joint success. Reported scores and scenario counts contain internal inconsistencies.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No policy-training procedure or training reward is established. Evaluation uses binary terminal-state task verifiers, implemented through Python assertions, Bash checks, or VLM judging. COLLAB checklists use transcript and environment evidence, with environment evidence taking precedence. The judge is Claude Code running Claude-Opus-4.8; the simulated user is GLM-5.3. Scenario passes require all applicable items; cross-task scenario passes require at least 75% success. Equal-weight aggregation produces five dimension scores and an overall collaboration score. The joint score multiplies collaborative task success by that overall collaboration score (pages 5, 7, 18–19, 22, 24). |
+| Reset | Tasks specify an initial state, and runs use strictly isolated containers. Paired modes share task goals, environments, and acceptance criteria. An explicit reset API, mid-run resets, and checkpoint restoration are not established (pages 3–4, 7). |
+| Branching | Agents may choose different action sequences, and independent repeated runs are reported. Support for cloning intermediate states or branching multiple continuations from a checkpoint is not established. |
 
 </details>
 

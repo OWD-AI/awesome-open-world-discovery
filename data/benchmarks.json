@@ -3240,6 +3240,30 @@
       "name": "What Outcome RL Buys: Finishing, Reliability, Rarely Reach",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.34894"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed pool of 101 tasks with predefined goals, initial environments, and outcome verifiers.",
+        "Agents choose command and tool sequences within containerized environments; COLLAB additionally allows clarification and authorization requests.",
+        "COLLAB progressively supplies information and probes through a scripted model-based user.",
+        "GitHub and Hugging Face are listed on page 1; completeness of publicly released artifacts is not established by the supplied PDF text."
+      ],
+      "focus": "General CLI task execution and collaboration with a simulated user. Feedback includes actual command results, files, application behavior, and user messages. Real CLI logs inform task construction; evaluated agents execute computation in containers. The user simulation is conversational, rather than a scientific simulator. No new physical measurements are involved. The benchmark is not specifically an evaluation of executed research experiments.",
+      "limits": "Runs have a 600-turn limit and time budgets of 6 hours for EXEC and 10 hours for COLLAB, with scores averaged over three trials. Model-based users and judges constrain generalization to human collaboration; trace audits report some simulator deviations. Thresholded collaboration scoring is discontinuous, and the aggregate product does not measure per-run joint success. Reported scores and scenario counts contain internal inconsistencies.",
+      "training": {
+        "reward": "No policy-training procedure or training reward is established. Evaluation uses binary terminal-state task verifiers, implemented through Python assertions, Bash checks, or VLM judging. COLLAB checklists use transcript and environment evidence, with environment evidence taking precedence. The judge is Claude Code running Claude-Opus-4.8; the simulated user is GLM-5.3. Scenario passes require all applicable items; cross-task scenario passes require at least 75% success. Equal-weight aggregation produces five dimension scores and an overall collaboration score. The joint score multiplies collaborative task success by that overall collaboration score (pages 5, 7, 18–19, 22, 24).",
+        "reset": "Tasks specify an initial state, and runs use strictly isolated containers. Paired modes share task goals, environments, and acceptance criteria. An explicit reset API, mid-run resets, and checkpoint restoration are not established (pages 3–4, 7).",
+        "branching": "Agents may choose different action sequences, and independent repeated runs are reported. Support for cloning intermediate states or branching multiple continuations from a checkpoint is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-50ab1df727133df6",
+      "resource_id": "paper-50ab1df727133df6",
+      "name": "RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.22507"
     }
   ]
 }

@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-740-2563eb?style=flat-square" alt="740 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-144-0f766e?style=flat-square" alt="144 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-743-2563eb?style=flat-square" alt="743 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-145-0f766e?style=flat-square" alt="145 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -78,13 +78,13 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 81 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 82 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 125 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 126 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 125 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 135 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 136 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -220,6 +220,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yiwen Qiu, Francesco Montagna, Shimeng Huang, Francesco Locatello · IST Austria
 - <a id="paper-7745a2c4bef6fedf"></a>**CausalAlign: Causal Alignment of Video Generation Models for Consistent Ego-Motion** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29915)* · [Paper](https://arxiv.org/abs/2610.29915) · [Code](https://github.com/PKU-VaLuE-Lab/CausalAlign) · [Project](https://pku-value-lab.github.io/CausalAlign-homepage/)<br>
   Kai Zhu et al. · Peking University; Beijing Institute for General Artificial Intelligence; NVIDIA; +2 institutions
+- <a id="paper-93dabf6bd2ae7320"></a>**CausGround: Causal Interaction Grounding for Adaptive Embodied Planning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29702)* · [Paper](https://arxiv.org/abs/2610.29702) · [Project](https://causground.github.io)<br>
+  Yijun Shen et al. · East China Normal University; Beijing Academy of Artificial Intelligence (BAAI); Northwestern Polytechnical University; +2 institutions
 - <a id="cider-fm"></a>**CIDER-FM: Foundation Models for Causal Inference from Diverse Experimental Regimes** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.39523)* · [Paper](https://arxiv.org/abs/2609.39523)<br>
   Yuche Gao et al. · University of Cambridge; Max Planck Institute for Intelligent Systems; Prior Labs; +3 institutions
 - <a id="paper-22327f3887bd989e"></a>**Code Plans, Diffusion Renders: Open-Ended Generative World Modeling** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.26458)* · [Paper](https://arxiv.org/abs/2609.26458) · [Project](https://becauseimbatman0.github.io/CoDeR)<br>
@@ -665,6 +667,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ankur Samanta et al. · Meta AI; Columbia University; Tel Aviv University
 - <a id="paper-fcce4784f34771ef"></a>**Long-MDR: Long-Context Reinforcement Learning for Multimodal Deep-Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.05195)* · [Paper](https://arxiv.org/abs/2610.05195)<br>
   Tang On Tai, Huanyao Zhang, Jiepeng Zhou, Wentao Zhang · The Hong Kong University of Science and Technology (HKUST); Peking University; The Hong Kong University of Science and Technology (Guangzhou)
+- <a id="paper-5bbe00180687e642"></a>**LongZero: Enhancing Long-Context Reasoning in LLMs from Zero Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30132)* · [Paper](https://arxiv.org/abs/2610.30132) · [Code](https://github.com/zhennan1/LongZero) · [Dataset](https://huggingface.co/datasets/zhennan1/LongZero)<br>
+  Zhennan Wan, Jianfei Chen · Dept. of Comp. Sci. and Tech.; Institute for AI; BNRist Center; +3 institutions
 - <a id="paper-07ae5adf14031356"></a>**MELD: Recursive Self-Improvement via Hierarchical Coordination for Multi-Agent Scientific Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24454)* · [Paper](https://arxiv.org/abs/2610.24454)<br>
   Sizhe Tang, Zuyuan Zhang, Zeyu Fang, Tian Lan · George Washington University
 - <a id="paper-03627392f7accc23"></a>**MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22344)* · [Paper](https://arxiv.org/abs/2610.22344) · [Code](https://github.com/InternScience/MLExpert) · [HF Model](https://huggingface.co/InternScience/MLExpert)<br>
@@ -1679,6 +1683,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Tiasa Singha Roy, Manya Wadhwa, Greg Durrett · New York University
 - <a id="paper-6db59b8a686567fc"></a>**Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37624)* · [Paper](https://arxiv.org/abs/2610.37624)<br>
   Anouar Imel, Imad Charradi, Abderrahman Sghir, Khalil El Khammar · School of Information and Communication Engineering, University of Electronic Science and Technology of China (UESTC); Xidian University; Nanjing University of Aeronautics and Astronautics; +1 institutions
+- <a id="paper-50ab1df727133df6"></a>**RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22507)* · [Paper](https://arxiv.org/abs/2610.22507) · [Code](https://github.com/RealCLI-Team/RealCLI-Benchmark-v1.0) · [Dataset](https://huggingface.co/datasets/RealCLI-Team/RealCLI-Benchmark-v1.0)<br>
+  Yunqi Liu et al. · Beihang University; Renmin University; IQuest Research
 - <a id="paper-d4e79e43099df1b8"></a>**ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.18088)* · [Paper](https://arxiv.org/abs/2610.18088) · [Code](https://github.com/Jp-17/ResearchFlow-Eval)<br>
   Peng Jiang, Dongyang Li, Quanying Liu, Xiaoxuan Jia · Center for Life Sciences and Artificial Intelligence, School of Life Sciences, Tsinghua University, Beijing, China; IDG/McGovern Institute for Brain Research, Tsinghua University, Beijing, China; Tsinghua-Peking Center for Life Sciences, Tsinghua University, Beijing, China; +2 institutions
 - <a id="paper-ee84b521258fee34"></a>**Retrieval Augmented Generation Compositionality** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29722)* · [Paper](https://arxiv.org/abs/2610.29722) · [Code](https://github.com/dolev31/lasagna) · [Project](https://dolev31.github.io/lasagna/)<br>
