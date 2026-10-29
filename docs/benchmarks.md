@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**145 usage profiles** · Updated **2026-10-29**
+**146 usage profiles** · Updated **2026-10-29**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -989,6 +989,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory](#paper-9cf7f151165bcfc3) | Synthetic data | Offline data | Paper-described |
 | [Scientific capabilities and deployment sustainability of small-scale LLMs in biological wastewater treatment](#paper-33344da2562fd600) | Real data | Data analysis | Paper-described |
 | [RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents](#paper-50ab1df727133df6) | Executed programs + evaluators | Analysis + tools | Paper-described |
+| [ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research](#paper-c24558a8f1757330) | Real data | Finite-pool queries | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -2390,6 +2391,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | No policy-training procedure or training reward is established. Evaluation uses binary terminal-state task verifiers, implemented through Python assertions, Bash checks, or VLM judging. COLLAB checklists use transcript and environment evidence, with environment evidence taking precedence. The judge is Claude Code running Claude-Opus-4.8; the simulated user is GLM-5.3. Scenario passes require all applicable items; cross-task scenario passes require at least 75% success. Equal-weight aggregation produces five dimension scores and an overall collaboration score. The joint score multiplies collaborative task success by that overall collaboration score (pages 5, 7, 18–19, 22, 24). |
 | Reset | Tasks specify an initial state, and runs use strictly isolated containers. Paired modes share task goals, environments, and acceptance criteria. An explicit reset API, mid-run resets, and checkpoint restoration are not established (pages 3–4, 7). |
 | Branching | Agents may choose different action sequences, and independent repeated runs are reported. Support for cloning intermediate states or branching multiple continuations from a checkpoint is not established. |
+
+</details>
+
+<a id="paper-c24558a8f1757330"></a>
+
+<details>
+<summary>ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research — details</summary>
+
+[Work](../README.md#paper-c24558a8f1757330) · [Source](https://arxiv.org/pdf/2610.02202)
+
+**Focus:** Retrieve prior papers whose ideas could advance an early-stage research question. The fixed corpus contains 190,896 papers, with 894 queries and retrospective author-validated relevance labels. Search returns existing literature; evaluation compares rankings with recorded author judgments. This is neither a simulator nor an environment for executing research experiments or collecting new physical measurements.
+
+**Openness:** `Page 1 lists a project page, dataset location, and code repository.`, `Release completeness and licensing are not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** Pages 4–7 restrict the main setting to a temporally filtered local corpus, disable external web search, and require pre-source-paper model knowledge cutoffs. Agents may iteratively search titles and abstracts using regular expressions or embedding retrieval; tool-calling and deep research agents search, read, and select papers. Additional analyses vary source context and reading depth. Exact interaction budgets are not established in the supplied body pages. Labels are retrospective, candidate coverage is incomplete, research-area representation is uneven, and successful retrieval does not establish downstream discovery.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or reinforcement-learning procedure is not established. Pages 4 and 6 describe author-validated positive and hard-negative relevance supervision and evaluation using Recall@N and nDCG@N. Page 46 separately uses a GPT-4.1 judge to compare retrieved-paper explanations with author rationales. |
+| Reset | Environment reset support is not established in the supplied pages. |
+| Branching | State branching, checkpointing, and rollback support are not established in the supplied pages. |
 
 </details>
 

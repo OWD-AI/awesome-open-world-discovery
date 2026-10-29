@@ -24543,6 +24543,42 @@
           40
         ]
       }
+    },
+    "paper-c24558a8f1757330": {
+      "institutions": [
+        "Stanford University",
+        "Seoul National University",
+        "University of Washington",
+        "Carnegie Mellon University",
+        "Allen Institute for AI",
+        "MIT"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An automated pipeline drafts research questions and candidate judgments, retrieves uncited candidates, and supports author revision and annotation. The benchmark contains 894 queries and 190,896 corpus papers. Evaluation temporally filters candidates before each source paper, disables web access, and compares sparse, multi-vector, dense, and agentic retrieval using recall and nDCG. Additional experiments test reranking, gold injection, query rewriting, and reading depth.",
+      "evidence": "The strongest main-setting retrievers recover about 48% of author-credited papers at rank 20, versus about 42% for agentic search. A post-cutoff model reaches about 51% but is a comparison rather than a contamination-controlled result. Hard negatives are at least as similar to queries as positives. Gold-injection experiments support candidate coverage as a bottleneck. Of subfield positives, 43.6% are uncited in the source paper.",
+      "discovery_use": "The benchmark directly evaluates a scientific discovery capability: identifying prior ideas that could advance an unresolved research question. Author judgments distinguish useful inspiration from topical similarity and support evaluation of scientific search agents.",
+      "limits": "This is a targeted body-section review, not exhaustive inspection of 57 pages. Coverage favors recent CS and AI projects, with uneven representation and retrospective author judgments subject to hindsight. Candidate selection and model-assisted annotation may restrict label coverage. Filtering before source-paper completion only approximates literature available at project onset. The task's human performance ceiling remains uncertain, and successful retrieval does not demonstrate successful downstream discovery.",
+      "classification_review": {
+        "date": "2026-10-29",
+        "category": "benchmarks",
+        "rationale": "The benchmark directly evaluates a scientific discovery capability: identifying prior ideas that could advance an unresolved research question. Author judgments distinguish useful inspiration from topical similarity and support evaluation of scientific search agents.",
+        "pdf_sha256": "ace3200f062ac142f8fb5d6b9d1f0367abde1876c7783ebfc258151a4ddcc03a",
+        "evidence_pages": [
+          1,
+          4,
+          7,
+          9
+        ]
+      }
     }
   }
 }

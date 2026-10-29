@@ -3264,6 +3264,28 @@
       "name": "RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.22507"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "finite-pool-query",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 lists a project page, dataset location, and code repository.",
+        "Release completeness and licensing are not established by the supplied pages."
+      ],
+      "focus": "Retrieve prior papers whose ideas could advance an early-stage research question. The fixed corpus contains 190,896 papers, with 894 queries and retrospective author-validated relevance labels. Search returns existing literature; evaluation compares rankings with recorded author judgments. This is neither a simulator nor an environment for executing research experiments or collecting new physical measurements.",
+      "limits": "Pages 4–7 restrict the main setting to a temporally filtered local corpus, disable external web search, and require pre-source-paper model knowledge cutoffs. Agents may iteratively search titles and abstracts using regular expressions or embedding retrieval; tool-calling and deep research agents search, read, and select papers. Additional analyses vary source context and reading depth. Exact interaction budgets are not established in the supplied body pages. Labels are retrospective, candidate coverage is incomplete, research-area representation is uneven, and successful retrieval does not establish downstream discovery.",
+      "training": {
+        "reward": "A training reward or reinforcement-learning procedure is not established. Pages 4 and 6 describe author-validated positive and hard-negative relevance supervision and evaluation using Recall@N and nDCG@N. Page 46 separately uses a GPT-4.1 judge to compare retrieved-paper explanations with author rationales.",
+        "reset": "Environment reset support is not established in the supplied pages.",
+        "branching": "State branching, checkpointing, and rollback support are not established in the supplied pages."
+      },
+      "evaluation_family": "other",
+      "id": "paper-c24558a8f1757330",
+      "resource_id": "paper-c24558a8f1757330",
+      "name": "ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.02202"
     }
   ]
 }

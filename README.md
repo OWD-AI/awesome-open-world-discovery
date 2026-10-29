@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-744-2563eb?style=flat-square" alt="744 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-145-0f766e?style=flat-square" alt="145 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-745-2563eb?style=flat-square" alt="745 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-146-0f766e?style=flat-square" alt="146 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 125 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 136 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 137 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1703,6 +1703,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Renxiong Wang et al. · Scale AI; University of California, Santa Cruz; University of North Carolina at Chapel Hill
 - <a id="paper-e37e7605cf26a455"></a>**RubricAtlas: Mining Type-Level Rubrics from Expert Reports to Evaluate Deep Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.36878)* · [Paper](https://arxiv.org/abs/2610.36878)<br>
   Delin Wang et al. · StepFun; FinStep; Renmin University of China; +2 institutions
+- <a id="paper-c24558a8f1757330"></a>**ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.02202)* · [Paper](https://arxiv.org/abs/2610.02202) · [Code](https://github.com/stanford-iris-lab/ScholarCatalyst) · [Project](https://ohmyksh.github.io/project/ScholarCatalyst/) · [Dataset](https://huggingface.co/datasets/ScholarCatalyst/ScholarCatalyst)<br>
+  Sohyeon Kim et al. · Stanford University; Seoul National University; University of Washington; +3 institutions
 - <a id="paper-f73eeee30c4bf920"></a>**Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21082)* · [Paper](https://arxiv.org/abs/2610.21082) · [Code](https://github.com/AutoResearch-Factory/SciPIvot) · [Project](https://autoresearch-factory.github.io/SciPIvot/) · [Dataset](https://huggingface.co/datasets/sun1245/SciPIvot)<br>
   Youran Sun et al. · University of Maryland, College Park; The Chinese University of Hong Kong; Gradient Network; +3 institutions
 - <a id="paper-ff06580726cc267c"></a>**SCI-AGENT-EXAM: Benchmarking Agents on Scientific Research Tasks** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32441)* · [Paper](https://arxiv.org/abs/2610.32441)<br>
