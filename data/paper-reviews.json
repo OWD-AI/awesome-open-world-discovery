@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -24344,6 +24344,37 @@
           1,
           4,
           13,
+          16
+        ]
+      }
+    },
+    "paper-b2e64e5ad5aee13b": {
+      "institutions": [
+        "Zhejiang University",
+        "National University of Singapore",
+        "SAP"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Before training, individual token commitments are evaluated by their positive effect on prediction confidence at remaining masked positions. Contributions are averaged by part of speech and mapped to fixed weights between 0.8 and 1.2. Training selects states using weighted uncertainty, redistributes group-relative advantages among targets, and applies entropy-flow calibration with response-credit normalization.",
+      "evidence": "On LLaDA-8B-Instruct, DTCA leads the reproduced baselines across all six MATH500 and GSM8K budget settings. At budget 256, it reaches 43.2% and 85.3%, versus RLDF's 41.2% and 83.4%. Maximum gains over the base model are 9.0 and 5.3 percentage points. Removing contribution credit or entropy calibration lowers accuracy.",
+      "discovery_use": "DTCA contributes a reusable post-training mechanism for learning mathematical reasoning from outcome feedback. Its uncertainty-based state selection and fine-grained credit assignment connect concretely to training models to solve and verify problems, although transfer to autonomous discovery remains untested.",
+      "limits": "Evidence covers one model and two mathematical benchmarks, scoring final answers rather than reasoning validity or new discoveries. Confidence improvement is a heuristic contribution proxy, and fixed offline POS weights depend on tagging and token alignment. Reported entropy flows are first-order estimates; training curves visit different states and do not isolate matched-token effects. No repeated-run uncertainty is reported in the main accuracy table.",
+      "classification_review": {
+        "date": "2026-10-29",
+        "category": "learning",
+        "rationale": "DTCA contributes a reusable post-training mechanism for learning mathematical reasoning from outcome feedback. Its uncertainty-based state selection and fine-grained credit assignment connect concretely to training models to solve and verify problems, although transfer to autonomous discovery remains untested.",
+        "pdf_sha256": "2c11d6bc9c2e64d8463369318e9e04a7fe16227d56ef4335f7aaa1328c61df93",
+        "evidence_pages": [
+          1,
+          4,
           16
         ]
       }

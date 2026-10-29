@@ -1,9 +1,22 @@
 {
-  "updated_at": "2026-10-28T22:38:47-04:00",
+  "updated_at": "2026-10-29T00:44:42-04:00",
   "window_start": "2026-09-29",
   "window_end": "2026-10-28",
   "window_days": 30,
   "items": [
+    {
+      "title": "Haydon Ryan reports local rustc autoresearch with explicit validation limits",
+      "url": "https://x.com/haydonryan/status/2115581071173529893",
+      "published_at": "2026-10-28",
+      "kind": "x",
+      "summary": "Haydon Ryan reports running a local rustc autoresearch loop with DeepSeek v4 flash 0731 for 27.6 hours, reducing instruction counts for sample x86 Rust compilations by 2.57%. The attached table reports 119 candidates across 27 waves and 39 retained changes, including about 17 within measurement noise. Ryan says wall-clock improvements still require A/B validation.",
+      "date_evidence": "Supplied native original metadata gives datetime=2026-10-28T23:06:47.000Z, matching the visible timestamp 7:06 PM · Oct 28, 2026; no edit label was observed.",
+      "relevance": "Concrete iterative experiment harness for compiler optimization, with correctness checks, candidate retention and measurement-noise distinctions.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "e9cf85464bc4463a"
+    },
     {
       "title": "Autoresearch follow-up reports inference gains and vLLM bugs",
       "url": "https://x.com/artuskg/status/2115339268273127511",
@@ -992,7 +1005,7 @@
       ]
     },
     {
-      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -1364,6 +1377,32 @@
         {
           "label": "Code",
           "url": "https://github.com/stanford-oval/CREDIT"
+        }
+      ]
+    },
+    {
+      "title": "DTCA: Denoising Token Credit Assignment for Reinforcement Learning in Diffusion Language Models",
+      "url": "https://arxiv.org/abs/2610.35201",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "DTCA improves reinforcement learning for diffusion language models by estimating which token commitments help subsequent denoising. It converts those estimates into token credits and adjusts them to balance predicted entropy changes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at metadata gives 2026-10-26T00:00:00.000Z, matching the PDF page 1 v1 date of 26 October 2026. The exact supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "DTCA contributes a reusable post-training mechanism for learning mathematical reasoning from outcome feedback. Its uncertainty-based state selection and fine-grained credit assignment connect concretely to training models to solve and verify problems, although transfer to autonomous discovery remains untested.",
+      "id": "b2e64e5ad5aee13b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35201"
+        },
+        {
+          "label": "Project",
+          "url": "https://zju-omniai.github.io/DTCA/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ZJU-OmniAI/DTCA"
         }
       ]
     },
@@ -3608,9 +3647,9 @@
       "url": "https://recursive.com/updates/introducing-recursive-flint",
       "published_at": "2026-10-21",
       "kind": "blog",
-      "summary": "Recursive announces Flint, a local coding model it says was built by a small team of people and agents in under four months. The research contribution is its reported use of Eureka Machine to propose, implement and test improvements across architecture, training, quantization and inference kernels. The release describes concrete outputs of that process and provides author-reported coding benchmarks and hardware throughput measurements.",
-      "date_evidence": "The [official Recursive updates index](https://recursive.com/updates) labels the exact Introducing Flint article Oct 21, 2026, confirming 2026-10-21. The article itself has no visible publication timestamp; no time of day is inferred.",
-      "relevance": "Describes a deployed research loop that proposes, implements and tests changes across model development, rather than only presenting a coding model.",
+      "summary": "Recursive reports building Flint, a 40-billion-parameter local coding model, with substantial contributions from its Eureka Machine automated research system. The announcement describes experiment-driven architecture search, quantization and distillation recipes, and hardware-specific kernel optimization. Recursive says its team of people and agents completed development in under four months; the accompanying charts report coding performance and local inference throughput.",
+      "date_evidence": "The [official Recursive updates index](https://recursive.com/updates) labels the original Introducing Flint announcement Oct 21, 2026 and links directly to the assessed article. This establishes publication at date-only precision; related-item dates were excluded.",
+      "relevance": "Watchlist fallback covering automated experiment selection and optimization across model development. This is public official-source coverage, not LinkedIn access.",
       "review_status": "approved",
       "source": "Codex primary text-and-image checked",
       "links": [
@@ -14086,7 +14125,7 @@
       ]
     },
     {
-      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -14432,6 +14471,32 @@
         {
           "label": "Code",
           "url": "https://github.com/stanford-oval/CREDIT"
+        }
+      ]
+    },
+    {
+      "title": "DTCA: Denoising Token Credit Assignment for Reinforcement Learning in Diffusion Language Models",
+      "url": "https://arxiv.org/abs/2610.35201",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "DTCA improves reinforcement learning for diffusion language models by estimating which token commitments help subsequent denoising. It converts those estimates into token credits and adjusts them to balance predicted entropy changes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at metadata gives 2026-10-26T00:00:00.000Z, matching the PDF page 1 v1 date of 26 October 2026. The exact supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "DTCA contributes a reusable post-training mechanism for learning mathematical reasoning from outcome feedback. Its uncertainty-based state selection and fine-grained credit assignment connect concretely to training models to solve and verify problems, although transfer to autonomous discovery remains untested.",
+      "id": "b2e64e5ad5aee13b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35201"
+        },
+        {
+          "label": "Project",
+          "url": "https://zju-omniai.github.io/DTCA/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ZJU-OmniAI/DTCA"
         }
       ]
     },

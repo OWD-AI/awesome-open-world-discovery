@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-738-2563eb?style=flat-square" alt="738 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-739-2563eb?style=flat-square" alt="739 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-144-0f766e?style=flat-square" alt="144 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -20,7 +20,7 @@
   <a href="https://owd-ai.github.io/awesome-open-world-discovery/">Research observatory ↗</a> · <a href="#what-is-owd">What is OWD?</a> · <a href="#why-owd">Why this focus?</a> · <a href="#updates">Latest papers</a> · <a href="#contents">Browse the list</a> · <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
-<p align="center"><sub>Literature checked through 2026-10-28 · Papers, author blogs, code, and benchmarks</sub></p>
+<p align="center"><sub>Literature checked through 2026-10-29 · Papers, author blogs, code, and benchmarks</sub></p>
 
 <a id="what-is-owd"></a>
 
@@ -54,7 +54,7 @@ Discovery involves deciding what to investigate, gathering evidence, testing exp
 
 **[Explore the research observatory →](https://owd-ai.github.io/awesome-open-world-discovery/#updates)**
 
-The latest 10 source-checked papers from our daily monitor · Updated 2026-10-28.
+The latest 10 source-checked papers from our daily monitor · Updated 2026-10-29.
 
 Visit the website for summaries, figures, today's updates, and the full research library.
 
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 81 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 123 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 124 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 125 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
@@ -601,6 +601,8 @@ Each work appears once under its primary contribution; see the [classification g
   Zhipeng Qian et al. · VCIP, School of Computer Science, Nankai University; Kuaishou Technology; Xiamen University
 - <a id="paper-8e34a7493e3c3928"></a>**Dr.Credit: Rubric-Grounded Process Credit Assignment for Deep Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.34296)* · [Paper](https://arxiv.org/abs/2609.34296)<br>
   Yingjian Zhu et al. · School of Artificial Intelligence, University of Chinese Academy of Sciences; State Key Laboratory of Multimodal Artificial Intelligence Systems (MAIS), Institute of Automation, Chinese Academy of Sciences; Alibaba Token Hub, Alibaba Group; +1 institutions
+- <a id="paper-b2e64e5ad5aee13b"></a>**DTCA: Denoising Token Credit Assignment for Reinforcement Learning in Diffusion Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35201)* · [Paper](https://arxiv.org/abs/2610.35201) · [Project](https://zju-omniai.github.io/DTCA/) · [Code](https://github.com/ZJU-OmniAI/DTCA)<br>
+  Hongze Chen et al. · Zhejiang University; National University of Singapore; SAP
 - <a id="paper-424fdb621545a108"></a>**DynaFlow: Learning Free-Form Multi-Agent Orchestration** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34467)* · [Paper](https://arxiv.org/abs/2610.34467) · [Code](https://github.com/amiya-special/Dynaflow) · [Project](https://amiya-special.github.io/DynaFlow-website)<br>
   Ruhao Liu, Qi Li, Shizun Wang, Xinchao Wang · National University of Singapore
 - <a id="paper-f403a911c87fbaff"></a>**Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33512)* · [Paper](https://arxiv.org/abs/2610.33512) · [Code](https://github.com/JHKim631/FORK)<br>
