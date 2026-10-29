@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-743-2563eb?style=flat-square" alt="743 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-744-2563eb?style=flat-square" alt="744 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-145-0f766e?style=flat-square" alt="145 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 40 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 82 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 59 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 126 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 127 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 101 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 125 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 74 |
@@ -713,6 +713,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ritesh Thawkar, Shubham Patle, Shravan Venkatraman, Rao Muhammad Anwer · Mohamed bin Zayed University of Artificial Intelligence; Aalto University
 - <a id="paper-3b7f2fe0b2750f8f"></a>**S3AC: Stabilized, Selective, and Scalable Actor-Critic for LLM Reasoning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35518)* · [Paper](https://arxiv.org/abs/2610.35518)<br>
   Shuo Shen et al. · Shanghai AI Laboratory; Independent Researcher
+- <a id="paper-6495ca94a6fbbabb"></a>**Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28578)* · [Paper](https://arxiv.org/abs/2610.28578) · [Project](https://alpha-innovator.github.io/Sage-A1.5) · [HF Model](https://huggingface.co/InternScience/Sage-A1.5)<br>
+  Sage-A1.5 Team et al. · Shanghai Artificial Intelligence Laboratory
 - <a id="paper-f5ebfafb83c6121b"></a>**Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28698)* · [Paper](https://arxiv.org/abs/2610.28698) · [Project](https://gamescaling.github.io) · [Code](https://github.com/THUSI-Lab/GameScaling) · [HF Model](https://huggingface.co/THUSI-Lab/GameScaling-9B-S1)<br>
   Kuan Zhang et al. · miHoYo Honkai AI R&D Team; College AI, Tsinghua University; University of Chinese Academy of Sciences; +3 institutions
 - <a id="d05"></a>**Scaling Scientific Discovery Environments for Turn-Level Agentic RL** · *[arXiv 2026 (preprint)](https://arxiv.org/html/2607.28990v1)* · [Paper](https://arxiv.org/html/2607.28990v1)<br>
