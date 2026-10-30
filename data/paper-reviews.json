@@ -25077,6 +25077,36 @@
           8
         ]
       }
+    },
+    "paper-4a6e83fc6b01f273": {
+      "institutions": [
+        "UC San Diego",
+        "Adobe Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A planner decomposes requests, a deterministic router selects editing methods, and candidates receive pixel measurements, close-ups, change maps, and code-check records. A VLM compares candidates jointly, provides retry feedback, and checks earlier requirements. Evaluation includes expert diagnostic studies, three editing benchmarks, component ablations, and matched-input training-data comparisons.",
+      "evidence": "Specialists recover 175 of 256 diagnostic sets where the general editor fails. Experts prefer parallel search in 78.5% of non-tied comparisons. Verification records raise Qwen judge Hit@1 from 73.6% to 81.3%. Full EditAgent raises Qwen’s EdiVal turn-3 score from 47.64 to 55.46; its training data improves both evaluated students.",
+      "discovery_use": "The harness studies how agents search alternative interventions, verify outcomes with explicit evidence, and convert accepted executions into learning supervision. These concrete verification and learning mechanisms are relevant to discovery systems, although transfer beyond image editing is untested.",
+      "limits": "Inference takes roughly ten times standalone editing time and remains bounded by available tools. Diagnostic labels are five experts’ shared consensus rather than independent ratings. Some baselines are reimplemented or modified. Two benchmarks share a model family with internal judging, although an alternative internal judge also yields gains. Code checks establish limited pixel properties; semantic acceptance remains fallible VLM judgment.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "systems",
+        "rationale": "The harness studies how agents search alternative interventions, verify outcomes with explicit evidence, and convert accepted executions into learning supervision. These concrete verification and learning mechanisms are relevant to discovery systems, although transfer beyond image editing is untested.",
+        "pdf_sha256": "0b19823ce301e2a96e2d74c43d12a27ad74d76a51e8cc94aecc5079533b4be0f",
+        "evidence_pages": [
+          1,
+          7,
+          17
+        ]
+      }
     }
   }
 }

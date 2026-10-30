@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-761-2563eb?style=flat-square" alt="761 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-762-2563eb?style=flat-square" alt="762 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-149-0f766e?style=flat-square" alt="149 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -82,7 +82,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 61 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 128 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 106 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 125 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 126 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 76 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 140 |
 
@@ -1166,6 +1166,8 @@ Each work appears once under its primary contribution; see the [classification g
   Alan-Barsag Gazzaev, Alexey Gavrilov, Mikhail Mozikov, Sergey Muravyov · ITMO University; AXXX
 - <a id="paper-69f6cbf39ab201a1"></a>**DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.40306)* · [Paper](https://arxiv.org/abs/2609.40306) · [Project](https://denghaoyuan123.github.io/Dynaharness_page/)<br>
   Haoyuan Deng et al. · Nanyang Technological University; Nanjing University
+- <a id="paper-4a6e83fc6b01f273"></a>**EditAgent: Rethinking Agentic Image Editing** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.39664)* · [Paper](https://arxiv.org/abs/2610.39664)<br>
+  Haiyang Xu et al. · UC San Diego; Adobe Research
 - <a id="paper-5d0025a257e8df1b"></a>**Embodied Turing Machines: Stateful Code for Robot Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.12369)* · [Paper](https://arxiv.org/abs/2610.12369) · [Project](https://etmcode-bit.github.io/)<br>
   Kairui Hu et al. · Nanyang Technological University; Ropedia
 - <a id="paper-fd271a5f07c0fe55"></a>**EmbodiedSmith: Scaling Embodied Data through Recursive Self-Improvement Flywheel in Simulation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.07969)* · [Paper](https://arxiv.org/abs/2610.07969)<br>
