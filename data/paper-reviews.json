@@ -25107,6 +25107,289 @@
           17
         ]
       }
+    },
+    "paper-34f2dbb8a4108614": {
+      "institutions": [
+        "The State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences",
+        "Southern University of Science and Technology",
+        "Key Laboratory of Computing Power Network and Information Security, Ministry of Education; Shandong Computer Science Center, Qilu University of Technology (Shandong Academy of Sciences)",
+        "Shandong Provincial Key Laboratory of Computing Power Internet and Service Computing, Shandong Fundamental Research Center for Computer Science",
+        "Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        26
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Synthesizes policy learning, world models, reusable skills, executable harnesses, curricula, rewards, and editable research programs. Its L0–L3 rubric requires progressively stronger evidence, culminating in comparisons of subsequent learning from shared learner starts under matched resources and independent tests. Reported within-study contrasts are contextualized by acquisition, supervision, and evaluation budgets.",
+      "evidence": "The synthesis explains why persistent memory, improved policies, or editable code alone do not establish improver gain. Physical feedback validity, recovery, retention, and complete resource accounting determine whether apparent gains can accumulate. The proposed comparisons distinguish improved use of existing experience from improved acquisition of new experience.",
+      "discovery_use": "Provides a concrete framework for distinguishing retained discovery capability from changes to the process that acquires capability. Its evidence criteria directly support research on continual learning, agent harnesses, and verified recursive self-improvement.",
+      "limits": "This is a conceptual synthesis, without a new controlled demonstration of physical RSI. Cross-study differences in tasks, human assistance, and cost reporting limit comparisons, and rubric annotation reliability remains to be tested. Review covered the supplied pages 1–16 and 26–27; the intervening evaluation synthesis and remaining references were unavailable. Only two rendered pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "foundations",
+        "rationale": "Provides a concrete framework for distinguishing retained discovery capability from changes to the process that acquires capability. Its evidence criteria directly support research on continual learning, agent harnesses, and verified recursive self-improvement.",
+        "pdf_sha256": "9f107d66dc2a8bdd45d685a39d652b943b8f1082e9fad72ede2a1be6ab5bdab4",
+        "evidence_pages": [
+          1,
+          4,
+          26
+        ]
+      }
+    },
+    "paper-84951ad2971967f8": {
+      "institutions": [
+        "The Hong Kong University of Science and Technology (Guangzhou)",
+        "Ant Group"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        19
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Represents systems as directed agent graphs and excludes gold answers and correctness signals from Refiner inputs. A deterministic compiler validates edits to roles, connections, tools, or reasoning budgets. Separate GRPO updates reward source quality and realized repair gains. Evaluations span seven benchmarks, with additional execution-matched, prompted-reflection, model-scaling, and shared best-of-16 judging comparisons.",
+      "evidence": "The complete system averages 43.43 across seven benchmark scores, versus 41.47 for its Orchestrator alone and 33.95 for AOrchestra. AOrchestra remains better on ALFWorld. On HotpotQA and BrowseComp-Plus, MAS-Loop scores 64.50 and 15.48, compared with 54.00 and 12.50 for execution-matched MAS-Orchestra. The filtered corpus contains 8,223 pairs from 2,063 tasks. In the separate best-of-16 experiment, trajectory-conditioned MAS-JudgeRM reaches 22.62 on BrowseComp-Plus versus 11.31 using orchestration alone.",
+      "discovery_use": "Learns reusable agent orchestration and execution-grounded repair, with concrete transfer tests involving evidence retrieval and scientific interaction. This contributes to discovery-agent coordination and verification, although it does not demonstrate autonomous discovery of new scientific knowledge.",
+      "limits": "Each patch receives one independent re-execution, so an individual score change mixes intervention effects with execution randomness. Corpus filtering favors large, directionally consistent differences. The main table provides no uncertainty estimates; small test sets and heterogeneous metrics limit interpretation of its average. Matching execution counts does not establish equal token or compute costs. Training uses labeled outcomes and a fixed update procedure, and deployment permits only one bounded refinement. No first-party code, dataset, or model release was verified. Visual inspection covered only the two supplied pages.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "systems",
+        "rationale": "Learns reusable agent orchestration and execution-grounded repair, with concrete transfer tests involving evidence retrieval and scientific interaction. This contributes to discovery-agent coordination and verification, although it does not demonstrate autonomous discovery of new scientific knowledge.",
+        "pdf_sha256": "11464606a0e942fcaa440f8d4bb7e7170e3d76f9999de942aa1b12ff8dad2e0f",
+        "evidence_pages": [
+          1,
+          5,
+          19
+        ]
+      }
+    },
+    "paper-4422beed0f4c5922": {
+      "institutions": [
+        "Beijing University of Posts and Telecommunications"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "DeepSeek-V3 proposes restricted harness edits using validation failures, protected correct cases, and three rounds of revision history. Candidates pass admission checks before replacing the incumbent. Evaluation uses 8,328 synthetic Chinese dialogues, a separate 480-request routing set, three runs, component ablations, and a 50-person challenge study.",
+      "evidence": "On 1,665 held-out dialogues, AP reaches 0.9574 and minor F1 reaches 0.9198, improving over direct prompting by 7.60 and 6.37 percentage points. Evolution alone adds 2.27 F1 points over the initial harness. Eleven of 25 proposals are promoted. Routing F1 improves by 7.23 points, primarily through higher recall.",
+      "discovery_use": "The relevant contribution is a concrete adaptation mechanism: validation errors, protected successes, and retained outcomes of rejected edits guide harness revisions under regression constraints. Its discovery connection is bounded self-improvement of agent procedures; the application itself is closed-set age inference.",
+      "limits": "Evidence concerns one synthetic Chinese classification task, without real-platform or cross-task adaptation validation. Insufficient evidence maps to the negative class rather than abstention. Challenge-set system results vary substantially across seeds and do not establish superiority to human consensus. Context ablation combines several components. API versions are incompletely pinned, and public experimental-code release is promised rather than verified.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "adaptation",
+        "rationale": "The relevant contribution is a concrete adaptation mechanism: validation errors, protected successes, and retained outcomes of rejected edits guide harness revisions under regression constraints. Its discovery connection is bounded self-improvement of agent procedures; the application itself is closed-set age inference.",
+        "pdf_sha256": "1f224f85f638919ca332d3bb05f44224b68cf59729a3d98473fb3e6a40078f1d",
+        "evidence_pages": [
+          1,
+          4,
+          7
+        ]
+      }
+    },
+    "paper-ced2ee2351066a21": {
+      "institutions": [
+        "Al-Ahliyya Amman University",
+        "Binghamton University, State University of New York"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        14,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The authors reanalyze 540 judgments covering 135 submissions, label 256 numerical claims from 18 submissions, and compare context-based provenance scoring with value matching, embeddings, and an LLM verifier. Nearby numerical decoys calibrate certification. A second vendor's judge regrades 30 submissions.",
+      "evidence": "Among 53 unsupported labeled claims, 47 have wrong sources; population weighting estimates an 81% misattribution share. Strict certification identifies 78 traceable claims among 85 certifications, including 27 of 29 on held-out submissions. Weighted held-out recall is only 0.34. The second judge passes 12 submissions versus six for the official judge while preserving the broad ranking.",
+      "discovery_use": "It directly evaluates the integrity of agents attempting open scientific research and validates a claim-level provenance protocol. This provides concrete discovery evaluation and verification infrastructure.",
+      "limits": "Results come from one benchmark and modest samples labeled by two coauthors, with disclosed annotation revisions. Certification establishes recorded provenance rather than experimental correctness; missing evidence does not establish fabrication. Resource limits exclude large submissions from the 99-submission analysis. Cross-agent differences can reflect harnesses. The second-judge study has limited power and no expert adjudication of disagreements.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "It directly evaluates the integrity of agents attempting open scientific research and validates a claim-level provenance protocol. This provides concrete discovery evaluation and verification infrastructure.",
+        "pdf_sha256": "0a5089e011bed88cea8fbf924e45f7547a3511a5e8dd7f5af0a5d06aab4773a8",
+        "evidence_pages": [
+          1,
+          14,
+          23
+        ]
+      }
+    },
+    "paper-5846836814870309": {
+      "institutions": [
+        "FAIR at Meta",
+        "Johns Hopkins University",
+        "Carnegie Mellon University",
+        "University of Washington"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        12,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "AutoBenchmark iterates benchmark construction using solver trajectories and five quality judgments, retaining accepted difficult checkpoints and testing external solvers. HackBench evaluates command localization on 169 audited trajectories. AutoInteract synthesizes grounded conversations with unchanged executable verifiers and trains 4B and 27B models. RL-XAR learns rubrics from expert writing before reinforcement learning.",
+      "evidence": "Detailed human specifications and curated grounding lower solver scores substantially; Rebuttal Bench Muse Spark scores fall from 90 without feedback to 43.5 with detailed proposal feedback. HackBench's best monitor reaches 64.88 macro F1. AutoInteract raises average coding Pass@1 from 29.9 to 43.0 at 4B and 49.1 to 55.7 at 27B. The supplied RL-XAR conclusion reports writing gains, but detailed writing-result tables were not supplied.",
+      "discovery_use": "It directly studies research agents creating new evaluations, human direction of self-improvement, and monitoring research integrity. The benchmark-creation loop provides a concrete open-ended discovery contribution.",
+      "limits": "This is a targeted review of supplied sections rather than all 72 pages. AutoBenchmark uses ten tasks per iteration and a single reused autonomous reference run; detailed feedback also supplies grounding, so effects are bundled. LLM quality judgments remain fallible. HackBench contains 128 synthetic and 41 natural hacked trajectories and does not establish false-positive performance on honest-only runs. Interaction training generates final responses from supplied histories. Expert-aligned rubrics may retain model bias.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "open_ended",
+        "rationale": "It directly studies research agents creating new evaluations, human direction of self-improvement, and monitoring research integrity. The benchmark-creation loop provides a concrete open-ended discovery contribution.",
+        "pdf_sha256": "48c2a451a56d7870dbd89eda37ee48da7e5430bb135a205928f6b241d8e2d9e5",
+        "evidence_pages": [
+          1,
+          3,
+          12,
+          20
+        ]
+      }
+    },
+    "paper-a7a5a2b9feb69600": {
+      "institutions": [
+        "Massachusetts Institute of Technology",
+        "University of California, Los Angeles",
+        "Texas A&M University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The harness evaluates 18 generators on 100 papers with 97 fields, calibrates verifiers against two expert-curated collections, and tests ten open-weight verifiers with and without rules. Deployment extracts 10,258 records. Recipe-based predictors train through 2023, validate on 2024, and test on 858 devices from 2025 with performance and bibliographic fields withheld.",
+      "evidence": "The strongest generator reaches 92.4% field accuracy against a 36.4% empty-record baseline. Verification rules bring o3 agreement with experts to 99.7% and 99.5% on the two collections. Fine-tuned T5 achieves mean test MAE of 2.20 PCE points versus 5.69 for the training-mean predictor. Stability reliability is only 70.3%, motivating its exclusion from discovery analyses.",
+      "discovery_use": "It supplies a scientific-agent harness that preserves experimental identity, verifies literature-derived records, and gates downstream reasoning by measured reliability. Temporal prediction provides a concrete connection from verified knowledge to unseen devices.",
+      "limits": "The scientific-agent dialogue is an illustrative design sketch, not a validated autonomous discovery or synthesis experiment. Database reliability is judged by models and measured per category rather than per value. One domain, champion-device selection, publication bias, and one held-out year constrain generalization. Forecasts establish associations rather than causes. Full reproduction requires licensed papers and model access; the supplied core PDF does not provide exhaustive visual inspection of supplementary figures.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "systems",
+        "rationale": "It supplies a scientific-agent harness that preserves experimental identity, verifies literature-derived records, and gates downstream reasoning by measured reliability. Temporal prediction provides a concrete connection from verified knowledge to unseen devices.",
+        "pdf_sha256": "41449cfa2b8403611dd3eed70482c9856652481a20a10cb87ced66865fe309e8",
+        "evidence_pages": [
+          1,
+          6,
+          10
+        ]
+      }
+    },
+    "paper-db2f2ea048cd3583": {
+      "institutions": [
+        "Brown University",
+        "New York University",
+        "AMI Labs"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        11,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A finite-world formulation relates JEPA population objectives through injective modality renderings. Whitened spectral objectives yield uniqueness under an eigengap, kernel-mismatch bounds, and nuisance-dependent alignment limits. Controlled experiments compare caption-based views, masked views, and next-token prediction on matched texts and encoders. Evaluations include neighborhood overlap, rotated retrieval, scaling predictions, captioning, and alignment from unpaired data.",
+      "evidence": "The 109M good-view text JEPA reaches WIT mutual 10-NN alignment of .184 with DINOv2, versus .111 for matched next-token training and .154 for Qwen2.5-72B. The reported equivalent-alignment comparison uses 42 times fewer samples, or 14 times fewer text tokens. A captioning system reaches COCO CIDEr .838 with its cross-modal map fitted on 30,000 Flickr pairs. Unpaired alignment reaches 64.4% ImageNet-100 top-5 accuracy versus 47.6% for the rerun Qwen3-8B baseline.",
+      "discovery_use": "The paper directly studies when independently trained modalities recover a shared representation of latent world states and how training views suppress modality-specific nuisance. This provides a concrete foundation for transferable world representations and composing knowledge across modalities, although it does not establish causal identification or an autonomous discovery agent.",
+      "limits": "Theorems assume population optima, finite worlds, injective renderings, matched marginals, and appropriate uniqueness; they do not cover learned action-conditioned predictors. Uniqueness is not proved for the full LeJEPA constraint used experimentally, and no experiment exactly satisfies the main theorem. Large-scale views contain information distilled from an image captioner trained across modalities. Hyperparameters were tuned only for good views. The 42-fold comparison uses different scale recipes and lacks earlier next-token checkpoints. The empirical scaling law fails farther outside its fitted range. This is a targeted body review; the proof appendix and other unprovided pages were not exhaustively reviewed.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "causality",
+        "rationale": "The paper directly studies when independently trained modalities recover a shared representation of latent world states and how training views suppress modality-specific nuisance. This provides a concrete foundation for transferable world representations and composing knowledge across modalities, although it does not establish causal identification or an autonomous discovery agent.",
+        "pdf_sha256": "083cc4228dffbf946af1a82d9f5817633eb4bb2a38d923b8320478453a3a6838",
+        "evidence_pages": [
+          1,
+          3,
+          11,
+          15
+        ]
+      }
+    },
+    "paper-397ec68d1b530d3c": {
+      "institutions": [
+        "Apple"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        8,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An SFT-initialized 8B planner produces immediate and remaining plans from screenshots and action history. A separate grounder executes actions. Gemini judges supply dense and terminal rewards, and a simulated user answers clarification requests. PPO discounts dense rewards by 0.5 while preserving terminal credit; GiGPPO conditions value estimates on perceptually similar sibling states and their returns. Snapshot-based virtual iOS infrastructure supports concurrent live rollouts.",
+      "evidence": "At update 336, PPO improves UINavBench success from 16.7% to 32.4% and AndroidWorld from 4.7% to 32.8%. GiGPPO learns faster on UINavBench at earlier checkpoints but finishes below PPO there. Transfer is uneven: PPO falls to 2.3% on iOSWorld versus 4.5% for SFT, while GiGPPO reaches 9.8%. Supplied traces describe recovery from a mistaken Maps destination and cross-app retrieval of order, receipt, and bank-charge evidence.",
+      "discovery_use": "The primary contribution is feedback-driven agent training through live interaction, exploration, intermediate progress assessment, and error recovery. These mechanisms concretely support learning unfamiliar investigative workflows; supplied examples include locating and comparing evidence across applications. Its discovery relevance is enabling agent training, not demonstrated autonomous scientific research.",
+      "limits": "Frontier planners remain stronger on AndroidWorld and iOSWorld. The claim that one-epoch dense PPO matches two-epoch terminal-only PPO across benchmarks is contradicted by iOSWorld's 6.0% versus 7.5%. Grounding configurations are selected per benchmark, and external Gemini grounding remains part of evaluation. Rewards and simulated users depend on proprietary models; reward-judge reliability is not independently established. SFT includes Android GUIOdyssey data, so Android transfer is not from an entirely Android-free training history. Multiple training-seed uncertainty is not reported. No first-party code, project, dataset, or checkpoint release was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "learning",
+        "rationale": "The primary contribution is feedback-driven agent training through live interaction, exploration, intermediate progress assessment, and error recovery. These mechanisms concretely support learning unfamiliar investigative workflows; supplied examples include locating and comparing evidence across applications. Its discovery relevance is enabling agent training, not demonstrated autonomous scientific research.",
+        "pdf_sha256": "e7d23170c070509ff5d6321d4a7c755dae9d503e16c03a3b77cc37683fa91adf",
+        "evidence_pages": [
+          1,
+          2,
+          8,
+          10
+        ]
+      }
+    },
+    "paper-061f45c85c0da0cf": {
+      "institutions": [
+        "KAIST AI",
+        "Ewha Womans University",
+        "KAIST Urban AI Institute"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        24
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A feed-forward updater uses opacity and reconstruction error to identify regions needing new Gaussians, while refining visible existing entries. Stored VAE features render directly into the video generator’s latent space. A distilled generator enables faster rollouts. Evaluation uses 481-frame outgoing-and-returning trajectories on DL3DV and RealEstate10K, with memory and generation ablations.",
+      "evidence": "The full model achieves loop-consistency PSNR of 16.00 and 18.36 on the two datasets, with generation FID of 40.57 and 36.09. Against NeoVerse, reported primitive counts fall by 266–417 times and VAE-conditioning throughput increases by 349–359 times. The fast variant reaches 9.02 FPS on one H100, with reduced fidelity. Pose and geometric-consistency metrics do not uniformly lead.",
+      "discovery_use": "The primary contribution is a persistent world representation that incorporates newly explored regions and revises retained geometry. This concretely supports spatial exploration and revisitation, although autonomous discovery performance is not evaluated.",
+      "limits": "Memory targets static scenes, still grows with explored area, and can retain propagated generation errors. Loop consistency measures agreement between generated revisits rather than factual correctness of unseen content. Baselines include modified initialization and converted action controls. Table 2 efficiency uses A100 hardware, unlike the H100 real-time result. The official repository currently provides a release plan rather than implementation or checkpoint downloads.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "causality",
+        "rationale": "The primary contribution is a persistent world representation that incorporates newly explored regions and revises retained geometry. This concretely supports spatial exploration and revisitation, although autonomous discovery performance is not evaluated.",
+        "pdf_sha256": "e8288f52209b90a32017186fb08182c41980035b9b64315a6a6e4a75df05af98",
+        "evidence_pages": [
+          1,
+          4,
+          24
+        ]
+      }
     }
   }
 }

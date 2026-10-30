@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**149 usage profiles** · Updated **2026-10-30**
+**150 usage profiles** · Updated **2026-10-30**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -2488,6 +2488,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?](#paper-86045855267404ca) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [rTaste: Do Research Agents Have Taste? Evaluating Early Stage Research Judgment](#paper-b31efc0825d69775) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [PAPERBENCHX: Can AI Reproduce Science Across Disciplines?](#paper-b50b86e0972e0b67) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [Beyond fabrication: Misattributed numbers in papers written by AI research agents](#paper-ced2ee2351066a21) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -3337,6 +3338,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | A training protocol using benchmark rewards is not established. The evaluator clean-replays each submission offline and scores only regenerated evidence. Deterministic checks assess directly testable properties; a shared GPT-5.6-sol evaluator judges requirements needing domain interpretation against hidden expert-validated rubrics and reference artifacts. Weighted rubric leaves produce a score from 0 to 1 across Modeling, Execution, and Validation. Full reproduction requires a score strictly greater than 0.9. |
 | Reset | Clean replay explicitly removes generated outputs and mutable execution state, refreshes the task container, restores the submitted package, and reruns its entry point with network access disabled. An agent-controlled arbitrary reset interface during development is not established. |
 | Branching | Agents may implement variants, run computations, diagnose failures, and refine analyses within task budgets. Snapshot-based branching, state cloning, or a general branching API is not established. |
+
+</details>
+
+<a id="paper-ced2ee2351066a21"></a>
+
+<details>
+<summary>Beyond fabrication: Misattributed numbers in papers written by AI research agents — details</summary>
+
+[Work](../README.md#paper-ced2ee2351066a21) · [Source](https://arxiv.org/pdf/2610.38691)
+
+**Focus:** Numerical provenance and research integrity in Into the Unknown. The underlying benchmark supplies computing environments for executed research experiments. This paper analyzes recorded artifacts without rerunning agents and separately executes provenance checks and second-judge grading.
+
+**Openness:** `The underlying benchmark allows agents to formulate research directions, implement and run experiments, and write follow-up papers from supplied papers and task specifications.`, `Released evidence includes working directories, papers, code, configurations, logs, result files, judge outputs, and some interaction trajectories.`, `This audit reports release of its code, human labels, derived data, and figures.`
+
+**New physical measurements:** Unverified
+
+**Limits:** Computational execution is established on pages 11–12; new physical measurements and physical-device access are not established. The audit uses archived records rather than live scientific experimentation. Certification establishes recorded provenance rather than experimental correctness. Evidence comes from one benchmark; labels cover 256 claims, automated analysis covers 99 submissions, and second-judge grading covers 30 submissions.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Agent training rewards are not established. Evaluation uses GPT-6-Astra and a rubric with sequential integrity, deliverable-completeness, and scientific-merit gates. Four official judging repeats form consensus verdicts. This paper adds deterministic provenance certification calibrated with numerical decoys, blinded human labels, and Claude Opus 5.5 regrading. These are evaluation procedures; no agent training loop is established. |
+| Reset | Environment reset support is not established. Four repeated judge evaluations concern submitted artifacts and do not establish agent-environment resets. This paper explicitly does not rerun agents. |
+| Branching | Agent-environment checkpoint restoration, state cloning, and branching support are not established. Archived working directories support retrospective inspection and repeated grading. |
 
 </details>
 

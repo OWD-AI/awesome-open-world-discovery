@@ -3354,6 +3354,29 @@
       "name": "How Specific Do I Need to Be? Effects of User Query Underspecification on Deep Research Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.39413"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": null,
+      "openness": [
+        "The underlying benchmark allows agents to formulate research directions, implement and run experiments, and write follow-up papers from supplied papers and task specifications.",
+        "Released evidence includes working directories, papers, code, configurations, logs, result files, judge outputs, and some interaction trajectories.",
+        "This audit reports release of its code, human labels, derived data, and figures."
+      ],
+      "focus": "Numerical provenance and research integrity in Into the Unknown. The underlying benchmark supplies computing environments for executed research experiments. This paper analyzes recorded artifacts without rerunning agents and separately executes provenance checks and second-judge grading.",
+      "limits": "Computational execution is established on pages 11–12; new physical measurements and physical-device access are not established. The audit uses archived records rather than live scientific experimentation. Certification establishes recorded provenance rather than experimental correctness. Evidence comes from one benchmark; labels cover 256 claims, automated analysis covers 99 submissions, and second-judge grading covers 30 submissions.",
+      "training": {
+        "reward": "Agent training rewards are not established. Evaluation uses GPT-6-Astra and a rubric with sequential integrity, deliverable-completeness, and scientific-merit gates. Four official judging repeats form consensus verdicts. This paper adds deterministic provenance certification calibrated with numerical decoys, blinded human labels, and Claude Opus 5.5 regrading. These are evaluation procedures; no agent training loop is established.",
+        "reset": "Environment reset support is not established. Four repeated judge evaluations concern submitted artifacts and do not establish agent-environment resets. This paper explicitly does not rerun agents.",
+        "branching": "Agent-environment checkpoint restoration, state cloning, and branching support are not established. Archived working directories support retrospective inspection and repeated grading."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-ced2ee2351066a21",
+      "resource_id": "paper-ced2ee2351066a21",
+      "name": "Beyond fabrication: Misattributed numbers in papers written by AI research agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.38691"
     }
   ]
 }
