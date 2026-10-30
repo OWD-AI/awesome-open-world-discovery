@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T16:20:57-04:00",
+  "updated_at": "2026-10-30T18:19:06-04:00",
   "window_start": "2026-10-01",
   "window_end": "2026-10-30",
   "window_days": 30,
@@ -60,6 +60,19 @@
           "url": "https://github.com/ArtKanke/rTaste"
         }
       ]
+    },
+    {
+      "title": "Yibie describes sandboxed proposals in an autoresearch MCP workflow",
+      "url": "https://x.com/yibie/status/2115707997402091892",
+      "published_at": "2026-10-29",
+      "kind": "x",
+      "summary": "Yibie highlights autoresearch-mcp as an experiment-loop service with queued execution, seven MCP tools, a CLI and experiment reports. They contrast its treatment of sub-agent proposals as untrusted inputs running in a macOS sandbox with other loops in their directory that execute proposed code directly.",
+      "date_evidence": "Supplied original-permalink evidence records datetime=2026-10-29T07:31:09.000Z and visible publication time 3:31 AM · Oct 29, 2026.",
+      "relevance": "Concrete research-harness design for managing experiments and treating generated proposals as untrusted inputs.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "bc37a6ccea6361ab"
     },
     {
       "title": "Yepeng Liu introduces Test-Time Memory Evolution for scientific search",
@@ -435,6 +448,36 @@
       ]
     },
     {
+      "title": "Training Foundation Models with a Single Algorithm",
+      "url": "https://arxiv.org/abs/2610.40564",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "Unified training expresses static corpora, demonstrations, and suitable reward-conditioned generations through one likelihood objective. Its main contribution is a way to study data composition and timing across training, supported by reasoning generalization, retention, and subsequent learning experiments.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original-publication metadata specifies 2026-10-29T00:00:00.000Z, consistent with the PDF's v1 stamp of 29 October 2026. The exact supplied timestamp is preserved; the separate 2026-10-28 date corresponds to its America/New_York day.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete training framework for learning from verified generations while retaining prior capabilities. Experiments on unseen reasoning compositions, larger puzzles, and subsequent task learning connect it to learning to discover.",
+      "id": "a0a322ba27dfcc7c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.40564"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yudasong/unified-training"
+        },
+        {
+          "label": "Project",
+          "url": "https://yudasong.github.io/unified-training/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/sfanm/unified-training"
+        }
+      ]
+    },
+    {
       "title": "Ryan Peters compares a swarm with a single research agent",
       "url": "https://x.com/ryanirl/status/2115581108230443192",
       "published_at": "2026-10-28",
@@ -708,6 +751,32 @@
       ]
     },
     {
+      "title": "EPSBench: Benchmarking LLM Agents for Earnings Forecasting",
+      "url": "https://arxiv.org/abs/2610.38293",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "EPSBench evaluates evidence-based forecasting across 149 firm-quarters from 86 companies. Agents estimate company-specific financial drivers with citations, a shared accounting calculator derives earnings per share, and reported outcomes test both point forecasts and prediction intervals.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original-publication metadata gives the exact timestamp 2026-10-28T05:24:11.000Z. The PDF's v1 stamp independently shows 28 October 2026. The timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Evaluates agents acquiring dated evidence, constructing quantitative estimates of unpublished outcomes, and expressing uncertainty. Its controlled information access, inspectable assumptions, and outcome verification provide a concrete discovery-evaluation contribution beyond ordinary financial prediction.",
+      "id": "172f7e3c54d16084",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38293"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JadeXu16/EPSBench"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/JadeXu16/EPSBench"
+        }
+      ]
+    },
+    {
       "title": "Beyond fabrication: Misattributed numbers in papers written by AI research agents",
       "url": "https://arxiv.org/abs/2610.38691",
       "published_at": "2026-10-28",
@@ -877,6 +946,32 @@
         }
       ],
       "id": "cf32c42f2b441fdf"
+    },
+    {
+      "title": "Weaken to Strengthen: Weakening-Induced On-Policy Self-Distillation for Large Reasoning Models",
+      "url": "https://arxiv.org/abs/2610.38681",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "WISD derives a training signal by contrasting a model with a quantized or pruned copy of itself. A student learns from cached original-model trajectories, improving mathematical and coding reasoning without privileged training information.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original-publication metadata specifies 2026-10-28T00:00:00.000Z, consistent with the PDF's v1 stamp of 28 October 2026. The timestamp is preserved; the separate 2026-10-27 date corresponds to its America/New_York day.",
+      "review_status": "approved",
+      "relevance": "Develops self-improvement of reasoning from unlabeled prompts without external teachers or verified training rewards. Its concrete training mechanism and analysis of exploration and verification make it relevant to learning to discover, although autonomous discovery and recursive improvement are not demonstrated.",
+      "id": "c0230f668ccc1d3b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38681"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/jet-ai-projects/WISD"
+        },
+        {
+          "label": "Project",
+          "url": "https://jet-ai-projects.github.io/WISD/"
+        }
+      ]
     },
     {
       "title": "Vision-Language-Action or World-Action? Just Action Models",
@@ -1980,7 +2075,7 @@
       ]
     },
     {
-      "title": "Skill∞: Recursive Self-Improvement for Agent Skill Optimization",
+      "title": "Skill$^{\\infty}$: Recursive Self-Improvement for Agent Skill Optimization",
       "url": "https://arxiv.org/abs/2610.35434",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -2558,6 +2653,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.33684"
+        }
+      ]
+    },
+    {
+      "title": "Matched Capabilities, Different Behaviors: A Controlled Study of MCP and CLI Interfaces for Language Agents",
+      "url": "https://arxiv.org/abs/2610.34298",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "MICA compares structured tool calls and command-line actions while holding executable capabilities fixed. It separates interface effects on action selection, expression, feedback, and subsequent trajectories. DART then validates an explicit semantic action and preserves it during interface-specific repair.",
+      "source": "Codex full-text screened",
+      "date_evidence": "PDF page 1 and the primary arXiv submission history confirm an original submission on 25 October 2026. The supplied original_published_at timestamp is preserved exactly; the supplied 24 October calendar date reflects its America/New_York assignment.",
+      "review_status": "approved",
+      "relevance": "Contributes a controlled agent-harness evaluation and an action-repair controller, including evaluation on multi-step scientific reasoning in ScienceWorld. These mechanisms concretely support reliable execution in discovery agents, although autonomous knowledge discovery is not demonstrated.",
+      "id": "7a573316bf9ed92f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34298"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ModalityDance/MICA"
         }
       ]
     },
@@ -12691,6 +12808,19 @@
       ]
     },
     {
+      "title": "Nikhil Abhyankar highlights ActiveSciBench and closed-loop discovery",
+      "url": "https://x.com/AbhyankarNikhil/status/2106609461733544320",
+      "published_at": "2026-10-04",
+      "kind": "x",
+      "summary": "Nikhil Abhyankar announces an upcoming COLM 2026 presentation of LLM-AutoSciLab with Sanchit Kabra and introduces ActiveSciBench as a benchmark for active discovery. An embedded earlier announcement describes LLM-AutoSciLab as a closed-loop process that runs experiments, generates hypotheses, and refines them.",
+      "date_evidence": "Supplied primary DOM evidence records the original post datetime as 2026-10-04T04:56:49.000Z, matching the visible timestamp 12:56 AM · Oct 4, 2026. The embedded quote is separately dated 2026-05-28T15:37:21.000Z.",
+      "relevance": "Active-discovery evaluation centered on experimental discrimination among competing hypotheses.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "id": "92ce3f00295c397e"
+    },
+    {
       "title": "MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training",
       "url": "https://arxiv.org/abs/2610.05398",
       "published_at": "2026-10-04",
@@ -13936,6 +14066,36 @@
       ]
     },
     {
+      "title": "Training Foundation Models with a Single Algorithm",
+      "url": "https://arxiv.org/abs/2610.40564",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "Unified training expresses static corpora, demonstrations, and suitable reward-conditioned generations through one likelihood objective. Its main contribution is a way to study data composition and timing across training, supported by reasoning generalization, retention, and subsequent learning experiments.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original-publication metadata specifies 2026-10-29T00:00:00.000Z, consistent with the PDF's v1 stamp of 29 October 2026. The exact supplied timestamp is preserved; the separate 2026-10-28 date corresponds to its America/New_York day.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete training framework for learning from verified generations while retaining prior capabilities. Experiments on unseen reasoning compositions, larger puzzles, and subsequent task learning connect it to learning to discover.",
+      "id": "a0a322ba27dfcc7c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.40564"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yudasong/unified-training"
+        },
+        {
+          "label": "Project",
+          "url": "https://yudasong.github.io/unified-training/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/sfanm/unified-training"
+        }
+      ]
+    },
+    {
       "title": "Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation",
       "url": "https://arxiv.org/abs/2610.38266",
       "published_at": "2026-10-28",
@@ -14152,6 +14312,32 @@
       ]
     },
     {
+      "title": "EPSBench: Benchmarking LLM Agents for Earnings Forecasting",
+      "url": "https://arxiv.org/abs/2610.38293",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "EPSBench evaluates evidence-based forecasting across 149 firm-quarters from 86 companies. Agents estimate company-specific financial drivers with citations, a shared accounting calculator derives earnings per share, and reported outcomes test both point forecasts and prediction intervals.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original-publication metadata gives the exact timestamp 2026-10-28T05:24:11.000Z. The PDF's v1 stamp independently shows 28 October 2026. The timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Evaluates agents acquiring dated evidence, constructing quantitative estimates of unpublished outcomes, and expressing uncertainty. Its controlled information access, inspectable assumptions, and outcome verification provide a concrete discovery-evaluation contribution beyond ordinary financial prediction.",
+      "id": "172f7e3c54d16084",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38293"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JadeXu16/EPSBench"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/JadeXu16/EPSBench"
+        }
+      ]
+    },
+    {
       "title": "Beyond fabrication: Misattributed numbers in papers written by AI research agents",
       "url": "https://arxiv.org/abs/2610.38691",
       "published_at": "2026-10-28",
@@ -14240,6 +14426,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.38568"
+        }
+      ]
+    },
+    {
+      "title": "Weaken to Strengthen: Weakening-Induced On-Policy Self-Distillation for Large Reasoning Models",
+      "url": "https://arxiv.org/abs/2610.38681",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "WISD derives a training signal by contrasting a model with a quantized or pruned copy of itself. A student learns from cached original-model trajectories, improving mathematical and coding reasoning without privileged training information.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original-publication metadata specifies 2026-10-28T00:00:00.000Z, consistent with the PDF's v1 stamp of 28 October 2026. The timestamp is preserved; the separate 2026-10-27 date corresponds to its America/New_York day.",
+      "review_status": "approved",
+      "relevance": "Develops self-improvement of reasoning from unlabeled prompts without external teachers or verified training rewards. Its concrete training mechanism and analysis of exploration and verification make it relevant to learning to discover, although autonomous discovery and recursive improvement are not demonstrated.",
+      "id": "c0230f668ccc1d3b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38681"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/jet-ai-projects/WISD"
+        },
+        {
+          "label": "Project",
+          "url": "https://jet-ai-projects.github.io/WISD/"
         }
       ]
     },
@@ -15166,7 +15378,7 @@
       ]
     },
     {
-      "title": "Skill∞: Recursive Self-Improvement for Agent Skill Optimization",
+      "title": "Skill$^{\\infty}$: Recursive Self-Improvement for Agent Skill Optimization",
       "url": "https://arxiv.org/abs/2610.35434",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -15718,6 +15930,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.33684"
+        }
+      ]
+    },
+    {
+      "title": "Matched Capabilities, Different Behaviors: A Controlled Study of MCP and CLI Interfaces for Language Agents",
+      "url": "https://arxiv.org/abs/2610.34298",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "MICA compares structured tool calls and command-line actions while holding executable capabilities fixed. It separates interface effects on action selection, expression, feedback, and subsequent trajectories. DART then validates an explicit semantic action and preserves it during interface-specific repair.",
+      "source": "Codex full-text screened",
+      "date_evidence": "PDF page 1 and the primary arXiv submission history confirm an original submission on 25 October 2026. The supplied original_published_at timestamp is preserved exactly; the supplied 24 October calendar date reflects its America/New_York assignment.",
+      "review_status": "approved",
+      "relevance": "Contributes a controlled agent-harness evaluation and an action-repair controller, including evaluation on multi-step scientific reasoning in ScienceWorld. These mechanisms concretely support reliable execution in discovery agents, although autonomous knowledge discovery is not demonstrated.",
+      "id": "7a573316bf9ed92f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34298"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ModalityDance/MICA"
         }
       ]
     },

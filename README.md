@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-782-2563eb?style=flat-square" alt="782 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-157-0f766e?style=flat-square" alt="157 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-786-2563eb?style=flat-square" alt="786 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-158-0f766e?style=flat-square" alt="158 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -80,11 +80,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 43 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 85 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 61 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 131 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 133 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 107 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 130 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 131 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 77 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 148 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 149 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -769,6 +769,8 @@ Each work appears once under its primary contribution; see the [classification g
   Nithin Sivakumaran et al. · UNC Chapel Hill; Cisco; The University of Texas at Austin
 - <a id="paper-38e70b683c26da97"></a>**TraceForge: Distilling with Your Own Thinking** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29680)* · [Paper](https://arxiv.org/abs/2610.29680)<br>
   Yan Wang · Independent Researcher
+- <a id="paper-a0a322ba27dfcc7c"></a>**Training Foundation Models with a Single Algorithm** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40564)* · [Paper](https://arxiv.org/abs/2610.40564) · [Code](https://github.com/yudasong/unified-training) · [Project](https://yudasong.github.io/unified-training/) · [HF Model](https://huggingface.co/sfanm/unified-training)<br>
+  Yuda Song et al. · Carnegie Mellon University; Johns Hopkins University; Aurora Innovation
 - <a id="paper-9e2f9fe91ea38fa6"></a>**Training Reasoning Models to Generate Diverse Scientific Ideas** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22324)* · [Paper](https://arxiv.org/abs/2610.22324) · [Code](https://github.com/ManyaWadhwa/diverge_ideation)<br>
   Manya Wadhwa et al. · New York University; Stony Brook University; Salesforce AI Research
 - <a id="paper-16ab0f9e2218180c"></a>**Training the Whole Agent, Not Just the Model** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28069)* · [Paper](https://arxiv.org/abs/2610.28069) · [Code](https://github.com/lingxiaotang/HarnessAdapt-RL) · [HF Model](https://huggingface.co/anon-review-7f3a/HarnessAdapt-RL)<br>
@@ -781,6 +783,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yuhang Zhou et al. · Institute of Trustworthy Embodied AI, Fudan University; Shanghai Key Laboratory of Multimodal Embodied AI; Singapore Management University
 - <a id="paper-c597ebcff760d449"></a>**Vision-Language-Action or World-Action? Just Action Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37219)* · [Paper](https://arxiv.org/abs/2610.37219) · [Project](https://y0uroy.github.io/JAM)<br>
   Yonghao Yu, Lang Huang, Runyi Li, Toshihiko Yamasaki · The University of Tokyo; National Institute of Informatics
+- <a id="paper-c0230f668ccc1d3b"></a>**Weaken to Strengthen: Weakening-Induced On-Policy Self-Distillation for Large Reasoning Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.38681)* · [Paper](https://arxiv.org/abs/2610.38681) · [Code](https://github.com/jet-ai-projects/WISD) · [Project](https://jet-ai-projects.github.io/WISD/)<br>
+  Yecheng Wu, Song Han, Han Cai · Massachusetts Institute of Technology; NVIDIA
 - <a id="paper-ce88f69c0203ec29"></a>**WeVisOne-VL: Unified Visual Perception from Objects to Pixels** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31329)* · [Paper](https://arxiv.org/abs/2610.31329) · [Project](https://tencent.github.io/WeVisOne-VL) · [Code](https://github.com/Tencent/WeVisOne-VL)<br>
   Tianming Liang et al. · WeChat Vision, Tencent Inc.
 - <a id="paper-29b6bdf1923373d0"></a>**Where Research Ideation Begins: Forward-Citation Supervision for Actionable Limitation Generation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23038)* · [Paper](https://arxiv.org/abs/2610.23038)<br>
@@ -1240,6 +1244,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yu Cui et al. · Beijing Institute of Technology; Tsinghua University; Chengdu Institute of Computer Applications, Chinese Academy of Sciences; +4 institutions
 - <a id="paper-84951ad2971967f8"></a>**MAS-Loop: Beyond One-Shot Orchestration towards Self-Evolving Multi-Agent Systems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.38946)* · [Paper](https://arxiv.org/abs/2610.38946)<br>
   Hehai Lin, Qi Yang, Chengwei Qin · The Hong Kong University of Science and Technology (Guangzhou); Ant Group
+- <a id="paper-7a573316bf9ed92f"></a>**Matched Capabilities, Different Behaviors: A Controlled Study of MCP and CLI Interfaces for Language Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34298)* · [Paper](https://arxiv.org/abs/2610.34298) · [Code](https://github.com/ModalityDance/MICA)<br>
+  Zhenning Shi, Liang Pang, Yongqi Li · The Hong Kong Polytechnic University; Institute of Computing Technology, Chinese Academy of Sciences
 - <a id="paper-2761afa9050a76fb"></a>**Memory Tax: Dissecting the Net Value of Agent Memory** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34073)* · [Paper](https://arxiv.org/abs/2610.34073) · [Project](https://hexuan21.github.io/MemoryTax/) · [Code](https://github.com/hexuan21/MemoryTax) · [Dataset](https://huggingface.co/datasets/hexuan21/MemoryTax-Res)<br>
   Xuan He et al. · University of Illinois Urbana Champaign; Tsinghua University; Renmin University of China; +2 institutions
 - <a id="paper-ddad85e61e90e037"></a>**MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06830)* · [Paper](https://arxiv.org/abs/2610.06830) · [Project](https://viktoraxelsen.github.io/MemPilot/) · [Code](https://github.com/ViktorAxelsen/MemPilot)<br>
@@ -1665,6 +1671,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Jie Huang et al. · School of Intelligence Science and Technology, Peking University; State Key Laboratory of General Artificial Intelligence, BIGAI, Beijing, China; University of Hong Kong
 - <a id="paper-6162f96ecddc8088"></a>**EmbodiedLab: Benchmarking Embodied Agents That Act to Know** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35385)* · [Paper](https://arxiv.org/abs/2610.35385) · [Code](https://github.com/HexaFuture/EmbodiedLab) · [Project](https://hexafuture.ai/benchmarks/embodiedlab/)<br>
   Hongcheng Gao et al. · HexaFuture Inc.; Tsinghua University; National University of Singapore; +1 institutions
+- <a id="paper-172f7e3c54d16084"></a>**EPSBench: Benchmarking LLM Agents for Earnings Forecasting** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.38293)* · [Paper](https://arxiv.org/abs/2610.38293) · [Code](https://github.com/JadeXu16/EPSBench)<br>
+  Yanbin Yin et al. · Georgia Institute of Technology
 - <a id="paper-1663c6679dab72c8"></a>**EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04184)* · [Paper](https://arxiv.org/abs/2610.04184) · [Project](https://mercury7353.github.io/self-evaluation-bench/) · [Code](https://github.com/Mercury7353/self-evaluation-bench)<br>
   Yaolun Zhang et al. · Oregon State University; University of California, San Diego; Pennsylvania State University; +1 institutions
 - <a id="paper-2693639d7f34414f"></a>**Evaluating Agentic Capabilities Before Post-Training: An End-to-End Approach** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19425)* · [Paper](https://arxiv.org/abs/2610.19425)<br>

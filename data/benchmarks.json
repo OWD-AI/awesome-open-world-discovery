@@ -3537,6 +3537,29 @@
       "name": "Investor's Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.38342"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 10 reports release of schemas, tool server, harness adapters, prompts, evaluation scripts, share prices, per-instance forecasts, reported EPS, and scores.",
+        "Public-filings fetch scripts and the filtered CC-News index are provided.",
+        "Released trajectories replace licensed transcript text with document identifiers; IBES consensus values are withheld."
+      ],
+      "focus": "Retrospective earnings forecasting on 149 firm-quarters from 86 US companies. Agents retrieve historical filings, transcripts, and news restricted to the information cutoff, estimate accounting drivers with evidence, execute a fixed accounting DAG, and report an 80% EPS interval. Feedback consists of recorded documents, calculator-produced income statements and EPS, and tool errors. The scoring outcome is hidden during the run. This uses real recorded data and executed accounting computation; it introduces neither a scientific simulator nor new physical measurements (pages 3–5, 17–18).",
+      "limits": "The accounting DAG encodes identities rather than discovered causal relationships. Calculator execution does not make the task an executed research-experiment environment. Historical news availability is approximate; the sample emphasizes large US companies; training exposure cannot be completely excluded; analyst information access differs; licensing limits reproduction. Recorded explanations do not establish faithful internal reasoning (pages 4–5, 10, 16–17).",
+      "training": {
+        "reward": "Training reward and a model-training procedure are not established. Evaluation compares forecasts with reported GAAP diluted EPS verified against filings. Metrics include price-deflated absolute error, win rate against dated analyst consensus, surprise-direction accuracy, interval coverage, width, proper interval score, resource use, and format compliance. These outcome scores are unavailable to the agent during its attempt (pages 4–5, 18).",
+        "reset": "Each run is a single attempt without restarts or retries. Configurations are evaluated three times per instance as separate runs. An agent-accessible reset mechanism is not established (pages 4–5, 18).",
+        "branching": "Checkpointing, state cloning, and trajectory branching support are not established. Agents may choose retrieval order within the fixed corpus; after successful calculation, the prompts require immediate final output without further tool calls or recalculation (pages 27–29)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-172f7e3c54d16084",
+      "resource_id": "paper-172f7e3c54d16084",
+      "name": "EPSBench: Benchmarking LLM Agents for Earnings Forecasting",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.38293"
     }
   ]
 }

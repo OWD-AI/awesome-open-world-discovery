@@ -25743,6 +25743,132 @@
           11
         ]
       }
+    },
+    "paper-a0a322ba27dfcc7c": {
+      "institutions": [
+        "Carnegie Mellon University",
+        "Johns Hopkins University",
+        "Aurora Innovation"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        11,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Derives likelihood targets for MaxRL and related objectives, then implements asynchronous generation and a shared buffer with weighted token cross-entropy. Compares unified and staged training using a 124M reasoning-puzzle model and a 0.76B model with heterogeneous midtraining data. Evaluates pass@1, sampled coverage, estimated total compute, retention, and later coding RL.",
+      "evidence": "Selected unified configurations improve reasoning performance and generalization beyond training puzzle sizes. Advantages depend on compute budget; staged training remains competitive or optimal in some comparisons. Mixing heterogeneous data improves retention and coverage but can reduce coding accuracy. Subsequent identical coding RL produces higher final accuracy from unified initializations despite lower initial coding accuracy.",
+      "discovery_use": "Provides a concrete training framework for learning from verified generations while retaining prior capabilities. Experiments on unseen reasoning compositions, larger puzzles, and subsequent task learning connect it to learning to discover.",
+      "limits": "Experiments remain small-scale and mostly optimize one RL task at a time. No universal mixture, schedule, or predictive scaling law is established. Coverage measures whether samples contain a correct answer, without establishing that the model can select it. Real-world staged and unified implementations differ, with zero-mixing controls addressing part of this concern. Supplied body sections and selected appendix pages were reviewed; only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "learning",
+        "rationale": "Provides a concrete training framework for learning from verified generations while retaining prior capabilities. Experiments on unseen reasoning compositions, larger puzzles, and subsequent task learning connect it to learning to discover.",
+        "pdf_sha256": "43bee6045237d2be23fdd3ba5be3d16551ee8525660521626b550cbf4f00e312",
+        "evidence_pages": [
+          1,
+          3,
+          11,
+          13
+        ]
+      }
+    },
+    "paper-172f7e3c54d16084": {
+      "institutions": [
+        "Georgia Institute of Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs accounting schemas from historical filings and validates their arithmetic against prior reported earnings. Six models use restricted retrieval tools and the same harness, with three runs per instance. Evaluation includes price-deflated error, paired bootstrap comparisons, interval calibration, resource use, source ablations, harness changes, and recall probes.",
+      "evidence": "Three models have no detectable paired point-error difference from analyst consensus; this does not establish equivalence. All six under-cover their nominal 80% intervals, achieving 37–70% coverage among returned intervals. Most model differences arise in operating-income estimates. Source availability affects forecasting, while tested harness and effort changes affect resource use and interval coverage more clearly than point error.",
+      "discovery_use": "Evaluates agents acquiring dated evidence, constructing quantitative estimates of unpublished outcomes, and expressing uncertainty. Its controlled information access, inspectable assumptions, and outcome verification provide a concrete discovery-evaluation contribution beyond ordinary financial prediction.",
+      "limits": "The retrospective sample concentrates on large US companies and a short announcement window. Historical web dates remain approximate, and recall probes cannot rule out every form of exposure. Analyst information access differs from agents' access. Accounting DAGs encode identities rather than discovered causal relationships, and cited explanations do not prove faithful internal reasoning. Licensed transcripts and consensus values restrict reproduction. Only supplied pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Evaluates agents acquiring dated evidence, constructing quantitative estimates of unpublished outcomes, and expressing uncertainty. Its controlled information access, inspectable assumptions, and outcome verification provide a concrete discovery-evaluation contribution beyond ordinary financial prediction.",
+        "pdf_sha256": "9b9d75d2b37ce36e4112da1f9e81648504e12f31e8f0e678ff74c46634d97f1c",
+        "evidence_pages": [
+          1,
+          3,
+          4,
+          7
+        ]
+      }
+    },
+    "paper-c0230f668ccc1d3b": {
+      "institutions": [
+        "Massachusetts Institute of Technology",
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Freezes the original model and a weakened scorer, forms token-level log-probability contrasts, and trains a student initialized from the original checkpoint. Uses offline DOPD with cached token candidates and a behavior-weighted regression implementation. Separate mathematics and coding students each use 3,200 prompts and 12,800 trajectories. Tests five models across three mathematics and two coding benchmarks.",
+      "evidence": "Reports average gains of 4.0 percentage points for quantization and 5.5 for pruning, with gains in 21 and 23 of 25 model–benchmark settings. Qwen3.5-4B gains are particularly large. Intermediate weakening strengths work best; excessive weakening harms performance. A 64-trajectory analysis assigns exploration and verification larger gradient shares than their token frequencies.",
+      "discovery_use": "Develops self-improvement of reasoning from unlabeled prompts without external teachers or verified training rewards. Its concrete training mechanism and analysis of exploration and verification make it relevant to learning to discover, although autonomous discovery and recursive improvement are not demonstrated.",
+      "limits": "This is fixed-cache offline training, with no repeated autonomous improvement cycle. Some settings regress, including the Qwen3.6-27B mathematics average under quantization. Published comparison methods use different sampling settings and token limits. Training uses one listed seed, mathematics benchmarks are small, and AIME 2024 also supports development. Appendix evaluation descriptions conflict on mathematics sample counts and output limits. Role attribution is descriptive and assistant-annotated. Only supplied pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "learning",
+        "rationale": "Develops self-improvement of reasoning from unlabeled prompts without external teachers or verified training rewards. Its concrete training mechanism and analysis of exploration and verification make it relevant to learning to discover, although autonomous discovery and recursive improvement are not demonstrated.",
+        "pdf_sha256": "713559091d8209916a90c9ef9df8ea40a3ba8d98afcdfdce7afaf5d1e47e9c79",
+        "evidence_pages": [
+          1,
+          4,
+          6,
+          17
+        ]
+      }
+    },
+    "paper-7a573316bf9ed92f": {
+      "institutions": [
+        "The Hong Kong Polytechnic University",
+        "Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Six models complete 2,004 paired episodes across ALFWorld, WebShop, and ScienceWorld. Shared contracts, validators, execution paths, settings, and budgets control the comparison. Factorial probes collect 21,632 responses from 338 source states. DART is compared with a protocol-matched Base using Gemini-2.5-Flash; uncertainty uses task-cluster bootstrap intervals.",
+      "evidence": "Interfaces produce model- and environment-dependent score and cost differences; neither consistently wins. Structured divergence occurs in 94.3% of paired episodes. DART increases scores by 0.8–9.0 points across six settings and reduces MCP token use by 4.3k–27.1k per task. CLI token use increases in two environments.",
+      "discovery_use": "Contributes a controlled agent-harness evaluation and an action-repair controller, including evaluation on multi-step scientific reasoning in ScienceWorld. These mechanisms concretely support reliable execution in discovery agents, although autonomous knowledge discovery is not demonstrated.",
+      "limits": "The controlled interfaces expose benchmark-specific operations, limiting generalization to unrestricted terminals and deployed MCP ecosystems. DART is evaluated with one model, and only four preserving-correction opportunities are reported. Its initial semantic selection is a new explicit commitment, not recovery of proven latent intent. Semantic validity establishes executable admissibility, not scientific correctness. Score gains do not establish autonomous discovery or universal statistical significance.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "systems",
+        "rationale": "Contributes a controlled agent-harness evaluation and an action-repair controller, including evaluation on multi-step scientific reasoning in ScienceWorld. These mechanisms concretely support reliable execution in discovery agents, although autonomous knowledge discovery is not demonstrated.",
+        "pdf_sha256": "930ef2b6b887018508ab34c99e7078ff9cdeed4dedb70b243f16f1bfd917948e",
+        "evidence_pages": [
+          1,
+          5,
+          6
+        ]
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**157 usage profiles** · Updated **2026-10-30**
+**158 usage profiles** · Updated **2026-10-30**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1044,6 +1044,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models](#paper-11c338bac904086c) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [Your Benchmark Is an Empirical Measure Over Difficulty](#paper-02eac071a6a0b020) | Real data | Data analysis | Paper-described |
 | [Investor's Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?](#paper-6c4df3fa24e47b4f) | Real data | Analysis + tools | Paper-described |
+| [EPSBench: Benchmarking LLM Agents for Earnings Forecasting](#paper-172f7e3c54d16084) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -2606,6 +2607,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Training use is proposed, but an implemented training reward or policy-training experiment is not established. Evaluation uses private expert-authored weighted criteria on a 0–100 scale: deterministic numerical checks and GPT-6 Astra semantic judging. Market tasks use declared price or ranking losses. submit_answer returns format acceptance or errors; financial grading is separate. Default evaluation grades the final available answer, while strict evaluation requires an accepted submission. |
 | Reset | Environment reset, checkpoint restoration, and replay APIs are not established. Immutable source versions and frozen query results preserve evidence snapshots but do not establish reset support. |
 | Branching | Subagent-assisted reading and context compression are described. Environment-state cloning, rollback, and branching from saved states are not established. |
+
+</details>
+
+<a id="paper-172f7e3c54d16084"></a>
+
+<details>
+<summary>EPSBench: Benchmarking LLM Agents for Earnings Forecasting — details</summary>
+
+[Work](../README.md#paper-172f7e3c54d16084) · [Source](https://arxiv.org/pdf/2610.38293)
+
+**Focus:** Retrospective earnings forecasting on 149 firm-quarters from 86 US companies. Agents retrieve historical filings, transcripts, and news restricted to the information cutoff, estimate accounting drivers with evidence, execute a fixed accounting DAG, and report an 80% EPS interval. Feedback consists of recorded documents, calculator-produced income statements and EPS, and tool errors. The scoring outcome is hidden during the run. This uses real recorded data and executed accounting computation; it introduces neither a scientific simulator nor new physical measurements (pages 3–5, 17–18).
+
+**Openness:** `Page 10 reports release of schemas, tool server, harness adapters, prompts, evaluation scripts, share prices, per-instance forecasts, reported EPS, and scores.`, `Public-filings fetch scripts and the filtered CC-News index are provided.`, `Released trajectories replace licensed transcript text with document identifiers; IBES consensus values are withheld.`
+
+**New physical measurements:** No
+
+**Limits:** The accounting DAG encodes identities rather than discovered causal relationships. Calculator execution does not make the task an executed research-experiment environment. Historical news availability is approximate; the sample emphasizes large US companies; training exposure cannot be completely excluded; analyst information access differs; licensing limits reproduction. Recorded explanations do not establish faithful internal reasoning (pages 4–5, 10, 16–17).
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Training reward and a model-training procedure are not established. Evaluation compares forecasts with reported GAAP diluted EPS verified against filings. Metrics include price-deflated absolute error, win rate against dated analyst consensus, surprise-direction accuracy, interval coverage, width, proper interval score, resource use, and format compliance. These outcome scores are unavailable to the agent during its attempt (pages 4–5, 18). |
+| Reset | Each run is a single attempt without restarts or retries. Configurations are evaluated three times per instance as separate runs. An agent-accessible reset mechanism is not established (pages 4–5, 18). |
+| Branching | Checkpointing, state cloning, and trajectory branching support are not established. Agents may choose retrieval order within the fixed corpus; after successful calculation, the prompts require immediate final output without further tool calls or recalculation (pages 27–29). |
 
 </details>
 
