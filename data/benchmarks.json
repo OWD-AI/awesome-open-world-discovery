@@ -3377,6 +3377,166 @@
       "name": "Beyond fabrication: Misattributed numbers in papers written by AI research agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.38691"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Identification supplies candidate relations; Discovery requires constructing a relation without candidates.",
+        "Adaptive exploration permits numerical input proposals and requested observables within declared constraints.",
+        "The paper states that code and data are available through an anonymous repository; availability is not independently established here."
+      ],
+      "focus": "Scientific relation inference in 44 literature-grounded task families, each with Original and synthetic Counterfactual environments. Accepted Oracle queries return deterministic simulated observations, optionally quantized; rejected queries return constraint feedback. Prior-only supplies no observations, Fixed supplies preset observations, and Adaptive permits sequential experiment selection (pages 3–6 and 13).",
+      "limits": "These are deterministic relation simulators without measurement noise, not new physical measurements or direct replay of source experiments. Historical tasks are idealizations, and Temporal tasks implement selected simplified relations. Adaptive exploration follows confidence-based stopping; the main comparison uses different observation budgets across protocols (pages 4–5, 9, 18 and 21).",
+      "training": {
+        "reward": "An agent-training reward is not established. Evaluation compares arithmetic-expression predictors with simulator responses on hidden inputs, measures tolerance-based weak success and exact-expression strict success, and checks protocol compliance. GPT-6 Astra separately judges explanations post hoc using a three-part rubric (pages 5–6 and 13–14).",
+        "reset": "Each episode starts with an empty interaction history and is isolated from other episodes; three independent repetitions carry no observations, responses, or records between episodes (pages 4 and 6). An in-episode reset API is not established.",
+        "branching": "Checkpoint restoration or branching an episode is not established. Original and Counterfactual environments are separately instantiated paired tasks."
+      },
+      "evaluation_family": "other",
+      "id": "paper-91b3edf2f063b874",
+      "resource_id": "paper-91b3edf2f063b874",
+      "name": "SciGame: Let Agents Play the Scientific Discovery Games in the Real and Counterfactual World",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.37919"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents construct Lean proofs for fixed research-level mathematical statements.",
+        "Closed-book, frozen historical retrieval, and live-web conditions control information access.",
+        "The paper supplies a dataset collection address; independent release availability is not established here."
+      ],
+      "focus": "Formal mathematical rediscovery and open-problem solving. Agents can compile and test Lean files and use Python with numpy, sympy and mpmath. Retrieval, when allowed, is mediated outside the sandbox. Feedback comes from executed compilation and submission checks; final grading uses two independent Lean checkers (pages 7 and 19–20).",
+      "limits": "The corpus records source claims and is predominantly mathematics. Formal proof execution is computation, not a physical experiment or a scientific simulator. Acceptance of an open item triggers statement review before a discovery claim. Hidden reference answers are unavailable to the solver and pre-submission checker (pages 4, 6–7 and 19).",
+      "training": {
+        "reward": "An agent-training reward is not established. Final success requires both the grader and comparator to accept a proof with the reference answer. The pre-submission checker checks rules, statement fidelity, compilation and permitted axioms without consulting that answer. No model judge is used (pages 7 and 19).",
+        "reset": "Each problem attempt receives a fresh isolated sandbox. There is one attempt per item and condition. Continuation resumes the same session until submission, budget exhaustion or a stopping condition; arbitrary solver-requested reset is not established (pages 7 and 19).",
+        "branching": "Checkpoint restoration or branching an attempt is not established. Native and continuation protocols are separate evaluation conditions."
+      },
+      "evaluation_family": "other",
+      "id": "paper-4131f32dcc0451ab",
+      "resource_id": "paper-4131f32dcc0451ab",
+      "name": "OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.37739"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Models choose WAIT, ASK or ANSWER once per second using only observations available so far.",
+        "Multiple-choice and open-ended responses are evaluated.",
+        "Correct requests reveal curated missing evidence or clarification; the main setting permits at most one ASK and one ANSWER per turn."
+      ],
+      "focus": "Proactive information acquisition over prerecorded videos, including real video sources and Blender-generated videos. Missing evidence is constructed through blurring, viewpoint changes and withheld or altered concepts, queries and preferences. A correct ASK triggers provision of the missing information (pages 5–8).",
+      "limits": "The stream is a benchmark presentation of recorded and synthetic video assets; requested viewpoint changes do not establish live camera control or new physical measurements. Every interaction begins with a user query, and embodied physical actions are outside scope. The feedback enum describes the recorded-data component; the video collection also contains synthetic material (pages 7 and 18).",
+      "training": {
+        "reward": "An agent-training reward is not established. Ask-F1 harmonically combines timing-weighted ASK correctness and ANSWER correctness conditional on a correct ASK. Multiple-choice items have a manually verified correct option; open-ended correctness uses Gemini-3.8 Flash as judge (pages 5–8 and 18).",
+        "reset": "After each turn, questions, options and action histories are discarded while shared video memory persists. Native streaming models use their own memory mechanisms. A full environment reset API is not established (pages 8 and 10).",
+        "branching": "Checkpoint restoration, video rewind or branching an interaction is not established. Oracle and ASK-budget experiments are separate evaluation configurations."
+      },
+      "evaluation_family": "other",
+      "id": "paper-5dadb5be9e7c4d96",
+      "resource_id": "paper-5dadb5be9e7c4d96",
+      "name": "AskStream: When and What to Ask Proactively under Uncertainty in Streaming Video Understanding",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.38678"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents may inspect, edit, build and execute runnable starting applications.",
+        "Hidden outcome criteria permit multiple valid implementations without gold code or target screenshots.",
+        "Requests are fixed; continuing user feedback is not simulated."
+      ],
+      "focus": "Application revision using fixed real-user requests, repository context and optional multimodal attachments. Solver feedback comes from actual tool and application execution. Final evaluation combines source inspection, builds, browser renders and recorded interactions, followed by a separate verifier challenging positive judgments (pages 4–6 and 21).",
+      "limits": "This evaluates software revisions rather than executed scientific research experiments. Media attachments are recorded inputs, and browser actions are computational execution, not physical measurements. LLM judgments remain fallible, required missing evidence aborts aggregation, and unrecoverable service dependencies are excluded (pages 4–5 and 21–22).",
+      "training": {
+        "reward": "An agent-training reward is not established. Post-run hidden criteria receive PASS, PARTIAL or FAIL after refutation and evidence audits. Strict Completion counts PASS only; Graded Completion gives PARTIAL half credit; Full-Pass Rate requires every criterion to pass. The main harness permits three hours and 120 turns (pages 5–6).",
+        "reset": "Each solver receives a clean working copy with fixed container manifests and staging procedures. Baselines are retained and evaluator copies are isolated. An in-run environment reset API is not established (pages 6 and 21).",
+        "branching": "Solver checkpoint restoration or branching is not established. Separate baseline and solvability probes operate in isolated workspaces for failure attribution (pages 6 and 22)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-11c338bac904086c",
+      "resource_id": "paper-11c338bac904086c",
+      "name": "Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.35138"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Benchmark diagnosis analyzes fixed item-response matrices.",
+        "BenchFill adaptively generates item variants using nearby annotated items and accumulated candidate memory.",
+        "The paper provides code and dataset addresses and states that difficulty estimates are released; independent availability is not established here."
+      ],
+      "focus": "Benchmark difficulty-distribution diagnosis and targeted item augmentation. Existing and newly collected model-response outcomes support Bayesian IRT difficulty estimates. BenchFill receives validity judgments and calibrated candidate difficulties, then selects items near a target gap midpoint (pages 5–9).",
+      "limits": "This is benchmark analysis and item generation, not an environment in which evaluated agents conduct scientific research experiments. Feedback includes empirical model responses and fitted probabilistic estimates; it is neither a physical simulator nor new physical measurement. Difficulty depends on the model panel, scalar IRT assumptions and normalization; selected new items require human validation (pages 6, 8–9, 26–28 and 33).",
+      "training": {
+        "reward": "An agent-training reward is not established. BenchFill optimizes proximity to a target difficulty using GPT-5.4 validity checks and IRT calibration from repeated model responses. Evaluation measures gap reduction and target deviation. Three mild-SFT cases test whether augmentation detects localized improvement; their full training objective is not established in the supplied text (pages 8–9 and 32–34).",
+        "reset": "Each target-gap search initializes memory with nearby existing item–difficulty pairs. Environment or agent reset support is not established (pages 8 and 32).",
+        "branching": "Candidate search uses four parents and four children per parent, with at most eight rounds and adaptive memory updates. This establishes a population of alternative items, but checkpoint-based environment branching is not established (pages 9 and 32–33)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-02eac071a6a0b020",
+      "resource_id": "paper-02eac071a6a0b020",
+      "name": "Your Benchmark Is an Empirical Measure Over Difficulty",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.29927"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "The protocol accepts any message-level generator supplied by the user.",
+        "Interventions follow fixed metaorder schedules rather than an adaptive research-agent policy.",
+        "The paper states that an open-source package contains the protocol, calibration, estimators, controls and reporting rules; users supply a model and LOBSTER-format data."
+      ],
+      "focus": "Intervention fidelity of generative limit order book models. Generated messages and simulated order matching produce price and order-flow responses under free generation, metaorder injection and relaxation. Real recorded market data supplies conditioning windows and stock-specific calibration; replay and known-kernel controls provide comparisons (pages 2–5 and 9).",
+      "limits": "Injected orders execute inside the simulator, not on a live exchange. Recorded market data does not establish new market transactions or physical measurements. The tested protocol fixes participation, child-size rules, aggressive orders and schedules, and covers one month on one exchange. No downstream agent-policy training benefit is demonstrated (pages 2, 4 and 8–9).",
+      "training": {
+        "reward": "A trading-agent training reward is not established. Neural generators are trained for next-token prediction. Benchmark evaluation applies fixed claims covering flow balance, impact identifiability, visible-over-blind attribution, agreement with the square-root law, and credible relaxation, with trading-day-clustered uncertainty (pages 3–5 and 9).",
+        "reset": "Rollouts are initialized from conditioning windows in recorded streams. Free, intervention and control runs reuse conditioning windows; an arbitrary in-rollout reset API is not established (page 2).",
+        "branching": "Matched counterfactual runs are supported: visible and blind build-up interventions use the same windows and seeds, with injected orders hidden from model inputs in the blind run. This establishes paired reruns; general checkpoint-fork support is not established (pages 2–3)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-89c9f55a4e2b48ff",
+      "resource_id": "paper-89c9f55a4e2b48ff",
+      "name": "LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book Models",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.27100"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 lists project, code, and dataset locations; release completeness is not established by the supplied text.",
+        "Reference analyses and rubrics remain private; later disclosures and outcomes are hidden from the solving agent."
+      ],
+      "focus": "86 equity-research and market-forecasting assignments using recorded financial documents and structured market data under task-specific availability cutoffs. Agents retrieve evidence, execute local numerical analysis and financial models, and submit forecasts or research deliverables. Forecast-driven trading returns are simulated retrospectively using recorded prices.",
+      "limits": "Each task permits 7,200 seconds and three submission attempts. Search, reads, downloads, caches, and structured queries enforce authorized pre-cutoff versions; local bash computation has network access disabled. This is recorded-data analysis with executed computation and retrospective trading simulation; no new physical measurements or live trade execution are described. Retrieval controls cannot remove outcomes memorized during pretraining. Forecast outcomes include exogenous noise, semantic scores depend on judge choice, and default answer-based scoring can credit rejected or unsubmitted answers. The return simulation covers twenty opportunities with overlapping issuers or disclosures.",
+      "training": {
+        "reward": "Training use is proposed, but an implemented training reward or policy-training experiment is not established. Evaluation uses private expert-authored weighted criteria on a 0–100 scale: deterministic numerical checks and GPT-6 Astra semantic judging. Market tasks use declared price or ranking losses. submit_answer returns format acceptance or errors; financial grading is separate. Default evaluation grades the final available answer, while strict evaluation requires an accepted submission.",
+        "reset": "Environment reset, checkpoint restoration, and replay APIs are not established. Immutable source versions and frozen query results preserve evidence snapshots but do not establish reset support.",
+        "branching": "Subagent-assisted reading and context compression are described. Environment-state cloning, rollback, and branching from saved states are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6c4df3fa24e47b4f",
+      "resource_id": "paper-6c4df3fa24e47b4f",
+      "name": "Investor's Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.38342"
     }
   ]
 }

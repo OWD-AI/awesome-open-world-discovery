@@ -25390,6 +25390,359 @@
           24
         ]
       }
+    },
+    "paper-91b3edf2f063b874": {
+      "institutions": [
+        "MBZUAI",
+        "McGill University",
+        "Shanghai AI Lab"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses 20 historical and 24 recent-paper task families, each with original and mutated environments. Compares prior-only reasoning, fixed observations, and adaptive Oracle queries over three repetitions. Predictors use arithmetic expression trees. Evaluation combines hidden-input prediction, weak numerical success, strict symbolic success, and LLM-scored explanations; the results table covers nine models.",
+      "evidence": "GPT-6 Astra reaches 98.6% weak success but only 16.7% strict success on adaptive Temporal Counterfactual Discovery. Strong explanations can accompany inaccurate predictors. Adaptive exploration benefits some stronger models with sufficient interaction, but at budgets of eight or fewer queries, fixed observations outperform adaptive counterfactual discovery. These results distinguish numerical approximation from exact law recovery.",
+      "discovery_use": "Directly evaluates agents inferring unknown scientific relations, designing experiments, revising hypotheses, and following evidence when familiar laws are altered.",
+      "limits": "Only 44 mostly physics families, three repetitions, deterministic environments, synthetic mutations, and simplified source relations. Adaptive and fixed main-table results use different observation budgets. Provider cutoffs cannot establish absence of contamination. Curation and explanation scoring depend on LLMs, including an evaluated model as judge. The paper inconsistently describes five versus nine evaluated models, and one explanation-score example in the prose does not match its discovery cell in Table 2. The author-linked anonymous repository resolves but exposes no inspectable contents through the web reader.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates agents inferring unknown scientific relations, designing experiments, revising hypotheses, and following evidence when familiar laws are altered.",
+        "pdf_sha256": "2e639968ec4512224215c01dfc7069a7e517204cad04f2f3c82bc361230ae5f0",
+        "evidence_pages": [
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    "paper-4131f32dcc0451ab": {
+      "institutions": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Collects 12,151 source records and constructs 200 Lean-stated benchmark items: 110 with located solutions and 90 considered open. Evaluates seven agents on HQ-50, comprising 40 solved and 10 open items, with three-hour attempts under closed-book, historical retrieval, and live-web conditions. Two Lean checkers grade submissions; model-specific filters exclude cutoff and lineage exposure. Native and continuation harness protocols are compared.",
+      "evidence": "Closed-book performance reaches at most 3 of 40 solved items natively and 7 with continuation; the latter best model scores 4 of 15 eligible clean items. Of 181 live-web solves, 167 fetched a located solution source. Historical retrieval provides no systematic improvement. Continued prompting sometimes improves results, but successes concentrate on a small number of comparatively accessible items.",
+      "discovery_use": "Directly benchmarks research-level rediscovery and open mathematical problems, with formal verification and explicit separation of solution retrieval from independent problem solving.",
+      "limits": "The corpus is 93.4% mathematics, retains duplicate source records, and labels 46.0% unassessed; source status is not independently certified. Formal statements and curation rely heavily on AI reviewers, and formal acceptance alone does not establish fidelity to the intended research problem. Evaluation uses one attempt per condition on only 50 items, with unequal clean denominators. Open-item acceptances require review before any discovery claim. The historical retrieval cutoff conflicts with the earliest reported solution date. The author-listed dataset collection was inaccessible, so no downloadable release is retained as verified.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Directly benchmarks research-level rediscovery and open mathematical problems, with formal verification and explicit separation of solution retrieval from independent problem solving.",
+        "pdf_sha256": "baffe3cd140c349c85bd1b8e1d94bf92c449160bcaa8a3c97a531234f853e821",
+        "evidence_pages": [
+          1,
+          7,
+          8
+        ]
+      }
+    },
+    "paper-5dadb5be9e7c4d96": {
+      "institutions": [
+        "The Key Laboratory of Cognition and Decision Intelligence for Complex Systems, Institute of Automation, Chinese Academy of Sciences",
+        "Beijing Academy of Artificial Intelligence (BAAI)",
+        "Hunan Normal University",
+        "Minzu University of China"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs 438 videos with 1,401 questions across eight uncertainty subtasks and 2,714 annotated temporal windows. Agents choose WAIT, ASK, or ANSWER once per second. Ask-F1 harmonically combines timing-weighted asking and answering, with answering conditioned on a correct request. Offline models use hierarchical StreamHarness memory; native streaming models retain their own memory. Evaluation includes multiple-choice, open-ended, oracle, memory, and request-budget experiments.",
+      "evidence": "The strongest offline model scores 52.18% Ask-F1 in the main multiple-choice evaluation, versus 7.22% for the strongest native streaming model. On KVEM, supplying oracle request timing raises performance from 37.17 to 58.30; supplying both timing and request content raises it to 81.0, a 43.83 percentage-point gain. Additional requests help but show diminishing returns. Cross-turn memory benefits user uncertainty more than visual uncertainty.",
+      "discovery_use": "Evaluates a concrete discovery capability: recognizing missing knowledge and actively acquiring evidence or clarification before answering in a partially observed environment.",
+      "limits": "The main protocol permits only one request per turn and starts from an explicit user query. Missing information and valid actions are curated, so this does not establish autonomous discovery of novel scientific knowledge. Model size, training, and memory differences complicate offline-versus-streaming comparisons. Open-ended correctness uses an LLM judge. Ask-F1 is a harmonic stage score rather than conventional precision-recall F1. Review covers the supplied body sections and page 18 limitations, not the entire 42-page supplement; unrendered empirical plots were assessed through text only.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Evaluates a concrete discovery capability: recognizing missing knowledge and actively acquiring evidence or clarification before answering in a partially observed environment.",
+        "pdf_sha256": "84b239f16c045e554dc4de946330d39957b8cbd5775ab96d37dc60f6a513ebb7",
+        "evidence_pages": [
+          1,
+          4,
+          18
+        ]
+      }
+    },
+    "paper-dd0575522a340479": {
+      "institutions": [
+        "IQuest Research",
+        "Zhejiang University",
+        "Gaoling School of Artificial Intelligence, Renmin University of China",
+        "Shenzhen Institutes of Advanced Technology",
+        "Shanghai Jiao Tong University",
+        "Peking University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Build intents from occupations, skills, and deliverables. Represent information dependencies and locations in a hidden support graph while leaving derived answers to the solver. Probe materialized tasks using only accessible inputs, constrain repairs to preserve substantive work, and collect independent teacher demonstrations. Evaluate matched base models, data scaling, construction components, and teacher choice.",
+      "evidence": "The corpus contains 112,686 tasks across 612 occupations. All three students improve across four professional benchmarks; WorkPilot-35B-A3B rises from 879 to a locally estimated 1565 GDPval-AA Elo. In controlled 5K-task studies, information planning and repair raise Elo from 1245 to 1293 to 1326, while cross-file defect incidence falls from 32.82% to 25.74% to 4.84%.",
+      "discovery_use": "Information-support planning and isolated probe repair provide concrete mechanisms for training agents to derive results from evidence and diagnose missing knowledge. This supports discovery training, although the demonstrated outcomes concern professional work rather than autonomous scientific investigation.",
+      "limits": "Training and solver evaluation are text-only and use supervised demonstrations. Probe judgments are not independent ground truth; only blockers trigger repair, and most teacher outputs receive no task-specific correctness assessment. Local Elo confidence intervals exclude calibration-method error. Construction averages 11.656 million model tokens per attempted task. The official repository currently has empty dataset and model download entries.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "learning",
+        "rationale": "Information-support planning and isolated probe repair provide concrete mechanisms for training agents to derive results from evidence and diagnose missing knowledge. This supports discovery training, although the demonstrated outcomes concern professional work rather than autonomous scientific investigation.",
+        "pdf_sha256": "01280113f7d112a61b23d763a98f1907e24bff0507604012e1083e8e49d2e17b",
+        "evidence_pages": [
+          1,
+          6,
+          10
+        ]
+      }
+    },
+    "paper-0b73660e31921f56": {
+      "institutions": [
+        "Zhejiang University",
+        "Nanyang Technological University",
+        "Shanghai Qiji Zhifeng Co., Ltd"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Collect structural, resource, and before-and-after interaction evidence through an Explorer–Builder. Implement local routes and state changes, freeze candidates, and verify against source evidence and site contracts. Evaluate historical fidelity, offline interaction validity, verification traces, accepted task supply, and downstream supervised training.",
+      "evidence": "The inventory contains 244 website artifacts and supports 12,984 accepted tasks. On five WebHarbor sites and 14 states, visual fidelity improves with 12 blind-audit wins and two ties. WebHarbor nevertheless achieves higher all-test interaction pass rates, 76.7% versus 63.3%. Training Qwen3.5-9B on 5,856 trajectories improves REAL success by 9.9 points and WebArena-Verified overall success by 13.33 points, while strict retrieval performance declines.",
+      "discovery_use": "The system explores unknown website behavior, grounds reconstructed state transitions in observations, and routes verification failures to repair or additional evidence collection. This is a concrete discovery-and-verification harness that also supplies reusable learning environments.",
+      "limits": "Inventory membership establishes homepage availability, not uniform functional acceptance. Historical fidelity has defective references and asymmetric JavaScript conditions. Verification evidence is observational: only one comparison strictly matches candidate and semantic target, and recapture benefits are not causally established. Training covers one 9B backbone, with limited semantic contamination checks. The public repository does not bundle the 244 website source trees.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "systems",
+        "rationale": "The system explores unknown website behavior, grounds reconstructed state transitions in observations, and routes verification failures to repair or additional evidence collection. This is a concrete discovery-and-verification harness that also supplies reusable learning environments.",
+        "pdf_sha256": "a2f031bd03f1672cf3a123cc2a4b742d7672bac6752f242ec903e2e9af139f29",
+        "evidence_pages": [
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    "paper-11c338bac904086c": {
+      "institutions": [
+        "Fudan University",
+        "Alibaba Token Hub, Alibaba Group",
+        "Zhejiang University",
+        "The Chinese University of Hong Kong",
+        "Shanghai Jiao Tong University",
+        "Nanyang Technological University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Recover runnable starting applications and curate 273 tasks with 2,331 expert criteria. Evaluate ten endpoints under a shared harness. Grade final artifacts using source and browser evidence, challenge positive judgments with a separate verifier, and abort aggregation when required evidence is missing. Supplement results with human review, evaluator sensitivity, and harness comparisons.",
+      "evidence": "The strongest endpoint achieves 69.9% mean strict completion but fully passes only 26.4% of tasks. Every endpoint has lower criterion completion on repository tasks spanning three or four edit types. A paired WebCompass experiment raises graded completion from 73.6% to 95.1% under agentic execution. Harness changes can reverse relative model ordering on repository edits.",
+      "discovery_use": "Its execution-based judge-then-refute protocol evaluates whether agent claims survive source inspection, interaction tests, and independent challenge. This contributes discovery-relevant verification evaluation, with demonstrated scope limited to application revisions.",
+      "limits": "Tasks are selected for difficulty, verifiability, and historical failure signals, and do not simulate continuing user feedback. LLM judgments remain fallible; human review covers 200 outputs without a reported quantitative agreement estimate. Cross-benchmark comparisons use different protocols. Appendix B.2 incorrectly calls documents highest in graded completion; Table 6 gives images the highest value. Official release documentation describes 96 public ME tasks, excludes RE, and supplies no public archive download link.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Its execution-based judge-then-refute protocol evaluates whether agent claims survive source inspection, interaction tests, and independent challenge. This contributes discovery-relevant verification evaluation, with demonstrated scope limited to application revisions.",
+        "pdf_sha256": "b8512c87eb152ac93bdd0b9a73dfcb34d507ccf87dfda0d7c30cb9ad4920725f",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-02eac071a6a0b020": {
+      "institutions": [
+        "University of Illinois Urbana-Champaign",
+        "University of California San Diego",
+        "New York University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        34
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Derives Wasserstein score-distortion bounds and a maximum-gap detection boundary. Estimates difficulty using Bayesian IRT across 25 benchmarks, checks fitting robustness, and evaluates iterative rewriting with calibrated difficulty feedback against a budget-matched baseline.",
+      "evidence": "Ten of 25 benchmarks have difficulty-distribution mismatch of at least 0.10; eight have maximum gaps of at least 0.10. Three inserted items reduce top-three gap sums by 21.09–38.88%, averaging 32.67% versus 17.52% for the baseline. In three localized-SFT cases, BenchFill augmentation detects gains that original and baseline-augmented benchmarks miss.",
+      "discovery_use": "Provides concrete diagnostics and benchmark repair for detecting model progress, including scientific reasoning and research-agent evaluations such as CORE-Bench. Its adaptive item-generation procedure directly addresses evaluation blind spots relevant to learning discovery capabilities.",
+      "limits": "Difficulty depends on the selected model panel, scalar IRT assumptions, and within-benchmark normalization. Uniform weighting is an agnostic default rather than a universal evaluation objective. Detection guarantees are worst-case and asymptotic; empirical progress-detection tests cover only three constructed cases. The workflow requires substantial response collection and final human validation.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Provides concrete diagnostics and benchmark repair for detecting model progress, including scientific reasoning and research-agent evaluations such as CORE-Bench. Its adaptive item-generation procedure directly addresses evaluation blind spots relevant to learning discovery capabilities.",
+        "pdf_sha256": "72efe1f8f8fedd0dca970c836a8c87ce53d5d28958cd830874afd9ccfbb83028",
+        "evidence_pages": [
+          1,
+          6,
+          34
+        ]
+      }
+    },
+    "paper-89c9f55a4e2b48ff": {
+      "institutions": [
+        "British Open-ended Learning and Discovery Lab (BOLD)",
+        "University of Oxford",
+        "University of California Los Angeles",
+        "Oxford Man Institute of Quantitative Finance"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Runs free generation, metaorder injection, and post-execution relaxation across five neural generators and five stocks. Uses paired visible and blind interventions, replay and known-kernel controls, identifiability gates, stock-specific calibration, and trading-day-clustered uncertainty.",
+      "evidence": "All 25 neural model–stock pairs exhibit identifiable, model-attributable impact. Estimated exponents span 0.63–1.21, and none of their reported intervals includes 0.5. No neural pair passes the credible-relaxation criterion. Distributional rankings do not reliably predict intervention fidelity.",
+      "discovery_use": "Tests whether learned world models respond correctly to agent interventions, separating distributional resemblance from counterfactual fidelity. This is a concrete evaluation contribution for agents learning and testing action consequences, independent of the authors' laboratory name.",
+      "limits": "Tests one month, one exchange, five stocks, and a fixed participation rate, child-size rule, and aggressive-order protocol. EA is outside the training corpus despite broader in-distribution wording elsewhere. Long-memory explanations remain hypotheses; longer-context variants do not isolate the cause. No downstream agent-policy improvement is demonstrated.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Tests whether learned world models respond correctly to agent interventions, separating distributional resemblance from counterfactual fidelity. This is a concrete evaluation contribution for agents learning and testing action consequences, independent of the authors' laboratory name.",
+        "pdf_sha256": "156f00a7d7678990f8c78f0d4fd1e2119ac2b664b1ec3b91f6fb9504e2a97f6b",
+        "evidence_pages": [
+          1,
+          2,
+          8
+        ]
+      }
+    },
+    "paper-9d43cac93912cd86": {
+      "institutions": [
+        "Amazon Web Services",
+        "Case Western Reserve University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Agents use isolated contexts, asynchronous returns, parallel tactic probes, and a stateless elastic elaboration service. Final acceptance freezes theorem statements and checks compilation and permitted axioms independently. Aegis generates safe Rust implementations, differentially tests Rust and translated Lean outputs, then uses separate agents to formulate and prove or refute frozen specifications.",
+      "evidence": "EasyProver proves 669 of 672 PutnamBench problems and resolves 597 of 600 NTP4VC tasks, including nine refutations. It resolves all 189 VERINA tasks. Aegis produces 2,045 validated program pairs and 11,533 candidate specifications. In its selected 2,000-statement sample, 1,997 are attempted and 1,054 are proved, leaving 943 attempted statements unresolved under the 30-minute budget.",
+      "discovery_use": "Provides an agent harness for discovering and verifying proofs, together with automatically generated implementation-level propositions and independently checkable positive or negative labels.",
+      "limits": "No component ablations or same-model plain-Lean baseline isolate harness benefits. Published baseline budgets and proved-versus-resolved metrics differ. The model’s undisclosed training cutoff leaves competition-solution contamination possible. Proof guarantees concern frozen Lean propositions and permitted axioms; finite differential tests do not prove Rust–Lean equivalence or specification adequacy. The Aegis evaluation excludes pre-screened refutations and requested-false statements. RL training and other-prover evaluation remain future work. Review covers supplied body and early case-study pages, not all 88 pages.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "systems",
+        "rationale": "Provides an agent harness for discovering and verifying proofs, together with automatically generated implementation-level propositions and independently checkable positive or negative labels.",
+        "pdf_sha256": "0fea971eb47838b8b7947b23dd61466a283b1e4e1ae8f08ea0d87d01ad988e18",
+        "evidence_pages": [
+          1,
+          3,
+          8,
+          9
+        ]
+      }
+    },
+    "paper-8d74348812691b20": {
+      "institutions": [
+        "MIT"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        10,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Under a shared linear output head, position-aligned cross-entropy gradients recover the exact forward-KL gradient for MTP representations through straight-through routing. The output head retains cross-entropy supervision. Experiments train 167M–1.2B models on approximately 31.5B tokens, measure gradient diagnostics and speculative decoding, and compare zero-shot evaluation and NTP-only math/code fine-tuning against standard MTP, NTP, and explicit KL-MTP.",
+      "evidence": "Soft-MTP improves average zero-shot accuracy over standard MTP at every tested scale, with roughly half-point gains at 689M and 1.2B. Average speculative speedup improves approximately 1.4–1.5% over standard MTP. At 1.2B it leads standard MTP in seven of eight fine-tuning metrics, including about 3.1 points on HumanEval pass@64. Measured training throughput differs by only 0.07% from standard MTP.",
+      "discovery_use": "Contributes a pretraining objective with measured transfer to mathematical and code reasoning, providing a concrete training connection to discovery-capable models beyond its inference-speed benefit.",
+      "limits": "Empirical scaling stops at 1.2B; frontier-scale claims rely on architectural arguments. Small models do not consistently outperform NTP, and MTP loss improves only from 689M onward in the main runs. Explicit KL-MTP performs better on math fine-tuning. Hidden-state interference probes are diagnostic proxies, not realized optimizer updates. Exact KL recovery applies upstream of a shared linear head; the output head receives cross-entropy. Code results select temperatures by best pass@k. Autonomous discovery is not evaluated.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "learning",
+        "rationale": "Contributes a pretraining objective with measured transfer to mathematical and code reasoning, providing a concrete training connection to discovery-capable models beyond its inference-speed benefit.",
+        "pdf_sha256": "a740eebee3b0d579883301fe4509236e39cbaba21b918669f2a1645dad6b6c3e",
+        "evidence_pages": [
+          1,
+          5,
+          10,
+          23
+        ]
+      }
+    },
+    "paper-6c4df3fa24e47b4f": {
+      "institutions": [
+        "Prophetlab",
+        "RethinkLab",
+        "USTC",
+        "Antai College of Economics and Management, SJTU",
+        "Foresight Fund",
+        "IvyRock Asset Management"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A versioned corpus enforces task-specific availability cutoffs across search, reading, downloads, cached results, and computation. Experts construct 86 assignments and evidence-linked financial dependency graphs. Eleven systems share tools and budgets. Deterministic checks grade numerical criteria, while a model judges semantic criteria. Separate analyses measure submission compliance, forecast outcomes, judge sensitivity, and simulated returns.",
+      "evidence": "The leading overall scores are 68.1 and 66.9, but the overall leader scores only 52.5 on Forecast & Model. Rankings change under realized forecast criteria and trading returns. In a public-web comparison, 49 of 86 trajectories retrieve explicitly post-cutoff sources despite dated queries. Case analyses locate failures in assumptions, accounting scope, interpretation, and consistency beyond retrieval and arithmetic.",
+      "discovery_use": "Evaluates autonomous research agents forming testable hypotheses, reconciling evidence, constructing forecasts, and revising judgments under enforced information boundaries. Its contribution is a discovery-relevant research evaluation protocol.",
+      "limits": "Retrieval restrictions cannot remove historical outcomes memorized during pretraining. Forecast outcomes contain exogenous noise, and the return simulation covers only twenty opportunities with shared issuers or disclosures. Semantic judge choice changes scores and ordering. Default scoring can credit answers from rejected or missing submissions; strict completion produces substantial drops for some systems. The rendered radar charts express relative strengths rather than absolute scores. The earlier benchmark-release date is distinct from the paper’s original publication timestamp.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Evaluates autonomous research agents forming testable hypotheses, reconciling evidence, constructing forecasts, and revising judgments under enforced information boundaries. Its contribution is a discovery-relevant research evaluation protocol.",
+        "pdf_sha256": "a0da96a9051953347125188b3f684d24a15d9c784932538c05337f80f8a4672e",
+        "evidence_pages": [
+          1,
+          5,
+          8,
+          11
+        ]
+      }
     }
   }
 }

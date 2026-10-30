@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T11:54:10-04:00",
+  "updated_at": "2026-10-30T13:27:57-04:00",
   "window_start": "2026-10-01",
   "window_end": "2026-10-30",
   "window_days": 30,
@@ -532,6 +532,28 @@
       ]
     },
     {
+      "title": "Multi-Token Prediction Done Right",
+      "url": "https://arxiv.org/abs/2610.38331",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "Soft-MTP separates standard multi-token prediction gradients into self-distillation and residual components. It removes the residual from upstream updates using existing cross-entropy computations, improving reasoning transfer and draft prediction without materializing full-vocabulary teacher distributions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-28 06:31:05 UTC, replacing the supplied Hugging Face midnight label. The America/New_York date is October 28.",
+      "review_status": "approved",
+      "relevance": "Contributes a pretraining objective with measured transfer to mathematical and code reasoning, providing a concrete training connection to discovery-capable models beyond its inference-speed benefit.",
+      "id": "8d74348812691b20",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38331"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JaydenTeoh/Soft-MTP"
+        }
+      ]
+    },
+    {
       "title": "Matija Franklin discusses allocating scarce experimental capacity",
       "url": "https://x.com/FranklinMatija/status/2115596468882968700",
       "published_at": "2026-10-28",
@@ -590,6 +612,36 @@
         {
           "label": "Code",
           "url": "https://github.com/cvlab-kaist/L3G-World"
+        }
+      ]
+    },
+    {
+      "title": "Investor's Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?",
+      "url": "https://arxiv.org/abs/2610.38342",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "Investor’s Last Exam evaluates whether agents can turn historically available financial evidence into defensible forecasts and investment judgments. It connects evidence provenance, assumptions, calculations, research quality, and subsequent outcomes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-28 06:39:24 UTC, replacing the supplied Hugging Face midnight label. The America/New_York date is October 28. The October 15 benchmark release is a separate artifact event.",
+      "review_status": "approved",
+      "relevance": "Evaluates autonomous research agents forming testable hypotheses, reconciling evidence, constructing forecasts, and revising judgments under enforced information boundaries. Its contribution is a discovery-relevant research evaluation protocol.",
+      "id": "6c4df3fa24e47b4f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38342"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Prophetlab/Investor-Last-Exam"
+        },
+        {
+          "label": "Project",
+          "url": "https://prophet-lab.cn/benchmarks/investor-last-exam-v1"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/HenryJ12/InvestorLastExam"
         }
       ]
     },
@@ -691,6 +743,32 @@
       "id": "35398fd76a773b0c"
     },
     {
+      "title": "AskStream: When and What to Ask Proactively under Uncertainty in Streaming Video Understanding",
+      "url": "https://arxiv.org/abs/2610.38678",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "AskStream extends streaming-video agents with an explicit information-seeking action. Its benchmark separates deciding when to request information, selecting useful requests, and answering after evidence arrives.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history establishes v1 on 28 October 2026 at 18:54:27 UTC. This supersedes the supplied October 27 date and the Hugging Face midnight timestamp.",
+      "review_status": "approved",
+      "relevance": "Evaluates a concrete discovery capability: recognizing missing knowledge and actively acquiring evidence or clarification before answering in a partially observed environment.",
+      "id": "5dadb5be9e7c4d96",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38678"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/wanglu-cs/AskStream"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/wanglucs/AskStream"
+        }
+      ]
+    },
+    {
       "title": "Apex announces model training with research trajectories",
       "url": "https://x.com/apexin_ai/status/2115425524340478404",
       "published_at": "2026-10-28",
@@ -739,6 +817,24 @@
         {
           "label": "Project",
           "url": "https://facebookresearch.github.io/RAM/blogs/hackbench/"
+        }
+      ]
+    },
+    {
+      "title": "A-RSI: Adaptive Task Refresh for Zero-Data Multimodal Self-Improvement",
+      "url": "https://arxiv.org/abs/2610.38568",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "A-RSI continues multimodal reinforcement learning by replacing a training pool when training logs indicate declining learning signal. It separates deciding when to acquire experience from computing reliable answers to generated tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-28 10:03:42 UTC, replacing the supplied Hugging Face midnight label. The America/New_York date is October 28.",
+      "review_status": "approved",
+      "relevance": "Directly studies recursive self-improvement through feedback-controlled replacement of generated training experience, with independently checked supervision and careful audits of apparent capability gains.",
+      "id": "e75cea69e3207ddf",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38568"
         }
       ]
     },
@@ -853,6 +949,46 @@
       ]
     },
     {
+      "title": "SciGame: Let Agents Play the Scientific Discovery Games in the Real and Counterfactual World",
+      "url": "https://arxiv.org/abs/2610.37919",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "SciGame isolates scientific law inference through paired original and counterfactual simulators. It distinguishes identifying supplied candidate formulas from discovering relations without candidates, and evaluates prediction separately from explanations and exact symbolic recovery.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history independently confirms v1 on 27 October 2026 at 20:02:47 UTC, matching the supplied original timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates agents inferring unknown scientific relations, designing experiments, revising hypotheses, and following evidence when familiar laws are altered.",
+      "id": "91b3edf2f063b874",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37919"
+        },
+        {
+          "label": "Code",
+          "url": "https://anonymous.4open.science/r/scigame"
+        }
+      ]
+    },
+    {
+      "title": "Scaling Lean Theorem Proving for Real-World Code Verification",
+      "url": "https://arxiv.org/abs/2610.38174",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "EasyProver coordinates recursive proof-search agents around Lean, separating exploration from final acceptance. Aegis generates harder verification tasks from translated Rust programs to extend evaluation beyond nearly saturated benchmarks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-28 02:23:25 UTC, replacing the supplied Hugging Face midnight label. This corresponds to October 27 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Provides an agent harness for discovering and verifying proofs, together with automatically generated implementation-level propositions and independently checkable positive or negative labels.",
+      "id": "9d43cac93912cd86",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38174"
+        }
+      ]
+    },
+    {
       "title": "Sagnik Ghosh details Agentic Scientist's research orchestration",
       "url": "https://x.com/sagnik_ghosh_11/status/2115069444229869783",
       "published_at": "2026-10-27",
@@ -895,6 +1031,24 @@
       "source": "Codex primary text-and-image checked",
       "links": [],
       "id": "a2f96ba5dbce6240"
+    },
+    {
+      "title": "OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery",
+      "url": "https://arxiv.org/abs/2610.37739",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "OpenFrontiers combines a provenance-preserving research-problem corpus with a formally graded mathematics benchmark. Its evaluation examines whether agents rediscover recent solutions and how retrieval access and continued prompting affect performance.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history independently confirms v1 on 27 October 2026 at 16:49:33 UTC, matching the supplied timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly benchmarks research-level rediscovery and open mathematical problems, with formal verification and explicit separation of solution retrieval from independent problem solving.",
+      "id": "4131f32dcc0451ab",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37739"
+        }
+      ]
     },
     {
       "title": "MLE-World: Predicting Machine Learning Experiment Outcomes with a Learned World Model",
@@ -1066,6 +1220,28 @@
       ]
     },
     {
+      "title": "WorkFactory: Turning Professional Intents into Executable Work for Scalable Agent Training",
+      "url": "https://arxiv.org/abs/2610.37161",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "WorkFactory constructs professional task environments by planning the information needed for intended outputs, testing whether that information is sufficient, and repairing blocking defects. Independent teacher trajectories then train the WorkPilot models.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata is 2026-10-27T00:00:00.000Z, consistent with the PDF v1 date and official repository announcement of 27 October. The supplied timestamp is preserved rather than the preceding New York calendar date.",
+      "review_status": "approved",
+      "relevance": "Information-support planning and isolated probe repair provide concrete mechanisms for training agents to derive results from evidence and diagnose missing knowledge. This supports discovery training, although the demonstrated outcomes concern professional work rather than autonomous scientific investigation.",
+      "id": "dd0575522a340479",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37161"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/IQuestLab/WorkFactory"
+        }
+      ]
+    },
+    {
       "title": "Work Agents: Systems, Capabilities, and Optimization",
       "url": "https://arxiv.org/abs/2610.35845",
       "published_at": "2026-10-26",
@@ -1084,6 +1260,32 @@
         {
           "label": "Project",
           "url": "https://github.com/EnjunDu/awesome-working-agent"
+        }
+      ]
+    },
+    {
+      "title": "WebAnything: From the Wild Web to Scalable Agent Environments",
+      "url": "https://arxiv.org/abs/2610.37786",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "WebAnything reconstructs executable website environments from browser evidence. A separate verifier examines frozen candidates and distinguishes implementation defects from insufficient source observations, enabling repair or targeted recapture.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata is 2026-10-27T00:00:00.000Z, corroborated at calendar-date resolution by the PDF v1 stamp of 27 October 2026. The supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The system explores unknown website behavior, grounds reconstructed state transitions in observations, and routes verification failures to repair or additional evidence collection. This is a concrete discovery-and-verification harness that also supplies reusable learning environments.",
+      "id": "0b73660e31921f56",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37786"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/china-qijizhifeng/Web-Anything"
+        },
+        {
+          "label": "Project",
+          "url": "https://china-qijizhifeng.github.io/Web-Anything/"
         }
       ]
     },
@@ -2133,6 +2335,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.35328"
+        }
+      ]
+    },
+    {
+      "title": "Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models",
+      "url": "https://arxiv.org/abs/2610.35138",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "Co-Design Bench evaluates real-user coding revisions against hidden acceptance criteria. It distinguishes partial requirement coverage from complete delivery and requires observable evidence for visual and behavioral claims.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata is 2026-10-26T00:00:00.000Z, matching the PDF arXiv v1 stamp of 26 October. The manuscript header dated 27 October is not substituted for original publication.",
+      "review_status": "approved",
+      "relevance": "Its execution-based judge-then-refute protocol evaluates whether agent claims survive source inspection, interaction tests, and independent challenge. This contributes discovery-relevant verification evaluation, with demonstrated scope limited to application revisions.",
+      "id": "11c338bac904086c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35138"
+        },
+        {
+          "label": "Project",
+          "url": "https://codesignbench.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Wiselnn570/Co-Design-Bench"
         }
       ]
     },
@@ -4747,6 +4975,36 @@
       ]
     },
     {
+      "title": "Your Benchmark Is an Empirical Measure Over Difficulty",
+      "url": "https://arxiv.org/abs/2610.29927",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "The paper represents benchmarks as distributions over item difficulty. It diagnoses mismatched difficulty weighting and uncovered difficulty intervals, then introduces BenchFill to generate validated items targeting those intervals.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is retained. The original arXiv submission record and PDF page 1 corroborate 21 October 2026, distinct from later indexing or conference events.",
+      "review_status": "approved",
+      "relevance": "Provides concrete diagnostics and benchmark repair for detecting model progress, including scientific reasoning and research-agent evaluations such as CORE-Bench. Its adaptive item-generation procedure directly addresses evaluation blind spots relevant to learning discovery capabilities.",
+      "id": "02eac071a6a0b020",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.29927"
+        },
+        {
+          "label": "Project",
+          "url": "https://benchmark-difficulty-measure.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ASTRAL-Group/benchmark-difficulty-measure"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Yifan99/BenchFill"
+        }
+      ]
+    },
+    {
       "title": "World Models with Configurable Perception",
       "url": "https://arxiv.org/abs/2610.27914",
       "published_at": "2026-10-20",
@@ -6854,6 +7112,28 @@
         {
           "label": "Project",
           "url": "https://cel-robot-learning.github.io/"
+        }
+      ]
+    },
+    {
+      "title": "LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book Models",
+      "url": "https://arxiv.org/abs/2610.27100",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "LOB-Impact evaluates generative market simulators through controlled order injections. It distinguishes whether impact exists, whether the learned model causes it, and whether its buildup and relaxation resemble market behavior.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is retained for this arXiv record. Its original submission record and PDF page 1 corroborate 19 October 2026; the November conference dates are separate events.",
+      "review_status": "approved",
+      "relevance": "Tests whether learned world models respond correctly to agent interventions, separating distributional resemblance from counterfactual fidelity. This is a concrete evaluation contribution for agents learning and testing action consequences, independent of the authors' laboratory name.",
+      "id": "89c9f55a4e2b48ff",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27100"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/george-nigmatulin/lob_impact"
         }
       ]
     },
@@ -13740,6 +14020,28 @@
       ]
     },
     {
+      "title": "Multi-Token Prediction Done Right",
+      "url": "https://arxiv.org/abs/2610.38331",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "Soft-MTP separates standard multi-token prediction gradients into self-distillation and residual components. It removes the residual from upstream updates using existing cross-entropy computations, improving reasoning transfer and draft prediction without materializing full-vocabulary teacher distributions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-28 06:31:05 UTC, replacing the supplied Hugging Face midnight label. The America/New_York date is October 28.",
+      "review_status": "approved",
+      "relevance": "Contributes a pretraining objective with measured transfer to mathematical and code reasoning, providing a concrete training connection to discovery-capable models beyond its inference-speed benefit.",
+      "id": "8d74348812691b20",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38331"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JaydenTeoh/Soft-MTP"
+        }
+      ]
+    },
+    {
       "title": "MAS-Loop: Beyond One-Shot Orchestration towards Self-Evolving Multi-Agent Systems",
       "url": "https://arxiv.org/abs/2610.38946",
       "published_at": "2026-10-28",
@@ -13780,6 +14082,36 @@
         {
           "label": "Code",
           "url": "https://github.com/cvlab-kaist/L3G-World"
+        }
+      ]
+    },
+    {
+      "title": "Investor's Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?",
+      "url": "https://arxiv.org/abs/2610.38342",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "Investor’s Last Exam evaluates whether agents can turn historically available financial evidence into defensible forecasts and investment judgments. It connects evidence provenance, assumptions, calculations, research quality, and subsequent outcomes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-28 06:39:24 UTC, replacing the supplied Hugging Face midnight label. The America/New_York date is October 28. The October 15 benchmark release is a separate artifact event.",
+      "review_status": "approved",
+      "relevance": "Evaluates autonomous research agents forming testable hypotheses, reconciling evidence, constructing forecasts, and revising judgments under enforced information boundaries. Its contribution is a discovery-relevant research evaluation protocol.",
+      "id": "6c4df3fa24e47b4f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38342"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Prophetlab/Investor-Last-Exam"
+        },
+        {
+          "label": "Project",
+          "url": "https://prophet-lab.cn/benchmarks/investor-last-exam-v1"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/HenryJ12/InvestorLastExam"
         }
       ]
     },
@@ -13842,6 +14174,32 @@
       ]
     },
     {
+      "title": "AskStream: When and What to Ask Proactively under Uncertainty in Streaming Video Understanding",
+      "url": "https://arxiv.org/abs/2610.38678",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "AskStream extends streaming-video agents with an explicit information-seeking action. Its benchmark separates deciding when to request information, selecting useful requests, and answering after evidence arrives.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history establishes v1 on 28 October 2026 at 18:54:27 UTC. This supersedes the supplied October 27 date and the Hugging Face midnight timestamp.",
+      "review_status": "approved",
+      "relevance": "Evaluates a concrete discovery capability: recognizing missing knowledge and actively acquiring evidence or clarification before answering in a partially observed environment.",
+      "id": "5dadb5be9e7c4d96",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38678"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/wanglu-cs/AskStream"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/wanglucs/AskStream"
+        }
+      ]
+    },
+    {
       "title": "Aligning Autoresearch: Co-Improvement between Agents and Humans",
       "url": "https://arxiv.org/abs/2610.38882",
       "published_at": "2026-10-28",
@@ -13864,6 +14222,24 @@
         {
           "label": "Project",
           "url": "https://facebookresearch.github.io/RAM/blogs/hackbench/"
+        }
+      ]
+    },
+    {
+      "title": "A-RSI: Adaptive Task Refresh for Zero-Data Multimodal Self-Improvement",
+      "url": "https://arxiv.org/abs/2610.38568",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "A-RSI continues multimodal reinforcement learning by replacing a training pool when training logs indicate declining learning signal. It separates deciding when to acquire experience from computing reliable answers to generated tasks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-28 10:03:42 UTC, replacing the supplied Hugging Face midnight label. The America/New_York date is October 28.",
+      "review_status": "approved",
+      "relevance": "Directly studies recursive self-improvement through feedback-controlled replacement of generated training experience, with independently checked supervision and careful audits of apparent capability gains.",
+      "id": "e75cea69e3207ddf",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38568"
         }
       ]
     },
@@ -13938,6 +14314,46 @@
       ]
     },
     {
+      "title": "SciGame: Let Agents Play the Scientific Discovery Games in the Real and Counterfactual World",
+      "url": "https://arxiv.org/abs/2610.37919",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "SciGame isolates scientific law inference through paired original and counterfactual simulators. It distinguishes identifying supplied candidate formulas from discovering relations without candidates, and evaluates prediction separately from explanations and exact symbolic recovery.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history independently confirms v1 on 27 October 2026 at 20:02:47 UTC, matching the supplied original timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly evaluates agents inferring unknown scientific relations, designing experiments, revising hypotheses, and following evidence when familiar laws are altered.",
+      "id": "91b3edf2f063b874",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37919"
+        },
+        {
+          "label": "Code",
+          "url": "https://anonymous.4open.science/r/scigame"
+        }
+      ]
+    },
+    {
+      "title": "Scaling Lean Theorem Proving for Real-World Code Verification",
+      "url": "https://arxiv.org/abs/2610.38174",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "EasyProver coordinates recursive proof-search agents around Lean, separating exploration from final acceptance. Aegis generates harder verification tasks from translated Rust programs to extend evaluation beyond nearly saturated benchmarks.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The original arXiv submission history verifies v1 at 2026-10-28 02:23:25 UTC, replacing the supplied Hugging Face midnight label. This corresponds to October 27 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Provides an agent harness for discovering and verifying proofs, together with automatically generated implementation-level propositions and independently checkable positive or negative labels.",
+      "id": "9d43cac93912cd86",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38174"
+        }
+      ]
+    },
+    {
       "title": "RubricAtlas: Mining Type-Level Rubrics from Expert Reports to Evaluate Deep Research Agents",
       "url": "https://arxiv.org/abs/2610.36878",
       "published_at": "2026-10-27",
@@ -13952,6 +14368,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.36878"
+        }
+      ]
+    },
+    {
+      "title": "OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery",
+      "url": "https://arxiv.org/abs/2610.37739",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "OpenFrontiers combines a provenance-preserving research-problem corpus with a formally graded mathematics benchmark. Its evaluation examines whether agents rediscover recent solutions and how retrieval access and continued prompting affect performance.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history independently confirms v1 on 27 October 2026 at 16:49:33 UTC, matching the supplied timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly benchmarks research-level rediscovery and open mathematical problems, with formal verification and explicit separation of solution retrieval from independent problem solving.",
+      "id": "4131f32dcc0451ab",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37739"
         }
       ]
     },
@@ -14086,6 +14520,28 @@
       ]
     },
     {
+      "title": "WorkFactory: Turning Professional Intents into Executable Work for Scalable Agent Training",
+      "url": "https://arxiv.org/abs/2610.37161",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "WorkFactory constructs professional task environments by planning the information needed for intended outputs, testing whether that information is sufficient, and repairing blocking defects. Independent teacher trajectories then train the WorkPilot models.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata is 2026-10-27T00:00:00.000Z, consistent with the PDF v1 date and official repository announcement of 27 October. The supplied timestamp is preserved rather than the preceding New York calendar date.",
+      "review_status": "approved",
+      "relevance": "Information-support planning and isolated probe repair provide concrete mechanisms for training agents to derive results from evidence and diagnose missing knowledge. This supports discovery training, although the demonstrated outcomes concern professional work rather than autonomous scientific investigation.",
+      "id": "dd0575522a340479",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37161"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/IQuestLab/WorkFactory"
+        }
+      ]
+    },
+    {
       "title": "Work Agents: Systems, Capabilities, and Optimization",
       "url": "https://arxiv.org/abs/2610.35845",
       "published_at": "2026-10-26",
@@ -14104,6 +14560,32 @@
         {
           "label": "Project",
           "url": "https://github.com/EnjunDu/awesome-working-agent"
+        }
+      ]
+    },
+    {
+      "title": "WebAnything: From the Wild Web to Scalable Agent Environments",
+      "url": "https://arxiv.org/abs/2610.37786",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "WebAnything reconstructs executable website environments from browser evidence. A separate verifier examines frozen candidates and distinguishes implementation defects from insufficient source observations, enabling repair or targeted recapture.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata is 2026-10-27T00:00:00.000Z, corroborated at calendar-date resolution by the PDF v1 stamp of 27 October 2026. The supplied timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The system explores unknown website behavior, grounds reconstructed state transitions in observations, and routes verification failures to repair or additional evidence collection. This is a concrete discovery-and-verification harness that also supplies reusable learning environments.",
+      "id": "0b73660e31921f56",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37786"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/china-qijizhifeng/Web-Anything"
+        },
+        {
+          "label": "Project",
+          "url": "https://china-qijizhifeng.github.io/Web-Anything/"
         }
       ]
     },
@@ -15026,6 +15508,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.35328"
+        }
+      ]
+    },
+    {
+      "title": "Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models",
+      "url": "https://arxiv.org/abs/2610.35138",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "Co-Design Bench evaluates real-user coding revisions against hidden acceptance criteria. It distinguishes partial requirement coverage from complete delivery and requires observable evidence for visual and behavioral claims.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata is 2026-10-26T00:00:00.000Z, matching the PDF arXiv v1 stamp of 26 October. The manuscript header dated 27 October is not substituted for original publication.",
+      "review_status": "approved",
+      "relevance": "Its execution-based judge-then-refute protocol evaluates whether agent claims survive source inspection, interaction tests, and independent challenge. This contributes discovery-relevant verification evaluation, with demonstrated scope limited to application revisions.",
+      "id": "11c338bac904086c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35138"
+        },
+        {
+          "label": "Project",
+          "url": "https://codesignbench.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Wiselnn570/Co-Design-Bench"
         }
       ]
     },
@@ -17032,6 +17540,36 @@
         {
           "label": "Dataset",
           "url": "https://huggingface.co/datasets/Xingzhongfan/Astro2Method"
+        }
+      ]
+    },
+    {
+      "title": "Your Benchmark Is an Empirical Measure Over Difficulty",
+      "url": "https://arxiv.org/abs/2610.29927",
+      "published_at": "2026-10-20",
+      "kind": "paper",
+      "summary": "The paper represents benchmarks as distributions over item difficulty. It diagnoses mismatched difficulty weighting and uncovered difficulty intervals, then introduces BenchFill to generate validated items targeting those intervals.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is retained. The original arXiv submission record and PDF page 1 corroborate 21 October 2026, distinct from later indexing or conference events.",
+      "review_status": "approved",
+      "relevance": "Provides concrete diagnostics and benchmark repair for detecting model progress, including scientific reasoning and research-agent evaluations such as CORE-Bench. Its adaptive item-generation procedure directly addresses evaluation blind spots relevant to learning discovery capabilities.",
+      "id": "02eac071a6a0b020",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.29927"
+        },
+        {
+          "label": "Project",
+          "url": "https://benchmark-difficulty-measure.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ASTRAL-Group/benchmark-difficulty-measure"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Yifan99/BenchFill"
         }
       ]
     },
@@ -19078,6 +19616,28 @@
         {
           "label": "Project",
           "url": "https://cel-robot-learning.github.io/"
+        }
+      ]
+    },
+    {
+      "title": "LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book Models",
+      "url": "https://arxiv.org/abs/2610.27100",
+      "published_at": "2026-10-18",
+      "kind": "paper",
+      "summary": "LOB-Impact evaluates generative market simulators through controlled order injections. It distinguishes whether impact exists, whether the learned model causes it, and whether its buildup and relaxation resemble market behavior.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is retained for this arXiv record. Its original submission record and PDF page 1 corroborate 19 October 2026; the November conference dates are separate events.",
+      "review_status": "approved",
+      "relevance": "Tests whether learned world models respond correctly to agent interventions, separating distributional resemblance from counterfactual fidelity. This is a concrete evaluation contribution for agents learning and testing action consequences, independent of the authors' laboratory name.",
+      "id": "89c9f55a4e2b48ff",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.27100"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/george-nigmatulin/lob_impact"
         }
       ]
     },
