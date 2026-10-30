@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**146 usage profiles** · Updated **2026-10-29**
+**149 usage profiles** · Updated **2026-10-30**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -990,6 +990,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Scientific capabilities and deployment sustainability of small-scale LLMs in biological wastewater treatment](#paper-33344da2562fd600) | Real data | Data analysis | Paper-described |
 | [RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents](#paper-50ab1df727133df6) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research](#paper-c24558a8f1757330) | Real data | Finite-pool queries | Paper-described |
+| [How Specific Do I Need to Be? Effects of User Query Underspecification on Deep Research Agents](#paper-1bdab9f307e03eff) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -2417,6 +2418,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-1bdab9f307e03eff"></a>
+
+<details>
+<summary>How Specific Do I Need to Be? Effects of User Query Underspecification on Deep Research Agents — details</summary>
+
+[Work](../README.md#paper-1bdab9f307e03eff) · [Source](https://arxiv.org/pdf/2610.39413)
+
+**Focus:** UNDERSPEC-DR evaluates literature retrieval and synthesis under missing query information. Fixed benchmark queries and synthetic query variants drive tool-mediated retrieval of real documents. Feedback consists of retrieved evidence and model-based answer evaluation; this is not a scientific simulator or an environment for executing research experiments or obtaining new physical measurements.
+
+**Openness:** `Long-form answers to research questions through iterative external search and browsing.`, `Matched complete and underspecified queries with controlled removal of scope, terminology, and preferences.`
+
+**New physical measurements:** No
+
+**Limits:** Each query permits at most 15 tool calls. DR Tulu and GPT-5.4 use web search, scientific paper search, and browsing; Tongyi additionally supports Python execution and file parsing, and may submit multiple search queries per call. Python tool availability does not establish executed research experiments. Answers are scored against the original complete query, measuring preservation of its information need. Citation evaluation excludes Tongyi and is restricted to eligible paired answers. A successful interactive clarification intervention is not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or policy-training procedure for this benchmark is not established. Evaluation uses Gemini 3.1 Pro for rubric coverage: query-specific rubrics for ResearchQA and ScholarQA-Bench, and general rubrics with a reference answer for DeepResearch Bench. Gemini also judges citation support for the evaluated DR Tulu and GPT-5.4 subsets. GPT-5.4 mini classifies clarification behavior and search transitions; additional metrics assess retrieval use and search behavior. |
+| Reset | Environment reset and deterministic replay support are not established. Complete and modified queries receive separate evaluations. In the user-query collection, DR Tulu lacks multi-turn interaction, so reformulations are submitted as new self-contained queries. |
+| Branching | Matched input variants support comparisons across query conditions. Branching from saved environment states, snapshot restoration, and counterfactual tool-response replay are not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -2462,6 +2486,8 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [RSI Arena: Towards Recursive Self-Improvement with Human Feedback](#paper-7f92942419dc62bc) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [AutoRSE: Evaluating LLM Agents as Recommendation Engineers for Self-Evolving Recommender Systems](#paper-30b045ab4b6612bf) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?](#paper-86045855267404ca) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [rTaste: Do Research Agents Have Taste? Evaluating Early Stage Research Judgment](#paper-b31efc0825d69775) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [PAPERBENCHX: Can AI Reproduce Science Across Disciplines?](#paper-b50b86e0972e0b67) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -3265,6 +3291,52 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Each submitted checkpoint receives one epoch of LoRA supervised fine-tuning with AdamW. Agents choose learning rate, rank, batch size, sequence length and warmup within bounds. The agent receives per-domain proxy scores and per-item outputs, correctness and training diagnostics; gold answers are withheld. Final and proxy-best checkpoints are evaluated on held-out accuracy. A scalar reinforcement-learning reward or training procedure for the research agent itself is not established. |
 | Reset | A round can restart training from the initial model or a saved earlier checkpoint. Candidate data, model pools, principles and session history persist. A complete reset of the agent session or arbitrary restoration of all environment state is not established. |
 | Branching | Agents explicitly select a parent from the model pool, allowing descendants of earlier checkpoints and recovery from a regressed lineage. This supports model-training branches; arbitrary forks of the complete agent and data-store state are not established. |
+
+</details>
+
+<a id="paper-b31efc0825d69775"></a>
+
+<details>
+<summary>rTaste: Do Research Agents Have Taste? Evaluating Early Stage Research Judgment — details</summary>
+
+[Work](../README.md#paper-b31efc0825d69775) · [Source](https://arxiv.org/pdf/2610.40488)
+
+**Focus:** Early research judgment: proposing small computational experiments, forecasting registered outcomes, and prioritizing investigations. Separate executors implement every proposal. Fresh-machine reruns produce measured statistics; model auditors assess fidelity, validity, and research value. This is executed NLP research computation using public data and open models, without new physical measurements.
+
+**Openness:** `Agents choose research questions and methods from seven supplied NLP seed papers and their code.`, `Each condition commits five experiment registrations, outcome probabilities, and a priority ranking before execution.`, `The paper reports release of the evaluation harness and all 415 experiment registrations, forecasts, and audited outcomes; availability was not independently checked.`
+
+**New physical measurements:** No
+
+**Limits:** All five proposals are attempted regardless of ranking, so rankings do not allocate compute. Proposers may search arXiv and inspect seed code before commitment; forecasting then has no tools. Executors may run open models of at most 8B parameters, without hosted model APIs or human annotation. Each implementation has a 45-minute machine budget, 90 minutes overall, and 60 executor model calls; fresh-machine evaluation has 35 minutes. Machines normally use one A100; 53 experiments on the seventh seed paper use H200 machines. Seven resource-compatible NLP papers and one run per condition limit coverage. Quality labels come from models, without a human baseline.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Agent training or an optimization reward is not established. Evaluation compares registered events with statistics regenerated by executor-written code, scores forecasts using Brier scores, and compares first choices with auditor value rankings. Three auditors provide majority fidelity and validity judgments and median research value from 0 to 3; separate judges assess novelty. |
+| Reset | Each executor starts in a new context on a separate machine. Evaluation deletes submitted results and reruns on a fresh machine. A failed delivery permits one independent attempt by the other executor, and infrastructure failures are repeated. A general agent-controlled reset API is not established. |
+| Branching | The team harness uses two independent proposal contexts followed by critique and merging. All five committed experiments are executed separately, and a failed implementation can receive an independent retry. Snapshot-based branching of execution state or adaptive proposal branching after outcomes is not established. |
+
+</details>
+
+<a id="paper-b50b86e0972e0b67"></a>
+
+<details>
+<summary>PAPERBENCHX: Can AI Reproduce Science Across Disciplines? — details</summary>
+
+[Work](../README.md#paper-b50b86e0972e0b67) · [Source](https://arxiv.org/pdf/2610.39744)
+
+**Focus:** Reproduction of published research through executed scientific computation. Agents construct models, run and diagnose scientific software, and submit workflows that regenerate evidence. Environments include physical simulators, numerical chemistry and materials packages, computational biology analysis, and embodied simulators. Feedback includes solver logs, numerical arrays, trajectories, convergence records, and derived measurements from computation; no new physical measurements are established.
+
+**Openness:** `Agents reconstruct workflows within specified published claims, scientific conditions, deliverables, and resource envelopes.`, `Agents receive papers, task specifications, starter submissions, scientific environments, and shell access; private reference workflows, artifacts, and rubrics are withheld.`, `Twelve representative tasks are released; nine include redistributable environments and three require commercially licensed software. The remaining 81 tasks are retained for hidden evaluation.`
+
+**New physical measurements:** No
+
+**Limits:** The benchmark contains 93 tasks across 12 research areas and ten scientific environments. Agent budgets range from 4 to 72 hours, with a median of 7 hours; replay limits are separate. Hidden rubric scores assess reproduction of known claims. Domain judgments use one shared model evaluator alongside deterministic checks. Model and harness effects are intertwined, two configurations use refusal fallbacks, and independent human agreement with final grading is not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training protocol using benchmark rewards is not established. The evaluator clean-replays each submission offline and scores only regenerated evidence. Deterministic checks assess directly testable properties; a shared GPT-5.6-sol evaluator judges requirements needing domain interpretation against hidden expert-validated rubrics and reference artifacts. Weighted rubric leaves produce a score from 0 to 1 across Modeling, Execution, and Validation. Full reproduction requires a score strictly greater than 0.9. |
+| Reset | Clean replay explicitly removes generated outputs and mutable execution state, refreshes the task container, restores the submitted package, and reruns its entry point with network access disabled. An agent-controlled arbitrary reset interface during development is not established. |
+| Branching | Agents may implement variants, run computations, diagnose failures, and refine analyses within task budgets. Snapshot-based branching, state cloning, or a general branching API is not established. |
 
 </details>
 
