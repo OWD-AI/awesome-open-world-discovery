@@ -3560,6 +3560,50 @@
       "name": "EPSBench: Benchmarking LLM Agents for Earnings Forecasting",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.38293"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 supplies code and project addresses; artifact availability and licensing are not established by the supplied pages.",
+        "The agent normally sees dialogue and browser text, while the persona profile and original task instruction remain hidden."
+      ],
+      "focus": "Tests computer-use agents serving simulated personas on 74 information and action tasks. Feedback combines probabilistic persona replies, live website observations, and executed browser actions on deterministic sandbox replicas. Information tasks use live web content rather than a fixed recorded dataset; action tasks simulate website transactions. These are computer-use evaluations, not executed scientific research experiments or new physical measurements. Pages 3, 6 and 18 allow nine browser and dialogue tools, at most 100 agent turns and five clarification calls per episode.",
+      "limits": "The simulated user and automated judges use the same model in separate roles. Completion against the original instruction can conflict with the persona's expressed request. Human agreement with simulated satisfaction is modest, clarification replies can invent conflicting details, and constructed personas do not establish effects in real populations. Episodes cover one browser task without persistent user memory. Action tasks use sandbox replicas to avoid real transactions or communications (page 10).",
+      "training": {
+        "reward": "Training and a training reward are not established. Evaluation uses the fraction of original requirements met: an independent LLM rubric judge checks information-task outcomes, and a programmatic final-state checker supplies a single verdict for each action task. The persona agent separately rates satisfaction from 1 to 5, with another rating after site-state verification for action tasks. Raised and engaged labels diagnose requirement handling (pages 3, 6 and 18).",
+        "reset": "For REAL action tasks, the harness loads the prescribed initial site state before each episode and reads the final state afterward (page 18). Resetting live websites, restoring intermediate checkpoints, and resetting the persona to reproduce identical replies are not established.",
+        "branching": "Agents can adapt browser actions and clarification questions to observations. State cloning, rollback, and branching multiple continuations from an identical intermediate browser and dialogue state are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-dac482553e627940",
+      "resource_id": "paper-dac482553e627940",
+      "name": "PersonaCUABench: Benchmarking Computer-Use Agents Serving Diverse Personas",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.22990"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "finite-pool-query",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 3 promises benchmark release upon publication. Although the body describes released tasks, artifact availability and licensing are not established by the supplied pages.",
+        "Solvers receive task seeds, scope, operations, costs and budgets. Reference graphs, reference retrieval plans and undisclosed custody markings remain hidden."
+      ],
+      "focus": "Evaluates adaptive evidence acquisition and mechanically verified fund tracing over recorded Ethereum and Bitcoin ledger activity from the Bybit theft. Solvers query fixed records under a budget and submit operations with supporting citations. Feedback consists of ledger listings, transactions, receipts, traces, balances, events and other record queries, with boundary marks where specified. This analyzes recorded real activity through executed query and verification computation; it does not conduct new blockchain transactions, scientific research experiments or physical measurements. Each well-formed query or listing page costs one unit; internal computation, malformed calls and submission are free, and submission ends the run (pages 5–8).",
+      "limits": "The evaluated suite contains 31 tasks from one public incident, allowing possible training exposure. Conservative rules recover only a subset of actual flows and exclude speculative attribution and unresolved continuations. Agent runs stop with unused budgets, and further recovery from continuing is unmeasured. Fidelity checks operation validity separately from whether cited evidence was retrieved. Repeated runs show task-level variability.",
+      "training": {
+        "reward": "No training experiment or implemented training reward is established. Deterministic operation verdicts are proposed as potential training signals. The verifier returns valid, invalid or indeterminate from cited records and operation rules. The primary evaluation score is hidden-reference edge recall, counting an edge only when its operation is valid and every cited record was retrieved during the run. Fidelity and edge precision are separate metrics. The ABF harness also provides a submission preview that checks reports before submission (pages 5, 8, 11 and 17–18).",
+        "reset": "Records have fixed contents determined by their locators, and fresh isolated-container runs and reruns are reported (pages 5, 7 and 13). An explicit reset API, restoration of an intermediate solver state, and budget rollback are not established.",
+        "branching": "Solvers may choose alternative ledger queries and pursue multiple fund-flow branches within one shared query budget. Checkpoint cloning and forking or rolling back a run with its memory and budget are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-48b9d5086b241c86",
+      "resource_id": "paper-48b9d5086b241c86",
+      "name": "ABF-Bench: A Verifiable Benchmark for Agentic Blockchain Forensics",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.23656"
     }
   ]
 }

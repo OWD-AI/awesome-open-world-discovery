@@ -25869,6 +25869,81 @@
           6
         ]
       }
+    },
+    "paper-dac482553e627940": {
+      "institutions": [
+        "The University of Texas at Dallas",
+        "University of Southern California",
+        "Carnegie Mellon University",
+        "Georgia Institute of Technology",
+        "University of California, Los Angeles",
+        "University of Pennsylvania",
+        "Amherst College",
+        "Vanderbilt University",
+        "University of California, Irvine",
+        "University of Chicago",
+        "Harvard University",
+        "Brown University",
+        "Texas A&M University",
+        "University of Illinois Urbana-Champaign",
+        "Purdue University",
+        "The Ohio State University",
+        "Massachusetts Institute of Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        26
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Pairs 74 tasks with four domain-specific personas and an original instruction across nine backbones, producing 3,330 runs. A simulated user supplies requests and clarification replies; agents receive dialogue and browser text. Independent rubric judges or site-state checkers assess completion. Requirement labels track whether information was raised, engaged with, and satisfied. Profile disclosure and compulsory clarification are tested on one backbone.",
+      "evidence": "Mean completion falls from 0.689 to 0.441, a 36% relative decrease. Of 1,230 loss cells, 59.9% involve requirements engaged with but unmet, while 11.2% reflect stops requested by users. Only 24% of clarification questions target omitted requirements. Neither intervention restores completion. Successful persona runs receive maximum satisfaction in 62.7% of cases, versus 84.1% for original requests.",
+      "discovery_use": "Provides a concrete evaluation of agents uncovering unstated requirements through interaction and checking outcomes against independent evidence. Its discovery relevance is information gathering under incomplete specifications and verification, rather than scientific investigation.",
+      "limits": "The completion decrease mixes execution failures with changed or unstated goals; loss-cell percentages do not measure shares of lost score. One model simulates users and supplies automated judgments. Human agreement with simulated satisfaction is modest, and clarification replies can invent conflicting details. Constructed demographic profiles do not establish effects in real populations. The benchmark covers single browser tasks without persistent user memory. Review used supplied body and appendix excerpts and only two rendered pages.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Provides a concrete evaluation of agents uncovering unstated requirements through interaction and checking outcomes against independent evidence. Its discovery relevance is information gathering under incomplete specifications and verification, rather than scientific investigation.",
+        "pdf_sha256": "47b02de14c4fbb7d175062bd6c37e4c057dbb0371931d0735e3f6660c55003af",
+        "evidence_pages": [
+          1,
+          6,
+          26
+        ]
+      }
+    },
+    "paper-48b9d5086b241c86": {
+      "institutions": [
+        "Imperial College London",
+        "University of Oxford"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A reviewed case-to-task pipeline constructs conservative reference graphs from the Bybit theft across Ethereum and Bitcoin. The evaluation covers 31 tasks and 2,044 reference edges. Solvers share metered ledger access; recovered edges require valid operations citing records retrieved during the run. A working-memory harness with leads, findings, preview tools, and investigative heuristics is compared with general-purpose agents and three fixed-order tracers.",
+      "evidence": "The harness achieves 75% edge recall versus 47% for Codex using the same model and reasoning effort, 10% for Claude Code, and 88% for breadth-first tracing. It uses 47% of its query budget and acquires evidence faster early in the budget, but premature stopping limits final recovery. It stops at 16 of 18 eligible undisclosed custody points, versus none for the tracers. Its 98% fidelity measures operation validity separately from retrieval compliance. Claude Code reaches 54% recall when unretrieved citations are allowed, illustrating why evidence acquisition must be scored explicitly.",
+      "discovery_use": "Directly evaluates agents discovering unknown fund movements through selective evidence acquisition, recognizing investigative boundaries, and submitting mechanically verifiable conclusions. Its primary contribution is an investigation benchmark with concrete relevance to discovery evaluation.",
+      "limits": "All tasks derive from one public incident, creating limited case diversity and possible training exposure. Conservative boundaries measure only a subset of actual flows and exclude speculative attribution. Repeated runs show substantial task-level variability. Recovery with unused budgets and improvements from training remain unmeasured. Only the harness–Codex comparison controls the model; broader comparisons mix system differences. No first-party artifact release was verified; page 3 promises release upon publication, and the supplied repository hint belongs to a cited benchmark.",
+      "classification_review": {
+        "date": "2026-10-30",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates agents discovering unknown fund movements through selective evidence acquisition, recognizing investigative boundaries, and submitting mechanically verifiable conclusions. Its primary contribution is an investigation benchmark with concrete relevance to discovery evaluation.",
+        "pdf_sha256": "a55da179c5b862cbbba3c5a036e2b6ebf3f20e43f971e0c71c2323e83296b138",
+        "evidence_pages": [
+          1,
+          6,
+          17
+        ]
+      }
     }
   }
 }

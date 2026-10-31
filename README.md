@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-786-2563eb?style=flat-square" alt="786 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-158-0f766e?style=flat-square" alt="158 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-788-2563eb?style=flat-square" alt="788 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-160-0f766e?style=flat-square" alt="160 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 107 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 131 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 77 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 149 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 151 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1577,6 +1577,8 @@ For environment types, physical experiment access, and training interfaces, see 
 
 ### 2026
 
+- <a id="paper-48b9d5086b241c86"></a>**ABF-Bench: A Verifiable Benchmark for Agentic Blockchain Forensics** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23656)* · [Paper](https://arxiv.org/abs/2610.23656)<br>
+  Xiaohang Yu, Hejia Geng, William Knottenbelt · Imperial College London; University of Oxford
 - <a id="acdb"></a>**Active Causal Discovery Benchmark: Evaluating LLM Agents Under Budgeted Interventions** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.31675)* · [Paper](https://arxiv.org/abs/2609.31675)<br>
   Sagar Deb, Devam Shah, Ashwanth Krishnan · QpiAI
 - <a id="paper-ee2ff832ad1772a4"></a>**AdaExploreBench: Benchmarking LLM Agents for Proactive Exploration and Test-time Adaptation in Evolving Environments** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.25950)* · [Paper](https://arxiv.org/abs/2610.25950) · [Code](https://github.com/HKUST-KnowComp/AdaExploreBench) · [Dataset](https://huggingface.co/datasets/Roryaccout/AdaExploreBench) · [Project](https://hkust-knowcomp.github.io/AdaExploreBench/)<br>
@@ -1749,6 +1751,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Sachin Konan, Jonathan Liu, Zhuang Liu · Princeton University
 - <a id="paper-86045855267404ca"></a>**ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34386)* · [Paper](https://arxiv.org/abs/2610.34386) · [Code](https://github.com/haojinw0027/ParetoRSI-GYM)<br>
   Haojin Wang et al. · University of Illinois Urbana-Champaign; University of California, Berkeley; The Ohio State University; +2 institutions
+- <a id="paper-dac482553e627940"></a>**PersonaCUABench: Benchmarking Computer-Use Agents Serving Diverse Personas** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22990)* · [Paper](https://arxiv.org/abs/2610.22990) · [Code](https://github.com/MatrAIx-ai/PersonaCUABench)<br>
+  Haoming Li et al. · The University of Texas at Dallas; University of Southern California; Carnegie Mellon University; +14 institutions
 - <a id="paper-0d36244bb44988af"></a>**Pre-Registered Genesis Accounting for Recursive Self-Improvement: First Audited Operator-Genesis Events in a Physics-Discovery Runtime** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.14843)* · [Paper](https://arxiv.org/abs/2610.14843)<br>
   Wenbin Mao, Pei Zou · HoomanBio AI Lab, Huaman Biotechnology (Beijing) Co., Ltd.
 - <a id="paper-476e87c36ff94c5c"></a>**Predictive Credit: Measuring What Scientific Explanations Add to Experimental Forecasts** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00314)* · [Paper](https://arxiv.org/abs/2610.00314)<br>
