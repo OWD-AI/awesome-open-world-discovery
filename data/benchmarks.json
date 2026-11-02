@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -3604,6 +3604,30 @@
       "name": "ABF-Bench: A Verifiable Benchmark for Agentic Blockchain Forensics",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.23656"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents submit aggregation programs and update persistent state from corrective practice feedback.",
+        "Hidden targets are published named groupings selected from fixed domain libraries.",
+        "Rules accumulate across four levels; tests include members never revealed during practice.",
+        "The protocol specifies bounded submissions rather than unrestricted experimental queries."
+      ],
+      "focus": "CLR-Bench tests hidden-rule induction, retention, and generalization across 20 four-level chains containing 80 rules. Submitted programs execute on record inputs; deterministic hidden rules determine correctness. Records come from seeded generators or public releases, including Synthea synthetic patient records and Loghub logs. These are computation over records, with no new physical measurements or scientific simulator.",
+      "limits": "Identification is supported within the supplied libraries under the named-grouping convention and depends on prior membership knowledge. Candidates are calibrated using GPT-6-Luna. Each condition runs once per chain. Practice can be passed by memorizing revealed members and does not directly reward generalization. External lookup access during evaluation is not established.",
+      "training": {
+        "reward": "At level k, at most three program submissions run on a public example and 2k+1 hidden practice inputs. Failing inputs return counterexamples identifying changed values as members or non-members. Practice reward is binary, and practice ends on the first passing submission or after three attempts. Methods update persistent state after attempts, subject to their own acceptance gates. The test program is scored once on five hidden inputs using the fraction of correct sums; single-cell and value-level diagnostics measure generalization. Test feedback used for learning is not established.",
+        "reset": "Persistent state carries from one curriculum level to the next. Frozen references use empty state. An arbitrary reset API, checkpoint restoration, and within-chain state rollback are not established.",
+        "branching": "The protocol permits up to three alternative program submissions per level; Training-Free GRPO samples four rollouts within an attempt. Environment-state cloning and arbitrary branching from saved states are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-83fe490d9dc23ecb",
+      "resource_id": "paper-83fe490d9dc23ecb",
+      "name": "More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.40758"
     }
   ]
 }
