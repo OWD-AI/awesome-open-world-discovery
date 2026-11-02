@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T04:16:30-05:00",
+  "updated_at": "2026-11-02T07:49:52-05:00",
   "window_start": "2026-10-04",
   "window_end": "2026-11-02",
   "window_days": 30,
@@ -217,6 +217,24 @@
         {
           "label": "Project",
           "url": "https://worldbridge-jd.github.io/"
+        }
+      ]
+    },
+    {
+      "title": "When Requirements Interact: Scaling Long-Horizon Coding via Interdependent Specifications",
+      "url": "https://arxiv.org/abs/2610.40256",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "CodeSpecWeave synthesizes repository tasks whose requirements constrain one another, then checks task–test alignment using multiple solver trajectories. The tasks support reinforcement learning and a separate evaluation benchmark.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied midnight original timestamp conflicts with the original arXiv v1 submission history, which records 29 October 2026 at 15:22:49 UTC. The authoritative original record is used here, correcting the supplied timestamp.",
+      "review_status": "approved",
+      "relevance": "Provides training environments that teach agents to explore repositories, reason across interacting constraints, and verify implementations through execution. These are concrete capabilities for sustained investigation and reliable agent problem solving, with transfer evaluated beyond the constructed benchmark.",
+      "id": "8741373104a1068a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.40256"
         }
       ]
     },
@@ -799,6 +817,24 @@
         {
           "label": "Code",
           "url": "https://github.com/JaydenTeoh/Soft-MTP"
+        }
+      ]
+    },
+    {
+      "title": "MemSteer: Turning User Histories into Supervision for Agent Memory Optimization",
+      "url": "https://arxiv.org/abs/2610.39276",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "MemSteer generates questions, answers, and supporting evidence from unlabeled histories. MemSteer-Opt uses this supervision to improve memory storage, retrieval, and context construction without updating model parameters.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original timestamp agrees with the original arXiv v1 submission history: 29 October 2026 at 03:28:49 UTC, corresponding to 28 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Develops feedback-driven improvement of an agent’s retained knowledge infrastructure. Source-grounded supervision, failure diagnosis, and tested memory revisions directly support agents learning to recover and verify knowledge from accumulated experience.",
+      "id": "191da1e6fb5e987a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.39276"
         }
       ]
     },
@@ -1944,6 +1980,28 @@
       "id": "efb22cb647404bcd"
     },
     {
+      "title": "Learning Quality-Controllable Robot Policies with Iterative Hindsight Relabeling",
+      "url": "https://arxiv.org/abs/2610.37393",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "QCP learns robot policies whose execution speed, smoothness, and other attributes can be selected at inference. Repeated collection, measurement, and hindsight relabeling of successful executions extends the policy’s achievable quality range.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at records 2026-10-27T00:00:00.000Z. PDF page 1 and the original arXiv v1 submission history corroborate 27 October 2026. The supplied exact publication timestamp is preserved rather than the earlier local calendar date or a listing date.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is a reusable feedback-driven learning loop that retains successful experience and expands achievable behavior beyond initial demonstrations. This concretely supports agents learning new capabilities through interaction, although the search remains bounded by predefined tasks and quality metrics.",
+      "id": "e05f4aabbd0e3798",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37393"
+        },
+        {
+          "label": "Project",
+          "url": "https://sinnnj.github.io/qcp/"
+        }
+      ]
+    },
+    {
       "title": "Jason Weston explains HackBench’s synthetic reward-hack construction",
       "url": "https://x.com/jaseweston/status/2114709996055269594",
       "published_at": "2026-10-26",
@@ -2379,6 +2437,36 @@
       "source": "Codex primary text-and-image checked",
       "links": [],
       "id": "73df0c9098236216"
+    },
+    {
+      "title": "Supervising the Visible State: Separating Representation from View Selection in Streaming Video",
+      "url": "https://arxiv.org/abs/2610.34926",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "ViSS trains a video-language model to distinguish event identity, order, counts, relation changes, and answer sufficiency. A separate frozen-model controller requests broader historical views when needed. Controlled comparisons distinguish training gains from evidence-access gains and diagnose correct answers lost during revision.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at records 2026-10-26T00:00:00.000Z. PDF page 1 and the original arXiv v1 submission history corroborate 26 October 2026. The supplied exact publication timestamp is preserved rather than the earlier local calendar date or a listing date.",
+      "review_status": "approved",
+      "relevance": "The paper contributes training for temporal state distinctions and recognition of insufficient evidence, followed by adaptive observation acquisition. These capabilities directly support agents verifying knowledge, recovering missing evidence, and reasoning under partial observation.",
+      "id": "1526c0fccef70bd1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34926"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yihaohu0118/ViSS"
+        },
+        {
+          "label": "Project",
+          "url": "https://yihaohu0118.github.io/ViSS/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/mis2/ViSS-8B"
+        }
+      ]
     },
     {
       "title": "StreamVibe: Proactive Video Agents for Evolving User Intent",
@@ -13527,6 +13615,24 @@
       ]
     },
     {
+      "title": "When Requirements Interact: Scaling Long-Horizon Coding via Interdependent Specifications",
+      "url": "https://arxiv.org/abs/2610.40256",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "CodeSpecWeave synthesizes repository tasks whose requirements constrain one another, then checks task–test alignment using multiple solver trajectories. The tasks support reinforcement learning and a separate evaluation benchmark.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied midnight original timestamp conflicts with the original arXiv v1 submission history, which records 29 October 2026 at 15:22:49 UTC. The authoritative original record is used here, correcting the supplied timestamp.",
+      "review_status": "approved",
+      "relevance": "Provides training environments that teach agents to explore repositories, reason across interacting constraints, and verify implementations through execution. These are concrete capabilities for sustained investigation and reliable agent problem solving, with transfer evaluated beyond the constructed benchmark.",
+      "id": "8741373104a1068a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.40256"
+        }
+      ]
+    },
+    {
       "title": "Well-Specified and Well-Tested? Assessing SWE-bench-Style Datasets with a Self-Evolving Agent",
       "url": "https://arxiv.org/abs/2610.39417",
       "published_at": "2026-10-29",
@@ -14021,6 +14127,24 @@
         {
           "label": "Code",
           "url": "https://github.com/JaydenTeoh/Soft-MTP"
+        }
+      ]
+    },
+    {
+      "title": "MemSteer: Turning User Histories into Supervision for Agent Memory Optimization",
+      "url": "https://arxiv.org/abs/2610.39276",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "MemSteer generates questions, answers, and supporting evidence from unlabeled histories. MemSteer-Opt uses this supervision to improve memory storage, retrieval, and context construction without updating model parameters.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original timestamp agrees with the original arXiv v1 submission history: 29 October 2026 at 03:28:49 UTC, corresponding to 28 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Develops feedback-driven improvement of an agent’s retained knowledge infrastructure. Source-grounded supervision, failure diagnosis, and tested memory revisions directly support agents learning to recover and verify knowledge from accumulated experience.",
+      "id": "191da1e6fb5e987a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.39276"
         }
       ]
     },
@@ -14965,6 +15089,28 @@
       ]
     },
     {
+      "title": "Learning Quality-Controllable Robot Policies with Iterative Hindsight Relabeling",
+      "url": "https://arxiv.org/abs/2610.37393",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "QCP learns robot policies whose execution speed, smoothness, and other attributes can be selected at inference. Repeated collection, measurement, and hindsight relabeling of successful executions extends the policy’s achievable quality range.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at records 2026-10-27T00:00:00.000Z. PDF page 1 and the original arXiv v1 submission history corroborate 27 October 2026. The supplied exact publication timestamp is preserved rather than the earlier local calendar date or a listing date.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is a reusable feedback-driven learning loop that retains successful experience and expands achievable behavior beyond initial demonstrations. This concretely supports agents learning new capabilities through interaction, although the search remains bounded by predefined tasks and quality metrics.",
+      "id": "e05f4aabbd0e3798",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37393"
+        },
+        {
+          "label": "Project",
+          "url": "https://sinnnj.github.io/qcp/"
+        }
+      ]
+    },
+    {
       "title": "Hy-Nomas: Towards Free-form Interactive World Generation",
       "url": "https://arxiv.org/abs/2610.36729",
       "published_at": "2026-10-26",
@@ -15297,6 +15443,36 @@
         {
           "label": "Code",
           "url": "https://github.com/InfRec-Cardinal/The-Trinity"
+        }
+      ]
+    },
+    {
+      "title": "Supervising the Visible State: Separating Representation from View Selection in Streaming Video",
+      "url": "https://arxiv.org/abs/2610.34926",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "ViSS trains a video-language model to distinguish event identity, order, counts, relation changes, and answer sufficiency. A separate frozen-model controller requests broader historical views when needed. Controlled comparisons distinguish training gains from evidence-access gains and diagnose correct answers lost during revision.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at records 2026-10-26T00:00:00.000Z. PDF page 1 and the original arXiv v1 submission history corroborate 26 October 2026. The supplied exact publication timestamp is preserved rather than the earlier local calendar date or a listing date.",
+      "review_status": "approved",
+      "relevance": "The paper contributes training for temporal state distinctions and recognition of insufficient evidence, followed by adaptive observation acquisition. These capabilities directly support agents verifying knowledge, recovering missing evidence, and reasoning under partial observation.",
+      "id": "1526c0fccef70bd1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34926"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yihaohu0118/ViSS"
+        },
+        {
+          "label": "Project",
+          "url": "https://yihaohu0118.github.io/ViSS/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/mis2/ViSS-8B"
         }
       ]
     },

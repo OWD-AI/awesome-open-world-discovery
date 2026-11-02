@@ -26474,6 +26474,136 @@
           7
         ]
       }
+    },
+    "paper-8741373104a1068a": {
+      "institutions": [
+        "LLM Core, Xiaomi",
+        "Peking University",
+        "University of Hong Kong"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Developer-derived specification seeds guide joint task and test synthesis. Solver trials filter difficulty; review and repair agents inspect execution trajectories for false acceptance and false rejection. GRPO training compares the resulting 4,670 tasks with alternative datasets on two model backbones.",
+      "evidence": "The 100-task benchmark contains 1,044 specifications and reports frontier pass rates of 44–74%. Training raises DeepSWE-v1.1 success from 12.39% to 25.30% for MiMo-V2.5 and from 54.42% to 62.98% for Flash-SFT. Both achieve their highest four-benchmark average with CodeSpecWeave.",
+      "discovery_use": "Provides training environments that teach agents to explore repositories, reason across interacting constraints, and verify implementations through execution. These are concrete capabilities for sustained investigation and reliable agent problem solving, with transfer evaluated beyond the constructed benchmark.",
+      "limits": "No matched ablation isolates specification coupling from density, wording, review, or other dataset differences. Training substantially increases reasoning tokens, so efficiency gains are not established. Longer trajectories partly explain additional edit–test loops; Flash-SFT does not improve repeated-loop frequency within the first 40 turns. Benchmark size, differing harnesses, costly synthesis, and container infrastructure limit generalization. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "learning",
+        "rationale": "Provides training environments that teach agents to explore repositories, reason across interacting constraints, and verify implementations through execution. These are concrete capabilities for sustained investigation and reliable agent problem solving, with transfer evaluated beyond the constructed benchmark.",
+        "pdf_sha256": "eee8f5ae44feaef5ca097979cdbed4e334ed0b0e3332b9a15f3b8c867684b254",
+        "evidence_pages": [
+          1,
+          4,
+          5,
+          8
+        ]
+      }
+    },
+    "paper-191da1e6fb5e987a": {
+      "institutions": [
+        "Peking University",
+        "Microsoft Research Asia"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Samples connected source-record bundles, constructs evidence-grounded answer plans, generates questions, and filters them through source auditing and blind answer recovery. The optimizer diagnoses storage, retrieval, and answering failures, proposes revisions, and accepts improvements on fixed validation supervision.",
+      "evidence": "ATM-Bench Question Score rises from 54.9 to 68.3. RHELM accuracy improves by 4.1 points without external data and 6.6 with it. Generated supervision also benefits two existing optimizers. Personal continuation improves two transferred designs, while pooled transfer to four held-out users provides no aggregate benefit.",
+      "discovery_use": "Develops feedback-driven improvement of an agent’s retained knowledge infrastructure. Source-grounded supervision, failure diagnosis, and tested memory revisions directly support agents learning to recover and verify knowledge from accumulated experience.",
+      "limits": "Shared LLM errors can survive verification; answer recovery does not prove every cited record is necessary. Generated questions may differ from users’ actual needs. The design space is largely retrieval-centric, evaluation covers two benchmarks, and the hard subset has only 31 questions. Official-QA comparisons include optimization questions in evaluation. API variability, substantial generation cost, and sensitive source processing complicate deployment. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "adaptation",
+        "rationale": "Develops feedback-driven improvement of an agent’s retained knowledge infrastructure. Source-grounded supervision, failure diagnosis, and tested memory revisions directly support agents learning to recover and verify knowledge from accumulated experience.",
+        "pdf_sha256": "47cd78cbaa2c4da3b00482848af5f616cebca5bae80412b3a084fc9e8af467d1",
+        "evidence_pages": [
+          1,
+          2,
+          20
+        ]
+      }
+    },
+    "paper-e05f4aabbd0e3798": {
+      "institutions": [
+        "KAIST",
+        "LGE",
+        "Microsoft Research",
+        "Config"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Rule-based trajectory scores are divided into equal-frequency quality bins. A flow-matching policy learns from all successful trajectories while conditioning on their bins. Each iteration requests the best bin, retains successful rollouts, recomputes labels across accumulated experience, and retrains from random initialization or the original pretrained VLA checkpoint. Experiments compare accumulated and filtered behavior cloning, style-conditioned offline RL, and online RL.",
+      "evidence": "Across three-seed simulation experiments, QCP improves execution quality while often increasing success. Final Square speed performance reaches 82.2% success and 120.3 steps. Distribution shifts exceed 1.5 initial-demo IQR units for tested smoothness and joint-path metrics. Equal-sample frozen-policy comparisons support the contribution of iterative updates. Real conveyor throughput increases from BC’s 8.2 to 13.0 cans per minute; wine-serving success rises from QCP iteration 0’s 30.7% to 42.0%.",
+      "discovery_use": "The primary contribution is a reusable feedback-driven learning loop that retains successful experience and expands achievable behavior beyond initial demonstrations. This concretely supports agents learning new capabilities through interaction, although the search remains bounded by predefined tasks and quality metrics.",
+      "limits": "Tasks, success criteria, and quality axes are predefined; novel task discovery is not evaluated. Quality statistics condition on successful rollouts, and failures are discarded. Retraining requires repeated interaction and accumulated data rather than continual parameter updates. QCP does not uniformly exceed baseline success rates. Six-attribute experiments select attributes after preliminary testing, and the continuous-conditioning comparison also changes target selection. Only the two supplied pages were visually inspected; quantitative result figures were assessed through extracted text.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "adaptation",
+        "rationale": "The primary contribution is a reusable feedback-driven learning loop that retains successful experience and expands achievable behavior beyond initial demonstrations. This concretely supports agents learning new capabilities through interaction, although the search remains bounded by predefined tasks and quality metrics.",
+        "pdf_sha256": "77aeec10141bb72d16a0d3916aeaf15d50abe177784686c209a4c1a4f72edba1",
+        "evidence_pages": [
+          1,
+          3,
+          20
+        ]
+      }
+    },
+    "paper-1526c0fccef70bd1": {
+      "institutions": [
+        "Westlake University",
+        "ZJU",
+        "USTC",
+        "SMU",
+        "FDU",
+        "ECNU",
+        "SJTU"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        25
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Qwen3-VL-8B receives one epoch of supervised training on 7,677 source-grounded examples. A strict-matched generic temporal supervision control shares visual inputs and training settings. Test-Time Causal View Search keeps the checkpoint fixed and sequentially consults recent, event, and compact-history views using calibrated acquisition and replacement thresholds. Official full-split evaluation and exhaustive three-view replay measure accuracy, frame processing, recoverability, and answer preservation.",
+      "evidence": "The combined system scores 86.33 on StreamingBench and 69.77 on OVO-Bench. Across three paired training seeds, ViSS exceeds matched generic supervision by 1.72 OVO points on average, while remaining comparable on StreamingBench; gains concentrate in hallucination detection. Adaptive access particularly helps recall and counting. StreamingBench uses 17.08 processed frames per query versus 53.48 for exhaustive selection. Replacement errors explain 66.9% and 71.9% of the remaining oracle-gap cases.",
+      "discovery_use": "The paper contributes training for temporal state distinctions and recognition of insufficient evidence, followed by adaptive observation acquisition. These capabilities directly support agents verifying knowledge, recovering missing evidence, and reasoning under partial observation.",
+      "limits": "Controlled evidence covers one 8B backbone and two benchmarks. Causal means observation of the available temporal prefix, not identification of causal mechanisms. No persistent architectural state is added. Training audits do not establish human-unambiguous targets or historical necessity. Sufficiency removal changes training mass. The replacement-margin rule has no consistent accuracy advantage, and frame savings do not establish latency savings. Most recent-view errors remain unresolved by all tested views. Training annotations and raw media are unavailable. Quantitative figures were not among the supplied rendered pages.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "learning",
+        "rationale": "The paper contributes training for temporal state distinctions and recognition of insufficient evidence, followed by adaptive observation acquisition. These capabilities directly support agents verifying knowledge, recovering missing evidence, and reasoning under partial observation.",
+        "pdf_sha256": "66e695fc211b235222dc6918c1393fce2681ed21bd8a8e06c5fff37ffa44da4d",
+        "evidence_pages": [
+          1,
+          5,
+          25
+        ]
+      }
     }
   }
 }

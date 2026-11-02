@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-805-2563eb?style=flat-square" alt="805 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-809-2563eb?style=flat-square" alt="809 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-162-0f766e?style=flat-square" alt="162 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -67,9 +67,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-10-29 | [world2vec: Mechanistic world models through latent dynamics learning](https://arxiv.org/abs/2610.40637) |
 | 2026-10-29 | [rTaste: Do Research Agents Have Taste? Evaluating Early Stage Research Judgment](https://arxiv.org/abs/2610.40488) |
 | 2026-10-29 | [WorldBridge: Bridging Video and Action for Task Generalization in World Action Models](https://arxiv.org/abs/2610.40748) |
+| 2026-10-29 | [When Requirements Interact: Scaling Long-Horizon Coding via Interdependent Specifications](https://arxiv.org/abs/2610.40256) |
 | 2026-10-29 | [Well-Specified and Well-Tested? Assessing SWE-bench-Style Datasets with a Self-Evolving Agent](https://arxiv.org/abs/2610.39417) |
 | 2026-10-29 | [Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement](https://arxiv.org/abs/2610.40191) |
-| 2026-10-29 | [Try Before You Evolve: Ranking-Scored Trials for Recursive Self-Improvement of Recommender Systems](https://arxiv.org/abs/2610.39352) |
 
 <a id="contents"></a>
 
@@ -80,8 +80,8 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 44 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 88 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 62 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 138 |
-| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 108 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 140 |
+| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 110 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 134 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 78 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 153 |
@@ -775,6 +775,8 @@ Each work appears once under its primary contribution; see the [classification g
   Mengyang Liu et al. · Shanghai Jiao Tong University; Amazon; Nanjing University; +2 institutions
 - <a id="paper-b40ae7e623658513"></a>**SteerSearch: Interactive Search Reasoning with Mid-Response Steering** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24287)* · [Paper](https://arxiv.org/abs/2610.24287)<br>
   Udit Thakur et al. · Language Technology Lab, University of Amsterdam; eBay
+- <a id="paper-1526c0fccef70bd1"></a>**Supervising the Visible State: Separating Representation from View Selection in Streaming Video** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34926)* · [Paper](https://arxiv.org/abs/2610.34926) · [Code](https://github.com/yihaohu0118/ViSS) · [Project](https://yihaohu0118.github.io/ViSS/) · [HF Model](https://huggingface.co/mis2/ViSS-8B)<br>
+  Yihao Hu et al. · Westlake University; ZJU; USTC; +4 institutions
 - <a id="paper-a2259b2fffb789f0"></a>**SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.11345)* · [Paper](https://arxiv.org/abs/2610.11345) · [Code](https://github.com/weiyang930/SynCo) · [Dataset](https://huggingface.co/datasets/weiyang930/SynCo)<br>
   Wei Yang et al. · University of Southern California; The George Washington University; Georgia Institute of Technology
 - <a id="paper-0190aa0cb6ed0467"></a>**The Lexical Imprint of Pre-training Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2602.10657)* · [Paper](https://arxiv.org/abs/2602.10657) · [Code](https://github.com/penpaperkeycode/lexical-imprint)<br>
@@ -805,6 +807,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yecheng Wu, Song Han, Han Cai · Massachusetts Institute of Technology; NVIDIA
 - <a id="paper-ce88f69c0203ec29"></a>**WeVisOne-VL: Unified Visual Perception from Objects to Pixels** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31329)* · [Paper](https://arxiv.org/abs/2610.31329) · [Project](https://tencent.github.io/WeVisOne-VL) · [Code](https://github.com/Tencent/WeVisOne-VL)<br>
   Tianming Liang et al. · WeChat Vision, Tencent Inc.
+- <a id="paper-8741373104a1068a"></a>**When Requirements Interact: Scaling Long-Horizon Coding via Interdependent Specifications** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40256)* · [Paper](https://arxiv.org/abs/2610.40256)<br>
+  Yishuo Cai et al. · LLM Core, Xiaomi; Peking University; University of Hong Kong
 - <a id="paper-29b6bdf1923373d0"></a>**Where Research Ideation Begins: Forward-Citation Supervision for Actionable Limitation Generation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23038)* · [Paper](https://arxiv.org/abs/2610.23038)<br>
   Liyang Zhao, Yong Cao, Haibin Ling · Westlake University; University of Tübingen
 - <a id="paper-dd0575522a340479"></a>**WorkFactory: Turning Professional Intents into Executable Work for Scalable Agent Training** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37161)* · [Paper](https://arxiv.org/abs/2610.37161) · [Project](https://github.com/IQuestLab/WorkFactory)<br>
@@ -955,6 +959,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ye Wang et al. · China Academy of Chinese Medical Sciences; University of Science and Technology Beijing
 - <a id="paper-7420a54429f1ece0"></a>**Learning from Fleet Experience: A Collective Learning Paradigm for Robots** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.25736)* · [Paper](https://arxiv.org/abs/2610.25736) · [Project](https://cel-robot-learning.github.io/)<br>
   Chao Yu et al. · Tsinghua University; AgiBot; Infinigence AI
+- <a id="paper-e05f4aabbd0e3798"></a>**Learning Quality-Controllable Robot Policies with Iterative Hindsight Relabeling** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37393)* · [Paper](https://arxiv.org/abs/2610.37393) · [Project](https://sinnnj.github.io/qcp/)<br>
+  Sinjae Kang et al. · KAIST; LGE; Microsoft Research; +1 institutions
 - <a id="paper-f67c24c899266324"></a>**Learning to Compose: Recursive Self-Improvement of Shared Executable Stacks for Zero-Shot Long-Horizon Robot Manipulation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24464)* · [Paper](https://arxiv.org/abs/2610.24464) · [Code](https://github.com/cocacola-lab/Recursia) · [Project](https://cocacola-lab.github.io/Recursia-website/)<br>
   Yangzhi Chen et al. · Beijing Jiaotong University; New York University; University of Southern California; +2 institutions
 - <a id="t11"></a>**Learning to Discover at Test Time** · *[ICML 2026](https://proceedings.mlr.press/v306/yuksekgonul26a.html)* · [Paper](https://arxiv.org/html/2601.16175v1) · [Code](https://github.com/test-time-training/discover) · [Project](https://test-time-training.github.io/discover)<br>
@@ -963,6 +969,8 @@ Each work appears once under its primary contribution; see the [classification g
   Zhihui Chen, Mengling Feng · National University of Singapore
 - <a id="paper-bf157ba63fabe951"></a>**Memory as Belief: Bayesian Evolution of Memory for Self-Evolving LLM Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.25119)* · [Paper](https://arxiv.org/abs/2610.25119)<br>
   Yiming Xu et al. · School of Computer Science and Technology, Xi’an Jiaotong University; Shaanxi Provincial Key Laboratory of Big Data Knowledge Engineering, Xi’an Jiaotong University; University of Virginia, Charlottesville, Virginia, USA; +1 institutions
+- <a id="paper-191da1e6fb5e987a"></a>**MemSteer: Turning User Histories into Supervision for Agent Memory Optimization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.39276)* · [Paper](https://arxiv.org/abs/2610.39276)<br>
+  Jie Huang et al. · Peking University; Microsoft Research Asia
 - <a id="paper-f46e042d0f23b6f7"></a>**MemT-1.0: Towards Memory-Native Evolution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26825)* · [Paper](https://arxiv.org/abs/2610.26825) · [Code](https://github.com/MemTensor/MemT-1.0) · [HF Model](https://huggingface.co/MemTensor/MemT-1.0-Nano)<br>
   MemTensor Team et al. · NVIDIA
 - <a id="paper-15db23f231fe269b"></a>**MoLRSI: A Recursive Self-Improving AI agent for Molecular Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.39714)* · [Paper](https://arxiv.org/abs/2610.39714)<br>
