@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-788-2563eb?style=flat-square" alt="788 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-789-2563eb?style=flat-square" alt="789 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-160-0f766e?style=flat-square" alt="160 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -20,7 +20,7 @@
   <a href="https://owd-ai.github.io/awesome-open-world-discovery/">Research observatory ↗</a> · <a href="#what-is-owd">What is OWD?</a> · <a href="#why-owd">Why this focus?</a> · <a href="#updates">Latest papers</a> · <a href="#contents">Browse the list</a> · <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
-<p align="center"><sub>Literature checked through 2026-10-30 · Papers, author blogs, code, and benchmarks</sub></p>
+<p align="center"><sub>Literature checked through 2026-11-01 · Papers, author blogs, code, and benchmarks</sub></p>
 
 <a id="what-is-owd"></a>
 
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 43 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 85 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 61 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 133 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 134 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 107 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 131 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 77 |
@@ -643,6 +643,8 @@ Each work appears once under its primary contribution; see the [classification g
   Tonmoy Hasan et al. · Nubank
 - <a id="paper-98824c70837642db"></a>**Function-Space Temporal Self-Distillation for Policy Optimization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19687)* · [Paper](https://arxiv.org/abs/2610.19687)<br>
   Aryan Das, Arnab Bhattacharya, Vinay Kumar Verma · Indian Institute of Technology Kanpur, India
+- <a id="paper-3c61df041ccddbc2"></a>**Generalized CycleGRPO for Fine-Grained Multimodal Understanding and Grounding** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29552)* · [Paper](https://arxiv.org/abs/2610.29552) · [Project](https://devinxzhang.github.io/Generalized-CycleGRPO-Page/)<br>
+  CycleGRPO Team · NUS; UCAS; NTU
 - <a id="paper-0b82946374e2d1ff"></a>**GRADS: Graph-Regulated Agentic Data Synthesis with Controllable Difficulty** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21167)* · [Paper](https://arxiv.org/abs/2610.21167)<br>
   Gaocheng Yang et al. · Johns Hopkins University; Nanjing University; Amazon
 - <a id="paper-c4a481fb0af0b157"></a>**Group-Marginalized Self-Rewarding RL Drives Zero-Label Self-Evolving** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.36750)* · [Paper](https://arxiv.org/abs/2609.36750)<br>

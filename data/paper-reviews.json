@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-11-01",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -25941,6 +25941,39 @@
         "evidence_pages": [
           1,
           6,
+          17
+        ]
+      }
+    },
+    "paper-3c61df041ccddbc2": {
+      "institutions": [
+        "NUS",
+        "UCAS",
+        "NTU"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        15,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A shared policy samples candidate descriptions for an annotated region and multiple localization rollouts per description. Reconstruction consistency supplies caption rewards and individual localization rewards, with nested group-relative optimization updating both mappings. Anti-leakage rules discourage coordinate shortcuts. DOVE uses human-verified occurrence groups and private temporal probes scored by a fixed text-only judge.",
+      "evidence": "GroundingSuite gIoU improves from 57.5% to 68.2%, and GRES average gIoU from 71.2% to 78.7%. From the Qwen initialization, Charades tIoU improves from 45.6% to 51.9%, and DOVE TEC from 14.8% to 33.3%; the TEC improvement has a group-bootstrap 95% interval of 15.8–21.3 percentage points. Joint optimization exceeds single-direction alternatives. V-STaR mLGM improves from 47.2% to 49.8%.",
+      "discovery_use": "The concrete discovery-training contribution is a generate-and-test learning loop: a model proposes semantic descriptions, tests them by reconstructing their evidence, and learns both proposal and verification mappings. This provides a grounded self-evaluation mechanism relevant to learning to discover, although autonomous scientific investigation is not demonstrated.",
+      "limits": "Reconstruction is a proxy and cannot guarantee factual completeness or eliminate implicit shortcuts. The initial policy must already perform both mappings, and nested rollouts increase training cost. Caption-free supervision applies to the cycle branches during RL; initialization, offline screening, auxiliary QA, and DOVE evaluation have other supervision or judging requirements. Some temporal metrics regress. DOVE supplies event boundaries and excludes audio-dependent evidence. Only the supplied representative pages were visually inspected; reported results were assessed from the supplied body text.",
+      "classification_review": {
+        "date": "2026-11-01",
+        "category": "learning",
+        "rationale": "The concrete discovery-training contribution is a generate-and-test learning loop: a model proposes semantic descriptions, tests them by reconstructing their evidence, and learns both proposal and verification mappings. This provides a grounded self-evaluation mechanism relevant to learning to discover, although autonomous scientific investigation is not demonstrated.",
+        "pdf_sha256": "d1cdc698b5a76ff6c0d8c468a28d6003b70eb0fed596df193e84c0878f20830a",
+        "evidence_pages": [
+          1,
+          6,
+          15,
           17
         ]
       }
