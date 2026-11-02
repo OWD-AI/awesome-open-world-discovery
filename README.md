@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-802-2563eb?style=flat-square" alt="802 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-161-0f766e?style=flat-square" alt="161 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-805-2563eb?style=flat-square" alt="805 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-162-0f766e?style=flat-square" alt="162 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -61,6 +61,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Date | Paper |
 | --- | --- |
 | 2026-10-30 | [RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory](https://arxiv.org/abs/2610.42141) |
+| 2026-10-30 | [REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control](https://arxiv.org/abs/2610.42053) |
 | 2026-10-30 | [MEMIG: Self-evolving Memory Construction for Antibody Optimization](https://arxiv.org/abs/2610.41245) |
 | 2026-10-30 | [CausalWAM: Learning the Causes of Actions in World Action Models](https://arxiv.org/abs/2610.42096) |
 | 2026-10-29 | [world2vec: Mechanistic world models through latent dynamics learning](https://arxiv.org/abs/2610.40637) |
@@ -69,7 +70,6 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-10-29 | [Well-Specified and Well-Tested? Assessing SWE-bench-Style Datasets with a Self-Evolving Agent](https://arxiv.org/abs/2610.39417) |
 | 2026-10-29 | [Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement](https://arxiv.org/abs/2610.40191) |
 | 2026-10-29 | [Try Before You Evolve: Ranking-Scored Trials for Recursive Self-Improvement of Recommender Systems](https://arxiv.org/abs/2610.39352) |
-| 2026-10-29 | [TinyAstral: Transferring Self-Evolving Harnesses to Tiny Generalist Manipulation Agents](https://arxiv.org/abs/2610.41216) |
 
 <a id="contents"></a>
 
@@ -80,11 +80,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 44 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 88 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 62 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 137 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 138 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 108 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 133 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 134 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 78 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 152 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 153 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -685,6 +685,8 @@ Each work appears once under its primary contribution; see the [classification g
   Minhua Lin et al. · The Pennsylvania State University; UC Santa Cruz; Emory University; +2 institutions
 - <a id="gollum"></a>**Large language models as uncertainty-calibrated optimizers for experimental discovery** · *[Nature Machine Intelligence 2026](https://www.nature.com/articles/s42256-026-01283-z)* · [Paper](https://www.nature.com/articles/s42256-026-01283-z) · [Preprint](https://arxiv.org/abs/2504.06265) · [Code](https://github.com/schwallergroup/gollum)<br>
   Bojana Ranković, Ryan-Rhys Griffiths, Philippe Schwaller · École Polytechnique Fédérale de Lausanne (EPFL); NCCR Catalysis, EPFL; QuantumGreen
+- <a id="paper-6385c20038a2af2c"></a>**Latent Reasoning in Continuous Space for Unified Multimodal Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.42149)* · [Paper](https://arxiv.org/abs/2610.42149) · [Project](https://rootyjeon.github.io/larc-umm/) · [Code](https://github.com/rootyJeon/LARC)<br>
+  Byungwoo Jeon et al. · KAIST; POSTECH; RLWRLD
 - <a id="paper-a97c1f5a709e4de6"></a>**Lean4AgenticRL: Advancing Agentic RL with Verifiable Multi-level Process Rewards** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22448)* · [Paper](https://arxiv.org/abs/2610.22448) · [Code](https://github.com/RickySkywalker/Lean4AgenticRL) · [HF Model](https://huggingface.co/amazon/LAR-27B)<br>
   Ruida Wang, Gerald Friedland, Tong Zhang, Chris Kong · Amazon Web Services; University of Illinois Urbana-Champaign
 - <a id="paper-44d308ca6f63a0d7"></a>**LeanPRM: Lean-Grounded Process Supervision for Natural Language Proof Verification** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.17697)* · [Paper](https://arxiv.org/abs/2610.17697) · [Project](https://rlafuente.com/lean-prm) · [Code](https://github.com/pavelslab-nyu/LeanPRM) · [Dataset](https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/data) · [Dataset](https://huggingface.co/datasets/pavelslab-nyu/LeanPRM/tree/main/benchmark)<br>
@@ -1292,6 +1294,8 @@ Each work appears once under its primary contribution; see the [classification g
   Jiyuan Tan, Vasilis Syrgkanis, Jose Blanchet · Stanford University
 - <a id="paper-1ad6e160560ae715"></a>**RankEvolve: A Reliable Multi-Agent Auto-Research Harness for Evolving Ranking Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.39551)* · [Paper](https://arxiv.org/abs/2609.39551)<br>
   Zheng Chen, Linfeng Liu, Hong Li, Hong Yan · Meta
+- <a id="paper-b32311fc0e446b70"></a>**REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.42053)* · [Paper](https://arxiv.org/abs/2610.42053) · [Project](https://mikeeeeeeeeeeeeee.github.io/REA/)<br>
+  Pengfei Zhou et al. · National University of Singapore, HPC-AI Lab; InfRec, Cardinal AI Lab; University of California, Berkeley; +3 institutions
 - <a id="paper-d4244eed905302a2"></a>**RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.27612)* · [Paper](https://arxiv.org/abs/2609.27612)<br>
   Kailin Wang et al. · AI Lab, Country Garden Services Group; School of Mechanical Science and Engineering, Huazhong University of Science and Technology; Omni AI
 - <a id="paper2agent"></a>**Reimagining research papers as interactive and reliable AI agents** · *[Nature 2026](https://www.nature.com/articles/s41586-026-11044-y)* · [Paper](https://www.nature.com/articles/s41586-026-11044-y) · [Preprint](https://arxiv.org/abs/2509.06917) · [Code](https://github.com/jmiao24/Paper2Agent)<br>
@@ -1721,6 +1725,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Nicholas Saban, Charvi Bannur, Mariya Vasileva, Darshan Deshpande · Patronus AI
 - <a id="paper-9cf7f151165bcfc3"></a>**HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24520)* · [Paper](https://arxiv.org/abs/2610.24520) · [Code](https://github.com/LUMIA-Group/habit-bench) · [Dataset](https://huggingface.co/datasets/hollyming/HABIT-Bench)<br>
   Junming Zhang et al. · LUMIA Lab, School of Artificial Intelligence, Shanghai Jiao Tong University; Shanghai Artificial Intelligence Laboratory; Fudan University
+- <a id="paper-6016c74999b1d973"></a>**HALO: Human-Grounded Granular Evaluation of Proactive Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.39086)* · [Paper](https://arxiv.org/abs/2610.39086) · [Code](https://github.com/CedricPei/HALO) · [Dataset](https://huggingface.co/datasets/CedPei/HALO-8K)<br>
+  Wenqi Pei et al. · University of California, Davis; 2077AI; University of Southern California
 - <a id="paper-f34ad45741b405ff"></a>**Harness-Delta Attribution: Dissecting Gains From Harness Evolution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22466)* · [Paper](https://arxiv.org/abs/2610.22466) · [Code](https://github.com/Wenwen-D/HarnessDeltaAttribution) · [Project](https://wenwen-d.github.io/blog/harness-delta-attribution/)<br>
   Wenxuan Ding et al. · Amazon; New York University
 - <a id="paper-7a9367ad16e43eeb"></a>**How Do Coding-Agent Harnesses Self-Evolve? An Empirical Study of Retrospective Adaptation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34938)* · [Paper](https://arxiv.org/abs/2610.34938) · [Dataset](https://zenodo.org/records/23653700)<br>

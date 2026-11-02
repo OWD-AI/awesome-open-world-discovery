@@ -26378,6 +26378,102 @@
           5
         ]
       }
+    },
+    "paper-b32311fc0e446b70": {
+      "institutions": [
+        "National University of Singapore, HPC-AI Lab",
+        "InfRec, Cardinal AI Lab",
+        "University of California, Berkeley",
+        "The University of Tokyo",
+        "Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences",
+        "Hong Kong University of Science and Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        27
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A common execution contract supports programs, VLAs, and controllers. Development success and cost populate route memory. Policy-boundary visual judgments detect silent failures, and an escalation ladder shares the remaining step and time budget. A separate learned selector evaluates initial dispatch across VLA and code policies.",
+      "evidence": "On 3,000 LIBERO-Pro episodes, memory routing reaches 95.9% success versus 94.7% for the strongest individual baseline, with 25% fewer steps per success and 17% less control time. Visual judging adds 3.1 percentage points on the ASPIRE study at substantially greater time cost. The separate RoboTwin mixed-policy study reaches 86% versus 80% for MEDex.",
+      "discovery_use": "REA contributes a reusable agent harness for coordinating deliberation, retained outcome evidence, execution, and completion verification. Its concrete relevance is reliable feedback-driven agent operation and bounded recovery, although it does not itself discover new skills online.",
+      "limits": "Only 37 headline tasks have exactly matched baseline policy pools. Route memory requires development trials for known tasks. The VLA study reuses scenes seen during earlier development and tests initial selection rather than recovery. Transfer comparisons include run-window effects; real-robot samples are small and manually judged. Judge-mechanism attribution uses replay proxies. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "systems",
+        "rationale": "REA contributes a reusable agent harness for coordinating deliberation, retained outcome evidence, execution, and completion verification. Its concrete relevance is reliable feedback-driven agent operation and bounded recovery, although it does not itself discover new skills online.",
+        "pdf_sha256": "bb63c57cbb457c9afdcc89fc121cd91faab3a7a6da73e172bb39defa784207ac",
+        "evidence_pages": [
+          1,
+          3,
+          27
+        ]
+      }
+    },
+    "paper-6385c20038a2af2c": {
+      "institutions": [
+        "KAIST",
+        "POSTECH",
+        "RLWRLD"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        16,
+        22
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Curriculum SFT gradually activates latent steps on one million paired reasoning examples. GRPO subsequently updates the understanding expert using a frozen reference model's shared-noise flow-loss improvement plus a latent-diversity reward. The generation expert stays frozen during RL.",
+      "evidence": "On BAGEL, GenEval improves from 0.81 to 0.88, DPG-Bench from 85.07 to 90.04, and MIRA from 7.5 to 11.7. Ablations show additional gains from RL and diversity regularization. Reported A100 inference time rises from 46.8 to 48.0 seconds as latent steps increase from one to ten.",
+      "discovery_use": "LARC contributes a concrete post-training method for learning intermediate multimodal reasoning through internal feedback and additional inference computation. This is relevant enabling research for discovery reasoning, with evidence confined to generation and visual reasoning rather than autonomous investigation.",
+      "limits": "Experiments use one backbone with a flow-matching generation head and predominantly automated evaluation. RL still uses paired target images despite requiring no latent-trace labels. Flow-loss differences are reward proxies; shared noise alone does not establish exact likelihood or mutual-information equivalence. The scaling plot is not strictly monotonic, and equal latent/image counts are not equal compute budgets. The official repository currently contains a README with implementation release tasks pending; no LARC checkpoint was verified.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "learning",
+        "rationale": "LARC contributes a concrete post-training method for learning intermediate multimodal reasoning through internal feedback and additional inference computation. This is relevant enabling research for discovery reasoning, with evidence confined to generation and visual reasoning rather than autonomous investigation.",
+        "pdf_sha256": "24efa2966f122374dff86d98458efdc153fdbff6bf2b659c8cd8f2fd9ff4629a",
+        "evidence_pages": [
+          1,
+          16,
+          22
+        ]
+      }
+    },
+    "paper-6016c74999b1d973": {
+      "institutions": [
+        "University of California, Davis",
+        "2077AI",
+        "University of Southern California"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Agents inspect event prefixes, query databases and documents, and return one executable intervention or no action. Independently reset checkpoints prevent previous interventions from changing later tests. Twenty annotators label 8,000 responses from ten models across 400 scenarios, including timing, intensity, and grounding failures.",
+      "evidence": "Best proprietary and open-source acceptability reaches 72.88% and 56.63%. Premature or excessive intervention accounts for 61.20% of rejected responses. Content retrieval correlates with more acceptable reminders, including after checkpoint and model controls; the analysis does not establish causality. Exploratory judge adaptation improves verdict accuracy while worsening joint diagnostic accuracy.",
+      "discovery_use": "HALO evaluates agents discovering unstated needs, acquiring missing evidence, and determining warranted action. Its executable environments and human diagnosis directly measure evidence-grounded investigation and calibrated initiative.",
+      "limits": "Constructed scenarios do not estimate real-world need frequencies. Independent checkpoints omit user reactions and cumulative intervention effects. Each response receives one verdict, and annotators represent limited demographic diversity. Retrieval associations remain observational, transport and parsing failures are excluded, and exploratory judge validation shares scenarios with training. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "benchmarks",
+        "rationale": "HALO evaluates agents discovering unstated needs, acquiring missing evidence, and determining warranted action. Its executable environments and human diagnosis directly measure evidence-grounded investigation and calibrated initiative.",
+        "pdf_sha256": "927e1886f28ff6ccf4226c72e13219e9cf81770d133386966dd88ea222dda2c3",
+        "evidence_pages": [
+          1,
+          4,
+          7
+        ]
+      }
     }
   }
 }

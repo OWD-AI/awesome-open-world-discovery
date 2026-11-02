@@ -3628,6 +3628,30 @@
       "name": "More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.40758"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose evidence retrieval through 29 interaction commands across simulated apps, SQLite databases, and text files.",
+        "Retrieval may repeat without a fixed retrieval limit.",
+        "Each checkpoint ends with no action or exactly one of 19 action commands, executed once in isolation.",
+        "Future events are hidden; agents must use the observed prefix and retrieved evidence."
+      ],
+      "focus": "Evidence-grounded proactive assistance: deciding whether, when, and how far to intervene across 400 constructed scenarios. Feedback consists of command results from executable simulated apps and subsequent human acceptability verdicts and diagnostic labels. HALO-8K records 8,000 annotated responses. These are simulated personal-assistance tasks and recorded evaluations, not executed research experiments or new physical measurements.",
+      "limits": "Constructed scenarios do not establish real-world need frequencies. Independent checkpoints omit user reactions and cumulative intervention effects. Each response receives one human verdict, with limited demographic diversity among annotators. Reported results exclude transport and parsing failures. Exploratory judge validation shares scenarios with training.",
+      "training": {
+        "reward": "A proactive-agent training reward is not established. Evaluation uses human acceptability verdicts and timing, intensity, and other diagnostic labels, informed by the observed prefix, retrieved evidence, response, and execution result. Exploratory judge adaptation uses supervised LoRA on 7,600 annotated responses, with 400 validation responses sharing scenarios with training; an RL reward is not established.",
+        "reset": "For every checkpoint, the runner independently resets to the personal environment's initial state S0 and replays only that scenario's observed event prefix. Earlier agent interventions do not affect later checkpoints or other scenarios.",
+        "branching": "Scenarios share an initial state and have independent event sequences. Checkpoint replay supports separate evaluations from observed prefixes. Arbitrary state cloning or agent-created counterfactual branching is not established; interventions do not propagate into subsequent checkpoints."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6016c74999b1d973",
+      "resource_id": "paper-6016c74999b1d973",
+      "name": "HALO: Human-Grounded Granular Evaluation of Proactive Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.39086"
     }
   ]
 }
