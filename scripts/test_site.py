@@ -192,29 +192,40 @@ class SiteTests(unittest.TestCase):
                     media.cache_reviewed_images({'url': 'https://x.com/lab/status/123'}, {'images': [photo]}, assets)
 
     def test_subpage_links_resolve_under_a_project_site(self):
-        class Links(HTMLParser):
-            def __init__(self):
-                super().__init__()
-                self.links = []
-            def handle_starttag(self, tag, attrs):
-                self.links.extend(value for key, value in attrs if key in ('href', 'src') and value)
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             build_site.build(root)
-            for page in root.rglob('*.html'):
-                parser = Links()
-                parser.feed(page.read_text(encoding='utf-8'))
-                for link in parser.links:
-                    if link.startswith(('https://', 'http://', '#')):
-                        continue
-                    path = link.split('?', 1)[0].split('#', 1)[0]
-                    target = (page.parent / path).resolve()
-                    self.assertTrue(target.is_relative_to(root), link)
-                    self.assertTrue(target.is_file() or (target / 'index.html').is_file(), f'{page.name}: {link}')
+            self.assertGreater(build_site.validate_local_links(root), 0)
             library = (root / 'library/index.html').read_text(encoding='utf-8')
             resources, _ = load()
             self.assertEqual(library.count('class="work-row"'), len(resources['resources']))
             self.assertNotIn('Read full description', library)
+
+    def test_link_checker_resolves_paper_home_and_still_rejects_broken_or_escaping_links(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'index.html').write_text('Home')
+            paper = root / 'papers' / 'example'
+            paper.mkdir(parents=True)
+            page = paper / 'index.html'
+            page.write_text('<a href="../../">Home</a><a href="../../?q=test">Home again</a>')
+            self.assertEqual(build_site.validate_local_links(root), 1)
+            page.write_text('<a href="../../missing/">Missing</a>')
+            with self.assertRaisesRegex(ValueError, 'missing local target'):
+                build_site.validate_local_links(root)
+            page.write_text('<a href="../../../secret">Escape</a>')
+            with self.assertRaisesRegex(ValueError, 'escapes artifact'):
+                build_site.validate_local_links(root)
+
+    def test_paper_render_does_not_rebuild_the_entire_feed(self):
+        from unittest.mock import patch
+        resources, benchmarks = load()
+        paper = {'slug': 'example', 'title': 'Example', 'summary': 'A reviewed work.', 'year': 2026,
+                 'venue': 'Research', 'url': 'https://arxiv.org/abs/2610.12345', 'links': []}
+        with patch.object(build_site, 'payload', side_effect=AssertionError('Paper pages must not rebuild the feed')):
+            rendered = build_site.render(resources['resources'], benchmarks, CATEGORIES, page='paper', paper=paper)
+        self.assertIn('Example', rendered)
+        self.assertIn('../../', rendered)
 
 
 if __name__ == '__main__': unittest.main()

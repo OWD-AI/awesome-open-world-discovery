@@ -74,10 +74,11 @@ def merge_links(*groups):
     return list({(link['label'], link['url']): link for group in groups for link in group}.values())
 
 
-def payload(resources, categories, updates, asset_prefix):
+def payload(resources, categories, updates, asset_prefix, *, reviews=None):
     media_path = ROOT / 'data/update-media.json'
     media = json.loads(media_path.read_text(encoding='utf-8')) if media_path.exists() else {}
-    reviews = json.loads((ROOT / 'data/paper-reviews.json').read_text(encoding='utf-8'))['reviews']
+    if reviews is None:
+        reviews = json.loads((ROOT / 'data/paper-reviews.json').read_text(encoding='utf-8'))['reviews']
     end = date.fromisoformat(updates['window_end'])
     start = end - timedelta(days=updates['window_days'] - 1)
     works = []
@@ -185,7 +186,9 @@ def initial_works(items, categories, library_url, papers_url):
 
 
 def asset_url(prefix, name):
-    fingerprint = hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:10]
+    source = ROOT / 'assets' / name
+    stat = source.stat()
+    fingerprint = image_fingerprint(str(source), stat.st_mtime_ns, stat.st_size)
     return f'{prefix}/{name}?v={fingerprint}'
 
 
@@ -211,16 +214,28 @@ def feed_context(updates):
             f' – <time datetime="{end.isoformat()}">{label(end, True)}</time></span></p>')
 
 
-def render(resources, benchmarks, categories, inline=False, page='home', paper=None):
+def render(resources, benchmarks, categories, inline=False, page='home', paper=None, context=None):
     from build import CATEGORY_GUIDE
     if page not in ('home', 'updates', 'library', 'about', 'paper'):
         raise ValueError('Unknown website page')
-    updates = json.loads((ROOT / 'data/updates.json').read_text(encoding='utf-8'))
+    context = {} if context is None else context
+    if 'updates' not in context:
+        context['updates'] = json.loads((ROOT / 'data/updates.json').read_text(encoding='utf-8'))
+    updates = context['updates']
     base = SITE_URL if inline else './' if page == 'home' else '../../' if page == 'paper' else '../'
     asset_prefix = '../assets' if inline else base + 'assets'
     paths = {'home': base, **{name: base + name + '/' for name in ('updates', 'library', 'about')}}
     paths['papers'] = base + 'papers/'
-    data = payload(resources, categories, updates, asset_prefix)
+    if page in ('paper', 'about'):
+        # These pages only export navigation, categories and the selected paper.
+        # Rebuilding every news card and catalog entry for every paper was quadratic.
+        data = {'categories': categories, 'works': [], 'updates': []}
+    else:
+        payloads = context.setdefault('payloads', {})
+        if asset_prefix not in payloads:
+            payloads[asset_prefix] = payload(resources, categories, updates, asset_prefix,
+                                            reviews=context.get('reviews'))
+        data = dict(payloads[asset_prefix])
     data['paths'] = paths
     data['questions'] = {key: CATEGORY_GUIDE[key][1] for key in categories}
     counts = {key: sum(item['category'] == key for item in resources) for key in categories}
@@ -239,7 +254,9 @@ def render(resources, benchmarks, categories, inline=False, page='home', paper=N
         if not paper:
             raise ValueError('Paper page requires a work')
         titles['paper'] = paper['title'] + ' — Open World Discovery'
-        reviews = json.loads((ROOT / 'data/paper-reviews.json').read_text(encoding='utf-8'))['reviews']
+        if 'reviews' not in context:
+            context['reviews'] = json.loads((ROOT / 'data/paper-reviews.json').read_text(encoding='utf-8'))['reviews']
+        reviews = context['reviews']
         review = reviews.get(paper.get('id'), {})
         notes = '<section><h2>What this work does</h2><p>' + esc(paper['summary']) + '</p></section>'
         for key, heading in [('discovery_use', 'Connection to discovery'), ('evidence', 'Evidence'), ('limits', 'Scope and limitations')]:
@@ -284,19 +301,21 @@ def render(resources, benchmarks, categories, inline=False, page='home', paper=N
 def build(destination):
     from build import CATEGORIES, load
     resources, benchmarks = load()
+    context = {'updates': json.loads((ROOT / 'data/updates.json').read_text(encoding='utf-8')),
+               'reviews': json.loads((ROOT / 'data/paper-reviews.json').read_text(encoding='utf-8'))['reviews']}
     destination.mkdir(parents=True, exist_ok=True)
     for page in ('home', 'updates', 'library', 'about'):
         folder = destination if page == 'home' else destination / page
         folder.mkdir(exist_ok=True)
-        (folder / 'index.html').write_text(render(resources['resources'], benchmarks, CATEGORIES, page=page), encoding='utf-8', newline='\n')
-    updates = json.loads((ROOT / 'data/updates.json').read_text(encoding='utf-8'))
-    catalog = payload(resources['resources'], CATEGORIES, updates, 'assets')
+        (folder / 'index.html').write_text(render(resources['resources'], benchmarks, CATEGORIES, page=page, context=context), encoding='utf-8', newline='\n')
+    updates = context['updates']
+    catalog = payload(resources['resources'], CATEGORIES, updates, 'assets', reviews=context['reviews'])
     # A canonical source URL gives papers a stable discussion, even after catalog admission.
     papers = paper_pages(catalog['works'], updates)
     for item in papers.values():
         folder = destination / 'papers' / item['slug']
         folder.mkdir(parents=True, exist_ok=True)
-        (folder / 'index.html').write_text(render(resources['resources'], benchmarks, CATEGORIES, page='paper', paper=item), encoding='utf-8', newline='\n')
+        (folder / 'index.html').write_text(render(resources['resources'], benchmarks, CATEGORIES, page='paper', paper=item, context=context), encoding='utf-8', newline='\n')
     for name in ('site.css', 'site.js'):
         shutil.copyfile(ROOT / 'site' / name, destination / name)
     (destination / '.nojekyll').touch()
@@ -314,6 +333,41 @@ def build(destination):
         shutil.copyfile(source, target)
     (destination / 'README.md').write_text('# Open World Discovery\n\nPublic website artifact generated from the research catalog.\n\n' + SITE_URL + '\n', encoding='utf-8', newline='\n')
     return destination
+
+
+def validate_local_links(destination):
+    """Resolve links against one artifact manifest, using web paths on every host OS."""
+    import posixpath
+    from html.parser import HTMLParser
+    from urllib.parse import unquote
+    class Links(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.links = []
+        def handle_starttag(self, tag, attrs):
+            self.links.extend(value for key, value in attrs if key in ('href', 'src') and value)
+    files = {p.relative_to(destination).as_posix(): p for p in destination.rglob('*') if p.is_file()}
+    checked = set()
+    for name, page in files.items():
+        if not name.endswith('.html'):
+            continue
+        parser = Links()
+        parser.feed(page.read_text(encoding='utf-8'))
+        for link in parser.links:
+            parsed = urlsplit(link)
+            if parsed.scheme or parsed.netloc or not parsed.path:
+                continue
+            path = unquote(parsed.path)
+            target = posixpath.normpath(posixpath.join(posixpath.dirname(name), path))
+            if target == '..' or target.startswith(('../', '/')):
+                raise ValueError(f'{name}: link escapes artifact: {link}')
+            if target in checked:
+                continue
+            index = posixpath.normpath(posixpath.join(target, 'index.html'))
+            if target not in files and index not in files:
+                raise ValueError(f'{name}: missing local target: {link} ({target})')
+            checked.add(target)
+    return len(checked)
 
 
 if __name__ == '__main__':
