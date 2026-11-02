@@ -26692,6 +26692,41 @@
           7
         ]
       }
+    },
+    "paper-4d751da36420117d": {
+      "institutions": [
+        "UC Berkeley",
+        "ICSI",
+        "LBNL",
+        "Furiosa AI",
+        "KAIST"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The Curator maintains task-level trajectories and outcomes, temporarily skips mastered or uninformative tasks, revisits skipped tasks, and supplies trustworthy successful trajectories to the Reflector. Experiments compare against GEPA and ACE using matched rollout budgets and held-out tasks across browser, household, application, and tool-use environments. Additional studies examine component ablations, efficient history retention, QA, and harness-code optimization.",
+      "evidence": "Browser test success improves over GEPA by 3.4 and 5.0 percentage points overall for the two optimizer models. The largest reported individual gains are 20.7 points over GEPA and 21.2 over ACE. A GitLab validation ablation scores 88.6% for the combined method versus 82.8% for GEPA and 84.2–84.7% for either component alone. Harness-code optimization yields smaller gains, while QA improvements are modest and HotpotQA declines. The efficient variant costs approximately 1.31 times GEPA under the reported accounting.",
+      "discovery_use": "The paper directly studies agent self-improvement: it selects informative experiences, diagnoses unreliable feedback, and retrieves retained successes to guide prompt and harness revision. This concretely supports learning to improve investigative behavior, although autonomous scientific discovery is not demonstrated.",
+      "limits": "These are bounded optimization experiments on existing task sets, not evidence of indefinitely recursive improvement or new scientific discoveries. The strongest component ablation uses a validation set from one domain. Five reported repeats do not clearly establish variation across independent optimization searches; the harness-code extension explicitly uses one search per method and setting. That extension regresses on some subsets. The flattened retail τ-bench setup removes user interaction. Cost estimates exclude hosting and final test evaluation. No paper-specific release was verified; supplied repository hints identify baseline tools.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "open_ended",
+        "rationale": "The paper directly studies agent self-improvement: it selects informative experiences, diagnoses unreliable feedback, and retrieves retained successes to guide prompt and harness revision. This concretely supports learning to improve investigative behavior, although autonomous scientific discovery is not demonstrated.",
+        "pdf_sha256": "b3546645d52b0ef0dd3f16a76b02d8c9c57a34ec22e0bb598f632ca5b637a208",
+        "evidence_pages": [
+          1,
+          3,
+          7,
+          9
+        ]
+      }
     }
   }
 }

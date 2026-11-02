@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-812-2563eb?style=flat-square" alt="812 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-813-2563eb?style=flat-square" alt="813 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-162-0f766e?style=flat-square" alt="162 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -83,7 +83,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 142 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 110 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 134 |
-| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 78 |
+| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 79 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 153 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
@@ -1480,6 +1480,8 @@ Each work appears once under its primary contribution; see the [classification g
   Zhipeng Chen et al. · Gaoling School of Artificial Intelligence, Renmin University of China; IQuest Research; Nanyang Technological University
 - <a id="paper-2d3763112aef5022"></a>**ExpEvolve: Structuring and Reusing Experience for Open-Ended Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29303)* · [Paper](https://arxiv.org/abs/2610.29303)<br>
   Yongqiang Chen et al. · MBZUAI; Carnegie Mellon University; TMLR Group, Hong Kong Baptist University; +2 institutions
+- <a id="paper-4d751da36420117d"></a>**GEPA-Curator: Curated Learning for Self Improving Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37651)* · [Paper](https://arxiv.org/abs/2610.37651)<br>
+  Zack Yu et al. · UC Berkeley; ICSI; LBNL; +2 institutions
 - <a id="paper-d57ea0fb0cf5ef2f"></a>**GuideEvolve: Self-Evolving Agent Framework with Expert Guidance and 3Ts Mechanisms** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30017)* · [Paper](https://arxiv.org/abs/2610.30017)<br>
   Meihong Jia, Yasemin Timar, Jonathan Taws · Amazon; Amazon Web Services
 - <a id="paper-7c54f1424d2cec7d"></a>**Gödel Forest: Balancing Search Depth and Breadth for Data-Centric Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.36675)* · [Paper](https://arxiv.org/abs/2609.36675) · [Code](https://github.com/evolvent-ai/Godel-Forest) · [Project](https://rsibench.co/)<br>
