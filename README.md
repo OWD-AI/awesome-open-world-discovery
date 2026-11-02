@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-809-2563eb?style=flat-square" alt="809 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-812-2563eb?style=flat-square" alt="812 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-162-0f766e?style=flat-square" alt="162 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -78,9 +78,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 44 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 88 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 89 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 62 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 140 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 142 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 110 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 134 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 78 |
@@ -296,6 +296,8 @@ Each work appears once under its primary contribution; see the [classification g
   Xindi Yang et al. · Monash University; University of Bristol; Dalian University of Technology; +2 institutions
 - <a id="paper-28263e185eb4c918"></a>**Optimal Correction Sets for Provable Redress of Contestable Causal Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33138)* · [Paper](https://arxiv.org/abs/2610.33138) · [Code](https://github.com/briziorusso/ArgCausalDisco)<br>
   Fabrizio Russo et al. · Imperial College London, London, United Kingdom; University of Calabria, Rende, Italy
+- <a id="paper-d6c503341960b1da"></a>**OSWAM: An Effective World Action Model with One-Step Action Generation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35850)* · [Paper](https://arxiv.org/abs/2610.35850) · [Project](https://gwenzhang.github.io/OSWAM) · [Code](https://github.com/PolyU-VCLab/OSWAM)<br>
+  Guowen Zhang et al. · The Hong Kong Polytechnic University
 - <a id="paper-b30aedba981183d1"></a>**OverSeer: Multi-Agent World Models Beyond What Agents See** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28554)* · [Paper](https://arxiv.org/abs/2610.28554) · [Project](https://runjiali-rl.github.io/OverSeer/)<br>
   Runjia Li et al. · Meta AI; University of Oxford
 - <a id="paper-9012c023703e1f65"></a>**PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37381)* · [Paper](https://arxiv.org/abs/2610.37381)<br>
@@ -651,6 +653,8 @@ Each work appears once under its primary contribution; see the [classification g
   Meijia Chen et al. · Rutgers University; Independent Researcher; University of California, San Diego; +3 institutions
 - <a id="paper-795331a5c91b086f"></a>**FC-SWE: Failure-Conditioned RL for Long-Horizon Software Engineering Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.07898)* · [Paper](https://arxiv.org/abs/2610.07898)<br>
   Jia Liufu et al. · NVIDIA; Tsinghua University
+- <a id="paper-aff31c4fee36adb6"></a>**Follow the Gradient: Tracing Safety Degradation Back to Training Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37481)* · [Paper](https://arxiv.org/abs/2610.37481) · [Dataset](https://huggingface.co/datasets/DatologyAI/SafeTulu) · [Project](https://huggingface.co/spaces/DatologyAI/SafeTulu-Space)<br>
+  Saket Reddy et al. · DatologyAI; University of Illinois Urbana-Champaign (UIUC)
 - <a id="paper-339e82eef6e4a8b6"></a>**From Valid to Useful: Post-Verification Acquisition for Recursive Self-Improving Recommendation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04302)* · [Paper](https://arxiv.org/abs/2610.04302)<br>
   Tonmoy Hasan et al. · Nubank
 - <a id="paper-98824c70837642db"></a>**Function-Space Temporal Self-Distillation for Policy Optimization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19687)* · [Paper](https://arxiv.org/abs/2610.19687)<br>
@@ -781,6 +785,8 @@ Each work appears once under its primary contribution; see the [classification g
   Wei Yang et al. · University of Southern California; The George Washington University; Georgia Institute of Technology
 - <a id="paper-0190aa0cb6ed0467"></a>**The Lexical Imprint of Pre-training Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2602.10657)* · [Paper](https://arxiv.org/abs/2602.10657) · [Code](https://github.com/penpaperkeycode/lexical-imprint)<br>
   Jeonghoon Kim et al. · NAVER Cloud; KAIST
+- <a id="paper-0f837235d680cb4e"></a>**Think Twice: The Metis-1.6 Technical Report** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37903)* · [Paper](https://arxiv.org/abs/2610.37903) · [HF Model](https://huggingface.co/Lernex/Metis-1.6-Logos) · [HF Model](https://huggingface.co/Lernex/Metis-1.6-Praxis) · [HF Model](https://huggingface.co/Lernex/Metis-1.6-Logos-Base) · [HF Model](https://huggingface.co/Lernex/Metis-1.6-Praxis-Base)<br>
+  Giulianno Vollmer · Lernex Research
 - <a id="paper-f11c120345a76678"></a>**ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37666)* · [Paper](https://arxiv.org/abs/2610.37666) · [Project](https://thinkworld-project.github.io/)<br>
   Chaehyun Kim et al. · NVIDIA; KAIST
 - <a id="paper-91ea313ab7a546c8"></a>**TinyAstral: Transferring Self-Evolving Harnesses to Tiny Generalist Manipulation Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.41216)* · [Paper](https://arxiv.org/abs/2610.41216) · [Project](https://garfield-kh.github.io/TinyAstral/)<br>

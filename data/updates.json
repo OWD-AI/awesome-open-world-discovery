@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T08:23:01-05:00",
+  "updated_at": "2026-11-02T11:51:08-05:00",
   "window_start": "2026-10-04",
   "window_end": "2026-11-02",
   "window_days": 30,
@@ -1753,6 +1753,40 @@
       ]
     },
     {
+      "title": "Think Twice: The Metis-1.6 Technical Report",
+      "url": "https://arxiv.org/abs/2610.37903",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "Metis-1.6 studies two recurrent mixture-of-experts language models and documents training failures alongside benchmark results. Its strongest collection value is the analysis of reasoning preservation, optimizer errors, ineffective memory, and reward design.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata records 2026-10-27T00:00:00.000Z. The PDF title page and v1 marker both give 27 October 2026. The supplied ISO timestamp is preserved rather than the earlier America/New_York calendar assignment.",
+      "review_status": "approved",
+      "relevance": "The report contributes reasoning-model training methods and diagnoses how verifier curricula and reward normalization damage mathematical and scientific reasoning. These are concrete connections to training agents that reason, verify solutions, and learn discovery-relevant capabilities.",
+      "id": "0f837235d680cb4e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37903"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Lernex/Metis-1.6-Logos"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Lernex/Metis-1.6-Praxis"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Lernex/Metis-1.6-Logos-Base"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Lernex/Metis-1.6-Praxis-Base"
+        }
+      ]
+    },
+    {
       "title": "SO-101 Bench: Accessible Spatial Manipulation",
       "url": "https://arxiv.org/abs/2610.36420",
       "published_at": "2026-10-26",
@@ -2087,6 +2121,32 @@
       "source": "Codex primary text-and-image checked",
       "links": [],
       "id": "92f8bb4ea63ee0f1"
+    },
+    {
+      "title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
+      "url": "https://arxiv.org/abs/2610.37481",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "SimpleLoRIF identifies apparently benign fine-tuning examples aligned with unsafe behavior. The authors use it to construct SafeTulu and test whether removing those examples improves safety while retaining useful capabilities.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata records 2026-10-27T00:00:00.000Z, consistent with the PDF's v1 date of 27 October 2026. The original supplied timestamp is preserved rather than the earlier America/New_York calendar assignment.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is scalable training-data attribution and intervention: finding hidden relationships between training examples and learned behavior, then testing their removal. This supports verification and improvement of agents' training signals, although autonomous investigation is not demonstrated.",
+      "id": "aff31c4fee36adb6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37481"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/DatologyAI/SafeTulu"
+        },
+        {
+          "label": "Project",
+          "url": "https://huggingface.co/spaces/DatologyAI/SafeTulu-Space"
+        }
+      ]
     },
     {
       "title": "Evolve on Graph: Self-Evolving Knowledge Graph Reasoning without Question Annotations",
@@ -2627,6 +2687,32 @@
         {
           "label": "Code",
           "url": "https://github.com/haojinw0027/ParetoRSI-GYM"
+        }
+      ]
+    },
+    {
+      "title": "OSWAM: An Effective World Action Model with One-Step Action Generation",
+      "url": "https://arxiv.org/abs/2610.35850",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "OSWAM accelerates world-action models by learning a structured action initialization that requires only one action-denoising step. Future-aware teacher features are distilled into a student that uses current observations at inference.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata records 2026-10-26T00:00:00.000Z, consistent with the PDF's v1 date of 26 October 2026. The supplied ISO timestamp is preserved rather than the earlier America/New_York calendar assignment.",
+      "review_status": "approved",
+      "relevance": "OSWAM contributes learned predictive world/action representations: future-conditioned training shapes compact latent action priors used by an embodied agent. This fits the collection's world-representation direction, with evidence confined to control rather than open-ended exploration or causal identification.",
+      "id": "d6c503341960b1da",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35850"
+        },
+        {
+          "label": "Project",
+          "url": "https://gwenzhang.github.io/OSWAM"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/PolyU-VCLab/OSWAM"
         }
       ]
     },
@@ -14875,6 +14961,40 @@
       ]
     },
     {
+      "title": "Think Twice: The Metis-1.6 Technical Report",
+      "url": "https://arxiv.org/abs/2610.37903",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "Metis-1.6 studies two recurrent mixture-of-experts language models and documents training failures alongside benchmark results. Its strongest collection value is the analysis of reasoning preservation, optimizer errors, ineffective memory, and reward design.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata records 2026-10-27T00:00:00.000Z. The PDF title page and v1 marker both give 27 October 2026. The supplied ISO timestamp is preserved rather than the earlier America/New_York calendar assignment.",
+      "review_status": "approved",
+      "relevance": "The report contributes reasoning-model training methods and diagnoses how verifier curricula and reward normalization damage mathematical and scientific reasoning. These are concrete connections to training agents that reason, verify solutions, and learn discovery-relevant capabilities.",
+      "id": "0f837235d680cb4e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37903"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Lernex/Metis-1.6-Logos"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Lernex/Metis-1.6-Praxis"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Lernex/Metis-1.6-Logos-Base"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Lernex/Metis-1.6-Praxis-Base"
+        }
+      ]
+    },
+    {
       "title": "SO-101 Bench: Accessible Spatial Manipulation",
       "url": "https://arxiv.org/abs/2610.36420",
       "published_at": "2026-10-26",
@@ -15163,6 +15283,32 @@
         {
           "label": "Dataset",
           "url": "https://zenodo.org/records/23653700"
+        }
+      ]
+    },
+    {
+      "title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
+      "url": "https://arxiv.org/abs/2610.37481",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "SimpleLoRIF identifies apparently benign fine-tuning examples aligned with unsafe behavior. The authors use it to construct SafeTulu and test whether removing those examples improves safety while retaining useful capabilities.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata records 2026-10-27T00:00:00.000Z, consistent with the PDF's v1 date of 27 October 2026. The original supplied timestamp is preserved rather than the earlier America/New_York calendar assignment.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is scalable training-data attribution and intervention: finding hidden relationships between training examples and learned behavior, then testing their removal. This supports verification and improvement of agents' training signals, although autonomous investigation is not demonstrated.",
+      "id": "aff31c4fee36adb6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37481"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/DatologyAI/SafeTulu"
+        },
+        {
+          "label": "Project",
+          "url": "https://huggingface.co/spaces/DatologyAI/SafeTulu-Space"
         }
       ]
     },
@@ -15635,6 +15781,32 @@
         {
           "label": "Code",
           "url": "https://github.com/haojinw0027/ParetoRSI-GYM"
+        }
+      ]
+    },
+    {
+      "title": "OSWAM: An Effective World Action Model with One-Step Action Generation",
+      "url": "https://arxiv.org/abs/2610.35850",
+      "published_at": "2026-10-25",
+      "kind": "paper",
+      "summary": "OSWAM accelerates world-action models by learning a structured action initialization that requires only one action-denoising step. Future-aware teacher features are distilled into a student that uses current observations at inference.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata records 2026-10-26T00:00:00.000Z, consistent with the PDF's v1 date of 26 October 2026. The supplied ISO timestamp is preserved rather than the earlier America/New_York calendar assignment.",
+      "review_status": "approved",
+      "relevance": "OSWAM contributes learned predictive world/action representations: future-conditioned training shapes compact latent action priors used by an embodied agent. This fits the collection's world-representation direction, with evidence confined to control rather than open-ended exploration or causal identification.",
+      "id": "d6c503341960b1da",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35850"
+        },
+        {
+          "label": "Project",
+          "url": "https://gwenzhang.github.io/OSWAM"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/PolyU-VCLab/OSWAM"
         }
       ]
     },

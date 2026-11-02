@@ -26604,6 +26604,94 @@
           25
         ]
       }
+    },
+    "paper-0f837235d680cb4e": {
+      "institutions": [
+        "Lernex Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        14,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Trains hybrid Mamba-2/attention models with two shared-stack passes on approximately 1.02 trillion tokens, including reasoning and general supervised fine-tuning. Audits checkpoints and optimizer routing, ablates memory removal, studies GSPO and specialist training, and compares loop and optimizer variants in 10B-token proxy experiments. Evaluates comparison models through one harness.",
+      "evidence": "Logos averages 52.93 across 40 post-training benchmarks and ranks second among 30 models on the reported mathematics aggregate. A verifier curriculum dominated by short formatting/tool tasks coincides with degraded science reasoning. The report proves that its length reward gives long correct answers negative advantages above a two-thirds group pass rate. The hashed memory contributes negligible measured loss benefit. Released checkpoints precede the unsuccessful reinforcement-learning stages.",
+      "discovery_use": "The report contributes reasoning-model training methods and diagnoses how verifier curricula and reward normalization damage mathematical and scientific reasoning. These are concrete connections to training agents that reason, verify solutions, and learn discovery-relevant capabilities.",
+      "limits": "Several strongest contest results lack dedicated contamination checks. Architecture conclusions are confounded by unintended optimizer routing. Proxy ablations have one run per arm; reported uncertainty measures evaluation variation rather than training-run variation. The advantage clamp was not rerun on the reasoning specialist where the failure occurred. Cross-model efficiency comparisons are uncontrolled, and active parameter counts are not measured runtime or total training compute.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "learning",
+        "rationale": "The report contributes reasoning-model training methods and diagnoses how verifier curricula and reward normalization damage mathematical and scientific reasoning. These are concrete connections to training agents that reason, verify solutions, and learn discovery-relevant capabilities.",
+        "pdf_sha256": "a62f7260a671387e473628dd040e8fbeb231005d56029190dd092f69b4fafe71",
+        "evidence_pages": [
+          1,
+          14,
+          15
+        ]
+      }
+    },
+    "paper-aff31c4fee36adb6": {
+      "institutions": [
+        "DatologyAI",
+        "University of Illinois Urbana-Champaign (UIUC)"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        22
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Compresses per-example gradients using two-sided random projections and rank-one factors, removes LoRIF's curvature correction, and restricts backpropagation to the final four transformer blocks. Scores Tulu 3 against clustered unsafe SafeRLHF targets, removes the highest-scoring 20%, and compares subsequent training with unfiltered, random-removal, content-judge, and prior gradient-filtering baselines over three seeds.",
+      "evidence": "Embeds 939,343 examples in approximately one hour on eight H100 GPUs. Emergent-misalignment discrimination reaches AUC 0.604 for Qwen and 0.865 for Mistral. SafeTulu lowers Qwen GCG attack success from 47.67% to 37.00%, approximately a 22% relative reduction, and improves both tested attack metrics across the evaluated families, including Llama 8B. Capability is broadly comparable, with individual regressions. Removing 40% reverses the benefit in the reported removal sweep.",
+      "discovery_use": "The primary contribution is scalable training-data attribution and intervention: finding hidden relationships between training examples and learned behavior, then testing their removal. This supports verification and improvement of agents' training signals, although autonomous investigation is not demonstrated.",
+      "limits": "Gradient alignment provides rankings rather than calibrated causal influence estimates. Proposed explanations involving arithmetic and tool failures remain correlational. Only one unsafe target dataset and general safety behaviors are tested. Emergent-misalignment transfer is asymmetric, falling to AUC 0.247 in one direction. Safety evaluation relies on automated classifiers and a modified ActorBreaker setup. The layer-selection ablation uses mathematical learning detection rather than direct safety attribution.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "learning",
+        "rationale": "The primary contribution is scalable training-data attribution and intervention: finding hidden relationships between training examples and learned behavior, then testing their removal. This supports verification and improvement of agents' training signals, although autonomous investigation is not demonstrated.",
+        "pdf_sha256": "e1411d62da381812147aee0cb379284254167d2f415e19f6729154e098a3da52",
+        "evidence_pages": [
+          1,
+          6,
+          22
+        ]
+      }
+    },
+    "paper-d6c503341960b1da": {
+      "institutions": [
+        "The Hong Kong Polytechnic University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Adds Action Imagination Tokens and Scene Imagination Tokens to a pretrained video diffusion transformer. An auxiliary action decoder constructs a prior, which is detached, partially re-noised, and refined by one Action DiT step. Combines video, auxiliary action, action-refinement, and privileged-feature distillation losses. Evaluates driving, 50-task simulated manipulation, component ablations, and two physical robot tasks.",
+      "evidence": "Matches SimWAM's NAVSIM PDMS of 90.3 at 136 ms versus 410 ms on H20. RoboTwin average success is 90.00% versus Fast-WAM's 91.83%, with latency reduced from 397 to 142 ms. Action imagination tokens account for most recovery from the weak one-step baseline. Compiled RTX 5090 latency is 40.81 ms for RoboTwin and 52.64 ms for NAVSIM. Physical-task success improves by five percentage points on each of two tasks.",
+      "discovery_use": "OSWAM contributes learned predictive world/action representations: future-conditioned training shapes compact latent action priors used by an embodied agent. This fits the collection's world-representation direction, with evidence confined to control rather than open-ended exploration or causal identification.",
+      "limits": "The work measures demonstrated control tasks rather than discovery, exploration, or unknown-environment learning. Physical evaluation has only 20 trials per task, and the main comparisons do not provide uncertainty estimates. Some baselines differ in pretraining and training mixtures. Hardware and compilation settings materially affect latency. Teacher-noise ablations show small PDMS differences, limiting claims that clean future access is essential. Direct privileged conditioning of the action expert remains unexplored.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "causality",
+        "rationale": "OSWAM contributes learned predictive world/action representations: future-conditioned training shapes compact latent action priors used by an embodied agent. This fits the collection's world-representation direction, with evidence confined to control rather than open-ended exploration or causal identification.",
+        "pdf_sha256": "42eebe0f05bdb984b6aea5f5ec3afa0c888d9b19be759e4ef2adfc9e28b3cf54",
+        "evidence_pages": [
+          1,
+          3,
+          7
+        ]
+      }
     }
   }
 }
