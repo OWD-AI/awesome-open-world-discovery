@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-857-2563eb?style=flat-square" alt="857 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-858-2563eb?style=flat-square" alt="858 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-168-0f766e?style=flat-square" alt="168 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 48 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 92 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 65 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 150 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 151 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 119 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 141 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 83 |
@@ -757,6 +757,8 @@ Each work appears once under its primary contribution; see the [classification g
   Peitong Duan et al. · Apple
 - <a id="paper-270eaf07b93973c2"></a>**OpenESM: Energy-Steered Models Are Scalable Foundation Learners** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33005)* · [Paper](https://arxiv.org/abs/2610.33005) · [Code](https://github.com/datamllab/OpenEBFM) · [HF Model](https://huggingface.co/guan-wang/EBFM-DCLM-160M)<br>
   Yuan Pu et al. · Shanghai Artificial Intelligence Laboratory
+- <a id="paper-56378c0ed7257623"></a>**Order-Only On-Policy Distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02112)* · [Paper](https://arxiv.org/abs/2611.02112)<br>
+  Guangzeng Han, Yu Wu, Xiaolei Huang · University of Memphis; University of Missouri
 - <a id="paper-75eeeb130b15e1f6"></a>**PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27628)* · [Paper](https://arxiv.org/abs/2610.27628)<br>
   Pan Wang et al. · Ant International; National University of Singapore
 - <a id="paper-b489367d0862d8cb"></a>**ParaAgent: Reinforcing Parallel Acting in Open-World Tool Environments** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.33618)* · [Paper](https://arxiv.org/abs/2609.33618) · [Code](https://github.com/yueshengbin/paraagent) · [Dataset](https://huggingface.co/datasets/ShengbinYue/paraagent-sft) · [Dataset](https://huggingface.co/datasets/ShengbinYue/paraagent-rl) · [Dataset](https://huggingface.co/datasets/ShengbinYue/ToolEnv-sft) · [HF Model](https://huggingface.co/ShengbinYue/ToolEnv-14B)<br>

@@ -28114,6 +28114,38 @@
           4
         ]
       }
+    },
+    "paper-56378c0ed7257623": {
+      "institutions": [
+        "University of Memphis",
+        "University of Missouri"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A frozen teacher ranks its top-K tokens at each student-generated prefix. The student minimizes an adjacent logistic ranking loss without fitting teacher probability magnitudes. Experiments use six Qwen3 teacher–student pairs, OpenThoughts mathematics training data, and 100 LoRA training steps. Evaluation averages 12 sampled answers per problem across HMMT25, AIME24, and AIME25. Comparisons include matched top-8 Jensen–Shannon OPD, base models, and previously reported SFT and GRPO results.",
+      "evidence": "The three-benchmark average exceeds OPD in all six pairs by 0.3–2.9 percentage points. AIME25 improves in every pair, by up to 5.6 points, while some individual benchmark scores decline. Alternative ranking losses also outperform OPD in the tested 8B-to-1.7B setting. Token-level analysis finds better ranking agreement despite worse probability matching. Teacher-temperature invariance follows directly from using only token identities and order.",
+      "discovery_use": "Contributes a concrete post-training method for transferring mathematical reasoning capabilities from teachers to smaller models. This supports learning capabilities relevant to discovery, although autonomous investigation and discovery of unknown knowledge are not evaluated.",
+      "limits": "Evidence covers one model family and three competition mathematics benchmarks, without discovery-agent tasks or open scientific problems. Training uses one seed; multiple evaluation seeds do not establish training-run robustness, and statistical uncertainty is not reported. Checkpoints are selected using the evaluated benchmark average. Main OPD comparisons fix teacher temperature at 1; the temperature sweep lasts only three steps and does not establish superiority over fully tuned OPD. Most ablations and trajectory analyses use one teacher–student pair. Safety and broader generation behavior are unevaluated. No verified first-party code, project, dataset, or checkpoint release was found.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "learning",
+        "rationale": "Contributes a concrete post-training method for transferring mathematical reasoning capabilities from teachers to smaller models. This supports learning capabilities relevant to discovery, although autonomous investigation and discovery of unknown knowledge are not evaluated.",
+        "pdf_sha256": "c85571ebd2b2d420f29b333393f2b37f3a634d52fdef8c97b8f20276c60b336a",
+        "evidence_pages": [
+          1,
+          5,
+          6,
+          10
+        ]
+      }
     }
   }
 }
