@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-846-2563eb?style=flat-square" alt="846 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-848-2563eb?style=flat-square" alt="848 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-166-0f766e?style=flat-square" alt="166 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -78,10 +78,10 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 47 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 91 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 92 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 65 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 149 |
-| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 116 |
+| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 117 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 138 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 83 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 157 |
@@ -372,6 +372,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yĳun Shen et al. · East China Normal University; HKUST
 - <a id="paper-324d29b3144b8233"></a>**world2vec: Mechanistic world models through latent dynamics learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40637)* · [Paper](https://arxiv.org/abs/2610.40637)<br>
   Tobias Schmidt, Rodrigo Gonzalez Laiz, Krisztián Szuppinger, Steffen Schneider · Helmholtz Munich; Munich Center for Machine Learning (MCML)
+- <a id="paper-af4a8c160b0bb6aa"></a>**WorldFlow: Joint Video and 3D Motion Prediction via Large-Scale Pretraining** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.39278)* · [Paper](https://arxiv.org/abs/2610.39278) · [Project](https://worldflow-rbs.github.io/)<br>
+  Yuhao Lu et al. · RoboScience; National University of Singapore
 - <a id="paper-b7765a43c46af2b6"></a>**WorldStream: Streaming Interactive 3D Worlds with Hierarchical Planning and Persistent State** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28827)* · [Paper](https://arxiv.org/abs/2610.28827) · [Project](https://krennic999.github.io/WorldStream/) · [Project](https://krennic999.github.io/WorldStream/blog/)<br>
   Xiaoxiao Ma et al. · University of Science and Technology of China; Joy Future Academy, JD
 - <a id="paper-14628d0452b3d705"></a>**Ψ-0.6: Adaptive Streams of Thought in a Unified Vision-Language World Model** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32177)* · [Paper](https://arxiv.org/abs/2610.32177) · [Project](https://github.com/neuroailab/psi-0.6)<br>
@@ -937,6 +939,8 @@ Each work appears once under its primary contribution; see the [classification g
   Haodong Lu, Dong Gong · UNSW Sydney
 - <a id="paper-94ab554ffc39816c"></a>**Beyond Successor Accuracy: State Retention for Recursive Self-Improvement in Recommendation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.07105)* · [Paper](https://arxiv.org/abs/2610.07105) · [Code](https://github.com/Jinfeng-Xu/RecRSI)<br>
   Jinfeng Xu et al. · The University of Hong Kong; The Hong Kong Polytechnic University; The Hong Kong University of Science and Technology; +1 institutions
+- <a id="paper-b63eb380f793e8cb"></a>**Can Coding Agents Sustain Continual Evolution without Forgetting?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03219)* · [Paper](https://arxiv.org/abs/2611.03219) · [Code](https://github.com/THU-Agent/continual-harness-evolution)<br>
+  Shangziqi Zhao, Yitong Zhang, Jia Li · Tsinghua University
 - <a id="paper-88ed6b4d7523fe2d"></a>**Can Test-Time Memory Evolution Outperform Test-Time Training for Scientific Discovery?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32046)* · [Paper](https://arxiv.org/abs/2610.32046) · [Code](https://github.com/yepengliu/TTME)<br>
   Yepeng Liu et al. · UC Santa Barbara; UC Berkeley
 - <a id="paper-469b168f239f43c8"></a>**CARE: Grounded Recursive Self-Improvement for Production Customer-Service Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02839)* · [Paper](https://arxiv.org/abs/2611.02839)<br>

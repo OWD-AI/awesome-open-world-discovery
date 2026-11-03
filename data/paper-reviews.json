@@ -27778,6 +27778,65 @@
           22
         ]
       }
+    },
+    "paper-b63eb380f793e8cb": {
+      "institutions": [
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Evaluates AHE and Meta-Harness with a fixed DeepSeek model and Mini-SWE-Agent across six ordered pairs of code repair, test generation, and feature development datasets. Uses samples of 50, 50, and 30 tasks, examines 520 execution trajectories, and separately introduces representative conflicting harness modifications.",
+      "evidence": "Meta-Harness falls from 94% to 32% on SWE-Bench after evolution on FeatureBench. Verification conflicts account for 87.1% of analyzed pass-to-fail cases. In component experiments, an incompatible artifact gate reduces SWE-Bench performance from 96% to zero; workflow changes reduce it to 66%, while budget changes preserve accuracy but increase execution time.",
+      "discovery_use": "Directly examines whether experience-driven agent harness improvement preserves previously acquired capabilities, a central requirement for continual discovery and reliable self-improvement.",
+      "limits": "Small task samples, one foundation model, one initial harness, and two adapted evolution implementations limit generalization. No separate held-out generalization evaluation or uncertainty estimates are reported. Two-stage sequences do not establish behavior over longer task histories. Manual conflict attribution and representative interventions support diagnosis without establishing universal causes or a successful retention solution.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "adaptation",
+        "rationale": "Directly examines whether experience-driven agent harness improvement preserves previously acquired capabilities, a central requirement for continual discovery and reliable self-improvement.",
+        "pdf_sha256": "e82f8def502b8bf7e27eb53eaf95040209816b6522823041977f8530c04ee31e",
+        "evidence_pages": [
+          1,
+          7,
+          8
+        ]
+      }
+    },
+    "paper-af4a8c160b0bb6aa": {
+      "institutions": [
+        "RoboScience",
+        "National University of Singapore"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Extends Cosmos-Nano with continuous displacement tokens, initial point geometry, and positional alignment with video tokens. A Mixture-of-Transformers jointly denoises video and flow using rectified-flow and auxiliary motion losses. Trains on approximately 1.44 million object clips and evaluates on 1,678 held-out samples, with flow-only, tracking-pipeline, and auxiliary-loss ablations plus robot trials.",
+      "evidence": "Achieves the lowest learned-method ADE and FDE across all three benchmark subsets. SpatialCog ADE is 0.060 m, 54.2% below the strongest external learned baseline; joint generation reduces ADE by 55.9% against flow-only training. Robot execution succeeds in 24/36 trials versus 4/36 for the shared pipeline using µ0.",
+      "discovery_use": "Contributes an explicit predictive world representation connecting visual futures with metric physical motion, providing concrete forecasts usable by embodied agents for planning and interaction.",
+      "limits": "Requires predefined query points and inherits automated trajectory-label noise. Static prediction outperforms WorldFlow on all three Real3 metrics and on Sim7 PWT; headline rankings exclude Static. Real3 ADE improvement over the strongest external learned baseline is only 4.7%. Training-volume totals include padding and overlapping object records. Robot evaluation uses one comparator and 36 trials per method, with subjective flow-success judgments. Prediction accuracy does not establish causal identification or autonomous discovery.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "causality",
+        "rationale": "Contributes an explicit predictive world representation connecting visual futures with metric physical motion, providing concrete forecasts usable by embodied agents for planning and interaction.",
+        "pdf_sha256": "c0d37247a60fd0cefa9e120644e434d086dbb466887307277b6724c7fb363bd0",
+        "evidence_pages": [
+          1,
+          4,
+          10
+        ]
+      }
     }
   }
 }
