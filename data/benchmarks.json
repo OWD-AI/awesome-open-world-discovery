@@ -3741,6 +3741,29 @@
       "name": "Measuring AI Agents as Teammates with Collaborative Intelligence",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.02633"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Code and numeric experiment records are available at the repository and branch identified on page 28.",
+        "Execution instructions, dependency records, checkpoint identities, and file verification resources are listed.",
+        "Datasets, model weights, rendered videos, and large feature caches must be obtained separately."
+      ],
+      "focus": "Evaluate whether native video-world-model prediction errors support physical-surprise claims. Feedback combines synthetic benchmark videos, pre-existing Physion++ videos, newly simulated and rendered Kubric/TwoRoom/PushT conditions, and executed model scoring. Evaluated models receive prescribed video contexts and action inputs; the protocol compares fixed interventions rather than providing an online research-agent environment.",
+      "limits": "No new physical measurements are reported. Simulator executions and rendered videos must be distinguished from physical experiments. The crossed-support experiment covers one restricted procedural family. Physion++ full-clip encoding permits target information to affect context tokens. General interactive experimentation, application-specific acceptable error rates, and a research-agent task interface are not established.",
+      "training": {
+        "reward": "An interactive-agent training reward is not established. Evaluation uses physical-label probe accuracy, representation geometry, native normalized latent L1 or latent MSE discrepancies, intervention contrasts, and fixed-threshold false-alarm and miss rates. Linear probes, thresholds, and regressions are fitted separately from their evaluation data.",
+        "reset": "Controlled replay and rerendering are demonstrated using saved simulator trajectories and fixed configurations. A general agent-accessible reset interface is not established.",
+        "branching": "Matched alternatives are constructed through stop/fall continuations sharing context and predictor outputs, reused target frames under different action inputs, and rerendered appearance/state interventions. A general online branching interface is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6b18a66f867652ec",
+      "resource_id": "paper-6b18a66f867652ec",
+      "name": "When Does Latent Prediction Error Support Physical Surprise Claims in Video World Models?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.01815"
     }
   ]
 }

@@ -27837,6 +27837,220 @@
           10
         ]
       }
+    },
+    "paper-6b18a66f867652ec": {
+      "institutions": [
+        "Technology School Electronic Systems (TUES)",
+        "Baba Tonka High School of Mathematics"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Combines frozen linear probes, layerwise geometry analysis, action interventions, appearance and static controls, crossed-support Kubric experiments, and fixed-threshold transfer. Comparisons preserve native model pipelines and use grouped bootstrap uncertainty with separate calibration data.",
+      "evidence": "V-JEPA2-G reaches 57.9% physical-label accuracy on IntPhys2, but stopping receives higher prediction error across settings that reverse its physical validity. A shared threshold achieves 53.9% balanced accuracy while falsely flagging about 69% of lawful clips. Tested geometry features provide little additional prediction of score differences.",
+      "discovery_use": "Provides controlled evaluation protocols for determining whether world-model prediction errors identify physical unknowns reliably. This directly informs surprise-driven exploration, anomaly detection, and the verification of learned world representations.",
+      "limits": "The support experiment covers one restricted procedural family. Readout and geometry-transfer analyses are post-hoc, with uncertainty conditional on fitted models. Physion++ full-clip encoding permits target information to influence context tokens. Results do not establish a general limit on planning or physical knowledge.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "benchmarks",
+        "rationale": "Provides controlled evaluation protocols for determining whether world-model prediction errors identify physical unknowns reliably. This directly informs surprise-driven exploration, anomaly detection, and the verification of learned world representations.",
+        "pdf_sha256": "34c72497d627e198873f70a1afc489570e000022aadd7cb26b93306958a9bcc7",
+        "evidence_pages": [
+          1,
+          3,
+          4
+        ]
+      }
+    },
+    "paper-1fa6e008cbb1c8c8": {
+      "institutions": [
+        "Case Western Reserve University",
+        "UT Austin"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Grounds proposed calls in trusted backend snapshots and execution history, evaluates scoped temporal policies with fail-closed semantics, and proves evaluator equivalence to LeanLTL. Evaluations compare enforcement and feedback across five Qwen models on customer-service and prompt-injection benchmarks.",
+      "evidence": "No formally denied call executes. On τ²-bench, feedback yields 70.9% task success versus 72.7% unguarded, without a statistically significant difference. DTap direct attack success falls from 57.9% to 5.9%, while benign success falls from 53.1% to 12.5%. Offline repair succeeds for 88 of 252 argument-value denials.",
+      "discovery_use": "Contributes a formally verified tool-use harness with explicit evidence handling, temporal obligations, recovery feedback, and proved call repairs. These mechanisms support reliable investigative agents, although discovery performance itself is not evaluated.",
+      "limits": "Guarantees depend on the reviewed specification, faithful adapters, complete interception, and trusted consent evidence. Response-text harms remain uncovered. DTap uses a restrictive read-only deployment and excludes unscored episodes. Repairs were never delivered live. Experiments use one model family and simulated users.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "systems",
+        "rationale": "Contributes a formally verified tool-use harness with explicit evidence handling, temporal obligations, recovery feedback, and proved call repairs. These mechanisms support reliable investigative agents, although discovery performance itself is not evaluated.",
+        "pdf_sha256": "d2220542a682e62841b5fcabe385457d4672f63a8be3a14c5935260b5742ce93",
+        "evidence_pages": [
+          1,
+          4,
+          7
+        ]
+      }
+    },
+    "paper-938f5dc32633c92e": {
+      "institutions": [
+        "University of Connecticut",
+        "Ant Group"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Compiles history and bounded repository checks into frozen state detectors and comparison objectives. At a detected state, the agent proposes actions from its ordinary context; two routes execute from the same checkpoint, and an identity-blind selector retains one. Students train on equal-sized trajectory sets with controlled evaluation.",
+      "evidence": "For the 124B student, H5 improves resolution over independent sampling by 2.33 percentage points on Multilingual and 1.60 on SWE-Pro. Gains also appear with a 14B student. Randomizing comparison locations or route retention lowers mean performance, and doubling history yields small additional gains.",
+      "discovery_use": "Develops agent training through history-guided allocation of exploration and execution-based comparison of alternatives. Its concrete contribution is learning more effective exploration, repair, and validation behavior from retained experience.",
+      "limits": "H5-versus-H0 task-bootstrap intervals include zero on both benchmarks. Experiments use one collector model and scaffold, fixed history, and restoration-capable coding environments. The stated low overhead excludes collecting prior attempts, and H0 compiler costs are incomplete. Supplied text supports a targeted review, not exhaustive reading of all 41 pages. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "learning",
+        "rationale": "Develops agent training through history-guided allocation of exploration and execution-based comparison of alternatives. Its concrete contribution is learning more effective exploration, repair, and validation behavior from retained experience.",
+        "pdf_sha256": "b1053a05d928115570499ccfe028bb3678d7e4aeb58366e636f4c8cf8c366985",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-acc620c8c3d90b39": {
+      "institutions": [
+        "University College London"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Generate evidence-grounded questions that the frozen solver fails, then revise tutorialbook chapters against those failures. Accept edits only when question-bank accuracy improves. Retrieve chapters through a model-directed table of contents. Compare against prompting, transcript retrieval, video retrieval, and memory systems, including matched three-seed experiments.",
+      "evidence": "With 48 chess videos, TAL achieves 71.8% held-out accuracy versus 64.5% for the strongest matched baseline. Photoshop held-out accuracy reaches 49.7% versus 38.8%. Removing visual inputs during memory construction reduces chess accuracy to 62.1%. The reported 69.17% gameplay result measures superior Stockfish position after three moves, rather than completed-game wins.",
+      "discovery_use": "TAL identifies an agent’s knowledge gaps, acquires relevant instructional evidence, and retains verified memory improvements for future tasks. This directly supports continual discovery through persistent knowledge acquisition.",
+      "limits": "Only 110 chess and 55 software held-out questions support generalization claims. Splits share topics, and training accuracy measures the bank used for memory optimization. Strictly improved aggregate bank accuracy does not guarantee preservation of every previously correct answer. Scaling is not uniformly monotonic: some training results and the software held-out curve decline at intermediate budgets. Controlled source corruption and much longer learning streams remain untested. No first-party artifact destination was verified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "adaptation",
+        "rationale": "TAL identifies an agent’s knowledge gaps, acquires relevant instructional evidence, and retains verified memory improvements for future tasks. This directly supports continual discovery through persistent knowledge acquisition.",
+        "pdf_sha256": "1a146dd704fd7ef63d50263a10038011325a8474e7d53a7f9bf31d876780f5df",
+        "evidence_pages": [
+          1,
+          5,
+          6
+        ]
+      }
+    },
+    "paper-8dc405e749935d4d": {
+      "institutions": [
+        "University of Texas at Austin",
+        "Stanford University",
+        "Simon Fraser University",
+        "University of California, Berkeley",
+        "University of Cambridge"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Define shared categories for planning, feedback, memory, representations, and tools. The research harness searches publication sources, prioritizes full-text reading, inspects figures, attaches supporting evidence, validates record structure, and persists annotations for later revision.",
+      "evidence": "The corpus analysis reports visual observations in 77.0% of 304 works using observation feedback, with 58.2% combining observation categories. Local patching rises from 50.0% to 83.0% across analyzed periods. Example annotations demonstrate distinctions between trained components, verification mechanisms, and restrictions on repairing earlier decisions.",
+      "discovery_use": "Beyond surveying graphics applications, the paper develops an evidence-based research agent that discovers literature, inspects sources, records limitations, and revisits retained annotations. Its taxonomy also organizes reusable harness and verification mechanisms.",
+      "limits": "The supplied sections establish a functioning survey workflow but provide no controlled measurement of annotation correctness, search recall, or improvement over human review. Structural validation explicitly does not verify classification accuracy. Corpus trends depend on retrieval coverage, annotation quality, and field-specific denominators; they do not establish causal improvements. Supplied pages omit portions of the application and open-challenge sections. Public system release is planned, and no first-party release destination was verified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "foundations",
+        "rationale": "Beyond surveying graphics applications, the paper develops an evidence-based research agent that discovers literature, inspects sources, records limitations, and revisits retained annotations. Its taxonomy also organizes reusable harness and verification mechanisms.",
+        "pdf_sha256": "3b28ec414601153c3469dd5c51e5f8166d82b6bb7092f30aa1ea4c25412cd61d",
+        "evidence_pages": [
+          1,
+          8,
+          9
+        ]
+      }
+    },
+    "paper-ddb9fd203ef86393": {
+      "institutions": [
+        "Zhejiang University",
+        "Nanyang Technological University",
+        "The University of Hong Kong"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Estimate model-specific sliding-window log-probability statistics on a reference dataset. During inference, trigger short candidate continuations when standardized confidence falls below a threshold, select the highest-confidence continuation, and resume generation. Compare three heterogeneous models with individual prompting, majority voting, and multi-agent debate across four benchmarks and three seeds.",
+      "evidence": "MACR reaches 78.00% on MathVista versus 74.70% for the strongest individual strategy, and 72.00% on MMStar versus 68.13%. It uses approximately six times fewer tokens than H-DMAD on MMStar and HallusionBench, while scoring lower than H-DMAD on both. Fixed routing and sentence-boundary handoffs reduce accuracy in the reported ablations.",
+      "discovery_use": "MACR contributes a general coordination harness that detects local reasoning difficulties and transfers an evolving investigation between complementary models. This is relevant infrastructure for discovery agents, although evaluation remains conventional multimodal question answering.",
+      "limits": "Standardizing confidence distributions and reducing ANOVA F do not establish calibration to correctness or optimal routing. Tests involve one three-model pool and four existing QA benchmarks, without external evidence gathering or scientific discovery. Token savings do not establish equivalent latency, memory, or total computation across concurrently maintained models. Token totals differ substantially between main and ablation tables without explanation in the supplied text. The verified author-linked repository currently contains only a README, so implementation availability remains unverified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "systems",
+        "rationale": "MACR contributes a general coordination harness that detects local reasoning difficulties and transfers an evolving investigation between complementary models. This is relevant infrastructure for discovery agents, although evaluation remains conventional multimodal question answering.",
+        "pdf_sha256": "728fa5ac09fbb0e6b9d13f10d004ca0094a44216eadec0ee04119141160ec48f",
+        "evidence_pages": [
+          1,
+          2,
+          5
+        ]
+      }
+    },
+    "paper-237deedd2c00f5d0": {
+      "institutions": [
+        "Technical University of Denmark",
+        "Pioneer Center for AI",
+        "University of Copenhagen"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        33
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Allocate synthesis effort by initial confidence, generate diverse question-answer-image descriptions, route structured visuals through deterministic rendering skills, verify consistency, and filter by difficulty. Compare adaptation modes with test-time scaling and label-free reinforcement learning across seventeen benchmark subsets, using shared labeled validation sets for tuning.",
+      "evidence": "SIMIT-ICL improves sixteen benchmarks and ties one, yielding 6.98% mean benchmark-level relative improvement at approximately 25 times baseline runtime. Combined test-set fine-tuning and ICL reaches 7.20% at approximately 55 times runtime. Reported supervision error is approximately 12%, versus 33–38% for compared reinforcement-learning methods. External evaluation audits data quality without feeding back into adaptation.",
+      "discovery_use": "SIMIT constructs and checks targeted practice problems to improve performance on unfamiliar queries. This provides a concrete self-improvement mechanism for learning from encountered tasks without their answer labels.",
+      "limits": "Adaptation uses unlabeled target queries, but configuration selection uses 50 labeled validation examples per benchmark. Main results use BAGEL-7B and 500 evaluation items per benchmark; additional models receive narrower tests. Runtime comparisons use selected configurations rather than exactly matched compute. Generated labels remain imperfect, specialization can harm other benchmarks, and the synthesizer remains fixed. Supplied pages support a targeted body and limitations review, not inspection of every appendix.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "adaptation",
+        "rationale": "SIMIT constructs and checks targeted practice problems to improve performance on unfamiliar queries. This provides a concrete self-improvement mechanism for learning from encountered tasks without their answer labels.",
+        "pdf_sha256": "8e29837631d72b746ca9358e425b2de003130051f726e6bbfec8919094dd2506",
+        "evidence_pages": [
+          1,
+          5,
+          33
+        ]
+      }
     }
   }
 }
