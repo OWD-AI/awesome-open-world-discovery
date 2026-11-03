@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**164 usage profiles** · Updated **2026-11-03**
+**165 usage profiles** · Updated **2026-11-03**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1143,6 +1143,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [EPSBench: Benchmarking LLM Agents for Earnings Forecasting](#paper-172f7e3c54d16084) | Real data | Analysis + tools | Paper-described |
 | [ABF-Bench: A Verifiable Benchmark for Agentic Blockchain Forensics](#paper-48b9d5086b241c86) | Real data | Finite-pool queries | Paper-described |
 | [Diagnosing the Reference Gap: What Visual Scaffolds Can and Cannot Fix in Multimodal Reasoning](#paper-205c7d1c60add7c5) | Synthetic data | Analysis + tools | Paper-described |
+| [IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?](#paper-2dded0516a7f401a) | Real data | Finite-pool queries | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -2774,6 +2775,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | The visual skill is explicitly training-free; no training reward is used. Main evaluation uses exact match against scene-derived gold answers and pairwise accuracy over valid rankings. Manual annotations and LLM judgments analyze reference strategies; they are not established as agent training rewards. |
 | Reset | All paired image conditions are rendered from the same scene specification, and map overlays are drawn on copies while preserving originals. An interactive reset or checkpoint-restoration API is not established. |
 | Branching | Paired scaffold variants support controlled offline comparisons. The map agent chooses numbering, grids, shading or no overlay. Stateful environment branching, rollouts from checkpoints and branch merging are not established. |
+
+</details>
+
+<a id="paper-2dded0516a7f401a"></a>
+
+<details>
+<summary>IdeaTaste: Do LLMs Share the Research Taste of Human Researchers? — details</summary>
+
+[Work](../README.md#paper-2dded0516a7f401a) · [Source](https://arxiv.org/pdf/2611.03424)
+
+**Focus:** Evaluate research proposal populations against recorded publication choices in four research areas. Agents retrieve from literature published through 2025 and submit proposals compared with January–August 2026 papers. Each proposal has 20 action steps: planning, searching, pinning papers, revising, compressing history, or submitting. LANDSCAPE adds tag retrieval; FRONTIER adds queries over frozen prior-round peer proposals and traces. Citations must come from retrieved corpus papers. The benchmark evaluates ideation rather than executing proposed research.
+
+**Openness:** `An open, continuously updated leaderboard is claimed.`, `Availability of benchmark data, implementation, evaluator code, and reset or branching APIs is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** Feedback comes from recorded literature and evaluator judgments, without a scientific simulator, executed proposal experiments, or new physical measurements. Human papers are an observational reference with different information access, rather than a budget-matched competing arm. Idea scores depend on abstract summaries, candidate retrieval, and model judgments. Expert review measures anticipated quality and expected success. Possible training exposure to reference papers remains a consideration for the 2026 models.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or policy optimization procedure is not established in the supplied pages. Evaluation uses citation matching through bidirectional nearest Jaccard similarity, citation diversity through citation sufficiency and spread, rarity-weighted idea-slot coverage, and idea diversity. GPT-5.6 Luna judges slot agreement after retrieval of five nearest candidates. Eleven human reviewers give two blinded reviews per document for 192 documents, including feasibility and expected success. These are evaluation signals; their availability as feedback during a proposal run is not established. |
+| Reset | Not established: the supplied pages describe independent proposal runs and frozen corpus or round snapshots, but no environment reset or state restoration interface. |
+| Branching | Not established: multiple proposals and frozen FRONTIER rounds are described, but checkpoint forking, alternative continuations from a saved state, and branch restoration are not established. |
 
 </details>
 

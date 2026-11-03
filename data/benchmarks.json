@@ -3697,6 +3697,28 @@
       "name": "Diagnosing the Reference Gap: What Visual Scaffolds Can and Cannot Fix in Multimodal Reasoning",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.39419"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "finite-pool-query",
+      "new_physical_experiments": false,
+      "openness": [
+        "An open, continuously updated leaderboard is claimed.",
+        "Availability of benchmark data, implementation, evaluator code, and reset or branching APIs is not established by the supplied pages."
+      ],
+      "focus": "Evaluate research proposal populations against recorded publication choices in four research areas. Agents retrieve from literature published through 2025 and submit proposals compared with January–August 2026 papers. Each proposal has 20 action steps: planning, searching, pinning papers, revising, compressing history, or submitting. LANDSCAPE adds tag retrieval; FRONTIER adds queries over frozen prior-round peer proposals and traces. Citations must come from retrieved corpus papers. The benchmark evaluates ideation rather than executing proposed research.",
+      "limits": "Feedback comes from recorded literature and evaluator judgments, without a scientific simulator, executed proposal experiments, or new physical measurements. Human papers are an observational reference with different information access, rather than a budget-matched competing arm. Idea scores depend on abstract summaries, candidate retrieval, and model judgments. Expert review measures anticipated quality and expected success. Possible training exposure to reference papers remains a consideration for the 2026 models.",
+      "training": {
+        "reward": "A training reward or policy optimization procedure is not established in the supplied pages. Evaluation uses citation matching through bidirectional nearest Jaccard similarity, citation diversity through citation sufficiency and spread, rarity-weighted idea-slot coverage, and idea diversity. GPT-5.6 Luna judges slot agreement after retrieval of five nearest candidates. Eleven human reviewers give two blinded reviews per document for 192 documents, including feasibility and expected success. These are evaluation signals; their availability as feedback during a proposal run is not established.",
+        "reset": "Not established: the supplied pages describe independent proposal runs and frozen corpus or round snapshots, but no environment reset or state restoration interface.",
+        "branching": "Not established: multiple proposals and frozen FRONTIER rounds are described, but checkpoint forking, alternative continuations from a saved state, and branch restoration are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-2dded0516a7f401a",
+      "resource_id": "paper-2dded0516a7f401a",
+      "name": "IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.03424"
     }
   ]
 }
