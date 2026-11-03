@@ -26727,6 +26727,262 @@
           9
         ]
       }
+    },
+    "paper-f39338f0b8771563": {
+      "institutions": [
+        "Alaya Lab",
+        "The University of Tokyo",
+        "Georgia Institute of Technology",
+        "Peking University",
+        "Institute of Science Tokyo"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An information-gain criterion labels useful requests before human entity mentions. Supervised training uses renamed entities and noisy answers. A second stage applies reverse-KL on-policy self-distillation from a privileged teacher receiving the correct entry. Evaluation trains on Baldur’s Gate 3 and tests 2,470 clips from ten other games against streaming baselines and component ablations.",
+      "evidence": "Entity recall increases from 0.082 to 0.116 against retrained Proact-VL, while source-game name leakage falls from 9.9% to 1.0%. Learned requests achieve entity F1 of 0.141; requesting every three seconds increases recall but reduces precision and judged quality. Distillation contributes more knowledge improvement than changing the research agent’s size.",
+      "discovery_use": "Teaches an agent to recognize useful knowledge gaps, request evidence about unfamiliar entities, and use imperfect retrieved answers. This directly contributes to learning how to acquire missing knowledge in unseen environments.",
+      "limits": "Unseen means excluded from commentary fine-tuning, without establishing absence from foundation-model pretraining. The system requires an existing game wiki and privileged training answers. Absolute entity recall remains low, irrelevant entries sometimes enter commentary, and quality judgments use one LLM judge. Removing test-time requests leaves recall at 0.104 and similar judged quality, limiting attribution of the overall gain to live interaction. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "learning",
+        "rationale": "Teaches an agent to recognize useful knowledge gaps, request evidence about unfamiliar entities, and use imperfect retrieved answers. This directly contributes to learning how to acquire missing knowledge in unseen environments.",
+        "pdf_sha256": "33d3bf62577680c60a484126c0410ccdb12505b28775cb660c4b3b48ef82e3c2",
+        "evidence_pages": [
+          1,
+          5,
+          8
+        ]
+      }
+    },
+    "paper-17515b332ee84094": {
+      "institutions": [
+        "Northwestern University",
+        "University of Washington"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        22
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "For linear Gaussian models under stochastic hard interventions, the method fits shared regressions and intervention-specific variances for candidate parent sets and target patterns. A linear mixed-integer program selects acyclic parent sets. Synthetic experiments compare recovery and optimization against unknown-target methods, oracle methods, and a direct joint formulation; a light-tunnel experiment evaluates physical reference-graph recovery.",
+      "evidence": "PS-MIP certifies optimality on 126 of 180 planned synthetic fits versus 34 for the direct formulation. Graph and target recovery generally compare favorably with UT-IGSP. On the physical configuration, its sparsest estimate recovers all 23 reference directions with four extra edges, matching oracle GIES at that point.",
+      "discovery_use": "Develops a concrete method for discovering causal structure and identifying unknown intervention targets jointly, supporting causal representations when experimental effects are incompletely specified.",
+      "limits": "The reduction requires nodewise feasible target patterns and nonsingular local fits satisfying the parameter bounds. Enumeration grows exponentially with candidate parents and environments. Screening retains only 91.9–99.4% of true synthetic edges. Dense settings time out, four planned fits lack available estimates, and all 17 physical-data fits remain uncertified with median objective gap 13.78%. Solver optimality concerns the specified objective, not causal correctness. GnIES has a mismatched intervention model, and two other baselines produced no finite metrics within budget.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "causality",
+        "rationale": "Develops a concrete method for discovering causal structure and identifying unknown intervention targets jointly, supporting causal representations when experimental effects are incompletely specified.",
+        "pdf_sha256": "b94780263e73f4dd9e6d1791928dbc14e49f9e12436325df9fb582dbbe5adf7b",
+        "evidence_pages": [
+          1,
+          7,
+          22
+        ]
+      }
+    },
+    "paper-738c049d26da5ae0": {
+      "institutions": [
+        "University of North Carolina at Chapel Hill",
+        "Yale University",
+        "Massachusetts Institute of Technology",
+        "Stanford University",
+        "University of Pennsylvania"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Fixed-round central limit theorems cover repeated risk minimization and repeated gradient descent. Distributional sensitivity is estimated through policy perturbations and score matching, or supplied analytically when known. Confidence regions include remaining iteration bias, and a prediction-powered extension uses unlabeled data. Supplied results compare recursive inference with one-step ERM and per-round estimators in synthetic and semi-synthetic settings.",
+      "evidence": "Under strong synthetic feedback, RRM reaches 94.67% trajectory coverage and 96.60% stable-point coverage for nominal 95% intervals. The per-round estimator reaches only 88.77% and 92.11%, respectively; one-step ERM covers the stable point only 4.43%. Under mild feedback, the per-round estimator and RRM perform almost identically, showing that propagation matters according to feedback strength.",
+      "discovery_use": "Provides uncertainty theory for learning systems that shape their own future supervision. This supports verification of feedback-driven self-improvement, with an explicit application to a router whose response selection changes subsequent training labels.",
+      "limits": "Guarantees are asymptotic at fixed rounds and require smoothness, strong convexity, differentiable distribution changes, and additional score-model conditions. Unknown-score estimation requires extra deployments under perturbed policies. Stable-point inference needs contraction and bias bounds; stability does not establish performative optimality. The LLM application is a stylized logistic router over a frozen model, not unrestricted language-model self-modification. The supplied PDF pages support a targeted methods and results review, not exhaustive inspection of the 75-page manuscript.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "foundations",
+        "rationale": "Provides uncertainty theory for learning systems that shape their own future supervision. This supports verification of feedback-driven self-improvement, with an explicit application to a router whose response selection changes subsequent training labels.",
+        "pdf_sha256": "414e6df45d254e3f739fc3afeec89e4c346265d822caab0f223ed5bec29c0407",
+        "evidence_pages": [
+          1,
+          8,
+          15
+        ]
+      }
+    },
+    "paper-ae8e47599dc431be": {
+      "institutions": [
+        "Texas A&M University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Evaluates 183 DisasterBench tasks using two model families and eleven candidate pools. Compares independent sampling, a study-specific non-adaptive CoT-tree configuration, adaptive multi-operator search, and prompt-matched sampling. Measures oracle correctness, structural-filter losses, voting losses, and tie losses; adds semantic audits and verifier interventions.",
+      "evidence": "Prompt-matched sampling discovers correct workflows on 154 versus 153 tasks for GPT-4o-mini CoT-tree. Across eleven pools, 289 discovered-but-unselected cases comprise 265 vote losses and 24 tie losses, with no filter losses. Human-reviewed audits identify substantive errors in 57 of 60 cases. Unrestricted targeted verification fixes 90 errors but overturns 175 correct decisions.",
+      "discovery_use": "Provides reusable controls for evaluating agent search and verification, separating failure to discover a correct candidate from failure to select it.",
+      "limits": "One offline benchmark and two model families limit generalization. The evaluated CoT-tree is non-adaptive; findings do not establish that adaptive tree search is ineffective. Structural checks omit input-value and type validation. Strict exact match penalizes equivalent permutations, and semantic annotation was not blind. Supplied sections support a targeted review, not exhaustive reading of all 37 pages.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "benchmarks",
+        "rationale": "Provides reusable controls for evaluating agent search and verification, separating failure to discover a correct candidate from failure to select it.",
+        "pdf_sha256": "27bf39bf945a3b487e0d1e3849361aabc4bba1cad7b94022a4c22140ddedc08e",
+        "evidence_pages": [
+          1,
+          5,
+          6,
+          9
+        ]
+      }
+    },
+    "paper-8037ad4b8073aa57": {
+      "institutions": [
+        "Georgia Institute of Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9,
+        22
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Compares Self-Certainty with UID-Conj, which combines global entropy variation and local smoothness using top-25 predictive distributions. Applies majority-gated rewards during online reinforcement learning, correct-versus-correct DPO preferences, and weighted SFT on a shared verified response pool. Evaluates mathematical reasoning, science questions, critique verdicts, and instruction following with paired prompt-level uncertainty estimates.",
+      "evidence": "For Qwen3-1.7B, UID-Conj improves the four-benchmark online average by 2.08 percentage points over TTRL, including the adaptation benchmark. Its held-out online gain is 1.22 points with a confidence interval including zero. Weighted SFT improves the benchmark-macro average by 1.93 points, with 95% CI [0.44, 3.44]. Self-Certainty selects higher judge-rated traces, while UID-Conj often produces stronger training outcomes.",
+      "discovery_use": "Directly investigates learning from self-generated reasoning under limited supervision, including transfer to error detection and evidence-conditioned scientific reasoning.",
+      "limits": "Most training evidence concerns one small model and mathematical supervision. Online AIME evaluation reuses adaptation problems. Reward normalization can amplify auxiliary variation in unanimous groups; the permutation control gives mixed results. Prompt-weighted SFT uncertainty includes zero, and intervals omit training-seed variation. Scientific transfer uses a selected text-evidence subset, not autonomous research. No first-party code or checkpoint release was verified.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "learning",
+        "rationale": "Directly investigates learning from self-generated reasoning under limited supervision, including transfer to error detection and evidence-conditioned scientific reasoning.",
+        "pdf_sha256": "3fed35af44bd847cb99d4fa66012be4edf4f375fd10dd6e3cc7a9bd583d5b317",
+        "evidence_pages": [
+          1,
+          6,
+          9,
+          22
+        ]
+      }
+    },
+    "paper-205c7d1c60add7c5": {
+      "institutions": [
+        "Nanyang Technological University",
+        "DAMO Academy, Alibaba Group US",
+        "Department of Artificial Intelligence, University of Macau",
+        "Institute of Artificial Intelligence and Brain Sciences, University of Macau"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Generates 1,000 scenes across five tasks and 3,800 image variants, holding questions, scene geometry, and answers fixed across reference conditions. Compares five model families, incomplete and mismatched references, and six Qwen3-VL scales. Evaluates exact match and valid-ranking pairwise accuracy, then tests a reusable overlay skill on 100 CartoMapQA tasks.",
+      "evidence": "Numbering improves counting by 6.0–17.5 percentage points and clock ranking by 8.5–25.0 points. For counting, numbering averages +11.3 points, versus +1.7 for shading and −4.1 for grids. Benefits persist across tested model scales. The map agent draws overlays on 57 tasks, with positive reported changes in each overlay subgroup.",
+      "discovery_use": "Introduces controlled interventions for diagnosing grounded multi-step reasoning and tests an agent skill that constructs task-appropriate references. This concretely evaluates a reasoning capability relevant to discovery agents.",
+      "limits": "Synthetic scenes and five task families constrain generalization. Scaffolds can also improve intermediate perception, so the interventions do not completely isolate an internal reference mechanism. Pairwise accuracy conditions on valid rankings. The map pilot has only 100 tasks, including three shading cases, and subgroup selection is agent-dependent. Reported gains lack comprehensive uncertainty estimates and do not establish scientific-discovery performance.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "benchmarks",
+        "rationale": "Introduces controlled interventions for diagnosing grounded multi-step reasoning and tests an agent skill that constructs task-appropriate references. This concretely evaluates a reasoning capability relevant to discovery agents.",
+        "pdf_sha256": "2b76d13af487d0917655a9d7ec9fdb646931931f4924a26e3f377b70327355c2",
+        "evidence_pages": [
+          1,
+          3,
+          8,
+          9
+        ]
+      }
+    },
+    "paper-406f30760c8b39eb": {
+      "institutions": [
+        "University of Texas at Dallas"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Generates one self-contained sub-question from the original question and accumulated answers. A separately fine-tuned 4B decision model filters passages and decides whether to answer directly or stop searching. Rules maintain the QA table; semantic cache matching enables reuse. Evaluation compares 13 baselines on three 1,000-question datasets with two backbones.",
+      "evidence": "MuSiQue judged accuracy reaches 62.9% and 63.6%, exceeding the strongest baselines by 5.2 and 5.3 points. Three-hop evidence coverage reaches 46% with 390 passage words per question. Cache reuse answers 23.1% of sub-questions and reduces backbone calls by 12.9%, without a statistically significant accuracy change.",
+      "discovery_use": "Contributes an evidence-seeking reasoning system that identifies initially unnamed bridge entities, checks information sufficiency, and retains reusable intermediate knowledge. This concretely supports discovering missing facts across documents.",
+      "limits": "Evaluation concerns fixed passage corpora rather than original scientific investigations. The direct-answer threshold was selected using stored answers from some test questions, although reported sensitivity is small. Nested sub-questions and incorrect sufficiency judgments remain failure modes. Median latency is highest among compared methods at 9.9 seconds because of decision-model overhead. Reduced backbone tokens exclude this additional model workload.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "systems",
+        "rationale": "Contributes an evidence-seeking reasoning system that identifies initially unnamed bridge entities, checks information sufficiency, and retains reusable intermediate knowledge. This concretely supports discovering missing facts across documents.",
+        "pdf_sha256": "3a13b70154d8205db6cdfbc61427bccabf163ea4a37dfe56215441997cd8fc4c",
+        "evidence_pages": [
+          1,
+          5,
+          8,
+          9
+        ]
+      }
+    },
+    "paper-96a9afe092f1b9ca": {
+      "institutions": [
+        "State Key Lab. of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences",
+        "Meituan"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        13,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Allocates eight rollouts each to teacher and student under a fixed total of sixteen. Teacher optimization combines task correctness with a context-independence term; mean teacher rewards determine scaled, clipped softmax weights for student distillation. Comparisons include strengthened GRPO, SDPO, and their combination across Qwen and Olmo models.",
+      "evidence": "On science and tool-use tasks, Qwen3-8B mean accuracy reaches 75.61%, versus 74.94% for GRPO and 70.21% for SDPO. Coding mean accuracy across model sizes reaches 56.45%, versus 56.07% for the combined baseline. After Physics training, mean holdout performance is 81.77%, compared with 80.66% for GRPO. Gains are not uniform across individual tasks or model sizes.",
+      "discovery_use": "Develops feedback-driven self-improvement of reasoning supervision, with concrete evaluation on scientific reasoning, tool use, coding, and retained capabilities. This supports learning to reason and verify, although autonomous discovery is not demonstrated.",
+      "limits": "Main in-distribution scores select the maximum test accuracy observed during training, creating selection optimism. Several test sets are small, and independent training-seed uncertainty is not established. Equation 2 adds normalized edit distance, while the implementation appendix describes subtracting it, leaving a material reward-sign inconsistency. Extra objectives and EMA settings complicate attribution; EMA limits teacher evolution speed. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-02",
+        "category": "learning",
+        "rationale": "Develops feedback-driven self-improvement of reasoning supervision, with concrete evaluation on scientific reasoning, tool use, coding, and retained capabilities. This supports learning to reason and verify, although autonomous discovery is not demonstrated.",
+        "pdf_sha256": "a456e33a1061633a2cd1510aabcffd63cee882a523c9bba3c9cdf6b3af481714",
+        "evidence_pages": [
+          1,
+          2,
+          13,
+          16
+        ]
+      }
     }
   }
 }

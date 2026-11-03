@@ -3652,6 +3652,51 @@
       "name": "HALO: Human-Grounded Granular Evaluation of Proactive Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.39086"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed synthetic tasks and a manifest of 26 tools; models generate workflow compositions.",
+        "Code and reproducibility artifacts are stated to be publicly available."
+      ],
+      "focus": "Offline workflow planning on 183 evaluation tasks. Models receive task descriptions, tool interfaces and demonstrations, then sample or refine candidate workflows. Structural checks, voting and optional LLM verification operate on these representations. Page 12 explicitly excludes tool execution; there is no scientific simulator or new physical measurement.",
+      "limits": "One benchmark and two model families. Structural validation omits input-value and type validation. Strict exact match penalizes equivalent permutations. Runtime execution effects are outside scope. Correctness scores are offline evaluation measures; their availability as feedback during candidate generation is not established.",
+      "training": {
+        "reward": "Model training is not established; the study evaluates inference procedures. The evaluator uses strict Exact Match against expert-validated workflows, reporting Oracle and Selected correctness and structural, vote and tie losses. LLM verifiers provide alternative selection. A reward-guided UCT pilot is reported, but its reward formula is not established in the supplied pages.",
+        "reset": "Runtime environment reset, checkpoint restoration and rollback are not established. Independent sampling repeatedly uses the original fixed task; non-adaptive output prefixes can be evaluated afterward.",
+        "branching": "IS, prompt-matched IS and the evaluated CoT-tree sample complete workflows independently. MO-Tree can condition expansions on intermediate search states, with backend-dependent local branching. This is inference search branching; branching an executed workflow environment is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ae8e47599dc431be",
+      "resource_id": "paper-ae8e47599dc431be",
+      "name": "From Apparent Search Gains to Selection Failures: Auditing Test-Time Inference in Structured Workflow Planning",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.00579"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Five fixed synthetic task families with paired reference conditions.",
+        "The map pilot permits autonomous overlay selection and construction on fixed map images.",
+        "Data and code are stated to be available."
+      ],
+      "focus": "ReGap-Bench evaluates answers to fixed rendered images: 1,000 synthetic scenes yield 3,800 variants with scene-derived gold answers. The CartoMapQA pilot uses existing OpenStreetMap renderings and a script that draws selected overlays on image copies. This executes image-processing computation, without a scientific simulator, executed research experiment or new physical measurement.",
+      "limits": "Five synthetic task families and a 100-task map pilot. Added scaffolds can affect intermediate perception as well as reference tracking. Pairwise accuracy conditions on valid rankings. Map overlay subgroups are selected by the agent, including only three shading cases. Online correctness feedback to the agent and the map pilot's detailed scoring procedure are not established.",
+      "training": {
+        "reward": "The visual skill is explicitly training-free; no training reward is used. Main evaluation uses exact match against scene-derived gold answers and pairwise accuracy over valid rankings. Manual annotations and LLM judgments analyze reference strategies; they are not established as agent training rewards.",
+        "reset": "All paired image conditions are rendered from the same scene specification, and map overlays are drawn on copies while preserving originals. An interactive reset or checkpoint-restoration API is not established.",
+        "branching": "Paired scaffold variants support controlled offline comparisons. The map agent chooses numbering, grids, shading or no overlay. Stateful environment branching, rollouts from checkpoints and branch merging are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-205c7d1c60add7c5",
+      "resource_id": "paper-205c7d1c60add7c5",
+      "name": "Diagnosing the Reference Gap: What Visual Scaffolds Can and Cannot Fix in Multimodal Reasoning",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.39419"
     }
   ]
 }

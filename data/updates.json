@@ -1,9 +1,71 @@
 {
-  "updated_at": "2026-11-02T22:17:48-05:00",
+  "updated_at": "2026-11-02T23:25:30-05:00",
   "window_start": "2026-10-04",
   "window_end": "2026-11-02",
   "window_days": 30,
   "items": [
+    {
+      "title": "StreamDuo: A Live Commentator and a Research Agent for Unseen Games",
+      "url": "https://arxiv.org/abs/2611.01120",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "StreamDuo combines a streaming game commentator with a frozen wiki-search agent. Training teaches the commentator when external evidence would help and how to use that evidence without copying every retrieved name.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata establishes original publication at 2026-10-31T17:08:13Z. The November 3 date printed inside the manuscript is not substituted for that event.",
+      "review_status": "approved",
+      "relevance": "Teaches an agent to recognize useful knowledge gaps, request evidence about unfamiliar entities, and use imperfect retrieved answers. This directly contributes to learning how to acquire missing knowledge in unseen environments.",
+      "id": "f39338f0b8771563",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.01120"
+        },
+        {
+          "label": "Project",
+          "url": "https://zixiangao.github.io/StreamDuo/"
+        }
+      ]
+    },
+    {
+      "title": "Mixed-Integer Programming for Causal Discovery with Unknown Hard-Intervention Targets",
+      "url": "https://arxiv.org/abs/2611.01267",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "PS-MIP converts joint causal graph and intervention-target estimation into globally constrained parent-set selection. Local likelihood optimization removes continuous parameters and target choices from the global problem while retaining reconstruction information.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on October 31, 2026 at 21:06:47 UTC, matching the supplied original timestamp.",
+      "review_status": "approved",
+      "relevance": "Develops a concrete method for discovering causal structure and identifying unknown intervention targets jointly, supporting causal representations when experimental effects are incompletely specified.",
+      "id": "17515b332ee84094",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.01267"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AtomXT/micodag-intervenion"
+        }
+      ]
+    },
+    {
+      "title": "Statistical Inference under Performativity: From Policy Feedback to Self-Evolving Systems",
+      "url": "https://arxiv.org/abs/2611.00438",
+      "published_at": "2026-10-30",
+      "kind": "paper",
+      "summary": "The paper develops statistical inference for repeated learning under deployment-induced distribution changes. Its covariance recursions track uncertainty inherited from earlier updates as well as new sampling noise.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv v1 history confirms October 30, 2026 at 22:45:28 UTC. This record is an extension of a separate NeurIPS 2025 paper; that predecessor is a distinct publication event.",
+      "review_status": "approved",
+      "relevance": "Provides uncertainty theory for learning systems that shape their own future supervision. This supports verification of feedback-driven self-improvement, with an explicit application to a router whose response selection changes subsequent training labels.",
+      "id": "738c049d26da5ae0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.00438"
+        }
+      ]
+    },
     {
       "title": "Shreyas Naphad explains Faraday research planning and replication evaluation",
       "url": "https://x.com/NaphadShreyas/status/2116053111777493183",
@@ -80,6 +142,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.41245"
+        }
+      ]
+    },
+    {
+      "title": "From Apparent Search Gains to Selection Failures: Auditing Test-Time Inference in Structured Workflow Planning",
+      "url": "https://arxiv.org/abs/2611.00579",
+      "published_at": "2026-10-30",
+      "kind": "paper",
+      "summary": "The paper audits test-time workflow planning and shows how prompts, implementation details, and selection can explain apparent search improvements. Its stage-wise evaluation exposes correct plans that are generated but never returned.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original publication timestamp is 2026-10-31T03:10:12Z, preserved exactly. The PDF identifies v1 as 31 October 2026; the timestamp falls on 30 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Provides reusable controls for evaluating agent search and verification, separating failure to discover a correct candidate from failure to select it.",
+      "id": "ae8e47599dc431be",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.00579"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TamuChen18/Found-but-Not-Chosen"
         }
       ]
     },
@@ -349,6 +433,32 @@
       ]
     },
     {
+      "title": "TSFLab: A Self-Improving Agent-Agnostic Workbench for Time Series Forecasting Research",
+      "url": "https://arxiv.org/abs/2610.40901",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "TSFLab supplies shared forecasting knowledge, reusable implementations, experiment execution, and verified updates to compatible research agents without changing their models or harnesses.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 on October 29, 2026 at 19:22:33 UTC, resolving the supplied normalized midnight timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly supports autonomous research through paper reproduction, controlled experimentation, method development, and verification of resources retained for future agents.",
+      "id": "4b574d09afc136bb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.40901"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/D2I-Group/TSFLab"
+        },
+        {
+          "label": "Project",
+          "url": "https://huggingface.co/spaces/Diaugeia/TSFLab"
+        }
+      ]
+    },
+    {
       "title": "SelfThinker: Self-Evolving Reasoning via Reliability-Verified Intrinsic Visual Thoughts",
       "url": "https://arxiv.org/abs/2610.40115",
       "published_at": "2026-10-29",
@@ -367,6 +477,24 @@
         {
           "label": "Code",
           "url": "https://github.com/zhangquanchen/SelfThinker"
+        }
+      ]
+    },
+    {
+      "title": "Self-Improvement with Auxiliary Rewards: Learning from Verified Traces and Evaluating Transfer",
+      "url": "https://arxiv.org/abs/2610.41296",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "Auxiliary preferences distinguish reasoning traces that receive identical answer rewards. Confidence and entropy-trajectory signals guide online adaptation and offline learning, with the strongest evidence coming from entropy-weighted supervised training on verified responses.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper metadata records publishedAt as 2026-10-30T00:00:00.000Z; that original_published_at value is preserved exactly. The PDF v1 date corroborates 30 October 2026.",
+      "review_status": "approved",
+      "relevance": "Directly investigates learning from self-generated reasoning under limited supervision, including transfer to error detection and evidence-conditioned scientific reasoning.",
+      "id": "8037ad4b8073aa57",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.41296"
         }
       ]
     },
@@ -618,6 +746,28 @@
       ]
     },
     {
+      "title": "Diagnosing the Reference Gap: What Visual Scaffolds Can and Cannot Fix in Multimodal Reasoning",
+      "url": "https://arxiv.org/abs/2610.39419",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "ReGap-Bench tests whether explicit visual references help models maintain stable bindings between reasoning and image elements. Matched numbering, shading, and grids improve particular tasks, while mismatched scaffolds can interfere. A small agent experiment demonstrates autonomous scaffold selection.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publication metadata gives 2026-10-29T06:00:35.000Z, preserved exactly. The PDF identifies v1 as 29 October 2026.",
+      "review_status": "approved",
+      "relevance": "Introduces controlled interventions for diagnosing grounded multi-step reasoning and tests an agent skill that constructs task-appropriate references. This concretely evaluates a reasoning capability relevant to discovery agents.",
+      "id": "205c7d1c60add7c5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.39419"
+        },
+        {
+          "label": "Project",
+          "url": "https://regap-bench.github.io"
+        }
+      ]
+    },
+    {
       "title": "Compile Away Uncertainty: Self-Evolving Agent Skills via Programmatic Compilation",
       "url": "https://arxiv.org/abs/2610.39508",
       "published_at": "2026-10-29",
@@ -795,6 +945,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.39264"
+        }
+      ]
+    },
+    {
+      "title": "On-Policy Self-Distillation with Teacher Evolution",
+      "url": "https://arxiv.org/abs/2610.38637",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "Teacher-Evolution Self-Distillation improves a model in its teacher and student roles, using verified teacher rollouts to improve supervision and reduce unreliable updates.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 on October 28, 2026 at 10:51:52 UTC, superseding the supplied midnight timestamp.",
+      "review_status": "approved",
+      "relevance": "Develops feedback-driven self-improvement of reasoning supervision, with concrete evaluation on scientific reasoning, tool use, coding, and retained capabilities. This supports learning to reason and verify, although autonomous discovery is not demonstrated.",
+      "id": "96a9afe092f1b9ca",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38637"
         }
       ]
     },
@@ -1506,6 +1674,28 @@
         {
           "label": "Project",
           "url": "https://mle-world.github.io/"
+        }
+      ]
+    },
+    {
+      "title": "DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers",
+      "url": "https://arxiv.org/abs/2610.37826",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "DeFT-RAG answers multi-hop questions through incremental sub-questions, an explicit knowledge table, lightweight decision models, and cross-question answer reuse.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 on October 27, 2026 at 18:40:23 UTC. October 30 is the v2 revision date, so the supplied original timestamp is superseded.",
+      "review_status": "approved",
+      "relevance": "Contributes an evidence-seeking reasoning system that identifies initially unnamed bridge entities, checks information sufficiency, and retains reusable intermediate knowledge. This concretely supports discovering missing facts across documents.",
+      "id": "406f30760c8b39eb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37826"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Dingyi-Kang/DeFT-RAG"
         }
       ]
     },
@@ -2478,7 +2668,7 @@
       ]
     },
     {
-      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
@@ -13569,6 +13759,68 @@
   ],
   "paper_pages": [
     {
+      "title": "StreamDuo: A Live Commentator and a Research Agent for Unseen Games",
+      "url": "https://arxiv.org/abs/2611.01120",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "StreamDuo combines a streaming game commentator with a frozen wiki-search agent. Training teaches the commentator when external evidence would help and how to use that evidence without copying every retrieved name.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied primary arXiv Atom metadata establishes original publication at 2026-10-31T17:08:13Z. The November 3 date printed inside the manuscript is not substituted for that event.",
+      "review_status": "approved",
+      "relevance": "Teaches an agent to recognize useful knowledge gaps, request evidence about unfamiliar entities, and use imperfect retrieved answers. This directly contributes to learning how to acquire missing knowledge in unseen environments.",
+      "id": "f39338f0b8771563",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.01120"
+        },
+        {
+          "label": "Project",
+          "url": "https://zixiangao.github.io/StreamDuo/"
+        }
+      ]
+    },
+    {
+      "title": "Mixed-Integer Programming for Causal Discovery with Unknown Hard-Intervention Targets",
+      "url": "https://arxiv.org/abs/2611.01267",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "PS-MIP converts joint causal graph and intervention-target estimation into globally constrained parent-set selection. Local likelihood optimization removes continuous parameters and target choices from the global problem while retaining reconstruction information.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on October 31, 2026 at 21:06:47 UTC, matching the supplied original timestamp.",
+      "review_status": "approved",
+      "relevance": "Develops a concrete method for discovering causal structure and identifying unknown intervention targets jointly, supporting causal representations when experimental effects are incompletely specified.",
+      "id": "17515b332ee84094",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.01267"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AtomXT/micodag-intervenion"
+        }
+      ]
+    },
+    {
+      "title": "Statistical Inference under Performativity: From Policy Feedback to Self-Evolving Systems",
+      "url": "https://arxiv.org/abs/2611.00438",
+      "published_at": "2026-10-30",
+      "kind": "paper",
+      "summary": "The paper develops statistical inference for repeated learning under deployment-induced distribution changes. Its covariance recursions track uncertainty inherited from earlier updates as well as new sampling noise.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv v1 history confirms October 30, 2026 at 22:45:28 UTC. This record is an extension of a separate NeurIPS 2025 paper; that predecessor is a distinct publication event.",
+      "review_status": "approved",
+      "relevance": "Provides uncertainty theory for learning systems that shape their own future supervision. This supports verification of feedback-driven self-improvement, with an explicit application to a router whose response selection changes subsequent training labels.",
+      "id": "738c049d26da5ae0",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.00438"
+        }
+      ]
+    },
+    {
       "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
       "url": "https://arxiv.org/abs/2610.42141",
       "published_at": "2026-10-30",
@@ -13631,6 +13883,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.41245"
+        }
+      ]
+    },
+    {
+      "title": "From Apparent Search Gains to Selection Failures: Auditing Test-Time Inference in Structured Workflow Planning",
+      "url": "https://arxiv.org/abs/2611.00579",
+      "published_at": "2026-10-30",
+      "kind": "paper",
+      "summary": "The paper audits test-time workflow planning and shows how prompts, implementation details, and selection can explain apparent search improvements. Its stage-wise evaluation exposes correct plans that are generated but never returned.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied arXiv Atom original publication timestamp is 2026-10-31T03:10:12Z, preserved exactly. The PDF identifies v1 as 31 October 2026; the timestamp falls on 30 October in America/New_York.",
+      "review_status": "approved",
+      "relevance": "Provides reusable controls for evaluating agent search and verification, separating failure to discover a correct candidate from failure to select it.",
+      "id": "ae8e47599dc431be",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.00579"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TamuChen18/Found-but-Not-Chosen"
         }
       ]
     },
@@ -13847,6 +14121,32 @@
       ]
     },
     {
+      "title": "TSFLab: A Self-Improving Agent-Agnostic Workbench for Time Series Forecasting Research",
+      "url": "https://arxiv.org/abs/2610.40901",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "TSFLab supplies shared forecasting knowledge, reusable implementations, experiment execution, and verified updates to compatible research agents without changing their models or harnesses.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 on October 29, 2026 at 19:22:33 UTC, resolving the supplied normalized midnight timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly supports autonomous research through paper reproduction, controlled experimentation, method development, and verification of resources retained for future agents.",
+      "id": "4b574d09afc136bb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.40901"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/D2I-Group/TSFLab"
+        },
+        {
+          "label": "Project",
+          "url": "https://huggingface.co/spaces/Diaugeia/TSFLab"
+        }
+      ]
+    },
+    {
       "title": "SelfThinker: Self-Evolving Reasoning via Reliability-Verified Intrinsic Visual Thoughts",
       "url": "https://arxiv.org/abs/2610.40115",
       "published_at": "2026-10-29",
@@ -13865,6 +14165,24 @@
         {
           "label": "Code",
           "url": "https://github.com/zhangquanchen/SelfThinker"
+        }
+      ]
+    },
+    {
+      "title": "Self-Improvement with Auxiliary Rewards: Learning from Verified Traces and Evaluating Transfer",
+      "url": "https://arxiv.org/abs/2610.41296",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "Auxiliary preferences distinguish reasoning traces that receive identical answer rewards. Confidence and entropy-trajectory signals guide online adaptation and offline learning, with the strongest evidence coming from entropy-weighted supervised training on verified responses.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper metadata records publishedAt as 2026-10-30T00:00:00.000Z; that original_published_at value is preserved exactly. The PDF v1 date corroborates 30 October 2026.",
+      "review_status": "approved",
+      "relevance": "Directly investigates learning from self-generated reasoning under limited supervision, including transfer to error detection and evidence-conditioned scientific reasoning.",
+      "id": "8037ad4b8073aa57",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.41296"
         }
       ]
     },
@@ -14045,6 +14363,28 @@
       ]
     },
     {
+      "title": "Diagnosing the Reference Gap: What Visual Scaffolds Can and Cannot Fix in Multimodal Reasoning",
+      "url": "https://arxiv.org/abs/2610.39419",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "ReGap-Bench tests whether explicit visual references help models maintain stable bindings between reasoning and image elements. Matched numbering, shading, and grids improve particular tasks, while mismatched scaffolds can interfere. A small agent experiment demonstrates autonomous scaffold selection.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publication metadata gives 2026-10-29T06:00:35.000Z, preserved exactly. The PDF identifies v1 as 29 October 2026.",
+      "review_status": "approved",
+      "relevance": "Introduces controlled interventions for diagnosing grounded multi-step reasoning and tests an agent skill that constructs task-appropriate references. This concretely evaluates a reasoning capability relevant to discovery agents.",
+      "id": "205c7d1c60add7c5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.39419"
+        },
+        {
+          "label": "Project",
+          "url": "https://regap-bench.github.io"
+        }
+      ]
+    },
+    {
       "title": "Compile Away Uncertainty: Self-Evolving Agent Skills via Programmatic Compilation",
       "url": "https://arxiv.org/abs/2610.39508",
       "published_at": "2026-10-29",
@@ -14209,6 +14549,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.39264"
+        }
+      ]
+    },
+    {
+      "title": "On-Policy Self-Distillation with Teacher Evolution",
+      "url": "https://arxiv.org/abs/2610.38637",
+      "published_at": "2026-10-28",
+      "kind": "paper",
+      "summary": "Teacher-Evolution Self-Distillation improves a model in its teacher and student roles, using verified teacher rollouts to improve supervision and reduce unreliable updates.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 on October 28, 2026 at 10:51:52 UTC, superseding the supplied midnight timestamp.",
+      "review_status": "approved",
+      "relevance": "Develops feedback-driven self-improvement of reasoning supervision, with concrete evaluation on scientific reasoning, tool use, coding, and retained capabilities. This supports learning to reason and verify, although autonomous discovery is not demonstrated.",
+      "id": "96a9afe092f1b9ca",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.38637"
         }
       ]
     },
@@ -14771,6 +15129,28 @@
         {
           "label": "Project",
           "url": "https://mle-world.github.io/"
+        }
+      ]
+    },
+    {
+      "title": "DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers",
+      "url": "https://arxiv.org/abs/2610.37826",
+      "published_at": "2026-10-27",
+      "kind": "paper",
+      "summary": "DeFT-RAG answers multi-hop questions through incremental sub-questions, an explicit knowledge table, lightweight decision models, and cross-question answer reuse.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history verifies v1 on October 27, 2026 at 18:40:23 UTC. October 30 is the v2 revision date, so the supplied original timestamp is superseded.",
+      "review_status": "approved",
+      "relevance": "Contributes an evidence-seeking reasoning system that identifies initially unnamed bridge entities, checks information sufficiency, and retains reusable intermediate knowledge. This concretely supports discovering missing facts across documents.",
+      "id": "406f30760c8b39eb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.37826"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Dingyi-Kang/DeFT-RAG"
         }
       ]
     },
@@ -15603,7 +15983,7 @@
       ]
     },
     {
-      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "url": "https://arxiv.org/abs/2610.36077",
       "published_at": "2026-10-25",
       "kind": "paper",
