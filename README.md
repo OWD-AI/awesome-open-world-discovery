@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-821-2563eb?style=flat-square" alt="821 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-823-2563eb?style=flat-square" alt="823 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-164-0f766e?style=flat-square" alt="164 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -20,7 +20,7 @@
   <a href="https://owd-ai.github.io/awesome-open-world-discovery/">Research observatory ↗</a> · <a href="#what-is-owd">What is OWD?</a> · <a href="#why-owd">Why this focus?</a> · <a href="#updates">Latest papers</a> · <a href="#contents">Browse the list</a> · <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
-<p align="center"><sub>Literature checked through 2026-11-02 · Papers, author blogs, code, and benchmarks</sub></p>
+<p align="center"><sub>Literature checked through 2026-11-03 · Papers, author blogs, code, and benchmarks</sub></p>
 
 <a id="what-is-owd"></a>
 
@@ -54,22 +54,22 @@ Discovery involves deciding what to investigate, gathering evidence, testing exp
 
 **[Explore the research observatory →](https://owd-ai.github.io/awesome-open-world-discovery/#updates)**
 
-The latest 10 source-checked papers from our daily monitor · Updated 2026-11-02.
+The latest 10 source-checked papers from our daily monitor · Updated 2026-11-03.
 
 Visit the website for summaries, figures, today's updates, and the full research library.
 
 | Date | Paper |
 | --- | --- |
 | 2026-10-31 | [StreamDuo: A Live Commentator and a Research Agent for Unseen Games](https://arxiv.org/abs/2611.01120) |
+| 2026-10-31 | [NorthCUA Technical Report: Turbocharging Computer-Use Agents through Experience at Scale](https://arxiv.org/abs/2611.02102) |
 | 2026-10-31 | [Mixed-Integer Programming for Causal Discovery with Unknown Hard-Intervention Targets](https://arxiv.org/abs/2611.01267) |
+| 2026-10-31 | [Democratizing Robot-Use Agents: A Unified Harness with Open Models](https://arxiv.org/abs/2611.01560) |
 | 2026-10-30 | [Statistical Inference under Performativity: From Policy Feedback to Self-Evolving Systems](https://arxiv.org/abs/2611.00438) |
 | 2026-10-30 | [RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory](https://arxiv.org/abs/2610.42141) |
 | 2026-10-30 | [REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control](https://arxiv.org/abs/2610.42053) |
 | 2026-10-30 | [MEMIG: Self-evolving Memory Construction for Antibody Optimization](https://arxiv.org/abs/2610.41245) |
 | 2026-10-30 | [From Apparent Search Gains to Selection Failures: Auditing Test-Time Inference in Structured Workflow Planning](https://arxiv.org/abs/2611.00579) |
 | 2026-10-30 | [CausalWAM: Learning the Causes of Actions in World Action Models](https://arxiv.org/abs/2610.42096) |
-| 2026-10-29 | [world2vec: Mechanistic world models through latent dynamics learning](https://arxiv.org/abs/2610.40637) |
-| 2026-10-29 | [rTaste: Do Research Agents Have Taste? Evaluating Early Stage Research Judgment](https://arxiv.org/abs/2610.40488) |
 
 <a id="contents"></a>
 
@@ -82,7 +82,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 62 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 145 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 110 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 135 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 137 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 79 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 155 |
 
@@ -1222,6 +1222,8 @@ Each work appears once under its primary contribution; see the [classification g
   Amirhossein Abaskohi et al. · University of British Columbia
 - <a id="paper-406f30760c8b39eb"></a>**DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37826)* · [Paper](https://arxiv.org/abs/2610.37826) · [Code](https://github.com/Dingyi-Kang/DeFT-RAG)<br>
   Dingyi Kang, Bingzhe Li · University of Texas at Dallas
+- <a id="paper-2e79dcf98ded436c"></a>**Democratizing Robot-Use Agents: A Unified Harness with Open Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.01560)* · [Paper](https://arxiv.org/abs/2611.01560) · [Code](https://github.com/Open-RUA/uni-robot-agent)<br>
+  Jiarui Yuan et al. · Tsinghua University; UC, Berkeley
 - <a id="paper-a0694d5560c4572c"></a>**Demonstration of a Structured Agentic Workflow for Applied Quantum Computing Research** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.05304)* · [Paper](https://arxiv.org/abs/2610.05304) · [Project](https://haiqu.ai/agenticos)<br>
   Dikshant Dulal, Maxence Grandadam, Maciej Koch-Janusz, Mykola Maksymenko · Haiqu, Inc.
 - <a id="paper-92174196b7146b88"></a>**Design Anything, Design at Scale** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24771)* · [Paper](https://arxiv.org/abs/2610.24771) · [Code](https://github.com/Gemus-AI/DesignAnything) · [Dataset](https://huggingface.co/datasets/Gemus-AI/DesignAnything-Bench)<br>
@@ -1306,6 +1308,8 @@ Each work appears once under its primary contribution; see the [classification g
   Hongrui Wu et al. · Stanford University; The Hong Kong University of Science and Technology; JD.com; +3 institutions
 - <a id="paper-fb16b20d25ce57e6"></a>**NeuroAct: Advancing EEG Analysis and Decoding via Dual-Loop Autonomous Research** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.25211)* · [Paper](https://arxiv.org/abs/2610.25211)<br>
   Wei Xiong et al. · Tongji University; Ant Group; Shanghai Jiao Tong University; +1 institutions
+- <a id="paper-b6ada6dc4526cce0"></a>**NorthCUA Technical Report: Turbocharging Computer-Use Agents through Experience at Scale** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02102)* · [Paper](https://arxiv.org/abs/2611.02102) · [Code](https://github.com/beipo-ai/NorthCUA) · [HF Model](https://huggingface.co/beipo-ai/NorthCUA-Pro)<br>
+  NorthCUA Team · Shanghai Qiji Zhifeng Co., Ltd.
 - <a id="paper-b401e2f2acb005b6"></a>**OfficeTown: Generative Organizations for Evolving Agent Intelligence** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23194)* · [Paper](https://arxiv.org/abs/2610.23194) · [Project](https://officeintelligence.github.io/)<br>
   Hongchen Wei et al. · Wuhan University; University of California, San Diego; South China University of Technology; +3 institutions
 - <a id="paper-42c33aa80d5fcaf8"></a>**OMAR: Open-World Multi-Attribute Reasoning for Scene-Conditioned Shelf Organization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29761)* · [Paper](https://arxiv.org/abs/2610.29761)<br>

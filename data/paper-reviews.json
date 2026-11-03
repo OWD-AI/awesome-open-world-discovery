@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -26981,6 +26981,67 @@
           2,
           13,
           16
+        ]
+      }
+    },
+    "paper-b6ada6dc4526cce0": {
+      "institutions": [
+        "Shanghai Qiji Zhifeng Co., Ltd."
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        13,
+        76
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A shared runtime combines recent visual context, task-preserving history compaction, and agent-written notes. A separate evaluator retrieves records and inspects the live workspace using requirement-specific rubrics. Task construction supplies executable environments and checks; hard-task collection retains skills and verified checkpoints. Training combines GUI mid-training, verified long-horizon demonstrations, and joint desktop–web GRPO.",
+      "evidence": "The report presents Pro scores of 93.3% on ScreenSpot-Pro, 88.6% on OSWorld-Verified, 73.9% on WebArena-Verified, and 60.3% F1 on WebTestBench. The supplied body describes improvements following long-horizon SFT and joint RL. Detailed runtime and evaluation methods support the systems contribution, but the supplied pages do not establish the separate quantitative contribution of recursive self-improvement.",
+      "discovery_use": "The system connects agent interaction, evidence-based outcome verification, retained experience, and further training. Its reusable skills and verified milestones provide a concrete mechanism for learning from unsuccessful exploration, making it relevant discovery infrastructure.",
+      "limits": "This is a targeted review of supplied sections from a 123-page report. Detailed training sections and primary benchmark tables are absent; performance rankings and stage gains therefore remain reported claims. Unfamiliar interfaces remain difficult, feedback depends on verifier coverage and judge calibration, and terminal rewards limit credit assignment. GUI task completion does not itself demonstrate autonomous scientific discovery. The released code repository was verified through its original repository's migration notice; model availability is supported by the supplied primary API check.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "systems",
+        "rationale": "The system connects agent interaction, evidence-based outcome verification, retained experience, and further training. Its reusable skills and verified milestones provide a concrete mechanism for learning from unsuccessful exploration, making it relevant discovery infrastructure.",
+        "pdf_sha256": "2f1833c4f3471ccefff8311de7633e6f79f78edbe2123d96974f7559614c6247",
+        "evidence_pages": [
+          1,
+          4,
+          13,
+          76
+        ]
+      }
+    },
+    "paper-2e79dcf98ded436c": {
+      "institutions": [
+        "Tsinghua University",
+        "UC, Berkeley"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        11,
+        33
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Five modular layers connect agent runtimes, resource-aware orchestration, shared tools, services, and environment backends. Immutable snapshots align images with calibration and robot state; monitored motion returns errors and stopping reasons. Background execution overlaps reasoning with actions. Evaluation covers 42 RoboDojo tasks, 19 physical evaluation entries, model comparisons, depth and skill ablations, and recorded geometry-investigation cases.",
+      "evidence": "Across 252 simulation episodes, Qwen3.8-Flash-Next achieves 25.00% success and 31.39 Score, versus 1.90 Score with RoboProbe. Its 31.39 exceeds the published Astra–RoboProbe score of 28.97, but Astra with the same new harness reaches 51.90. Physical rubric scores are 49.50 for Qwen, 47.75 for fine-tuned pi0.5, and 35.50 for Dream-1. Removing skills retains 96.6% of Qwen's simulation score. Appendix cases show correspondence checks and candidate-height testing supporting successful manipulation.",
+      "discovery_use": "The primary contribution is a reusable embodied-agent harness for observation, investigation, feedback, and experience collection. Recorded cases explicitly show agents constructing and checking geometric hypotheses before acting, providing a concrete discovery connection beyond ordinary robot automation.",
+      "limits": "Physical agents receive depth while pi0.5 and Dream-1 use RGB, and the physical total is a partial-credit capability score rather than an episode success rate. Additional model comparisons use smaller cohorts with differing layouts or inputs; correlations do not establish training causes. Timing comparisons use one episode per configuration on five selected tasks. Precision and long-horizon execution remain weak. Further model training is proposed rather than demonstrated, and the public repository says supported physical-robot deployment workflows are still forthcoming.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "systems",
+        "rationale": "The primary contribution is a reusable embodied-agent harness for observation, investigation, feedback, and experience collection. Recorded cases explicitly show agents constructing and checking geometric hypotheses before acting, providing a concrete discovery connection beyond ordinary robot automation.",
+        "pdf_sha256": "f21f9cb00bcd3b247b409c79f17bd9607dbac7ae0ec162126954a8092e5dc0fc",
+        "evidence_pages": [
+          1,
+          11,
+          33
         ]
       }
     }
