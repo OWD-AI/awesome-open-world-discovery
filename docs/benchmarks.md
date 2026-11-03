@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**168 usage profiles** · Updated **2026-11-03**
+**169 usage profiles** · Updated **2026-11-03**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -2921,6 +2921,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [rTaste: Do Research Agents Have Taste? Evaluating Early Stage Research Judgment](#paper-b31efc0825d69775) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [PAPERBENCHX: Can AI Reproduce Science Across Disciplines?](#paper-b50b86e0972e0b67) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Beyond fabrication: Misattributed numbers in papers written by AI research agents](#paper-ced2ee2351066a21) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts](#paper-260089287fc2643d) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -3793,6 +3794,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Agent training rewards are not established. Evaluation uses GPT-6-Astra and a rubric with sequential integrity, deliverable-completeness, and scientific-merit gates. Four official judging repeats form consensus verdicts. This paper adds deterministic provenance certification calibrated with numerical decoys, blinded human labels, and Claude Opus 5.5 regrading. These are evaluation procedures; no agent training loop is established. |
 | Reset | Environment reset support is not established. Four repeated judge evaluations concern submitted artifacts and do not establish agent-environment resets. This paper explicitly does not rerun agents. |
 | Branching | Agent-environment checkpoint restoration, state cloning, and branching support are not established. Archived working directories support retrospective inspection and repeated grading. |
+
+</details>
+
+<a id="paper-260089287fc2643d"></a>
+
+<details>
+<summary>TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts — details</summary>
+
+[Work](../README.md#paper-260089287fc2643d) · [Source](https://arxiv.org/pdf/2610.06824)
+
+**Focus:** Experimental research judgment on eight AI R&D tasks. Researchers propose experiments and interpret outcomes; a fixed Coder implements and executes them on one H100. Feedback consists of live training and validation metrics, completed experiment reports, artifacts, and validation scores from executed computation. Test scores are withheld. These are computational research experiments, with no new physical measurements described.
+
+**Openness:** `The eight evaluated tasks and their individual details are withheld to prevent contamination.`, `An unused example task and detailed environment, scoring, and scaffold descriptions are provided.`, `Release of executable benchmark infrastructure and evaluation trajectories is not established.`
+
+**New physical measurements:** No
+
+**Limits:** Each run permits one experiment at a time, with 40 H100 GPU-busy hours and 120 wall-clock hours. Researchers may inspect task files, training and validation data, reports, and the internet, ask the Liaison about progress, and cancel experiments. They cannot execute experiment code, inspect the Coder's implementation, or access test data or test scores. Monitors enforce these restrictions. Withheld tasks, fast low-noise scoring, and single-GPU scale limit reproducibility and transfer to frontier research.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Training the evaluated Researcher models with this environment is not established. During evaluation, task-specific unmodified scoring scripts score submissions on validation and test sets; only validation scores are returned to the Researcher. Final evaluation uses the official submission's held-out test score, or the best-validation submission when none is selected. Compute and performance multipliers compare results with expert baselines. A post-run auditor and manual confirmation exclude rule violations. |
+| Reset | The Coder is launched for each experiment and shuts down afterward; its workstation persists across experiments within the run (page 24). Evaluation uses six seeds per model per task (page 7). A user-accessible environment reset or deterministic restoration mechanism is not established. |
+| Branching | Experiments proceed serially, with cancellation and revised submissions supported. Snapshotting, rollback, and branching from saved environment states are not established. Best-of-k analysis selects among separate runs rather than demonstrating state branching. |
 
 </details>
 

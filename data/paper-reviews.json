@@ -28176,6 +28176,35 @@
           12
         ]
       }
+    },
+    "paper-260089287fc2643d": {
+      "institutions": [
+        "P-Zero Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Twenty main-cohort models receive six seeds per task, with budgets of 40 H100 GPU-busy hours and 120 wall-clock hours. A fixed Opus 4.8 Coder implements experiments; monitors restrict research advice and test-score leakage. Twenty-four human experts use the same Coder and budgets, with the best human attempt defining each task's expert baseline. Compute multipliers compare time to shared score thresholds using chained reference envelopes and geometric aggregation. Hierarchical bootstrapping resamples tasks and runs; a scanned trend-break test evaluates acceleration. Additional evaluations examine novelty, inference scaling, integrated agents, withheld scoring signals, and experimental outcome prediction.",
+      "evidence": "Opus 5.5 achieves a reported compute multiplier of 2.30 relative to experts, with a 95% interval of 1.15–4.37; its final-performance multiplier is 1.14, with an interval of 1.01–1.31. Frontier compute efficiency doubles every 3.0 months after December 2025, compared with 14.0 months earlier. Final performance shows no significant trend break and doubles every 14.6 months. No Invented submissions appear among 540 labeled official submissions or approximately 1,600 additional experiments from top-decile runs. Removing explicit scoring feedback approximately halves measured multipliers in four tasks, but the reductions are statistically inconclusive. These results support improving experimental search under this protocol; they do not establish autonomous scientific invention or recursive self-improvement.",
+      "discovery_use": "TasteVal directly evaluates research agents choosing experiments and interpreting feedback on unresolved AI R&D tasks. Its primary contribution is a discovery evaluation protocol that separates experimental judgment from implementation and measures progress against human experts.",
+      "limits": "The eight tasks are withheld, limiting independent reproduction and scrutiny of task diversity. Fast, low-noise scoring and single-H100 experiments limit transfer to frontier-scale research. Problem selection and real-time coordination are unmeasured. Opus 5.5 and Fable 5.1 omit one refused task as missing data, although common-seven-task comparisons give similar results. Multipliers depend on the fixed Coder, budget, reference construction, and recruited experts. Reference bridging assumes ratios constant across score levels; bootstrap intervals hold reference envelopes, paths, and bridge membership fixed. Human and model spending is unequal. The integrated-agent comparison covers one model and has broad uncertainty. Forecasting implications require unverified continuation and transfer assumptions.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "benchmarks",
+        "rationale": "TasteVal directly evaluates research agents choosing experiments and interpreting feedback on unresolved AI R&D tasks. Its primary contribution is a discovery evaluation protocol that separates experimental judgment from implementation and measures progress against human experts.",
+        "pdf_sha256": "25bd6856362f326ef750655bb440a16bd691fdca8c7210d275bfff11cd686afa",
+        "evidence_pages": [
+          1,
+          3,
+          9
+        ]
+      }
     }
   }
 }

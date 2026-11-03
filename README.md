@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-859-2563eb?style=flat-square" alt="859 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-168-0f766e?style=flat-square" alt="168 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-860-2563eb?style=flat-square" alt="860 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-169-0f766e?style=flat-square" alt="169 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 119 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 141 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 83 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 159 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 160 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1961,6 +1961,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Qi Cheng et al. · Rutgers University; University of Pittsburgh; University of Minnesota; +3 institutions
 - <a id="paper-aa18c0346e5ad3a3"></a>**TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30043)* · [Paper](https://arxiv.org/abs/2610.30043) · [Code](https://github.com/xuyicheng-zju/TARSphere) · [Project](https://xuyicheng-zju.github.io/TARSphere/)<br>
   Yicheng Xu et al. · Zhejiang University; Fudan University
+- <a id="paper-260089287fc2643d"></a>**TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06824)* · [Paper](https://arxiv.org/abs/2610.06824) · [Project](https://pzeroresearch.com/work/tasteval/)<br>
+  Oliver Jaffe, Dane Sherburn · P-Zero Research
 - <a id="paper-4c7b45ef0c27315b"></a>**The Marathon of Scientific Reasoning: Robustness of Scientific Agents to Perturbations in Multi-Turn Interactions** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.34537)* · [Paper](https://arxiv.org/abs/2609.34537)<br>
   Xiaoting Lyu et al. · Xi’an Jiaotong University; Inria; Agency for Science, Technology and Research (A*STAR); +1 institutions
 - <a id="paper-1b71ddb115ba5e37"></a>**The Scientific Research Taste Benchmark (SciTaste-Bench): A Multi-Disciplinary Benchmark for Assessing Large Language Models' Judgment of Research Taste in Scientific Papers** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28653)* · [Paper](https://arxiv.org/abs/2610.28653)<br>

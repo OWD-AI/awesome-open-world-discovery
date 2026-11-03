@@ -3785,6 +3785,29 @@
       "name": "Cross-Primitive Consistency in Jev",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.38623"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "The eight evaluated tasks and their individual details are withheld to prevent contamination.",
+        "An unused example task and detailed environment, scoring, and scaffold descriptions are provided.",
+        "Release of executable benchmark infrastructure and evaluation trajectories is not established."
+      ],
+      "focus": "Experimental research judgment on eight AI R&D tasks. Researchers propose experiments and interpret outcomes; a fixed Coder implements and executes them on one H100. Feedback consists of live training and validation metrics, completed experiment reports, artifacts, and validation scores from executed computation. Test scores are withheld. These are computational research experiments, with no new physical measurements described.",
+      "limits": "Each run permits one experiment at a time, with 40 H100 GPU-busy hours and 120 wall-clock hours. Researchers may inspect task files, training and validation data, reports, and the internet, ask the Liaison about progress, and cancel experiments. They cannot execute experiment code, inspect the Coder's implementation, or access test data or test scores. Monitors enforce these restrictions. Withheld tasks, fast low-noise scoring, and single-GPU scale limit reproducibility and transfer to frontier research.",
+      "training": {
+        "reward": "Training the evaluated Researcher models with this environment is not established. During evaluation, task-specific unmodified scoring scripts score submissions on validation and test sets; only validation scores are returned to the Researcher. Final evaluation uses the official submission's held-out test score, or the best-validation submission when none is selected. Compute and performance multipliers compare results with expert baselines. A post-run auditor and manual confirmation exclude rule violations.",
+        "reset": "The Coder is launched for each experiment and shuts down afterward; its workstation persists across experiments within the run (page 24). Evaluation uses six seeds per model per task (page 7). A user-accessible environment reset or deterministic restoration mechanism is not established.",
+        "branching": "Experiments proceed serially, with cancellation and revised submissions supported. Snapshotting, rollback, and branching from saved environment states are not established. Best-of-k analysis selects among separate runs rather than demonstrating state branching."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-260089287fc2643d",
+      "resource_id": "paper-260089287fc2643d",
+      "name": "TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.06824"
     }
   ]
 }
