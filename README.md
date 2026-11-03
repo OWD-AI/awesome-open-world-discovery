@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-860-2563eb?style=flat-square" alt="860 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-861-2563eb?style=flat-square" alt="861 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-169-0f766e?style=flat-square" alt="169 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -67,9 +67,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-02 | [Measuring AI Agents as Teammates with Collaborative Intelligence](https://arxiv.org/abs/2611.02633) |
 | 2026-11-02 | [IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?](https://arxiv.org/abs/2611.03424) |
 | 2026-11-02 | [Human-Supervised Artificial Intelligence Researchers in Electric Power Systems: Knowledge, Physics, Simulation, and Governance for Large Language Models](https://arxiv.org/abs/2611.02711) |
+| 2026-11-02 | [History Forcing: Distilling History-Dependent Continuations for Long-Horizon Video World Models](https://arxiv.org/abs/2611.02782) |
 | 2026-11-02 | [E-GenRM: Generative Reward Modeling for Open-Ended E-Commerce Shopping Agents](https://arxiv.org/abs/2611.03008) |
 | 2026-11-02 | [DR Pixel: Page-Native Deep Research with Vision-Language Models](https://arxiv.org/abs/2611.03097) |
-| 2026-11-02 | [CoworkOS:Scaling Agent Coworkers for Real-world Automation](https://arxiv.org/abs/2611.03178) |
 
 <a id="contents"></a>
 
@@ -78,7 +78,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 49 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 92 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 93 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 65 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 151 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 119 |
@@ -268,6 +268,8 @@ Each work appears once under its primary contribution; see the [classification g
   Bryce Grant, Peng Wang · Case Western Reserve University
 - <a id="paper-c49ad3b799930c80"></a>**HiFOR: Hierarchical Foresight with Action-Guided World Grounding for Vision-Language-Action Model** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40373)* · [Paper](https://arxiv.org/abs/2610.40373)<br>
   Rongxing Ding et al. · Nanjing University of Science and Technology; National University of Singapore; Shenyang Institute of Automation, Chinese Academy of Sciences; +1 institutions
+- <a id="paper-8e1c3a19e6adeb02"></a>**History Forcing: Distilling History-Dependent Continuations for Long-Horizon Video World Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02782)* · [Paper](https://arxiv.org/abs/2611.02782) · [Code](https://github.com/ziplab/History-Forcing) · [Project](https://ziplab.co/History-Forcing-Project-Page/) · [HF Model](https://huggingface.co/xzxxntxdy/History-Forcing) · [Dataset](https://huggingface.co/datasets/xzxxntxdy/History-Forcing-Data)<br>
+  Hangyi Kuang et al. · Zhejiang University; Microsoft Research; Monash University; +1 institutions
 - <a id="paper-b9a6b3cf4345027c"></a>**Holi-World: Building Holistic World Intelligence from Human-Ego Experience** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26549)* · [Paper](https://arxiv.org/abs/2610.26549) · [Project](https://github.com/Ropedia/holi-world) · [HF Model](https://huggingface.co/ropedia-ai/holiworld-vl) · [Dataset](https://huggingface.co/datasets/ropedia-ai/holiworld-data)<br>
   Hao Li et al. · Ropedia; NTU; HKUST; +1 institutions
 - <a id="paper-137628e5f45d0875"></a>**How Far Can Coding Agents Go in Visual Generation?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19025)* · [Paper](https://arxiv.org/abs/2610.19025)<br>

@@ -28205,6 +28205,40 @@
           9
         ]
       }
+    },
+    "paper-8e1c3a19e6adeb02": {
+      "institutions": [
+        "Zhejiang University",
+        "Microsoft Research",
+        "Monash University",
+        "Adelaide University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        8,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "For the same noisy student chunk, timestep, and recent context, an autoregressive teacher predicts with and without additional history. Their weighted difference corrects either a bidirectional teacher’s score for distribution matching distillation or an EMA teacher’s velocity target for self-distillation. Long-video training uses earlier student-generated chunks; world-model training uses fixed-camera teacher rollouts to supervise evolution outside the student’s view. Evaluation covers 15-second VBench generation, 60-second VBench-Long generation, 43 PlayWorld out-of-sight cases, and 164 MemoBench Real clips.",
+      "evidence": "The 10-second-history teacher variant reaches 85.07 VBench quality versus 84.44 for the matched DMD baseline. Its 79.82 VBench-Long aggregate leads the compared 1.3B models and approaches the 5B LongLive-2.0 result of 79.90. On camera-controlled world modeling, PlayWorld Evolution Quality rises from 2.35 to 2.70 on a five-point scale, while MemoBench object consistency rises from 58.43 to 62.18. Ablations show that shared recent context matters and stronger historical weighting can trade motion dynamics for consistency. Reported long-video training overhead is 2.31% in time and 1.99% in peak allocated memory.",
+      "discovery_use": "The concrete contribution is stronger temporal world modeling: preserving entity identity and predicting evolving states while regions are unobserved. This supports representations needed by agents exploring partially observed environments, although downstream discovery and planning are not evaluated.",
+      "limits": "Historical supervision inherits teacher errors and limited simulated dynamics; appearance and scene drift remain. Experiments cover 1.3B long-video models and one 5B world-model backbone. Evaluation uses preset camera trajectories, automated metrics, and VLM ratings; downstream autonomous exploration, knowledge verification, and causal identification are untested. Competing 60-second results are imported from prior work. The supplied results provide no confidence intervals, and implementation details specify one training seed. Only pages 1 and 2 were visually inspected; later figures were assessed through supplied extracted text.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "causality",
+        "rationale": "The concrete contribution is stronger temporal world modeling: preserving entity identity and predicting evolving states while regions are unobserved. This supports representations needed by agents exploring partially observed environments, although downstream discovery and planning are not evaluated.",
+        "pdf_sha256": "ccf8481e6f3a26b6ce51b9229725af99027675e4478e76f8473a355c130e7725",
+        "evidence_pages": [
+          1,
+          6,
+          8,
+          11
+        ]
+      }
     }
   }
 }
