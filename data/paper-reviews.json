@@ -27517,6 +27517,267 @@
           7
         ]
       }
+    },
+    "paper-7060bf3392645395": {
+      "institutions": [
+        "University of Chinese Academy of Sciences",
+        "State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Separate modules generate policies, execute them under torque and runtime constraints, and assess task completion, MVC-normalized EMG, and subjective feedback. Historical policies can be reused. Five model configurations from four families were evaluated on three tasks with one participant.",
+      "evidence": "All selected policies enabled task completion after one feedback round. Assistance quality remained uneven: several revised policies received highly dissatisfied feedback, and some muscle activations increased. The 6-sol curl policy was retained unchanged. Altered posture and object drops exposed insufficient or persistent assistance.",
+      "discovery_use": "The concrete contribution is an agent that revises executable policies using measurements and human feedback from physical trials. This supports feedback-driven capability improvement, although the experiments demonstrate one refinement round rather than sustained recursive self-improvement.",
+      "limits": "One participant, brief tasks, and one feedback round provide limited evidence of generalization or sustained improvement. Task completion and lower EMG do not establish satisfactory assistance. Unexpected conditions were tested without subsequent adaptation. No randomized repeated-trial comparison or established optimization baseline is reported. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "adaptation",
+        "rationale": "The concrete contribution is an agent that revises executable policies using measurements and human feedback from physical trials. This supports feedback-driven capability improvement, although the experiments demonstrate one refinement round rather than sustained recursive self-improvement.",
+        "pdf_sha256": "1c73736c7b17f47c0af1ab9ad7ebea499fbf6965853fb384515a497ccc721119",
+        "evidence_pages": [
+          1,
+          5,
+          10
+        ]
+      }
+    },
+    "paper-e5389faf8d543b8c": {
+      "institutions": [
+        "Shenzhen University",
+        "The Hong Kong University of Science and Technology (Guangzhou)",
+        "Guangdong Provincial Key Laboratory of Visual Media and Multidimensional Intelligence"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Known-class pseudo labels require agreement between distance-aware local aggregation and an online prototype bank. Frozen DINO image descriptors provide gated semantic features. Multiple discovery heads use Sinkhorn optimal transport, recent-feature memory, overclustering, and cross-view self-training. Evaluation uses adapted NOPS and SNOPS baselines across ten synthetic-to-real splits and additional real-to-real transfers.",
+      "evidence": "Tables support the best overall mIoU on nine of ten synthetic-to-real splits, with a maximum 12.21-point gain over the stronger reimplemented baseline. Novel-class performance does not improve uniformly. Image-view coverage and fusion strength materially affect results; weak fusion can reduce performance.",
+      "discovery_use": "The method directly addresses discovering previously unseen semantic categories while adapting online to an unlabeled, shifted environment. This is a substantive open-world recognition contribution.",
+      "limits": "The number of novel categories is assumed known. Known-class degradation persists relative to source-only predictions. Baseline implementations required modifications, and several competing methods were excluded because usable code was unavailable. Continual and incremental discovery remain future work. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "adaptation",
+        "rationale": "The method directly addresses discovering previously unseen semantic categories while adapting online to an unlabeled, shifted environment. This is a substantive open-world recognition contribution.",
+        "pdf_sha256": "90d7eda5369bf4fa2fd81b8f2402b5d55743e9c211404ea2ccb345c1c7fc9340",
+        "evidence_pages": [
+          1,
+          5,
+          8
+        ]
+      }
+    },
+    "paper-ea8299ea963b49c5": {
+      "institutions": [
+        "Shanghai Jiao Tong University",
+        "National University of Singapore",
+        "Shanghai University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        12,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The position paper proposes an L0–L3 delegation roadmap, an identity representation separating personality from knowledge, and a rehearsal loop comprising trace collection, scenario staging, action evaluation, and memory or policy updates. Its Agentic Oversight Index subtracts normalized human oversight burden from normalized net value.",
+      "evidence": "The contribution is conceptual rather than empirical. The additive oversight penalty remains defined at zero supervision and lowers the score as oversight increases. The rehearsal framework identifies how agents could acquire and retain user-specific decision knowledge across episodes, but no implementation or measured learning gain is demonstrated.",
+      "discovery_use": "Offers a conceptual foundation for continual agent learning: user-specific representations, staged counterfactual investigations, feedback-driven policy updates, and evaluation that accounts for verification effort.",
+      "limits": "No trained system, benchmark experiment, user study, or empirical validation of the index is supplied. Identity stability, scenario representativeness, and oversight weights remain operational choices or research questions. Its discovery relevance concerns proposed learning and verification mechanisms rather than demonstrated autonomous scientific research. The supplied DeepSeek artifact is a cited model report, not this paper's release; no associated first-party artifact was verified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "foundations",
+        "rationale": "Offers a conceptual foundation for continual agent learning: user-specific representations, staged counterfactual investigations, feedback-driven policy updates, and evaluation that accounts for verification effort.",
+        "pdf_sha256": "660bdf0d1ed35d9bb8ee7a0e84247539115fb02e8ab67c4688a5ac47aeaaabad",
+        "evidence_pages": [
+          1,
+          12,
+          16
+        ]
+      }
+    },
+    "paper-1d8d07f5fb45591e": {
+      "institutions": [
+        "INTOSYN AI Labs",
+        "Columbia University",
+        "Microsoft"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        12,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Paired reference and faulty numerical states are replayed on healthy hardware. Original-coordinate restoration and transplantation test downstream effects against reference repeats. SciFact agents assess claims, while native Biomni workflows allocate hERG assays. Arithmetic checks, trusted recomputation, execution-state restoration, and commitment certificates support recovery.",
+      "evidence": "Eight confirmation batches found repeatable evidence-path changes in seven capture-claim combinations spanning two claims, despite unchanged verdicts. In hERG recovery experiments, restoring execution state recovered all 39 changed decisions after faulty values had been consumed; replacing the prediction file recovered none. Streaming verification reduced forward-plus-check time from 1.02 to 0.59 seconds.",
+      "discovery_use": "BioAgent-DF directly investigates whether scientific agents preserve valid evidence paths and experimental decisions under numerical faults. Its intervention, recovery, and certified-commitment procedures provide concrete methods for verifying agent-mediated research.",
+      "limits": "This is a targeted review of supplied pages 1–16 of 51, not an exhaustive appendix review. Confirmed SciFact effects involve selected captures and two small models; the unselected cohort showed no excess discordance over healthy repeats. Reference fidelity does not guarantee scientifically correct citations. The empirical margin rule requires valid bounds or full trusted recomputation for certification. Prospective laboratory validation is absent. The author-listed diagnostic repository could not be verified as publicly accessible, so it is omitted.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "sci_methods",
+        "rationale": "BioAgent-DF directly investigates whether scientific agents preserve valid evidence paths and experimental decisions under numerical faults. Its intervention, recovery, and certified-commitment procedures provide concrete methods for verifying agent-mediated research.",
+        "pdf_sha256": "54f27e6a1fe70aa7d4ac3c698d2f9c4fb9c26acad6719eda6215018e3292a36c",
+        "evidence_pages": [
+          1,
+          12,
+          13
+        ]
+      }
+    },
+    "paper-cec4915f9b766cef": {
+      "institutions": [
+        "The Hong Kong Polytechnic University",
+        "University of Cambridge",
+        "University College London"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A coordinator delegates operations to four specialist agents. Generated device probes collect runtime evidence for local and global response grading. Offline reinforcement fine-tuning uses coordinator–actor critiques and programmer quality, performance, and specialization scores. Evaluation covers 200 augmented IoTBench tasks, three deployment applications, ablations, and 20 users.",
+      "evidence": "The body reports average improvements of 17% in pass@1 and 11% in code similarity over baselines. HAR accuracy improves by a reported 26.5%. Case analyses show agents discovering missing dataset dimensions, deployment incompatibilities, and unsupported variable inputs. Removing runtime feedback substantially reduces execution success.",
+      "discovery_use": "The concrete discovery contribution is feedback-driven agent adaptation: agents synthesize probes to uncover unknown runtime constraints, revise workflows after testing, and incorporate accumulated experience through offline tuning.",
+      "limits": "Evaluation remains concentrated on edge AI programming. The random task split and user ratings do not establish sustained retention or resistance to forgetting. Tuning details and matched baseline compute are insufficiently documented. The displayed policy-gradient equations differentiate grading scores rather than clearly specifying policy likelihoods. Only pages 1 and 2 were visually inspected; their diagrams do not independently validate the numerical results. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "adaptation",
+        "rationale": "The concrete discovery contribution is feedback-driven agent adaptation: agents synthesize probes to uncover unknown runtime constraints, revise workflows after testing, and incorporate accumulated experience through offline tuning.",
+        "pdf_sha256": "ba96bf1ada2f4380f6f56589274ed06e3752141e020c3fb9dfb0e0fac6d298a6",
+        "evidence_pages": [
+          1,
+          5,
+          7,
+          10
+        ]
+      }
+    },
+    "paper-0948db3ba76883a6": {
+      "institutions": [
+        "PKU",
+        "KlingAI Research",
+        "HKUST(GZ)",
+        "FDU",
+        "HKU",
+        "HKUST",
+        "NUS",
+        "THU"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Verified teacher trajectories supervise plans, tool calls, interpretations, revisions, and captions. GRPO combines fact accuracy and coverage, initial observation-target alignment, and a quality-dependent tool-cost penalty. Evaluation uses four captioning benchmarks, two caption-to-QA benchmarks, reward ablations, and tool-use comparisons under a maximum 128-frame budget.",
+      "evidence": "Relative to its backbone, Reviso gains 4.4 F1 points on DREAM-1K and 15.4 on MCTS-VCB. CaReBench action and object F1 improve by 9.1 and 6.7 points. Caption-based QA gains 4.9 points on LVBench and 2.1 on MMVU overall. Removing plan alignment causes the largest reward-ablation losses. GPT-6 Astra with Codex exceeds Reviso in the reported harness comparison.",
+      "discovery_use": "Reviso explicitly trains agents to identify unresolved information, choose observations and tools, and revise evidence-gathering plans. This is a concrete learning-to-discover contribution despite its video-captioning application.",
+      "limits": "Evidence gathering is evaluated within captioning, without testing transfer to autonomous scientific investigation. Reference-derived facts and teacher verification can introduce selection and grading biases. A common frame cap does not equalize tool calls, tokens, or latency. No dedicated limitations section is supplied. The verified author repository currently contains only a Coming Soon README, so implementation and checkpoint availability are not established. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "learning",
+        "rationale": "Reviso explicitly trains agents to identify unresolved information, choose observations and tools, and revise evidence-gathering plans. This is a concrete learning-to-discover contribution despite its video-captioning application.",
+        "pdf_sha256": "4102adcdcd12657d3da23259343481c583e9628ff9b598ba9bf6c3341f1084b9",
+        "evidence_pages": [
+          1,
+          3,
+          4,
+          7
+        ]
+      }
+    },
+    "paper-96197faf377be404": {
+      "institutions": [
+        "Stanford University",
+        "MIT",
+        "University of Oxford"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Across 240 tasks, a model works alone, with a cooperative team, and with a scripted problematic teammate plus live partners. Test conditions run three times. Code checks outcomes; LLM message labels control script branches. Scores average dimensions over solo-solvable tasks, with bootstrap intervals and a 160-public/80-held-out split.",
+      "evidence": "Across 18 models, the best configuration scores 82.2. Default-setting performance drops 20.2–46.6 points from cooperative baselines. Frontier models obtain optimal conflict outcomes in 14% of tests, although their deals average 95% of optimal joint points. Takeover success drops from 97% to 81% after inherited misconduct. Many failures persist after agents explicitly recognize the problem.",
+      "discovery_use": "The benchmark measures discovery-relevant coordination failures: seeking missing evidence, sharing information, detecting falsified results, and verifying inherited work. Its controlled teammate interventions separate these behaviors from solo task competence.",
+      "limits": "This evaluates controlled teamwork rather than open scientific discovery itself. Solo and cooperative controls run only once, and conditional scoring gives models different task subsets. Scripted partners and LLM judges constrain realism and introduce labeling error. Transfer to other team tasks remains unverified; human comparisons have unmatched incentives and settings. Review covered supplied pages 1–17 of 51, including limitations, rather than every appendix. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "benchmarks",
+        "rationale": "The benchmark measures discovery-relevant coordination failures: seeking missing evidence, sharing information, detecting falsified results, and verifying inherited work. Its controlled teammate interventions separate these behaviors from solo task competence.",
+        "pdf_sha256": "8d3f6ba1b553ec3032ea9583a100ac21a95783c92441b16276772bb9b57f0602",
+        "evidence_pages": [
+          1,
+          4,
+          17
+        ]
+      }
+    },
+    "paper-c1e5534e6b4bd335": {
+      "institutions": [
+        "Renmin University of China",
+        "Fudan University",
+        "Peking University",
+        "Shanghai Jiao Tong University",
+        "National University of Singapore",
+        "East China Normal University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        21,
+        22
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The system combines hierarchical delegation, durable inboxes and checkpoints, revision-checked shared application resources, context reconstruction, and an experiment ledger. Twelve benchmarks compare four harnesses using GLM-5.3 under the stated model configuration. In the post-training study, GLM-5.3 controls diagnosis and data generation for Qwen3.6-35B-A3B. Each round evaluates the student, revises data and training strategy, filters demonstrations, performs supervised fine-tuning, and re-evaluates eight benchmarks.",
+      "evidence": "CoworkOS has the highest reported domain averages in productivity and ML coding, with MLE-Bench-Lite and MLS-Bench scores of 76.90 and 35.62. In post-training, the eight-benchmark mean rises from 33.19 to 42.95, with a regression at R2 and final improvement on seven of eight tasks. Automation gains 33.15 points and SkillsBench 14.91; JobBench declines 2.13. Run records show changes to data coverage, verification requirements, checkpoint lineage, and repetition strategy.",
+      "discovery_use": "The harness directly supports sustained investigation through durable experiment records, memory, coordination, monitoring, and artifact review. Its concrete discovery connection is an evaluated agent-driven loop that diagnoses model weaknesses, revises training data, runs experiments, and uses results to guide subsequent post-training.",
+      "limits": "The reported RSI study improves a student model using a stronger controller; it does not demonstrate recursive improvement of that controller. Concurrent changes in data, repetition, epochs, and checkpoint initialization prevent causal attribution. Repeated benchmark feedback and BM25 filtering do not establish generalization to untouched discovery problems. No controlled ablations isolate memory, coordination, or recovery benefits, and statistical uncertainty is not reported. Qualitative artifact inspection has explicitly bounded coverage. No paper-specific dataset or trained checkpoint release was verified. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "systems",
+        "rationale": "The harness directly supports sustained investigation through durable experiment records, memory, coordination, monitoring, and artifact review. Its concrete discovery connection is an evaluated agent-driven loop that diagnoses model weaknesses, revises training data, runs experiments, and uses results to guide subsequent post-training.",
+        "pdf_sha256": "0db3eb94695af5b2bd6c6da600691091202d5e0df79d850ca734f2a85493cf15",
+        "evidence_pages": [
+          1,
+          7,
+          21,
+          22
+        ]
+      }
     }
   }
 }

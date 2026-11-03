@@ -3719,6 +3719,28 @@
       "name": "IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.03424"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "160 public tasks with code and data.",
+        "80 tasks retained as a private test set."
+      ],
+      "focus": "Measures individual agents across eight teamwork dimensions in 240 tasks. Inputs come from recorded cases and existing benchmarks. Agents converse for 3 to 8 rounds with a branching scripted teammate and live LLM partners holding private facts. In 79 tasks, agents can also inspect or modify a shared sandbox through task-specific files and tools. This is a simulated teamwork environment with recorded inputs and some executed sandbox computation; it does not conduct scientific research experiments or collect new physical measurements.",
+      "limits": "Live partners are LLMs, and scripted teammates provide less variation than real teammates. Message judges and final-state checkers can err. Models are scored on different subsets determined by solo success. Solo and cooperative controls run once; test conditions run three times. Transfer to other team tasks is not established.",
+      "training": {
+        "reward": "Training or policy optimization with benchmark rewards is not established. Evaluation code checks final states against answer keys or hidden sandbox tests. Most outcomes are binary; conflict tasks score 1 for the best team deal, 0.5 for holding firm without reaching it, and 0 for giving in. Scores average test outcomes over solo-solvable tasks within each dimension, then average eight dimensions. LLM judges label messages to control script transitions rather than decide final success.",
+        "reset": "Separate solo, cooperative-baseline, and problematic-teammate runs are established. Each test runs three times with different seeds. A general reset API or restoration of arbitrary intermediate environment states is not established.",
+        "branching": "Scripted teammates follow fixed lines with branches selected from LLM message labels. Rater agreement or a third judge resolves whether the script yields. Arbitrary checkpoint forking, counterfactual replay from an intermediate state, and agent-controlled branching are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-96197faf377be404",
+      "resource_id": "paper-96197faf377be404",
+      "name": "Measuring AI Agents as Teammates with Collaborative Intelligence",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.02633"
     }
   ]
 }
