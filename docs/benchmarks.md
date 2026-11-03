@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**167 usage profiles** · Updated **2026-11-03**
+**168 usage profiles** · Updated **2026-11-03**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1192,6 +1192,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [ABF-Bench: A Verifiable Benchmark for Agentic Blockchain Forensics](#paper-48b9d5086b241c86) | Real data | Finite-pool queries | Paper-described |
 | [Diagnosing the Reference Gap: What Visual Scaffolds Can and Cannot Fix in Multimodal Reasoning](#paper-205c7d1c60add7c5) | Synthetic data | Analysis + tools | Paper-described |
 | [IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?](#paper-2dded0516a7f401a) | Real data | Finite-pool queries | Paper-described |
+| [Cross-Primitive Consistency in Jev](#paper-f345442c43310d2d) | Real data | Offline data | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -2846,6 +2847,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | A training reward or policy optimization procedure is not established in the supplied pages. Evaluation uses citation matching through bidirectional nearest Jaccard similarity, citation diversity through citation sufficiency and spread, rarity-weighted idea-slot coverage, and idea diversity. GPT-5.6 Luna judges slot agreement after retrieval of five nearest candidates. Eleven human reviewers give two blinded reviews per document for 192 documents, including feasibility and expected success. These are evaluation signals; their availability as feedback during a proposal run is not established. |
 | Reset | Not established: the supplied pages describe independent proposal runs and frozen corpus or round snapshots, but no environment reset or state restoration interface. |
 | Branching | Not established: multiple proposals and frozen FRONTIER rounds are described, but checkpoint forking, alternative continuations from a saved state, and branch restoration are not established. |
+
+</details>
+
+<a id="paper-f345442c43310d2d"></a>
+
+<details>
+<summary>Cross-Primitive Consistency in Jev — details</summary>
+
+[Work](../README.md#paper-f345442c43310d2d) · [Source](https://arxiv.org/pdf/2610.38623)
+
+**Focus:** PRIMACONS evaluates consistency across typed model queries on fixed records from HaluEval, PKU-SafeRLHF, AbstentionBench, and AG News. Allowed variations include positive and reversed binary queries, multiple-choice queries, label granularity, abstention options, and label descriptions. Feedback consists of model probabilities and predictions compared across equivalent views and against recorded labels. This is offline dataset evaluation, without a simulator or new physical measurements.
+
+**Openness:** `A repository address is printed on page 1; implementation and dataset availability are not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** The study covers three sizes of one model family. Calibration and test records are separated, and the reported cross-domain evaluation holds out Axis IV. Consistency does not establish correctness; overlapping hierarchical labels can complicate probability-partition assumptions. Agent-level scientific research experiments are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No reinforcement-learning reward is established. With the backbone frozen, CPRC minimizes binary or multiclass cross-entropy against recorded ground-truth labels plus an axis-specific consistency penalty. Evaluation uses probability gaps, total variation, decision conflicts, accuracy, and ROC-AUC for predicting decision error. |
+| Reset | Reset support is not established. The supplied body describes fixed calibration and test records without an environment reset interface. |
+| Branching | Branching support is not established. Multiple query views of the same record are evaluated, but environment-state cloning or trajectory branching is not described. |
 
 </details>
 

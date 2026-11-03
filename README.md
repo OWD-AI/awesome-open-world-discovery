@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-855-2563eb?style=flat-square" alt="855 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-167-0f766e?style=flat-square" alt="167 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-857-2563eb?style=flat-square" alt="857 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-168-0f766e?style=flat-square" alt="168 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -67,9 +67,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-02 | [IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?](https://arxiv.org/abs/2611.03424) |
 | 2026-11-02 | [Human-Supervised Artificial Intelligence Researchers in Electric Power Systems: Knowledge, Physics, Simulation, and Governance for Large Language Models](https://arxiv.org/abs/2611.02711) |
 | 2026-11-02 | [E-GenRM: Generative Reward Modeling for Open-Ended E-Commerce Shopping Agents](https://arxiv.org/abs/2611.03008) |
+| 2026-11-02 | [DR Pixel: Page-Native Deep Research with Vision-Language Models](https://arxiv.org/abs/2611.03097) |
 | 2026-11-02 | [CoworkOS:Scaling Agent Coworkers for Real-world Automation](https://arxiv.org/abs/2611.03178) |
 | 2026-11-02 | [Circumventing Magnitude Collapse via Modular Two-Stage Open-Set Recognition](https://arxiv.org/abs/2611.03421) |
-| 2026-11-02 | [Causal discovery needs explicit epistemic standards](https://arxiv.org/abs/2611.03166) |
 
 <a id="contents"></a>
 
@@ -82,9 +82,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 65 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 150 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 119 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 140 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 141 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 83 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 158 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 159 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1280,6 +1280,8 @@ Each work appears once under its primary contribution; see the [classification g
   Youhui Wang et al. · Stanford University; Columbia University
 - <a id="paper-f991937645caaaa5"></a>**DiffResearch: Accelerating Deep Research with Diffusion Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28909)* · [Paper](https://arxiv.org/abs/2610.28909) · [Code](https://github.com/alanrbtx/DiffResearch)<br>
   Alan-Barsag Gazzaev, Alexey Gavrilov, Mikhail Mozikov, Sergey Muravyov · ITMO University; AXXX
+- <a id="paper-74ee729d37164be4"></a>**DR Pixel: Page-Native Deep Research with Vision-Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03097)* · [Paper](https://arxiv.org/abs/2611.03097) · [Code](https://github.com/StarTrail-org/DRPixel) · [Dataset](https://huggingface.co/datasets/HughieHu/drpixel-bench)<br>
+  Tiansheng Hu et al. · NYU Shanghai; University of California, Berkeley; Rational Dynamics; +2 institutions
 - <a id="paper-69f6cbf39ab201a1"></a>**DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.40306)* · [Paper](https://arxiv.org/abs/2609.40306) · [Project](https://denghaoyuan123.github.io/Dynaharness_page/)<br>
   Haoyuan Deng et al. · Nanyang Technological University; Nanjing University
 - <a id="paper-4a6e83fc6b01f273"></a>**EditAgent: Rethinking Agentic Image Editing** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.39664)* · [Paper](https://arxiv.org/abs/2610.39664)<br>
@@ -1765,6 +1767,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Jize Jiang, Chengxiang Zhai · University of Illinois Urbana-Champaign
 - <a id="paper-721958fe0d5a8c2d"></a>**CompMat-Bench: Benchmarking AI Agents for Computational Materials Science** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00636)* · [Paper](https://arxiv.org/abs/2610.00636) · [Code](https://github.com/cz2014/CompMat-Bench)<br>
   Chenmu Zhang et al. · Rice University
+- <a id="paper-f345442c43310d2d"></a>**Cross-Primitive Consistency in Jev** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.38623)* · [Paper](https://arxiv.org/abs/2610.38623) · [Project](https://github.com/67L1/PrimaCons-CRPR)<br>
+  Xu Liu, Guikun Chen, Kanzhi Wu, Wenguan Wang · Zhejiang University; vivo
 - <a id="paper-c643418cbbaee3ee"></a>**CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19005)* · [Paper](https://arxiv.org/abs/2610.19005) · [Project](https://cyber-arena.ai) · [Code](https://github.com/cyber-arena-ai/cyber-arena) · [Code](https://github.com/cyber-arena-ai/octagon)<br>
   Bangya Liu et al. · 2077AI Open Source Foundation; UC Santa Cruz; UC Berkeley; +8 institutions
 - <a id="paper-8b5e7afcd33dcbed"></a>**Data World: Scaling Data Environments from Scratch** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21656)* · [Paper](https://arxiv.org/abs/2610.21656) · [Code](https://github.com/Zhanli-Li/Data-World) · [Project](https://zhanli-li.github.io/Data-World/) · [Dataset](https://huggingface.co/datasets/Zhanli-Li/DataWorld-Bench) · [Dataset](https://huggingface.co/collections/Zhanli-Li/dataworld) · [HF Model](https://huggingface.co/Zhanli-Li/DataWorld-35B-A3B)<br>

@@ -28051,6 +28051,69 @@
           33
         ]
       }
+    },
+    "paper-74ee729d37164be4": {
+      "institutions": [
+        "NYU Shanghai",
+        "University of California, Berkeley",
+        "Rational Dynamics",
+        "Toyota Technological Institute at Chicago",
+        "New York University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A ReAct agent retrieves three page images per search from 1,062,153 pages covering 99,055 papers. Counterfactual credit reweighting uses frozen-model gold-answer likelihood changes to score reasoning and search steps, followed by weighted LoRA training on about 2,500 teacher trajectories. Evaluation includes OCR-text and text-plus-figure baselines, vanilla SFT, and four external benchmarks.",
+      "evidence": "Without training, page retrieval improves accuracy over text-plus-figure retrieval by 5.1–5.6 percentage points across three models. Training increases Qwen accuracy from 40.1% to 52.1%, versus 49.0% for vanilla SFT, while reducing searches from 14.0 to 8.9. External scientific-QA accuracy improves by 9.6–14.4 points. ViDoRe-V3 page accuracy reaches 70.8%, compared with its published page-oracle result of 72.6%.",
+      "discovery_use": "Directly advances scientific research agents through iterative retrieval and interpretation of visual evidence in papers, with a dedicated evaluation benchmark and agent training method.",
+      "limits": "The benchmark tests finding existing knowledge, with exactly one gold page per question, rather than producing new scientific discoveries. Questions are model-generated and human-reviewed; answers are model-graded. Training is demonstrated on one backbone, and three external scientific benchmarks share the evaluation corpus. The published oracle uses a different generator, limiting controlled interpretation of the oracle comparison. Fewer calls do not establish lower total inference cost. Only supplied rendered pages were visually inspected; results figures were assessed through supplied text.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "systems",
+        "rationale": "Directly advances scientific research agents through iterative retrieval and interpretation of visual evidence in papers, with a dedicated evaluation benchmark and agent training method.",
+        "pdf_sha256": "6fd43106262a4e18c835f6d3f963fd0a24837a2d31a9a664a17beeb6c1e80447",
+        "evidence_pages": [
+          1,
+          2,
+          8
+        ]
+      }
+    },
+    "paper-f345442c43310d2d": {
+      "institutions": [
+        "Zhejiang University",
+        "vivo"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Four existing datasets are converted into paired querying views with separate calibration and test splits. Three JevK5 sizes are evaluated using probability gaps, total variation, and decision conflicts. CPRC combines PCA-projected hidden states, probabilities, and metadata in an MLP that predicts bounded logit corrections, trained with classification and consistency losses. Cross-domain testing holds out Axis IV.",
+      "evidence": "All three models exhibit inconsistencies. Axis I disagreement predicts decision error with reported ROC-AUC 0.91. On held-out Axis IV, JevK5-2B total variation between raw Choice and normalized Noul falls from 0.4391 to 0.1819. Raw-label accuracy increases from 84.90% to 87.42%, a 2.52 percentage-point gain or approximately 2.97% relative improvement. Improvements are not universal: raw-versus-described Choice disagreement increases for the 2B and 9B models.",
+      "discovery_use": "Provides controlled evaluation of factuality-verification and answerability judgments across equivalent interfaces. Its inconsistency signal offers a concrete mechanism for auditing knowledge-verification decisions, although autonomous discovery is not tested.",
+      "limits": "Results cover one model family and existing classification datasets, without agent-level verification or scientific discovery experiments. The reported leave-one-domain-out evaluation uses Axis IV as the held-out target rather than showing every possible held-out axis. Hierarchical safety labels can overlap, weakening assumptions that fine-category probabilities must partition parent mass. Axis II retains only unsafe samples. Consistency alone does not establish correctness. The verified author repository currently contains only a minimal README, so implementation and dataset availability remain unverified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "benchmarks",
+        "rationale": "Provides controlled evaluation of factuality-verification and answerability judgments across equivalent interfaces. Its inconsistency signal offers a concrete mechanism for auditing knowledge-verification decisions, although autonomous discovery is not tested.",
+        "pdf_sha256": "f536b19f1197864a52dc8b6b4a29574283d6f204d749113e7f0654cfd859fd1d",
+        "evidence_pages": [
+          1,
+          3,
+          4
+        ]
+      }
     }
   }
 }

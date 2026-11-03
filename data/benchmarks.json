@@ -3764,6 +3764,27 @@
       "name": "When Does Latent Prediction Error Support Physical Surprise Claims in Video World Models?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.01815"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "A repository address is printed on page 1; implementation and dataset availability are not established by the supplied pages."
+      ],
+      "focus": "PRIMACONS evaluates consistency across typed model queries on fixed records from HaluEval, PKU-SafeRLHF, AbstentionBench, and AG News. Allowed variations include positive and reversed binary queries, multiple-choice queries, label granularity, abstention options, and label descriptions. Feedback consists of model probabilities and predictions compared across equivalent views and against recorded labels. This is offline dataset evaluation, without a simulator or new physical measurements.",
+      "limits": "The study covers three sizes of one model family. Calibration and test records are separated, and the reported cross-domain evaluation holds out Axis IV. Consistency does not establish correctness; overlapping hierarchical labels can complicate probability-partition assumptions. Agent-level scientific research experiments are not established.",
+      "training": {
+        "reward": "No reinforcement-learning reward is established. With the backbone frozen, CPRC minimizes binary or multiclass cross-entropy against recorded ground-truth labels plus an axis-specific consistency penalty. Evaluation uses probability gaps, total variation, decision conflicts, accuracy, and ROC-AUC for predicting decision error.",
+        "reset": "Reset support is not established. The supplied body describes fixed calibration and test records without an environment reset interface.",
+        "branching": "Branching support is not established. Multiple query views of the same record are evaluated, but environment-state cloning or trajectory branching is not described."
+      },
+      "evaluation_family": "other",
+      "id": "paper-f345442c43310d2d",
+      "resource_id": "paper-f345442c43310d2d",
+      "name": "Cross-Primitive Consistency in Jev",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.38623"
     }
   ]
 }
