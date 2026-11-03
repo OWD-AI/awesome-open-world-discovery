@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-858-2563eb?style=flat-square" alt="858 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-859-2563eb?style=flat-square" alt="859 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-168-0f766e?style=flat-square" alt="168 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -61,6 +61,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Date | Paper |
 | --- | --- |
 | 2026-11-02 | [What makes a theorem interesting? Operationalizing interestingness for open-ended exploration](https://arxiv.org/abs/2611.02905) |
+| 2026-11-02 | [Toward Knowledge-Centric AI: Discovering, Internalizing, and Using Explicit Knowledge Across Agents and Generations](https://arxiv.org/abs/2611.03157) |
 | 2026-11-02 | [Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning](https://arxiv.org/abs/2611.03602) |
 | 2026-11-02 | [Reimagining computational quantum research with AI scientists](https://arxiv.org/abs/2611.02833) |
 | 2026-11-02 | [Measuring AI Agents as Teammates with Collaborative Intelligence](https://arxiv.org/abs/2611.02633) |
@@ -69,7 +70,6 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-02 | [E-GenRM: Generative Reward Modeling for Open-Ended E-Commerce Shopping Agents](https://arxiv.org/abs/2611.03008) |
 | 2026-11-02 | [DR Pixel: Page-Native Deep Research with Vision-Language Models](https://arxiv.org/abs/2611.03097) |
 | 2026-11-02 | [CoworkOS:Scaling Agent Coworkers for Real-world Automation](https://arxiv.org/abs/2611.03178) |
-| 2026-11-02 | [Circumventing Magnitude Collapse via Modular Two-Stage Open-Set Recognition](https://arxiv.org/abs/2611.03421) |
 
 <a id="contents"></a>
 
@@ -77,7 +77,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 
 | Topic | Research question | Works |
 | --- | --- | ---: |
-| 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 48 |
+| 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 49 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 92 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 65 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 151 |
@@ -164,6 +164,8 @@ Each work appears once under its primary contribution; see the [classification g
   Chuyang Wei et al. · Zhongguancun Academy; Zhongguancun Institute of Artificial Intelligence; University of Science and Technology of China
 - <a id="paper-738c049d26da5ae0"></a>**Statistical Inference under Performativity: From Policy Feedback to Self-Evolving Systems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.00438)* · [Paper](https://arxiv.org/abs/2611.00438)<br>
   Tianwei Gao et al. · University of North Carolina at Chapel Hill; Yale University; Massachusetts Institute of Technology; +2 institutions
+- <a id="paper-58697f8c99c68523"></a>**Toward Knowledge-Centric AI: Discovering, Internalizing, and Using Explicit Knowledge Across Agents and Generations** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03157)* · [Paper](https://arxiv.org/abs/2611.03157)<br>
+  Yisen Gao et al. · The Hong Kong University of Science and Technology; Hong Kong Baptist University
 - <a id="paper-1e60f285c8164f89"></a>**Toward Recursive Self-Improvement in Physical AI** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29677)* · [Paper](https://arxiv.org/abs/2610.29677) · [Project](https://physical2rsi.github.io) · [Code](https://github.com/Physical2RSI/Awesome-Physical2RSI)<br>
   Meng Luo et al. · National University of Singapore; Huazhong University of Science and Technology; Shanghai Jiao Tong University; +2 institutions
 - <a id="paper-27096c6218492feb"></a>**Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35193)* · [Paper](https://arxiv.org/abs/2610.35193) · [Project](https://github.com/pujiayue/Trustworthy-RSI) · [Project](https://pujiayue.github.io/Trustworthy-RSI/)<br>
