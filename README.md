@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-891-2563eb?style=flat-square" alt="891 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-892-2563eb?style=flat-square" alt="892 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-182-0f766e?style=flat-square" alt="182 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 95 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 66 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 156 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 157 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 146 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
@@ -681,6 +681,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yuxuan Zhou et al. · ERNIE Team, Baidu; Independent Researcher
 - <a id="paper-d3da834b254c9317"></a>**EnvLunch: The Environment as a Free Lunch for Learning to Interact** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33817)* · [Paper](https://arxiv.org/abs/2610.33817) · [Code](https://github.com/thinkwee/EnvLunch)<br>
   Wei Liu, Min Gao, Yali Du, Yulan He · King’s College London; Chongqing University; The Alan Turing Institute
+- <a id="paper-62c87da6c730bf4f"></a>**Every Token Needs Its Own Teacher: Multi-teacher Adaptive On-policy Self-distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40574)* · [Paper](https://arxiv.org/abs/2610.40574) · [Code](https://github.com/xingzhejun/MTA-OPSD)<br>
+  Yifu Luo et al. · TU M¨unchen; Munich Center for Machine Learning (MCML); relAI – Konrad Zuse School of Excellence in Reliable AI; +4 institutions
 - <a id="paper-6c921d13d0b14a4e"></a>**Evolve on Graph: Self-Evolving Knowledge Graph Reasoning without Question Annotations** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35598)* · [Paper](https://arxiv.org/abs/2610.35598) · [Project](https://szy5.github.io/EoG/) · [Code](https://github.com/Szy5/EoG) · [HF Model](https://huggingface.co/Bobzong/EoG)<br>
   Zongyuan Sun et al. · Beijing University of Posts and Telecommunications; University of Helsinki; University of Amsterdam; +1 institutions
 - <a id="paper-d0a1aad7216e9e1d"></a>**Evolving in Thought Space: Training a Small Model at Test Time Unlocks Better Discoveries** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06269)* · [Paper](https://arxiv.org/abs/2610.06269) · [Code](https://github.com/Human-Agent-Society/reef/tree/main/recipes/tttd/examples/guidance_ttt) · [Project](https://www.reefinfra.ai/docs/user-guide/recipes/guidance-ttt/)<br>

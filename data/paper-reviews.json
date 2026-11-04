@@ -29221,6 +29221,41 @@
           23
         ]
       }
+    },
+    "paper-62c87da6c730bf4f": {
+      "institutions": [
+        "TU M¨unchen",
+        "Munich Center for Machine Learning (MCML)",
+        "relAI – Konrad Zuse School of Excellence in Reliable AI",
+        "Kyoto University",
+        "NII LLMC",
+        "ELLIS Institute Finland",
+        "Aalto University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Seven teacher configurations vary reference truncation and exposure while retaining the final answer. Majority voting filters teachers by whether they support or oppose the sampled token; the most KL-distant teacher within that subset supplies the distillation target. A teacher-intervention pilot uses 64 prompts. Training evaluates Qwen3 models at 1.7B, 4B, and 8B on AMC23, AIME24, and AIME25 against OPSD, SDPO, and Paint.",
+      "evidence": "Average scores improve from 51.1 to 57.0, 75.7 to 77.2, and 76.4 to 79.2 across the three model sizes. MTA-OPSD has the highest average at each size, but does not win every individual benchmark. At 1.7B, random tokenwise teacher selection scores 53.6 and loss averaging scores 53.7. Within the majority subset, random selection reaches 56.6 versus 57.0 for farthest-KL selection, making that component's incremental gain modest.",
+      "discovery_use": "Contributes a concrete post-training mechanism for mathematical reasoning: adapting reference-conditioned supervision independently for each generated token. This supports learning capabilities relevant to discovery, although autonomous discovery itself is not evaluated.",
+      "limits": "Evaluation is confined to one model family and competition mathematics with privileged reference solutions. Checkpoints are selected using test-set performance, creating selection bias. Reported comparisons lack uncertainty estimates and repeated-training evidence. The pilot intervenes over 64–256-token spans, so its suitability measure is a continuation-level proxy rather than isolated token-level causality. Average KL results do not establish that the farthest teacher is always best. Added teacher-pool computation is not quantified.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "learning",
+        "rationale": "Contributes a concrete post-training mechanism for mathematical reasoning: adapting reference-conditioned supervision independently for each generated token. This supports learning capabilities relevant to discovery, although autonomous discovery itself is not evaluated.",
+        "pdf_sha256": "46d400419f8e73a57a3ac0944172ee79581b1880f9fc8725108e7a754a667e74",
+        "evidence_pages": [
+          1,
+          6,
+          8
+        ]
+      }
     }
   }
 }
