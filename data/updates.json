@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04T04:06:21-05:00",
+  "updated_at": "2026-11-04T05:01:29-05:00",
   "window_start": "2026-10-06",
   "window_end": "2026-11-04",
   "window_days": 30,
@@ -125,6 +125,24 @@
       ]
     },
     {
+      "title": "You don't need long context",
+      "url": "https://arxiv.org/abs/2611.05306",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "The paper tests whether agents can replace growing conversational histories with compact task states and selective document access. Strong closed-weight models generally retain task performance with short working contexts, but open-weight models show substantial variation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata gives 2026-11-03T00:00:00.000Z, corroborated at calendar-date resolution by the page 1 arXiv v1 date. The November 4 manuscript header is not the original publication date. The preserved timestamp falls on November 2 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "The primary contribution concerns agent harnesses and working memory: retaining task state and retrieving evidence across long investigations. This directly informs systems that explore unknown information and verify findings, although the experiments do not demonstrate scientific discovery.",
+      "id": "70e99cf4ef04126b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.05306"
+        }
+      ]
+    },
+    {
       "title": "What makes a theorem interesting? Operationalizing interestingness for open-ended exploration",
       "url": "https://arxiv.org/abs/2611.02905",
       "published_at": "2026-11-02",
@@ -139,6 +157,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.02905"
+        }
+      ]
+    },
+    {
+      "title": "VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks",
+      "url": "https://arxiv.org/abs/2611.04418",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "VidUEU-Agent converts videos into evidence-grounded instruction data for understanding, editing, and interleaved visual reasoning. It combines tool-supported quality controls with repeated evaluation-guided adjustments to sampling and task composition, producing VidUEU-100K.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata gives 2026-11-03T00:00:00.000Z; page 1 corroborates November 3, 2026 as the arXiv v1 date. The exact supplied timestamp is retained.",
+      "review_status": "approved",
+      "relevance": "Beyond ordinary multimodal data generation, the agent identifies capability weaknesses from downstream results and revises its training-data distribution. This provides a concrete feedback-driven training mechanism for improving grounded reasoning and verification, relevant to learning systems that discover their own deficiencies.",
+      "id": "f1df04219b766bf8",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.04418"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/LRuca/VidUEU-Agent"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Lruca/VidUEU100k"
         }
       ]
     },
@@ -201,6 +245,32 @@
         {
           "label": "Project",
           "url": "https://toolspace-agent.github.io/"
+        }
+      ]
+    },
+    {
+      "title": "Think Less, Locally: Local Preference Learning for Reasoning Compression",
+      "url": "https://arxiv.org/abs/2611.04814",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "LoCo learns concise reasoning from alternative continuations of the same intermediate state. It uses a model's own traces to find potentially redundant deliberation, verifies shorter replacements, and trains preferences that preserve useful computation while reducing unnecessary continuation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata gives 2026-11-03T00:00:00.000Z; page 1 corroborates November 3, 2026 as the arXiv v1 date. The exact supplied timestamp is retained.",
+      "review_status": "approved",
+      "relevance": "LoCo trains a state-dependent decision about continuing reasoning versus concluding from verified evidence. This is a concrete post-training contribution to allocating computation during hypothesis reasoning and verification, with demonstrated transfer from mathematics to code.",
+      "id": "5ae91bff08b3cb5c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.04814"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MuyaoYuan/LoCo"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/MuyaoYuan/LoCo-7B"
         }
       ]
     },
@@ -451,6 +521,28 @@
       ]
     },
     {
+      "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
+      "url": "https://arxiv.org/abs/2611.05377",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "DreamX repurposes pretrained video diffusion features to learn compact action representations shared across human and robot videos. These representations support motion transfer, robot-action decoding, and policy learning without generating future video during policy execution.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at and original-paper publishedAt metadata give 2026-11-03T00:00:00.000Z, consistent with the PDF's version-one date.",
+      "review_status": "approved",
+      "relevance": "The concrete connection is a reusable action and world representation: motion extracted from observations transfers across human and robot embodiments and conditions future predictions and executable actions. This supports learning transferable interaction structure for embodied discovery, although autonomous exploration and causal identification are not evaluated.",
+      "id": "a055728d0cef2896",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.05377"
+        },
+        {
+          "label": "Project",
+          "url": "https://cvlab-kaist.github.io/DreamX"
+        }
+      ]
+    },
+    {
       "title": "DR Pixel: Page-Native Deep Research with Vision-Language Models",
       "url": "https://arxiv.org/abs/2611.03097",
       "published_at": "2026-11-02",
@@ -477,7 +569,7 @@
       ]
     },
     {
-      "title": "CoworkOS: Scaling Agent Coworkers for Real-world Automation",
+      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
       "url": "https://arxiv.org/abs/2611.03178",
       "published_at": "2026-11-02",
       "kind": "paper",
@@ -1085,6 +1177,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.03713"
+        }
+      ]
+    },
+    {
+      "title": "Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?",
+      "url": "https://arxiv.org/abs/2611.02017",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "Switch-SWE measures how coding agents resume unfinished work within a shared conversation. Matched uninterrupted and interleaved sessions preserve focus requirements and persistent task workspaces, while a context manager routes relevant history and records accumulated task state.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at and original-paper publishedAt metadata give 2026-11-01T00:00:00.000Z, consistent with the PDF's version-one date. The exact timestamp is preserved for host timezone assignment.",
+      "review_status": "approved",
+      "relevance": "The benchmark isolates agents' ability to recover unfinished investigations and verify completed work after intervening tasks. Its matched sessions, executable verification, and task-memory intervention provide concrete evaluation and harness methods relevant to persistent discovery agents, although the tasks are software repairs rather than scientific research.",
+      "id": "2468d23826d80398",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.02017"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Miraclecsc/Switch-SWE"
         }
       ]
     },
@@ -14843,6 +14957,24 @@
       ]
     },
     {
+      "title": "You don't need long context",
+      "url": "https://arxiv.org/abs/2611.05306",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "The paper tests whether agents can replace growing conversational histories with compact task states and selective document access. Strong closed-weight models generally retain task performance with short working contexts, but open-weight models show substantial variation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata gives 2026-11-03T00:00:00.000Z, corroborated at calendar-date resolution by the page 1 arXiv v1 date. The November 4 manuscript header is not the original publication date. The preserved timestamp falls on November 2 in America/New_York.",
+      "review_status": "approved",
+      "relevance": "The primary contribution concerns agent harnesses and working memory: retaining task state and retrieving evidence across long investigations. This directly informs systems that explore unknown information and verify findings, although the experiments do not demonstrate scientific discovery.",
+      "id": "70e99cf4ef04126b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.05306"
+        }
+      ]
+    },
+    {
       "title": "What makes a theorem interesting? Operationalizing interestingness for open-ended exploration",
       "url": "https://arxiv.org/abs/2611.02905",
       "published_at": "2026-11-02",
@@ -14857,6 +14989,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.02905"
+        }
+      ]
+    },
+    {
+      "title": "VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks",
+      "url": "https://arxiv.org/abs/2611.04418",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "VidUEU-Agent converts videos into evidence-grounded instruction data for understanding, editing, and interleaved visual reasoning. It combines tool-supported quality controls with repeated evaluation-guided adjustments to sampling and task composition, producing VidUEU-100K.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata gives 2026-11-03T00:00:00.000Z; page 1 corroborates November 3, 2026 as the arXiv v1 date. The exact supplied timestamp is retained.",
+      "review_status": "approved",
+      "relevance": "Beyond ordinary multimodal data generation, the agent identifies capability weaknesses from downstream results and revises its training-data distribution. This provides a concrete feedback-driven training mechanism for improving grounded reasoning and verification, relevant to learning systems that discover their own deficiencies.",
+      "id": "f1df04219b766bf8",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.04418"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/LRuca/VidUEU-Agent"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Lruca/VidUEU100k"
         }
       ]
     },
@@ -14919,6 +15077,32 @@
         {
           "label": "Project",
           "url": "https://toolspace-agent.github.io/"
+        }
+      ]
+    },
+    {
+      "title": "Think Less, Locally: Local Preference Learning for Reasoning Compression",
+      "url": "https://arxiv.org/abs/2611.04814",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "LoCo learns concise reasoning from alternative continuations of the same intermediate state. It uses a model's own traces to find potentially redundant deliberation, verifies shorter replacements, and trains preferences that preserve useful computation while reducing unnecessary continuation.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata gives 2026-11-03T00:00:00.000Z; page 1 corroborates November 3, 2026 as the arXiv v1 date. The exact supplied timestamp is retained.",
+      "review_status": "approved",
+      "relevance": "LoCo trains a state-dependent decision about continuing reasoning versus concluding from verified evidence. This is a concrete post-training contribution to allocating computation during hypothesis reasoning and verification, with demonstrated transfer from mathematics to code.",
+      "id": "5ae91bff08b3cb5c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.04814"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MuyaoYuan/LoCo"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/MuyaoYuan/LoCo-7B"
         }
       ]
     },
@@ -15169,6 +15353,28 @@
       ]
     },
     {
+      "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
+      "url": "https://arxiv.org/abs/2611.05377",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "DreamX repurposes pretrained video diffusion features to learn compact action representations shared across human and robot videos. These representations support motion transfer, robot-action decoding, and policy learning without generating future video during policy execution.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at and original-paper publishedAt metadata give 2026-11-03T00:00:00.000Z, consistent with the PDF's version-one date.",
+      "review_status": "approved",
+      "relevance": "The concrete connection is a reusable action and world representation: motion extracted from observations transfers across human and robot embodiments and conditions future predictions and executable actions. This supports learning transferable interaction structure for embodied discovery, although autonomous exploration and causal identification are not evaluated.",
+      "id": "a055728d0cef2896",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.05377"
+        },
+        {
+          "label": "Project",
+          "url": "https://cvlab-kaist.github.io/DreamX"
+        }
+      ]
+    },
+    {
       "title": "DR Pixel: Page-Native Deep Research with Vision-Language Models",
       "url": "https://arxiv.org/abs/2611.03097",
       "published_at": "2026-11-02",
@@ -15195,7 +15401,7 @@
       ]
     },
     {
-      "title": "CoworkOS: Scaling Agent Coworkers for Real-world Automation",
+      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
       "url": "https://arxiv.org/abs/2611.03178",
       "published_at": "2026-11-02",
       "kind": "paper",
@@ -15803,6 +16009,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.03713"
+        }
+      ]
+    },
+    {
+      "title": "Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?",
+      "url": "https://arxiv.org/abs/2611.02017",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "Switch-SWE measures how coding agents resume unfinished work within a shared conversation. Matched uninterrupted and interleaved sessions preserve focus requirements and persistent task workspaces, while a context manager routes relevant history and records accumulated task state.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at and original-paper publishedAt metadata give 2026-11-01T00:00:00.000Z, consistent with the PDF's version-one date. The exact timestamp is preserved for host timezone assignment.",
+      "review_status": "approved",
+      "relevance": "The benchmark isolates agents' ability to recover unfinished investigations and verify completed work after intervening tasks. Its matched sessions, executable verification, and task-memory intervention provide concrete evaluation and harness methods relevant to persistent discovery agents, although the tasks are software repairs rather than scientific research.",
+      "id": "2468d23826d80398",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.02017"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Miraclecsc/Switch-SWE"
         }
       ]
     },

@@ -29095,6 +29095,132 @@
           10
         ]
       }
+    },
+    "paper-f1df04219b766bf8": {
+      "institutions": [
+        "Zhejiang University",
+        "The University of Hong Kong",
+        "Institute of Automation, Chinese Academy of Sciences",
+        "Huawei Technologies Ltd."
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Use hierarchical video summaries, shot and frame quality gates, tool planning, representative keyframe selection, metadata verification, task routing, and signal-ID citations. Four iterations each train a model from the same initial checkpoint on 30K samples, return benchmark scores to the agent, and revise distribution targets. The final dataset scales the fourth iteration's target distribution to 100K samples.",
+      "evidence": "InternVL3 MMDU improves from 53.1 to 61.1; separately fine-tuned Bagel improves WEAVEbench overall from 0.446 to 0.501 and editing overall from 6.527 to 6.951. Joint-training iteration scores also improve overall. Removing frame filtering or replacing the pipeline with direct VLM-generated QA substantially degrades results.",
+      "discovery_use": "Beyond ordinary multimodal data generation, the agent identifies capability weaknesses from downstream results and revises its training-data distribution. This provides a concrete feedback-driven training mechanism for improving grounded reasoning and verification, relevant to learning systems that discover their own deficiencies.",
+      "limits": "The benchmarks guiding iteration are development-guided evaluations, not independent held-out evidence of autonomous improvement. The joint-training iteration results and separately trained capability results use different settings. Ablations use smaller training subsets than the full method, complicating component attribution. Long interleaved chains remain vulnerable to error propagation, and the model remains below OmniGen2 on WEAVEbench overall. Review covers supplied body sections and page 54, not all appendices.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "learning",
+        "rationale": "Beyond ordinary multimodal data generation, the agent identifies capability weaknesses from downstream results and revises its training-data distribution. This provides a concrete feedback-driven training mechanism for improving grounded reasoning and verification, relevant to learning systems that discover their own deficiencies.",
+        "pdf_sha256": "a2357223631aaead2dade4416f5a37bfaa923d347f25ca387b7c286c337137e2",
+        "evidence_pages": [
+          1,
+          6,
+          8
+        ]
+      }
+    },
+    "paper-5ae91bff08b3cb5c": {
+      "institutions": [
+        "MOEKLINNS, School of Computer Science and Technology, Xi’an Jiaotong University",
+        "WeChat AI, Tencent Inc."
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Screen paragraph-level states using low predictive confidence and high confidence volatility, then recheck the next step with a stronger judge. Generate eight continuations from each retained prefix, select the shortest gold-verified continuation, and construct DPO pairs against the original suffix. Train a LoRA adapter on DeepSeek-R1-Distill-Qwen-7B using math-only queries; evaluate five mathematics and three coding benchmarks with eight completions per problem.",
+      "evidence": "Completion lengths decrease by 41.7–45.4% on mathematics and 23.4–36.3% on code, with approximately maintained or improved accuracy. MBPP accuracy remains 84.05%; CodeContests rises from 18.48% to 20.61%. Local preferences compress much more than the global-preference ablation, while random and uniform cutpoints generally sacrifice more accuracy.",
+      "discovery_use": "LoCo trains a state-dependent decision about continuing reasoning versus concluding from verified evidence. This is a concrete post-training contribution to allocating computation during hypothesis reasoning and verification, with demonstrated transfer from mathematics to code.",
+      "limits": "Evidence comes from one 7B base model and established answer-verifiable tasks, including small AIME sets. Token savings do not establish proportional latency or total training-cost savings. Data construction requires gold answers, regeneration, and a stronger judge. Only confidence screening is prefix-causal; judge rechecking examines the next step offline. Transfer supports a behavioral explanation but does not prove its mechanism or establish performance on open scientific investigations.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "learning",
+        "rationale": "LoCo trains a state-dependent decision about continuing reasoning versus concluding from verified evidence. This is a concrete post-training contribution to allocating computation during hypothesis reasoning and verification, with demonstrated transfer from mathematics to code.",
+        "pdf_sha256": "48350995b206b5e59b7635ff71937b98038ac7c5da7ee244b1de5bbcffacf82c",
+        "evidence_pages": [
+          1,
+          5,
+          8
+        ]
+      }
+    },
+    "paper-a055728d0cef2896": {
+      "institutions": [
+        "KAIST",
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Learnable queries extract four action tokens per latent video frame from Cosmos-Predict2.5. A separately adapted decoder reconstructs future video from the initial frame and action tokens, with auxiliary action supervision when available. A variational bottleneck compresses tokens for joint latent-code and robot-action policy prediction.",
+      "evidence": "On LARYBench, average normalized regression MSE falls from DiLA's 0.38 to 0.17, while classification accuracy rises from 62.25% to 69.67%. Human-to-robot video transfer outperforms two evaluated baselines. Drawer-closing evaluation reports 96.7% average subgoal success and 1.47-second policy calls versus 50.0% and 28.23 seconds for Mimic-Video.",
+      "discovery_use": "The concrete connection is a reusable action and world representation: motion extracted from observations transfers across human and robot embodiments and conditions future predictions and executable actions. This supports learning transferable interaction structure for embodied discovery, although autonomous exploration and causal identification are not evaluated.",
+      "limits": "Transfer does not establish universal or causally identified action semantics. Real robot action transfer is qualitative and open-loop. Drawer evaluation uses 45 training trajectories and ten trials per configuration; reported success averages reaching and pushing rather than complete-task success. Policy baselines have different pretraining histories. Benchmark probes also compare representations with different temporal inputs.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "causality",
+        "rationale": "The concrete connection is a reusable action and world representation: motion extracted from observations transfers across human and robot embodiments and conditions future predictions and executable actions. This supports learning transferable interaction structure for embodied discovery, although autonomous exploration and causal identification are not evaluated.",
+        "pdf_sha256": "f9b8e34b2f3d965bdbf30134f763073ad1a82714e930734893dc383790c6b332",
+        "evidence_pages": [
+          1,
+          5,
+          8,
+          17
+        ]
+      }
+    },
+    "paper-2468d23826d80398": {
+      "institutions": [
+        "Shanghai Jiao Tong University",
+        "Tongji University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        9,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Two hundred focus tasks from 19 Python repositories produce 400 matched session specifications. Switched sessions interleave four other unfinished tasks, each in a separate checkout. Only the final focus patch is scored against held-out fail-to-pass and pass-to-pass tests. Seven model-agent configurations are evaluated; context-management ablations use two OpenCode models.",
+      "evidence": "Switching reduces resolution by an average 11.5 percentage points, with gaps of 6.0–15.0 points. Far-directory interruptions show larger gaps, though locality is observational. Routing plus task-state memory raises switched resolution from 31.5% to 47.0% for DeepSeek and from 43.0% to 48.5% for GLM.",
+      "discovery_use": "The benchmark isolates agents' ability to recover unfinished investigations and verify completed work after intervening tasks. Its matched sessions, executable verification, and task-memory intervention provide concrete evaluation and harness methods relevant to persistent discovery agents, although the tasks are software repairs rather than scientific research.",
+      "limits": "Tasks are Python repository repairs with fixed interruption schedules and one run per task and condition. Near and far groups contain different focus tasks, preventing causal attribution to locality. Full-session computation includes additional interruption work. RCM is evaluated on only two models in one harness. Runtime retry descriptions are inconsistent between the main setup and appendix.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "The benchmark isolates agents' ability to recover unfinished investigations and verify completed work after intervening tasks. Its matched sessions, executable verification, and task-memory intervention provide concrete evaluation and harness methods relevant to persistent discovery agents, although the tasks are software repairs rather than scientific research.",
+        "pdf_sha256": "1671456fd3dd60a5aa5f38559b51477141736c5fd2b63a1cafd9d9131bb9787c",
+        "evidence_pages": [
+          1,
+          2,
+          9,
+          23
+        ]
+      }
     }
   }
 }

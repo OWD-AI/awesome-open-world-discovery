@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-887-2563eb?style=flat-square" alt="887 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-181-0f766e?style=flat-square" alt="181 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-891-2563eb?style=flat-square" alt="891 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-182-0f766e?style=flat-square" alt="182 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -66,10 +66,10 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-03 | [ForgeKernel: Self-Evolving Kernels Catching and Surpassing Experts and Agents](https://arxiv.org/abs/2611.04998) |
 | 2026-11-03 | [Embodied AI for Scientific Discovery: From Physical Action to Scientific Evidence](https://arxiv.org/abs/2611.04371) |
 | 2026-11-03 | [Artifact-to-Capability: Diagnosing Breaks in Capability Formation of Self-Evolving Agents in a Controlled Environment](https://arxiv.org/abs/2611.04952) |
+| 2026-11-02 | [You don't need long context](https://arxiv.org/abs/2611.05306) |
 | 2026-11-02 | [What makes a theorem interesting? Operationalizing interestingness for open-ended exploration](https://arxiv.org/abs/2611.02905) |
+| 2026-11-02 | [VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks](https://arxiv.org/abs/2611.04418) |
 | 2026-11-02 | [Validation-Gated ML Pipeline Synthesis with Expert-Grounded Self-Evolving Skills](https://arxiv.org/abs/2611.04180) |
-| 2026-11-02 | [Toward Knowledge-Centric AI: Discovering, Internalizing, and Using Explicit Knowledge Across Agents and Generations](https://arxiv.org/abs/2611.03157) |
-| 2026-11-02 | [ToolSpace: Scaling Tool-Centric Environment Synthesis for Long-Horizon Agents](https://arxiv.org/abs/2611.05036) |
 
 <a id="contents"></a>
 
@@ -78,13 +78,13 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 94 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 95 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 66 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 154 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 156 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 146 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 172 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 173 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -260,6 +260,8 @@ Each work appears once under its primary contribution; see the [classification g
   Pingchuan Ma, Rui Ding, Bojun Huang, Shuai Wang · Zhejiang University of Technology; Microsoft Research Asia; Sony Research; +1 institutions
 - <a id="paper-cfc2e6a5c2589e80"></a>**Discrete Score Matching Enables Causal Discovery from Count Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.39326)* · [Paper](https://arxiv.org/abs/2609.39326)<br>
   Euijong Song, Hyewon Park, Gunwoong Park · Seoul National University
+- <a id="paper-a055728d0cef2896"></a>**DreamX: Video Diffusion Model is a Universal Latent Action Learner** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.05377)* · [Paper](https://arxiv.org/abs/2611.05377) · [Project](https://cvlab-kaist.github.io/DreamX)<br>
+  Jisoo Kim et al. · KAIST; NVIDIA
 - <a id="paper-65b6e8c3b7795317"></a>**Forecast-Necessary Causal Discovery for Nonlinear Political Panel Data: Feedback, Functional Form, and the Dynamics of Democratization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.34115)* · [Paper](https://arxiv.org/abs/2609.34115)<br>
   Michael Coppedge, Dmitry Zaytsev, Valentina Kuskova · Department of Political Science, University of Notre Dame; Kellogg Institute, University of Notre Dame; Lucy Family Institute for Data & Society, University of Notre Dame
 - <a id="paper-b24b420dd674a955"></a>**Functional Causal Discovery via Conditional Covariance Ordering** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.27256)* · [Paper](https://arxiv.org/abs/2609.27256)<br>
@@ -835,6 +837,8 @@ Each work appears once under its primary contribution; see the [classification g
   Wei Yang et al. · University of Southern California; The George Washington University; Georgia Institute of Technology
 - <a id="paper-0190aa0cb6ed0467"></a>**The Lexical Imprint of Pre-training Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2602.10657)* · [Paper](https://arxiv.org/abs/2602.10657) · [Code](https://github.com/penpaperkeycode/lexical-imprint)<br>
   Jeonghoon Kim et al. · NAVER Cloud; KAIST
+- <a id="paper-5ae91bff08b3cb5c"></a>**Think Less, Locally: Local Preference Learning for Reasoning Compression** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.04814)* · [Paper](https://arxiv.org/abs/2611.04814) · [Code](https://github.com/MuyaoYuan/LoCo) · [HF Model](https://huggingface.co/MuyaoYuan/LoCo-7B)<br>
+  Muyao Yuan et al. · MOEKLINNS, School of Computer Science and Technology, Xi’an Jiaotong University; WeChat AI, Tencent Inc.
 - <a id="paper-0f837235d680cb4e"></a>**Think Twice: The Metis-1.6 Technical Report** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37903)* · [Paper](https://arxiv.org/abs/2610.37903) · [HF Model](https://huggingface.co/Lernex/Metis-1.6-Logos) · [HF Model](https://huggingface.co/Lernex/Metis-1.6-Praxis) · [HF Model](https://huggingface.co/Lernex/Metis-1.6-Logos-Base) · [HF Model](https://huggingface.co/Lernex/Metis-1.6-Praxis-Base)<br>
   Giulianno Vollmer · Lernex Research
 - <a id="paper-f11c120345a76678"></a>**ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37666)* · [Paper](https://arxiv.org/abs/2610.37666) · [Project](https://thinkworld-project.github.io/)<br>
@@ -859,6 +863,8 @@ Each work appears once under its primary contribution; see the [classification g
   Youngwan Lee, Yong-Ju Lee, Sung Ju Hwang · Electronics and Telecommunications Research Institute (ETRI); Korea Advanced Institute of Science and Technology (KAIST); DeepAuto.ai
 - <a id="paper-f25291638fa3e4c7"></a>**VideoResearchAgent: Grounded Task Synthesis and Sim-to-Real RL for Open-Web Video Research** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04911)* · [Paper](https://arxiv.org/abs/2610.04911) · [Code](https://github.com/Ralph-Zhou/VideoResearchAgent) · [Dataset](https://huggingface.co/datasets/VideoResearchAgent/VideoResearchAgent-Data) · [HF Model](https://huggingface.co/VideoResearchAgent/VideoResearchAgent-4B-SFT) · [HF Model](https://huggingface.co/VideoResearchAgent/VideoResearchAgent-4B-RL)<br>
   Yuhang Zhou et al. · Institute of Trustworthy Embodied AI, Fudan University; Shanghai Key Laboratory of Multimodal Embodied AI; Singapore Management University
+- <a id="paper-f1df04219b766bf8"></a>**VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.04418)* · [Paper](https://arxiv.org/abs/2611.04418) · [Code](https://github.com/LRuca/VidUEU-Agent) · [Dataset](https://huggingface.co/datasets/Lruca/VidUEU100k)<br>
+  Tengju Ru et al. · Zhejiang University; The University of Hong Kong; Institute of Automation, Chinese Academy of Sciences; +1 institutions
 - <a id="paper-c597ebcff760d449"></a>**Vision-Language-Action or World-Action? Just Action Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37219)* · [Paper](https://arxiv.org/abs/2610.37219) · [Project](https://y0uroy.github.io/JAM)<br>
   Yonghao Yu, Lang Huang, Runyi Li, Toshihiko Yamasaki · The University of Tokyo; National Institute of Informatics
 - <a id="paper-c0230f668ccc1d3b"></a>**Weaken to Strengthen: Weakening-Induced On-Policy Self-Distillation for Large Reasoning Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.38681)* · [Paper](https://arxiv.org/abs/2610.38681) · [Code](https://github.com/jet-ai-projects/WISD) · [Project](https://jet-ai-projects.github.io/WISD/)<br>
@@ -2005,6 +2011,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Zhaoxi Zhang et al. · Peking University; Tianjin University
 - <a id="paper-5bd5dfea78d8efef"></a>**ST-Bench: A Spatial-Temporal Benchmark for Multi-Agent System Generation on Scientific Research Tasks** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.07763)* · [Paper](https://arxiv.org/abs/2610.07763)<br>
   Qi Cheng et al. · Rutgers University; University of Pittsburgh; University of Minnesota; +3 institutions
+- <a id="paper-2468d23826d80398"></a>**Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02017)* · [Paper](https://arxiv.org/abs/2611.02017) · [Code](https://github.com/Miraclecsc/Switch-SWE)<br>
+  Shuochen Chang et al. · Shanghai Jiao Tong University; Tongji University
 - <a id="paper-aa18c0346e5ad3a3"></a>**TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30043)* · [Paper](https://arxiv.org/abs/2610.30043) · [Code](https://github.com/xuyicheng-zju/TARSphere) · [Project](https://xuyicheng-zju.github.io/TARSphere/)<br>
   Yicheng Xu et al. · Zhejiang University; Fudan University
 - <a id="paper-260089287fc2643d"></a>**TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06824)* · [Paper](https://arxiv.org/abs/2610.06824) · [Project](https://pzeroresearch.com/work/tasteval/)<br>

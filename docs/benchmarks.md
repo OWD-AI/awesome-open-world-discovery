@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**181 usage profiles** · Updated **2026-11-04**
+**182 usage profiles** · Updated **2026-11-04**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1271,6 +1271,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [The Web Doesn't Sit Still: Adversarial Self-Evolving Attacks on Search Agents](#paper-6b4bbb84163c0369) | Real data | Analysis + tools | Paper-described |
 | [Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks](#paper-d70edca9eafeab6e) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG](#paper-abe51073a6833dd1) | Real data | Data analysis | Paper-described |
+| [Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?](#paper-2468d23826d80398) | Executed programs + evaluators | Analysis + code | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3086,6 +3087,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | No model training or RL reward is established for this study. Evaluation compares predictions with expert conflict labels using accuracy, macro-F1, per-class F1 and calibration error. End-to-end LLM judges assess expected behavior and gold-answer inclusion, with a 100-answer human validation sample. The development split selects settings; cascade thresholds use label-free confidence quantiles. |
 | Reset | Identical requests are rerun and controlled variants reuse the same recorded queries. An interactive environment reset mechanism is not established; evaluation consists of independent fixed-input requests. |
 | Branching | The study compares alternative formulations, confidence-routing choices and controlled input perturbations. Stateful checkpoint branching or agent-accessible environment forks are not established. |
+
+</details>
+
+<a id="paper-2468d23826d80398"></a>
+
+<details>
+<summary>Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks? — details</summary>
+
+[Work](../README.md#paper-2468d23826d80398) · [Source](https://arxiv.org/pdf/2611.02017)
+
+**Focus:** Resuming unfinished repository repairs after intervening tasks. Recorded issue, pull-request, and review histories supply requirements; agents execute computation in persistent checkouts. Evaluation runs held-out tests on the final focus patch. This is software repair, with no scientific simulator or new physical measurements.
+
+**Openness:** `Agents can inspect repositories, edit code, execute tools, and use their own tests during development.`, `Requests arrive one at a time under fixed schedules; future requests, reference implementations, held-out scoring tests, private labels, and verifier feedback are withheld.`, `Page 1 states code availability; page 10 plans public release of benchmark data and code. A release license is not established.`
+
+**New physical measurements:** No
+
+**Limits:** The benchmark contains 200 focus tasks from 19 Python repositories and 400 matched sessions, with one run per task and condition. Schedules are fixed. Near and far groups contain different focus tasks, so locality comparisons are observational. Full switched-session computation includes interruption work. Main-text and appendix timeout/retry descriptions are inconsistent.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Training and a training reward are not established. The evaluator assigns binary resolution only when the final focus artifact applies and every designated fail-to-pass and pass-to-pass test is collected, executed, and passes. Missing submissions, required-test failures, and timeouts are unresolved. Private verifier feedback is withheld from agents; interruption implementations do not affect the primary score. |
+| Reset | Uninterrupted and switched runs start independently with clean files, conversation state, and agent memory. Within a run, five task checkouts persist across switches without file resets, and one continuous conversation is retained. Agent-controlled resets are not established. Clean final verification reconstructs the pinned focus base revision. |
+| Branching | Agent-controlled checkpoint restoration, rollback, or branching from intermediate states is not established. Matched conditions are independent runs from clean initial states. Confirmed verifier infrastructure faults may cause re-execution of the same frozen artifact rather than a new agent rollout. |
 
 </details>
 
