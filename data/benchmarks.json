@@ -4104,6 +4104,29 @@
       "name": "Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.02017"
+    },
+    {
+      "feedback": "real-experiment-records",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Code and setup/evaluation instructions are provided.",
+        "Benchmark data and fixed data splits are provided.",
+        "Redistributed data retain their original terms."
+      ],
+      "focus": "Offline genomic prediction and DNA candidate selection using existing experimental measurements and reference sequences. Models predict held-out outcomes or rank candidates within previously assayed libraries. Candidate measurements are withheld during selection and revealed for scoring. Testing budgets evaluate prefixes of model rankings; multi-cell tasks select ten candidates per expression pattern.",
+      "limits": "Feedback comes from recorded biological measurements, not a simulator or new physical measurements. Computation fits predictors and scores selections; the benchmark does not establish an environment for executing research experiments. Adaptive measurement queries, unrestricted sequence generation, and a live laboratory interface are not established. Held-out sequences may have appeared in foundation-model pretraining. Experimental references are not performance ceilings.",
+      "training": {
+        "reward": "No reinforcement-learning reward interface is established. Frozen-embedding readouts use supervised ridge regression with squared prediction error and an L2 penalty (page 14). Evaluators include base log loss, biological-group-averaged Spearman correlations, tissue identification accuracy, candidate rank percentile, success within testing budgets, and measured selection utilities (pages 3, 15, 24, 26–27). Fine-tuning for interaction prediction is reported, but its exact training loss is not established.",
+        "reset": "Environment reset support is not established. Fixed data splits, seeds, cross-validation, and repeated scoring are described.",
+        "branching": "Environment state branching or checkpoint restoration is not established. Comparisons of alternative rankings, selection penalties, and repeat-measurement directions use fixed recorded data."
+      },
+      "evaluation_family": "other",
+      "id": "paper-331c88a499e2d06f",
+      "resource_id": "paper-331c88a499e2d06f",
+      "name": "BEND 2.0: Benchmarking the Capabilities Needed to Design DNA",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.03806"
     }
   ]
 }

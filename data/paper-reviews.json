@@ -29256,6 +29256,37 @@
           8
         ]
       }
+    },
+    "paper-331c88a499e2d06f": {
+      "institutions": [
+        "University of Copenhagen",
+        "Technical University of Denmark",
+        "Novo Nordisk A/S"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Compares native model outputs and ridge readouts fitted to frozen embeddings against simple baselines, specialist models, random networks, and experimental references. Evaluation holds out biological groups and tests transfer between assays. Design tasks select candidates from experimentally measured libraries while withholding candidate measurements during selection. Correlations are averaged within biological groups, and uncertainty generally uses group bootstrapping.",
+      "evidence": "Functional post-training improves transfer and design performance. AlphaGenome's fitted splicing readout reaches correlation 0.650, versus 0.621 for native outputs and 0.674 for specialist SpliceAI. Its ten selected edits match target responses for 62% of targets, versus 38% under uniform selection. Strong double-mutation predictions conceal weak interaction recovery. Multi-cell selection improves over controls, but even AlphaGenome's embedding readout retains negative mean utility.",
+      "discovery_use": "Directly evaluates capabilities needed for scientific experiment selection: predicting interventions, separating context and interaction effects, and choosing DNA candidates under limited testing budgets.",
+      "limits": "Design evaluation uses existing assayed libraries rather than prospective experiments or unrestricted sequence generation. Held-out evaluation sequences may have appeared in foundation-model pretraining. Experimental noise, embedding dimensions, and unequal context lengths complicate comparisons. Experimental references are not ceilings. Results do not establish generalization to unseen biological settings. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates capabilities needed for scientific experiment selection: predicting interventions, separating context and interaction effects, and choosing DNA candidates under limited testing budgets.",
+        "pdf_sha256": "4ab73d169cb52adaf5c1df68ddad89263de311583317eae7d6480703c2efc9a7",
+        "evidence_pages": [
+          1,
+          3,
+          7
+        ]
+      }
     }
   }
 }

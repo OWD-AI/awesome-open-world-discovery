@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-892-2563eb?style=flat-square" alt="892 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-182-0f766e?style=flat-square" alt="182 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-893-2563eb?style=flat-square" alt="893 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-183-0f766e?style=flat-square" alt="183 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 146 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 173 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 174 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1789,6 +1789,8 @@ For environment types, physical experiment access, and training interfaces, see 
   Zixuan Yu, Zhenheng Tang, Xiaowen Chu, Bo Han · School of Computer science and engi-
 neering, Sun Yat-sen University; CSE, The Hong Kong University of Science and Technology; DSA Thrust, The Hong Kong Uni-
 versity of Science and Technology (GuangZhou); +1 institutions
+- <a id="paper-331c88a499e2d06f"></a>**BEND 2.0: Benchmarking the Capabilities Needed to Design DNA** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03806)* · [Paper](https://arxiv.org/abs/2611.03806) · [Project](https://machinelearninglifescience.github.io/BEND2/) · [Code](https://github.com/MachineLearningLifeScience/BEND2) · [Dataset](https://huggingface.co/datasets/yhsure/BEND2)<br>
+  Andreas Bjerregaard et al. · University of Copenhagen; Technical University of Denmark; Novo Nordisk A/S
 - <a id="paper-3abe80f754180570"></a>**Beyond Better Ideas: How Human-AI Collaboration Shapes Scientific Ideas and Human Perceptions** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30568)* · [Paper](https://arxiv.org/abs/2610.30568)<br>
   Qian Chen et al. · The Pennsylvania State University; Harvard University; Arizona State University; +1 institutions
 - <a id="paper-ec27d50c3bb0542a"></a>**Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2606.31002)* · [Paper](https://arxiv.org/abs/2606.31002) · [Code](https://github.com/grenadeComing/beyond-compilation)<br>

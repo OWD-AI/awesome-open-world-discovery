@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**182 usage profiles** · Updated **2026-11-04**
+**183 usage profiles** · Updated **2026-11-04**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -4124,6 +4124,7 @@ Queries or analyses use measurements already collected. This does not create new
 | [Sci$Π$vot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](#paper-f73eeee30c4bf920) | Recorded experiments | Data analysis | Paper-described |
 | [SciCurateBench: Curating Experimental Data from Heterogeneous Scientific Literature with Verbal-Action Agents](#paper-cb2c3c5e8ea5e05f) | Recorded experiments | Analysis + code | Paper-described |
 | [RoboJev: An Open Vision-Language Judge for Robot Success Detection](#paper-6e4784f1eabea972) | Recorded experiments | Offline data | Paper-described |
+| [BEND 2.0: Benchmarking the Capabilities Needed to Design DNA](#paper-331c88a499e2d06f) | Recorded experiments | Offline data | Paper-described |
 
 <a id="genedisco"></a>
 
@@ -4260,6 +4261,29 @@ Queries or analyses use measurements already collected. This does not create new
 | Reward / evaluator | Judge training uses source-balanced binary cross-entropy with binary or soft success targets and a source-specific KL anchor to the base model. Evaluation reports AUROC, balanced accuracy, accuracy and calibration metrics against episode labels. A released LeRobot integration supplies a thresholded terminal reward, but its effect on policy learning was not measured. |
 | Reset | Interactive environment reset support is not established. Evaluation scores fixed recorded episodes. |
 | Branching | Environment-state branching support is not established. Prefix scoring and alternative input protocols reuse recorded video evidence. |
+
+</details>
+
+<a id="paper-331c88a499e2d06f"></a>
+
+<details>
+<summary>BEND 2.0: Benchmarking the Capabilities Needed to Design DNA — details</summary>
+
+[Work](../README.md#paper-331c88a499e2d06f) · [Source](https://arxiv.org/pdf/2611.03806)
+
+**Focus:** Offline genomic prediction and DNA candidate selection using existing experimental measurements and reference sequences. Models predict held-out outcomes or rank candidates within previously assayed libraries. Candidate measurements are withheld during selection and revealed for scoring. Testing budgets evaluate prefixes of model rankings; multi-cell tasks select ten candidates per expression pattern.
+
+**Openness:** `Code and setup/evaluation instructions are provided.`, `Benchmark data and fixed data splits are provided.`, `Redistributed data retain their original terms.`
+
+**New physical measurements:** No
+
+**Limits:** Feedback comes from recorded biological measurements, not a simulator or new physical measurements. Computation fits predictors and scores selections; the benchmark does not establish an environment for executing research experiments. Adaptive measurement queries, unrestricted sequence generation, and a live laboratory interface are not established. Held-out sequences may have appeared in foundation-model pretraining. Experimental references are not performance ceilings.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No reinforcement-learning reward interface is established. Frozen-embedding readouts use supervised ridge regression with squared prediction error and an L2 penalty (page 14). Evaluators include base log loss, biological-group-averaged Spearman correlations, tissue identification accuracy, candidate rank percentile, success within testing budgets, and measured selection utilities (pages 3, 15, 24, 26–27). Fine-tuning for interaction prediction is reported, but its exact training loss is not established. |
+| Reset | Environment reset support is not established. Fixed data splits, seeds, cross-validation, and repeated scoring are described. |
+| Branching | Environment state branching or checkpoint restoration is not established. Comparisons of alternative rankings, selection penalties, and repeat-measurement directions use fixed recorded data. |
 
 </details>
 
