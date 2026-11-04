@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -28271,6 +28271,269 @@
           7,
           10,
           12
+        ]
+      }
+    },
+    "paper-8d5220989949f5cf": {
+      "institutions": [
+        "PrimeBot Research",
+        "Southeast University",
+        "Shanghai Jiao Tong University",
+        "The Chinese University of Hong Kong",
+        "University of Chinese Academy of Sciences",
+        "Beihang University",
+        "Peking University",
+        "Shanghai Innovation Institute"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        9,
+        27
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Midtraining uses 30,110 demonstration hours, unified relative actions, frame-aligned action conditioning, and interleaved camera attention. Posttraining combines causal adaptation, four-step distillation, self-rollout distribution matching, and bounded hierarchical memory.",
+      "evidence": "Reported results lead four of five WorldSimProbe suites, with mean 66.6, and achieve 6.09 on EWMBench. Held-out platforms adapt within 100–200 steps. The paper reports policy optimization using simulated interactions and approximately 10.1 temporal FPS.",
+      "discovery_use": "The primary contribution is an action-conditioned world model that supports simulated interaction and policy improvement, directly connecting learned world representations to discovering effective behavior.",
+      "limits": "This was a targeted review of supplied sections and two rendered pages. Closed-loop validation is simulation-only; physical robot policy improvement remains unestablished. EWMBench is in-domain, quality scores use 50 sampling steps, and speed uses four steps with different image geometry. Timing comparisons do not match resolution or sampling budgets. Local action calibration trails LingBot-VA.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "causality",
+        "rationale": "The primary contribution is an action-conditioned world model that supports simulated interaction and policy improvement, directly connecting learned world representations to discovering effective behavior.",
+        "pdf_sha256": "8ea47089ae5304fdfc50691e4e711a2231229e1ded75878673f4f419ae106a5d",
+        "evidence_pages": [
+          1,
+          9,
+          27
+        ]
+      }
+    },
+    "paper-41ccf6a94b967d3e": {
+      "institutions": [
+        "University of California, Berkeley",
+        "Princeton University",
+        "Stanford University",
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Rounds combine cost-model guidance, parallel exploration, integration, kernel tuning, paired timing, and sealed evaluation on unseen requests. Token forcing tests output divergence against stock behavior. Memory stores replayable changes, dependencies, evidence, and applicability limits.",
+      "evidence": "Reported discoveries include lossless W12 weight storage, hybrid-target tree verification, two-level verification, and batching mechanisms. Single-request speedup over autoregressive decoding rises from 4.46 to 10.87 times in one setting; batched speedup rises from 1.94 to 3.93 times. A single-agent baseline without cost guidance reaches 1.34 times stock versus 2.13 times for SpecPilot.",
+      "discovery_use": "The primary contribution is an autonomous algorithm-discovery harness that proposes, measures, verifies, integrates, and retains optimizations across deployments.",
+      "limits": "Evaluation covers greedy decoding on four targets, three drafters, and two GPU platforms. Token forcing is a statistical implementation check permitting stock-calibrated rounding differences, not a universal equivalence proof. Some mechanisms regress under batching. Thirteen rounds consume approximately 530 GPU-hours. The single-agent comparison changes both coordination and cost guidance, limiting causal attribution.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "systems",
+        "rationale": "The primary contribution is an autonomous algorithm-discovery harness that proposes, measures, verifies, integrates, and retains optimizations across deployments.",
+        "pdf_sha256": "b495e50a886acaa7ead1ef29712a76dc2e5213b3999a3d0d5987c063ca06677f",
+        "evidence_pages": [
+          1,
+          6,
+          7
+        ]
+      }
+    },
+    "paper-023b8a9373f8f352": {
+      "institutions": [
+        "National University of Singapore",
+        "University of Washington",
+        "Stanford University",
+        "University of North Carolina at Chapel Hill",
+        "Allen Institute for AI",
+        "University of Oxford",
+        "Hugging Face",
+        "BitRobot",
+        "Singapore Embodied AI Centre"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The Open Track uses blinded, locally matched comparisons and a difficulty-calibrated Rasch ranking model. The Fine-tune Track supplies 100 demonstrations per task across 20 tasks and four embodiments, with 25 evaluation slots per policy-task pair. Success, partial progress, site-split reliability, and active matchmaking are evaluated.",
+      "evidence": "The study reports 5,699 Open Track comparisons across 124 sites. Frontier agents are competitive with specialized policies, while completion remains unreliable. Fine-tuned rankings vary across embodiment-specific suites, with Kendall’s W of 0.24. All G1 tasks have zero full success despite measurable partial progress. Active matchmaking reaches approximately 90% full-data ranking agreement after 400–500 comparisons versus roughly 1,000 with uniform sampling.",
+      "discovery_use": "The benchmark directly measures embodied agents’ open-world generalization, acquisition of unfamiliar skills, failure modes, and evaluation reliability across varied physical settings.",
+      "limits": "Coverage and compatibility differ across systems. Embodiments also differ in tasks and environments, preventing morphology-only conclusions. Training recipes and starting checkpoints differ between comparisons. Ranking stability uses the collected leaderboard as its reference. SO-101 site-split agreement is only 59%. The blanket 13% category-success statement conflicts with several sparse agent cells in Figure 5. Safety-stopped unexecuted slots receive zero scores.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "The benchmark directly measures embodied agents’ open-world generalization, acquisition of unfamiliar skills, failure modes, and evaluation reliability across varied physical settings.",
+        "pdf_sha256": "6a1d567b54e5171b0bf2a3e8342cd813c0cc1e1843c37059c3483886aadb265c",
+        "evidence_pages": [
+          1,
+          6,
+          16
+        ]
+      }
+    },
+    "paper-6aafaaa81a462f1f": {
+      "institutions": [
+        "Alibaba Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A persistent Python REPL and searchable event log support long investigations. Corpus bootstrapping produces navigation skills and source-grounded practice. Learners diagnose solver traces, revise repository components, validate fixes against failures and regression samples, and merge child learners’ revisions. Evaluation uses 150 training and 100 held-out legal research tasks with two solver-learner models.",
+      "evidence": "Reported held-out all-pass rates rise from 30% to 55% with DeepSeek and from 35% to 46% with Qwen. Multiple learners outperform the single-learner baseline. Bootstrapping mainly reduces search costs: mean turns fall from 69.4 to 55.0 and input tokens from 6.45 million to 4.81 million. Later learning rounds can regress.",
+      "discovery_use": "Recursa directly studies agents acquiring unfamiliar knowledge, verifying evidence, retaining procedural lessons, and recursively improving their own learning process.",
+      "limits": "Only the repository changes; model weights and harness remain fixed. Evidence comes from one synthetic legal workspace. A stronger Qwen model grades outcomes, although it does not write revisions. Authors revise 46 rubric criteria, including criteria in 13 test tasks; original-rubric results are also supplied. Compute-matched comparisons, uncertainty estimates, and broader-domain validation are absent. No first-party Recursa release was verified.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "open_ended",
+        "rationale": "Recursa directly studies agents acquiring unfamiliar knowledge, verifying evidence, retaining procedural lessons, and recursively improving their own learning process.",
+        "pdf_sha256": "11f4c661f6f3a50835782f341ebb900e78bd9ca1ced4ae2e012caf38bf08f6c9",
+        "evidence_pages": [
+          1,
+          3,
+          6
+        ]
+      }
+    },
+    "paper-7b8d4e7e0eaf2f48": {
+      "institutions": [
+        "University College London",
+        "Pohang University of Science and Technology",
+        "Southern University of Science and Technology",
+        "Southeast University",
+        "Microsoft",
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        35
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Instantiates staged optimization on AutoSaddler. Parent and candidate harnesses receive repeated executions; a Bayesian bootstrap jointly reweights quality and cost observations. Candidates with sufficient support for improvement in either objective receive development evaluation and remain available for subsequent refinement. Evaluation uses domain-disjoint ClawMark and GAIA2 splits, baseline comparisons, and promotion-rule ablations.",
+      "evidence": "The quality-selected harness raises held-out ClawMark quality from 70.86% to 81.35% while reducing token cost from $1.17 to $1.01 per task. GAIA2 improves from 56.22% to 62.89%, with cost falling from $0.78 to $0.45. Controlled gate and screening ablations support retaining intermediate trade-offs and accounting for execution variability.",
+      "discovery_use": "Directly advances agent harness self-improvement through execution evidence, statistical screening, and preservation of intermediate candidates that enable later gains.",
+      "limits": "Bootstrap support captures execution variability on fixed screening tasks, not task-sampling uncertainty. Three executions can miss rare outcomes. The repeated-execution ablation uses additional compute, and baseline search schedules differ. ClawMark evaluation covers initial-stage tasks with only 22 test tasks. Optimization overhead exceeds some baselines, and discovery or scientific performance is not directly evaluated. The announced project destination was inaccessible, so no release link is retained.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "systems",
+        "rationale": "Directly advances agent harness self-improvement through execution evidence, statistical screening, and preservation of intermediate candidates that enable later gains.",
+        "pdf_sha256": "79455423843cbb873e5b987424e8352e22dea261ead7bd2405cf6110c1956c9c",
+        "evidence_pages": [
+          1,
+          6,
+          35
+        ]
+      }
+    },
+    "paper-04adaae23f632875": {
+      "institutions": [
+        "MBZUAI",
+        "Virginia Tech",
+        "University of Maryland",
+        "University of Notre Dame"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Collects 6,959 accepted-paper trajectories across five conferences, producing 9,092 version pairs separated by more than 30 days. GPT-6 Astra annotates 14 revision dimensions and overall quality; humans validate a sample. Eight reviewers independently score anonymized versions. Analyses use paper-clustered uncertainty, revision-feature regressions, grouped cross-validation, and controlled opinion prompts.",
+      "evidence": "Among 1,484 evaluated major-improvement pairs, reviewers leave 55–78% of scores unchanged. Directional agreement is weak, and revision indicators predict score increases only modestly, with AUCs of 0.51–0.64. Unsupported criticism frequently erases neutral score advantages, with substantial differences between reviewers. The verified repository releases code, revision records, and review results.",
+      "discovery_use": "Evaluates whether AI scientific assessors respond to substantive research improvements and remain stable under unsupported user opinions. This directly informs evaluation and feedback mechanisms for autonomous research.",
+      "limits": "The collection selects accepted AI papers with qualifying public arXiv revisions. Quality labels are primarily automated; human confirmation often establishes some improvement rather than confirming its major magnitude. Unchanged scores can coexist with explicit recognition of improvements. Revision associations are observational, and opinion analyses condition on reviewer-specific positive-gain subsets. Supplied pages support a targeted review, not exhaustive inspection of all 43 pages.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "Evaluates whether AI scientific assessors respond to substantive research improvements and remain stable under unsupported user opinions. This directly informs evaluation and feedback mechanisms for autonomous research.",
+        "pdf_sha256": "aeb2233cce76c0be9b614f77914932b0832506732f4ba86562441991d35e6d79",
+        "evidence_pages": [
+          1,
+          6,
+          7
+        ]
+      }
+    },
+    "paper-fc9f7fe1ec631cff": {
+      "institutions": [
+        "Alibaba Token Hub, Alibaba Group",
+        "MMLab, The Chinese University of Hong Kong"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs checkpoints from verified expert successes and selects pivots using disagreement among eight sampled GUI actions. One-step GRPO warm-up uses expert-action matching rewards. Subsequent training assigns Local, Suffix, or Root rollouts according to success estimates and progressively moves suffix starts earlier. Evaluation compares pivot selectors, vanilla GRPO, hybrid training, and SFT on MobileGym and CUA-Gym-Hub, with root-only held-out testing.",
+      "evidence": "At training-selected checkpoints, the full method reaches held-out Avg@4 of 50.20% on MobileGym and 57.92% on CUA-Gym-Hub, versus 47.66% and 45.83% for vanilla GRPO. Action disagreement improves the accuracy–sampling trade-off over reward variance, although training all pivots slightly exceeds its MobileGym local-training result. Body comparisons support substantial interaction savings, with percentages dependent on the chosen performance target.",
+      "discovery_use": "Contributes uncertainty-guided allocation of agent learning and progressively longer execution horizons. Recoverable intermediate states and adaptive practice provide a concrete mechanism for learning agent capabilities efficiently.",
+      "limits": "Evidence covers one 4B policy and two small task splits, without reported multi-seed training intervals. MobileGym uses a custom split of the official test pool. Action matching ignores text-entry content. Restoration checks do not prove complete state equivalence. Section 4.1 sets the suffix threshold to 0.75, while Appendix A.3 states 0.5. Interaction-step savings do not establish total pipeline cost savings. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "learning",
+        "rationale": "Contributes uncertainty-guided allocation of agent learning and progressively longer execution horizons. Recoverable intermediate states and adaptive practice provide a concrete mechanism for learning agent capabilities efficiently.",
+        "pdf_sha256": "b2a8de849515989303bdf3f57c1d2e669209f44e7dab3058caee2a7f4be7afe1",
+        "evidence_pages": [
+          1,
+          5,
+          11
+        ]
+      }
+    },
+    "paper-31e0a438f7bd5d3c": {
+      "institutions": [
+        "HKUST (GZ)",
+        "The Chinese University of Hong Kong",
+        "Knowin AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The 1,000-case arena combines 32 existing sources with 168 new GeoProbe cases. A persistent harness retains source observations, operations, feedback, and native scoring. Fixed probes generally receive repeated runs, while planning, manipulation, tracing, and polygon predictions use single assignments. Analyses examine task composition, intermediate conditions, model complementarity, review, execution repair, and resource budgets.",
+      "evidence": "Astra completes 80.3% of planning assignments; Opus 5.5 leads assignment-weighted manipulation at 47.8%. Equal source weighting reverses the manipulation ordering between Opus and Gemini 4. Fifteen planning tasks defeat every model, including two ScienceWorld experiments. Scientific task traces connect successful recovery to acquiring tools and artifact-age evidence. Across CALVIN, 62 of 65 error-containing episodes subsequently execute valid code, but only three subsequently finish the task.",
+      "discovery_use": "The arena concretely evaluates scientific procedures through DiscoveryWorld and ScienceWorld, alongside broader embodied capabilities. Its independent verification of goal conditions and trace analysis of evidence acquisition and recovery support discovery evaluation, although most tasks concern general embodied competence.",
+      "limits": "This is a targeted review of supplied pages 1–16 and 24, not all 73 pages or appendices. Scientific discovery is a subset of the arena, so aggregate robotics scores cannot establish research-agent capability. Source interfaces provide differing assistance, manipulation schedules and ceilings vary, and interactive assignments lack repeated trials. Rankings depend on source weighting. Selected traces diagnose examples without estimating failure prevalence or isolating feedback effects.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "The arena concretely evaluates scientific procedures through DiscoveryWorld and ScienceWorld, alongside broader embodied capabilities. Its independent verification of goal conditions and trace analysis of evidence acquisition and recovery support discovery evaluation, although most tasks concern general embodied competence.",
+        "pdf_sha256": "00d772bc6a1a2320327bfb84d6df4aea466cde3d1ea0a226fe8c9702a7ee5675",
+        "evidence_pages": [
+          1,
+          5,
+          6,
+          13
         ]
       }
     }

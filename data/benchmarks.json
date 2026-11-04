@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -3830,6 +3830,75 @@
       "name": "Where Causal Discovery Breaks on Real Data: Measuring the Assumptions One Property at a Time",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.00484"
+    },
+    {
+      "feedback": "new-physical-measurements",
+      "interaction": "human-mediated-lab",
+      "new_physical_experiments": true,
+      "openness": [
+        "Open Track evaluators propose tasks using locally available objects and environments; task-specific adaptation is prohibited.",
+        "Within each blinded comparison, robot, instruction, objects, initial setup, and timeout are matched.",
+        "Fine-tune Track fixes demonstrations, task definitions, success and progress criteria, and evaluation procedures while permitting model-specific training recipes.",
+        "Policies interact with physical robots through standardized embodiment-specific observations and actions."
+      ],
+      "focus": "Physical robot generalization and adaptation across four embodiments and distributed real-world sites. Feedback includes measured camera images and proprioception after actions, human-assessed success and progress, pairwise preferences, and difficulty ratings. These are newly executed physical trials, not simulation or replay of recorded datasets.",
+      "limits": "Participation depends on model and hardware compatibility. Fine-tune evaluation covers five tasks per embodiment, with 25 trial slots per policy–task pair. Tasks and environments differ across embodiments. Safety-stopped unexecuted slots receive zero scores. Exact physical state restoration is not established.",
+      "training": {
+        "reward": "Fine-tuning uses the same 100 teleoperated demonstrations per task and each model's official recipe; an RL training reward is not established. Human evaluators score full success and equally weighted normalized progress criteria. Open Track rankings use a Difficulty-Calibrated Rasch model of physical success, with human difficulty ratings informing priors. An agent's done declaration does not count as success.",
+        "reset": "Human operators reset task environments and execute protocols (page 6). Consecutive Open Track comparisons match local initial conditions. Exact snapshot restoration or deterministic reset equivalence is not established.",
+        "branching": "Checkpoint branching, rollback, and executable state cloning are not established. Matched consecutive physical trials require operator-mediated preparation."
+      },
+      "evaluation_family": "other",
+      "id": "paper-023b8a9373f8f352",
+      "resource_id": "paper-023b8a9373f8f352",
+      "name": "RoboColosseum: Evaluating Physical Intelligence at Scale In-The-Wild",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.02497"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Reviewers assess complete anonymized manuscript versions independently, without paired versions, revision histories, or change annotations.",
+        "Controlled neutral, praise, and criticism prompts vary user opinion while preserving manuscript evidence and conference-specific criteria.",
+        "The fixed corpus contains public revision trajectories of accepted papers from five AI conferences."
+      ],
+      "focus": "Assess whether AI reviewer scores respond to substantive manuscript improvements and remain stable under unsupported user opinions. Evidence consists of recorded manuscripts, automated revision annotations with sampled human validation, and newly generated review responses. Reviewers do not execute the papers' research experiments.",
+      "limits": "The corpus selects accepted AI papers with qualifying public arXiv versions more than 30 days apart. Overall-quality labels are primarily automated. Human confirmation can establish some improvement without confirming major improvement. Opinion analyses select reviewer-specific subsets with positive neutral score gains. Unchanged scores do not establish failure to recognize revisions.",
+      "training": {
+        "reward": "Reviewer training and an optimization reward are not established. GPT-6 Astra annotates fourteen revision dimensions and separate overall-quality changes, with sampled human validation. Evaluation compares independent conference-native overall assessments, score-change direction, predictive associations, and stability under opinion prompts.",
+        "reset": "Executable environment reset support is not established. Each manuscript version receives an independent assessment, and fixed manuscripts are reused across prompt conditions.",
+        "branching": "Executable state branching or rollback is not established. Neutral, praise, and criticism conditions are separate assessments of unchanged manuscripts."
+      },
+      "evaluation_family": "other",
+      "id": "paper-04adaae23f632875",
+      "resource_id": "paper-04adaae23f632875",
+      "name": "Can AI Reviewers See Your Efforts to Improve Your Paper? A Large-Scale Study of Paper Revision Trajectories",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.02244"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": null,
+      "openness": [
+        "Release availability and licensing are not established by the supplied pages.",
+        "Private scoring annotations are unavailable to agents."
+      ],
+      "focus": "Mixed embodied evaluation: fixed image/video probes and interactive planning/manipulation environments, including DiscoveryWorld and ScienceWorld scientific procedures. GeoProbe combines controlled Blender scenes with real images. Agents execute programs or native actions and receive source-provided observations, execution feedback, public progress, and task checks.",
+      "limits": "Characterization uses supplied pages 1–16 and 24. A single feedback/interaction label cannot capture every source. Fixed real-image inputs do not establish new physical measurements. New physical execution is not established. Executed Python and robot-control programs are documented, but executed computational research experiments are not established. Source-specific budgets, assistance, and observation schedules differ.",
+      "training": {
+        "reward": "Training rewards and a policy-training procedure are not established. Evaluation independently checks submitted predictions or terminal environment state using source-native metrics and verifiers. Complete planning success requires all goal predicates; partial conditions and consecutive manipulation goals provide diagnostics. Page 24 also identifies one continuous-reward manipulation task.",
+        "reset": "Reset support is not established. Fixed probes have repeated runs, while planning and manipulation use one episode per assignment. These repetitions do not specify an agent-accessible reset mechanism.",
+        "branching": "Branching support is not established. Variables and environment state persist between rounds, but snapshots, rollback, and alternative branches from a saved state are not specified."
+      },
+      "evaluation_family": "other",
+      "id": "paper-31e0a438f7bd5d3c",
+      "resource_id": "paper-31e0a438f7bd5d3c",
+      "name": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.00854"
     }
   ]
 }
