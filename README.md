@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-895-2563eb?style=flat-square" alt="895 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-896-2563eb?style=flat-square" alt="896 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-184-0f766e?style=flat-square" alt="184 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 95 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 66 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 158 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 159 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 146 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
@@ -875,6 +875,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yecheng Wu, Song Han, Han Cai · Massachusetts Institute of Technology; NVIDIA
 - <a id="paper-ce88f69c0203ec29"></a>**WeVisOne-VL: Unified Visual Perception from Objects to Pixels** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31329)* · [Paper](https://arxiv.org/abs/2610.31329) · [Project](https://tencent.github.io/WeVisOne-VL) · [Code](https://github.com/Tencent/WeVisOne-VL)<br>
   Tianming Liang et al. · WeChat Vision, Tencent Inc.
+- <a id="paper-608a9b8719135fd2"></a>**When Fine-Grained Credit Assignment Helps and Hurts: Multimodal Agentic Reinforcement Learning through Video Editing** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35497)* · [Paper](https://arxiv.org/abs/2610.35497) · [Project](https://leizhao7.github.io/videoedit/) · [Code](https://github.com/leizhao7/video-editing-credit-assignment) · [HF Model](https://huggingface.co/leizhao7/VideoEdit-Qwen3.5-9B) · [HF Model](https://huggingface.co/leizhao7/VideoEdit-Qwen3.6-35B-A3B)<br>
+  Lei Zhao, Zongheng Cao, Xinyu Hu · University of Pennsylvania; Philo Labs
 - <a id="paper-8741373104a1068a"></a>**When Requirements Interact: Scaling Long-Horizon Coding via Interdependent Specifications** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40256)* · [Paper](https://arxiv.org/abs/2610.40256)<br>
   Yishuo Cai et al. · LLM Core, Xiaomi; Peking University; University of Hong Kong
 - <a id="paper-29b6bdf1923373d0"></a>**Where Research Ideation Begins: Forward-Citation Supervision for Actionable Limitation Generation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23038)* · [Paper](https://arxiv.org/abs/2610.23038)<br>

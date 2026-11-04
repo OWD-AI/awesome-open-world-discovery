@@ -29350,6 +29350,36 @@
           8
         ]
       }
+    },
+    "paper-608a9b8719135fd2": {
+      "institutions": [
+        "University of Pennsylvania",
+        "Philo Labs"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The authors construct 797 tasks from 49 films, split into 716 training tasks and 81 validation tasks from disjoint films. Qwen3.5-9B receives 50 updates using outcome-only GRPO, fixed or decayed process rewards, or on-policy self-distillation. Process rewards use a separate judge from outcome grading. Final checkpoints are evaluated four times per validation task, with behavioral and training diagnostics.",
+      "evidence": "Decayed process rewards reach 0.447 overall versus 0.413 for outcome-only GRPO. Fine Cut improves from 0.201 to 0.293, a reported 45.4% relative gain using unrounded means; Content Selection and Rough Cut remain slightly below outcome-only GRPO. Fixed process rewards raise truncation to 44.1%, versus 0.3% for outcome-only training; decay reduces it to 6.2%. Self-distillation scores 0.277 with reference answers and collapses to 0.044 with turn-level suggestions.",
+      "discovery_use": "The primary contribution studies credit assignment for training agents that inspect evidence, revise decisions and use tools over long trajectories. Its concrete findings about process-reward exploitation and completion-preserving reward schedules inform post-training for discovery agents, although transfer to scientific discovery remains untested.",
+      "limits": "Task horizon, editing requirements and scoring criteria vary together, so horizon alone is not isolated. Fine Cut relies entirely on model-judged outcomes. Four evaluation repetitions do not establish variation across independent training seeds. The decay window follows observed training behavior, and diagnostic correlations do not establish the causes of self-distillation failure or the benefits of longer reasoning. Discovery-task transfer and alternative credit methods remain untested. This was a targeted body-section review, not an exhaustive appendix review. Verified model cards state that the underlying dataset is not distributed.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "learning",
+        "rationale": "The primary contribution studies credit assignment for training agents that inspect evidence, revise decisions and use tools over long trajectories. Its concrete findings about process-reward exploitation and completion-preserving reward schedules inform post-training for discovery agents, although transfer to scientific discovery remains untested.",
+        "pdf_sha256": "7b64ecbb00b4e04568c3b0659ea23810ba3ea6e39a3d930ebfe93abc372adff1",
+        "evidence_pages": [
+          1,
+          8,
+          11
+        ]
+      }
     }
   }
 }
