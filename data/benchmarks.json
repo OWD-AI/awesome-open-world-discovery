@@ -3899,6 +3899,142 @@
       "name": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.00854"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents autonomously inspect data, modify files, execute code, test modeling hypotheses, and submit multiple candidates within a wall-clock budget.",
+        "Modeling and implementation choices are open; task streams, data splits, artifact contracts, and hidden evaluation are fixed.",
+        "Native sessions and workspaces can retain code, transcripts, results, and execution experience across tasks."
+      ],
+      "focus": "Transfer across executed ML research experiments in nine task families. Synthetic classification and symbolic-regression samples are combined with recorded forecasting and tabular datasets. Feedback comes from computation on these data; no new physical measurements are collected.",
+      "limits": "Streams generally contain three to five tasks with 30-minute budgets. Hidden-test scores are withheld until execution ends. Most comparisons use one matched run pair, native scaffolds differ across agents, and persistent state combines several possible transfer mechanisms. Code release is promised for the camera-ready version; availability is not established by the supplied pages.",
+      "training": {
+        "reward": "Agent model weights are not updated. Search uses visible training/development data, execution feedback, and development scorers. After each run, private evaluators score submissions using task metrics including accuracy, F1, RMSE, R2, and competition-specific ROC-AUC. Reported normalized rewards support first-solution, selected-final, and best-so-far area-under-curve comparisons; hidden rewards and their trajectories are never shown during search.",
+        "reset": "Explicitly supported: stateless runs start every task with a fresh agent session and clean workspace. Stateful runs resume the same session and workspace. Memory ablations start fresh sessions and transfer only matched, shuffled, or absent insight cards.",
+        "branching": "Multiple candidate implementations and experiments are allowed within each task. Arbitrary environment snapshotting or continuation branching from an identical intermediate execution state is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-5c78ef0baf7f1e60",
+      "resource_id": "paper-5c78ef0baf7f1e60",
+      "name": "From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.05108"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents play freestyle Gomoku against three fixed programmatic opponents on a 15 × 15 board.",
+        "Evolution can produce textual memories, executable skills and calling logic, or revised strategy code.",
+        "Frozen-system diagnosis uses paired artifact interventions, complete games, and archived version comparisons."
+      ],
+      "focus": "Tests whether retained artifacts produce, preserve, and extend rule-verifiable tactical capabilities. The environment is a software board game with synthetic rules, rather than a scientific simulator, recorded scientific dataset, or physical experiment.",
+      "limits": "Evidence concerns adaptations of three mechanisms using one base model. Most Reflexion conditions receive one sampled move per state, and the larger diagnostic state set comes from DGM evolution. Repeated evolution runs, other models, and application to open-ended scientific discovery are not established.",
+      "training": {
+        "reward": "Evolution occurs through artifact updates. Reflexion receives win/loss feedback, optionally with the complete move sequence. Voyager revises skills using prior-round evaluation; its exact scalar evolution objective is not established. DGM uses a programmatic score combining opponent-specific win rates weighted 50, 100, and 150, plus 20 times the maximum block rate, average game length against search_2, and twice the summed open-four counts. Diagnostic evaluators separately judge legality, acceptable tactical moves, immediate-win execution, and newly passing or lost states.",
+        "reset": "Any board state can be restored exactly for paired diagnosis. Controls use empty memory, first-round skills, or the initial strategy. Complete-game evaluation uses separate seeded games, with a 200-move limit.",
+        "branching": "Archived DGM candidates can serve as parents; OB-4 is explicitly a side branch from OB-3. Fixed states can be replayed across artifact conditions and versions. A general mid-game snapshot-and-fork interface is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-149bfb536e89b861",
+      "resource_id": "paper-149bfb536e89b861",
+      "name": "Artifact-to-Capability: Diagnosing Breaks in Capability Formation of Self-Evolving Agents in a Controlled Environment",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.04952"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "task-demonstrations",
+      "new_physical_experiments": false,
+      "openness": [
+        "Models answer diagnostic questions and generate or edit images under prescribed multi-turn dialogue histories.",
+        "Main evaluation supplies ground-truth visual histories; a supplementary setting feeds earlier model-generated images into later turns.",
+        "Training dialogues and benchmark cases cover image fusion, editing, rendered world states, and visual reasoning."
+      ],
+      "focus": "Evaluates understanding and visual realization of accumulated dialogue states. Dialogues and images are constructed using models and existing image datasets, with human verification of benchmark cases. Rendered world modeling does not provide physical simulator feedback or new physical measurements.",
+      "limits": "Main comparisons use correct histories rather than autonomous interaction with an external environment. Synthetic construction and model judging can share biases. Generation-only models use a different aggregate composition. Fine-tuning is demonstrated on one architecture, and broader domains and longer interactions remain untested. Resource releases are promised; availability is not established by the supplied pages.",
+      "training": {
+        "reward": "BAGEL receives supervised fine-tuning on YANAMI-400K with joint visual-generation and visual-understanding objectives, using cross-entropy loss weight 0.25 and MSE loss weight 1.0. An RL reward is not established. Benchmark evaluation uses Qwen-3.8-Flash-Next as a VLM judge for semantic correctness of state questions, atomic visual-state checks, and perceptual quality; judge scores are compared with human ratings.",
+        "reset": "Ground-truth histories supply reference visual context for target turns, while Self-History uses prior generated images. An environment reset API or a formal persistent-session reset protocol is not established.",
+        "branching": "The supplied pages establish fixed dialogues and two history conditions. Arbitrary state branching, counterfactual environment continuations, or snapshot-and-fork support is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-a8fa3ebf87f3add7",
+      "resource_id": "paper-a8fa3ebf87f3add7",
+      "name": "YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.05280"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Defenders issue sequential database-search and document-fetch calls over a fixed FineWeb corpus.",
+        "Attackers generate and evolve natural-language document-forgery strategies and inject synthetic documents into retrieval results.",
+        "Defensive adaptation supplies disclosed attack patterns through system prompts."
+      ],
+      "focus": "Controlled retrieval-based QA robustness evaluation using recorded web documents and synthetic adversarial injections. Tool calls execute retrieval computation, but the evaluated task does not involve research experiments or new physical measurements. The sandbox's physical layer is computing infrastructure, not a laboratory backend.",
+      "limits": "The refusal protocol contributes directly to paralysis outcomes. Visible traces and model-judge labels do not establish internal cognitive states. Fitness uses 20 training questions, attackers receive reference answers, and injected embeddings are query-contextualized. Generalization to longer research workflows is not established.",
+      "training": {
+        "reward": "Evolutionary fitness is the fraction of a fixed 20-question training subset labeled direct adoption or cognitive paralysis by an LLM judge. Contrastive successful and failed traces guide strategy mutation; fitness and an LLM homogeneity assessment govern selection. Defender adaptation changes prompt knowledge rather than model weights. Evaluation reports strict answer accuracy, forged-evidence adoption rate, and contradiction-induced refusal rate.",
+        "reset": "The underlying corpus and index remain unchanged; injections are held in memory per query. Fixed retrieval parameters and sorting reproduce the same ordered results for identical queries. A general reset of all defender session state is not established.",
+        "branching": "Initialization performs three independent rollouts per training question, and evolution creates children from parent strategies. General snapshotting or branching from an identical intermediate defender state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6b4bbb84163c0369",
+      "resource_id": "paper-6b4bbb84163c0369",
+      "name": "The Web Doesn't Sit Still: Adversarial Self-Evolving Attacks on Search Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.03754"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "The replication package is promised for public deposit and available from the author on request in the meantime (page 20).",
+        "The described package contains code, configurations, transcripts, raw-data hashes and frozen pre-specifications; no public release destination is supplied."
+      ],
+      "focus": "Agents conduct forecasting research by writing and executing Python analyses on fixed training datasets from planted-signal, null and trap worlds. Earlier worlds use bootstrap-resampled recorded financial residuals; later worlds use Gaussian shocks. Additional exercises use recorded factor returns and injected signals. These are computational analyses, with no new physical measurements.",
+      "limits": "Agents receive 700 training months in ordinary simulated worlds and 480 in injected worlds; 360 test months remain outside their sandbox. They have no network access and at most 40 code or specification calls. The brief specifies neither a significance threshold nor a loss. Bootstrap worlds contain exploitable repeated shocks; Gaussian worlds remove that artifact but lose realistic tails and volatility clustering. Results concern one scaffold and stylized monthly-return settings.",
+      "training": {
+        "reward": "Model-training rewards or parameter updates are not established. During research, agents receive results from their own executed analyses and log specifications. External evaluation measures verdict size, power and probability calibration against planted-signal and economic labels. Submitted forecasting code is refitted every 12 months on the sealed test window and compared with the expanding historical mean. An exploratory external Clark–West test uses a 5% threshold (pages 5–6, 18 and 28).",
+        "reset": "Each Python call starts a fresh process while files preserve state within the run. Worlds can be regenerated from seeds, and selected Gaussian worlds are investigated three times. Resetting an ongoing investigation to a saved checkpoint is not established (pages 8, 14 and 28).",
+        "branching": "Agents may evaluate multiple model specifications within a run. Separate runs compare identical datasets under different framings and repeated investigations. A tool for cloning sandbox state or branching from an intermediate checkpoint is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-57ccd229ed11ab8d",
+      "resource_id": "paper-57ccd229ed11ab8d",
+      "name": "Are LLM Research Agents Reliable Judges of Predictability? Evidence from Planted-Signal Worlds",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.04070"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "budgeted-simulator-jobs",
+      "new_physical_experiments": false,
+      "openness": [
+        "The generator, evaluation code, evaluated world seeds, prompts and records of all 896 episodes are promised for release (page 10).",
+        "The supplied pages do not establish an available public release destination."
+      ],
+      "focus": "Agents infer model structure through priced experiments on generated synthetic systems with potentially hidden states and distorted sensors. Fresh simulations return noisy measurements; a common fitter executes candidate programs and reports fitted coefficients and training errors. Final programs face hidden extrapolation, intervention and longer-horizon tests. Physical narratives describe simulated systems, with no new physical measurements.",
+      "limits": "The benchmark contains 80 worlds across 20 domains, with four worlds per domain and one episode per agent–world pair. Agents use a fixed modeling language, at most 16 fitted coefficients and bounded program sizes. They cannot execute their own code. Experiments consume a calibrated acquisition budget; fitting and submission are free. Hidden evaluation results are unavailable during discovery. Classical baselines receive passive random designs, and calibration uses the true structure with favorable coefficient initialization.",
+      "training": {
+        "reward": "Model training and a training reward are not established. During an episode, the fitter supplies coefficients, aggregate training error and per-experiment error; this is the only quantitative feedback on hypotheses. Afterward, only the final submission is scored. Deterministic worlds pass when the worst normalized error across hidden test groups is below 0.1. Stochastic worlds use distributional scores, including excess CRPS and barrier-crossing probability error (page 5).",
+        "reset": "Each acquisition starts a fresh simulated experiment; chosen initial conditions or inputs affect that run only. Standard observation returns to the disclosed standard preparation. Measurements accumulate for fitting, and the latest trajectory remains available for an assay. Resetting the entire episode or restoring an intermediate checkpoint is not established (pages 4 and 14).",
+        "branching": "Agents can compare alternative candidate programs and purchase independent runs under different preparations, inputs, impulses and clamps. Transfer comparisons use fresh agent instances with or without a previous program and matched budgets and noise seeds. Cloning a simulator state or branching from an intermediate trajectory is not established (pages 4 and 6)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-1afc5db13dcf50e7",
+      "resource_id": "paper-1afc5db13dcf50e7",
+      "name": "Unsatz: Evaluating Scientific Discovery Without a Given Ansatz",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.03713"
     }
   ]
 }
