@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**183 usage profiles** · Updated **2026-11-04**
+**184 usage profiles** · Updated **2026-11-04**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1272,6 +1272,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks](#paper-d70edca9eafeab6e) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG](#paper-abe51073a6833dd1) | Real data | Data analysis | Paper-described |
 | [Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?](#paper-2468d23826d80398) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [Length Is Cheap, Competition Is Not: Attention Predicts Context Rot in Retrieval](#paper-9e90a242ebe16adc) | Synthetic data | Offline data | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3110,6 +3111,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Training and a training reward are not established. The evaluator assigns binary resolution only when the final focus artifact applies and every designated fail-to-pass and pass-to-pass test is collected, executed, and passes. Missing submissions, required-test failures, and timeouts are unresolved. Private verifier feedback is withheld from agents; interruption implementations do not affect the primary score. |
 | Reset | Uninterrupted and switched runs start independently with clean files, conversation state, and agent memory. Within a run, five task checkouts persist across switches without file resets, and one continuous conversation is retained. Agent-controlled resets are not established. Clean final verification reconstructs the pinned focus base revision. |
 | Branching | Agent-controlled checkpoint restoration, rollback, or branching from intermediate states is not established. Matched conditions are independent runs from clean initial states. Confirmed verifier infrastructure faults may cause re-execution of the same frozen artifact rather than a new agent rollout. |
+
+</details>
+
+<a id="paper-9e90a242ebe16adc"></a>
+
+<details>
+<summary>Length Is Cheap, Competition Is Not: Attention Predicts Context Rot in Retrieval — details</summary>
+
+[Work](../README.md#paper-9e90a242ebe16adc) · [Source](https://arxiv.org/pdf/2611.04169)
+
+**Focus:** Synthetic noun-to-code retrieval under matched context length and evidence position, varying neutral filler, competing statements, and attention masking. A separate evaluation uses recorded MMLU questions. Model forward passes produce scores; no scientific simulator or new physical measurements are involved.
+
+**Openness:** `The paper reports releasing the evaluation harness, attention probe, and trial-level data.`
+
+**New physical measurements:** No
+
+**Limits:** The benchmark evaluates retrieval through forward passes, without an autonomous research workflow. Attention is measured alongside loss without intervention. Same-key conflicts increase with context length, and MMLU lacks visible-filler controls beyond 4K tokens.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No training reward or training procedure is established. Evaluation uses teacher-forced correct-value log-probability, loss relative to the short context, retrieval accuracy, evidence attention, and predictor R2; MMLU uses answer accuracy. |
+| Reset | Contexts can be regenerated from recorded seeds. Interactive environment reset support is not established. |
+| Branching | Each trial constructs matched context variants sharing evidence, query, and total length. Stateful checkpoint branching support is not established. |
 
 </details>
 

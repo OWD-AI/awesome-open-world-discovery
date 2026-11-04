@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-894-2563eb?style=flat-square" alt="894 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-183-0f766e?style=flat-square" alt="183 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-895-2563eb?style=flat-square" alt="895 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-184-0f766e?style=flat-square" alt="184 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 146 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 174 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 175 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1911,6 +1911,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Shirley Anugrah Hayati et al. · University of Minnesota
 - <a id="paper-2f1aa49aeba545c1"></a>**Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00609)* · [Paper](https://arxiv.org/abs/2610.00609) · [Code](https://github.com/vals-ai/legal-research-bench)<br>
   Katrina Drozdov, Oliver Chen, Langston Nashold, Rayan Krishnan · Vals AI
+- <a id="paper-9e90a242ebe16adc"></a>**Length Is Cheap, Competition Is Not: Attention Predicts Context Rot in Retrieval** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.04169)* · [Paper](https://arxiv.org/abs/2611.04169) · [Code](https://github.com/yliusci/length-is-cheap) · [Dataset](https://huggingface.co/datasets/yliusci/length-is-cheap)<br>
+  Yinuo Liu · University of California San Diego
 - <a id="paper-979463277edcf993"></a>**LifeSearch: Benchmarking Deep Research Agents for Real-World Life and Productivity** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.18092)* · [Paper](https://arxiv.org/abs/2610.18092)<br>
   Yibo Wang et al. · LLM Department, Tencent
 - <a id="paper-53e3f761f6a0e8c3"></a>**LiveMACE: Process-Aware Evaluation of LLM Agent Capabilities in Evolving Markets** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.09872)* · [Paper](https://arxiv.org/abs/2610.09872) · [Code](https://github.com/RaymondVoldemortFu/LiveMACE)<br>

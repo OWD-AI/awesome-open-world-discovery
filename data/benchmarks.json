@@ -4127,6 +4127,27 @@
       "name": "BEND 2.0: Benchmarking the Capabilities Needed to Design DNA",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.03806"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "The paper reports releasing the evaluation harness, attention probe, and trial-level data."
+      ],
+      "focus": "Synthetic noun-to-code retrieval under matched context length and evidence position, varying neutral filler, competing statements, and attention masking. A separate evaluation uses recorded MMLU questions. Model forward passes produce scores; no scientific simulator or new physical measurements are involved.",
+      "limits": "The benchmark evaluates retrieval through forward passes, without an autonomous research workflow. Attention is measured alongside loss without intervention. Same-key conflicts increase with context length, and MMLU lacks visible-filler controls beyond 4K tokens.",
+      "training": {
+        "reward": "No training reward or training procedure is established. Evaluation uses teacher-forced correct-value log-probability, loss relative to the short context, retrieval accuracy, evidence attention, and predictor R2; MMLU uses answer accuracy.",
+        "reset": "Contexts can be regenerated from recorded seeds. Interactive environment reset support is not established.",
+        "branching": "Each trial constructs matched context variants sharing evidence, query, and total length. Stateful checkpoint branching support is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-9e90a242ebe16adc",
+      "resource_id": "paper-9e90a242ebe16adc",
+      "name": "Length Is Cheap, Competition Is Not: Attention Predicts Context Rot in Retrieval",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.04169"
     }
   ]
 }

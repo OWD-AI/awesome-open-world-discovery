@@ -29321,6 +29321,35 @@
           9
         ]
       }
+    },
+    "paper-9e90a242ebe16adc": {
+      "institutions": [
+        "University of California San Diego"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Contexts contain a noun-to-four-digit-code fact and a query. Comparisons fix total length and evidence position while varying neutral filler, competing statements, or attention-masked filler. Five models spanning 0.5B–3B parameters are tested, with longer-context extensions on selected models. The probe averages evidence attention from eight heads selected in short contexts and compares univariate loss predictors across 126,473 trials. A separate masked-filler MMLU replication uses 3B and 7B models.",
+      "evidence": "At 8K–32K tokens, Qwen2.5-1.5B retains roughly 96–100% accuracy with visible neutral filler but falls to 11–21% with competing statements. Across the five-model short-context analysis, log inverse evidence attention explains 35–58% of loss variance versus 2–8% for log length. Long-context predictive fits are lower, around 32–33% on two models. At 32K, masking numeric filler reduces accuracy from 98% to 52%. Same-key rival values dominate the observed competition effect.",
+      "discovery_use": "The primary contribution is a controlled evaluation protocol and attention diagnostic for retrieving evidence amid conflicting knowledge. This concretely supports evaluating evidence access in discovery-agent memory and knowledge-verification pipelines, although autonomous discovery itself is not tested.",
+      "limits": "Attention and loss are measured together without attention intervention, so the evidence is predictive rather than causal. The task is synthetic, evidence locations are known to the probe, and no discovery agent or realistic research workflow is evaluated. Conflict counts increase with length; the author repository identifies accidental same-key conflicts and says the corrected controlled harness has not been run. Consequently, broad claims about semantic similarity alone are unsupported. Models are small, head selection is task dependent, and MMLU lacks visible-filler controls beyond 4K. All supplied extracted pages were considered; only pages 1 and 2 were visually inspected, not the result plots.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "The primary contribution is a controlled evaluation protocol and attention diagnostic for retrieving evidence amid conflicting knowledge. This concretely supports evaluating evidence access in discovery-agent memory and knowledge-verification pipelines, although autonomous discovery itself is not tested.",
+        "pdf_sha256": "a3c56772295ce767f4bf7be903c9b51053a612c30854b89a6333d87b1c1b2f38",
+        "evidence_pages": [
+          1,
+          3,
+          8
+        ]
+      }
     }
   }
 }
