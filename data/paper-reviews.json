@@ -28239,6 +28239,40 @@
           11
         ]
       }
+    },
+    "paper-6c6c033df58843d2": {
+      "institutions": [
+        "Intuit AI Research",
+        "Microsoft"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7,
+        10,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The panel covers 2,901 firms over 31 quarters, with 71 binary action types and 11 financial states. Experts label 781 action–state pairs, leaving 651 scored pairs after uncertain cases are excluded. Diagnostics measure tails, persistence, collinearity, intervention support, and bundling. Evaluation combines within-action rankings, within-target rankings, and excess over matched circular-shift nulls. Discovery methods from four families are compared with simple baselines, and graph-supplied parent tests probe whether conditioning separates direct from indirect associations.",
+      "evidence": "The marginal test achieves within-action AUROC 0.658, exceeding its primary null by 0.120. Cross-correlation reaches 0.824 within action and 0.643 within target; evaluated discovery methods reach at most 0.700 and 0.579 respectively. A target-label-only reference scores 0.860, exposing substantial benchmark structure. Forty actions lack the support needed for 80% power against a planted 0.1-SD effect. Conditioning on expert parents reduces raw-level flow discrimination from 0.647 to 0.533, while many not-direct associations remain detectable.",
+      "discovery_use": "Contributes a real-data causal discovery benchmark, calibrated evaluation protocol, and transferable diagnostics for determining when causal structure can be recovered. Its primary contribution concerns discovery capability and evaluation rather than financial prediction.",
+      "limits": "One balanced financial panel limits generalization and excludes firms entering or leaving the sample. Actions involve model extraction, coarse timing, and no magnitude information. Expert labels describe plausible mechanisms rather than experimentally established effects; the graph is partial and potentially mistaken. Full-label tuning makes method scores optimistic rather than held-out estimates, while computational restrictions limit conclusions about unrestricted algorithms. Planted-effect power is optimistic because real firings cluster. Conditioning tests do not establish impossibility or verify causal sufficiency and faithfulness. Release is promised upon acceptance; no first-party public artifact release was verified.",
+      "classification_review": {
+        "date": "2026-11-03",
+        "category": "benchmarks",
+        "rationale": "Contributes a real-data causal discovery benchmark, calibrated evaluation protocol, and transferable diagnostics for determining when causal structure can be recovered. Its primary contribution concerns discovery capability and evaluation rather than financial prediction.",
+        "pdf_sha256": "6c8b934c4e054cdac69b807ec396d0916c6677655f4cf314ab525348342735b6",
+        "evidence_pages": [
+          1,
+          5,
+          7,
+          10,
+          12
+        ]
+      }
     }
   }
 }

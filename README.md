@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-861-2563eb?style=flat-square" alt="861 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-169-0f766e?style=flat-square" alt="169 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-862-2563eb?style=flat-square" alt="862 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-170-0f766e?style=flat-square" alt="170 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 119 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 141 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 83 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 160 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 161 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1989,6 +1989,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Jingjie Ning, Xueqi Li, Yibo Kong, Dongting Li · Carnegie Mellon University; Tsinghua University
 - <a id="paper-6b18a66f867652ec"></a>**When Does Latent Prediction Error Support Physical Surprise Claims in Video World Models?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.01815)* · [Paper](https://arxiv.org/abs/2611.01815) · [Code](https://github.com/3-ml/jepa-surprise)<br>
   Anton Hristov, Aleksandar Slavov, Vasil Vasilev · Technology School Electronic Systems (TUES); Baba Tonka High School of Mathematics
+- <a id="paper-6c6c033df58843d2"></a>**Where Causal Discovery Breaks on Real Data: Measuring the Assumptions One Property at a Time** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.00484)* · [Paper](https://arxiv.org/abs/2611.00484)<br>
+  Padmaja Jonnalagedda, Avinash Baidya, Ruocheng Guo, Kamalika Das · Intuit AI Research; Microsoft
 - <a id="paper-4f6e0f0aac76178e"></a>**Where is Physical RSI capability from? An Observational Scaling Law of LLM-as-policy** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26848)* · [Paper](https://arxiv.org/abs/2610.26848) · [Project](https://physrsi-eval.github.io/)<br>
   Zekai Li et al. · Galbot Team
 - <a id="paper-3c56ba0d896a7404"></a>**WORTH Benchmark: Evidence Discovery under Not-Fully-Cooperative Information -- A Two-Episode Pilot** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27597)* · [Paper](https://arxiv.org/abs/2610.27597)<br>

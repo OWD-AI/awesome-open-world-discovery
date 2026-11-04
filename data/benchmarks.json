@@ -3808,6 +3808,28 @@
       "name": "TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.06824"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Methods may return graphs over the observed variables; scoring covers labeled action–state pairs over lags one to four.",
+        "Page 2 promises release of the panel, labels, code and extraction prompts upon acceptance. Current public availability is not established."
+      ],
+      "focus": "Causal discovery from a fixed observational financial panel, evaluated against expert mechanism labels using within-action AUROC, excess over matched circular-shift nulls, and within-target AUROC. Statistical fits are executed on recorded data; planted effects and Gaussian simulations provide computational calibration.",
+      "limits": "Corporate actions are naturally occurring recorded events, not benchmark-controlled interventions or new physical measurements. Expert labels express plausible mechanisms rather than experimentally verified effects. The balanced panel excludes entering and departing firms. Full-label configuration selection yields optimistic scores, and computational caps restrict some methods.",
+      "training": {
+        "reward": "An interactive agent training reward is not established. Discovery configurations are selected by within-action AUROC on the full label set; reported evaluation also includes null-adjusted excess and within-target AUROC. A separate supervised probe trains on expert labels using leave-one-action-out cross-fitting.",
+        "reset": "Environment reset support is not established. Repeated fits, bootstrap analyses and null replicates operate on the fixed panel or transformed copies.",
+        "branching": "Stateful environment branching is not established. Preprocessing variants, shifted panels and planted-effect copies are computational analysis conditions."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6c6c033df58843d2",
+      "resource_id": "paper-6c6c033df58843d2",
+      "name": "Where Causal Discovery Breaks on Real Data: Measuring the Assumptions One Property at a Time",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.00484"
     }
   ]
 }

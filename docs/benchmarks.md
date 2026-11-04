@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**169 usage profiles** · Updated **2026-11-03**
+**170 usage profiles** · Updated **2026-11-03**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1193,6 +1193,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Diagnosing the Reference Gap: What Visual Scaffolds Can and Cannot Fix in Multimodal Reasoning](#paper-205c7d1c60add7c5) | Synthetic data | Analysis + tools | Paper-described |
 | [IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?](#paper-2dded0516a7f401a) | Real data | Finite-pool queries | Paper-described |
 | [Cross-Primitive Consistency in Jev](#paper-f345442c43310d2d) | Real data | Offline data | Paper-described |
+| [Where Causal Discovery Breaks on Real Data: Measuring the Assumptions One Property at a Time](#paper-6c6c033df58843d2) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -2870,6 +2871,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | No reinforcement-learning reward is established. With the backbone frozen, CPRC minimizes binary or multiclass cross-entropy against recorded ground-truth labels plus an axis-specific consistency penalty. Evaluation uses probability gaps, total variation, decision conflicts, accuracy, and ROC-AUC for predicting decision error. |
 | Reset | Reset support is not established. The supplied body describes fixed calibration and test records without an environment reset interface. |
 | Branching | Branching support is not established. Multiple query views of the same record are evaluated, but environment-state cloning or trajectory branching is not described. |
+
+</details>
+
+<a id="paper-6c6c033df58843d2"></a>
+
+<details>
+<summary>Where Causal Discovery Breaks on Real Data: Measuring the Assumptions One Property at a Time — details</summary>
+
+[Work](../README.md#paper-6c6c033df58843d2) · [Source](https://arxiv.org/pdf/2611.00484)
+
+**Focus:** Causal discovery from a fixed observational financial panel, evaluated against expert mechanism labels using within-action AUROC, excess over matched circular-shift nulls, and within-target AUROC. Statistical fits are executed on recorded data; planted effects and Gaussian simulations provide computational calibration.
+
+**Openness:** `Methods may return graphs over the observed variables; scoring covers labeled action–state pairs over lags one to four.`, `Page 2 promises release of the panel, labels, code and extraction prompts upon acceptance. Current public availability is not established.`
+
+**New physical measurements:** No
+
+**Limits:** Corporate actions are naturally occurring recorded events, not benchmark-controlled interventions or new physical measurements. Expert labels express plausible mechanisms rather than experimentally verified effects. The balanced panel excludes entering and departing firms. Full-label configuration selection yields optimistic scores, and computational caps restrict some methods.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | An interactive agent training reward is not established. Discovery configurations are selected by within-action AUROC on the full label set; reported evaluation also includes null-adjusted excess and within-target AUROC. A separate supervised probe trains on expert labels using leave-one-action-out cross-fitting. |
+| Reset | Environment reset support is not established. Repeated fits, bootstrap analyses and null replicates operate on the fixed panel or transformed copies. |
+| Branching | Stateful environment branching is not established. Preprocessing variants, shifted panels and planted-effect copies are computational analysis conditions. |
 
 </details>
 
