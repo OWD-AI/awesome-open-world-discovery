@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**179 usage profiles** · Updated **2026-11-04**
+**181 usage profiles** · Updated **2026-11-04**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1269,6 +1269,8 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Can AI Reviewers See Your Efforts to Improve Your Paper? A Large-Scale Study of Paper Revision Trajectories](#paper-04adaae23f632875) | Real data | Data analysis | Paper-described |
 | [YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction](#paper-a8fa3ebf87f3add7) | Synthetic data | Task demonstrations | Paper-described |
 | [The Web Doesn't Sit Still: Adversarial Self-Evolving Attacks on Search Agents](#paper-6b4bbb84163c0369) | Real data | Analysis + tools | Paper-described |
+| [Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks](#paper-d70edca9eafeab6e) | Executed programs + evaluators | Analysis + tools | Paper-described |
+| [Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG](#paper-abe51073a6833dd1) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3038,6 +3040,52 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | Evolutionary fitness is the fraction of a fixed 20-question training subset labeled direct adoption or cognitive paralysis by an LLM judge. Contrastive successful and failed traces guide strategy mutation; fitness and an LLM homogeneity assessment govern selection. Defender adaptation changes prompt knowledge rather than model weights. Evaluation reports strict answer accuracy, forged-evidence adoption rate, and contradiction-induced refusal rate. |
 | Reset | The underlying corpus and index remain unchanged; injections are held in memory per query. Fixed retrieval parameters and sorting reproduce the same ordered results for identical queries. A general reset of all defender session state is not established. |
 | Branching | Initialization performs three independent rollouts per training question, and evolution creates children from parent strategies. General snapshotting or branching from an identical intermediate defender state is not established. |
+
+</details>
+
+<a id="paper-d70edca9eafeab6e"></a>
+
+<details>
+<summary>Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks — details</summary>
+
+[Work](../README.md#paper-d70edca9eafeab6e) · [Source](https://arxiv.org/pdf/2611.01927)
+
+**Focus:** Measure adaptive terminal interaction through the smallest successful stated turn cap, and construct 105 software tasks requiring sequential investigation. Feedback comes from actually executed commands and running services, rather than simulated responses or replayed terminal recordings. These are software operation and debugging tasks; executed scientific research experiments are not established.
+
+**Openness:** `Agents choose shell commands, scripts, branches and loops within offline Docker software environments.`, `Instructions arrive segment by segment in one persistent container; reference solutions, verifiers and future instructions are hidden.`, `The paper indicates code and dataset releases; their accessibility is not established by the supplied PDF text alone.`
+
+**New physical measurements:** No
+
+**Limits:** Depth depends on the evaluated models, harness, sampled initial state, stochastic success, output truncation and waiting rules; it is an estimate rather than an intrinsic bound. Unsolved tasks have no estimate. Sampling excludes heavy dependencies and many never-solved tasks. New tasks receive longer time budgets. Verifier sensitivity and cross-segment dependence are imperfect, and model-specific refusal exclusions affect denominators.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Reported training is supervised fine-tuning on consecutive passing segments from collected runs; an RL training reward is not established. Hidden executable checks evaluate software outcomes. Every check must pass for a segment, and every segment must pass for the task. Segment grades are withheld from the agent. Evaluation reports pass@1 and the fraction of consecutive segments completed. |
+| Reset | Fresh offline containers initialized at the task's initial state support reference replay and controlled removal experiments. Segments within a run share state. An agent-accessible reset or arbitrary checkpoint restoration during evaluation is not established. |
+| Branching | Shell scripts may contain branches and loops within one turn. Separate replay runs can remove solution steps. Snapshot-based trajectory branching or agent-accessible environment forks are not established. |
+
+</details>
+
+<a id="paper-abe51073a6833dd1"></a>
+
+<details>
+<summary>Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG — details</summary>
+
+[Work](../README.md#paper-abe51073a6833dd1) · [Source](https://arxiv.org/pdf/2610.36915)
+
+**Focus:** Classify why retrieved sources conflict using a frozen 406-query test split of expert-annotated recorded search data. Diagnostics alter dates, source order or one source's answer; the planted variant contains synthetic misinformation. End-to-end generation uses the same supplied results. Live retrieval, physical measurements and agent-directed research experiments are not established.
+
+**Openness:** `Each model receives a fixed query and numbered recorded search results, including URLs, titles, snippets, available dates and selected page text.`, `Outputs are constrained conflict labels or probabilities; cascades replace low-confidence predictions with LLM predictions.`, `The paper reports releasing code, prompts, splits, cached responses and per-query outputs.`
+
+**New physical measurements:** No
+
+**Limits:** Only four natural misinformation cases occur in the test split. Statistical ties do not establish equivalence, and multiple comparisons are uncorrected. Hosted models and prices reflect one gateway on one day. Source order and nondeterministic responses affect predictions. The planted variant tests a narrow substitution mechanism. End-to-end evaluation uses one generator and source-blind LLM judges; factual grounding is not measured.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No model training or RL reward is established for this study. Evaluation compares predictions with expert conflict labels using accuracy, macro-F1, per-class F1 and calibration error. End-to-end LLM judges assess expected behavior and gold-answer inclusion, with a 100-answer human validation sample. The development split selects settings; cascade thresholds use label-free confidence quantiles. |
+| Reset | Identical requests are rerun and controlled variants reuse the same recorded queries. An interactive environment reset mechanism is not established; evaluation consists of independent fixed-input requests. |
+| Branching | The study compares alternative formulations, confidence-routing choices and controlled input perturbations. Stateful checkpoint branching or agent-accessible environment forks are not established. |
 
 </details>
 

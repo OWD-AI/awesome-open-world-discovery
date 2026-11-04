@@ -4035,6 +4035,52 @@
       "name": "Unsatz: Evaluating Scientific Discovery Without a Given Ansatz",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.03713"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose shell commands, scripts, branches and loops within offline Docker software environments.",
+        "Instructions arrive segment by segment in one persistent container; reference solutions, verifiers and future instructions are hidden.",
+        "The paper indicates code and dataset releases; their accessibility is not established by the supplied PDF text alone."
+      ],
+      "focus": "Measure adaptive terminal interaction through the smallest successful stated turn cap, and construct 105 software tasks requiring sequential investigation. Feedback comes from actually executed commands and running services, rather than simulated responses or replayed terminal recordings. These are software operation and debugging tasks; executed scientific research experiments are not established.",
+      "limits": "Depth depends on the evaluated models, harness, sampled initial state, stochastic success, output truncation and waiting rules; it is an estimate rather than an intrinsic bound. Unsolved tasks have no estimate. Sampling excludes heavy dependencies and many never-solved tasks. New tasks receive longer time budgets. Verifier sensitivity and cross-segment dependence are imperfect, and model-specific refusal exclusions affect denominators.",
+      "training": {
+        "reward": "Reported training is supervised fine-tuning on consecutive passing segments from collected runs; an RL training reward is not established. Hidden executable checks evaluate software outcomes. Every check must pass for a segment, and every segment must pass for the task. Segment grades are withheld from the agent. Evaluation reports pass@1 and the fraction of consecutive segments completed.",
+        "reset": "Fresh offline containers initialized at the task's initial state support reference replay and controlled removal experiments. Segments within a run share state. An agent-accessible reset or arbitrary checkpoint restoration during evaluation is not established.",
+        "branching": "Shell scripts may contain branches and loops within one turn. Separate replay runs can remove solution steps. Snapshot-based trajectory branching or agent-accessible environment forks are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-d70edca9eafeab6e",
+      "resource_id": "paper-d70edca9eafeab6e",
+      "name": "Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.01927"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Each model receives a fixed query and numbered recorded search results, including URLs, titles, snippets, available dates and selected page text.",
+        "Outputs are constrained conflict labels or probabilities; cascades replace low-confidence predictions with LLM predictions.",
+        "The paper reports releasing code, prompts, splits, cached responses and per-query outputs."
+      ],
+      "focus": "Classify why retrieved sources conflict using a frozen 406-query test split of expert-annotated recorded search data. Diagnostics alter dates, source order or one source's answer; the planted variant contains synthetic misinformation. End-to-end generation uses the same supplied results. Live retrieval, physical measurements and agent-directed research experiments are not established.",
+      "limits": "Only four natural misinformation cases occur in the test split. Statistical ties do not establish equivalence, and multiple comparisons are uncorrected. Hosted models and prices reflect one gateway on one day. Source order and nondeterministic responses affect predictions. The planted variant tests a narrow substitution mechanism. End-to-end evaluation uses one generator and source-blind LLM judges; factual grounding is not measured.",
+      "training": {
+        "reward": "No model training or RL reward is established for this study. Evaluation compares predictions with expert conflict labels using accuracy, macro-F1, per-class F1 and calibration error. End-to-end LLM judges assess expected behavior and gold-answer inclusion, with a 100-answer human validation sample. The development split selects settings; cascade thresholds use label-free confidence quantiles.",
+        "reset": "Identical requests are rerun and controlled variants reuse the same recorded queries. An interactive environment reset mechanism is not established; evaluation consists of independent fixed-input requests.",
+        "branching": "The study compares alternative formulations, confidence-routing choices and controlled input perturbations. Stateful checkpoint branching or agent-accessible environment forks are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-abe51073a6833dd1",
+      "resource_id": "paper-abe51073a6833dd1",
+      "name": "Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.36915"
     }
   ]
 }

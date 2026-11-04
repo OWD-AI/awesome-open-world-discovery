@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-883-2563eb?style=flat-square" alt="883 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-179-0f766e?style=flat-square" alt="179 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-887-2563eb?style=flat-square" alt="887 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-181-0f766e?style=flat-square" alt="181 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -69,7 +69,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-02 | [What makes a theorem interesting? Operationalizing interestingness for open-ended exploration](https://arxiv.org/abs/2611.02905) |
 | 2026-11-02 | [Validation-Gated ML Pipeline Synthesis with Expert-Grounded Self-Evolving Skills](https://arxiv.org/abs/2611.04180) |
 | 2026-11-02 | [Toward Knowledge-Centric AI: Discovering, Internalizing, and Using Explicit Knowledge Across Agents and Generations](https://arxiv.org/abs/2611.03157) |
-| 2026-11-02 | [The Web Doesn't Sit Still: Adversarial Self-Evolving Attacks on Search Agents](https://arxiv.org/abs/2611.03754) |
+| 2026-11-02 | [ToolSpace: Scaling Tool-Centric Environment Synthesis for Long-Horizon Agents](https://arxiv.org/abs/2611.05036) |
 
 <a id="contents"></a>
 
@@ -80,11 +80,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 94 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 66 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 153 |
-| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 120 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 154 |
+| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 146 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 170 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 172 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -843,6 +843,8 @@ Each work appears once under its primary contribution; see the [classification g
   Kehong Gong et al. · Huawei Technologies Co., Ltd; Huawei Noah Research Institute; Independent Researcher
 - <a id="paper-7af4030312fdc9aa"></a>**ToM2Vec: Continuous Theory-of-Mind Tokens for Multi-Agent Coordination** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29934)* · [Paper](https://arxiv.org/abs/2610.29934) · [Code](https://github.com/nsivaku/tom2vec)<br>
   Nithin Sivakumaran et al. · UNC Chapel Hill; Cisco; The University of Texas at Austin
+- <a id="paper-ca40517477010364"></a>**ToolSpace: Scaling Tool-Centric Environment Synthesis for Long-Horizon Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.05036)* · [Paper](https://arxiv.org/abs/2611.05036) · [Code](https://github.com/dongguanting/ToolSpace) · [Project](https://toolspace-agent.github.io/)<br>
+  Guanting Dong et al. · Renmin University of China; Fudan University; Shanghai Jiao Tong University
 - <a id="paper-38e70b683c26da97"></a>**TraceForge: Distilling with Your Own Thinking** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29680)* · [Paper](https://arxiv.org/abs/2610.29680)<br>
   Yan Wang · Independent Researcher
 - <a id="paper-a0a322ba27dfcc7c"></a>**Training Foundation Models with a Single Algorithm** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40564)* · [Paper](https://arxiv.org/abs/2610.40564) · [Code](https://github.com/yudasong/unified-training) · [Project](https://yudasong.github.io/unified-training/) · [HF Model](https://huggingface.co/sfanm/unified-training)<br>
@@ -1003,6 +1005,8 @@ Each work appears once under its primary contribution; see the [classification g
   Mengting Li et al. · Kuaishou
 - <a id="paper-795b51132cf40a82"></a>**EvoSim: Learning to Model, Modeling to Learn** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.11344)* · [Paper](https://arxiv.org/abs/2610.11344)<br>
   Yun-Wei Song et al. · Beijing Key Laboratory of Complex Solid-State Batteries, Department of Chemical Engineering, Tsinghua University, Beijing, China; State Key Laboratory of Chemical Engineering and Low-Carbon Technology, Tsinghua University, Beijing, China; Beijing Tsingyu Technology Co., Ltd., Beijing, China; +5 institutions
+- <a id="paper-42a182fd255a151d"></a>**EvoTeam: Multi-Agent Collaboration via Evolving Teams** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.39813)* · [Paper](https://arxiv.org/abs/2610.39813) · [Code](https://github.com/DEEP-JLU/EvoTeam)<br>
+  Qinuo Cao et al. · Jilin University; Nanjing University of Science and Technology; Shanghai AI Lab
 - <a id="paper-65f2aa74e4cbffb5"></a>**ForkPilot: Self-Evolving Policy for Retrospective Search in Long-Horizon Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04889)* · [Paper](https://arxiv.org/abs/2610.04889)<br>
   Xinyue Zeng et al. · Virginia Tech; Microsoft
 - <a id="paper-5095dee825366c6b"></a>**From Identification to Discovery: Holistic RF Fingerprinting via Learning-Aided Quantization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.05979)* · [Paper](https://arxiv.org/abs/2610.05979) · [Code](https://github.com/omer-hazan/RFFI-with-GCD-via-VQVAE)<br>
@@ -1825,6 +1829,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Nan Huang et al. · University of California San Diego
 - <a id="paper-9b37a0eba72ea3b0"></a>**Do AI Scientists Know What's New?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.36511)* · [Paper](https://arxiv.org/abs/2610.36511) · [Code](https://github.com/emmatliu/claimnov)<br>
   Miri Liu, Xiayu Zhao, Encheng Xie, ChengXiang Zhai · University of Illinois, Urbana-Champaign
+- <a id="paper-abe51073a6833dd1"></a>**Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.36915)* · [Paper](https://arxiv.org/abs/2610.36915) · [Code](https://github.com/Parv17k/decision-models-conflict-typing)<br>
+  Parv Khatri, Harshul Jain, Mehak Kapoor, Tanya Sah · Independent Researcher
 - <a id="paper-ab11c98f74e97bb4"></a>**Does LeWorldModel Preserve Local Action Geometry?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31716)* · [Paper](https://arxiv.org/abs/2610.31716)<br>
   Vasil Vasilev, Siddharth Nayak · Technological School Electronic Systems (TUES); Massachusetts Institute of Technology
 - <a id="paper-e15c7d3de5e7f265"></a>**DrugTargetWorld: A Synthetic Biobank for Training and Benchmarking AI Scientists** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.09558)* · [Paper](https://arxiv.org/abs/2610.09558) · [Code](https://github.com/sammargolis/DrugTargetWorld) · [Project](https://drugtargetworld.vercel.app/) · [Dataset](https://huggingface.co/datasets/sammargolis/drugtargetworld-assets)<br>
@@ -1885,6 +1891,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Huangfei Jiang et al. · Prophetlab; RethinkLab; USTC; +3 institutions
 - <a id="paper-44155a8b99014187"></a>**iPrefBench: A User-Centric Benchmark for Personalized Mobile Use Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34735)* · [Paper](https://arxiv.org/abs/2610.34735)<br>
   Yuting Ning et al. · The Ohio State University; Apple
+- <a id="paper-d70edca9eafeab6e"></a>**Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.01927)* · [Paper](https://arxiv.org/abs/2611.01927) · [Code](https://github.com/AlanRosston/Depth)<br>
+  Yu Jiang et al. · University of Notre Dame; IBM Research; MIT-IBM Watson AI Lab; +4 institutions
 - <a id="paper-01623fe5218eb9ef"></a>**JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19589)* · [Paper](https://arxiv.org/abs/2610.19589) · [Code](https://github.com/HKUST-KnowComp/JockeyBench)<br>
   Zhongwei Xie et al. · The Hong Kong University of Science and Technology; Tsy Capital Limited; Independent researcher; +1 institutions
 - <a id="paper-c4824adae163f399"></a>**Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21109)* · [Paper](https://arxiv.org/abs/2610.21109) · [Project](https://minnesotanlp.github.io/kolab/)<br>

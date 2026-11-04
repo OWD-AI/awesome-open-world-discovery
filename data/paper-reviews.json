@@ -28963,6 +28963,138 @@
           9
         ]
       }
+    },
+    "paper-ca40517477010364": {
+      "institutions": [
+        "Renmin University of China",
+        "Fudan University",
+        "Shanghai Jiao Tong University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        13,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Deterministic rules identify data, state, and retry dependencies between adjacent calls. A weighted graph is clustered into environments, with persistent data synthesized selectively. State-aware walks use rollback on failure; an LLM converts successful chains into goals and assertions. Replay from the initial snapshot validates samples.",
+      "evidence": "The pipeline produces 34,376 training trajectories across 804 environments. The 35B backbone improves from 23.0 to 41.0 average benchmark score, reaching 43.2 with RL; the 744B backbone improves from 44.6 to 56.6. Component ablations favor execution-witnessed edges over LLM-judged edges. Two upgraded benchmarks substantially reduce frontier-model scores.",
+      "discovery_use": "Execution-grounded task synthesis and outcome verification provide concrete training infrastructure for agents exploring tool environments. The discovery connection is transferable agent learning and verification, although evaluation concerns productivity tasks rather than scientific discoveries.",
+      "limits": "Dependencies come from observed adjacent calls, limiting coverage of unseen compositions. Cached stateless outputs do not establish robustness to changing live services. Longer chains and lower success rates do not independently prove greater adaptive interaction depth. Synthesized-file counts are a cost proxy, without measured runtime or monetary savings. Baseline scores mix external reports and local evaluation; scaling trends include intermediate regressions. No independent reproduction was performed.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "learning",
+        "rationale": "Execution-grounded task synthesis and outcome verification provide concrete training infrastructure for agents exploring tool environments. The discovery connection is transferable agent learning and verification, although evaluation concerns productivity tasks rather than scientific discoveries.",
+        "pdf_sha256": "697822d55a570dba21a4f8f411bdbb914672bf1c8385851e311d675709e420bb",
+        "evidence_pages": [
+          1,
+          7,
+          13,
+          15
+        ]
+      }
+    },
+    "paper-d70edca9eafeab6e": {
+      "institutions": [
+        "University of Notre Dame",
+        "IBM Research",
+        "MIT-IBM Watson AI Lab",
+        "Carnegie Mellon University",
+        "Georgia Institute of Technology",
+        "University of Southern California",
+        "Microsoft Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Work is estimated from reference-solution lines; depth is the smallest stated turn cap under which an evaluated model succeeds. Two models measure depth across a fixed cap ladder. Task generation proceeds segment by segment in offline containers, executing each segment before recording its solution and checks. Fresh-container replay establishes solvability, while removal experiments assess verifier sensitivity.",
+      "evidence": "Among 296 solved synthetic tasks from the audit, 94% pass within three turns. Depth predicts other models' difficulty after controlling for work. The 105 new tasks have median measured depth 40 among solved tasks; evaluated model pass rates range from 17% to 47%. Fine-tuning Qwen3-8B improves pass@1 from 2.6% to 4.9% on TB2.1 and from 3.4% to 9.1% on TBLite.",
+      "discovery_use": "The paper directly evaluates whether agents must acquire previously unknown environment information before choosing subsequent actions. Its depth protocol and verified task construction distinguish adaptive investigation from merely executing many operations.",
+      "limits": "Measured depth depends on the models, harness, sampled initial state, stochastic success, output truncation, and waiting rules; it is not a bound on intrinsic depth. Unsolved tasks receive no estimate, and sampling excludes heavy dependencies and many never-solved tasks. New tasks receive longer time budgets. Key-step checks and cross-segment dependence are strong but imperfect. Refusals are excluded from model-specific denominators. The dataset destination could not be independently fetched; only the verified code release is retained.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "The paper directly evaluates whether agents must acquire previously unknown environment information before choosing subsequent actions. Its depth protocol and verified task construction distinguish adaptive investigation from merely executing many operations.",
+        "pdf_sha256": "e8b1c852814acebaf871bbac99c1da34f31a684681549115420498653374e0e9",
+        "evidence_pages": [
+          1,
+          2,
+          4,
+          6
+        ]
+      }
+    },
+    "paper-42a182fd255a151d": {
+      "institutions": [
+        "Jilin University",
+        "Nanjing University of Science and Technology",
+        "Shanghai AI Lab"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "LLM selectors choose or create a team; a chairman recruits agents and assigns subtasks. Agents consult team-specific interaction rules during execution. Separate reflectors revise team rosters, handoff rules, and individual skills. Evolution uses designated training streams, and persistent artifacts are frozen before evaluation on disjoint holdouts.",
+      "evidence": "Across four benchmarks and six metrics, mixed-benchmark evolution averages 59.58 versus 55.55 for Meta-Team and leads all six metrics. Individual-benchmark evolution averages 58.85 versus 58.30. Cross-backbone artifacts improve over unevolved MAS in both transfer directions. Ablations generally support both team selection and scoped rules, with task-specific exceptions.",
+      "discovery_use": "The central contribution is retained, feedback-driven adaptation of agent collaboration across heterogeneous tasks. Evidence includes information-seeking tasks, execution-based evaluation, selective experience reuse, and transfer between model backbones.",
+      "limits": "The supplied body review covers pages 1–16 of 28; later appendix pages were not supplied. Evolution uses a small, fixed shuffled stream, rather than demonstrating indefinite adaptation under changing distributions. Parameters remain fixed, so reuse depends on the backbone interpreting stored guidance. Multimodal evolution is not systematically evaluated. Removing rules slightly improves one refactoring result, and reported rollout averages do not establish statistical significance.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "adaptation",
+        "rationale": "The central contribution is retained, feedback-driven adaptation of agent collaboration across heterogeneous tasks. Evidence includes information-seeking tasks, execution-based evaluation, selective experience reuse, and transfer between model backbones.",
+        "pdf_sha256": "4e7ca379cbd11af3106218d29b2e6d758023f026b064646c6d314fa89caead29",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-abe51073a6833dd1": {
+      "institutions": [
+        "Independent Researcher"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Eleven models receive matched inputs on a frozen 406-query CONFLICTS test split. Direct five-way classification is compared with hierarchical yes/no formulations. Low-confidence quantiles are escalated to an LLM. Paired tests examine accuracy, calibration, cost, source order, dates, planted false sources, and answer adherence under two LLM judges.",
+      "evidence": "Decision-model accuracy ranges from 50.0% to 67.0%, versus 61.3% for the matched older LLM and 70.0% for the newer comparator. Eight quarter-escalation cascades are statistically tied with the newer LLM at 25–37% of its classification cost. Yes/no decomposition underperforms direct classification. False-source signals often appear in probabilities without becoming the top label; downstream gains depend on the judge.",
+      "discovery_use": "The study directly evaluates a knowledge-verification bottleneck: identifying why retrieved evidence disagrees and escalating uncertain judgments before answer synthesis. This is relevant to discovery agents assessing conflicting information, although it does not establish factual truth verification.",
+      "limits": "The test set is small and contains only four natural misinformation cases. Statistical non-significance does not prove equivalence, and multiple comparisons are uncorrected. The census covers one gateway on one day, with changing hosted models and prices. End-to-end evaluation uses one generator and judges that cannot inspect sources; factual grounding is not measured. Planted misinformation tests only a narrow substitution mechanism, and source order can materially change predictions.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "The study directly evaluates a knowledge-verification bottleneck: identifying why retrieved evidence disagrees and escalating uncertain judgments before answer synthesis. This is relevant to discovery agents assessing conflicting information, although it does not establish factual truth verification.",
+        "pdf_sha256": "ba7199e807b617b440cb715d11c9ed4364e7260e16c72613fe386a2195aac7ff",
+        "evidence_pages": [
+          1,
+          4,
+          6,
+          10
+        ]
+      }
     }
   }
 }

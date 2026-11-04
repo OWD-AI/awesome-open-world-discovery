@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04T01:09:12-05:00",
+  "updated_at": "2026-11-04T01:51:11-05:00",
   "window_start": "2026-10-06",
   "window_end": "2026-11-04",
   "window_days": 30,
@@ -177,6 +177,32 @@
         }
       ],
       "id": "58697f8c99c68523"
+    },
+    {
+      "title": "ToolSpace: Scaling Tool-Centric Environment Synthesis for Long-Horizon Agents",
+      "url": "https://arxiv.org/abs/2611.05036",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "ToolSpace reconstructs dependencies between tools from execution traces and uses this structure to synthesize executable tasks spanning multiple environments. Replay checks filter training examples before supervised learning and reinforcement learning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata identifies 2026-11-03T00:00:00.000Z; PDF page 1 also identifies v1 as 3 November 2026. The supplied ISO timestamp is preserved instead of the host's local-day label.",
+      "review_status": "approved",
+      "relevance": "Execution-grounded task synthesis and outcome verification provide concrete training infrastructure for agents exploring tool environments. The discovery connection is transferable agent learning and verification, although evaluation concerns productivity tasks rather than scientific discoveries.",
+      "id": "ca40517477010364",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.05036"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/dongguanting/ToolSpace"
+        },
+        {
+          "label": "Project",
+          "url": "https://toolspace-agent.github.io/"
+        }
+      ]
     },
     {
       "title": "The Web Doesn't Sit Still: Adversarial Self-Evolving Attacks on Search Agents",
@@ -451,7 +477,7 @@
       ]
     },
     {
-      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
+      "title": "CoworkOS: Scaling Agent Coworkers for Real-world Automation",
       "url": "https://arxiv.org/abs/2611.03178",
       "published_at": "2026-11-02",
       "kind": "paper",
@@ -1147,6 +1173,28 @@
         {
           "label": "Code",
           "url": "https://github.com/AtomXT/micodag-intervenion"
+        }
+      ]
+    },
+    {
+      "title": "Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks",
+      "url": "https://arxiv.org/abs/2611.01927",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "Depth separates terminal-task workload from the sequential interaction needed to resolve unknown software behavior. It audits existing benchmarks and constructs tasks whose later stages depend on problems encountered and solved in real environments.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata gives 2026-11-01T00:00:00.000Z, consistent with the v1 date printed on PDF page 1. The supplied ISO timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The paper directly evaluates whether agents must acquire previously unknown environment information before choosing subsequent actions. Its depth protocol and verified task construction distinguish adaptive investigation from merely executing many operations.",
+      "id": "d70edca9eafeab6e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.01927"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AlanRosston/Depth"
         }
       ]
     },
@@ -1986,6 +2034,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.40009"
+        }
+      ]
+    },
+    {
+      "title": "EvoTeam: Multi-Agent Collaboration via Evolving Teams",
+      "url": "https://arxiv.org/abs/2610.39813",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "EvoTeam stores reusable teams and separates team-specific coordination rules from agent skills shared across teams. Execution traces drive updates intended to retain useful experience without transferring incompatible collaboration practices.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary submission history verifies original v1 at 2026-10-29T10:55:30Z and v2 at 2026-10-30T08:44:56Z. The supplied midnight timestamp and PDF page-1 date correspond to the revision day, so the verified original v1 timestamp is used.",
+      "review_status": "approved",
+      "relevance": "The central contribution is retained, feedback-driven adaptation of agent collaboration across heterogeneous tasks. Evidence includes information-seeking tasks, execution-based evaluation, selective experience reuse, and transfer between model backbones.",
+      "id": "42a182fd255a151d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.39813"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/DEEP-JLU/EvoTeam"
         }
       ]
     },
@@ -3737,6 +3807,28 @@
         {
           "label": "Project",
           "url": "https://hexafuture.ai/benchmarks/embodiedlab/"
+        }
+      ]
+    },
+    {
+      "title": "Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG",
+      "url": "https://arxiv.org/abs/2610.36915",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "The paper compares hosted probabilistic decision models with generative LLMs for classifying conflicts among retrieved sources. It evaluates question formulations, confidence-based escalation, diagnostic perturbations, and downstream answer behavior.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata gives 2026-10-27T00:00:00.000Z, consistent with the v1 date on PDF page 1. The supplied ISO timestamp is preserved rather than the host's local-day label.",
+      "review_status": "approved",
+      "relevance": "The study directly evaluates a knowledge-verification bottleneck: identifying why retrieved evidence disagrees and escalating uncertain judgments before answer synthesis. This is relevant to discovery agents assessing conflicting information, although it does not establish factual truth verification.",
+      "id": "abe51073a6833dd1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.36915"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Parv17k/decision-models-conflict-typing"
         }
       ]
     },
@@ -14805,6 +14897,32 @@
       "id": "58697f8c99c68523"
     },
     {
+      "title": "ToolSpace: Scaling Tool-Centric Environment Synthesis for Long-Horizon Agents",
+      "url": "https://arxiv.org/abs/2611.05036",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "ToolSpace reconstructs dependencies between tools from execution traces and uses this structure to synthesize executable tasks spanning multiple environments. Replay checks filter training examples before supervised learning and reinforcement learning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata identifies 2026-11-03T00:00:00.000Z; PDF page 1 also identifies v1 as 3 November 2026. The supplied ISO timestamp is preserved instead of the host's local-day label.",
+      "review_status": "approved",
+      "relevance": "Execution-grounded task synthesis and outcome verification provide concrete training infrastructure for agents exploring tool environments. The discovery connection is transferable agent learning and verification, although evaluation concerns productivity tasks rather than scientific discoveries.",
+      "id": "ca40517477010364",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.05036"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/dongguanting/ToolSpace"
+        },
+        {
+          "label": "Project",
+          "url": "https://toolspace-agent.github.io/"
+        }
+      ]
+    },
+    {
       "title": "The Web Doesn't Sit Still: Adversarial Self-Evolving Attacks on Search Agents",
       "url": "https://arxiv.org/abs/2611.03754",
       "published_at": "2026-11-02",
@@ -15077,7 +15195,7 @@
       ]
     },
     {
-      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
+      "title": "CoworkOS: Scaling Agent Coworkers for Real-world Automation",
       "url": "https://arxiv.org/abs/2611.03178",
       "published_at": "2026-11-02",
       "kind": "paper",
@@ -15773,6 +15891,28 @@
         {
           "label": "Code",
           "url": "https://github.com/AtomXT/micodag-intervenion"
+        }
+      ]
+    },
+    {
+      "title": "Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks",
+      "url": "https://arxiv.org/abs/2611.01927",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "Depth separates terminal-task workload from the sequential interaction needed to resolve unknown software behavior. It audits existing benchmarks and constructs tasks whose later stages depend on problems encountered and solved in real environments.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata gives 2026-11-01T00:00:00.000Z, consistent with the v1 date printed on PDF page 1. The supplied ISO timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The paper directly evaluates whether agents must acquire previously unknown environment information before choosing subsequent actions. Its depth protocol and verified task construction distinguish adaptive investigation from merely executing many operations.",
+      "id": "d70edca9eafeab6e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.01927"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AlanRosston/Depth"
         }
       ]
     },
@@ -16475,6 +16615,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.40009"
+        }
+      ]
+    },
+    {
+      "title": "EvoTeam: Multi-Agent Collaboration via Evolving Teams",
+      "url": "https://arxiv.org/abs/2610.39813",
+      "published_at": "2026-10-29",
+      "kind": "paper",
+      "summary": "EvoTeam stores reusable teams and separates team-specific coordination rules from agent skills shared across teams. Execution traces drive updates intended to retain useful experience without transferring incompatible collaboration practices.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv primary submission history verifies original v1 at 2026-10-29T10:55:30Z and v2 at 2026-10-30T08:44:56Z. The supplied midnight timestamp and PDF page-1 date correspond to the revision day, so the verified original v1 timestamp is used.",
+      "review_status": "approved",
+      "relevance": "The central contribution is retained, feedback-driven adaptation of agent collaboration across heterogeneous tasks. Evidence includes information-seeking tasks, execution-based evaluation, selective experience reuse, and transfer between model backbones.",
+      "id": "42a182fd255a151d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.39813"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/DEEP-JLU/EvoTeam"
         }
       ]
     },
@@ -17981,6 +18143,28 @@
         {
           "label": "Project",
           "url": "https://hexafuture.ai/benchmarks/embodiedlab/"
+        }
+      ]
+    },
+    {
+      "title": "Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG",
+      "url": "https://arxiv.org/abs/2610.36915",
+      "published_at": "2026-10-26",
+      "kind": "paper",
+      "summary": "The paper compares hosted probabilistic decision models with generative LLMs for classifying conflicts among retrieved sources. It evaluates question formulations, confidence-based escalation, diagnostic perturbations, and downstream answer behavior.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper publishedAt metadata gives 2026-10-27T00:00:00.000Z, consistent with the v1 date on PDF page 1. The supplied ISO timestamp is preserved rather than the host's local-day label.",
+      "review_status": "approved",
+      "relevance": "The study directly evaluates a knowledge-verification bottleneck: identifying why retrieved evidence disagrees and escalating uncertain judgments before answer synthesis. This is relevant to discovery agents assessing conflicting information, although it does not establish factual truth verification.",
+      "id": "abe51073a6833dd1",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.36915"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Parv17k/decision-models-conflict-typing"
         }
       ]
     },
