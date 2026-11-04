@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-893-2563eb?style=flat-square" alt="893 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-894-2563eb?style=flat-square" alt="894 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-183-0f766e?style=flat-square" alt="183 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 95 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 66 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 157 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 158 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 146 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
@@ -607,6 +607,8 @@ Each work appears once under its primary contribution; see the [classification g
 
 ### 2026
 
+- <a id="paper-70d2c47ee1f38ba4"></a>**Adversarial Speculative Reasoning Improves Long Horizon Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.05345)* · [Paper](https://arxiv.org/abs/2611.05345)<br>
+  Hongyin Luo et al. · Subconscious Systems Technologies, Inc.; Massachusetts Institute of Technology; Princeton University; +1 institutions
 - <a id="paper-a4026bea93447d03"></a>**Agent World Model in the Wild: Computer-Use Agent Environment Synthesis** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26828)* · [Paper](https://arxiv.org/abs/2610.26828) · [Project](https://msr-orchard.github.io/WildAWM/) · [Code](https://github.com/MSR-Orchard/WildAWM) · [Dataset](https://huggingface.co/datasets/ChilleD/WildAWM) · [HF Model](https://huggingface.co/ChilleD/WildAWM-35B-A3B) · [HF Model](https://huggingface.co/ChilleD/WildAWM-4B)<br>
   Zhaoyang Wang et al. · UNC-Chapel Hill; Microsoft Research; Georgia Tech; +2 institutions
 - <a id="r09"></a>**AgentGym-RL: Training LLM Agents for Long-Horizon Decision Making through Multi-Turn Reinforcement Learning** · *[ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/1571ce1ff735be4551db50887043726e-Abstract-Conference.html)* · [Paper](https://arxiv.org/abs/2509.08755) · [Code](https://github.com/woooodyy/AgentGym-RL) · [Project](https://AgentGym-RL.github.io) · [HF Dataset](https://huggingface.co/datasets/AgentGym/AgentGym-RL-Data-ID)<br>

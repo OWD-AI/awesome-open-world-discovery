@@ -29287,6 +29287,40 @@
           7
         ]
       }
+    },
+    "paper-70d2c47ee1f38ba4": {
+      "institutions": [
+        "Subconscious Systems Technologies, Inc.",
+        "Massachusetts Institute of Technology",
+        "Princeton University",
+        "Northeastern University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Repeated forward passes measure numerical variation across verification slots in two quantized frontier models. A teacher-forced experiment follows differently encoded contexts across 96 tasks. Target-generated continuations sharing a decision prefix form preference pairs, labeled for evidence-based framing or running tests. Windowed reverse DPO trains only draft parameters. Evaluation compares ordinary, adversarial, preferred-direction and unrelated-preference drafts, with five independent runs per main configuration on DeepSWE and NL2Repo-Bench.",
+      "evidence": "Numerical deviation grows about 4% per verification slot in both models. Long-range measurements suggest a 10–20% excess of extreme deviations after roughly 30 turns, with substantial uncertainty. GLM-5.3 DeepSWE success rises from 60.6% to 67.6%, with a gain confidence interval of 2.6–11.4 points. DeepSeek gains 4.0 points on DeepSWE, but its interval includes zero; its NL2Repo mean test pass rate improves by 1.4 points with an interval excluding zero. Reversing training toward desirable behavior reduces DeepSWE performance. Estimated acceptance-based decoding cost is approximately 0–2%.",
+      "discovery_use": "Reverse preference training of speculative draft models improves long-horizon agents’ handling of evidence-based decisions and testing behavior. This provides a concrete training contribution to agents investigating uncertainties and verifying their work, although evaluation is limited to coding.",
+      "limits": "Results cover two serving configurations and coding benchmarks, without scientific discovery evaluation. Decision persistence through higher-precision cache entries remains a hypothesis supported indirectly by numerical measurements and controls. Several long-range intervals include no effect. Idealized rejection-sampling exactness does not establish an unchanged deployed trajectory distribution when numerical computation depends on block layout. Efficiency is estimated through a greedy-chain acceptance approximation rather than measured end-to-end latency. Separation between preference-training tasks and end-to-end benchmark tasks is unclear. Only pages 4 and 7 were visually inspected. No paper-specific first-party release was verified; the supplied artifact links identify a serving model and a cited benchmark.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "learning",
+        "rationale": "Reverse preference training of speculative draft models improves long-horizon agents’ handling of evidence-based decisions and testing behavior. This provides a concrete training contribution to agents investigating uncertainties and verifying their work, although evaluation is limited to coding.",
+        "pdf_sha256": "2f9447a9a8cb01a2350170ed6080c09617ae80ef4998b9154723af25b1c98fb1",
+        "evidence_pages": [
+          1,
+          6,
+          7,
+          9
+        ]
+      }
     }
   }
 }
