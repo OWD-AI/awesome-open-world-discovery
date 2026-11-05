@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-914-2563eb?style=flat-square" alt="914 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-915-2563eb?style=flat-square" alt="915 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-188-0f766e?style=flat-square" alt="188 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 96 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 68 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 162 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 163 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 123 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 150 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 86 |
@@ -849,6 +849,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ziming Li et al. · University of Connecticut; Ant Group
 - <a id="paper-a2259b2fffb789f0"></a>**SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.11345)* · [Paper](https://arxiv.org/abs/2610.11345) · [Code](https://github.com/weiyang930/SynCo) · [Dataset](https://huggingface.co/datasets/weiyang930/SynCo)<br>
   Wei Yang et al. · University of Southern California; The George Washington University; Georgia Institute of Technology
+- <a id="paper-27bd02daa94b0979"></a>**TAC-CoT: Tool-Empowered Implicit Chain-of-Thought via Interleaving Explicit Tokens** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.01926)* · [Paper](https://arxiv.org/abs/2611.01926)<br>
+  Juseon Do, Sangmin Bae, Jeesu Jung, Hwanjun Song · Data Intelligence System Lab, KAIST; Optimization and Statistical Inference Lab, KAIST AI; Cluvion
 - <a id="paper-0190aa0cb6ed0467"></a>**The Lexical Imprint of Pre-training Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2602.10657)* · [Paper](https://arxiv.org/abs/2602.10657) · [Code](https://github.com/penpaperkeycode/lexical-imprint)<br>
   Jeonghoon Kim et al. · NAVER Cloud; KAIST
 - <a id="paper-5ae91bff08b3cb5c"></a>**Think Less, Locally: Local Preference Learning for Reasoning Compression** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.04814)* · [Paper](https://arxiv.org/abs/2611.04814) · [Code](https://github.com/MuyaoYuan/LoCo) · [HF Model](https://huggingface.co/MuyaoYuan/LoCo-7B)<br>

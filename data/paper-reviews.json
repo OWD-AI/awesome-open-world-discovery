@@ -29995,6 +29995,37 @@
           9
         ]
       }
+    },
+    "paper-27bd02daa94b0979": {
+      "institutions": [
+        "Data Intelligence System Lab, KAIST",
+        "Optimization and Statistical Inference Lab, KAIST AI",
+        "Cluvion"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Feed projected hidden states back as continuous thought tokens. After each fixed-length segment, route to tool execution or answer generation. Train using explicit-output cross-entropy, an auxiliary decoder reconstructing omitted reasoning, and teacher hidden-state distillation. Evaluate calculator-assisted math, Wikipedia-assisted QA, and ToolBench against matched explicit-CoT agents and compression baselines.",
+      "evidence": "Reported average gains over explicit CoT are 5.8 percentage points on math and 2.4 on QA across main backbones. Forward-pass reductions reach 6.8 times on individual QA benchmarks. Retrieval answer coverage improves, and ToolBench multi-tool solvable win rate reaches a statistically significant 58.6%; the 51.8% single-tool result is not marked significant. Measured wall-clock gains are approximately 2.3 times for math and 2.4 for QA.",
+      "discovery_use": "The contribution trains agents to combine compact internal reasoning with external evidence retrieval and executable computation. Improved retrieval coverage and multi-tool decisions provide a concrete connection to learning to acquire and verify missing knowledge, although autonomous scientific discovery is not evaluated.",
+      "limits": "Routing adapts between fixed-length segments rather than individual tokens, and longer interaction horizons remain untested. QA uses 1,000 examples per dataset and teacher-filtered training trajectories; ToolBench uses simulated APIs and a model judge. Forward counts exclude external latency as a cost measure. The appendix latency table's explicit-QA forward counts differ from Table 2 for the stated backbone. Error-accumulation analyses are suggestive rather than causal proof. No official artifact release was verified.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "learning",
+        "rationale": "The contribution trains agents to combine compact internal reasoning with external evidence retrieval and executable computation. Improved retrieval coverage and multi-tool decisions provide a concrete connection to learning to acquire and verify missing knowledge, although autonomous scientific discovery is not evaluated.",
+        "pdf_sha256": "806412a409bb3182e5a1219d11db1846354048ace760696aba7488ba452ed24c",
+        "evidence_pages": [
+          1,
+          4,
+          9
+        ]
+      }
     }
   }
 }
