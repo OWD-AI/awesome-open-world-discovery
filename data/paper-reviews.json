@@ -29805,6 +29805,98 @@
           10
         ]
       }
+    },
+    "paper-a8243d03ddfe5423": {
+      "institutions": [
+        "Department of Statistics, University of Oxford"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Separates Bayesian tasks, design strategies, utility objectives, and fitting algorithms. Compares five contemporary method families plus random and static baselines across eight tasks, using shared policy architectures where feasible, identical hardware, 12-hour training budgets, and five seeds. Evaluates information-gain bounds and downstream parameter-estimation error, then ablates architecture, time embeddings, and contrastive-sample budgets.",
+      "evidence": "No method dominates across tasks and metrics. Static designs and joint variational posteriors are strong baselines. Time embeddings substantially improve DAD and ActionBED on location finding. Information-gain rankings can disagree with downstream estimation quality. Increasing contrastive samples improves DAD until a plateau despite reducing optimization throughput.",
+      "discovery_use": "Directly supports learning about unknown quantities through adaptive experimental design, with reusable methods and controlled evaluation of information-gathering policies.",
+      "limits": "The supplied pages support a targeted review of methods and main results, not exhaustive inspection of the 41-page appendix. Evaluation emphasizes simulated, policy-based experimental design under specified Bayesian models. ALINE uses candidate pools and a specialized architecture; some methods require bounded design spaces, and total network sizes differ. Architecture and estimator-budget ablations focus on location finding. Several standard tasks poorly distinguish adaptive strategies from static designs.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "sci_methods",
+        "rationale": "Directly supports learning about unknown quantities through adaptive experimental design, with reusable methods and controlled evaluation of information-gathering policies.",
+        "pdf_sha256": "23a17b289be051ac1ba1a8ca2ee850f91bca86db40b2b0b3ce718658d9ccb6b5",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-e217d1cf8856cc3b": {
+      "institutions": [
+        "University of Chicago",
+        "Duke University",
+        "UIUC",
+        "Northwestern University",
+        "ByteDance"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Compares reverse-KL on-policy distillation, multi-teacher distillation, specialist GRPO, and mixed RL. Uses a controlled synthetic reasoning range and Qwen3-8B experiments spanning mathematical reasoning, coding, tool use, and long context. Tests composed capabilities on agentic coding and long-context reasoning, analyzes parameter-update geometry, and explores broader supervision, Procrustes patching, and base-preserving replay.",
+      "evidence": "Synthetic OOD transfer falls to approximately 76–86% of the teacher's improvement despite strong in-range transfer. Across main extrapolative settings, students reach 96.04–102.73% of teacher IND scores while remaining 2.45–16.25% below the base on OOD scores. Composed-task performance remains 18.19–24.34% below the best teachers. Broader data with a stronger teacher removes observed forgetting in one experiment. Coding replay improves five of eight OOD benchmarks and raises AIME25 by 6.67 percentage points over plain OPD.",
+      "discovery_use": "Directly tests whether post-training consolidation preserves reasoning and agent capabilities beyond supervised tasks, including unfamiliar task compositions. These are concrete requirements for agents that must apply learned knowledge to new investigations.",
+      "limits": "Main experiments use one student family and size, with limited independent training replication. Mathematical IND/OOD grouping partly uses teacher performance, so it does not establish distributional membership or pretraining exposure. Mixed-method balancing and curricula are not extensively tuned. Update geometry offers a hypothesis rather than a demonstrated causal explanation. A synthetic counterexample shows mixed RL can outperform MOPD. The author-listed project could not be fetched, and no associated artifact release was independently verified. Only two pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "learning",
+        "rationale": "Directly tests whether post-training consolidation preserves reasoning and agent capabilities beyond supervised tasks, including unfamiliar task compositions. These are concrete requirements for agents that must apply learned knowledge to new investigations.",
+        "pdf_sha256": "832e70643e6cd2810de26d4a25d3b5c633fc2ede4e57d76254ee7d957b6685c5",
+        "evidence_pages": [
+          1,
+          5,
+          11
+        ]
+      }
+    },
+    "paper-2efb1b5ff7999b18": {
+      "institutions": [
+        "IIT Kanpur",
+        "Amazon"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Orthogonalizes the current gradient with Newton–Schulz iterations. Separately removes the radial component of teacher–student displacement, spectrally normalizes it, and mixes it into the update afterward. Evaluates SDFT on Qwen2.5-7B science and tool-use tasks and SDPO on Olmo-3-7B biology and materials tasks, with retention benchmarks, optimizer ablations, precision analysis, and conditional convergence theory.",
+      "evidence": "SDFT new-task accuracy improves by 3.6 points on tool use and 1.6 on science over AdamW. Measured persistent memory falls from 64.5 to 37.7 GB per GPU versus AdamW and from 51.6 versus momentum Muon; momentum-free Muon already uses the same memory. SDPO improves by about two points on average over AdamW. Retention is mixed: the tool-use run's prior-capability average falls from 65.4 to 63.0, while science retention improves slightly.",
+      "discovery_use": "Provides a specialized mechanism for continued scientific and tool-skill acquisition through self-distillation, with explicit evaluation of retained capabilities. Its connection to discovery is enabling continual adaptation rather than demonstrated autonomous investigation.",
+      "limits": "Experiments cover two 7B model families and four tasks, not discovery workflows or long sequences of acquired skills. The method requires an existing parameter-aligned EMA teacher and sufficiently precise teacher storage. Memory savings concern persistent states, not total peak memory; very-large-model figures are projections. Several baseline scores are imported, learning rates and best checkpoints are selected, and displayed results lack uncertainty intervals. Convergence depends on unverified local assumptions. Biology SDPO remains below GRPO at five hours. No first-party release was verified; only two pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "adaptation",
+        "rationale": "Provides a specialized mechanism for continued scientific and tool-skill acquisition through self-distillation, with explicit evaluation of retained capabilities. Its connection to discovery is enabling continual adaptation rather than demonstrated autonomous investigation.",
+        "pdf_sha256": "ed3cbe868821c5532a4e8d8496bdc8e4ec8cd372541d3f8a48a5897992c9b4c1",
+        "evidence_pages": [
+          1,
+          2,
+          9
+        ]
+      }
     }
   }
 }

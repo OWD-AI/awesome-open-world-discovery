@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-908-2563eb?style=flat-square" alt="908 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-911-2563eb?style=flat-square" alt="911 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-188-0f766e?style=flat-square" alt="188 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -61,6 +61,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Date | Paper |
 | --- | --- |
 | 2026-11-04 | [Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks](https://arxiv.org/abs/2611.06414) |
+| 2026-11-04 | [TestBED: An Open-Source Toolkit for Bayesian Experimental Design](https://arxiv.org/abs/2611.06633) |
 | 2026-11-04 | [Reglos: A Self-Evolving Personal Memory Agent with Recursive Self-Improvement](https://arxiv.org/abs/2611.06049) |
 | 2026-11-04 | [FrontierPhysics: Evaluating Agents for End-to-End Physics Research](https://arxiv.org/abs/2611.06910) |
 | 2026-11-04 | [EnzymeRSI: A dual-loop recursive self-improvement system for enzyme design](https://arxiv.org/abs/2611.06321) |
@@ -68,8 +69,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-03 | [SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?](https://arxiv.org/abs/2611.06083) |
 | 2026-11-03 | [PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data](https://arxiv.org/abs/2611.05320) |
 | 2026-11-03 | [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](https://arxiv.org/abs/2611.04870) |
-| 2026-11-03 | [From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?](https://arxiv.org/abs/2611.05108) |
-| 2026-11-03 | [ForgeKernel: Self-Evolving Kernels Catching and Surpassing Experts and Agents](https://arxiv.org/abs/2611.04998) |
+| 2026-11-03 | [On the Generalization Limitation of On-Policy Distillation for Post-RL Consolidation](https://arxiv.org/abs/2611.05609) |
 
 <a id="contents"></a>
 
@@ -79,9 +79,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 96 |
-| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 67 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 160 |
-| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
+| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 68 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 161 |
+| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 122 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 149 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 86 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 179 |
@@ -540,6 +540,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yutong Cheng et al. · Virginia Tech; NEC Laboratories America
 - <a id="paper-d5a1b1084ce1c261"></a>**TagBO: LLM-Driven Task-Aware Graph Bayesian Optimization for Scientific Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.14626)* · [Paper](https://arxiv.org/abs/2610.14626)<br>
   Xinzhe Yuan et al. · Shanghai Artificial Intelligence Laboratory; Harbin Institute of Technology; Fudan University; +4 institutions
+- <a id="paper-a8243d03ddfe5423"></a>**TestBED: An Open-Source Toolkit for Bayesian Experimental Design** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06633)* · [Paper](https://arxiv.org/abs/2611.06633) · [Code](https://github.com/testbed-benchmark/testbed)<br>
+  Gavin Kerrigan, Marcel Hedman, Sahel Iqbal, Tom Rainforth · Department of Statistics, University of Oxford
 - <a id="paper-517c2be4d3190220"></a>**The Athlete as a Scientist of One: Agentic Bayesian Experimental Design for Individualized Physiology from Consumer Wearables** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40370)* · [Paper](https://arxiv.org/abs/2610.40370) · [Code](https://github.com/Bmoradi93/epicoach-agent)<br>
   Behnam Moradi · Software Department, KavAI
 - <a id="paper-f1ed6530207c60ff"></a>**Thinking-in-Bets at Test Time Reduces Sycophantic Revisions in LLM Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34654)* · [Paper](https://arxiv.org/abs/2610.34654) · [Project](https://thinking-in-bets.github.io/)<br>
@@ -773,6 +775,8 @@ Each work appears once under its primary contribution; see the [classification g
   Muse Glimmer team et al. · Meta Superintelligence Labs
 - <a id="paper-f2d49208f39c3a48"></a>**My FAULT: Self-Diagnosis as Credit Assignment in Self-Evolving Agentic Reinforcement Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.01161)* · [Paper](https://arxiv.org/abs/2610.01161)<br>
   Yihua Zhu et al. · Alibaba Group; Kyoto University; NII LLMC; +6 institutions
+- <a id="paper-e217d1cf8856cc3b"></a>**On the Generalization Limitation of On-Policy Distillation for Post-RL Consolidation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.05609)* · [Paper](https://arxiv.org/abs/2611.05609)<br>
+  Yichen Wang et al. · University of Chicago; Duke University; UIUC; +2 institutions
 - <a id="paper-96a9afe092f1b9ca"></a>**On-Policy Self-Distillation with Teacher Evolution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.38637)* · [Paper](https://arxiv.org/abs/2610.38637)<br>
   Shufan Shen et al. · State Key Lab. of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences; University of Chinese Academy of Sciences; Meituan
 - <a id="paper-15ebd2f0c38c3b18"></a>**OneSearch-VL: Unified Multimodal Deep Research Agent for Image and Video** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.12419)* · [Paper](https://arxiv.org/abs/2610.12419) · [Code](https://github.com/appletea233/OneSearch-VL) · [HF Model](https://huggingface.co/OneSearch-VL/OneSearch-VL-8B) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-VL-SFT-110K) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-VL-RL-10K) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-MI-Bench) · [Dataset](https://huggingface.co/datasets/OneSearch-VL/OneSearch-Video-Bench)<br>
@@ -1073,6 +1077,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ruhan Wang, Kishan Panaganti, Dongruo Zhou · Indiana University; Tencent HY
 - <a id="paper-bb11c7dcbd6603d3"></a>**MOVE: Multimodal Open-world Verification and Expansion for Graph Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00268)* · [Paper](https://arxiv.org/abs/2610.00268)<br>
   Zekai Chen et al. · Beijing Institute of Technology; Shandong University
+- <a id="paper-2efb1b5ff7999b18"></a>**MUON-RT Reusing the Teacher's Trajectory for Momentum-Free Muon for LLM Self-Distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.41104)* · [Paper](https://arxiv.org/abs/2610.41104)<br>
+  Aryan Das, Vinay Kumar Verma, Aakansha Mishra · IIT Kanpur; Amazon
 - <a id="paper-2688a4b095ad2a70"></a>**Nested Sparsity for Scalable Pretraining and Continual Learning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31818)* · [Paper](https://arxiv.org/abs/2610.31818) · [Code](https://github.com/Ma-Lab-Berkeley/Nestor)<br>
   Tianzhe Chu, Druv Pai, Yi Ma · University of Hong Kong; UC Berkeley
 - <a id="paper-9091cb8dd45473e8"></a>**NLPG: Natural-Language Policy Gradients for Self-Evolving Language Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.33379)* · [Paper](https://arxiv.org/abs/2609.33379)<br>
