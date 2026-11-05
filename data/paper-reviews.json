@@ -29380,6 +29380,69 @@
           11
         ]
       }
+    },
+    "paper-327a12eec12de275": {
+      "institutions": [
+        "Zhejiang University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An LLM compiles condition-level biological evidence. Frozen embeddings and structured features condition retrieval from a training-response atlas, followed by continuous-response and independent classification heads. Numerical generation produces cell populations. Explanation tools check citations, evidence scope, and signed regulatory paths. A support-trained kernel transfer model and classification corrections incorporate newly revealed same-drug measurements without changing weights. Evaluation covers drug-disjoint SciPlex3 prediction, source-defined explanation questions, ablations, and retrospective observation feedback.",
+      "evidence": "Across 339 held-out conditions, expression-derived differential-expression AUPRC reaches 0.8067 versus 0.4938 for the strongest baseline, and Macro-F1 reaches 0.8164 versus 0.6961. With one observed source context per drug, updated condition-head AUPRC reaches 0.9077, increasing from its own 0.8806 baseline. The explanation pipeline answers 561 answerable questions with complete proofs and abstains on 405 insufficient-evidence questions. A separate source-withdrawal challenge succeeds on 14 of 16 claims. Raw-source evidence slightly outperforms LLM compilation on several differential-expression endpoints.",
+      "discovery_use": "Integrates biological prediction, source-grounded claim verification, and measurement-driven revision into a shared agent state. This directly supports investigating unmeasured cellular responses and revising scientific knowledge, although autonomous experimental discovery is not demonstrated.",
+      "limits": "All three cell lines appear in training; feedback transfers the same drug across these contexts. Measurements are retrospectively revealed under fixed schedules, so experimental selection benefits and wet-lab discoveries remain untested. Classification uses sampled negatives. Update comparisons use CellCanon condition heads versus comparator expression tests, with different source-label inputs. Explanation references follow source rules, a complete-source symbolic comparator also scores perfectly, templates overlap validation, and evaluation-panel error analysis informed pipeline refinement. Explanation and numerical updating are evaluated separately. Token savings exclude other computational costs. These reported results were reviewed, not independently reproduced.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "systems",
+        "rationale": "Integrates biological prediction, source-grounded claim verification, and measurement-driven revision into a shared agent state. This directly supports investigating unmeasured cellular responses and revising scientific knowledge, although autonomous experimental discovery is not demonstrated.",
+        "pdf_sha256": "23153d5570e0b3c149765ba8fef8dbc69f88ec4cbdfeced7520ef2f651a5ab2b",
+        "evidence_pages": [
+          1,
+          4,
+          23
+        ]
+      }
+    },
+    "paper-2074139ba1cd3e88": {
+      "institutions": [
+        "The University of Hong Kong",
+        "Hong Kong Polytechnic University",
+        "University of Cambridge",
+        "Lanzhou University",
+        "Grace Investment Machine",
+        "Haitun Information Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The benchmark contains 1,119 records across three markets: four outcome-based forecasting tasks and two separately scored reasoning/calculation diagnostics. It evaluates 22 model–harness configurations. Temporal regimes distinguish pretraining-era history, resolved post-cutoff events, and forecasts recorded before resolution. Mediated retrieval applies timestamps and historical versions, optionally supplemented by an LLM leakage filter. Experiments compare retrieval policies, temporal scores, prompt rewrites, and numerical perturbations.",
+      "evidence": "Pretraining-era scores exceed post-cutoff scores in 25 of 27 focused comparisons. Across nine US model–task comparisons using matched one-week windows, mean absolute backtest-to-live gaps fall from 0.1203 with search alone to 0.0618 with point-in-time controls and 0.0285 with filtering. Filtering is closest to live results for every event-direction and fundamentals comparison, while point-in-time control alone is better for two return-ranking comparisons. Harness rankings depend on model and task. Prompt rewrites materially change 16.83% to 23.67% of outputs despite small mean signed score changes.",
+      "discovery_use": "Provides a concrete evaluation protocol for research agents predicting unknown outcomes, separating historical knowledge and retrieval leakage from prospective performance. Its contribution is discovery evaluation across complete research systems, beyond an ordinary financial forecasting application.",
+      "limits": "Historical information reconstruction is approximate, and declared model cutoffs need not precisely describe training exposure. Temporal score differences do not causally establish memorization. Live-transfer evidence is restricted to short US windows and a small model subset; CN/HK live scores are absent. Leakage-filter accuracy and uncertainty around score-gap reductions are not established by the supplied results. Small signed average score changes can conceal offsetting errors and do not establish individual prediction robustness. Recursive self-improvement is proposed future work. The verified code release states that it lacks Claude Code/Codex integrations and does not certify every manuscript configuration. Results were not independently reproduced.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "Provides a concrete evaluation protocol for research agents predicting unknown outcomes, separating historical knowledge and retrieval leakage from prospective performance. Its contribution is discovery evaluation across complete research systems, beyond an ordinary financial forecasting application.",
+        "pdf_sha256": "57056aa465158e16dcdcbcff0e50e86ca479442652c19810fbf560e8a812be71",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
     }
   }
 }

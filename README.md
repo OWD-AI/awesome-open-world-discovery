@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-896-2563eb?style=flat-square" alt="896 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-184-0f766e?style=flat-square" alt="184 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-898-2563eb?style=flat-square" alt="898 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-185-0f766e?style=flat-square" alt="185 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -65,11 +65,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-03 | [From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?](https://arxiv.org/abs/2611.05108) |
 | 2026-11-03 | [ForgeKernel: Self-Evolving Kernels Catching and Surpassing Experts and Agents](https://arxiv.org/abs/2611.04998) |
 | 2026-11-03 | [Embodied AI for Scientific Discovery: From Physical Action to Scientific Evidence](https://arxiv.org/abs/2611.04371) |
+| 2026-11-03 | [CellCanon: An Agentic Cellular World Model for Prediction, Explanation, and Observation-Driven Updating](https://arxiv.org/abs/2611.05890) |
 | 2026-11-03 | [Artifact-to-Capability: Diagnosing Breaks in Capability Formation of Self-Evolving Agents in a Controlled Environment](https://arxiv.org/abs/2611.04952) |
 | 2026-11-02 | [You don't need long context](https://arxiv.org/abs/2611.05306) |
 | 2026-11-02 | [What makes a theorem interesting? Operationalizing interestingness for open-ended exploration](https://arxiv.org/abs/2611.02905) |
 | 2026-11-02 | [VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks](https://arxiv.org/abs/2611.04418) |
-| 2026-11-02 | [Validation-Gated ML Pipeline Synthesis with Expert-Grounded Self-Evolving Skills](https://arxiv.org/abs/2611.04180) |
 
 <a id="contents"></a>
 
@@ -82,9 +82,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 66 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 159 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 146 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 147 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 175 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 176 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1284,6 +1284,8 @@ Each work appears once under its primary contribution; see the [classification g
   Zijian Liu et al. · University of Oxford; King Abdullah University of Science and Technology; University of Sydney; +1 institutions
 - <a id="causalsteward"></a>**CausalSteward: An Agentic Divide-Conquer-Combine Copilot for Causal Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2607.01936)* · [Paper](https://arxiv.org/abs/2607.01936)<br>
   Nicholas Tagliapietra et al. · TU Darmstadt; Bosch Center for Artificial Intelligence; hessian.AI; +2 institutions
+- <a id="paper-327a12eec12de275"></a>**CellCanon: An Agentic Cellular World Model for Prediction, Explanation, and Observation-Driven Updating** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.05890)* · [Paper](https://arxiv.org/abs/2611.05890) · [Code](https://github.com/ZhaokangLiang123/CellCanon)<br>
+  Zhaokang Liang, Shuyang Zhuang, Xiaoran Jiao, Hao Chen · Zhejiang University
 - <a id="paper-5429074b134d8ec4"></a>**CEPO: A General Framework for Improving Prompt Optimization in Multi-Agent Systems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34722)* · [Paper](https://arxiv.org/abs/2610.34722)<br>
   Jongha Kim et al. · Korea University; KAIST; Google Cloud AI Research
 - <a id="paper-67f22dd62e086df9"></a>**Collaborative Principle Evolution via Evidence Transfer for Scientific Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.35315)* · [Paper](https://arxiv.org/abs/2609.35315)<br>
@@ -1867,6 +1869,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Xiaoxing Hu et al. · Shanghai Jiao Tong University; Shanghai Innnovation Institute; Inner Mongolia University of Technology; +7 institutions
 - <a id="paper-8daca2e781dd8746"></a>**FinAutoRubric: Expert-Guided Automatic Rubric Generation for Evaluating Financial Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.35744)* · [Paper](https://arxiv.org/abs/2609.35744)<br>
   Hoyoung Lee et al. · LinqAlpha; UNIST; MassMutual Life Insurance; +9 institutions
+- <a id="paper-2074139ba1cd3e88"></a>**FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.01621)* · [Paper](https://arxiv.org/abs/2611.01621) · [Code](https://github.com/OpenFinMind/FinForesight) · [Dataset](https://huggingface.co/datasets/OpenFinMind/FinForesight)<br>
+  Fengyuan Liu et al. · The University of Hong Kong; Hong Kong Polytechnic University; University of Cambridge; +3 institutions
 - <a id="paper-ae8e47599dc431be"></a>**From Apparent Search Gains to Selection Failures: Auditing Test-Time Inference in Structured Workflow Planning** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.00579)* · [Paper](https://arxiv.org/abs/2611.00579) · [Code](https://github.com/TamuChen18/Found-but-Not-Chosen)<br>
   Zhitong Chen et al. · Texas A&M University
 - <a id="paper-5c78ef0baf7f1e60"></a>**From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.05108)* · [Paper](https://arxiv.org/abs/2611.05108)<br>

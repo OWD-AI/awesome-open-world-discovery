@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**184 usage profiles** · Updated **2026-11-04**
+**185 usage profiles** · Updated **2026-11-04**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1273,6 +1273,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG](#paper-abe51073a6833dd1) | Real data | Data analysis | Paper-described |
 | [Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?](#paper-2468d23826d80398) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [Length Is Cheap, Competition Is Not: Attention Predicts Context Rot in Retrieval](#paper-9e90a242ebe16adc) | Synthetic data | Offline data | Paper-described |
+| [FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting](#paper-2074139ba1cd3e88) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3134,6 +3135,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | No training reward or training procedure is established. Evaluation uses teacher-forced correct-value log-probability, loss relative to the short context, retrieval accuracy, evidence attention, and predictor R2; MMLU uses answer accuracy. |
 | Reset | Contexts can be regenerated from recorded seeds. Interactive environment reset support is not established. |
 | Branching | Each trial constructs matched context variants sharing evidence, query, and total length. Stateful checkpoint branching support is not established. |
+
+</details>
+
+<a id="paper-2074139ba1cd3e88"></a>
+
+<details>
+<summary>FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting — details</summary>
+
+[Work](../README.md#paper-2074139ba1cd3e88) · [Source](https://arxiv.org/pdf/2611.01621)
+
+**Focus:** Financial forecasting with evaluator-only reference labels. Historical backtests use recorded market and financial outcomes; prospective forecasts are locked before outcomes resolve and scored afterward. Counterfactual diagnostics use fictional announcements and predefined logic; calculation diagnostics use numerical reference answers. Systems perform research through mediated tools, with point-in-time restrictions and optional LLM leakage filtering. New physical measurements and agent-executed research experiments are not part of the described protocol.
+
+**Openness:** `Configurable task generators cover six task families across three markets.`, `Systems access mediated search, market data, and other tools under the selected retrieval policy.`, `Code and benchmark data are stated to be publicly available.`
+
+**New physical measurements:** No
+
+**Limits:** Historical information reconstruction is approximate. Historical forecast dates simulate information access, rather than a market simulator generating outcomes. Prospective feedback comes from subsequently observed financial outcomes, rather than physical experiments. Reported live comparisons use short US windows; CN/HK live scores are unavailable.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or optimization loop is not established. The evaluator scores locked responses: VAL combines relative price skill and horizon accuracy; RANK combines normalized Spearman correlation and top-K overlap; EVT uses clipped Brier skill; FUND uses clipped relative-error utility. Their pooled task scores are averaged equally. CF logic adherence and CALC tolerance-based numerical Exact Match are reported separately. Resolved tasks are scored immediately; prospective forecasts are scored after resolution. |
+| Reset | Paired agent reruns under controlled input variants are reported. Environment reset, checkpoint restoration, and reset APIs are not established. |
+| Branching | Prompt and numerical variants and favorable–adverse counterfactual pairs are evaluated. Branching from a saved agent or environment state is not established. |
 
 </details>
 

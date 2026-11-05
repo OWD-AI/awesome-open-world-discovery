@@ -4148,6 +4148,29 @@
       "name": "Length Is Cheap, Competition Is Not: Attention Predicts Context Rot in Retrieval",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.04169"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Configurable task generators cover six task families across three markets.",
+        "Systems access mediated search, market data, and other tools under the selected retrieval policy.",
+        "Code and benchmark data are stated to be publicly available."
+      ],
+      "focus": "Financial forecasting with evaluator-only reference labels. Historical backtests use recorded market and financial outcomes; prospective forecasts are locked before outcomes resolve and scored afterward. Counterfactual diagnostics use fictional announcements and predefined logic; calculation diagnostics use numerical reference answers. Systems perform research through mediated tools, with point-in-time restrictions and optional LLM leakage filtering. New physical measurements and agent-executed research experiments are not part of the described protocol.",
+      "limits": "Historical information reconstruction is approximate. Historical forecast dates simulate information access, rather than a market simulator generating outcomes. Prospective feedback comes from subsequently observed financial outcomes, rather than physical experiments. Reported live comparisons use short US windows; CN/HK live scores are unavailable.",
+      "training": {
+        "reward": "A training reward or optimization loop is not established. The evaluator scores locked responses: VAL combines relative price skill and horizon accuracy; RANK combines normalized Spearman correlation and top-K overlap; EVT uses clipped Brier skill; FUND uses clipped relative-error utility. Their pooled task scores are averaged equally. CF logic adherence and CALC tolerance-based numerical Exact Match are reported separately. Resolved tasks are scored immediately; prospective forecasts are scored after resolution.",
+        "reset": "Paired agent reruns under controlled input variants are reported. Environment reset, checkpoint restoration, and reset APIs are not established.",
+        "branching": "Prompt and numerical variants and favorable–adverse counterfactual pairs are evaluated. Branching from a saved agent or environment state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-2074139ba1cd3e88",
+      "resource_id": "paper-2074139ba1cd3e88",
+      "name": "FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.01621"
     }
   ]
 }
