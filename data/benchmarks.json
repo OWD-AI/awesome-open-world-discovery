@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -4193,6 +4193,52 @@
       "name": "Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.06414"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": null,
+      "openness": [
+        "Agents receive high-level research instructions and supporting data or files when needed; explicit methodologies and solution pathways are withheld.",
+        "Agents can use computers and the web, select methods, execute code and simulations, validate results, and produce numerical artifacts and manuscripts.",
+        "Source papers are blocked; correct answers, verifiers, rubrics, and reference solutions are withheld from the agent."
+      ],
+      "focus": "End-to-end physics research across 56 tasks and nine domains. Agents execute research workflows in cloud sandboxes and submit numerical artifacts and paper.pdf. Feedback includes results of executed computation, simulations, and analysis of supplied data. The Rydberg example uses an apparatus simulator, explicitly identified on pages 4 and 16.",
+      "limits": "The experimental research-mode label does not establish new physical measurements. New physical execution across the task set is not established in the supplied pages, so physical execution is unknown. Tasks reconstruct bounded prior projects. Each rollout has a 10-hour cap. Verifier and rubric errors remain possible; detailed manual failure auditing covers the GPT-6 Astra cohort.",
+      "training": {
+        "reward": "No policy-training reward or training run is established. The evaluation uses deterministic numerical tests and a GPT-5.6 Sol reviewer agent examining trajectories, code, outputs, and manuscripts. Passing requires every deterministic test and blocking rubric criterion. Weighted nonblocking criteria receive 0, 1, or 2 and yield a normalized quality score; any failed gate makes the final score zero (pages 5–6).",
+        "reset": "Each rollout builds a sandbox from the task environment, and each model attempts every task three times (pages 4 and 6). Exact simulator-state reset, snapshot restoration, and a training reset API are not established.",
+        "branching": "Independent repeated trials are supported. Forking, checkpoint restoration, and branching from an intermediate environment state are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-57242503914f0d84",
+      "resource_id": "paper-57242503914f0d84",
+      "name": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.06910"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Each model receives the same fixed sequence of 128 timestamped video frames, accessible throughout the dialogue.",
+        "Questions arrive strictly in dialogue order, with the model's own previous responses retained.",
+        "The evaluation provides recorded visual evidence and questions; adaptive environment actions or new measurements are not established."
+      ],
+      "focus": "In-context video memory across 326 recorded videos and 2,476 dialogue turns. Typed episodic and answer dependencies test reuse of earlier observations and responses. This evaluates analysis of recorded data, without executed scientific research experiments.",
+      "limits": "Fixed sparse frames can omit relevant evidence. Answer-chain scoring combines current errors with upstream errors, and the overall score averages overlapping subsets. The protocol measures in-context reuse; persistent learning and autonomous exploration are not established.",
+      "training": {
+        "reward": "No model-training reward is established. Evaluation grades open-ended responses with GPT-5.4 mini and extracts predicted options for multiple-choice questions. TurnAcc scores each turn; EpiDepAcc scores episodic-dependent turns; AnsDepAcc requires the current answer and all answer-dependency ancestors to be correct. Overall is the arithmetic mean of these three metrics (pages 7–8).",
+        "reset": "Each sample is a separate video dialogue with its own response history. An explicit reset API or intermediate-state restoration mechanism is not established.",
+        "branching": "The standard evaluation follows one sequential response history. An oracle-history ablation replaces earlier responses with reference answers (pages 9–10); general checkpointing or branching support is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-4d68faca4f6cd5bb",
+      "resource_id": "paper-4d68faca4f6cd5bb",
+      "name": "VideoMemBench: How Well Do MLLMs Remember in Video Conversations?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.40131"
     }
   ]
 }

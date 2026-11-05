@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-905-2563eb?style=flat-square" alt="905 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-186-0f766e?style=flat-square" alt="186 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-908-2563eb?style=flat-square" alt="908 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-188-0f766e?style=flat-square" alt="188 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -20,7 +20,7 @@
   <a href="https://owd-ai.github.io/awesome-open-world-discovery/">Research observatory ↗</a> · <a href="#what-is-owd">What is OWD?</a> · <a href="#why-owd">Why this focus?</a> · <a href="#updates">Latest papers</a> · <a href="#contents">Browse the list</a> · <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
-<p align="center"><sub>Literature checked through 2026-11-04 · Papers, author blogs, code, and benchmarks</sub></p>
+<p align="center"><sub>Literature checked through 2026-11-05 · Papers, author blogs, code, and benchmarks</sub></p>
 
 <a id="what-is-owd"></a>
 
@@ -54,7 +54,7 @@ Discovery involves deciding what to investigate, gathering evidence, testing exp
 
 **[Explore the research observatory →](https://owd-ai.github.io/awesome-open-world-discovery/#updates)**
 
-The latest 10 source-checked papers from our daily monitor · Updated 2026-11-04.
+The latest 10 source-checked papers from our daily monitor · Updated 2026-11-05.
 
 Visit the website for summaries, figures, today's updates, and the full research library.
 
@@ -62,14 +62,14 @@ Visit the website for summaries, figures, today's updates, and the full research
 | --- | --- |
 | 2026-11-04 | [Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks](https://arxiv.org/abs/2611.06414) |
 | 2026-11-04 | [Reglos: A Self-Evolving Personal Memory Agent with Recursive Self-Improvement](https://arxiv.org/abs/2611.06049) |
+| 2026-11-04 | [FrontierPhysics: Evaluating Agents for End-to-End Physics Research](https://arxiv.org/abs/2611.06910) |
 | 2026-11-04 | [EnzymeRSI: A dual-loop recursive self-improvement system for enzyme design](https://arxiv.org/abs/2611.06321) |
 | 2026-11-03 | [YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction](https://arxiv.org/abs/2611.05280) |
+| 2026-11-03 | [SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?](https://arxiv.org/abs/2611.06083) |
 | 2026-11-03 | [PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data](https://arxiv.org/abs/2611.05320) |
 | 2026-11-03 | [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](https://arxiv.org/abs/2611.04870) |
 | 2026-11-03 | [From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?](https://arxiv.org/abs/2611.05108) |
 | 2026-11-03 | [ForgeKernel: Self-Evolving Kernels Catching and Surpassing Experts and Agents](https://arxiv.org/abs/2611.04998) |
-| 2026-11-03 | [Embodied AI for Scientific Discovery: From Physical Action to Scientific Evidence](https://arxiv.org/abs/2611.04371) |
-| 2026-11-03 | [CellCanon: An Agentic Cellular World Model for Prediction, Explanation, and Observation-Driven Updating](https://arxiv.org/abs/2611.05890) |
 
 <a id="contents"></a>
 
@@ -82,9 +82,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 67 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 160 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 148 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 149 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 86 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 177 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 179 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1464,6 +1464,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yi Liu et al. · Beijing University of Posts and Telecommunications; China Telecom
 - <a id="paper-e3c5bce0180303e4"></a>**Skip the Compressor: Coding Agents Fix More Issues When They Pick Whole Files** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21073)* · [Paper](https://arxiv.org/abs/2610.21073)<br>
   Xiaocong Yang et al. · University of Illinois Urbana-Champaign
+- <a id="paper-6c5047350a90074a"></a>**SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06083)* · [Paper](https://arxiv.org/abs/2611.06083) · [Project](https://wpr001.github.io/sleuthVLM/)<br>
+  Peiran Wu et al. · University of Bristol; Ant Group; Tsinghua University
 - <a id="paper-17d0bb9aaa5e2f73"></a>**Sol-H3: Recursive Self-Improvement for MiniMax-H3 Inference Acceleration on Sol-Engine across Cloud and Edge** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.35110)* · [Paper](https://arxiv.org/abs/2609.35110) · [Code](https://github.com/NVlabs/Sana/tree/sol-engine/models/minimax_h3) · [Project](https://nvlabs.github.io/Sana/Sol-Engine/Sol-H3/)<br>
   Yitong Li et al. · NVIDIA Research
 - <a id="paper-41ccf6a94b967d3e"></a>**SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02501)* · [Paper](https://arxiv.org/abs/2611.02501) · [Project](https://stargazerx0.github.io/specpilot-project-page/) · [Code](https://github.com/StargazerX0/SpecPilot)<br>
@@ -1893,6 +1895,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Xiaxun Xie et al. · Computer Network Information Center, Chinese Academy of Sciences; National University of Singapore; Sichuan University
 - <a id="paper-72af933c20feb3a7"></a>**FrontierCS 2: A Benchmark for Computer Science R&D** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29932)* · [Paper](https://arxiv.org/abs/2610.29932) · [Code](https://github.com/FrontierCS/FrontierCS-2) · [Project](https://frontier-cs.org/)<br>
   Qiuyang Mang et al. · UC Berkeley; Princeton University; University of Waterloo; +16 institutions
+- <a id="paper-57242503914f0d84"></a>**FrontierPhysics: Evaluating Agents for End-to-End Physics Research** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06910)* · [Paper](https://arxiv.org/abs/2611.06910) · [Project](https://www.benchflow.ai/frontierphysics) · [Dataset](https://huggingface.co/collections/benchflow/frontierphysics-task-datasets)<br>
+  Bingran You et al. · BenchFlow; University of California, Berkeley; California Institute of Technology; +34 institutions
 - <a id="paper-7b88221edcfc1946"></a>**GameBoyWorlds: A Testbed for Self-Improvement in Embodied Video Games** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.32093)* · [Paper](https://arxiv.org/abs/2609.32093) · [Code](https://github.com/DhananjayAshok/GameBoyWorlds-Benchmark) · [Code](https://github.com/DhananjayAshok/GameBoyWorlds)<br>
   Dhananjay Ashok et al. · Information Sciences Institute, University of Southern California; Columbia University; University of Chicago; +2 institutions
 - <a id="paper-c8f0a1e7ad6a901d"></a>**GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22708)* · [Paper](https://arxiv.org/abs/2610.22708) · [Code](https://github.com/patronus-ai/globebench) · [Dataset](https://huggingface.co/datasets/PatronusAI/globebench)<br>
@@ -2063,6 +2067,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Jianing Yin et al. · University of Pennsylvania; University of Illinois at Urbana-Champaign; University of California, Berkeley; +2 institutions
 - <a id="paper-282f8f39baa392ae"></a>**VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26342)* · [Paper](https://arxiv.org/abs/2610.26342)<br>
   Ruotian Peng et al. · Zhejiang University; Westlake University; Alibaba Token Hub, Alibaba Group; +2 institutions
+- <a id="paper-4d68faca4f6cd5bb"></a>**VideoMemBench: How Well Do MLLMs Remember in Video Conversations?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40131)* · [Paper](https://arxiv.org/abs/2610.40131) · [Project](https://videomembench.github.io) · [Dataset](https://huggingface.co/datasets/VideoMemBench/data) · [Code](https://github.com/Oliiveralien/VideoMemBench)<br>
+  Zhengdong Hu et al. · University of Technology Sydney; The Chinese University of Hong Kong; The Hong Kong University of Science and Technology; +1 institutions
 - <a id="paper-1313ca747d97581e"></a>**VX-One: Typed, Calibrated Decision Heads for Real-Time Perimeter Triage - An empirical study of unknown-attack honesty, cascade gray zones, and calibration under drift** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30090)* · [Paper](https://arxiv.org/abs/2610.30090)<br>
   Juan S. Santillana · Independent research
 - <a id="paper-fea13ed16e4d86a0"></a>**What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.34491)* · [Paper](https://arxiv.org/abs/2610.34491) · [Code](https://github.com/KaiserWhoLearns/ReasoningEffortLLM)<br>

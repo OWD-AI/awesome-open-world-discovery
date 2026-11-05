@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**186 usage profiles** · Updated **2026-11-04**
+**188 usage profiles** · Updated **2026-11-05**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1275,6 +1275,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Length Is Cheap, Competition Is Not: Attention Predicts Context Rot in Retrieval](#paper-9e90a242ebe16adc) | Synthetic data | Offline data | Paper-described |
 | [FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting](#paper-2074139ba1cd3e88) | Real data | Analysis + tools | Paper-described |
 | [Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks](#paper-fa5cb9b528091c5c) | Synthetic data | Data analysis | Paper-described |
+| [VideoMemBench: How Well Do MLLMs Remember in Video Conversations?](#paper-4d68faca4f6cd5bb) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3185,6 +3186,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-4d68faca4f6cd5bb"></a>
+
+<details>
+<summary>VideoMemBench: How Well Do MLLMs Remember in Video Conversations? — details</summary>
+
+[Work](../README.md#paper-4d68faca4f6cd5bb) · [Source](https://arxiv.org/pdf/2610.40131)
+
+**Focus:** In-context video memory across 326 recorded videos and 2,476 dialogue turns. Typed episodic and answer dependencies test reuse of earlier observations and responses. This evaluates analysis of recorded data, without executed scientific research experiments.
+
+**Openness:** `Each model receives the same fixed sequence of 128 timestamped video frames, accessible throughout the dialogue.`, `Questions arrive strictly in dialogue order, with the model's own previous responses retained.`, `The evaluation provides recorded visual evidence and questions; adaptive environment actions or new measurements are not established.`
+
+**New physical measurements:** No
+
+**Limits:** Fixed sparse frames can omit relevant evidence. Answer-chain scoring combines current errors with upstream errors, and the overall score averages overlapping subsets. The protocol measures in-context reuse; persistent learning and autonomous exploration are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No model-training reward is established. Evaluation grades open-ended responses with GPT-5.4 mini and extracts predicted options for multiple-choice questions. TurnAcc scores each turn; EpiDepAcc scores episodic-dependent turns; AnsDepAcc requires the current answer and all answer-dependency ancestors to be correct. Overall is the arithmetic mean of these three metrics (pages 7–8). |
+| Reset | Each sample is a separate video dialogue with its own response history. An explicit reset API or intermediate-state restoration mechanism is not established. |
+| Branching | The standard evaluation follows one sequential response history. An oracle-history ablation replaces earlier responses with reference answers (pages 9–10); general checkpointing or branching support is not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -3236,6 +3260,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts](#paper-260089287fc2643d) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?](#paper-5c78ef0baf7f1e60) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Are LLM Research Agents Reliable Judges of Predictability? Evidence from Planted-Signal Worlds](#paper-57ccd229ed11ab8d) | Synthetic data | Analysis + code | Paper-described |
+| [FrontierPhysics: Evaluating Agents for End-to-End Physics Research](#paper-57242503914f0d84) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -4177,6 +4202,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Model-training rewards or parameter updates are not established. During research, agents receive results from their own executed analyses and log specifications. External evaluation measures verdict size, power and probability calibration against planted-signal and economic labels. Submitted forecasting code is refitted every 12 months on the sealed test window and compared with the expanding historical mean. An exploratory external Clark–West test uses a 5% threshold (pages 5–6, 18 and 28). |
 | Reset | Each Python call starts a fresh process while files preserve state within the run. Worlds can be regenerated from seeds, and selected Gaussian worlds are investigated three times. Resetting an ongoing investigation to a saved checkpoint is not established (pages 8, 14 and 28). |
 | Branching | Agents may evaluate multiple model specifications within a run. Separate runs compare identical datasets under different framings and repeated investigations. A tool for cloning sandbox state or branching from an intermediate checkpoint is not established. |
+
+</details>
+
+<a id="paper-57242503914f0d84"></a>
+
+<details>
+<summary>FrontierPhysics: Evaluating Agents for End-to-End Physics Research — details</summary>
+
+[Work](../README.md#paper-57242503914f0d84) · [Source](https://arxiv.org/pdf/2611.06910)
+
+**Focus:** End-to-end physics research across 56 tasks and nine domains. Agents execute research workflows in cloud sandboxes and submit numerical artifacts and paper.pdf. Feedback includes results of executed computation, simulations, and analysis of supplied data. The Rydberg example uses an apparatus simulator, explicitly identified on pages 4 and 16.
+
+**Openness:** `Agents receive high-level research instructions and supporting data or files when needed; explicit methodologies and solution pathways are withheld.`, `Agents can use computers and the web, select methods, execute code and simulations, validate results, and produce numerical artifacts and manuscripts.`, `Source papers are blocked; correct answers, verifiers, rubrics, and reference solutions are withheld from the agent.`
+
+**New physical measurements:** Unverified
+
+**Limits:** The experimental research-mode label does not establish new physical measurements. New physical execution across the task set is not established in the supplied pages, so physical execution is unknown. Tasks reconstruct bounded prior projects. Each rollout has a 10-hour cap. Verifier and rubric errors remain possible; detailed manual failure auditing covers the GPT-6 Astra cohort.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No policy-training reward or training run is established. The evaluation uses deterministic numerical tests and a GPT-5.6 Sol reviewer agent examining trajectories, code, outputs, and manuscripts. Passing requires every deterministic test and blocking rubric criterion. Weighted nonblocking criteria receive 0, 1, or 2 and yield a normalized quality score; any failed gate makes the final score zero (pages 5–6). |
+| Reset | Each rollout builds a sandbox from the task environment, and each model attempts every task three times (pages 4 and 6). Exact simulator-state reset, snapshot restoration, and a training reset API are not established. |
+| Branching | Independent repeated trials are supported. Forking, checkpoint restoration, and branching from an intermediate environment state are not established. |
 
 </details>
 

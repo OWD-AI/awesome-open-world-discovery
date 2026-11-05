@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-04T23:52:48-05:00",
-  "window_start": "2026-10-06",
-  "window_end": "2026-11-04",
+  "updated_at": "2026-11-05T00:57:08-05:00",
+  "window_start": "2026-10-07",
+  "window_end": "2026-11-05",
   "window_days": 30,
   "items": [
     {
@@ -37,6 +37,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.06049"
+        }
+      ]
+    },
+    {
+      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+      "url": "https://arxiv.org/abs/2611.06910",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "FrontierPhysics evaluates research agents on 56 projects derived from physicists' own work. It combines numerical verification with expert-authored research-quality criteria and manual trajectory audits.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original arXiv submission history gives v1 as Wednesday, 4 November 2026 at 18:56:22 UTC. This establishes the original timestamp and corrects the earlier November 3 recall hint.",
+      "review_status": "approved",
+      "relevance": "This directly evaluates autonomous scientific investigation, including literature synthesis, research planning, experimentation, result verification, and scientific communication. Its expert audits also identify failure modes in agents' discovery and verification processes.",
+      "id": "57242503914f0d84",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06910"
+        },
+        {
+          "label": "Project",
+          "url": "https://www.benchflow.ai/frontierphysics"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/collections/benchflow/frontierphysics-task-datasets"
         }
       ]
     },
@@ -77,6 +103,28 @@
         {
           "label": "Project",
           "url": "https://rowletqwq.github.io/YANAMI"
+        }
+      ]
+    },
+    {
+      "title": "SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?",
+      "url": "https://arxiv.org/abs/2611.06083",
+      "published_at": "2026-11-03",
+      "kind": "paper",
+      "summary": "SleuthVLM replaces direct audio input with timestamped speech transcripts and lets a vision-language agent investigate muted video using general tools. Results support active evidence gathering as an effective approach to long-video understanding.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata records 2026-11-04T00:00:00.000Z, consistent with the 4 November 2026 v1 stamp on page 1. The exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The harness makes autonomous evidence gathering its central contribution: an agent localizes relevant observations, revisits uncertain details, combines sources, and decides when evidence supports an answer. These are concrete discovery-system capabilities, demonstrated through video investigations.",
+      "id": "6c5047350a90074a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06083"
+        },
+        {
+          "label": "Project",
+          "url": "https://wpr001.github.io/sleuthVLM/"
         }
       ]
     },
@@ -259,6 +307,36 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.02905"
+        }
+      ]
+    },
+    {
+      "title": "VideoMemBench: How Well Do MLLMs Remember in Video Conversations?",
+      "url": "https://arxiv.org/abs/2610.40131",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "VideoMemBench evaluates contextual video memory using dialogues whose later questions depend on earlier visual episodes or answers. Its explicit dependency graphs expose failures hidden by independent-question evaluations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied metadata explicitly identifies original_published_at as 2026-11-03T00:00:00.000Z, which is preserved. The rendered page carries a v3 stamp; that revision stamp is not independently treated as evidence of the v1 submission date.",
+      "review_status": "approved",
+      "relevance": "The benchmark measures whether models retain observations and reuse earlier claims across dependent investigations. This directly tests memory and cumulative evidence use needed by discovery agents, although the evaluated setting is video conversation rather than scientific research.",
+      "id": "4d68faca4f6cd5bb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.40131"
+        },
+        {
+          "label": "Project",
+          "url": "https://videomembench.github.io"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/VideoMemBench/data"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Oliiveralien/VideoMemBench"
         }
       ]
     },
@@ -821,7 +899,7 @@
       ]
     },
     {
-      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
+      "title": "CoworkOS: Scaling Agent Coworkers for Real-world Automation",
       "url": "https://arxiv.org/abs/2611.03178",
       "published_at": "2026-11-02",
       "kind": "paper",
@@ -15051,200 +15129,6 @@
           "url": "https://arxiv.org/abs/2610.10468"
         }
       ]
-    },
-    {
-      "title": "ST-Bench: A Spatial-Temporal Benchmark for Multi-Agent System Generation on Scientific Research Tasks",
-      "url": "https://arxiv.org/abs/2610.07763",
-      "published_at": "2026-10-06",
-      "kind": "paper",
-      "summary": "ST-Bench tests whether optimized multi-agent workflows improve scientific data analysis across hydrology, agriculture, and wetland methane tasks.",
-      "source": "Codex full-text screened",
-      "date_evidence": "The supplied original arXiv Atom timestamp matches the arXiv v1 submission history.",
-      "review_status": "approved",
-      "relevance": "Directly evaluates generated scientific agent workflows, including continuous optimization feedback, held-out queries, and the cost of coordination.",
-      "id": "5bd5dfea78d8efef",
-      "links": [
-        {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2610.07763"
-        }
-      ]
-    },
-    {
-      "title": "Pretraining practitioner identifies interaction effects in autoresearch",
-      "url": "https://x.com/menhguin/status/2107677049238519958",
-      "published_at": "2026-10-06",
-      "kind": "x",
-      "summary": "Minh Nhat Nguyen argues from his pretraining experience that autoresearch benefits from close human supervision to assess interactions among changes, effects across model scales and datasets, downstream post-training consequences, and production-serving constraints.",
-      "date_evidence": "Supplied native original DOM timestamp: 2026-10-07T03:39:01.000Z, corresponding to the displayed 11:39 PM on October 6, 2026 in America/New_York. No edit label was reported.",
-      "relevance": "Identifies concrete experimental-design requirements for automated pretraining research: interaction ablations, scale transfer and production constraints.",
-      "review_status": "approved",
-      "source": "Codex primary text-and-image checked",
-      "links": [],
-      "id": "37f6c38f07ec774b"
-    },
-    {
-      "title": "OpenESM: Energy-Steered Models Are Scalable Foundation Learners",
-      "url": "https://arxiv.org/abs/2610.33005",
-      "published_at": "2026-10-06",
-      "kind": "paper",
-      "summary": "OpenESM integrates energy evaluation and language generation so that learned latent optimization can improve token prediction and transfer across tasks.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Supplied primary metadata identifies the original publication timestamp as 2026-10-07T00:00:00.000Z, consistent with the PDF's October 7 margin. Later repository announcements are not substituted for this original timestamp.",
-      "review_status": "approved",
-      "relevance": "Provides a concrete training mechanism for learned search: an energy function refines latent candidates before token generation, with transfer evaluated on reasoning and knowledge tasks. This is relevant as a discovery-training foundation, although autonomous discovery remains untested.",
-      "id": "270eaf07b93973c2",
-      "links": [
-        {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2610.33005"
-        },
-        {
-          "label": "Code",
-          "url": "https://github.com/datamllab/OpenEBFM"
-        },
-        {
-          "label": "Model",
-          "url": "https://huggingface.co/guan-wang/EBFM-DCLM-160M"
-        }
-      ]
-    },
-    {
-      "title": "Open-ended scientific discovery with Station",
-      "url": "https://dualverse.ai/open-ended-discovery.html",
-      "published_at": "2026-10-06",
-      "kind": "blog",
-      "summary": "Dualverse AI reports that Station’s six-agent research environment recovered 62.7% of evaluated findings across three interpretability tasks, versus 15.4% for Codex Multiagent-v2 and up to 20.6% for AI Scientist-v2 under matched cumulative experiment time. The team also reports exploratory findings about subliminal learning and visual hallucinations, alongside mechanisms intended to sustain investigations. Scientific judgment remains a limitation: most assessed follow-up proposals received low importance scores.",
-      "date_evidence": "Supplied original publication metadata identifies 2026-10-06, corroborated by the visible “6 October 2026” dateline on the opened [primary article](https://dualverse.ai/open-ended-discovery.html).",
-      "relevance": "A persistent environment for open-ended scientific investigation and evaluation of research outcomes.",
-      "review_status": "approved",
-      "source": "Codex primary text-and-image checked",
-      "links": [],
-      "id": "3294cd41a48c95ff"
-    },
-    {
-      "title": "MedZERO: Self-Evolving Agents for Open-Ended Medical Reasoning Through Controlled Knowledge Accumulation",
-      "url": "https://arxiv.org/abs/2610.08327",
-      "published_at": "2026-10-06",
-      "kind": "paper",
-      "summary": "MedZERO alternates an Examiner that generates medical challenges with a Reasoner that answers using external knowledge. It separates temporary generated knowledge from persistent retrieval memory to support repeated self-improvement.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Supplied arXiv Atom metadata establishes the original timestamp as 2026-10-06T13:25:55Z. The October 18 date visible on the supplied first page belongs to version 2 and is not used as the original publication date.",
-      "review_status": "approved",
-      "relevance": "Studies learning to generate new challenges, acquire external evidence, and retain selected knowledge through iterative agent co-evolution under incomplete verification.",
-      "id": "034319a912d1c23e",
-      "links": [
-        {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2610.08327"
-        },
-        {
-          "label": "Code",
-          "url": "https://github.com/IcecreamArtist/MedZERO"
-        }
-      ]
-    },
-    {
-      "title": "From Retrieval to Customer Context: Evaluating Frontier-Model Systems for Voice-of-Customer Analysis",
-      "url": "https://arxiv.org/abs/2610.09375",
-      "published_at": "2026-10-06",
-      "kind": "paper",
-      "summary": "The study compares retrieval-based, managed research, and persistent context-graph agents on customer-feedback investigations, examining how stored structure affects analytical depth and evidence quality.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Supplied primary arXiv Atom metadata verifies the original publication timestamp as 2026-10-07T03:30:22Z; the exact timestamp is preserved.",
-      "review_status": "approved",
-      "relevance": "The central comparison evaluates agents investigating unknown corpus-level themes, checking cited evidence, quantifying findings, and withholding unsupported conclusions. Its evidence-audit protocol is relevant to discovery evaluation, although the ranking is exploratory.",
-      "id": "480b56b9da41924d",
-      "links": [
-        {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2610.09375"
-        }
-      ]
-    },
-    {
-      "title": "FC-SWE: Failure-Conditioned RL for Long-Horizon Software Engineering Agents",
-      "url": "https://arxiv.org/abs/2610.07898",
-      "published_at": "2026-10-06",
-      "kind": "paper",
-      "summary": "FC-SWE extends reinforcement learning for software agents with failure-conditioned recovery attempts. It learns from failed patches and test feedback while preserving separate success labels for each attempt.",
-      "source": "Codex full-text screened",
-      "date_evidence": "The arXiv v1 submission history verifies 2026-10-06T07:44:12Z. The manuscript’s September 29 header is not the original public submission date.",
-      "review_status": "approved",
-      "relevance": "Trains agents to use diagnostic verification evidence to revise failed solutions. This directly supports learning to investigate errors and improve verified problem solving.",
-      "id": "795331a5c91b086f",
-      "links": [
-        {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2610.07898"
-        }
-      ]
-    },
-    {
-      "title": "EmbodiedSmith: Scaling Embodied Data through Recursive Self-Improvement Flywheel in Simulation",
-      "url": "https://arxiv.org/abs/2610.07969",
-      "published_at": "2026-10-06",
-      "kind": "paper",
-      "summary": "EmbodiedSmith couples simulation scene construction with executable robot-task generation. Agents use physics checks, execution evidence, and independent visual review to repair candidates and collect verified demonstrations.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Supplied arXiv Atom metadata gives 2026-10-06T08:34:28Z, independently matched by the arXiv first-version submission history.",
-      "review_status": "approved",
-      "relevance": "Builds an agent harness that generates executable environments and task plans, diagnoses failures, verifies outcomes, and retains accepted demonstrations and reusable assets for subsequent learning.",
-      "id": "fd271a5f07c0fe55",
-      "links": [
-        {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2610.07969"
-        }
-      ]
-    },
-    {
-      "title": "Contextualization of Third-Party Cloud Security Findings",
-      "url": "https://arxiv.org/abs/2610.08895",
-      "published_at": "2026-10-06",
-      "kind": "paper",
-      "summary": "A cloud-security research agent replaces static vendor severity with environment-specific assessments backed by evidence traces, then evaluates whether the decisive facts hold in production.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Supplied primary arXiv Atom metadata verifies the original publication timestamp as 2026-10-06T16:39:16Z, consistent with PDF page 1 and the primary arXiv search record.",
-      "review_status": "approved",
-      "relevance": "The agent explicitly formulates exploitation hypotheses, gathers previously unexamined environmental evidence, revises assessments, and checks decisive facts against live infrastructure. This provides a concrete hypothesis-driven investigation and verification contribution.",
-      "id": "d0f8ebef91a045e3",
-      "links": [
-        {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2610.08895"
-        }
-      ]
-    },
-    {
-      "title": "Can AI Agents Make Open-Ended Scientific Discovery? Evidence from Station",
-      "url": "https://arxiv.org/abs/2610.08927",
-      "published_at": "2026-10-06",
-      "kind": "paper",
-      "summary": "Station supports independent research agents that choose questions, conduct experiments, and share findings. Supervisor commitments and periodic reassessment improve research continuity, although scientific judgment and deeper mechanistic discoveries remain difficult.",
-      "source": "Codex full-text screened",
-      "date_evidence": "Supplied primary arXiv submission history, corroborated by the original arXiv page, establishes v1 at 2026-10-06T18:00:39Z. The manuscript's internal 5-Oct-2026 date is not the public submission timestamp.",
-      "review_status": "approved",
-      "relevance": "Directly studies autonomous scientific investigation without intermediate objective metrics, introducing mechanisms for sustained exploration and evaluating evidence-supported rediscovery.",
-      "id": "6a0287135a383c84",
-      "links": [
-        {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2610.08927"
-        },
-        {
-          "label": "Code",
-          "url": "https://github.com/dualverse-ai/station-open-reseach"
-        },
-        {
-          "label": "Dataset",
-          "url": "https://github.com/dualverse-ai/station-open-reseach_data"
-        },
-        {
-          "label": "Project",
-          "url": "https://dualverse-ai.github.io/station-open-reseach_data/"
-        }
-      ]
     }
   ],
   "paper_pages": [
@@ -15285,6 +15169,32 @@
       ]
     },
     {
+      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+      "url": "https://arxiv.org/abs/2611.06910",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "FrontierPhysics evaluates research agents on 56 projects derived from physicists' own work. It combines numerical verification with expert-authored research-quality criteria and manual trajectory audits.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original arXiv submission history gives v1 as Wednesday, 4 November 2026 at 18:56:22 UTC. This establishes the original timestamp and corrects the earlier November 3 recall hint.",
+      "review_status": "approved",
+      "relevance": "This directly evaluates autonomous scientific investigation, including literature synthesis, research planning, experimentation, result verification, and scientific communication. Its expert audits also identify failure modes in agents' discovery and verification processes.",
+      "id": "57242503914f0d84",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06910"
+        },
+        {
+          "label": "Project",
+          "url": "https://www.benchflow.ai/frontierphysics"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/collections/benchflow/frontierphysics-task-datasets"
+        }
+      ]
+    },
+    {
       "title": "EnzymeRSI: A dual-loop recursive self-improvement system for enzyme design",
       "url": "https://arxiv.org/abs/2611.06321",
       "published_at": "2026-11-04",
@@ -15321,6 +15231,28 @@
         {
           "label": "Project",
           "url": "https://rowletqwq.github.io/YANAMI"
+        }
+      ]
+    },
+    {
+      "title": "SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?",
+      "url": "https://arxiv.org/abs/2611.06083",
+      "published_at": "2026-11-03",
+      "kind": "paper",
+      "summary": "SleuthVLM replaces direct audio input with timestamped speech transcripts and lets a vision-language agent investigate muted video using general tools. Results support active evidence gathering as an effective approach to long-video understanding.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original publication metadata records 2026-11-04T00:00:00.000Z, consistent with the 4 November 2026 v1 stamp on page 1. The exact timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The harness makes autonomous evidence gathering its central contribution: an agent localizes relevant observations, revisits uncertain details, combines sources, and decides when evidence supports an answer. These are concrete discovery-system capabilities, demonstrated through video investigations.",
+      "id": "6c5047350a90074a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06083"
+        },
+        {
+          "label": "Project",
+          "url": "https://wpr001.github.io/sleuthVLM/"
         }
       ]
     },
@@ -15503,6 +15435,36 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.02905"
+        }
+      ]
+    },
+    {
+      "title": "VideoMemBench: How Well Do MLLMs Remember in Video Conversations?",
+      "url": "https://arxiv.org/abs/2610.40131",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "VideoMemBench evaluates contextual video memory using dialogues whose later questions depend on earlier visual episodes or answers. Its explicit dependency graphs expose failures hidden by independent-question evaluations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied metadata explicitly identifies original_published_at as 2026-11-03T00:00:00.000Z, which is preserved. The rendered page carries a v3 stamp; that revision stamp is not independently treated as evidence of the v1 submission date.",
+      "review_status": "approved",
+      "relevance": "The benchmark measures whether models retain observations and reuse earlier claims across dependent investigations. This directly tests memory and cumulative evidence use needed by discovery agents, although the evaluated setting is video conversation rather than scientific research.",
+      "id": "4d68faca4f6cd5bb",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.40131"
+        },
+        {
+          "label": "Project",
+          "url": "https://videomembench.github.io"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/VideoMemBench/data"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Oliiveralien/VideoMemBench"
         }
       ]
     },
@@ -16065,7 +16027,7 @@
       ]
     },
     {
-      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
+      "title": "CoworkOS: Scaling Agent Coworkers for Real-world Automation",
       "url": "https://arxiv.org/abs/2611.03178",
       "published_at": "2026-11-02",
       "kind": "paper",
