@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**188 usage profiles** · Updated **2026-11-05**
+**189 usage profiles** · Updated **2026-11-05**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1276,6 +1276,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting](#paper-2074139ba1cd3e88) | Real data | Analysis + tools | Paper-described |
 | [Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks](#paper-fa5cb9b528091c5c) | Synthetic data | Data analysis | Paper-described |
 | [VideoMemBench: How Well Do MLLMs Remember in Video Conversations?](#paper-4d68faca4f6cd5bb) | Real data | Data analysis | Paper-described |
+| [Monitor Accuracy Isn't the Answer: A Decision-Value Framework for Evaluating AI Agent Restart Monitors](#paper-583519ff11ee292e) | Executed programs + evaluators | Analysis + code | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3206,6 +3207,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | No model-training reward is established. Evaluation grades open-ended responses with GPT-5.4 mini and extracts predicted options for multiple-choice questions. TurnAcc scores each turn; EpiDepAcc scores episodic-dependent turns; AnsDepAcc requires the current answer and all answer-dependency ancestors to be correct. Overall is the arithmetic mean of these three metrics (pages 7–8). |
 | Reset | Each sample is a separate video dialogue with its own response history. An explicit reset API or intermediate-state restoration mechanism is not established. |
 | Branching | The standard evaluation follows one sequential response history. An oracle-history ablation replaces earlier responses with reference answers (pages 9–10); general checkpointing or branching support is not established. |
+
+</details>
+
+<a id="paper-583519ff11ee292e"></a>
+
+<details>
+<summary>Monitor Accuracy Isn't the Answer: A Decision-Value Framework for Evaluating AI Agent Restart Monitors — details</summary>
+
+[Work](../README.md#paper-583519ff11ee292e) · [Source](https://arxiv.org/pdf/2610.36544)
+
+**Focus:** Measures restart-monitor decision value during software issue resolution on 19 selected SymPy tasks. Agents execute commands and modify repository workspaces; hidden tests execute on candidate patches. The study combines newly executed coding trials, verifier-only patch evaluations, retrospective trace analysis and replay, and mathematical controls. These are computational software tasks rather than executed scientific research experiments.
+
+**Openness:** `Uses the versioned open-source mini-swe-agent harness.`, `Describes an accompanying sanitized analysis package containing protocols, analysis code, adapters, replay policies, tools, tests, and derived artifacts; a first-party release URL is not established by the supplied text.`, `Sanitized artifacts exclude prompts, trajectories, hidden verifier output, reference patches, local paths, and credentials.`
+
+**New physical measurements:** No
+
+**Limits:** One repository, selected cohorts, usually five attempts per task, and one model for later interventions limit generalization. The decision audit is retrospective and lacks matched prefix-conditioned intervention trials. Hidden tests provide a finite correctness specification; their results are withheld from the model, and verification overhead is excluded from model-call budgets. Independent, stable provider draws are assumed. No new physical measurements are involved.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No monitor training is performed, so a training reward is not established. Evaluation uses binary success from an external hidden fail-to-pass evaluator after every environment action, recording the first passing state. Hidden verifier output, reference patches, and completion labels are withheld from the model. Model calls are the primary budget; monetary cost and wall time are secondary measures. |
+| Reset | Fresh attempts restore the benchmark-specified repository state. A clean restart restores the original task state and uses the residual budget, with restart values estimated retrospectively from fresh attempts. The executed context-rejuvenation intervention retains the exact workspace, discards conversation history, creates a fresh model client, and supplies the issue plus deterministic workspace summaries. General arbitrary checkpoint restoration is not established. |
+| Branching | Bounded failed-branch reuse is executed through clean three-way composition of failed terminal patches and four fresh 12-call resolver attempts supplied with failed patches. Replay resamples recorded fresh attempts. Arbitrary live prefix cloning or an interactive branching API is not established; matched prefix-conditioned continuation and restart trials are absent. |
 
 </details>
 

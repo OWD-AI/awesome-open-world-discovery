@@ -30058,6 +30058,35 @@
           8
         ]
       }
+    },
+    "paper-583519ff11ee292e": {
+      "institutions": [
+        "Intuit"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        17,
+        23
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Derives an alarm-to-action identity for independent clean restarts and a criterion for compression that preserves optimal decisions. Uses simultaneous Clopper-Pearson intervals to certify continuation or restart preferences. Studies 194 model executions on 19 selected SymPy issues, with external verification after every environment action; retrospectively audits 130 executions across 156 task-time comparisons. Additional screens examine longer horizons, context resets, and failed-patch reuse.",
+      "evidence": "The analytical example holds classification accuracy at 90% while restart value ranges from a five-point loss to a 35-point gain. Empirically, an initial 2.29-point restart gain depends on one surviving failed attempt; transferring that cutoff to another model loses 42.29 points. Prospective cohorts show no positive replication, and the pooled difference is −0.21 points. None of 103 live comparisons receives a sign certificate. Context resets increase mean model cost by 56.7% without improving success; 19 patch composites and four semantic resolvers yield no verified successes.",
+      "discovery_use": "Contributes an evaluation protocol for agent progress signals and restart decisions during externally verified solution search. Its concrete discovery connection is measuring whether metacontrol preserves useful work and improves verified outcomes under limited budgets.",
+      "limits": "Evidence is restricted to selected tasks from one repository, usually five attempts per task, with later interventions using one model. The audit is retrospective and conservative; abstention does not establish equal action values or an impossibility for other estimators. No learned monitor or matched prefix-conditioned restart trial is evaluated. Independence and runtime stability are assumptions, verifier success is a finite specification, and verification overhead is excluded from model-call budgets. RestartLab is described, but no first-party release URL was verified; the supplied repository belongs to the baseline harness.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "benchmarks",
+        "rationale": "Contributes an evaluation protocol for agent progress signals and restart decisions during externally verified solution search. Its concrete discovery connection is measuring whether metacontrol preserves useful work and improves verified outcomes under limited budgets.",
+        "pdf_sha256": "2e3cbe7345c7d72a266754b80aa16597a010aa0bb4abe38cb5cd1159e0b41f80",
+        "evidence_pages": [
+          1,
+          17,
+          23
+        ]
+      }
     }
   }
 }

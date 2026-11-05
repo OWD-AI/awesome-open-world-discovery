@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-916-2563eb?style=flat-square" alt="916 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-188-0f766e?style=flat-square" alt="188 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-917-2563eb?style=flat-square" alt="917 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-189-0f766e?style=flat-square" alt="189 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 123 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 150 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 86 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 179 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 180 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1963,6 +1963,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Seohyun Lee et al. · KAIST; Korea University
 - <a id="paper-aa059e79208dfb82"></a>**MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.05398)* · [Paper](https://arxiv.org/abs/2610.05398) · [Code](https://github.com/sod1010/MMPostTrainBench)<br>
   Yuxin Liu et al. · University of Science and Technology of China; Alibaba Token Hub, Alibaba Group; University of the Chinese Academy of Sciences; +2 institutions
+- <a id="paper-583519ff11ee292e"></a>**Monitor Accuracy Isn't the Answer: A Decision-Value Framework for Evaluating AI Agent Restart Monitors** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.36544)* · [Paper](https://arxiv.org/abs/2610.36544)<br>
+  Siddharth Jain, Venkat N Vedam · Intuit
 - <a id="paper-83fe490d9dc23ecb"></a>**More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40758)* · [Paper](https://arxiv.org/abs/2610.40758) · [Code](https://github.com/yausankit/clr-bench)<br>
   Chenjie Qiu et al. · Singapore Management University; Guangdong University of Technology
 - <a id="d03"></a>**NewtonBench: Benchmarking Generalizable Scientific Law Discovery in LLM Agents** · *[ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/a0e1c2c40fc245b5fe7251ea33fbb045-Abstract-Conference.html)* · [Paper](https://arxiv.org/abs/2510.07172) · [Code](https://github.com/HKUST-KnowComp/NewtonBench)<br>
