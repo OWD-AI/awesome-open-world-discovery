@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-898-2563eb?style=flat-square" alt="898 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-901-2563eb?style=flat-square" alt="901 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-185-0f766e?style=flat-square" alt="185 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -78,9 +78,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 95 |
-| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 66 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 159 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 96 |
+| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 67 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 160 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 147 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
@@ -362,6 +362,8 @@ Each work appears once under its primary contribution; see the [classification g
   Qi Lv et al. · HIT (Shenzhen); Show Lab, NUS; Ping An Tech
 - <a id="paper-fccc1ba3d58415fb"></a>**Slot-JEPA: Object-Structured Prediction Interfaces for Latent World Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28074)* · [Paper](https://arxiv.org/abs/2610.28074) · [Code](https://github.com/KID-7391/Slot-JEPA)<br>
   Peisong Wen et al. · School of Computer Science and Technology, University of Chinese Academy of Sciences; State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences; Beijing Academy of Artificial Intelligence; +2 institutions
+- <a id="paper-c240ab3711bca186"></a>**Solv3R: 3D Looped Transformer as a Multi-view Solver** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02857)* · [Paper](https://arxiv.org/abs/2611.02857) · [Project](https://ubc-vision.github.io/solv3r/)<br>
+  Jeong-gi Kwak et al. · University of British Columbia; Wayve Labs; Simon Fraser University; +3 institutions
 - <a id="paper-9689553423421d52"></a>**State World Models: Execute the Rules, Generate the Pixels** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.26811)* · [Paper](https://arxiv.org/abs/2610.26811) · [Code](https://github.com/Zhangyr2022/StateWorldModel) · [Project](https://ivg-yanranzhang.github.io/StateWorldModel/) · [Dataset](https://huggingface.co/datasets/Louis0411/StateWorldModel)<br>
   Chan Yan Ki et al. · Department of Automation, Tsinghua University, China; GigaAI
 - <a id="paper-bcf3506533d1345c"></a>**Statistical Inference for Causal Discovery under Selection and Latent Variables via Single-Target Interventions** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.28856)* · [Paper](https://arxiv.org/abs/2609.28856)<br>
@@ -544,6 +546,8 @@ Each work appears once under its primary contribution; see the [classification g
   Nghi D. Q. Bui · Google
 - <a id="paper-966010cf5b5a964c"></a>**Triage-PiEvo: Evidence Admission for Principle-Evolving Scientific Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.14683)* · [Paper](https://arxiv.org/abs/2610.14683)<br>
   Peize Li et al. · Westlake University; Kuaishou Technology; Dalian University of Technology; +2 institutions
+- <a id="paper-0d672c9c2f3c192e"></a>**VeriSpoof: Beyond Real or Fake with One Audio LLM** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.04634)* · [Paper](https://arxiv.org/abs/2611.04634) · [Code](https://github.com/swagshaw/verispoof) · [Project](https://swagshaw.github.io/verispoof/) · [Dataset](https://huggingface.co/datasets/AustinXiao/VeriSpoof-Bench) · [HF Model](https://huggingface.co/AustinXiao/VeriSpoof-Base) · [HF Model](https://huggingface.co/AustinXiao/VeriSpoof-Plus)<br>
+  Yang Xiao, Ting Dang · The University of Melbourne
 - <a id="paper-0476a40991c9db1e"></a>**What Output-Only Review Cannot Verify: Study Contracts for Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.11754)* · [Paper](https://arxiv.org/abs/2610.11754)<br>
   Eitan Waks, Ben Glocker · Department of Computing, Imperial College London
 - <a id="paper-1a7c58d5e92ffdaa"></a>**When Does Feedback Help? Auditing Learned Voltage-Clamp Experimental Design** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27632)* · [Paper](https://arxiv.org/abs/2610.27632)<br>
@@ -701,6 +705,8 @@ Each work appears once under its primary contribution; see the [classification g
   Tonmoy Hasan et al. · Nubank
 - <a id="paper-98824c70837642db"></a>**Function-Space Temporal Self-Distillation for Policy Optimization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19687)* · [Paper](https://arxiv.org/abs/2610.19687)<br>
   Aryan Das, Arnab Bhattacharya, Vinay Kumar Verma · Indian Institute of Technology Kanpur, India
+- <a id="paper-1d8725a644ef1a23"></a>**GameVerse: A Minute-Scale Gameplay Dataset for Long-Horizon Interactive World Modeling** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37257)* · [Paper](https://arxiv.org/abs/2610.37257) · [Project](https://kangverse.github.io/GameVerse/) · [Code](https://github.com/kangverse/GameVerse) · [Dataset](https://huggingface.co/datasets/Kangverse/GameVerse)<br>
+  Kang He et al. · Alaya Lab; Shanghai Innovation Institute; School of Cyber Science and Engineering, Wuhan University; +1 institutions
 - <a id="paper-3c61df041ccddbc2"></a>**Generalized CycleGRPO for Fine-Grained Multimodal Understanding and Grounding** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29552)* · [Paper](https://arxiv.org/abs/2610.29552) · [Project](https://devinxzhang.github.io/Generalized-CycleGRPO-Page/)<br>
   CycleGRPO Team · NUS; UCAS; NTU
 - <a id="paper-0b82946374e2d1ff"></a>**GRADS: Graph-Regulated Agentic Data Synthesis with Controllable Difficulty** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21167)* · [Paper](https://arxiv.org/abs/2610.21167)<br>

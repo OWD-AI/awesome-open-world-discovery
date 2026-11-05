@@ -29443,6 +29443,105 @@
           9
         ]
       }
+    },
+    "paper-0d672c9c2f3c192e": {
+      "institutions": [
+        "The University of Melbourne"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        19,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An adapted speech encoder supplies utterance and temporal tokens to an adapter-tuned language model. Three training stages align perception, teach forensic questions, and introduce grounded rationales. Answer likelihoods provide classification scores. Counterfactual rationale training reverses stated localization and supervises the corresponding decision; evaluation holds out intervention wording and generator families.",
+      "evidence": "Plus reports 2.14% pooled detection EER across 14 public protocols. Source verification reaches 6.17% EER for unseen models of familiar architectures and 15.00% for unseen architectures. Base's rationale decision improves PartialEdit accuracy from 78.4% to 99.6%. Decisions follow paraphrased reversed localization in 99.5% of cases. These are author-computed protocol results, not official leaderboard submissions.",
+      "discovery_use": "The contribution connects unknown-source verification with independently checkable evidence and intervention-tested reasoning. Its concrete relevance is training and evaluating whether a model's conclusions depend on stated evidence, beyond ordinary deepfake classification.",
+      "limits": "Following an edited rationale establishes textual decision dependence, not that the rationale correctly describes the audio. Verification often requires unavailable ground-truth annotations or metadata. Localization IoU falls to 0.25 on numerous short edits, and degraded source pairs remain difficult. Plus misclassifies 92.9% of genuine Russian audiobook recordings at the pooled threshold, exposing substantial calibration risk. The verified repository releases inference and evaluation resources but lists training code as pending.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "sci_methods",
+        "rationale": "The contribution connects unknown-source verification with independently checkable evidence and intervention-tested reasoning. Its concrete relevance is training and evaluating whether a model's conclusions depend on stated evidence, beyond ordinary deepfake classification.",
+        "pdf_sha256": "6570aac45a7e666933d29478e1a1bb36a8e438636cc268e3798c5e22847881b4",
+        "evidence_pages": [
+          1,
+          6,
+          19,
+          20
+        ]
+      }
+    },
+    "paper-c240ab3711bca186": {
+      "institutions": [
+        "University of British Columbia",
+        "Wayve Labs",
+        "Simon Fraser University",
+        "University of Toronto",
+        "Sony Semiconductor Solutions Corporation",
+        "Sony Corporation"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The model replaces iteration-conditioned gates with constant gates, reinjects original image encodings, and normalizes state magnitude. Training combines randomly sampled computation depths, noisy or partially reset states, geometric supervision, and pretrained-model distillation. Inference supports adaptive stopping, reusable map caches, and reactivation of frozen views when new observations expose inconsistencies.",
+      "evidence": "Of 148 analysis windows, 144 meet the stopping threshold within 64 calls; 143 of those stop below five degrees rotation error. New views improve existing estimates against controls receiving equal computation without new observations. Relocalization uses 2.86 MB of cache per view. Pipelining reports 16-fold solver throughput and tenfold end-to-end throughput relative to the step-conditioned comparison, with unchanged estimate latency.",
+      "discovery_use": "Solv3R contributes a revisable world representation: retained geometric estimates incorporate new observations, correct earlier errors, and support subsequent inference. This directly addresses maintaining and updating knowledge of an incompletely observed world, although it does not select observations autonomously.",
+      "limits": "Stationarity does not guarantee convergence or correctness: a low-overlap window stabilizes at a substantially wrong reconstruction. Streaming metrics use scale alignment, and the first eight anchor frames are solved jointly. Offline accuracy is competitive rather than uniformly best. There is no active exploration or hypothesis-selection evaluation. The official repository currently contains an announcement and assets; executable code and model releases remain pending.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "causality",
+        "rationale": "Solv3R contributes a revisable world representation: retained geometric estimates incorporate new observations, correct earlier errors, and support subsequent inference. This directly addresses maintaining and updating knowledge of an incompletely observed world, although it does not select observations autonomously.",
+        "pdf_sha256": "f37fa5aa8e63b5ef8cfc722e3e4e61d3738811438acafeda70e5735780679328",
+        "evidence_pages": [
+          1,
+          5,
+          20
+        ]
+      }
+    },
+    "paper-1d8725a644ef1a23": {
+      "institutions": [
+        "Alaya Lab",
+        "Shanghai Innovation Institute",
+        "School of Cyber Science and Engineering, Wuhan University",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The pipeline segments collected gameplay, filters visual and temporal defects, reduces duplication, estimates camera poses with ViPE, and rejects unstable trajectories. A vision-language model generates event-aligned captions at four semantic levels. Evaluation compares video generators, including a fixed-backbone GameVerse fine-tuning comparison, and audits captions and trajectory consistency.",
+      "evidence": "The final dataset reports 69.7K clips and 1,655 hours, including approximately 1,358 hours of two-minute footage. On 60-second generation, HY-World fine-tuning raises WorldScore's mean from 53.33 to 55.13 and 3D consistency from 66.94 to 73.42. The first CLIP-similarity drop below 0.6 shifts from 30.4 to 37.9 seconds. A 400-clip human audit reports 5.5% caption hallucination.",
+      "discovery_use": "The primary contribution is training data for persistent, controllable world models, an explicitly relevant discovery representation capability. Its contribution supports learning extended state evolution and behavior-conditioned simulation; it is not evidence of autonomous discovery or closed-loop exploration.",
+      "limits": "Pose validation measures agreement between estimators, not ground-truth accuracy. Experiments cover 103 inputs, at most 60 seconds, and no closed-loop interaction or real-world transfer. LTX fine-tuning uses 12–15-second crops; duration, captions, geometry, and extra domain training are not independently isolated. Thus the strong claim that data rather than capacity causes rollout limits is not established. Construction prose also contains inconsistent clip counts and an earlier 30-second evaluation description. Verified releases expose metadata and derived annotations; source-video access is a separate dependency.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "learning",
+        "rationale": "The primary contribution is training data for persistent, controllable world models, an explicitly relevant discovery representation capability. Its contribution supports learning extended state evolution and behavior-conditioned simulation; it is not evidence of autonomous discovery or closed-loop exploration.",
+        "pdf_sha256": "9bfcdcc286daf62d46a8ccb424302ec9180ee2e0c4453e538deb4aca5cf7335f",
+        "evidence_pages": [
+          1,
+          6,
+          9,
+          10
+        ]
+      }
     }
   }
 }
