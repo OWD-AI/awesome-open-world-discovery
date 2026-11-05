@@ -29897,6 +29897,37 @@
           9
         ]
       }
+    },
+    "paper-6918dac91c55645b": {
+      "institutions": [
+        "The Key Laboratory of Cognition and Decision Intelligence for Complex Systems, Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Evaluates sampling breadth and interaction depth using Pass@(K,T), primarily with Qwen3-4B and Qwen3-8B. Compares matched-state actions using exact FrozenLake action values and coding unit-test scores, constructs error states, and analyzes likelihoods and training dynamics. BudgetMix uniformly samples task-group budgets at ten-percent intervals while preserving the underlying RL reward and algorithm.",
+      "evidence": "Standard RL gains shrink or reverse under tight budgets. RL produces better actions on only 46.8% of matched coding states and 42.8% of FrozenLake states, but improves substantially after injected errors. BudgetMix improves Pass@8 over full-budget RL by reported averages of 7.5, 5.3, and 4.0 percentage points at 25%, 50%, and 75% budgets while retaining strong full-budget performance.",
+      "discovery_use": "Directly informs training agents that iteratively propose actions, inspect execution feedback, verify solutions, and recover from failed attempts. BudgetMix addresses a concrete limitation of these discovery-relevant interaction loops.",
+      "limits": "Discovery relevance rests on transferable agent training mechanisms; autonomous scientific discovery is not evaluated. Reliable local scoring is concentrated in two tasks, constructed error states are proxies, and finite-sample capability expansion is empirical. Likelihood diagnostics suggest an explanation without establishing causality. Table 1 contains occasional individual regressions despite positive aggregate gains. All supplied text pages were considered; only the two supplied pages were visually inspected. The project is verified by its paper annotation and supplied HTTP check, but its contents were unavailable through the web reader.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "learning",
+        "rationale": "Directly informs training agents that iteratively propose actions, inspect execution feedback, verify solutions, and recover from failed attempts. BudgetMix addresses a concrete limitation of these discovery-relevant interaction loops.",
+        "pdf_sha256": "246a6568987e4c3b37fc2f029977202b5b6404eb463d3a6dac62131c8518010d",
+        "evidence_pages": [
+          1,
+          5,
+          8
+        ]
+      }
     }
   }
 }

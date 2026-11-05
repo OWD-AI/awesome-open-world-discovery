@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-911-2563eb?style=flat-square" alt="911 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-912-2563eb?style=flat-square" alt="912 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-188-0f766e?style=flat-square" alt="188 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -60,6 +60,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 
 | Date | Paper |
 | --- | --- |
+| 2026-11-04 | [What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?](https://arxiv.org/abs/2611.06483) |
 | 2026-11-04 | [Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks](https://arxiv.org/abs/2611.06414) |
 | 2026-11-04 | [TestBED: An Open-Source Toolkit for Bayesian Experimental Design](https://arxiv.org/abs/2611.06633) |
 | 2026-11-04 | [Reglos: A Self-Evolving Personal Memory Agent with Recursive Self-Improvement](https://arxiv.org/abs/2611.06049) |
@@ -69,7 +70,6 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-03 | [SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?](https://arxiv.org/abs/2611.06083) |
 | 2026-11-03 | [PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data](https://arxiv.org/abs/2611.05320) |
 | 2026-11-03 | [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](https://arxiv.org/abs/2611.04870) |
-| 2026-11-03 | [On the Generalization Limitation of On-Policy Distillation for Post-RL Consolidation](https://arxiv.org/abs/2611.05609) |
 
 <a id="contents"></a>
 
@@ -80,7 +80,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 96 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 68 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 161 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 162 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 122 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 149 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 86 |
@@ -885,6 +885,8 @@ Each work appears once under its primary contribution; see the [classification g
   Yecheng Wu, Song Han, Han Cai · Massachusetts Institute of Technology; NVIDIA
 - <a id="paper-ce88f69c0203ec29"></a>**WeVisOne-VL: Unified Visual Perception from Objects to Pixels** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31329)* · [Paper](https://arxiv.org/abs/2610.31329) · [Project](https://tencent.github.io/WeVisOne-VL) · [Code](https://github.com/Tencent/WeVisOne-VL)<br>
   Tianming Liang et al. · WeChat Vision, Tencent Inc.
+- <a id="paper-6918dac91c55645b"></a>**What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06483)* · [Paper](https://arxiv.org/abs/2611.06483) · [Project](https://rethinking-agentic-rl.github.io/)<br>
+  Kejian Zhu et al. · The Key Laboratory of Cognition and Decision Intelligence for Complex Systems, Institute of Automation, Chinese Academy of Sciences; School of Artificial Intelligence, University of Chinese Academy of Sciences; Tsinghua University
 - <a id="paper-608a9b8719135fd2"></a>**When Fine-Grained Credit Assignment Helps and Hurts: Multimodal Agentic Reinforcement Learning through Video Editing** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.35497)* · [Paper](https://arxiv.org/abs/2610.35497) · [Project](https://leizhao7.github.io/videoedit/) · [Code](https://github.com/leizhao7/video-editing-credit-assignment) · [HF Model](https://huggingface.co/leizhao7/VideoEdit-Qwen3.5-9B) · [HF Model](https://huggingface.co/leizhao7/VideoEdit-Qwen3.6-35B-A3B)<br>
   Lei Zhao, Zongheng Cao, Xinyu Hu · University of Pennsylvania; Philo Labs
 - <a id="paper-8741373104a1068a"></a>**When Requirements Interact: Scaling Long-Horizon Coding via Interdependent Specifications** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.40256)* · [Paper](https://arxiv.org/abs/2610.40256)<br>
