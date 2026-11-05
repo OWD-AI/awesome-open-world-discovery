@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**185 usage profiles** · Updated **2026-11-04**
+**186 usage profiles** · Updated **2026-11-04**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1274,6 +1274,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?](#paper-2468d23826d80398) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [Length Is Cheap, Competition Is Not: Attention Predicts Context Rot in Retrieval](#paper-9e90a242ebe16adc) | Synthetic data | Offline data | Paper-described |
 | [FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting](#paper-2074139ba1cd3e88) | Real data | Analysis + tools | Paper-described |
+| [Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks](#paper-fa5cb9b528091c5c) | Synthetic data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3158,6 +3159,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | A training reward or optimization loop is not established. The evaluator scores locked responses: VAL combines relative price skill and horizon accuracy; RANK combines normalized Spearman correlation and top-K overlap; EVT uses clipped Brier skill; FUND uses clipped relative-error utility. Their pooled task scores are averaged equally. CF logic adherence and CALC tolerance-based numerical Exact Match are reported separately. Resolved tasks are scored immediately; prospective forecasts are scored after resolution. |
 | Reset | Paired agent reruns under controlled input variants are reported. Environment reset, checkpoint restoration, and reset APIs are not established. |
 | Branching | Prompt and numerical variants and favorable–adverse counterfactual pairs are evaluated. Branching from a saved agent or environment state is not established. |
+
+</details>
+
+<a id="paper-fa5cb9b528091c5c"></a>
+
+<details>
+<summary>Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks — details</summary>
+
+[Work](../README.md#paper-fa5cb9b528091c5c) · [Source](https://arxiv.org/pdf/2611.06414)
+
+**Focus:** Retrospective question answering about interconnected exploration histories, including revisions, contradictory evidence, relation tracing, and dispersed information. The benchmark contains 224 synthetic dialogues and 2,018 QA instances. Experimental findings within the histories are invented rather than obtained through simulator execution, executed research experiments, or new physical measurements.
+
+**Openness:** `Fixed synthetic dialogue histories and graph-derived questions; systems construct memory, retrieve evidence, and generate answers.`, `Code and dataset availability is claimed on page 1; artifact accessibility is not established by the supplied text.`
+
+**New physical measurements:** No
+
+**Limits:** Synthetic histories may not capture real conversations. Evaluation measures memory through question answering; improved exploration decisions and actual downstream experiments are left to future work. Ground-truth exploration graphs guide benchmark construction, while LExGraph builds memory from raw dialogues without accessing those graphs.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or model-training procedure is not established. Evaluation uses token-level F1 against reference answers and GPT-4o mini version 2024-07-18 as an accuracy judge, assigning 1.0 for correct, 0.5 for partially correct, and 0.0 for incorrect answers. |
+| Reset | Environment reset support is not established. Evaluation operates on fixed dialogue and question instances. |
+| Branching | Interactive branching or checkpoint replay support is not established. Branches and revisions occur within the generated histories and memory graphs; evaluated systems retrieve and answer rather than choose new research actions. |
 
 </details>
 

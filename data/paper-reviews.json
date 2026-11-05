@@ -29542,6 +29542,135 @@
           10
         ]
       }
+    },
+    "paper-fa5cb9b528091c5c": {
+      "institutions": [
+        "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+        "Monash University",
+        "Hefei University of Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "LLMs generate typed exploration graphs, introduce revisions and reconsiderations, instantiate research tasks, and expand nodes into dialogue. Verification and curation yield 224 dialogues and 2,018 questions. LExGraph segments raw dialogue without accessing benchmark ground-truth graphs, constructs hierarchical and cross-branch edges, and combines semantic retrieval, BM25, and neighbor expansion.",
+      "evidence": "Overall accuracy reaches 63.92% with Qwen versus 61.93% for the strongest competing overall score, and 64.00% with GPT versus 63.59%. BEAM accuracy reaches 47.2% versus 43.6% for LightRAG. Aggregating numerous dispersed evidence nodes remains difficult. HippoRAG2 has higher evidence recall at larger retrieval cutoffs, while LExGraph has better ranking quality.",
+      "discovery_use": "Directly evaluates whether agents retain the hypotheses, contradictory evidence, revisions, and dependencies needed for sustained scientific exploration. Its discovery connection is explicit, although it measures retrospective question answering rather than successful investigation.",
+      "limits": "The research histories and experimental findings are synthetic. Question answering does not establish better experimental decisions or discoveries. Evaluation relies substantially on LLM judgments, and baseline retrieval budgets differ. Reported efficiency covers retrieval and answering rather than total memory construction. Only the two supplied pages were visually inspected. The author-listed repository returned 404, so no accessible artifact release was verified.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates whether agents retain the hypotheses, contradictory evidence, revisions, and dependencies needed for sustained scientific exploration. Its discovery connection is explicit, although it measures retrospective question answering rather than successful investigation.",
+        "pdf_sha256": "fedfe5e26d9ad794f34c27d0cedfcb9cfb88299c2435142e15c860b4020dbfe5",
+        "evidence_pages": [
+          1,
+          5,
+          7,
+          11
+        ]
+      }
+    },
+    "paper-5b6c6e3b78000937": {
+      "institutions": [
+        "Reglos.ai"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An append-only record tracks provenance, validity, supersession, and forgetting requests. Nightly consolidation and six retrieval routes assemble context. A coding agent proposes harness patches from failure traces; a critic from another model family screens shortcuts. After development, a fixed acceptance rule requires improvement on two persona-disjoint validation halves and limits regression with a second reader.",
+      "evidence": "With Qwen writing and answering, Reglos reaches 61.3% on PersonaMem-v2 and 84.0% on LongMemEval-S. Accepted development changes raise harness accuracy from 54.2% to 60.7%. Controls reduce but do not eliminate its advantage over competing memory systems. Gains concentrate on sensitive information and forgetting; it does not consistently lead on ordinary preferences or BEAM.",
+      "discovery_use": "Contributes a concrete harness self-improvement process: coding agents diagnose failures, propose persistent changes, and face independent criticism and evaluation. Personalization is the application, but feedback-driven improvement of the agent's own memory machinery is directly relevant.",
+      "limits": "The stricter acceptance rule was introduced after development; the reported development trajectory does not demonstrate repeated improvement under that rule. One accepted intermediate step lowered aggregate validation accuracy. LoCoMo uses full histories and therefore principally tests reader prompting. BEAM samples are small, some baseline inputs differ, and third-party preferences remain below chance. Live user corrections are a future improvement source. Only the supplied two pages were visually inspected. No accessible first-party artifact release was verified.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "open_ended",
+        "rationale": "Contributes a concrete harness self-improvement process: coding agents diagnose failures, propose persistent changes, and face independent criticism and evaluation. Personalization is the application, but feedback-driven improvement of the agent's own memory machinery is directly relevant.",
+        "pdf_sha256": "1ab0508e708d43809302633f90824c9921799cbafbacf2b24cbf4ef610e756bf",
+        "evidence_pages": [
+          1,
+          3,
+          6,
+          12
+        ]
+      }
+    },
+    "paper-156c40b2313a23f8": {
+      "institutions": [
+        "Genoria AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        11,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Tasks specify objectives, constraints, accessible evidence, and budgets. The outer loop compares versioned harness changes against a control; the inner loop develops methods when workflow repairs are insufficient. Independent scoring and adoption records distinguish proposals from consumed improvements. Computational studies use ProteinGym, ThermoMPNN, and TadA; wet-lab studies examine nomination, constrained selection, and evolutionary paths.",
+      "evidence": "Outer-loop development Spearman correlation improves by 0.044 on average across five assays. ThermoMPNN development PCC reaches 0.849462 versus 0.839677 for unmodified QwenCode; TadA reaches 0.306826 versus 0.300716. Ten of 32 non-prespecified RLuc candidates exceed twice wild-type luminescence. A3A recommendations change with substrate constraints, and measured KOD-E variants reach 31.1-fold relative apparent catalytic efficiency.",
+      "discovery_use": "Directly studies agents improving scientific workflows and algorithms, generating falsifiable changes, evaluating their adoption, and supporting experimental decisions. The concrete discovery contribution extends beyond ordinary enzyme prediction.",
+      "limits": "Headline computational gains are development-set results, and independent evolution-seed replication remains future work. Only CD19's first-place result arose from evolution; OPSD started ahead. RLuc nomination rank correlates weakly with retest rank, and its ranking defect was not repaired by the inner loop. Wet-lab studies do not demonstrate a complete multi-round campaign driven by both loops. Proposed statistical protocols and replay resources exceed the demonstrated system evaluations. Only the two supplied text pages were visually inspected; no first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "open_ended",
+        "rationale": "Directly studies agents improving scientific workflows and algorithms, generating falsifiable changes, evaluating their adoption, and supporting experimental decisions. The concrete discovery contribution extends beyond ordinary enzyme prediction.",
+        "pdf_sha256": "435a463f3ff3eda0dbfa1f366a27bef95c294d231385d7218ce65df8ad54f862",
+        "evidence_pages": [
+          1,
+          5,
+          11,
+          13
+        ]
+      }
+    },
+    "paper-19848385fe328fa5": {
+      "institutions": [
+        "Peking University",
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7,
+        10,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Agents estimate scene geometry and cameras, label uncertain physical quantities, qualify simulator skills, and compile controllers against a hidden judge with held-out initial states. A video renderer combines simulated structure with real-image appearance and generates camera views together. Automatic checks and separate reviewers admit episodes before equal-size policy-training comparisons against teleoperation and simulator domain randomization.",
+      "evidence": "Policies trained on 100 farm episodes per task achieve 93 successes in 100 original-scene trials and 87 under unseen appearance, versus 84 and 46 for teleoperation. The shared-trajectory domain-randomization baseline achieves 26 and 21. Estimated mean marginal cost is $0.80 per episode, with approximately $26 in initial adaptation and render-contract costs.",
+      "discovery_use": "Contributes an agent harness that constructs task representations from incomplete physical observations, develops controllers through simulator feedback, and independently verifies generated experience. This supports grounded learning and verification, with relevance bounded to embodied skill acquisition rather than open-ended scientific investigation.",
+      "limits": "Evaluation covers five tasks on one robot, with 20 trials per task and condition. Dynamics unidentifiable from the recording are randomized rather than recovered. Independent review still misses defects: an alternative agent admitted excessive joint speeds. Appearance robustness is not evidence of discovering new tasks or physical laws. Costs depend on a self-hosted renderer, omit calibration collection, and compare different teleoperation cost scopes. Only the supplied two pages were visually inspected. The repository is public, but DataFarm branch contents were not independently inspected.",
+      "classification_review": {
+        "date": "2026-11-04",
+        "category": "systems",
+        "rationale": "Contributes an agent harness that constructs task representations from incomplete physical observations, develops controllers through simulator feedback, and independently verifies generated experience. This supports grounded learning and verification, with relevance bounded to embodied skill acquisition rather than open-ended scientific investigation.",
+        "pdf_sha256": "fb8874d095fef933083e5cf378a80d4bd2acff786922d5497bf140c1be2066be",
+        "evidence_pages": [
+          1,
+          6,
+          7,
+          10,
+          14
+        ]
+      }
     }
   }
 }

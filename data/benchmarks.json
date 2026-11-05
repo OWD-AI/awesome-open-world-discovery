@@ -4171,6 +4171,28 @@
       "name": "FinForesight: A Diagnostic Backtesting Benchmark for Deep Research Systems in Financial Forecasting",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.01621"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed synthetic dialogue histories and graph-derived questions; systems construct memory, retrieve evidence, and generate answers.",
+        "Code and dataset availability is claimed on page 1; artifact accessibility is not established by the supplied text."
+      ],
+      "focus": "Retrospective question answering about interconnected exploration histories, including revisions, contradictory evidence, relation tracing, and dispersed information. The benchmark contains 224 synthetic dialogues and 2,018 QA instances. Experimental findings within the histories are invented rather than obtained through simulator execution, executed research experiments, or new physical measurements.",
+      "limits": "Synthetic histories may not capture real conversations. Evaluation measures memory through question answering; improved exploration decisions and actual downstream experiments are left to future work. Ground-truth exploration graphs guide benchmark construction, while LExGraph builds memory from raw dialogues without accessing those graphs.",
+      "training": {
+        "reward": "A training reward or model-training procedure is not established. Evaluation uses token-level F1 against reference answers and GPT-4o mini version 2024-07-18 as an accuracy judge, assigning 1.0 for correct, 0.5 for partially correct, and 0.0 for incorrect answers.",
+        "reset": "Environment reset support is not established. Evaluation operates on fixed dialogue and question instances.",
+        "branching": "Interactive branching or checkpoint replay support is not established. Branches and revisions occur within the generated histories and memory graphs; evaluated systems retrieve and answer rather than choose new research actions."
+      },
+      "evaluation_family": "other",
+      "id": "paper-fa5cb9b528091c5c",
+      "resource_id": "paper-fa5cb9b528091c5c",
+      "name": "Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.06414"
     }
   ]
 }

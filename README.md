@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-901-2563eb?style=flat-square" alt="901 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-185-0f766e?style=flat-square" alt="185 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-905-2563eb?style=flat-square" alt="905 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-186-0f766e?style=flat-square" alt="186 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -60,16 +60,16 @@ Visit the website for summaries, figures, today's updates, and the full research
 
 | Date | Paper |
 | --- | --- |
+| 2026-11-04 | [Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks](https://arxiv.org/abs/2611.06414) |
+| 2026-11-04 | [Reglos: A Self-Evolving Personal Memory Agent with Recursive Self-Improvement](https://arxiv.org/abs/2611.06049) |
+| 2026-11-04 | [EnzymeRSI: A dual-loop recursive self-improvement system for enzyme design](https://arxiv.org/abs/2611.06321) |
 | 2026-11-03 | [YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction](https://arxiv.org/abs/2611.05280) |
+| 2026-11-03 | [PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data](https://arxiv.org/abs/2611.05320) |
 | 2026-11-03 | [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](https://arxiv.org/abs/2611.04870) |
 | 2026-11-03 | [From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?](https://arxiv.org/abs/2611.05108) |
 | 2026-11-03 | [ForgeKernel: Self-Evolving Kernels Catching and Surpassing Experts and Agents](https://arxiv.org/abs/2611.04998) |
 | 2026-11-03 | [Embodied AI for Scientific Discovery: From Physical Action to Scientific Evidence](https://arxiv.org/abs/2611.04371) |
 | 2026-11-03 | [CellCanon: An Agentic Cellular World Model for Prediction, Explanation, and Observation-Driven Updating](https://arxiv.org/abs/2611.05890) |
-| 2026-11-03 | [Artifact-to-Capability: Diagnosing Breaks in Capability Formation of Self-Evolving Agents in a Controlled Environment](https://arxiv.org/abs/2611.04952) |
-| 2026-11-02 | [You don't need long context](https://arxiv.org/abs/2611.05306) |
-| 2026-11-02 | [What makes a theorem interesting? Operationalizing interestingness for open-ended exploration](https://arxiv.org/abs/2611.02905) |
-| 2026-11-02 | [VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks](https://arxiv.org/abs/2611.04418) |
 
 <a id="contents"></a>
 
@@ -82,9 +82,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 67 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 160 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 121 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 147 |
-| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 84 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 176 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 148 |
+| 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 86 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 177 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1422,6 +1422,8 @@ Each work appears once under its primary contribution; see the [classification g
   Jiyuan Tan, Vasilis Syrgkanis, Jose Blanchet · Stanford University
 - <a id="paper-7b8d4e7e0eaf2f48"></a>**ParetoSaddler: Pareto-Guided Optimization of Agent Harnesses for Quality and Cost** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02079)* · [Paper](https://arxiv.org/abs/2611.02079)<br>
   Xingzhi Qian et al. · University College London; Pohang University of Science and Technology; Southern University of Science and Technology; +3 institutions
+- <a id="paper-19848385fe328fa5"></a>**PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.05320)* · [Paper](https://arxiv.org/abs/2611.05320) · [Project](https://dagroup-pku.github.io/PyRUA-Lean/DataFarm) · [Code](https://github.com/DAGroup-PKU/PyRUA-Lean)<br>
+  Kewei Zhang et al. · Peking University; NVIDIA
 - <a id="paper-1ad6e160560ae715"></a>**RankEvolve: A Reliable Multi-Agent Auto-Research Harness for Evolving Ranking Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.39551)* · [Paper](https://arxiv.org/abs/2609.39551)<br>
   Zheng Chen, Linfeng Liu, Hong Li, Hong Yan · Meta
 - <a id="paper-b32311fc0e446b70"></a>**REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.42053)* · [Paper](https://arxiv.org/abs/2610.42053) · [Project](https://mikeeeeeeeeeeeeee.github.io/REA/)<br>
@@ -1592,6 +1594,8 @@ Each work appears once under its primary contribution; see the [classification g
   Min Cai et al. · University of Alberta; National University of Singapore; Kuaishou Technology; +2 institutions
 - <a id="paper-4f543aaf09b8e37b"></a>**ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.17718)* · [Paper](https://arxiv.org/abs/2610.17718) · [Project](https://pork-pay.github.io/ECG-RSI/) · [Project](https://github.com/pork-pay/ECG-RSI)<br>
   Xiaoliang Wang et al. · Zhejiang University; Ant Group; Shanghai Artificial Intelligence Laboratory; +1 institutions
+- <a id="paper-156c40b2313a23f8"></a>**EnzymeRSI: A dual-loop recursive self-improvement system for enzyme design** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06321)* · [Paper](https://arxiv.org/abs/2611.06321)<br>
+  Genoria AI Team et al. · Genoria AI
 - <a id="paper-ef48cb890dde5a10"></a>**EvoAlloc: A Self-Evolving Resource Allocation Agent for Efficient Program Evolution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.12086)* · [Paper](https://arxiv.org/abs/2610.12086)<br>
   Yanning Dai et al. · Center of Excellence for Generative AI, King Abdullah University of Science and Technology (KAUST), Thuwal, Saudi Arabia; Sakana AI, Tokyo, Japan
 - <a id="paper-636608d9746bd1e3"></a>**EvoAudio: Recursive Self-Improvement for Audio Understanding** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.27389)* · [Paper](https://arxiv.org/abs/2609.27389) · [Project](https://jensenyx.github.io/EvoAudio.github.io/)<br>
@@ -1656,6 +1660,8 @@ Each work appears once under its primary contribution; see the [classification g
   Erfan Darzi, Sree Bhargavi Balija, Sheng He · Harvard University; Massachusetts Institute of Technology; UC San Diego
 - <a id="paper-7f79a91ca4549965"></a>**Recursive Self-Improvement through Multi-Agent Self-Supervision** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.12176)* · [Paper](https://arxiv.org/abs/2610.12176) · [Code](https://github.com/SakanaAI/mass) · [Project](https://pub.sakana.ai/mass/)<br>
   Hyunin Lee et al. · UC Berkeley; Sakana AI
+- <a id="paper-5b6c6e3b78000937"></a>**Reglos: A Self-Evolving Personal Memory Agent with Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06049)* · [Paper](https://arxiv.org/abs/2611.06049)<br>
+  Sen Yang, Jiaduo Lin, Zehong Huang, Wen Liu · Reglos.ai
 - <a id="paper-dfc771d2f376c834"></a>**ReSI: Recursive Safety Improvement toward Resistant and Resilient AI** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.12233)* · [Paper](https://arxiv.org/abs/2610.12233) · [Code](https://github.com/AI45Lab/ReSI) · [HF Model](https://huggingface.co/AI45Research/ReSI-Qwen3.6-27B) · [HF Model](https://huggingface.co/AI45Research/ReSI-Ministral-3-14B-Reasoning) · [HF Model](https://huggingface.co/AI45Research/ReSI-DeepSeek-V4-Flash) · [HF Model](https://huggingface.co/AI45Research/ReSI-Safin-1-35B-A3B)<br>
   Jingnan Zheng et al. · Shanghai AI Laboratory; National University of Singapore; Shanghai Jiao Tong University; +2 institutions
 - <a id="paper-3b70b4be961ade0f"></a>**ReVision3D: Attribution-Guided Recursive Self-Improvement for 3D Medical Perception** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.32984)* · [Paper](https://arxiv.org/abs/2609.32984) · [Project](https://leeh43.github.io/ReVision3D/)<br>
@@ -2047,6 +2053,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Geyuan Wang et al. · Nanyang Technological University; Alibaba Group
 - <a id="paper-712abb20a14f30f7"></a>**Trial by Trace: Benchmarking AI Agent Harnesses for Reliability and Failure Attribution** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32285)* · [Paper](https://arxiv.org/abs/2610.32285) · [Code](https://github.com/TraceLite-AI/TraceTrial-Bench)<br>
   TraceLite AI et al. · Institute of Automation, CAS; Zhongguancun Academy; Institute of Information Engineering, CAS; +2 institutions
+- <a id="paper-fa5cb9b528091c5c"></a>**Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06414)* · [Paper](https://arxiv.org/abs/2611.06414)<br>
+  Chongyuan Dai et al. · Mohamed bin Zayed University of Artificial Intelligence (MBZUAI); Monash University; Hefei University of Technology
 - <a id="paper-1afc5db13dcf50e7"></a>**Unsatz: Evaluating Scientific Discovery Without a Given Ansatz** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03713)* · [Paper](https://arxiv.org/abs/2611.03713)<br>
   Ethan Ji, Wei Wang, Yizhou Sun · University of California, Los Angeles
 - <a id="paper-fd33ef0d1dd90a8b"></a>**UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30932)* · [Paper](https://arxiv.org/abs/2610.30932) · [Code](https://github.com/RecGPT-Team/UserArena) · [Project](https://recgpt-team.github.io/UserArena-Page) · [Dataset](https://github.com/RecGPT-Team/UserArena/blob/main/data/sessions.jsonl)<br>
