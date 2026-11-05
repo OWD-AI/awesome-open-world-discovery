@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-915-2563eb?style=flat-square" alt="915 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-916-2563eb?style=flat-square" alt="916 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-188-0f766e?style=flat-square" alt="188 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -79,7 +79,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 96 |
-| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 68 |
+| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 69 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 163 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 123 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 150 |
@@ -456,6 +456,8 @@ Each work appears once under its primary contribution; see the [classification g
   Shicheng Liu et al. · Stanford University; Databricks AI Research; University of Massachusetts Amherst
 - <a id="paper-e998d3a5dbcbbbaa"></a>**ALDER: Discovering the Laws of a World by Acting in It** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.33728)* · [Paper](https://arxiv.org/abs/2609.33728)<br>
   Teng Cao, Yu Deng, Quentin Delfosse, Kristian Kersting · Technische Universität Darmstadt; Intrinsic; German Research Center for AI; +1 institutions
+- <a id="paper-871686981e0a00df"></a>**Ask, Don't Equip: Question-Driven Coding Agents for Deep Kernel Optimization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03517)* · [Paper](https://arxiv.org/abs/2611.03517)<br>
+  Gabriele Oliaro et al. · Snowflake AI Research; Carnegie Mellon University
 - <a id="paper-20b4d715f7820d59"></a>**Auto-Research Agent on MSA Organization to Improve Protein-Protein Complex Structure Prediction** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03183)* · [Paper](https://arxiv.org/abs/2611.03183) · [Project](https://sjtusaicaar.github.io/msa-pairing-agent/)<br>
   Zilu Zhang et al. · Beijing University of Posts and Telecommunications; School of Artificial Intelligence, Shanghai Jiao Tong University; Research Institute of Intelligent Complex Systems, Fudan University; +1 institutions
 - <a id="paper-d66c8d011ed14fbb"></a>**Beyond Natural Language: An Agent-Native Language for Autonomous Science** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.25421)* · [Paper](https://arxiv.org/abs/2609.25421) · [Code](https://github.com/ARA-Labs/Lara)<br>

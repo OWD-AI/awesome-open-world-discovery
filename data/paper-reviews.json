@@ -30026,6 +30026,38 @@
           9
         ]
       }
+    },
+    "paper-871686981e0a00df": {
+      "institutions": [
+        "Snowflake AI Research",
+        "Carnegie Mellon University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An agent modifies a working CUDA seed under mechanically checked correctness and performance predicates. Human questions redirect attention across kernel execution, launch overhead, routing, and benchmark validity. The paper compares this approach with a tool-rich autonomous baseline, analyzes archived interactions, and develops Hopper and Blackwell attention kernels. Evolutionary variants use questions as mutation directives.",
+      "evidence": "On the shared 26-configuration evaluator, the steered agent reaches 1.13 times FlashAttention-3, versus approximately 0.48 to 0.50 for the autonomous baseline. Final kernels reach 1.16 times FA3 across 182 Hopper scenarios and 1.46 times FA4 across 124 paired Blackwell scenarios. Blackwell correctness covers 154 runnable scenarios, not all 182 planned scenarios. Against the fastest available implementation, including cuDNN, aggregate gains shrink to 1.10 and 1.07 times.",
+      "discovery_use": "KernelSeek explicitly directs agents to formulate hypotheses, choose measurements, challenge claimed limits, and verify candidate improvements. This is a concrete method for algorithmic discovery, supported by working artifacts and a candidly limited case study.",
+      "limits": "The comparison has one run per arm, different frontends, human systems expertise, and prior work benefiting the steered arm. Trace associations do not isolate the causal effect of questions. Both campaigns concern attention; replacing the human with the bank and discovery without a faster reference remain untested. Seventy-two public-source bank entries are untested. Supplied full text covers pages 1 through 16 of 29; later appendices were not exhaustively reviewed. No first-party release destination was verified; the supplied CUTLASS link is a cited baseline and is omitted.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "sci_methods",
+        "rationale": "KernelSeek explicitly directs agents to formulate hypotheses, choose measurements, challenge claimed limits, and verify candidate improvements. This is a concrete method for algorithmic discovery, supported by working artifacts and a candidly limited case study.",
+        "pdf_sha256": "27d48e4bf23f6bb6c0cb9f4717fe1661e2d46ae9a80c7de90c6fe01071a55aaa",
+        "evidence_pages": [
+          1,
+          3,
+          4,
+          8
+        ]
+      }
     }
   }
 }
