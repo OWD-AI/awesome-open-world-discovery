@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-912-2563eb?style=flat-square" alt="912 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-914-2563eb?style=flat-square" alt="914 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-188-0f766e?style=flat-square" alt="188 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -64,12 +64,12 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-04 | [Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks](https://arxiv.org/abs/2611.06414) |
 | 2026-11-04 | [TestBED: An Open-Source Toolkit for Bayesian Experimental Design](https://arxiv.org/abs/2611.06633) |
 | 2026-11-04 | [Reglos: A Self-Evolving Personal Memory Agent with Recursive Self-Improvement](https://arxiv.org/abs/2611.06049) |
+| 2026-11-04 | [PyRUA-REAL: Robot Exploration and Adaptive Learning through RSI in the Real World](https://arxiv.org/abs/2611.06768) |
 | 2026-11-04 | [FrontierPhysics: Evaluating Agents for End-to-End Physics Research](https://arxiv.org/abs/2611.06910) |
 | 2026-11-04 | [EnzymeRSI: A dual-loop recursive self-improvement system for enzyme design](https://arxiv.org/abs/2611.06321) |
 | 2026-11-03 | [YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction](https://arxiv.org/abs/2611.05280) |
 | 2026-11-03 | [SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?](https://arxiv.org/abs/2611.06083) |
 | 2026-11-03 | [PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data](https://arxiv.org/abs/2611.05320) |
-| 2026-11-03 | [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](https://arxiv.org/abs/2611.04870) |
 
 <a id="contents"></a>
 
@@ -81,8 +81,8 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 96 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 68 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 162 |
-| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 122 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 149 |
+| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 123 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 150 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 86 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 179 |
 
@@ -1097,6 +1097,8 @@ Each work appears once under its primary contribution; see the [classification g
   Dannong Wang et al. · University of Central Florida; Universit´e de Montr´eal
 - <a id="paper-9752f967ba715846"></a>**PsyEvo: A Personalized Counseling Agent That Self-Evolves at Test Time** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.02885)* · [Paper](https://arxiv.org/abs/2610.02885) · [Code](https://github.com/Lingxi-mental-health/PsyEvo)<br>
   Yuting Yan et al. · Lyncia Lab; Tianqiao and Chrissy Chen Institute
+- <a id="paper-2509537decd965f0"></a>**PyRUA-REAL: Robot Exploration and Adaptive Learning through RSI in the Real World** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06768)* · [Paper](https://arxiv.org/abs/2611.06768) · [Project](https://dagroup-pku.github.io/PyRUA-Lean/real/)<br>
+  Qiang Wang et al. · Peking University; EngineAI; National University of Singapore
 - <a id="paper-7060bf3392645395"></a>**Recursive Self-Improvement of Exoskeleton Assistance Policies through Human-in-the-Loop Feedback** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.01581)* · [Paper](https://arxiv.org/abs/2611.01581)<br>
   Muyuan Ma et al. · University of Chinese Academy of Sciences; State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences
 - <a id="paper-cb72119b3b1f3079"></a>**Recursive Self-Improvement of Visuomotor Policies through Local Recovery Supervision** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.05151)* · [Paper](https://arxiv.org/abs/2610.05151)<br>
@@ -1380,6 +1382,8 @@ Each work appears once under its primary contribution; see the [classification g
   Alan-Barsag Gazzaev, Alexey Gavrilov, Sergey Muravyov, Ilya Makarov · ITMO University; HSE University
 - <a id="paper-bd5dfa376cbe2ce7"></a>**HiSTEVE 1.0: Harnessing Human-Interface VLA Agents for Open-World Games** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31162)* · [Paper](https://arxiv.org/abs/2610.31162)<br>
   Zecong Tang et al. · The University of Hong Kong; Zhejiang University; Fudan University; +2 institutions
+- <a id="paper-4c0a9cb2a14be654"></a>**Hybrid Computer Use: A Unified Programmatic, Semantic, and Visual Interface for General Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.41432)* · [Paper](https://arxiv.org/abs/2610.41432) · [Code](https://github.com/microsoft/Hybrid-Computer-Use) · [Project](https://microsoft.github.io/Hybrid-Computer-Use)<br>
+  Haoqing Wang et al. · Microsoft Research; Fudan University; Tsinghua University; +1 institutions
 - <a id="paper-52de31b79b695201"></a>**IF-MAP: Influence-Function-Inspired Agent Prioritization in Multi-Agent Systems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24383)* · [Paper](https://arxiv.org/abs/2610.24383) · [Code](https://github.com/s1412/IF-MAP)<br>
   Jie Mao et al. · The Chinese University of Hong Kong, Shenzhen; Harbin Institute of Technology; School of Engineering and Applied Sciences, Harvard University
 - <a id="paper-50201f413f6c1220"></a>**Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30755)* · [Paper](https://arxiv.org/abs/2610.30755) · [Code](https://github.com/Litmeb/RAW-RAG)<br>

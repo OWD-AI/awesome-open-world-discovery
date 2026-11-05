@@ -29928,6 +29928,73 @@
           8
         ]
       }
+    },
+    "paper-2509537decd965f0": {
+      "institutions": [
+        "Peking University",
+        "EngineAI",
+        "National University of Singapore"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A researcher selects experimental objectives, approaches, stopping criteria, and relevant experience; an engineer implements programs, conducts trials, and reports evidence and failures. Evaluation covers eight physical manipulation tasks, development histories, feedback-interface comparisons, task-variation specifications, cross-task skill transfer, deployment costs, and 42 RoboDojo tasks.",
+      "evidence": "Seven physical tasks acquire programs that execute without runtime language-model calls. The reported 91.1% physical-task average aggregates development attempts and includes assisted Ethernet insertion. Across revisions, stacking cycle time falls from 285.3 to 156.0 seconds. Retained primitive skills increase mean success on eight new tasks from 21.3% to 40.0%. Video and joint feedback achieve 54.2% held-out success versus 15.3% with basic outcomes after five revisions. Figures and the final table report 84.42% capability-averaged RoboDojo success.",
+      "discovery_use": "Directly studies how agents acquire capabilities through physical experiments, diagnose failures, revise programs, and retain knowledge and skills for subsequent tasks. This is a concrete contribution to discovery through feedback and accumulated experience.",
+      "limits": "Development success does not estimate one frozen program's reliability. Ethernet insertion records 0/4 scripted successes versus 10/17 assisted successes, and human guidance contributes to some discoveries. Several comparisons confound interventions with continued exploration; feedback conditions have only one development session per task. RoboDojo comparisons use different or unspecified seeds. Reporting conflicts remain: the introduction gives 84.82% instead of 84.42%, and page 10 capability values disagree with the final table. These prevent confident interpretation of capability-specific gains, but do not undermine the paper's collection relevance.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "adaptation",
+        "rationale": "Directly studies how agents acquire capabilities through physical experiments, diagnose failures, revise programs, and retain knowledge and skills for subsequent tasks. This is a concrete contribution to discovery through feedback and accumulated experience.",
+        "pdf_sha256": "174bff6dbaee4ce86a017ca30dbb4a36cd0107882d763516e24ac26be52b663f",
+        "evidence_pages": [
+          1,
+          4,
+          8,
+          14
+        ]
+      }
+    },
+    "paper-4c0a9cb2a14be654": {
+      "institutions": [
+        "Microsoft Research",
+        "Fudan University",
+        "Tsinghua University",
+        "Microsoft Research Asia"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Two desktop tools expose accessibility trees and screenshot-based interaction alongside an existing agent's programmatic tools. Live target and layout guards reject stale actions; action batches can include verification waits and return accessibility differences. A supplementary usage skill guides channel selection and recovery. Evaluation compares interfaces within matched model harnesses, removes components, analyzes trajectories, and tests multiple desktop platforms.",
+      "evidence": "On OSWorld 2.0, HCU reaches 72.37% Partial with GPT-6 Astra versus 68.82% for matched CUA Driver, using 29.81% fewer tool calls at nearly identical cost. Across four OSWorld 1.0 backbones, score gains range from 2.94 to 12.90 percentage points. Removing accessibility reduces GPT-5.4 performance by 2.79 points. The usage skill reduces malformed-call rejections from 17.37% to 1.36%.",
+      "discovery_use": "Contributes an evaluated agent interface with concrete mechanisms for observing unfamiliar application state, checking action effects, and recovering from invalid evidence. These mechanisms support reliable knowledge verification and sustained agent investigation, making it relevant systems infrastructure even though the benchmarks are desktop workflows rather than scientific discovery.",
+      "limits": "The evidence concerns task execution and local state verification, not discovery of scientific knowledge. Accessibility coverage depends on application support, and layout guards cannot establish every semantic postcondition. Removing GUI does not clearly lower score within run variability, although it increases steps. Some leaderboard comparisons mix releases or use external reports; the matched CUA Driver comparison is stronger evidence. Evaluated and released interfaces differ, with separate released-version evaluations. Claude's elapsed time increases despite score and cost gains, so efficiency improvements are not universal.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "systems",
+        "rationale": "Contributes an evaluated agent interface with concrete mechanisms for observing unfamiliar application state, checking action effects, and recovering from invalid evidence. These mechanisms support reliable knowledge verification and sustained agent investigation, making it relevant systems infrastructure even though the benchmarks are desktop workflows rather than scientific discovery.",
+        "pdf_sha256": "3b383495866c103b7319da516f6fbf1b2b5dd336c55664d848c7658e0ea64bf2",
+        "evidence_pages": [
+          1,
+          4,
+          6,
+          9
+        ]
+      }
     }
   }
 }
