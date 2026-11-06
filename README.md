@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-931-2563eb?style=flat-square" alt="931 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-932-2563eb?style=flat-square" alt="932 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-193-0f766e?style=flat-square" alt="193 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -82,7 +82,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 69 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 167 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 123 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 153 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 154 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 87 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 184 |
 
@@ -1372,6 +1372,8 @@ Each work appears once under its primary contribution; see the [classification g
   Chuan Zou et al. · University of Pennsylvania; Brown University; Nanyang Technological University; +2 institutions
 - <a id="paper-f8f021c90e8a1d58"></a>**Evolve Together, Fall into Place: How Social Scaffolding Shapes Self-Evolving Multi-Agent Systems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19799)* · [Paper](https://arxiv.org/abs/2610.19799)<br>
   Seojin Hwang, Youngmin Choi, Hwanhee Lee · Chung-Ang University
+- <a id="paper-4c2f161d23461348"></a>**EvoMemState: Evolving Memory State for Personal Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03743)* · [Paper](https://arxiv.org/abs/2611.03743) · [Code](https://github.com/XMUDeepLIT/EvoMemState)<br>
+  Zhishang Xiang et al. · Xiamen University; Nanyang Technological University; University of British Columbia; +2 institutions
 - <a id="paper-25c116ef8f23e7f4"></a>**EvoSteer: Online Self-Evolving Graph Orchestration via Reference-Anchored Credit Assignment** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.38661)* · [Paper](https://arxiv.org/abs/2609.38661) · [Code](https://github.com/beita6969/evosteer) · [HF Model](https://huggingface.co/beita6969/EvoSteer-9b)<br>
   Mingda Zhang et al. · The Chinese University of Hong Kong, Shenzhen; Dalian University of Technology; Fudan University; +3 institutions
 - <a id="paper-d03c4239f891aa34"></a>**Federation over Harness** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.24007)* · [Paper](https://arxiv.org/abs/2610.24007) · [Code](https://github.com/dixiyao/FoH)<br>

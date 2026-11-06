@@ -30533,6 +30533,39 @@
           11
         ]
       }
+    },
+    "paper-4c2f161d23461348": {
+      "institutions": [
+        "Xiamen University",
+        "Nanyang Technological University",
+        "University of British Columbia",
+        "University of Waterloo",
+        "Jilin University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An incrementally constructed ontology retains atomic facts and tracks validity, scope, provenance, supersession, and unresolved conflict. Retrieval expands semantic seeds through relations. A separate Qwen3-4B policy is trained offline with GRPO on approximately 60,000 constructed instances, using answer-quality improvement over a frozen agent without guidance as reward. Evaluation uses two response backbones and four memory-use or dialogue-recall benchmarks.",
+      "evidence": "MemSyco accuracy reaches 57.6% with Qwen3-8B and 58.9% with GPT-4o-mini, improving over the strongest respective baselines by 12.2 and 5.9 percentage points. Removing relational states lowers the Qwen overall score from 59.9 to 55.4; removing learned reasoning states lowers it to 53.0. Generated states also improve six alternative memory systems, though gains vary. Results support evidence application beyond retrieval alone, without establishing universal superiority across every metric.",
+      "discovery_use": "The paper contributes an agent memory mechanism for retaining provenance, recovering conflicting or superseding evidence, and learning how evidence should govern current reasoning. This concretely supports knowledge verification and retained experience in discovery systems, although autonomous discovery itself is not evaluated.",
+      "limits": "Evaluation is limited to text histories and benchmark responses, without scientific investigations or live lifelong deployment. Policy learning occurs offline, so evolving stored memory should not be interpreted as demonstrated continuous online policy improvement. Complete-evidence accuracy uses different question subsets across systems. Some guidance comparisons show regressions, particularly for recall. The verified repository contains implementation code but does not bundle training data or model weights.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "systems",
+        "rationale": "The paper contributes an agent memory mechanism for retaining provenance, recovering conflicting or superseding evidence, and learning how evidence should govern current reasoning. This concretely supports knowledge verification and retained experience in discovery systems, although autonomous discovery itself is not evaluated.",
+        "pdf_sha256": "8d92f7dd8ca1de068c7dff75f8323d616d736341c2d8fbf97995436aeed2801a",
+        "evidence_pages": [
+          1,
+          5,
+          15
+        ]
+      }
     }
   }
 }
