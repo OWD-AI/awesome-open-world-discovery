@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-935-2563eb?style=flat-square" alt="935 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-936-2563eb?style=flat-square" alt="936 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-194-0f766e?style=flat-square" alt="194 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -82,7 +82,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 69 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 167 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 124 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 155 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 156 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 87 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 185 |
 
@@ -1552,6 +1552,8 @@ Each work appears once under its primary contribution; see the [classification g
   Koutian Wu, Zesen Huang, Hejia Geng · The University of Texas at Austin; University of California, Los Angeles; University of Oxford
 - <a id="paper-81e562d86820e0f8"></a>**What It Is, Not What It Says: Securing Agentic Browsing Interactions with Web Semantics** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.22697)* · [Paper](https://arxiv.org/abs/2610.22697) · [Code](https://github.com/llm-platform-security/intact) · [Dataset](https://huggingface.co/datasets/umariqbal/web-agent-attack-benchmark)<br>
   Umar Iqbal · Washington University in St. Louis
+- <a id="paper-ccd57f953daec195"></a>**Why Pay for Long Reasoning When Rewrite Do Trick? Causal Effects of Reasoning History Compaction on Future Generation and Agent Cost** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03852)* · [Paper](https://arxiv.org/abs/2611.03852) · [Code](https://github.com/DebelToni/ShortReasoning)<br>
+  Anton Hristov · Technological School Electronic Systems
 - <a id="paper-097e9580778f8999"></a>**Your Policy Is Secretly a Harness: The Decision Geometry of Agent Interfaces** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37255)* · [Paper](https://arxiv.org/abs/2610.37255) · [Code](https://github.com/2020-qqtcg/HRP)<br>
   Jian Mu, Ruibo Shen, Yao Shu · The Hong Kong University of Science and Technology (Guangzhou); The Hong Kong University of Science and Technology
 - <a id="paper-ef09ae7b3870a9b3"></a>**YouRA: A Persistent-State Architecture for Evidence-Traceable Autonomous Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.01097)* · [Paper](https://arxiv.org/abs/2610.01097) · [Code](https://github.com/PrayPrey/Your-Research-Agent)<br>
