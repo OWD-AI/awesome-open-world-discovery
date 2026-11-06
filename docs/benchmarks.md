@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**190 usage profiles** · Updated **2026-11-05**
+**193 usage profiles** · Updated **2026-11-06**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1277,6 +1277,8 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks](#paper-fa5cb9b528091c5c) | Synthetic data | Data analysis | Paper-described |
 | [VideoMemBench: How Well Do MLLMs Remember in Video Conversations?](#paper-4d68faca4f6cd5bb) | Real data | Data analysis | Paper-described |
 | [Monitor Accuracy Isn't the Answer: A Decision-Value Framework for Evaluating AI Agent Restart Monitors](#paper-583519ff11ee292e) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma](#paper-4090c8c18813ea7e) | Real data | Data analysis | Paper-described |
+| [VisSearch-Bench: Evaluating Long Horizon Visual Search in Multimodal Agents](#paper-2fa2fcaef01f9bc8) | Real data | Analysis + tools | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3233,6 +3235,52 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-4090c8c18813ea7e"></a>
+
+<details>
+<summary>NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma — details</summary>
+
+[Work](../README.md#paper-4090c8c18813ea7e) · [Source](https://arxiv.org/pdf/2611.08369)
+
+**Focus:** Guideline knowledge and application, image grounding, case planning, longitudinal revision, joint patient-level correctness, and consultation quality. Main CarePath questions are answered independently using supplied clinical context, predicted pathology/T-stage labels, and reference stages where required (pages 4–6 and 20).
+
+**Openness:** `Tasks use fixed guideline questions, clinical vignettes, diagnostic images, and retrospective patient records.`, `Consultation tasks allow free-text responses scored against case-specific rubrics.`, `Separate serial controls compare persistent and stateless interaction over fixed clinical questions.`
+
+**New physical measurements:** No
+
+**Limits:** The benchmark uses recorded clinical evidence and expert-authored materials; model decisions do not generate new patient outcomes or physical measurements. It is not an autonomous clinical simulator. Limitations include primarily single-center retrospective records, assigned pathology in 75 CarePath episodes, model-informed difficulty selection, class imbalance, episode-length effects, and limited physician calibration coverage (pages 9–10 and 16–17).
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or policy-training procedure is not established. Evaluation uses adjudicated reference answers, task-specific accuracy, all-turn success, Care accuracy, and Strict joint pathology/T-stage/care correctness. Consultation scoring adds weighted satisfied requirements, deducts two points for major errors and one for minor errors, floors at zero, and normalizes to 0–100. The primary consultation judge is GPT-OSS-120B, with physician calibration audits (pages 5–8). |
+| Reset | Main care questions are evaluated independently, and separate controls compare persistent versus stateless conversation (pages 5 and 20). A resettable clinical environment or training reset API is not established. |
+| Branching | Matched controls replace image findings or alter history presentation while holding clinical questions fixed (pages 8–9 and 20). Action-dependent patient-state branching, counterfactual treatment execution, and simulator state cloning are not established. |
+
+</details>
+
+<a id="paper-2fa2fcaef01f9bc8"></a>
+
+<details>
+<summary>VisSearch-Bench: Evaluating Long Horizon Visual Search in Multimodal Agents — details</summary>
+
+[Work](../README.md#paper-2fa2fcaef01f9bc8) · [Source](https://arxiv.org/pdf/2611.04894)
+
+**Focus:** Long-horizon visual information gathering and integration across 204 tasks. Tool feedback consists of retrieved titles, snippets, URLs, webpage text, images, source metadata, and crops. ReAct permits up to 30 search rounds, 60 evidence-tool calls, four calls per round, and 20 total images; Direct Answer uses no tools (pages 6 and 11).
+
+**Openness:** `Fixed human-authored questions allow adaptive searches over the open web and alternative evidence-gathering paths.`, `ReAct agents can use web search, webpage reading, image search, reverse image search, and image cropping.`, `Reference answers, scoring rules, and reference search trajectories remain private during inference.`
+
+**New physical measurements:** No
+
+**Limits:** The task set and reference annotations are fixed, while retrieval uses live Serper and SerpApi services. This evaluates information seeking rather than executed scientific research experiments or new physical measurements. Each configuration is evaluated once per task. Body and appendix descriptions differ on critical-state scoring; the explicit scoring prompts evaluate final-answer content, so Process Score does not establish faithful reasoning or evidence use (pages 18–22).
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or policy-training procedure is not established. Evaluation uses separate semantic-judge calls for binary complete-answer Accuracy and task-specific partial-credit Process Score. The evaluator scores final_answer rather than the intermediate answer list or search trace. Partial-credit rules can use row-matching F1 or weighted subquestion scores (pages 18–20). |
+| Reset | Each task starts from a fresh context, and the first complete response is evaluated as Pass@1 (page 11). Resetting the external web to a fixed snapshot or guaranteeing deterministic tool replay is not established. |
+| Branching | Agents may pursue different search paths and compare multiple candidates within their budgets. Explicit context-state forking, checkpoint restoration, and a training-time branching API are not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -3286,6 +3334,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [Are LLM Research Agents Reliable Judges of Predictability? Evidence from Planted-Signal Worlds](#paper-57ccd229ed11ab8d) | Synthetic data | Analysis + code | Paper-described |
 | [FrontierPhysics: Evaluating Agents for End-to-End Physics Research](#paper-57242503914f0d84) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance](#paper-8038b228ad5a266b) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [Scientist World: Grow a Research World for AI-Scientists](#paper-6378d95e4d1259aa) | Executed programs + evaluators | Budgeted pool queries | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -4273,6 +4322,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Pages 7–9 describe 45 evaluation dimensions, including 37 scored dimensions rated 0–4 across five equally weighted categories. Pre-veto quality ranges from 0 to 100; failure of any of 15 vetoes makes the score zero. Acceptance additionally requires user satisfaction and complete grading. Programs check numerical and temporal properties, while an LLM judges semantics. After each attempt, agents receive dimension scores and permitted evidence plus per-turn program scores; reasons that would disclose hidden strategy information are withheld. The learning experiment edits persistent memory from this feedback. A model-weight training reward or optimization algorithm is not established. |
 | Reset | Pages 8–9 establish independent baseline sessions with memory disabled and three attempts per task. Each session allows up to six rounds of 300 seconds. Tasks may be attempted again; the learning configuration explicitly retains and edits memory across sessions. Exact workspace reset semantics and deterministic replay are not established. |
 | Branching | Checkpoint cloning, within-session forks and restoration to an intermediate state are not established. Independent repeated sessions and reproducible seeded task generation are described. |
+
+</details>
+
+<a id="paper-6378d95e4d1259aa"></a>
+
+<details>
+<summary>Scientist World: Grow a Research World for AI-Scientists — details</summary>
+
+[Work](../README.md#paper-6378d95e4d1259aa) · [Source](https://arxiv.org/pdf/2611.08478)
+
+**Focus:** Execution-grounded improvement of reproduced empirical AI research. Agents revise methods, run computational experiments, and receive measured scores and logs. Visible evaluation supports development; held-out evaluation checks generalization. The reported model comparison uses ten lower-compute environments from the 1,000-environment collection (pages 4–9 and 38).
+
+**Openness:** `Agents implement and test alternative empirical AI methods within task-specific problem, target, direction, and constraint files.`, `Improve mode provides the reproduced source method; innovate mode withholds source code and requires a method from scratch.`, `The paper claims release of environments and research traces; public accessibility is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** Feedback comes from executed computational experiments using task datasets, rather than new physical measurements. Experiments may be reduced in scale. Scoring depends on reproduced references, metric weights, and a frozen frontier normalization cohort. Automated verification does not establish human-audited scientific fidelity. Detailed evaluation and training appendices are mostly absent from the supplied pages.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Page 11 describes supervised training on 1,000 trajectory-derived task-and-idea examples, followed by off-policy GRPO on 1,500 already-scored ideas. Rewards use measured execution outcomes, with advantages relative to other ideas for the same task. The environment evaluator measures weighted signed gains over the reproduced source method; FNI normalizes these using a frozen frontier cohort (page 5). Evaluation averages visible and held-out FNI (page 9). Held-out ideation assessment uses one fixed frontier implementer. The exact GRPO reward transformation is not established by the supplied pages. |
+| Reset | Each evaluation trial starts from a fresh workspace and runs one bounded agent session through reason-run-feedback turns (page 38). Fresh-clone rebuilding is checked during packaging (page 4). A training-time reset API or deterministic replay guarantee is not established. |
+| Branching | Construction supports milestone rollback and resumption from checkpoints (pages 3 and 7). Research attempts preserve version-controlled development histories (page 11). Explicit scientist-session state cloning, counterfactual branching, or a training-time branching API is not established. |
 
 </details>
 

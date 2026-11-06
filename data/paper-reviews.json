@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -30274,6 +30274,263 @@
           1,
           3,
           12
+        ]
+      }
+    },
+    "paper-e4aca25b28aa89dd": {
+      "institutions": [
+        "DIVISION OF APPLIED MATHEMATICS, BROWN UNIVERSITY"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Each round launches ten swarms of 45 agents with refinement, hybridization, exploration, or fresh-start roles. Agents take 40 latent steps; cosine-distance filtering retains 30 per swarm. Summarizers read concatenated, position-adjusted KV caches and generate programs. Deterministic evaluators score candidates, while a separate agent tunes numerical parameters. Experiments compare three frameworks across 21 problems, three Qwen3 sizes, and three seeds under matched per-model hardware and one-hour budgets.",
+      "evidence": "Reported average scores exceed OpenEvolve, ShinkaEvolve, and CodeEvolve with every tested model. Qwen3 8B scores 0.804 versus 0.693, 0.642, and 0.700. Median times to baseline one-hour scores range from 3–8 minutes across models. Best runs improve three published AlphaEvolve constructions, without establishing new world records. Ablations show only a modest final-score advantage over short text messages, and swarm-size benefits largely disappear later in search.",
+      "discovery_use": "Directly contributes an agent coordination and evolutionary search system for discovering mathematical constructions and improving scientific programs, with executable evaluators closing the search loop.",
+      "limits": "Requires explicit evaluators, an initial program, shared model weights across agents and summarizers, and standard attention. KV memory scales with agents, steps, and layers. Default baseline configurations and differing search implementations limit attribution of gains specifically to latent communication. Mathematical comparisons require corrected evaluator definitions and feasibility tolerances. The author-listed repository returned 404, so no code release is retained. Results were reviewed without independent reproduction.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "systems",
+        "rationale": "Directly contributes an agent coordination and evolutionary search system for discovering mathematical constructions and improving scientific programs, with executable evaluators closing the search loop.",
+        "pdf_sha256": "eb34aaf8df22354f8ce2770a9152c2516c14fa53815be5b4a3f6636a65a480a4",
+        "evidence_pages": [
+          1,
+          5,
+          6,
+          10
+        ]
+      }
+    },
+    "paper-6378d95e4d1259aa": {
+      "institutions": [
+        "Princeton University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Rotating reproducer, designer, packager, and independent verifier agents build environments through milestone checks and rollback. Paper selection favors empirical AI methods that are feasible under limited compute. Frontier-Normalized Improvement measures gains over reproduced source methods. Sixteen models attempt ten environments in improve and innovate modes. Qwen3-8B receives supervised training and off-policy GRPO on scored ideas, evaluated through a fixed frontier implementer on ten held-out papers.",
+      "evidence": "The paper reports 1,000 environments, 99% reproduction within its acceptance margin, and roughly 6,400 hours of research traces. On the ten-environment evaluation cohort, 84% of improve attempts and 74% of innovate attempts beat reproduced source methods. Model rankings differ between modes. Training raises median implemented-idea FNI from 41 to 84 to 106; this demonstrates improved ideation with a fixed executor rather than autonomous end-to-end research parity.",
+      "discovery_use": "Creates executable, open-ended research environments and protocols for measuring whether scientific agents improve reproduced research, with an additional experiment on learning research ideation from execution outcomes.",
+      "limits": "The headline success rates cover ten lower-compute environments, not all 1,000. Selection concentrates on feasible empirical AI optimization, and experiments may be reduced in scale. Automated cross-checking does not establish human-audited scientific fidelity. FNI depends on the reproduced reference, metric weights, and frozen normalization cohort. Claimed continual growth is not a longitudinal demonstration. Review was targeted to supplied body sections; detailed scoring and training appendices were not supplied. The dataset and environment collection destinations were not verified as publicly accessible releases.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "benchmarks",
+        "rationale": "Creates executable, open-ended research environments and protocols for measuring whether scientific agents improve reproduced research, with an additional experiment on learning research ideation from execution outcomes.",
+        "pdf_sha256": "62468d6406e3ff04a0c742d0b7e28a92124636def98dd81f6f02781a659220c3",
+        "evidence_pages": [
+          1,
+          4,
+          9
+        ]
+      }
+    },
+    "paper-f336a6107386fc72": {
+      "institutions": [
+        "The Hong Kong University of Science and Technology (Guangzhou)",
+        "OLA Dimensions",
+        "Beijing Academy of Artificial Intelligence",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Combines action prediction with spatial feature alignment, learned aggregation across transformer layers, state dropout, and unified end-effector action annotations. The teacher accepts available depth and calibration annotations; auxiliary alignment components are removed at deployment.",
+      "evidence": "Reports 72.3% RoboTwin Clean2Random success, 87.4% LIBERO-Plus success, and 83.8% average success across eight deployment conditions. At full pretraining data, alignment in both stages reaches 72.3%, compared with 48.2% without alignment. Adaptive layer selection and state dropout also contribute substantial gains.",
+      "discovery_use": "Develops transferable spatial representations through continued training and tests generalization to changed scenes, objects, and embodiments. This concretely supports learning world representations for agents operating beyond their training conditions, although autonomous investigation is not evaluated.",
+      "limits": "Demonstrates manipulation generalization rather than active discovery or online continual learning. State dropout has a particularly large effect, so aggregate improvements should not be attributed solely to geometry alignment. RoboDojo evaluation additionally uses historical image inputs. Appendix tables disagree on some embodiment-level results, despite matching overall success. Open-task success remains low.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "learning",
+        "rationale": "Develops transferable spatial representations through continued training and tests generalization to changed scenes, objects, and embodiments. This concretely supports learning world representations for agents operating beyond their training conditions, although autonomous investigation is not evaluated.",
+        "pdf_sha256": "552c3677c12a3822700eb49c7f8ef2831005ed997104f72e2ddd7d5024f8f48a",
+        "evidence_pages": [
+          1,
+          7,
+          15
+        ]
+      }
+    },
+    "paper-4090c8c18813ea7e": {
+      "institutions": [
+        "The Hong Kong Polytechnic University",
+        "infix.ai",
+        "Sun Yat-sen University",
+        "Sun Yat-sen University Cancer Center",
+        "Monash University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Uses specialist-reviewed component tasks, longitudinal checkpoints, 100 linked CarePath episodes, and consultation rubrics. Reports individual decision accuracy alongside strict patient-level correctness, with matched evidence and history controls and physician calibration of automated judges.",
+      "evidence": "Across 30 models, strong guideline recall does not ensure sound planning or anatomical grounding. Gemini achieves 89.9% care-decision accuracy but 11% strict episode success; the highest strict success is 23%. History can correct decisions and introduce errors. Replacing predicted image findings with reference findings produces no consistent care benefit under the supplied context.",
+      "discovery_use": "Provides a concrete evaluation of evidence verification, decision revision, and joint correctness across linked cases. Its matched evidence controls and distinction between correct answers and valid supporting interpretations are relevant to evaluating discovery agents, despite the disease-specific setting.",
+      "limits": "Primarily retrospective, single-center, and disease-specific. Seventy-five CarePath episodes use assigned pathology rather than fully patient-matched modalities, and model-informed selection enriches difficult decisions. Class imbalance and episode length affect scores. Main care questions are answered independently, so this is not an autonomous clinical environment. Judge calibration covers only six cases in the expanded audit; prospective clinical benefit is unestablished.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "benchmarks",
+        "rationale": "Provides a concrete evaluation of evidence verification, decision revision, and joint correctness across linked cases. Its matched evidence controls and distinction between correct answers and valid supporting interpretations are relevant to evaluating discovery agents, despite the disease-specific setting.",
+        "pdf_sha256": "123314f04ff8787f9678666e0c150081bae38bbe69d9c03bf08b0c7b600f252f",
+        "evidence_pages": [
+          1,
+          5,
+          10
+        ]
+      }
+    },
+    "paper-c65d52fece44886a": {
+      "institutions": [
+        "PKU",
+        "NUS",
+        "MIT",
+        "UCSB",
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        9,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Curates visible, stable, active manipulation clips and aligns human and robot actions into a shared end-effector representation. Studies data scale, diversity, motion supervision, and adaptation budgets using video-action models, then reports a hybrid human–robot model conditioned on visual goals.",
+      "evidence": "Out-of-distribution success follows empirical log-linear trends over tested data scales. Human motion supervision and action alignment improve transfer, while larger corpora reduce downstream demonstration requirements. The hybrid model reports 88.65% average RoboTwin success after adaptation. Adding human data to a fixed robot corpus raises reported real-robot zero-shot success from 20% to 30.5%.",
+      "discovery_use": "Studies how experience scale, diversity, and action supervision produce transferable embodied capabilities. Its controlled generalization and sample-efficiency experiments provide concrete evidence about learning foundations for agents facing unfamiliar environments and goals.",
+      "limits": "Scaling runs change training budgets with corpus size and select best checkpoints separately for evaluation settings, limiting interpretation as a compute-controlled scaling law. Steeper diversity slopes do not mean better performance at every matched duration. Detailed hybrid architecture and real-robot protocols are absent from supplied excerpts. Visual-goal behavior is not evidence of autonomous investigation or retained online learning. RoboDojo exposes missing memory and reasoning capabilities.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "learning",
+        "rationale": "Studies how experience scale, diversity, and action supervision produce transferable embodied capabilities. Its controlled generalization and sample-efficiency experiments provide concrete evidence about learning foundations for agents facing unfamiliar environments and goals.",
+        "pdf_sha256": "93420e7010dd135d708dd51bf38674f64534755ab7be29842e154b566ae02243",
+        "evidence_pages": [
+          1,
+          9,
+          13
+        ]
+      }
+    },
+    "paper-a0896f8b9bc1b487": {
+      "institutions": [
+        "KAIST"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        11,
+        22
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Trains a masked video backbone using generative regularization and feature distillation from a frozen teacher with future-frame access. A readout and action diffusion module then learn from action-labeled demonstrations. Video-only adaptation can update the encoder while retaining the action module.",
+      "evidence": "Reports 71.7% RoboCasa success with a 14B backbone and 74.4% with extra unlabeled videos. Real-world success is 64%, versus 56% for DreamZero and 16% for the compared VLA. Deployed latency is approximately 91 ms per chunk. Composite-task video transfer improves mean success from zero to 21.7%, with further evidence of cross-embodiment transfer.",
+      "discovery_use": "Learns predictive world representations that support control and transfers task knowledge from videos without new action annotations. This is a concrete contribution to world-model-based capability acquisition, although it does not identify causal structure or perform active experimentation.",
+      "limits": "Real-world comparison uses only five trials per task and task types represented in training. Bimanual results are qualitative. Video-only transfer depends on existing motor skills and fails when necessary atomic actions are unavailable. Latency includes engineering optimizations and excludes communication and robot execution. Large-scale multi-embodiment pretraining and simplified joint training remain untested.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "causality",
+        "rationale": "Learns predictive world representations that support control and transfers task knowledge from videos without new action annotations. This is a concrete contribution to world-model-based capability acquisition, although it does not identify causal structure or perform active experimentation.",
+        "pdf_sha256": "76ce6e7edc350392630716b46202236df38dcec3b31bad562f7e69cf6ceed579",
+        "evidence_pages": [
+          1,
+          6,
+          11,
+          22
+        ]
+      }
+    },
+    "paper-2fa2fcaef01f9bc8": {
+      "institutions": [
+        "Tsinghua University",
+        "Ant Group",
+        "Renmin University of China"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        12,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Annotators construct evidence-linked reference solutions, check source accessibility and answer consistency, and review visual shortcuts. Evaluation compares direct answering, ReAct, and DeerFlow using complete-answer accuracy and task-specific partial-credit scores. Ablations compare text retrieval, image captions, and direct visual inspection.",
+      "evidence": "Best complete-task accuracy is 26.47% with ReAct plus Kimi-K3; ReAct plus GPT-5.5 achieves the highest Process Score, 49.52%. Set-wise search remains particularly difficult. Full visual access improves aggregate results over text and caption settings for the three ablated backbones, although individual tasks sometimes improve with captions.",
+      "discovery_use": "Directly evaluates agents gathering unfamiliar information, distinguishing candidates, verifying identities, and integrating visual evidence across dependent searches.",
+      "limits": "Only 204 tasks and one evaluation per configuration limit precision. Results depend on live search services and inference budgets. Appendix scoring prompts evaluate final-answer content rather than search traces; their task-specific scoring also differs from the uniform critical-state formulation in the body. Process Score therefore does not establish faithful reasoning or evidence use. Only the supplied representative figures were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates agents gathering unfamiliar information, distinguishing candidates, verifying identities, and integrating visual evidence across dependent searches.",
+        "pdf_sha256": "6d01993344ab278f517e5f1c73e1f92ebf992a2e81da515e4024cdabe8a8f2c9",
+        "evidence_pages": [
+          1,
+          8,
+          12,
+          18
+        ]
+      }
+    },
+    "paper-5f5acf0d296cb848": {
+      "institutions": [
+        "Shanghai Jiao Tong University",
+        "Xiaohongshu Inc.",
+        "Zhongguancun Institute of Artificial Intelligence",
+        "Southeast University",
+        "Carnegie Mellon University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        10,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Directional evolution retains complementary valid harness variants. After eight base-harness attempts all fail, a router selects auxiliary harnesses for fresh current-policy rollouts that replace the failed training group. GRPO updates policy tokens, while periodically refreshed behavioral profiles guide routing. Experiments cover two model sizes and three agent environments with resampling, mixed-harness, and joint-adaptation controls.",
+      "evidence": "For the 4B model under the base harness, AppWorld Pass@3 rises from 61.83% with base-harness rescue to 67.56%; SWE-Gym rises from 25.63% to 38.75%. Behavioral analyses show more schema consultation and alternative verification. Gains persist under external harnesses, and task-specific inference routing adds further improvements.",
+      "discovery_use": "Contributes a concrete method for learning from agent failures: complementary execution harnesses generate alternative experiences whose useful behaviors persist in policy parameters, including evidence gathering and verification.",
+      "limits": "Evaluation covers application, database, and software tasks rather than autonomous scientific investigation. Detailed mechanism and routing ablations concentrate on AppWorld 4B; behavior frequencies and selected transfer cases do not isolate causal internalization. Rescue changes sampling expenditure, although costs are reported. The verified public repository defaults to rule-based routing and documents historical pool differences and an unvalidated portable training launcher. Only supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "learning",
+        "rationale": "Contributes a concrete method for learning from agent failures: complementary execution harnesses generate alternative experiences whose useful behaviors persist in policy parameters, including evidence gathering and verification.",
+        "pdf_sha256": "4b2a410fbf444e549708727638098dabbcf394299e36466e93cc980ea704878f",
+        "evidence_pages": [
+          1,
+          5,
+          10,
+          11
         ]
       }
     }
