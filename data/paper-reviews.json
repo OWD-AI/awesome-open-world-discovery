@@ -30087,6 +30087,195 @@
           23
         ]
       }
+    },
+    "paper-d6eef2f6c25e44ca": {
+      "institutions": [
+        "Henan Chengxi Technology Co., Ltd."
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An inner loop diagnoses dialogue failures and validates localized memory or prompting patches. An outer loop proposes minimal updater revisions from successful and failed repairs, comparing parent and candidate updaters on fresh cases with equal budgets. Evaluation compares the complete framework with a baseline across 50 characters, five models, and 500 conversations per condition, plus 600 blinded human judgments.",
+      "evidence": "Pooled bad-response rates decrease from 14.00% to 4.94%. Human judgments give RSI 294 wins, 187 ties, and 119 losses: 71.19% wins among decisive judgments, but 49.00% wins across all judgments. These results support aggregate improvement for the complete system on its internal distribution.",
+      "discovery_use": "The primary contribution is a bounded self-improvement loop that revises both agent memory and prompting and the policy that diagnoses and repairs failures. This directly addresses learning better improvement procedures from retained experience.",
+      "limits": "No component comparison isolates updater evolution from ordinary memory and prompt repair. Results pool models, characters, and conversations without uncertainty estimates accounting for clustering. Simulated interlocutors limit evidence of transfer to real users. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "open_ended",
+        "rationale": "The primary contribution is a bounded self-improvement loop that revises both agent memory and prompting and the policy that diagnoses and repairs failures. This directly addresses learning better improvement procedures from retained experience.",
+        "pdf_sha256": "3a86da13aa5b9b5fca6973874ce5752d113efd4475a3ab6085a9e1d869f0fd0e",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-ddf4e6cb38214141": {
+      "institutions": [
+        "The Chinese University of Hong Kong",
+        "Wellington College",
+        "Tencent",
+        "Nanyang Technological University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A shared geometry-and-history encoder supports geometry completion, new-entity proposals, and entity transitions. Updates are committed to persistent memory; a separately trained diffusion renderer consumes projected depth and semantics. Training uses approximately 500 hours from one Doom map. Evaluation includes 256 exploration trajectories, unseen maps, NPC pursuit, rendering comparisons, and hardware profiling.",
+      "evidence": "At ten simulated minutes, action accuracy is 82.1–85.6% and cumulative contact error is 5.2–6.8%. NPC pursuit succeeds in 55% of trials within 200 steps. Rendering deteriorates less than PlayGen on the shared seen map. M4 Pro serial latency is 161.2 ms with four denoising steps and 200.6 ms with the eight-step default.",
+      "discovery_use": "The primary contribution is a persistent, explicit world representation that learns action-conditioned dynamics and generates unknown geometry and entities during exploration. It provides a concrete representation for interactive exploration and state interventions.",
+      "limits": "Training and evaluation remain within Doom. Entities outside the active volume retain their last state rather than evolving continuously. Rollouts include respawns, and visual metrics exclude recovery intervals. Local generation uses unpaired visual references. Design comparisons are not budget matched, and multiplayer baseline scores are quoted from prior work. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "causality",
+        "rationale": "The primary contribution is a persistent, explicit world representation that learns action-conditioned dynamics and generates unknown geometry and entities during exploration. It provides a concrete representation for interactive exploration and state interventions.",
+        "pdf_sha256": "1da71e809afc609a39792baad054185f5f6c57cfa9906cf281159b94e65a9021",
+        "evidence_pages": [
+          1,
+          4,
+          7
+        ]
+      }
+    },
+    "paper-8038b228ad5a266b": {
+      "institutions": [
+        "The Fin AI",
+        "Stevens Institute of Technology",
+        "Independent Researcher",
+        "University of Manchester",
+        "MBZUAI",
+        "DeepKin",
+        "University of Montreal"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A compositional generator produces hidden strategies, a simulated user reveals details when asked, and a hybrid evaluator scores 45 dimensions with 15 vetoes. Programs reconstruct returns from delivered trades or weights and prices. Four coding agents and a model without tools attempt ten tasks three times each. A separate persistent-memory agent practices with feedback.",
+      "evidence": "None of 150 initial sessions is accepted, including all 35 receiving user sign-off. Agents elicit only 54–64% of initially unstated details. Experts attribute 53 of 60 sampled failures to agents. The memory-enabled agent eventually passes all ten practiced tasks after 506 sessions in total; this demonstrates task-specific improvement rather than held-out transfer.",
+      "discovery_use": "The benchmark evaluates agents eliciting unknown requirements, sourcing external evidence, and producing independently verifiable research deliverables. Its concrete contribution is discovery evaluation under hidden intent and temporal constraints, beyond ordinary financial prediction.",
+      "limits": "The benchmark has ten frozen tasks covering long-only US equities, and most agent turns hit the time limit. Simulator and evaluator errors remain, with model-family overlap creating potential bias. Score feedback can reveal hidden information across attempts. Program checks cannot establish all data authenticity. The author-listed leaderboard was inaccessible, so no release link was verified.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "benchmarks",
+        "rationale": "The benchmark evaluates agents eliciting unknown requirements, sourcing external evidence, and producing independently verifiable research deliverables. Its concrete contribution is discovery evaluation under hidden intent and temporal constraints, beyond ordinary financial prediction.",
+        "pdf_sha256": "f254f85a17c2a02febd811be25a3860c1c836db1da25c7487d070c0885009a24",
+        "evidence_pages": [
+          1,
+          8,
+          10
+        ]
+      }
+    },
+    "paper-227f7c9d67520df7": {
+      "institutions": [
+        "Shenzhen University",
+        "University of Oxford",
+        "North Minzu University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        10,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An unconstrained feature model analyzes loss minima and convergence on balanced, normalized representations. CNN and Transformer experiments vary scale and compare neural-collapse geometry. Additional experiments compare BCE and CE on long-tailed classification and open-set recognition using AUROC and OSCR.",
+      "evidence": "Both losses admit neural-collapse minima under the stated assumptions. Extreme scale factors impair feature convergence, while moderate scales balance classification and geometry. BCE improves every reported open-set comparison: CIFAR+50 AUROC rises from 87.8 to 90.2 and OSCR from 85.7 to 88.5. Six long-tailed comparisons also favor BCE.",
+      "discovery_use": "Although primarily a loss-function analysis, the paper explicitly connects feature geometry to unknown-class discrimination and evaluates open-set recognition. This supplies a concrete training contribution to recognizing unknowns rather than relying on generic representation-learning relevance.",
+      "limits": "Theory assumes balanced data, normalized features, and sufficient feature dimension; extensions to imbalance, low dimensions, and contrastive learning are unresolved or conjectural. Open-set testing measures unknown rejection, not continual acquisition of new classes. Supplied pages support a targeted review, not exhaustive inspection of the 68-page manuscript. The hinted repository is a cited baseline, not this paper's release.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "learning",
+        "rationale": "Although primarily a loss-function analysis, the paper explicitly connects feature geometry to unknown-class discrimination and evaluates open-set recognition. This supplies a concrete training contribution to recognizing unknowns rather than relying on generic representation-learning relevance.",
+        "pdf_sha256": "a5394dda39c2c8395ea55e4a907ff45bcf685f276c121cfa34082b299f7779a0",
+        "evidence_pages": [
+          1,
+          10,
+          20
+        ]
+      }
+    },
+    "paper-acfb4695461da198": {
+      "institutions": [
+        "Qualcomm AI Research",
+        "Qualcomm Vietnam Company Limited",
+        "Qualcomm Technologies, Inc."
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A dense retriever selects 300 candidate passages. A late-interaction reranker ranks passages and reuses token similarities to select snippets from up to ten passages. Context expansion searches within previously retrieved documents. Controlled comparisons share passage indexes and agent settings across three models and three fixed-corpus benchmarks.",
+      "evidence": "CORE leads answer accuracy and document-level evidence recall in all nine model–benchmark comparisons. GPT-5.4 accuracy improves from OpenResearcher's 91.45% to 94.94% on BrowseComp-Plus and from 56.14% to 68.42% on the 553-million-document corpus. Component analysis increases accuracy from 62.61% with coarse retrieval to 70.84% with coarse-to-fine search and 80.12% with full CORE.",
+      "discovery_use": "CORE directly improves the evidence interface of research agents: retrieving candidate sources, selecting useful snippets, expanding context, and suppressing repetition. These mechanisms support iterative investigation and verification of linked facts.",
+      "limits": "Evaluation covers fixed-corpus questions with reference answers, not live-Web research or open-ended reports. CORE also adds reranking absent from the main baselines, so gains cannot all be attributed to context management. Context and search-call costs are not uniformly lower. Evidence recall counts annotated documents rather than verified claims. No first-party release was found; the hinted model is a cited dependency.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "systems",
+        "rationale": "CORE directly improves the evidence interface of research agents: retrieving candidate sources, selecting useful snippets, expanding context, and suppressing repetition. These mechanisms support iterative investigation and verification of linked facts.",
+        "pdf_sha256": "a5b107f5fb7d33721120366cdf1c766a9f34331309a0c5d77286ade4ce881f3c",
+        "evidence_pages": [
+          1,
+          6,
+          8
+        ]
+      }
+    },
+    "paper-cddfffbd4469fecc": {
+      "institutions": [
+        "UC Berkeley",
+        "Colorado School of Mines",
+        "Lawrence Berkeley National Laboratory"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The system clusters related SHACL violations, explores the graph, proposes SPARQL edits, and repeatedly validates repairs. Compatible injected violations provide reference repair edits. Two XGBoost predictors estimate repair F1 with and without researcher access using cluster predicate features. Their predicted difference determines access. Evaluation uses six suites of 80 cases across two deployments, comparing always-on, always-off, matched-probability random, and zero-shot LLM routing.",
+      "evidence": "Retrieval utility varies substantially: IBAL evidential cases gain median F1 of 0.357 with access, whereas IBAL representational cases lose 0.126. Learned routing consumes fewer repair-time tokens than always-on in all six suites, improves F1 over always-off in five, and exceeds matched-probability random routing in all six. It improves over always-on in four suites; differences in the two evidential suites are not statistically significant. Schema validity exceeds 99% across policies, showing that validity alone misses factual repair errors.",
+      "discovery_use": "The system explicitly recovers missing deployment-specific knowledge by coordinating graph exploration, external evidence retrieval, and validated edits. Its learned routing policy addresses when investigation helps factual reconstruction, providing a concrete discovery-system contribution beyond ordinary domain automation.",
+      "limits": "The supplied pages cover the full 14-page manuscript, while only two pages were visually inspected. Evaluation uses one LLM and two building deployments under one schema, with synthetic corruptions and assumed-correct reference graphs. Offline routers require trusted graphs and aligned corpora and do not adapt to drift. Corpus coverage and researcher failures cannot be separated. Reported token savings exclude preparation and training costs. Routing remains worse than always-off on IBAL representational cases and does not explicitly price token cost or uncertainty. No paper-specific public release was verified.",
+      "classification_review": {
+        "date": "2026-11-05",
+        "category": "systems",
+        "rationale": "The system explicitly recovers missing deployment-specific knowledge by coordinating graph exploration, external evidence retrieval, and validated edits. Its learned routing policy addresses when investigation helps factual reconstruction, providing a concrete discovery-system contribution beyond ordinary domain automation.",
+        "pdf_sha256": "61d7d63be07f5accfc0255ea9fd6039b2153a14638a68fee7828d668a12e4848",
+        "evidence_pages": [
+          1,
+          3,
+          12
+        ]
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**189 usage profiles** · Updated **2026-11-05**
+**190 usage profiles** · Updated **2026-11-05**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -3285,6 +3285,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?](#paper-5c78ef0baf7f1e60) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Are LLM Research Agents Reliable Judges of Predictability? Evidence from Planted-Signal Worlds](#paper-57ccd229ed11ab8d) | Synthetic data | Analysis + code | Paper-described |
 | [FrontierPhysics: Evaluating Agents for End-to-End Physics Research](#paper-57242503914f0d84) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance](#paper-8038b228ad5a266b) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -4249,6 +4250,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | No policy-training reward or training run is established. The evaluation uses deterministic numerical tests and a GPT-5.6 Sol reviewer agent examining trajectories, code, outputs, and manuscripts. Passing requires every deterministic test and blocking rubric criterion. Weighted nonblocking criteria receive 0, 1, or 2 and yield a normalized quality score; any failed gate makes the final score zero (pages 5–6). |
 | Reset | Each rollout builds a sandbox from the task environment, and each model attempts every task three times (pages 4 and 6). Exact simulator-state reset, snapshot restoration, and a training reset API are not established. |
 | Branching | Independent repeated trials are supported. Forking, checkpoint restoration, and branching from an intermediate environment state are not established. |
+
+</details>
+
+<a id="paper-8038b228ad5a266b"></a>
+
+<details>
+<summary>FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance — details</summary>
+
+[Work](../README.md#paper-8038b228ad5a266b) · [Source](https://arxiv.org/pdf/2611.07464)
+
+**Focus:** Financial research workflows that elicit hidden requirements, obtain evidence, execute backtests and deliver independently checkable code, data and reports. Feedback combines executed numerical checks, semantic judging and simulated-user responses.
+
+**Openness:** `Hidden strategy requirements are generated compositionally and disclosed by an LLM user simulator only when elicited.`, `Agents independently obtain public financial data through Web search, retrieval and financial APIs.`, `Agents construct and execute their own backtests under a fixed data cutoff.`, `The reported benchmark freezes ten tasks; seeded generation supports additional tasks.`
+
+**New physical measurements:** No
+
+**Limits:** The user is simulated. Financial inputs are existing public records; backtesting and metric reconstruction are executed computations. New physical measurements and live trading are not part of the described protocol. The benchmark covers ten frozen long-only US equity tasks with fixed transaction costs. Simulator and evaluator errors remain, program checks cannot prove every datum authentic, and repeated score feedback can reveal hidden information.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Pages 7–9 describe 45 evaluation dimensions, including 37 scored dimensions rated 0–4 across five equally weighted categories. Pre-veto quality ranges from 0 to 100; failure of any of 15 vetoes makes the score zero. Acceptance additionally requires user satisfaction and complete grading. Programs check numerical and temporal properties, while an LLM judges semantics. After each attempt, agents receive dimension scores and permitted evidence plus per-turn program scores; reasons that would disclose hidden strategy information are withheld. The learning experiment edits persistent memory from this feedback. A model-weight training reward or optimization algorithm is not established. |
+| Reset | Pages 8–9 establish independent baseline sessions with memory disabled and three attempts per task. Each session allows up to six rounds of 300 seconds. Tasks may be attempted again; the learning configuration explicitly retains and edits memory across sessions. Exact workspace reset semantics and deterministic replay are not established. |
+| Branching | Checkpoint cloning, within-session forks and restoration to an intermediate state are not established. Independent repeated sessions and reproducible seeded task generation are described. |
 
 </details>
 

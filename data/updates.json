@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T21:14:16-05:00",
+  "updated_at": "2026-11-05T22:44:09-05:00",
   "window_start": "2026-10-07",
   "window_end": "2026-11-05",
   "window_days": 30,
@@ -38,6 +38,46 @@
       "id": "21cc4cf75892a67c"
     },
     {
+      "title": "Recursive Self-Improvement for Long-Horizon Role-Playing Dialogue",
+      "url": "https://arxiv.org/abs/2611.07469",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "A role-playing agent repairs its character configuration and uses repair outcomes to revise its own diagnostic, routing, and selection rules. The framework specifies versioned changes, permissions, validation gates, rollback, and stopping conditions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Original publication is established from the supplied primary-source arXiv Atom published field, 2026-11-05T05:28:10Z. Independent browser retrieval failed; the supplied original timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is a bounded self-improvement loop that revises both agent memory and prompting and the policy that diagnoses and repairs failures. This directly addresses learning better improvement procedures from retained experience.",
+      "id": "d6eef2f6c25e44ca",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07469"
+        }
+      ]
+    },
+    {
+      "title": "PlayGen2: Learning Real-Time Playable Worlds with Explicit 3D State",
+      "url": "https://arxiv.org/abs/2611.07867",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "PlayGen2 separates learned 3D world evolution from image synthesis. Persistent geometry and identity-indexed entities support revisits, local world expansion, unseen-map interaction, and composition without feeding generated images back into state prediction.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv submission history independently confirms v1 at 2026-11-05 11:45:25 UTC, matching the supplied Atom original publication timestamp.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is a persistent, explicit world representation that learns action-conditioned dynamics and generates unknown geometry and entities during exploration. It provides a concrete representation for interactive exploration and state interventions.",
+      "id": "ddf4e6cb38214141",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07867"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MajorDavidZhang/PlayGen-2"
+        }
+      ]
+    },
+    {
       "title": "METR announces its AI R&D acceleration assessment",
       "date_evidence": "Supplied original X dateline: 1:36 PM · Nov 5, 2026; matching time-element datetime: 2026-11-05T18:36:37.000Z.",
       "kind": "x",
@@ -58,6 +98,60 @@
       "source": "Codex primary text-and-image checked",
       "summary": "Koutian Wu introduces Scientific Liquidity Agents, an exploratory simulation of specialist researchers and agents that transfer knowledge across disciplines. Wu reports that cross-disciplinary agents helped connect the simulated community, but contacts rarely became coauthorships and neither run recorded a successful replication. The announcement proposes evaluating AI research communities by knowledge verification, reuse, and transfer alongside paper production.",
       "id": "20112233811e5c02"
+    },
+    {
+      "title": "FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance",
+      "url": "https://arxiv.org/abs/2611.07464",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "FinCosmos tests whether agents can uncover a user's strategy, obtain appropriate Web data, and deliver a reproducible backtest. Acceptance combines user satisfaction with checks on strategy fidelity, temporal validity, and delivered evidence.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom original publication timestamp is 2026-11-05T05:19:44Z, consistent with the PDF's arXiv v1 date. The November 6 cover date is not substituted for this original publication event. Independent browser retrieval failed.",
+      "review_status": "approved",
+      "relevance": "The benchmark evaluates agents eliciting unknown requirements, sourcing external evidence, and producing independently verifiable research deliverables. Its concrete contribution is discovery evaluation under hidden intent and temporal constraints, beyond ordinary financial prediction.",
+      "id": "8038b228ad5a266b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07464"
+        }
+      ]
+    },
+    {
+      "title": "Comparing Classification and Feature Learning by Analyzing Their Loss Functions in Normalized Spaces with Different Scale Factors",
+      "url": "https://arxiv.org/abs/2611.07741",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "The paper distinguishes classification accuracy from globally compact and separable features. It analyzes normalized cross-entropy and binary cross-entropy, showing how scale affects convergence and why strong classification can coexist with poor feature geometry.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Original publication is established from the supplied primary-source arXiv Atom published field, 2026-11-05T09:49:18Z, consistent with the PDF v1 date. Independent browser retrieval failed. The cited ICML 2025 predecessor is a separate work.",
+      "review_status": "approved",
+      "relevance": "Although primarily a loss-function analysis, the paper explicitly connects feature geometry to unknown-class discrimination and evaluates open-set recognition. This supplies a concrete training contribution to recognizing unknowns rather than relying on generic representation-learning relevance.",
+      "id": "227f7c9d67520df7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07741"
+        }
+      ]
+    },
+    {
+      "title": "CORE: Coarse-to-Fine Search with Context Management for Deep Research",
+      "url": "https://arxiv.org/abs/2611.07859",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "CORE is a training-free research harness that retrieves broad passages but returns focused evidence. Agents can request additional source context, while repeated snippets become compact references without modifying earlier observations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Original publication is established from the supplied primary-source arXiv Atom published field, 2026-11-05T11:36:19Z, consistent with the PDF v1 date. Independent browser retrieval failed; the original timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "CORE directly improves the evidence interface of research agents: retrieving candidate sources, selecting useful snippets, expanding context, and suppressing repetition. These mechanisms support iterative investigation and verification of linked facts.",
+      "id": "acfb4695461da198",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07859"
+        }
+      ]
     },
     {
       "title": "AItonomy Foundation announces Science’s Last Exam",
@@ -141,6 +235,24 @@
         {
           "label": "Code",
           "url": "https://github.com/testbed-benchmark/testbed"
+        }
+      ]
+    },
+    {
+      "title": "Selective Retrieval Routing for Multi-Violation Knowledge Graph Repair",
+      "url": "https://arxiv.org/abs/2611.07342",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "A graph-repair agent receives selective access to a researcher that searches documents, tables, and engineering images. A deployment-specific router learns when external evidence improves recovery of the intended graph rather than merely producing a schema-valid alternative.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp is 2026-11-05T02:29:58Z, independently confirmed by the arXiv v1 submission history. The manuscript's 2027 PVLDB reference contains placeholder publication details and does not establish a journal online publication event.",
+      "review_status": "approved",
+      "relevance": "The system explicitly recovers missing deployment-specific knowledge by coordinating graph exploration, external evidence retrieval, and validated edits. Its learned routing policy addresses when investigation helps factual reconstruction, providing a concrete discovery-system contribution beyond ordinary domain automation.",
+      "id": "cddfffbd4469fecc",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07342"
         }
       ]
     },
@@ -15774,6 +15886,100 @@
   ],
   "paper_pages": [
     {
+      "title": "Recursive Self-Improvement for Long-Horizon Role-Playing Dialogue",
+      "url": "https://arxiv.org/abs/2611.07469",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "A role-playing agent repairs its character configuration and uses repair outcomes to revise its own diagnostic, routing, and selection rules. The framework specifies versioned changes, permissions, validation gates, rollback, and stopping conditions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Original publication is established from the supplied primary-source arXiv Atom published field, 2026-11-05T05:28:10Z. Independent browser retrieval failed; the supplied original timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is a bounded self-improvement loop that revises both agent memory and prompting and the policy that diagnoses and repairs failures. This directly addresses learning better improvement procedures from retained experience.",
+      "id": "d6eef2f6c25e44ca",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07469"
+        }
+      ]
+    },
+    {
+      "title": "PlayGen2: Learning Real-Time Playable Worlds with Explicit 3D State",
+      "url": "https://arxiv.org/abs/2611.07867",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "PlayGen2 separates learned 3D world evolution from image synthesis. Persistent geometry and identity-indexed entities support revisits, local world expansion, unseen-map interaction, and composition without feeding generated images back into state prediction.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The arXiv submission history independently confirms v1 at 2026-11-05 11:45:25 UTC, matching the supplied Atom original publication timestamp.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is a persistent, explicit world representation that learns action-conditioned dynamics and generates unknown geometry and entities during exploration. It provides a concrete representation for interactive exploration and state interventions.",
+      "id": "ddf4e6cb38214141",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07867"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MajorDavidZhang/PlayGen-2"
+        }
+      ]
+    },
+    {
+      "title": "FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance",
+      "url": "https://arxiv.org/abs/2611.07464",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "FinCosmos tests whether agents can uncover a user's strategy, obtain appropriate Web data, and deliver a reproducible backtest. Acceptance combines user satisfaction with checks on strategy fidelity, temporal validity, and delivered evidence.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied primary-source arXiv Atom original publication timestamp is 2026-11-05T05:19:44Z, consistent with the PDF's arXiv v1 date. The November 6 cover date is not substituted for this original publication event. Independent browser retrieval failed.",
+      "review_status": "approved",
+      "relevance": "The benchmark evaluates agents eliciting unknown requirements, sourcing external evidence, and producing independently verifiable research deliverables. Its concrete contribution is discovery evaluation under hidden intent and temporal constraints, beyond ordinary financial prediction.",
+      "id": "8038b228ad5a266b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07464"
+        }
+      ]
+    },
+    {
+      "title": "Comparing Classification and Feature Learning by Analyzing Their Loss Functions in Normalized Spaces with Different Scale Factors",
+      "url": "https://arxiv.org/abs/2611.07741",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "The paper distinguishes classification accuracy from globally compact and separable features. It analyzes normalized cross-entropy and binary cross-entropy, showing how scale affects convergence and why strong classification can coexist with poor feature geometry.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Original publication is established from the supplied primary-source arXiv Atom published field, 2026-11-05T09:49:18Z, consistent with the PDF v1 date. Independent browser retrieval failed. The cited ICML 2025 predecessor is a separate work.",
+      "review_status": "approved",
+      "relevance": "Although primarily a loss-function analysis, the paper explicitly connects feature geometry to unknown-class discrimination and evaluates open-set recognition. This supplies a concrete training contribution to recognizing unknowns rather than relying on generic representation-learning relevance.",
+      "id": "227f7c9d67520df7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07741"
+        }
+      ]
+    },
+    {
+      "title": "CORE: Coarse-to-Fine Search with Context Management for Deep Research",
+      "url": "https://arxiv.org/abs/2611.07859",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "CORE is a training-free research harness that retrieves broad passages but returns focused evidence. Agents can request additional source context, while repeated snippets become compact references without modifying earlier observations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Original publication is established from the supplied primary-source arXiv Atom published field, 2026-11-05T11:36:19Z, consistent with the PDF v1 date. Independent browser retrieval failed; the original timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "CORE directly improves the evidence interface of research agents: retrieving candidate sources, selecting useful snippets, expanding context, and suppressing repetition. These mechanisms support iterative investigation and verification of linked facts.",
+      "id": "acfb4695461da198",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07859"
+        }
+      ]
+    },
+    {
       "title": "What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?",
       "url": "https://arxiv.org/abs/2611.06483",
       "published_at": "2026-11-04",
@@ -15832,6 +16038,24 @@
         {
           "label": "Code",
           "url": "https://github.com/testbed-benchmark/testbed"
+        }
+      ]
+    },
+    {
+      "title": "Selective Retrieval Routing for Multi-Violation Knowledge Graph Repair",
+      "url": "https://arxiv.org/abs/2611.07342",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "A graph-repair agent receives selective access to a researcher that searches documents, tables, and engineering images. A deployment-specific router learns when external evidence improves recovery of the intended graph rather than merely producing a schema-valid alternative.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied arXiv Atom original timestamp is 2026-11-05T02:29:58Z, independently confirmed by the arXiv v1 submission history. The manuscript's 2027 PVLDB reference contains placeholder publication details and does not establish a journal online publication event.",
+      "review_status": "approved",
+      "relevance": "The system explicitly recovers missing deployment-specific knowledge by coordinating graph exploration, external evidence retrieval, and validated edits. Its learned routing policy addresses when investigation helps factual reconstruction, providing a concrete discovery-system contribution beyond ordinary domain automation.",
+      "id": "cddfffbd4469fecc",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07342"
         }
       ]
     },

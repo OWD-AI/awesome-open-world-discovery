@@ -4262,6 +4262,30 @@
       "name": "Monitor Accuracy Isn't the Answer: A Decision-Value Framework for Evaluating AI Agent Restart Monitors",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.36544"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Hidden strategy requirements are generated compositionally and disclosed by an LLM user simulator only when elicited.",
+        "Agents independently obtain public financial data through Web search, retrieval and financial APIs.",
+        "Agents construct and execute their own backtests under a fixed data cutoff.",
+        "The reported benchmark freezes ten tasks; seeded generation supports additional tasks."
+      ],
+      "focus": "Financial research workflows that elicit hidden requirements, obtain evidence, execute backtests and deliver independently checkable code, data and reports. Feedback combines executed numerical checks, semantic judging and simulated-user responses.",
+      "limits": "The user is simulated. Financial inputs are existing public records; backtesting and metric reconstruction are executed computations. New physical measurements and live trading are not part of the described protocol. The benchmark covers ten frozen long-only US equity tasks with fixed transaction costs. Simulator and evaluator errors remain, program checks cannot prove every datum authentic, and repeated score feedback can reveal hidden information.",
+      "training": {
+        "reward": "Pages 7–9 describe 45 evaluation dimensions, including 37 scored dimensions rated 0–4 across five equally weighted categories. Pre-veto quality ranges from 0 to 100; failure of any of 15 vetoes makes the score zero. Acceptance additionally requires user satisfaction and complete grading. Programs check numerical and temporal properties, while an LLM judges semantics. After each attempt, agents receive dimension scores and permitted evidence plus per-turn program scores; reasons that would disclose hidden strategy information are withheld. The learning experiment edits persistent memory from this feedback. A model-weight training reward or optimization algorithm is not established.",
+        "reset": "Pages 8–9 establish independent baseline sessions with memory disabled and three attempts per task. Each session allows up to six rounds of 300 seconds. Tasks may be attempted again; the learning configuration explicitly retains and edits memory across sessions. Exact workspace reset semantics and deterministic replay are not established.",
+        "branching": "Checkpoint cloning, within-session forks and restoration to an intermediate state are not established. Independent repeated sessions and reproducible seeded task generation are described."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-8038b228ad5a266b",
+      "resource_id": "paper-8038b228ad5a266b",
+      "name": "FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.07464"
     }
   ]
 }
