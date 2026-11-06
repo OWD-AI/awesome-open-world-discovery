@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**194 usage profiles** · Updated **2026-11-06**
+**195 usage profiles** · Updated **2026-11-06**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -3359,6 +3359,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [FrontierPhysics: Evaluating Agents for End-to-End Physics Research](#paper-57242503914f0d84) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance](#paper-8038b228ad5a266b) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Scientist World: Grow a Research World for AI-Scientists](#paper-6378d95e4d1259aa) | Executed programs + evaluators | Budgeted pool queries | Paper-described |
+| [Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling](#paper-37def078f4352fe7) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -4369,6 +4370,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Page 11 describes supervised training on 1,000 trajectory-derived task-and-idea examples, followed by off-policy GRPO on 1,500 already-scored ideas. Rewards use measured execution outcomes, with advantages relative to other ideas for the same task. The environment evaluator measures weighted signed gains over the reproduced source method; FNI normalizes these using a frozen frontier cohort (page 5). Evaluation averages visible and held-out FNI (page 9). Held-out ideation assessment uses one fixed frontier implementer. The exact GRPO reward transformation is not established by the supplied pages. |
 | Reset | Each evaluation trial starts from a fresh workspace and runs one bounded agent session through reason-run-feedback turns (page 38). Fresh-clone rebuilding is checked during packaging (page 4). A training-time reset API or deterministic replay guarantee is not established. |
 | Branching | Construction supports milestone rollback and resumption from checkpoints (pages 3 and 7). Research attempts preserve version-controlled development histories (page 11). Explicit scientist-session state cloning, counterfactual branching, or a training-time branching API is not established. |
+
+</details>
+
+<a id="paper-37def078f4352fe7"></a>
+
+<details>
+<summary>Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling — details</summary>
+
+[Work](../README.md#paper-37def078f4352fe7) · [Source](https://arxiv.org/pdf/2611.08237)
+
+**Focus:** Agents formulate and computationally investigate 18 mathematical-modeling problems using terminal, Python, and file tools, inspect execution observations, and submit a JSON artifact. Inputs are fixed contest materials and recorded datasets. Agent computations can implement models, optimization, or simulations; no shared interactive scientific simulator or physical measurement backend is established.
+
+**Openness:** `Agents choose assumptions, modeling methods, and executable computations for complete contest problems.`, `Statements, attachments, figures, and output schemas are supplied; scoring references and checks reside in a separate verifier container.`, `Internet access and runtime package installation are disabled.`, `Source code is reported as available; all 18 tasks constitute a pure evaluation set without a training split.`
+
+**New physical measurements:** No
+
+**Limits:** Each trial has 2 CPUs, 8 GB memory, no GPU, and four hours. Only selected numerical fields of the designated question are scored. Human-reference agreement and artifact feasibility checks do not establish external physical truth. No new physical measurements are performed by the described environment.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Evaluation uses direction-aware numerical scoring against human Outstanding-award papers: 94 usable papers from 99 collected. A programmatic feasibility gate zeroes infeasible task scores; 624 Lean obligations audit related artifact predicates. O-EVAL is the primary panel score, with baseline-relative metrics also reported. Gate-filtered rejection sampling and reinforcement learning using verified scores are proposed; demonstrated model training or training gains are not established. |
+| Reset | Three independent seeded passes over the tasks are reported using per-task containers. An explicit reset interface, mid-run restoration, or checkpoint rollback is not established. |
+| Branching | Agents can run code and inspect observations during a trial. Environment snapshotting, state forks, and an explicit branching interface are not established. |
 
 </details>
 

@@ -4377,6 +4377,30 @@
       "name": "On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.06976"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose assumptions, modeling methods, and executable computations for complete contest problems.",
+        "Statements, attachments, figures, and output schemas are supplied; scoring references and checks reside in a separate verifier container.",
+        "Internet access and runtime package installation are disabled.",
+        "Source code is reported as available; all 18 tasks constitute a pure evaluation set without a training split."
+      ],
+      "focus": "Agents formulate and computationally investigate 18 mathematical-modeling problems using terminal, Python, and file tools, inspect execution observations, and submit a JSON artifact. Inputs are fixed contest materials and recorded datasets. Agent computations can implement models, optimization, or simulations; no shared interactive scientific simulator or physical measurement backend is established.",
+      "limits": "Each trial has 2 CPUs, 8 GB memory, no GPU, and four hours. Only selected numerical fields of the designated question are scored. Human-reference agreement and artifact feasibility checks do not establish external physical truth. No new physical measurements are performed by the described environment.",
+      "training": {
+        "reward": "Evaluation uses direction-aware numerical scoring against human Outstanding-award papers: 94 usable papers from 99 collected. A programmatic feasibility gate zeroes infeasible task scores; 624 Lean obligations audit related artifact predicates. O-EVAL is the primary panel score, with baseline-relative metrics also reported. Gate-filtered rejection sampling and reinforcement learning using verified scores are proposed; demonstrated model training or training gains are not established.",
+        "reset": "Three independent seeded passes over the tasks are reported using per-task containers. An explicit reset interface, mid-run restoration, or checkpoint rollback is not established.",
+        "branching": "Agents can run code and inspect observations during a trial. Environment snapshotting, state forks, and an explicit branching interface are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-37def078f4352fe7",
+      "resource_id": "paper-37def078f4352fe7",
+      "name": "Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.08237"
     }
   ]
 }

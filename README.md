@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-936-2563eb?style=flat-square" alt="936 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-194-0f766e?style=flat-square" alt="194 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-937-2563eb?style=flat-square" alt="937 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-195-0f766e?style=flat-square" alt="195 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -60,6 +60,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 
 | Date | Paper |
 | --- | --- |
+| 2026-11-05 | [Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling](https://arxiv.org/abs/2611.08237) |
 | 2026-11-05 | [SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization](https://arxiv.org/abs/2611.08483) |
 | 2026-11-05 | [Scientist World: Grow a Research World for AI-Scientists](https://arxiv.org/abs/2611.08478) |
 | 2026-11-05 | [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](https://arxiv.org/abs/2611.08373) |
@@ -69,7 +70,6 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-05 | [FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance](https://arxiv.org/abs/2611.07464) |
 | 2026-11-05 | [Comparing Classification and Feature Learning by Analyzing Their Loss Functions in Normalized Spaces with Different Scale Factors](https://arxiv.org/abs/2611.07741) |
 | 2026-11-05 | [CORE: Coarse-to-Fine Search with Context Management for Deep Research](https://arxiv.org/abs/2611.07859) |
-| 2026-11-04 | [What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?](https://arxiv.org/abs/2611.06483) |
 
 <a id="contents"></a>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 124 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 156 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 87 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 185 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 186 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -2101,6 +2101,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Yicheng Xu et al. · Zhejiang University; Fudan University
 - <a id="paper-260089287fc2643d"></a>**TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.06824)* · [Paper](https://arxiv.org/abs/2610.06824) · [Project](https://pzeroresearch.com/work/tasteval/)<br>
   Oliver Jaffe, Dane Sherburn · P-Zero Research
+- <a id="paper-37def078f4352fe7"></a>**Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.08237)* · [Paper](https://arxiv.org/abs/2611.08237) · [Code](https://github.com/wxj630/terminal-bench-math-modeling) · [Project](https://wxj630.github.io/terminal-bench-math-modeling/) · [Dataset](https://huggingface.co/datasets/IDEA-FinAI/TB-MathModel)<br>
+  Xiaojun Wu et al. · IDEA Research; The Hong Kong University of Science and Technology (Guangzhou); DataArcTech Ltd.
 - <a id="paper-4c7b45ef0c27315b"></a>**The Marathon of Scientific Reasoning: Robustness of Scientific Agents to Perturbations in Multi-Turn Interactions** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.34537)* · [Paper](https://arxiv.org/abs/2609.34537)<br>
   Xiaoting Lyu et al. · Xi’an Jiaotong University; Inria; Agency for Science, Technology and Research (A*STAR); +1 institutions
 - <a id="paper-1b71ddb115ba5e37"></a>**The Scientific Research Taste Benchmark (SciTaste-Bench): A Multi-Disciplinary Benchmark for Assessing Large Language Models' Judgment of Research Taste in Scientific Papers** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28653)* · [Paper](https://arxiv.org/abs/2610.28653)<br>
