@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-937-2563eb?style=flat-square" alt="937 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-195-0f766e?style=flat-square" alt="195 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-938-2563eb?style=flat-square" alt="938 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-196-0f766e?style=flat-square" alt="196 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 124 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 156 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 87 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 186 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 187 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1871,6 +1871,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Yaochen Wang et al. · MBZUAI; Virginia Tech; University of Maryland; +1 institutions
 - <a id="paper-68fff9f7177eccc7"></a>**Can AI Scientists Change Their Minds? Prior-Evidence Conflict in Synthetic Universes** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.36726)* · [Paper](https://arxiv.org/abs/2609.36726)<br>
   Kargi Chauhan · University of California, Santa Cruz
+- <a id="paper-9e109f910ff861b4"></a>**Can Large Language Models Review the Scientific Literature? A Test Against a 102-Article Benchmark** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.05459)* · [Paper](https://arxiv.org/abs/2611.05459) · [Code](https://github.com/abx40/spanish-plume-llm-literature-review)<br>
+  Abdullah Al Kalbani et al. · The University of Manchester; University of Washington
 - <a id="paper-9b8a04c573ff3eb4"></a>**Can LLMs Uncover Hidden Physical Laws through Free Exploration?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37649)* · [Paper](https://arxiv.org/abs/2610.37649) · [Project](https://zhenyangcs.github.io/LongChang-website/) · [Code](https://github.com/EnVision-Research/LongChang)<br>
   Zhen Yang, Wen Wang, Xander Xu, Ying-Cong Chen · HKUST(GZ); Alibaba Group; ZJU; +1 institutions
 - <a id="c11"></a>**CausaLab: A Scalable Environment for Interactive Causal Discovery Toward AI Scientists** · *[arXiv 2026 (preprint)](https://arxiv.org/html/2605.26029v2)* · [Paper](https://arxiv.org/html/2605.26029v2)<br>

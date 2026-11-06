@@ -4401,6 +4401,28 @@
       "name": "Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.08237"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Public Zenodo and GitHub archive with prompts, raw model outputs, anonymized reviewer ratings, cleaned outcomes, summary tables, figure data, and analysis scripts; CC BY 4.0.",
+        "Publisher-hosted source PDFs and the benchmark's full database are not posted; access to non-public materials is subject to permissions."
+      ],
+      "focus": "Literature discovery, article interpretation, cross-article synthesis, and research-gap proposals against a known 102-article corpus. Search tools interact with websites and literature databases, including paired institutional-login conditions. Interpretation and synthesis use supplied PDFs without web access. Evidence consists of existing publications and recorded benchmark classifications, rather than simulation feedback or new physical measurements. Agents are not tasked with executing research experiments.",
+      "limits": "One topic, one run per tool per task, and one prompt per task. Search environments are imperfectly controlled; login changes subscription access and website admission together. Only four database fields are scored. Synthesis themes guide the tools toward benchmark concerns, and grounding instructions may constrain interpretation. Two expert reviewers disagree substantially; one authored the benchmark review. Training contamination cannot be excluded.",
+      "training": {
+        "reward": "No benchmark training procedure or training reward is established. Evaluation uses article matching by DOI and normalized title, withheld database classifications, quotation audits against source PDFs, and blinded expert ratings of synthesis and research-gap outputs.",
+        "reset": "Cookie clearing and removal of institutional sessions are described for paired search tests; interpretation uses corpus-only contexts. General environment reset support is not established.",
+        "branching": "State cloning, checkpoint restoration, and branching support are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-9e109f910ff861b4",
+      "resource_id": "paper-9e109f910ff861b4",
+      "name": "Can Large Language Models Review the Scientific Literature? A Test Against a 102-Article Benchmark",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.05459"
     }
   ]
 }

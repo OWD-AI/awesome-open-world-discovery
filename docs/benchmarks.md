@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**195 usage profiles** · Updated **2026-11-06**
+**196 usage profiles** · Updated **2026-11-06**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1280,6 +1280,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma](#paper-4090c8c18813ea7e) | Real data | Data analysis | Paper-described |
 | [VisSearch-Bench: Evaluating Long Horizon Visual Search in Multimodal Agents](#paper-2fa2fcaef01f9bc8) | Real data | Analysis + tools | Paper-described |
 | [On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer](#paper-9b4963f72ed4f821) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [Can Large Language Models Review the Scientific Literature? A Test Against a 102-Article Benchmark](#paper-9e109f910ff861b4) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3302,6 +3303,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | GRPO optimizes expected task reward while the sender and receiver remain frozen and only the bridges are updated (page 5). Evaluation compares extracted answers with gold labels, uses math-verify for mathematical equivalence, and executes code against test cases, requiring every case to pass (page 20). The complete training reward formula and training-only truncation penalty are not established by the supplied pages. |
 | Reset | Environment reset support is not established. Page 20 specifies independent responses with fixed per-question and per-sample seeds, but provides no environment reset or state-restoration interface. |
 | Branching | Environment-state branching support is not established. Multiple sampled responses and control runs are described, but no checkpoint-and-fork interaction interface is specified. |
+
+</details>
+
+<a id="paper-9e109f910ff861b4"></a>
+
+<details>
+<summary>Can Large Language Models Review the Scientific Literature? A Test Against a 102-Article Benchmark — details</summary>
+
+[Work](../README.md#paper-9e109f910ff861b4) · [Source](https://arxiv.org/pdf/2611.05459)
+
+**Focus:** Literature discovery, article interpretation, cross-article synthesis, and research-gap proposals against a known 102-article corpus. Search tools interact with websites and literature databases, including paired institutional-login conditions. Interpretation and synthesis use supplied PDFs without web access. Evidence consists of existing publications and recorded benchmark classifications, rather than simulation feedback or new physical measurements. Agents are not tasked with executing research experiments.
+
+**Openness:** `Public Zenodo and GitHub archive with prompts, raw model outputs, anonymized reviewer ratings, cleaned outcomes, summary tables, figure data, and analysis scripts; CC BY 4.0.`, `Publisher-hosted source PDFs and the benchmark's full database are not posted; access to non-public materials is subject to permissions.`
+
+**New physical measurements:** No
+
+**Limits:** One topic, one run per tool per task, and one prompt per task. Search environments are imperfectly controlled; login changes subscription access and website admission together. Only four database fields are scored. Synthesis themes guide the tools toward benchmark concerns, and grounding instructions may constrain interpretation. Two expert reviewers disagree substantially; one authored the benchmark review. Training contamination cannot be excluded.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | No benchmark training procedure or training reward is established. Evaluation uses article matching by DOI and normalized title, withheld database classifications, quotation audits against source PDFs, and blinded expert ratings of synthesis and research-gap outputs. |
+| Reset | Cookie clearing and removal of institutional sessions are described for paired search tests; interpretation uses corpus-only contexts. General environment reset support is not established. |
+| Branching | State cloning, checkpoint restoration, and branching support are not established. |
 
 </details>
 
