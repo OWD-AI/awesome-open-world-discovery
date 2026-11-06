@@ -4355,6 +4355,28 @@
       "name": "VisSearch-Bench: Evaluating Long Horizon Visual Search in Multimodal Agents",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.04894"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "The paper describes PLatour as open-source and states that code is available at https://github.com/zhenyi4/platour.",
+        "Availability of checkpoints and the complete evaluation implementation is not established by the supplied pages."
+      ],
+      "focus": "PACT-Check evaluates whether cross-model transfer gains depend on useful sender information, using dummy-transfer and irrelevant-transfer interventions plus separately trained self-communication and receiver-only controls. Tasks use fixed question-answering, chemistry, mathematics and coding datasets. Feedback combines stored gold answers, mathematical equivalence checking and execution of generated code against benchmark tests. PACT-Score subtracts the strongest applicable control’s accuracy.",
+      "limits": "The environment is fixed benchmark problem solving. Chemistry questions do not produce new physical measurements. Code execution tests generated solutions rather than conducting research experiments. A scientific simulator, laboratory interaction and autonomous research experimentation are not established. Tests cover Qwen-family models; positive PACT-Scores are relative to the included controls. Supplied pages identify 55 AIME overlaps and report an overlap-excluded subset. Sampled average accuracy estimates single-response accuracy rather than best-of-k success.",
+      "training": {
+        "reward": "GRPO optimizes expected task reward while the sender and receiver remain frozen and only the bridges are updated (page 5). Evaluation compares extracted answers with gold labels, uses math-verify for mathematical equivalence, and executes code against test cases, requiring every case to pass (page 20). The complete training reward formula and training-only truncation penalty are not established by the supplied pages.",
+        "reset": "Environment reset support is not established. Page 20 specifies independent responses with fixed per-question and per-sample seeds, but provides no environment reset or state-restoration interface.",
+        "branching": "Environment-state branching support is not established. Multiple sampled responses and control runs are described, but no checkpoint-and-fork interaction interface is specified."
+      },
+      "evaluation_family": "other",
+      "id": "paper-9b4963f72ed4f821",
+      "resource_id": "paper-9b4963f72ed4f821",
+      "name": "On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.06976"
     }
   ]
 }

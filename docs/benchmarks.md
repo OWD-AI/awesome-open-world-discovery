@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**193 usage profiles** · Updated **2026-11-06**
+**194 usage profiles** · Updated **2026-11-06**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1279,6 +1279,7 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [Monitor Accuracy Isn't the Answer: A Decision-Value Framework for Evaluating AI Agent Restart Monitors](#paper-583519ff11ee292e) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma](#paper-4090c8c18813ea7e) | Real data | Data analysis | Paper-described |
 | [VisSearch-Bench: Evaluating Long Horizon Visual Search in Multimodal Agents](#paper-2fa2fcaef01f9bc8) | Real data | Analysis + tools | Paper-described |
+| [On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer](#paper-9b4963f72ed4f821) | Executed programs + evaluators | Analysis + code | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3278,6 +3279,29 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | A training reward or policy-training procedure is not established. Evaluation uses separate semantic-judge calls for binary complete-answer Accuracy and task-specific partial-credit Process Score. The evaluator scores final_answer rather than the intermediate answer list or search trace. Partial-credit rules can use row-matching F1 or weighted subquestion scores (pages 18–20). |
 | Reset | Each task starts from a fresh context, and the first complete response is evaluated as Pass@1 (page 11). Resetting the external web to a fixed snapshot or guaranteeing deterministic tool replay is not established. |
 | Branching | Agents may pursue different search paths and compare multiple candidates within their budgets. Explicit context-state forking, checkpoint restoration, and a training-time branching API are not established. |
+
+</details>
+
+<a id="paper-9b4963f72ed4f821"></a>
+
+<details>
+<summary>On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer — details</summary>
+
+[Work](../README.md#paper-9b4963f72ed4f821) · [Source](https://arxiv.org/pdf/2611.06976)
+
+**Focus:** PACT-Check evaluates whether cross-model transfer gains depend on useful sender information, using dummy-transfer and irrelevant-transfer interventions plus separately trained self-communication and receiver-only controls. Tasks use fixed question-answering, chemistry, mathematics and coding datasets. Feedback combines stored gold answers, mathematical equivalence checking and execution of generated code against benchmark tests. PACT-Score subtracts the strongest applicable control’s accuracy.
+
+**Openness:** `The paper describes PLatour as open-source and states that code is available at https://github.com/zhenyi4/platour.`, `Availability of checkpoints and the complete evaluation implementation is not established by the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** The environment is fixed benchmark problem solving. Chemistry questions do not produce new physical measurements. Code execution tests generated solutions rather than conducting research experiments. A scientific simulator, laboratory interaction and autonomous research experimentation are not established. Tests cover Qwen-family models; positive PACT-Scores are relative to the included controls. Supplied pages identify 55 AIME overlaps and report an overlap-excluded subset. Sampled average accuracy estimates single-response accuracy rather than best-of-k success.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | GRPO optimizes expected task reward while the sender and receiver remain frozen and only the bridges are updated (page 5). Evaluation compares extracted answers with gold labels, uses math-verify for mathematical equivalence, and executes code against test cases, requiring every case to pass (page 20). The complete training reward formula and training-only truncation penalty are not established by the supplied pages. |
+| Reset | Environment reset support is not established. Page 20 specifies independent responses with fixed per-question and per-sample seeds, but provides no environment reset or state-restoration interface. |
+| Branching | Environment-state branching support is not established. Multiple sampled responses and control runs are described, but no checkpoint-and-fork interaction interface is specified. |
 
 </details>
 

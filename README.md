@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-934-2563eb?style=flat-square" alt="934 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-193-0f766e?style=flat-square" alt="193 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-935-2563eb?style=flat-square" alt="935 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-194-0f766e?style=flat-square" alt="194 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 124 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 155 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 87 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 184 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 185 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -2005,6 +2005,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Victor De Lima, Grace Hui Yang · Georgetown University
 - <a id="paper-03406ae2f3bae7d2"></a>**On the Fragility of Tasks under Composition: Implicit Budgeting in Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27190)* · [Paper](https://arxiv.org/abs/2610.27190) · [Project](https://chenpanli.github.io/fragility) · [Code](https://github.com/chenpanli/fragility)<br>
   Chenpan Li et al. · TU Munich; MIT CSAIL
+- <a id="paper-9b4963f72ed4f821"></a>**On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06976)* · [Paper](https://arxiv.org/abs/2611.06976) · [Project](https://github.com/zhenyi4/platour)<br>
+  Zhenyi Shen et al. · King’s College London; Tencent Youtu Lab; National Physical Laboratory
 - <a id="paper-4131f32dcc0451ab"></a>**OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.37739)* · [Paper](https://arxiv.org/abs/2610.37739)<br>
   Jiarui Yao, Ruida Wang, Tong Zhang · University of Illinois Urbana-Champaign
 - <a id="paper-5a53c3bdb60bfc08"></a>**OpenProblemBench: Benchmarking AI on Open Problems in the Foundational Theoretical Sciences** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.11118)* · [Paper](https://arxiv.org/abs/2610.11118)<br>

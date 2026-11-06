@@ -30629,6 +30629,39 @@
           12
         ]
       }
+    },
+    "paper-9b4963f72ed4f821": {
+      "institutions": [
+        "King’s College London",
+        "Tencent Youtu Lab",
+        "National Physical Laboratory"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Zero-initialized linear projections inject sender hidden states into corresponding receiver layers during prefill. Both backbones remain frozen; GRPO trains the bridges using task rewards. PACT-Check combines dummy and irrelevant sender interventions with separately trained self-communication and receiver-only controls. PACT-Score subtracts the strongest control's accuracy. Experiments cover question answering, chemistry reasoning, mathematics and coding with Qwen3 and Qwen3.5 models.",
+      "evidence": "With a Qwen3-235B sender and 1.7B receiver, generation accuracy reaches 69.29% on Chemistry, 89.35% on GSM8K and 78.20% on MATH500. After accounting for the strongest controls, the selected PLatour settings retain margins of only +3.34, +0.23 and −4.05 percentage points respectively. Neither Qwen3.5 configuration exceeds receiver-only training in domain-average mathematics or coding accuracy. The smaller 35B sender outperforms the 397B sender, whose training becomes unstable.",
+      "discovery_use": "PACT-Check provides a concrete protocol for verifying whether cooperating reasoning models actually use transferred knowledge. Its controls distinguish useful communication from receiver adaptation, making it relevant to evaluating knowledge sharing in discovery agents, although autonomous discovery is not tested.",
+      "limits": "The supplied pages support a targeted review, not exhaustive inspection of all 35 pages. Tests use models within the Qwen family and established answer-scored benchmarks rather than autonomous investigations. A positive PACT-Score is evidence relative to tested controls, not proof of semantic transfer. Mostik comparisons use undisclosed training conditions. AIME-135 contains 55 training-pool overlaps; AIME-80 excludes them. Sampled scores estimate single-response accuracy, not best-of-k success. The verified official repository currently contains the paper and release roadmap; training, evaluation and PACT-Check code and checkpoints are announced for release before November 8, 2026.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "benchmarks",
+        "rationale": "PACT-Check provides a concrete protocol for verifying whether cooperating reasoning models actually use transferred knowledge. Its controls distinguish useful communication from receiver adaptation, making it relevant to evaluating knowledge sharing in discovery agents, although autonomous discovery is not tested.",
+        "pdf_sha256": "62608f7cfc3e3b61df8ce2c08743a46813583f4cf2dd1e1289562b2a15112121",
+        "evidence_pages": [
+          1,
+          4,
+          6,
+          11
+        ]
+      }
     }
   }
 }

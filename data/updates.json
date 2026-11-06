@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T07:54:28-05:00",
+  "updated_at": "2026-11-06T08:46:41-05:00",
   "window_start": "2026-10-08",
   "window_end": "2026-11-06",
   "window_days": 30,
@@ -25,6 +25,17 @@
       "source": "Codex primary text-and-image checked",
       "summary": "Zichen Chen reports that RSI Arena let ten AI agents train assistants from a shared base model and then revise them using blind human feedback. The team reports improved style-adjusted human ratings relative to NVIDIA Instruct for eight of ten models after the second stage, while benchmark gains were modest and did not track preference gains.",
       "id": "15a57b695795d698"
+    },
+    {
+      "title": "Taiming Lu introduces Strategist for evolving inference code",
+      "date_evidence": "Supplied primary reading evidence records the original permalink displaying 7:15 PM · Nov 5, 2026, with datetime=2026-11-06T00:15:01.000Z, consistent with November 5 in America/New_York.",
+      "kind": "x",
+      "url": "https://x.com/TaimingLu/status/2118497346883571825",
+      "published_at": "2026-11-05",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "summary": "Taiming Lu introduces Strategist, an agent that proposes reasoning strategies as Python programs, evaluates their accuracy and cost, and stores results for reuse across tasks. The accompanying figure reports 74.7% accuracy versus a baseline’s 74.0%, at 0.61× its cost.",
+      "id": "8e5ac543541a1c09"
     },
     {
       "title": "Sylvia Yu outlines a controlled test of agents learning from research failures",
@@ -212,6 +223,17 @@
       "source": "Codex primary text-and-image checked",
       "summary": "Koutian Wu introduces Scientific Liquidity Agents, an exploratory simulation of specialist researchers and agents that transfer knowledge across disciplines. Wu reports that cross-disciplinary agents helped connect the simulated community, but contacts rarely became coauthorships and neither run recorded a successful replication. The announcement proposes evaluating AI research communities by knowledge verification, reuse, and transfer alongside paper production.",
       "id": "20112233811e5c02"
+    },
+    {
+      "title": "Josh Purtell compares Inkling 2 Small on a private autoresearch evaluation",
+      "date_evidence": "Supplied primary-source reading records the original permalink timestamp as 10:12 PM · Nov 5, 2026, with datetime=2026-11-06T03:12:33.000Z, consistent with November 5 in America/New_York.",
+      "kind": "x",
+      "url": "https://x.com/JoshPurtell/status/2118542022118125734",
+      "published_at": "2026-11-05",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "summary": "Josh Purtell reports that Inkling 2 Small improves on its predecessor in his private autoresearch evaluation, narrowly outperforming Beam 1.0 while trailing DeepSeek V4 Flash 0731 and GPT-5.6 Luna. He questions whether its AA score reflects its relative performance.",
+      "id": "18514fc1f18c61ee"
     },
     {
       "title": "FleetingBits examines METR’s AI research acceleration estimate",
@@ -464,6 +486,28 @@
       ]
     },
     {
+      "title": "On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer",
+      "url": "https://arxiv.org/abs/2611.06976",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "The paper introduces PLatour, which lets a large language model supply prompt representations to a smaller model through trainable bridges. It also shows that improved reasoning accuracy can arise without useful sender information and proposes controlled tests to measure that distinction.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp matches the primary arXiv v1 submission history: November 4, 2026 at 13:33:47 UTC. This is the original preprint event.",
+      "review_status": "approved",
+      "relevance": "PACT-Check provides a concrete protocol for verifying whether cooperating reasoning models actually use transferred knowledge. Its controls distinguish useful communication from receiver adaptation, making it relevant to evaluating knowledge sharing in discovery agents, although autonomous discovery is not tested.",
+      "id": "9b4963f72ed4f821",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06976"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/zhenyi4/platour"
+        }
+      ]
+    },
+    {
       "title": "Hanchen Li announces FrontierCS 1.1",
       "date_evidence": "Supplied primary-source reading evidence reports the original X time element as “8:58 PM · Nov 4, 2026,” with an accompanying UTC datetime.",
       "kind": "x",
@@ -552,6 +596,18 @@
       "summary": "Ben Scharfstein says his team equipped Ari, its post-training agent, with 18 months of codified post-training practices. He reports that Ari outperforms Codex on the same autoresearch task and generates unexpected insights, describing this as a step toward recursive self-improvement.",
       "content_label": "Social post · video not reviewed",
       "id": "ab3c0262b265c6cb"
+    },
+    {
+      "title": "Applied Compute reports Ari Autoresearch’s autonomous post-training run",
+      "date_evidence": "Supplied original-permalink evidence shows 1:37 PM · Nov 4, 2026, with time-element datetime=2026-11-04T18:37:08.000Z.",
+      "kind": "x",
+      "url": "https://x.com/appliedcompute/status/2118049924831187172",
+      "published_at": "2026-11-04",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "summary": "Applied Compute reports that Ari Autoresearch, now live on AC2, autonomously ran a 16-hour post-training episode on Qwen3.5-9B, increasing held-out chess-puzzle reward from 0.118 to 0.629 without researcher intervention. Video not reviewed.",
+      "content_label": "Social post · video not reviewed",
+      "id": "b1c92ca7b4c96740"
     },
     {
       "title": "YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction",
@@ -14832,6 +14888,25 @@
       ]
     },
     {
+      "title": "Junjie Zhou uses LeWAM to discuss intervention tests for changing learned representations",
+      "url": "https://x.com/junjiechou1122/status/2109325795982483465",
+      "published_at": "2026-10-11",
+      "kind": "x",
+      "summary": "Junjie Zhou uses LeWAM to propose a computational discovery loop in which an agent identifies missing distinctions in its representations, hypothesizes mechanisms, revises its architecture, objective or memory, and tests those changes under intervention and beyond the original setting.",
+      "date_evidence": "Supplied primary-source inspection reports the original X permalink displays “12:50 PM · Oct 11, 2026” and its time element contains datetime=2026-10-11T16:50:33.000Z.",
+      "relevance": "Connects world representations to hypothesis formation, intervention, verification and revision of a learning system's assumptions.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Project",
+          "url": "https://le-wam.github.io"
+        }
+      ],
+      "content_label": "Social post · video not reviewed",
+      "id": "88adadb8aa99d9ac"
+    },
+    {
       "title": "Heterogeneous Agentic Coevolution",
       "url": "https://arxiv.org/abs/2610.16078",
       "published_at": "2026-10-11",
@@ -16319,6 +16394,28 @@
         {
           "label": "Dataset",
           "url": "https://huggingface.co/datasets/DAGroup-PKU/Open-HumanWAM-50K"
+        }
+      ]
+    },
+    {
+      "title": "On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer",
+      "url": "https://arxiv.org/abs/2611.06976",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "The paper introduces PLatour, which lets a large language model supply prompt representations to a smaller model through trainable bridges. It also shows that improved reasoning accuracy can arise without useful sender information and proposes controlled tests to measure that distinction.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp matches the primary arXiv v1 submission history: November 4, 2026 at 13:33:47 UTC. This is the original preprint event.",
+      "review_status": "approved",
+      "relevance": "PACT-Check provides a concrete protocol for verifying whether cooperating reasoning models actually use transferred knowledge. Its controls distinguish useful communication from receiver adaptation, making it relevant to evaluating knowledge sharing in discovery agents, although autonomous discovery is not tested.",
+      "id": "9b4963f72ed4f821",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06976"
+        },
+        {
+          "label": "Project",
+          "url": "https://github.com/zhenyi4/platour"
         }
       ]
     },
