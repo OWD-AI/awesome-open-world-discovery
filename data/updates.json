@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T05:20:03-05:00",
+  "updated_at": "2026-11-06T05:45:34-05:00",
   "window_start": "2026-10-08",
   "window_end": "2026-11-06",
   "window_days": 30,
@@ -14,6 +14,17 @@
       "source": "Codex primary text-and-image checked",
       "summary": "Dung Hoang examines AutoDNA’s laboratory agents, arguing that physical execution and bounded optimization are steps toward discovery but still depend on reliable measurements, supplies, and human intervention. He connects autonomous labs to AI research acceleration while explicitly treating their convergence into improving discovery systems as a hypothesis.",
       "id": "1968c4ee7f36100b"
+    },
+    {
+      "title": "Zichen Chen announces RSI Arena and reports human-feedback results",
+      "date_evidence": "Supplied primary reading evidence records the original permalink displaying “10:58 PM · Nov 5, 2026,” with a corresponding UTC datetime in its time element.",
+      "kind": "x",
+      "url": "https://x.com/my_cat_can_code/status/2118553609109688414",
+      "published_at": "2026-11-05",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "summary": "Zichen Chen reports that RSI Arena let ten AI agents train assistants from a shared base model and then revise them using blind human feedback. The team reports improved style-adjusted human ratings relative to NVIDIA Instruct for eight of ten models after the second stage, while benchmark gains were modest and did not track preference gains.",
+      "id": "15a57b695795d698"
     },
     {
       "title": "Sylvia Yu outlines a controlled test of agents learning from research failures",
@@ -1351,6 +1362,28 @@
       ]
     },
     {
+      "title": "HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation",
+      "url": "https://arxiv.org/abs/2611.02660",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "HeLM separates visual event detection, textual memory updates, and robot execution. Working memory tracks progress within an instruction, while episodic context carries observations across instruction boundaries.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper metadata gives 2026-11-02T07:20:12.000Z, and PDF page 1 identifies arXiv v1 as 2 November 2026. The supplied original timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Explicit persistent memory lets an embodied agent retain acquired environmental information and use it when later observations are insufficient. This directly supports discovery systems that must remember observations across investigations, although autonomous discovery of relevant events is outside the evaluated scope.",
+      "id": "6852e6061b49752b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.02660"
+        },
+        {
+          "label": "Project",
+          "url": "https://kimspacehuni.github.io/HeLM/"
+        }
+      ]
+    },
+    {
       "title": "Harness-S: Learning from Sibling Harnesses for Generalizable Agent Training",
       "url": "https://arxiv.org/abs/2611.04277",
       "published_at": "2026-11-02",
@@ -2507,6 +2540,24 @@
         {
           "label": "Code",
           "url": "https://github.com/Open-RUA/uni-robot-agent"
+        }
+      ]
+    },
+    {
+      "title": "Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents",
+      "url": "https://arxiv.org/abs/2611.02075",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "DPDM separates semantic encoding from empirical inference. A frozen language model represents decision records, and a shared frozen conditional predictor uses labeled history to estimate the answer for a new case.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper metadata gives 2026-11-01T00:00:00.000Z, and PDF page 1 identifies arXiv v1 as 1 November 2026. The supplied timestamp is preserved; its America/New_York calendar day is October 31.",
+      "review_status": "approved",
+      "relevance": "The central contribution is learning deployment-specific relationships from accumulated feedback to improve agent judgments, including tool-use and reasoning verification. This provides a concrete mechanism for retained experience to improve discovery-related decisions without neural-parameter updates.",
+      "id": "c957a0f75278243d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.02075"
         }
       ]
     },
@@ -4226,6 +4277,42 @@
       "id": "871876071f2d07ca"
     },
     {
+      "title": "comaple zhang examines Athanor’s autonomous post-training experiments",
+      "url": "https://x.com/comaple123/status/2115091436555411733",
+      "published_at": "2026-10-27",
+      "kind": "x",
+      "summary": "Zhang reports that Athanor’s autonomous agents post-trained Qwen3-4B-Base to roughly the official instruction model’s reported benchmark scores. Zhang emphasizes their reliance on known methods and rapid convergence on the same public reasoning dataset, questioning the diversity of their research strategies. Video not reviewed.",
+      "date_evidence": "Supplied primary reading evidence records the original permalink displaying “10:41 AM · Oct 27, 2026” with a corresponding UTC datetime in its post time element.",
+      "relevance": "Examines autonomous post-training experimentation and limitations in agents' research-strategy diversity.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [],
+      "content_label": "Social post · video not reviewed",
+      "id": "b30875d784904fe2"
+    },
+    {
+      "title": "Zhuang Liu proposes acceptance prediction as a research evaluation proxy",
+      "url": "https://x.com/liuzhuang1234/status/2114944850823168268",
+      "published_at": "2026-10-27",
+      "kind": "x",
+      "summary": "Zhuang Liu proposes paper acceptance prediction as a starting proxy for evaluating research and training AI scientists with reinforcement learning. He introduces his team’s PaperScorer project, whose text and vision models predict acceptance decisions.",
+      "date_evidence": "Supplied primary reading evidence records the original permalink timestamp as 12:58 AM · Oct 27, 2026, with a corresponding UTC datetime in its time element.",
+      "relevance": "Substantive proposal about reward design and evaluation for research-agent training.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://x.com/SachinKonan/status/2114838507797782675"
+        },
+        {
+          "label": "Project",
+          "url": "https://paperscorer-ai.com"
+        }
+      ],
+      "id": "e8f25d5dbe444854"
+    },
+    {
       "title": "Xiaoyin Chen evaluates self-evolving agents under task drift",
       "url": "https://x.com/xiaoyin_chen66/status/2115162450660340135",
       "published_at": "2026-10-27",
@@ -4440,6 +4527,17 @@
           "url": "https://arxiv.org/abs/2610.37739"
         }
       ]
+    },
+    {
+      "title": "Noor Shaker: Is AI generalisability really the issue in drug discovery?",
+      "date_evidence": "Supplied primary reading evidence identifies October 27, 2026 in the original LinkedIn Pulse article’s publication time element beneath the author byline.",
+      "kind": "linkedin",
+      "url": "https://linkedin.com/pulse/ai-generalisability-really-issue-drug-discovery-noor-shaker-ish9c",
+      "published_at": "2026-10-27",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "summary": "Noor Shaker argues that drug-discovery models should earn their place by improving compound choices and reducing design–make–test–analyse cycles. She proposes adapting global models according to measured programme and assay shifts, then evaluating them against chemist rankings, campaign cost and duration, and calibrated uncertainty. She also suggests testing pairwise prediction for activity cliffs, while acknowledging mixed evidence for local models.",
+      "id": "cda11ae68cd1eeb2"
     },
     {
       "title": "MLE-World: Predicting Machine Learning Experiment Outcomes with a Learned World Model",
@@ -7884,6 +7982,17 @@
           "url": "https://github.com/nsivaku/tom2vec"
         }
       ]
+    },
+    {
+      "title": "Swetabh Pathak: Is Better AI Leading to Better Drugs?",
+      "date_evidence": "Supplied primary-source reading evidence identifies October 21, 2026 in the original LinkedIn Pulse publication time element beneath the author byline.",
+      "kind": "linkedin",
+      "url": "https://linkedin.com/pulse/better-ai-leading-drugs-swetabh-pathak-m2plc",
+      "published_at": "2026-10-21",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "summary": "Swetabh Pathak argues that AI drug discovery should be evaluated by its effect on experimental and clinical decisions, rather than benchmark accuracy alone. Interpreting a review by Andreas Bender and colleagues, he advocates biologically meaningful assays, causal questions about interventions, and learning from human clinical failures. His contribution is an evaluation perspective on why improved models may fail to accelerate discovery.",
+      "id": "5a1de4a1d4e73b94"
     },
     {
       "title": "SplatLab: Autonomous Scientific Discovery for 3DGS Research",
@@ -17020,6 +17129,28 @@
       ]
     },
     {
+      "title": "HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation",
+      "url": "https://arxiv.org/abs/2611.02660",
+      "published_at": "2026-11-02",
+      "kind": "paper",
+      "summary": "HeLM separates visual event detection, textual memory updates, and robot execution. Working memory tracks progress within an instruction, while episodic context carries observations across instruction boundaries.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper metadata gives 2026-11-02T07:20:12.000Z, and PDF page 1 identifies arXiv v1 as 2 November 2026. The supplied original timestamp is preserved.",
+      "review_status": "approved",
+      "relevance": "Explicit persistent memory lets an embodied agent retain acquired environmental information and use it when later observations are insufficient. This directly supports discovery systems that must remember observations across investigations, although autonomous discovery of relevant events is outside the evaluated scope.",
+      "id": "6852e6061b49752b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.02660"
+        },
+        {
+          "label": "Project",
+          "url": "https://kimspacehuni.github.io/HeLM/"
+        }
+      ]
+    },
+    {
       "title": "Harness-S: Learning from Sibling Harnesses for Generalizable Agent Training",
       "url": "https://arxiv.org/abs/2611.04277",
       "published_at": "2026-11-02",
@@ -18120,6 +18251,24 @@
         {
           "label": "Code",
           "url": "https://github.com/Open-RUA/uni-robot-agent"
+        }
+      ]
+    },
+    {
+      "title": "Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents",
+      "url": "https://arxiv.org/abs/2611.02075",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "DPDM separates semantic encoding from empirical inference. A frozen language model represents decision records, and a shared frozen conditional predictor uses labeled history to estimate the answer for a new case.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Supplied original-paper metadata gives 2026-11-01T00:00:00.000Z, and PDF page 1 identifies arXiv v1 as 1 November 2026. The supplied timestamp is preserved; its America/New_York calendar day is October 31.",
+      "review_status": "approved",
+      "relevance": "The central contribution is learning deployment-specific relationships from accumulated feedback to improve agent judgments, including tool-use and reasoning verification. This provides a concrete mechanism for retained experience to improve discovery-related decisions without neural-parameter updates.",
+      "id": "c957a0f75278243d",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.02075"
         }
       ]
     },

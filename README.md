@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-932-2563eb?style=flat-square" alt="932 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-934-2563eb?style=flat-square" alt="934 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-193-0f766e?style=flat-square" alt="193 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -81,8 +81,8 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 98 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 69 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 167 |
-| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 123 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 154 |
+| 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 124 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 155 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 87 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 184 |
 
@@ -1021,6 +1021,8 @@ Each work appears once under its primary contribution; see the [classification g
   Xing Han et al. · Johns Hopkins University; MIT; University of Texas at Austin; +1 institutions
 - <a id="paper-4bd61eafe4f2ad4e"></a>**Darwin-Claw: Environment-Adaptive Experience Consolidation for Recursively Self-Evolving Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23574)* · [Paper](https://arxiv.org/abs/2610.23574)<br>
   Mingze Yin et al. · Zhejiang University; Tencent; Zhongguancun Academy
+- <a id="paper-c957a0f75278243d"></a>**Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02075)* · [Paper](https://arxiv.org/abs/2611.02075)<br>
+  Lang Mo et al. · Stable AI; Tsinghua University
 - <a id="paper-8c25de7e3b883e2e"></a>**Do Self-Evolving Skills Generalize to Held-Out Tasks?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.39148)* · [Paper](https://arxiv.org/abs/2609.39148)<br>
   Xihao Piao, Zifeng Wang, Zheng Chen · Osaka University
 - <a id="paper-274759ea4fce57e7"></a>**EASE: Behavior-Adaptive Skill Curation for Self-Evolving Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.36746)* · [Paper](https://arxiv.org/abs/2609.36746)<br>
@@ -1398,6 +1400,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ruiyao Xu et al. · Northwestern University; Google Cloud AI Research
 - <a id="paper-302d003c6e0122f1"></a>**HarnessMM: Recursive Self-Improvement for Harness Token Efficiency** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.32813)* · [Paper](https://arxiv.org/abs/2610.32813)<br>
   Yuhua Jiang, Chang Xu, Feifei Gao, Li Zhao · Tsinghua University; Microsoft Research Asia (MSRA)
+- <a id="paper-6852e6061b49752b"></a>**HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02660)* · [Paper](https://arxiv.org/abs/2611.02660) · [Project](https://kimspacehuni.github.io/HeLM/)<br>
+  Gyeonghun Kim, Donghoon Kim, Minsoo Choi, Suyun Lee · Seoul National University
 - <a id="paper-ed9e613c992f87fc"></a>**Hidden Messages Between Diffusion Language Model Agents: Causal Evidence for Latent Communication** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28905)* · [Paper](https://arxiv.org/abs/2610.28905) · [Code](https://github.com/alanrbtx/hidden-messages-diffusion-agents)<br>
   Alan-Barsag Gazzaev, Alexey Gavrilov, Sergey Muravyov, Ilya Makarov · ITMO University; HSE University
 - <a id="paper-bd5dfa376cbe2ce7"></a>**HiSTEVE 1.0: Harnessing Human-Interface VLA Agents for Open-World Games** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31162)* · [Paper](https://arxiv.org/abs/2610.31162)<br>

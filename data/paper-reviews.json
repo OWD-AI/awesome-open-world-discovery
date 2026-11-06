@@ -30566,6 +30566,69 @@
           15
         ]
       }
+    },
+    "paper-6852e6061b49752b": {
+      "institutions": [
+        "Seoul National University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Fine-tune a Qwen2.5-VL-7B high-level policy using TaskSpec-generated detection and memory-update supervision. Invoke detection at low-level action-chunk boundaries and update memory after detected events or instruction changes. Evaluate against visual-keyframe, latent-memory, and memoryless policies on ten real-world tasks, with simulation and component ablations.",
+      "evidence": "HeLM reports 85.7% intra-episode subtask success versus 72.9% for Keyframe-HLP, and 81.3% versus 29.3% under strict task success. Inter-episode subtask success is 89.2% versus 16.6%. Held-out compositions reach 78%. At eight stored events, the visual baseline reaches 28 GB VRAM while HeLM stays below 6 GB; long-horizon inference is reported as 2.5 times faster.",
+      "discovery_use": "Explicit persistent memory lets an embodied agent retain acquired environmental information and use it when later observations are insufficient. This directly supports discovery systems that must remember observations across investigations, although autonomous discovery of relevant events is outside the evaluated scope.",
+      "limits": "Events and action vocabularies are predefined and task-specific fine-tuning is necessary. False-positive detections can corrupt memory without self-correction. Continuous state tracking, transient events within action chunks, and the advantage of two memory fields over one persistent field remain unresolved. Inter-episode comparison has only one baseline. Partial subtask scores do not enforce ordering or termination, and simulation has occlusion and initialization defects. Horizons remain short relative to persistent autonomous investigation.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "systems",
+        "rationale": "Explicit persistent memory lets an embodied agent retain acquired environmental information and use it when later observations are insufficient. This directly supports discovery systems that must remember observations across investigations, although autonomous discovery of relevant events is outside the evaluated scope.",
+        "pdf_sha256": "462b04e0e3efd9158b511404c00e4ee329c74680225362b3d9ca59a79010a5ab",
+        "evidence_pages": [
+          1,
+          5,
+          8,
+          10
+        ]
+      }
+    },
+    "paper-c957a0f75278243d": {
+      "institutions": [
+        "Stable AI",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        5,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Combine language-model hidden states, lexical features, and native fields through history-fitted transformations. Supply historical representations and targets separately to LimiX-2 and select the highest-probability valid candidate. Evaluate 50 benchmarks with matched-history comparisons, growing histories, imbalanced reasoning judgments, and label-permutation, repetition, and representation controls.",
+      "evidence": "With Qwen3.5-27B, mean accuracy rises from 78.80% for few-shot prompting to 84.92% at respective history budgets, or 82.33% with identical histories. Mean balanced accuracy on reasoning-step judgments rises from 59.86% to 74.37%. On six controlled tasks, permuting labels reduces accuracy from 80.71% to 50.13%, supporting use of historical relationships. Larger histories improve mean accuracy across the common evaluation cohort.",
+      "discovery_use": "The central contribution is learning deployment-specific relationships from accumulated feedback to improve agent judgments, including tool-use and reasoning verification. This provides a concrete mechanism for retained experience to improve discovery-related decisions without neural-parameter updates.",
+      "limits": "Most evidence concerns offline labeled judgments rather than closed-loop agents collecting feedback or conducting investigations. Only LimiX-2 instantiates the conditional predictor, so predictor generality remains untested. Main endpoints use unequal history budgets, although matched-history gains persist. Feature engineering and 32-pipeline aggregation are part of the evaluated system. Classes absent from history initially receive zero probability, limiting unknown-class discovery. No paper-specific public release was verified; the supplied artifact hints identify baseline models.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "adaptation",
+        "rationale": "The central contribution is learning deployment-specific relationships from accumulated feedback to improve agent judgments, including tool-use and reasoning verification. This provides a concrete mechanism for retained experience to improve discovery-related decisions without neural-parameter updates.",
+        "pdf_sha256": "7efb9ac851191d34ca7a8140fd93d325ce2609e0446e8d6706bc550633f96d13",
+        "evidence_pages": [
+          1,
+          3,
+          5,
+          12
+        ]
+      }
     }
   }
 }
