@@ -30756,6 +30756,38 @@
           27
         ]
       }
+    },
+    "paper-7eca4a2bc62f0ec7": {
+      "institutions": [
+        "Tsinghua AI Agent Group",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        10,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A small language-model encoder and latent adapter convert each observation into 128 vectors inserted into the target agent’s input embeddings. Training combines full-versus-compressed next-action KL alignment with cross-entropy on recorded actions, updating encoder LoRA parameters and the adapter while freezing the agent. The dataset contains 4,363 observation–action pairs from 4,188 tasks. Evaluation compares uncompressed agents, LongLLMLingua, text summarization, and an architecture-matched reconstruction objective across four QA datasets and two model pairs.",
+      "evidence": "Reported total input-plus-output token savings range from 70.01% to 89.24%, with runtime reductions of 24.45%–55.97%. EM and F1 improve over the uncompressed agent in all eight model–dataset settings. Coca-Cola leads 13 of 16 accuracy metrics and both metrics in six settings; competing methods retain advantages on Qwen TriviaQA and 2Wiki F1. Increasing the latent budget improves NQ F1, while removing task or reasoning context reduces EM.",
+      "discovery_use": "The primary contribution is an agent observation interface that preserves information needed for subsequent search decisions. Its demonstrated connection to iterative evidence acquisition and multi-hop factual reasoning makes it relevant infrastructure for discovery agents, although scientific discovery is not directly evaluated.",
+      "limits": "Evaluation covers established factual QA tasks with at most five searches, not unknown scientific problems or sustained investigations. Training provenance, evaluation sample counts, repeated-run uncertainty, and training–evaluation overlap are insufficiently documented. Compression methods are not compared at matched budgets. Embedding insertion and gradient-based training require internal model access. Some inference configurations use an extra GPU for compression, so latency savings do not establish lower total hardware cost. The illustrative case receives differently ranked search results, weakening its causal interpretation. The capacity analysis depends on realizability assumptions and does not guarantee usable information capacity. Only supplied pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-06",
+        "category": "systems",
+        "rationale": "The primary contribution is an agent observation interface that preserves information needed for subsequent search decisions. Its demonstrated connection to iterative evidence acquisition and multi-hop factual reasoning makes it relevant infrastructure for discovery agents, although scientific discovery is not directly evaluated.",
+        "pdf_sha256": "bd02ff3acf0e702cc8ed3490fa78c1c7ad8e6e27501511840e1dab89aca3f89b",
+        "evidence_pages": [
+          1,
+          6,
+          10,
+          16
+        ]
+      }
     }
   }
 }

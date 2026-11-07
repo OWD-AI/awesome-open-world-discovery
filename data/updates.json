@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T20:27:22-05:00",
+  "updated_at": "2026-11-06T20:49:20-05:00",
   "window_start": "2026-10-08",
   "window_end": "2026-11-06",
   "window_days": 30,
@@ -760,6 +760,28 @@
       "source": "Codex primary text-and-image checked",
       "summary": "Xudong argues that research agents should check novelty at the level of individual claims to avoid discarding promising ideas. Discussing UIUC’s ClaimNov, the post explains how separating problems, methods, resources, and results makes novelty judgments more informative. It cites the paper’s reported 97% detection of disguised copies and reduction in LLM-judge false alarms from 11.8% to 1.5%.",
       "id": "349c1cdf703481b8"
+    },
+    {
+      "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "url": "https://arxiv.org/abs/2611.06500",
+      "published_at": "2026-11-03",
+      "kind": "paper",
+      "summary": "Coca-Cola compresses tool observations into continuous latent tokens conditioned on the question and current reasoning state. Training preserves the frozen agent’s subsequent action behavior rather than reconstructing the observation text. Experiments show lower context consumption and faster web-search question answering with improved accuracy over uncompressed agents.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-11-04T00:00:00.000Z and is preserved as requested. The primary arXiv record confirms original submission on November 4, 2026, with v1 timestamp 13:32:36 UTC. The supplied midnight timestamp is therefore date metadata, not the exact submission time. The PDF’s November 5 date is an internal manuscript date; the input November 3 date is not supported by the primary record.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is an agent observation interface that preserves information needed for subsequent search decisions. Its demonstrated connection to iterative evidence acquisition and multi-hop factual reasoning makes it relevant infrastructure for discovery agents, although scientific discovery is not directly evaluated.",
+      "id": "7eca4a2bc62f0ec7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06500"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/THU-Agent/Coca-cola"
+        }
+      ]
     },
     {
       "title": "SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?",
@@ -16827,6 +16849,28 @@
         {
           "label": "Project",
           "url": "https://rowletqwq.github.io/YANAMI"
+        }
+      ]
+    },
+    {
+      "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "url": "https://arxiv.org/abs/2611.06500",
+      "published_at": "2026-11-03",
+      "kind": "paper",
+      "summary": "Coca-Cola compresses tool observations into continuous latent tokens conditioned on the question and current reasoning state. Training preserves the frozen agent’s subsequent action behavior rather than reconstructing the observation text. Experiments show lower context consumption and faster web-search question answering with improved accuracy over uncompressed agents.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at is 2026-11-04T00:00:00.000Z and is preserved as requested. The primary arXiv record confirms original submission on November 4, 2026, with v1 timestamp 13:32:36 UTC. The supplied midnight timestamp is therefore date metadata, not the exact submission time. The PDF’s November 5 date is an internal manuscript date; the input November 3 date is not supported by the primary record.",
+      "review_status": "approved",
+      "relevance": "The primary contribution is an agent observation interface that preserves information needed for subsequent search decisions. Its demonstrated connection to iterative evidence acquisition and multi-hop factual reasoning makes it relevant infrastructure for discovery agents, although scientific discovery is not directly evaluated.",
+      "id": "7eca4a2bc62f0ec7",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06500"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/THU-Agent/Coca-cola"
         }
       ]
     },

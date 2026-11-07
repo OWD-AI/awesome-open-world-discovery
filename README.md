@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-938-2563eb?style=flat-square" alt="938 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-939-2563eb?style=flat-square" alt="939 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-196-0f766e?style=flat-square" alt="196 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -82,7 +82,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 69 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 167 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 124 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 156 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 157 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 87 |
 | 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 187 |
 
@@ -1530,6 +1530,8 @@ Each work appears once under its primary contribution; see the [classification g
   Chris Lu et al. · Sakana AI; University of Oxford; University of British Columbia; +2 institutions
 - <a id="paper-3e1d6c58b4640b70"></a>**The Last Remote Sensing Model Built by Humans? Casting Any Earth Observation Task as Recursive Self-Improvement** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.18845)* · [Paper](https://arxiv.org/abs/2610.18845) · [Code](https://github.com/Yokoya-Lab-UTokyo/RSI4EO)<br>
   Sijie Zhao et al. · The University of Tokyo; RIKEN; Stanford University
+- <a id="paper-7eca4a2bc62f0ec7"></a>**Tools Need Not Speak in Text: Latent Context Compression for Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06500)* · [Paper](https://arxiv.org/abs/2611.06500) · [Code](https://github.com/THU-Agent/Coca-cola)<br>
+  Yuetong Liu et al. · Tsinghua AI Agent Group; Tsinghua University
 - <a id="paper-8bd50ae4a7caaa00"></a>**Topological Coherence for Self-evolving Multi-agent Systems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.37953)* · [Paper](https://arxiv.org/abs/2609.37953)<br>
   Sen Zhao et al. · Chongqing University of Posts and Telecommunications; Towngas
 - <a id="paper-1858a2655b0e1621"></a>**Trust Mechanisms for Offline Generative AI at the Edge: A Connectivity-Regime Framework and an Empirical Study on a Raspberry Pi 5** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.33732)* · [Paper](https://arxiv.org/abs/2610.33732)<br>
