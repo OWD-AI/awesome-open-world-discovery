@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**202 usage profiles** · Updated **2026-11-09**
+**203 usage profiles** · Updated **2026-11-09**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -3528,6 +3528,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance](#paper-8038b228ad5a266b) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Scientist World: Grow a Research World for AI-Scientists](#paper-6378d95e4d1259aa) | Executed programs + evaluators | Budgeted pool queries | Paper-described |
 | [Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling](#paper-37def078f4352fe7) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection](#paper-605714b8c1bb680f) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -4561,6 +4562,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | Reward / evaluator | Evaluation uses direction-aware numerical scoring against human Outstanding-award papers: 94 usable papers from 99 collected. A programmatic feasibility gate zeroes infeasible task scores; 624 Lean obligations audit related artifact predicates. O-EVAL is the primary panel score, with baseline-relative metrics also reported. Gate-filtered rejection sampling and reinforcement learning using verified scores are proposed; demonstrated model training or training gains are not established. |
 | Reset | Three independent seeded passes over the tasks are reported using per-task containers. An explicit reset interface, mid-run restoration, or checkpoint rollback is not established. |
 | Branching | Agents can run code and inspect observations during a trial. Environment snapshotting, state forks, and an explicit branching interface are not established. |
+
+</details>
+
+<a id="paper-605714b8c1bb680f"></a>
+
+<details>
+<summary>IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection — details</summary>
+
+[Work](../README.md#paper-605714b8c1bb680f) · [Source](https://arxiv.org/pdf/2611.08647)
+
+**Focus:** Discover effective gradient-free weight patches through iterative intervention, target inference and numerical feedback. Feedback comes from executed model computation, not simulation, recorded observations or new physical measurements.
+
+**Openness:** `Editors choose weight interventions and public or editor-supplied probe prompts within fixed objectives and a pinned target checkpoint.`, `Four tools permit bounded weight reading, weight writing, response generation and teacher-forced numerical inspection.`, `No gradients, shell access, Python execution, other code interpretation or activation steering are allowed.`, `Each episode permits 64 turns, 128 admitted tool calls and 262,144 target forward tokens, with additional generation and inspection limits.`, `Terminal inputs and grades remain withheld; editors cannot intervene after patch submission.`
+
+**New physical measurements:** No
+
+**Limits:** Evaluation uses one Gemma 3 4B IT checkpoint, thirty selected episodes across ten prescribed families and one recorded run per configuration per episode. This establishes bounded model-editing experimentation; open-ended discovery and transfer to other checkpoints are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | Pages 3 and 7 define deterministic terminal reward as max(0, (e − b)/(1 − b)) multiplied by retention of baseline-correct controls. Responses must satisfy both content and behavioural criteria. Episode rewards are averaged within families, then equally across families. Pristine and patched checkpoints receive identical withheld inputs in separate fresh processes. Page 15 states that reinforcement learning environments are shared for testing and training; actual editor training runs are not established. |
+| Reset | Pages 2–3 establish terminal evaluation from the pinned pristine checkpoint in fresh processes, with only the submitted patch transferred. Page 6 permits pristine-versus-edited comparisons. An editor-accessible reset operation during the editing loop is not established. |
+| Branching | Iterative patch testing and revision within an episode are established. Snapshot restoration, explicit state forking and independent branch execution are not established. |
 
 </details>
 

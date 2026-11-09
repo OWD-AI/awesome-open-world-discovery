@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-958-2563eb?style=flat-square" alt="958 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-202-0f766e?style=flat-square" alt="202 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-959-2563eb?style=flat-square" alt="959 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-203-0f766e?style=flat-square" alt="203 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -84,7 +84,7 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 127 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 160 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 88 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 193 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 194 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -2009,6 +2009,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Yuting Ning et al. · The Ohio State University; Apple
 - <a id="paper-d70edca9eafeab6e"></a>**Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.01927)* · [Paper](https://arxiv.org/abs/2611.01927) · [Code](https://github.com/AlanRosston/Depth)<br>
   Yu Jiang et al. · University of Notre Dame; IBM Research; MIT-IBM Watson AI Lab; +4 institutions
+- <a id="paper-605714b8c1bb680f"></a>**IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.08647)* · [Paper](https://arxiv.org/abs/2611.08647) · [Code](https://github.com/hcltech-robotics/iwibench) · [Project](https://hcltech-robotics.github.io/iwibench/)<br>
+  Chris von Csefalvay, Pranav Doma, Achyuthan Unni Krishnan, Tamás Földi · Robotics Intelligence CoE, HCLTech
 - <a id="paper-01623fe5218eb9ef"></a>**JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19589)* · [Paper](https://arxiv.org/abs/2610.19589) · [Code](https://github.com/HKUST-KnowComp/JockeyBench)<br>
   Zhongwei Xie et al. · The Hong Kong University of Science and Technology; Tsy Capital Limited; Independent researcher; +1 institutions
 - <a id="paper-c4824adae163f399"></a>**Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.21109)* · [Paper](https://arxiv.org/abs/2610.21109) · [Project](https://minnesotanlp.github.io/kolab/)<br>

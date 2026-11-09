@@ -31400,6 +31400,35 @@
           36
         ]
       }
+    },
+    "paper-605714b8c1bb680f": {
+      "institutions": [
+        "Robotics Intelligence CoE, HCLTech"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Editors receive objectives, practice examples, tensor metadata, and four bounded tools for reading weights, writing weights, generating responses, and numerical inspection. Ten configurations each attempt the same thirty selected episodes on Gemma 3 4B IT. Submitted patches are evaluated against pristine weights in separate fresh processes on withheld inputs. Reward multiplies positive normalized target improvement by retention of baseline-correct controls, then averages equally across families.",
+      "evidence": "GPT-6.1 Sol medium ranks first with macro reward 0.4601, increasing target successes from 104 to 284 of 551 while retaining 2,222 of 2,288 controls. Astra scores 0.4356 and retains 2,268 controls. Alias acquisition and recoding are relatively successful. All configurations fail structured-response defaults; only 5.6-terra improves answer-length control, from two to three successes out of nine. Higher reasoning effort produces task-specific, non-monotonic gains. Trajectories show iterative repair and failures to transfer practice formatting to withheld prompts.",
+      "discovery_use": "Evaluates agents discovering effective weight interventions through bounded experimentation and feedback, then verifies behavioral gains and retained knowledge on withheld inputs. This provides a concrete evaluation protocol for adaptive model modification relevant to self-improvement research.",
+      "limits": "Results use one target checkpoint, three selected episodes per family, and one recorded run per configuration and episode; ranking uncertainty and transfer to other targets remain unresolved. Targets are prescribed editing objectives, so the benchmark does not demonstrate open-ended scientific discovery or recursive self-improvement. Pooled retention can obscure localized damage, and reward clips negative target gains, although signed changes are reported separately. Cross-model differences do not establish the authors' claim that editing competence was specifically taught. A narrative passage calls Astra best-performing despite the quantitative ranking placing Sol medium first.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "benchmarks",
+        "rationale": "Evaluates agents discovering effective weight interventions through bounded experimentation and feedback, then verifies behavioral gains and retained knowledge on withheld inputs. This provides a concrete evaluation protocol for adaptive model modification relevant to self-improvement research.",
+        "pdf_sha256": "ff00a6755e6d181c099d2224a683c07abeffec197957e6b991786e3c453876c6",
+        "evidence_pages": [
+          1,
+          2,
+          7
+        ]
+      }
     }
   }
 }

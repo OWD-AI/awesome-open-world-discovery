@@ -4561,6 +4561,31 @@
       "name": "LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.06856"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Editors choose weight interventions and public or editor-supplied probe prompts within fixed objectives and a pinned target checkpoint.",
+        "Four tools permit bounded weight reading, weight writing, response generation and teacher-forced numerical inspection.",
+        "No gradients, shell access, Python execution, other code interpretation or activation steering are allowed.",
+        "Each episode permits 64 turns, 128 admitted tool calls and 262,144 target forward tokens, with additional generation and inspection limits.",
+        "Terminal inputs and grades remain withheld; editors cannot intervene after patch submission."
+      ],
+      "focus": "Discover effective gradient-free weight patches through iterative intervention, target inference and numerical feedback. Feedback comes from executed model computation, not simulation, recorded observations or new physical measurements.",
+      "limits": "Evaluation uses one Gemma 3 4B IT checkpoint, thirty selected episodes across ten prescribed families and one recorded run per configuration per episode. This establishes bounded model-editing experimentation; open-ended discovery and transfer to other checkpoints are not established.",
+      "training": {
+        "reward": "Pages 3 and 7 define deterministic terminal reward as max(0, (e − b)/(1 − b)) multiplied by retention of baseline-correct controls. Responses must satisfy both content and behavioural criteria. Episode rewards are averaged within families, then equally across families. Pristine and patched checkpoints receive identical withheld inputs in separate fresh processes. Page 15 states that reinforcement learning environments are shared for testing and training; actual editor training runs are not established.",
+        "reset": "Pages 2–3 establish terminal evaluation from the pinned pristine checkpoint in fresh processes, with only the submitted patch transferred. Page 6 permits pristine-versus-edited comparisons. An editor-accessible reset operation during the editing loop is not established.",
+        "branching": "Iterative patch testing and revision within an episode are established. Snapshot restoration, explicit state forking and independent branch execution are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-605714b8c1bb680f",
+      "resource_id": "paper-605714b8c1bb680f",
+      "name": "IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.08647"
     }
   ]
 }

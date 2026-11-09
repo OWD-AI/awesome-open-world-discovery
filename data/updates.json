@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T11:37:19-05:00",
+  "updated_at": "2026-11-09T13:05:18-05:00",
   "window_start": "2026-10-11",
   "window_end": "2026-11-09",
   "window_days": 30,
@@ -1139,6 +1139,28 @@
       ]
     },
     {
+      "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+      "url": "https://arxiv.org/abs/2611.09891",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "CPU-ARC converts language-model reasoning traces into reusable programs composed of semantically indexed functions. Small models handle extraction and elementary language tasks while ordinary code executes the retained reasoning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved from the supplied Hugging Face publication metadata. Its November 6 date is corroborated by the PDF arXiv v1 stamp and the primary arXiv first-submission history. The November 9 manuscript header is a later document date.",
+      "review_status": "approved",
+      "relevance": "Contributes executable procedural memory that lets agents retain, inspect, and reuse previously solved reasoning. This connects concretely to accumulating verified experience for discovery systems, although the experiments demonstrate reuse within known problem families rather than autonomous discovery.",
+      "id": "ccf6eb3263109798",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09891"
+        },
+        {
+          "label": "Project",
+          "url": "https://research.nvidia.com/labs/lpr/lfi/"
+        }
+      ]
+    },
+    {
       "title": "CORE: Coarse-to-Fine Search with Context Management for Deep Research",
       "url": "https://arxiv.org/abs/2611.07859",
       "published_at": "2026-11-05",
@@ -1447,6 +1469,32 @@
       "source": "Codex primary text-and-image checked",
       "summary": "Kargi Chauhan reports work testing whether AI co-scientists discover findings or recall existing knowledge. The presentation compares real, shuffled, anonymized and absent data. Its slide reports that claims can replicate even without supplied data, while 32 of 34 replicated no-data pairs were already published, motivating stronger controls for discovery claims.",
       "id": "26dc571a083f7bba"
+    },
+    {
+      "title": "IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection",
+      "url": "https://arxiv.org/abs/2611.08647",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "IWIBench tests whether an editor model can change another model's persistent behavior through gradient-free weight patches while preserving existing capabilities. Ten task families cover lexical associations, response conventions, factual updates, withholding, and resistance to misleading suggestions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved from the supplied Hugging Face publication metadata. Its November 5 date is corroborated by the PDF arXiv v1 stamp and the primary arXiv first-submission history. The November 4 title-page date is the manuscript date.",
+      "review_status": "approved",
+      "relevance": "Evaluates agents discovering effective weight interventions through bounded experimentation and feedback, then verifies behavioral gains and retained knowledge on withheld inputs. This provides a concrete evaluation protocol for adaptive model modification relevant to self-improvement research.",
+      "id": "605714b8c1bb680f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.08647"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/hcltech-robotics/iwibench"
+        },
+        {
+          "label": "Project",
+          "url": "https://hcltech-robotics.github.io/iwibench/"
+        }
+      ]
     },
     {
       "title": "Hanchen Li announces FrontierCS 1.1",
@@ -17338,6 +17386,28 @@
       ]
     },
     {
+      "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+      "url": "https://arxiv.org/abs/2611.09891",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "CPU-ARC converts language-model reasoning traces into reusable programs composed of semantically indexed functions. Small models handle extraction and elementary language tasks while ordinary code executes the retained reasoning.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved from the supplied Hugging Face publication metadata. Its November 6 date is corroborated by the PDF arXiv v1 stamp and the primary arXiv first-submission history. The November 9 manuscript header is a later document date.",
+      "review_status": "approved",
+      "relevance": "Contributes executable procedural memory that lets agents retain, inspect, and reuse previously solved reasoning. This connects concretely to accumulating verified experience for discovery systems, although the experiments demonstrate reuse within known problem families rather than autonomous discovery.",
+      "id": "ccf6eb3263109798",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09891"
+        },
+        {
+          "label": "Project",
+          "url": "https://research.nvidia.com/labs/lpr/lfi/"
+        }
+      ]
+    },
+    {
       "title": "CORE: Coarse-to-Fine Search with Context Management for Deep Research",
       "url": "https://arxiv.org/abs/2611.07859",
       "published_at": "2026-11-05",
@@ -17576,6 +17646,32 @@
         {
           "label": "Dataset",
           "url": "https://huggingface.co/datasets/Kwai-Kolors/LongBanana"
+        }
+      ]
+    },
+    {
+      "title": "IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection",
+      "url": "https://arxiv.org/abs/2611.08647",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "IWIBench tests whether an editor model can change another model's persistent behavior through gradient-free weight patches while preserving existing capabilities. Ten task families cover lexical associations, response conventions, factual updates, withholding, and resistance to misleading suggestions.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved from the supplied Hugging Face publication metadata. Its November 5 date is corroborated by the PDF arXiv v1 stamp and the primary arXiv first-submission history. The November 4 title-page date is the manuscript date.",
+      "review_status": "approved",
+      "relevance": "Evaluates agents discovering effective weight interventions through bounded experimentation and feedback, then verifies behavioral gains and retained knowledge on withheld inputs. This provides a concrete evaluation protocol for adaptive model modification relevant to self-improvement research.",
+      "id": "605714b8c1bb680f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.08647"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/hcltech-robotics/iwibench"
+        },
+        {
+          "label": "Project",
+          "url": "https://hcltech-robotics.github.io/iwibench/"
         }
       ]
     },
