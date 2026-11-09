@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-08",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -4423,6 +4423,30 @@
       "name": "Can Large Language Models Review the Scientific Literature? A Test Against a 102-Article Benchmark",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.05459"
+    },
+    {
+      "feedback": "synthetic-scm",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Topology, structural mechanism, noise, observation mask and intervention policy are configurable components.",
+        "The framework generates additional trajectories and counterfactual twins on demand.",
+        "The reference benchmark fits discovery and treatment-effect methods to generated trajectories through unified interfaces.",
+        "The paper reports public code, generation scripts, baseline wrappers and benchmark data under Apache-2.0 and CC-BY-4.0 licenses."
+      ],
+      "focus": "Offline evaluation of time-series causal discovery and treatment-effect estimation against simulator-known graphs and exact cached-noise counterfactual effects. The framework also supports configurable structural rollouts and intervention queries.",
+      "limits": "All data are synthetic; no new physical measurements occur. The reference benchmark uses 4–8 variables, fixed weights across noise seeds and randomized treatment assignment. Tuning uses oracle graph labels. Some mechanisms have unestablished identifiability, and counterfactual correctness assumes simulator causal sufficiency. An interactive research-agent evaluation loop is not established.",
+      "training": {
+        "reward": "No agent reinforcement-learning reward is established. Page 6 specifies Optuna TPE tuning on oriented F1 against the known graph using a separate seed-41 trajectory: 30 trials per tunable method/cell, reduced to five for PCMCI-GPDC and DYNOTEARS. Evaluation uses seeds 42–51. Discovery metrics include SHD, F1, TPR, FDR and AUPRC; treatment-effect evaluation uses PEHE and runtime, with average-effect error also defined.",
+        "reset": "Seeded generation supports repeatable reruns; page 23 reports identical selected results across separate processes with identical tuning caches. Cached noise supports replay of the stochastic realization. A general interactive reset or arbitrary state-restore API is not established.",
+        "branching": "Pages 5–6 establish factual-to-counterfactual branching: the forward pass is re-executed from intervention time using cached noise while replacing the intervened node value. The reference treatment-effect setup also uses always-on and always-off rollouts. General arbitrary snapshot branching is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-396b4e900c7e7e47",
+      "resource_id": "paper-396b4e900c7e7e47",
+      "name": "Composable Causality: A Toolkit for Systematic Time-Series Causal Discovery and Treatment-Effect Benchmarking",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.08918"
     }
   ]
 }

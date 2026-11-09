@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-939-2563eb?style=flat-square" alt="939 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-196-0f766e?style=flat-square" alt="196 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-942-2563eb?style=flat-square" alt="942 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-197-0f766e?style=flat-square" alt="197 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -20,7 +20,7 @@
   <a href="https://owd-ai.github.io/awesome-open-world-discovery/">Research observatory ↗</a> · <a href="#what-is-owd">What is OWD?</a> · <a href="#why-owd">Why this focus?</a> · <a href="#updates">Latest papers</a> · <a href="#contents">Browse the list</a> · <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
-<p align="center"><sub>Literature checked through 2026-11-06 · Papers, author blogs, code, and benchmarks</sub></p>
+<p align="center"><sub>Literature checked through 2026-11-08 · Papers, author blogs, code, and benchmarks</sub></p>
 
 <a id="what-is-owd"></a>
 
@@ -67,9 +67,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-05 | [Recursive Self-Improvement for Long-Horizon Role-Playing Dialogue](https://arxiv.org/abs/2611.07469) |
 | 2026-11-05 | [PlayGen2: Learning Real-Time Playable Worlds with Explicit 3D State](https://arxiv.org/abs/2611.07867) |
 | 2026-11-05 | [NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma](https://arxiv.org/abs/2611.08369) |
+| 2026-11-05 | [Glyph: An Interpretability Engine for AI-Driven Scientific Discovery in Clinical Data](https://arxiv.org/abs/2611.08922) |
+| 2026-11-05 | [Flex-RSI: Benchmarking Recursive Self-Improvement of Frontier Agents](https://arxiv.org/abs/2611.08946) |
 | 2026-11-05 | [FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance](https://arxiv.org/abs/2611.07464) |
-| 2026-11-05 | [Comparing Classification and Feature Learning by Analyzing Their Loss Functions in Normalized Spaces with Different Scale Factors](https://arxiv.org/abs/2611.07741) |
-| 2026-11-05 | [CORE: Coarse-to-Fine Search with Context Management for Deep Research](https://arxiv.org/abs/2611.07859) |
 
 <a id="contents"></a>
 
@@ -77,14 +77,14 @@ Visit the website for summaries, figures, today's updates, and the full research
 
 | Topic | Research question | Works |
 | --- | --- | ---: |
-| 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 50 |
+| 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 51 |
 | 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 98 |
-| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 69 |
+| 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 70 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 167 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 124 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 157 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 87 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 187 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 188 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -164,6 +164,8 @@ Each work appears once under its primary contribution; see the [classification g
   Xiaofeng Han et al. · The State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences; School of Artificial Intelligence, University of Chinese Academy of Sciences; Southern University of Science and Technology; +3 institutions
 - <a id="paper-4bc2aa3dc5c6d11a"></a>**Self-Evolving Agent Harness** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.18813)* · [Paper](https://arxiv.org/abs/2610.18813) · [Code](https://github.com/zgcagi/Harness-RSI) · [Project](https://zgcagi.github.io/Harness-RSI/)<br>
   Chuyang Wei et al. · Zhongguancun Academy; Zhongguancun Institute of Artificial Intelligence; University of Science and Technology of China
+- <a id="paper-6b69173e54980bfd"></a>**Sketchpad: certified exact arithmetic with a small vision-language model** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.04434)* · [Paper](https://arxiv.org/abs/2611.04434) · [Code](https://github.com/NeoVand/sketchpad) · [Project](https://neovand.github.io/sketchpad/) · [HF Model](https://huggingface.co/mohsenvand/sketchpad-0.8b-preview)<br>
+  Mostafa ‘Neo’ Mohsenvand · MIT Media Lab
 - <a id="paper-738c049d26da5ae0"></a>**Statistical Inference under Performativity: From Policy Feedback to Self-Evolving Systems** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.00438)* · [Paper](https://arxiv.org/abs/2611.00438)<br>
   Tianwei Gao et al. · University of North Carolina at Chapel Hill; Yale University; Massachusetts Institute of Technology; +2 institutions
 - <a id="paper-58697f8c99c68523"></a>**Toward Knowledge-Centric AI: Discovering, Internalizing, and Using Explicit Knowledge Across Agents and Generations** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.03157)* · [Paper](https://arxiv.org/abs/2611.03157)<br>
@@ -498,6 +500,8 @@ Each work appears once under its primary contribution; see the [classification g
   Karthik Viswanathan, Plamen Dimitrov, Stefano Rocca, Sarayu Sirikonda · Verified Mechanisms; MATS Research; University of California, Berkeley
 - <a id="paper-1d8d07f5fb45591e"></a>**From Tool State to Scientific Action: Auditing Decision Provenance in Biomedical Research Agents** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.01527)* · [Paper](https://arxiv.org/abs/2611.01527)<br>
   Xingyu Yi, Xinya Zhang, Yunshen Zhou, Haoyu Bao · INTOSYN AI Labs; Columbia University; Microsoft
+- <a id="paper-d7a198189fa87832"></a>**Glyph: An Interpretability Engine for AI-Driven Scientific Discovery in Clinical Data** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.08922)* · [Paper](https://arxiv.org/abs/2611.08922) · [Code](https://github.com/StanfordMIMI/Glyph) · [Code](https://github.com/StanfordMIMI/Glyph-research) · [Project](https://stanfordmimi.github.io/Glyph-research/) · [Dataset](https://huggingface.co/datasets/RobbieHolland/Glyph-research) · [HF Model](https://huggingface.co/RobbieHolland/Glyph-research)<br>
+  Robbie Holland et al. · Stanford Center for Artiﬁcial Intelligence in Medicine and Imaging, Stanford University, CA, USA; Department of Radiology, Stanford University, Stanford, CA, USA; Department of Radiology, Mayo Clinic, Phoenix, Arizona, USA; +6 institutions
 - <a id="paper-74d382cf780e1dfd"></a>**How AI Agents Discover Scientific Equations: From Hydrotope Rediscovery to New Water-Wave Amplitudes** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00435)* · [Paper](https://arxiv.org/abs/2610.00435) · [Code](https://github.com/ZihanZhou26/hydrotope_benchmark)<br>
   Zihan Zhou, Digvijay Wadekar, Matias Zaldarriaga · Princeton University; University of Texas at Austin; Institute for Advanced Study
 - <a id="paper-1f223adc2e100034"></a>**Insights from Autoresearch for Solar Panel Segmentation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.10491)* · [Paper](https://arxiv.org/abs/2610.10491) · [Code](https://github.com/VU-AIML/automl4eo-autoresearch-segmentation)<br>
@@ -1887,6 +1891,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Jize Jiang, Chengxiang Zhai · University of Illinois Urbana-Champaign
 - <a id="paper-721958fe0d5a8c2d"></a>**CompMat-Bench: Benchmarking AI Agents for Computational Materials Science** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.00636)* · [Paper](https://arxiv.org/abs/2610.00636) · [Code](https://github.com/cz2014/CompMat-Bench)<br>
   Chenmu Zhang et al. · Rice University
+- <a id="paper-396b4e900c7e7e47"></a>**Composable Causality: A Toolkit for Systematic Time-Series Causal Discovery and Treatment-Effect Benchmarking** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.08918)* · [Paper](https://arxiv.org/abs/2611.08918) · [Code](https://github.com/hferdous/Composable_Causality)<br>
+  Muhammad Hasan Ferdous, Md Osman Gani · Causal AI Lab Department of Information Systems University of Maryland, Baltimore County
 - <a id="paper-f345442c43310d2d"></a>**Cross-Primitive Consistency in Jev** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.38623)* · [Paper](https://arxiv.org/abs/2610.38623) · [Project](https://github.com/67L1/PrimaCons-CRPR)<br>
   Xu Liu, Guikun Chen, Kanzhi Wu, Wenguan Wang · Zhejiang University; vivo
 - <a id="paper-c643418cbbaee3ee"></a>**CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.19005)* · [Paper](https://arxiv.org/abs/2610.19005) · [Project](https://cyber-arena.ai) · [Code](https://github.com/cyber-arena-ai/cyber-arena) · [Code](https://github.com/cyber-arena-ai/octagon)<br>
