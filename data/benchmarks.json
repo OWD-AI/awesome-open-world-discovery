@@ -4517,6 +4517,50 @@
       "name": "\"PRISM\" Is Not All You Need: Cross-Topic Name Collisions and Scientific Paper Retrieval",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.01362"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 10 states that BILBY-PRO cases and construction code are available at https://huggingface.co/datasets/HFMI-PROFOUND/BILBY-PRO.",
+        "Page 10 identifies https://github.com/PROFOUND-HFMI/BILBY-MD as the molecular dynamics evaluation and analysis framework."
+      ],
+      "focus": "Generate protein scaffolds around fixed motifs and evaluate static recovery and simulated dynamical fidelity. BILBY-PRO contains 220 cases derived from recorded experimental structures. Static evaluation uses 100 generation attempts per case. BILBY-MD executes explicit-solvent molecular dynamics on selected original MotifBench designs: 200 ns for designs and 1 µs for references. These are computational research experiments using simulations, with no new physical measurements reported.",
+      "limits": "Molecular dynamics thresholds are heuristic, simulation lengths are unequal, some landscape projections are missing, and highest-TM-score selection favors comparatively stable candidates. Simulations do not establish biochemical function. Database biases and possible pretraining overlap limit generalization. Page 13 states that historical evaluations were not recomputed after release corrections.",
+      "training": {
+        "reward": "A benchmark training reward is not established. Static evaluation uses ProteinMPNN sequence design, ESMFold refolding, self-consistency RMSD below 2 Å, and remaining benchmark filters; coverage and MotifBench score summarize successful designs. The post hoc MD evaluator requires at least three of four checks: absolute motif RMSD difference at most 1 Å; absolute scaffold RMSD difference at most 2 Å; contact Pearson at least 0.8 and weighted absolute difference at most 1.0; and both PCA and TICA landscape Pearson correlations at least 0.3. All four checks define strong MD support.",
+        "reset": "Reset support is not established. Page 17 describes preparing and equilibrating each design and reference system before production simulation.",
+        "branching": "Trajectory branching support is not established. Multiple scaffold-generation attempts and selection of a candidate for subsequent MD are described."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-e9acee56c6e08166",
+      "resource_id": "paper-e9acee56c6e08166",
+      "name": "Static Recovery Is Not Dynamic Stability: Dynamics-Aware Benchmarking of Protein Motif Scaffolding",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.07723"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 states that code and data are available at https://long-banana.com/.",
+        "Page 44 describes benchmark manifests, annotation schema, scorer configuration, and documentation in submission artifacts."
+      ],
+      "focus": "Synthesize a final image from fixed reference images and instructions across 90 curated tasks. Agent harnesses retrieve evidence, call image generators, inspect drafts, and revise generation or editing requests. PD-Direct receives the construction graph; agentic systems receive neither that graph nor the evaluation checklist. References are constructed assets, human audit labels are recorded judgments, and generation and verification involve executed computation. The setting does not involve scientific simulation or new physical measurements.",
+      "limits": "Coverage excludes unrestricted multimodal planning, video generation, and 3D composition. Annotation is expensive, and evaluation depends on model and tool versions. Privileged graph access and differing workflows complicate causal comparisons. Detailed implementation and scoring appendices are not included in the supplied pages.",
+      "training": {
+        "reward": "A training reward or parameter-update procedure is not established. The evaluator uses Gemini 3 Flash with routed rubric critics and optional OCR, counting, layout, and identity checks. Checklist labels are 0, 1, or 2 and are averaged into scores. P@70% uses fixed difficulty weights derived from human scores. Evaluator validation uses 46,700 reviewed human labels over 900 outputs. Runtime reflection inspects drafts; access to evaluator checklist scores during generation is not established.",
+        "reset": "Reset support is not established in the supplied pages.",
+        "branching": "Checkpoint branching or rollback support is not established. Serial composition, draft inspection, further retrieval, and revision are described."
+      },
+      "evaluation_family": "other",
+      "id": "paper-8da58b136e5d8a75",
+      "resource_id": "paper-8da58b136e5d8a75",
+      "name": "LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.06856"
     }
   ]
 }

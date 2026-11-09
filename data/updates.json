@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T03:23:15-05:00",
+  "updated_at": "2026-11-09T04:06:58-05:00",
   "window_start": "2026-10-11",
   "window_end": "2026-11-09",
   "window_days": 30,
@@ -452,6 +452,24 @@
       "id": "1968c4ee7f36100b"
     },
     {
+      "title": "BOXBOX: Recursive Harness Self-Improvement for Long-Running Performance Optimization",
+      "url": "https://arxiv.org/abs/2611.09218",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "BOXBOX lets an agent request revisions to its full harness during a running task while a separate kernel preserves execution context and manages activation or rollback. PerfRace evaluates this approach on software optimization workloads through repeated correctness and performance feedback.",
+      "date_evidence": "Original arXiv submission history confirms v1 on 6 November 2026 at 09:36:00 UTC, matching the supplied exact original_published_at timestamp.",
+      "relevance": "BOXBOX directly studies agents improving their own executable harness from ongoing experience. PerfRace requires discovering performance bottlenecks, testing candidate improvements, and verifying correctness without a known target patch, making the harness contribution concretely relevant to discovery.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09218"
+        }
+      ],
+      "id": "d22e4c8a5a47c353"
+    },
+    {
       "title": "Anthropic introduces a guest post on AI for building and revising scientific models",
       "date_evidence": "Supplied primary-source reading records the original X time element as 2:49 PM · Nov 6, 2026, with datetime 2026-11-06T19:49:34.000Z.",
       "kind": "x",
@@ -607,6 +625,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.08483"
+        }
+      ]
+    },
+    {
+      "title": "Static Recovery Is Not Dynamic Stability: Dynamics-Aware Benchmarking of Protein Motif Scaffolding",
+      "url": "https://arxiv.org/abs/2611.07723",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "BILBY separates protein-design evaluation into target coverage, distinct successful solutions, and dynamical fidelity. It combines a broader motif-scaffolding benchmark with molecular-dynamics checks that expose limitations of static refolding success.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 at 2026-11-05 09:38:23 UTC, matching the supplied original timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly contributes to discovery evaluation by testing whether generated scientific designs survive physical validation beyond a learned structural oracle.",
+      "id": "e9acee56c6e08166",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07723"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/HFMI-PROFOUND/BILBY-PRO"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/PROFOUND-HFMI/BILBY-MD"
         }
       ]
     },
@@ -1264,6 +1308,36 @@
         {
           "label": "Project",
           "url": "https://github.com/zhenyi4/platour"
+        }
+      ]
+    },
+    {
+      "title": "LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis",
+      "url": "https://arxiv.org/abs/2611.06856",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "LongBanana evaluates whether image-generation agents correctly integrate dispersed reference evidence. Graph-derived atomic checklists expose errors that visual plausibility or holistic scoring can hide.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 at 2026-11-04 18:11:56 UTC, matching the supplied original timestamp. The venue statement does not establish a separate proceedings publication date.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete evaluation of agent evidence retrieval, distractor rejection, provenance preservation, tool-assisted verification, and feedback-driven repair across long visual contexts.",
+      "id": "8da58b136e5d8a75",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06856"
+        },
+        {
+          "label": "Project",
+          "url": "https://long-banana.com/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/LongBanana"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Kwai-Kolors/LongBanana"
         }
       ]
     },
@@ -16759,6 +16833,24 @@
       ]
     },
     {
+      "title": "BOXBOX: Recursive Harness Self-Improvement for Long-Running Performance Optimization",
+      "url": "https://arxiv.org/abs/2611.09218",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "BOXBOX lets an agent request revisions to its full harness during a running task while a separate kernel preserves execution context and manages activation or rollback. PerfRace evaluates this approach on software optimization workloads through repeated correctness and performance feedback.",
+      "date_evidence": "Original arXiv submission history confirms v1 on 6 November 2026 at 09:36:00 UTC, matching the supplied exact original_published_at timestamp.",
+      "relevance": "BOXBOX directly studies agents improving their own executable harness from ongoing experience. PerfRace requires discovering performance bottlenecks, testing candidate improvements, and verifying correctness without a known target patch, making the harness contribution concretely relevant to discovery.",
+      "review_status": "approved",
+      "source": "Codex full-text screened",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09218"
+        }
+      ],
+      "id": "d22e4c8a5a47c353"
+    },
+    {
       "title": "The Last Mile to the Real World: Agent-Native Primitives as Reusable Building Blocks for Solving Real-World Tasks",
       "url": "https://arxiv.org/abs/2611.07461",
       "published_at": "2026-11-05",
@@ -16825,6 +16917,32 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.08483"
+        }
+      ]
+    },
+    {
+      "title": "Static Recovery Is Not Dynamic Stability: Dynamics-Aware Benchmarking of Protein Motif Scaffolding",
+      "url": "https://arxiv.org/abs/2611.07723",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "BILBY separates protein-design evaluation into target coverage, distinct successful solutions, and dynamical fidelity. It combines a broader motif-scaffolding benchmark with molecular-dynamics checks that expose limitations of static refolding success.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 at 2026-11-05 09:38:23 UTC, matching the supplied original timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly contributes to discovery evaluation by testing whether generated scientific designs survive physical validation beyond a learned structural oracle.",
+      "id": "e9acee56c6e08166",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07723"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/HFMI-PROFOUND/BILBY-PRO"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/PROFOUND-HFMI/BILBY-MD"
         }
       ]
     },
@@ -17281,6 +17399,36 @@
         {
           "label": "Project",
           "url": "https://github.com/zhenyi4/platour"
+        }
+      ]
+    },
+    {
+      "title": "LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis",
+      "url": "https://arxiv.org/abs/2611.06856",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "LongBanana evaluates whether image-generation agents correctly integrate dispersed reference evidence. Graph-derived atomic checklists expose errors that visual plausibility or holistic scoring can hide.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 at 2026-11-04 18:11:56 UTC, matching the supplied original timestamp. The venue statement does not establish a separate proceedings publication date.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete evaluation of agent evidence retrieval, distractor rejection, provenance preservation, tool-assisted verification, and feedback-driven repair across long visual contexts.",
+      "id": "8da58b136e5d8a75",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06856"
+        },
+        {
+          "label": "Project",
+          "url": "https://long-banana.com/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/LongBanana"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Kwai-Kolors/LongBanana"
         }
       ]
     },

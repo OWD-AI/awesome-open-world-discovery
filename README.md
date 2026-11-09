@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-953-2563eb?style=flat-square" alt="953 curated works"></a>
-  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-200-0f766e?style=flat-square" alt="200 environment profiles"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-956-2563eb?style=flat-square" alt="956 curated works"></a>
+  <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-202-0f766e?style=flat-square" alt="202 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
 
@@ -65,11 +65,11 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 2026-11-06 | [Open-world Reconstruction-based Classifier with Concept Drift Adaptation](https://arxiv.org/abs/2611.09350) |
 | 2026-11-06 | [Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds](https://arxiv.org/abs/2611.09017) |
 | 2026-11-06 | [Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations](https://arxiv.org/abs/2611.09382) |
+| 2026-11-06 | [BOXBOX: Recursive Harness Self-Improvement for Long-Running Performance Optimization](https://arxiv.org/abs/2611.09218) |
 | 2026-11-05 | [The Last Mile to the Real World: Agent-Native Primitives as Reusable Building Blocks for Solving Real-World Tasks](https://arxiv.org/abs/2611.07461) |
 | 2026-11-05 | [Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling](https://arxiv.org/abs/2611.08237) |
 | 2026-11-05 | [SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization](https://arxiv.org/abs/2611.08483) |
-| 2026-11-05 | [Scientist World: Grow a Research World for AI-Scientists](https://arxiv.org/abs/2611.08478) |
-| 2026-11-05 | [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](https://arxiv.org/abs/2611.08373) |
+| 2026-11-05 | [Static Recovery Is Not Dynamic Stability: Dynamics-Aware Benchmarking of Protein Motif Scaffolding](https://arxiv.org/abs/2611.07723) |
 
 <a id="contents"></a>
 
@@ -82,9 +82,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 70 |
 | 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 168 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 127 |
-| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 159 |
+| 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 160 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 88 |
-| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 191 |
+| 📊 [Discovery Evaluation](#benchmarks) | How can we measure progress in discovery? | 193 |
 
 [🔗 Related lists](#related) · [🤝 Contributing](#contributing)
 
@@ -1320,6 +1320,8 @@ Each work appears once under its primary contribution; see the [classification g
   Ratnesh Pandey et al. · Metano Labs; Purdue University; VulNow
 - <a id="paper-270d7139fe7e7927"></a>**Beyond Skill Evolution: Self-Evolving Context Management Policies for Long-Horizon Agent Harnesses** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.34649)* · [Paper](https://arxiv.org/abs/2609.34649)<br>
   Weiyuan Li et al. · School of Data Science, Fudan University; Shanghai Key Laboratory of Data Science; College of Computer Science and Artificial Intelligence, Fudan University
+- <a id="paper-d22e4c8a5a47c353"></a>**BOXBOX: Recursive Harness Self-Improvement for Long-Running Performance Optimization** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.09218)* · [Paper](https://arxiv.org/abs/2611.09218)<br>
+  Yuhao Tan et al. · Nanjing University; Zhejiang University; Birkbeck, University of London; +1 institutions
 - <a id="paper-1e69ca6b1461149c"></a>**BrickWright: Agentic Creation of Physically Feasible Brick Builds** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.31651)* · [Paper](https://arxiv.org/abs/2610.31651) · [Project](https://avalovelace1.github.io/brickwright/) · [Code](https://github.com/AvaLovelace1/brickwright)<br>
   Ava Pun et al. · Carnegie Mellon University; Independent Researcher; Stanford University
 - <a id="paper-66f56984b6446ca0"></a>**Building AI Research Teams for Autonomous Discovery of Linear Attention Architectures** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28887)* · [Paper](https://arxiv.org/abs/2610.28887)<br>
@@ -2019,6 +2021,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Lingfei Qian et al. · The Fin AI; University of Manchester; Mohamed bin Zayed University of Artificial Intelligence; +3 institutions
 - <a id="paper-89c9f55a4e2b48ff"></a>**LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27100)* · [Paper](https://arxiv.org/abs/2610.27100) · [Code](https://github.com/george-nigmatulin/lob_impact)<br>
   George Nigmatulin et al. · British Open-ended Learning and Discovery Lab (BOLD); University of Oxford; University of California Los Angeles; +1 institutions
+- <a id="paper-8da58b136e5d8a75"></a>**LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.06856)* · [Paper](https://arxiv.org/abs/2611.06856) · [Project](https://long-banana.com/) · [Code](https://github.com/TIGER-AI-Lab/LongBanana) · [Dataset](https://huggingface.co/datasets/Kwai-Kolors/LongBanana)<br>
+  Haoxiang Cao et al. · South China Normal University; University of British Columbia; Vector Institute; +8 institutions
 - <a id="paper-96197faf377be404"></a>**Measuring AI Agents as Teammates with Collaborative Intelligence** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02633)* · [Paper](https://arxiv.org/abs/2611.02633) · [Code](https://github.com/zou-group/collaborative-intelligence) · [Project](https://zou-group.github.io/collaborative-intelligence/)<br>
   Sean Wu et al. · Stanford University; MIT; University of Oxford
 - <a id="paper-d413c98db0f6141e"></a>**MMEnterprise-Bench: Evaluating Enterprise Agents over Evolving Multimodal Records** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27911)* · [Paper](https://arxiv.org/abs/2610.27911) · [Project](https://mlvlab.github.io/MMEnterprise-Bench/) · [Code](https://github.com/mlvlab/MMEnterprise-Bench)<br>
@@ -2127,6 +2131,8 @@ versity of Science and Technology (GuangZhou); +1 institutions
   Zhaoxi Zhang et al. · Peking University; Tianjin University
 - <a id="paper-5bd5dfea78d8efef"></a>**ST-Bench: A Spatial-Temporal Benchmark for Multi-Agent System Generation on Scientific Research Tasks** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.07763)* · [Paper](https://arxiv.org/abs/2610.07763)<br>
   Qi Cheng et al. · Rutgers University; University of Pittsburgh; University of Minnesota; +3 institutions
+- <a id="paper-e9acee56c6e08166"></a>**Static Recovery Is Not Dynamic Stability: Dynamics-Aware Benchmarking of Protein Motif Scaffolding** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.07723)* · [Paper](https://arxiv.org/abs/2611.07723) · [Dataset](https://huggingface.co/datasets/HFMI-PROFOUND/BILBY-PRO) · [Code](https://github.com/PROFOUND-HFMI/BILBY-MD)<br>
+  Emile de Bruyn et al. · Jülich Supercomputing Centre, Forschungszentrum Jülich; Center for Advanced Systems Understanding (CASUS), Görlitz, Germany; Helmholtz Munich; +5 institutions
 - <a id="paper-2468d23826d80398"></a>**Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.02017)* · [Paper](https://arxiv.org/abs/2611.02017) · [Code](https://github.com/Miraclecsc/Switch-SWE)<br>
   Shuochen Chang et al. · Shanghai Jiao Tong University; Tongji University
 - <a id="paper-aa18c0346e5ad3a3"></a>**TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.30043)* · [Paper](https://arxiv.org/abs/2610.30043) · [Code](https://github.com/xuyicheng-zju/TARSphere) · [Project](https://xuyicheng-zju.github.io/TARSphere/)<br>
