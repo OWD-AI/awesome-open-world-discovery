@@ -31341,6 +31341,65 @@
           7
         ]
       }
+    },
+    "paper-c329df7abcfe52a4": {
+      "institutions": [
+        "KAIST",
+        "Korea University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Select a prefix using sustained teacher-to-student likelihood-ratio crossings, greedily continue the privileged teacher, and verify its final answer. Apply reverse-KL distillation only to passing prefixes of the original student trajectory, balancing losses across trajectories and languages. Experiments use LoRA students at three Qwen3 scales and ten languages.",
+      "evidence": "PolyMath High Avg@3 reaches 11.60%, 17.79%, and 25.12%, improving over the strongest baseline by 1.65, 1.07, and 2.64 percentage points. At 1.7B, prefix selection improves COPSD from 9.95% to 10.76%; verification raises it to 11.60%. Adaptive selection also beats verified fixed-length prefixes. English AIME results provide limited additional transfer evidence.",
+      "discovery_use": "Contributes a concrete method for learning reliable reasoning from self-generated mistakes: verify whether teacher guidance remains useful before distilling it. This directly supports discovery-oriented reasoning training, although autonomous discovery is not evaluated.",
+      "limits": "Evidence covers mathematics and one model family, using privileged English solutions and ground-truth answer verification. Successful final-answer recovery does not certify every intermediate teacher prediction. Likelihood alignment is a drift proxy rather than a direct correctness measure. Verification adds generation cost, and high-resource language results are not uniformly better. No first-party release was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "learning",
+        "rationale": "Contributes a concrete method for learning reliable reasoning from self-generated mistakes: verify whether teacher guidance remains useful before distilling it. This directly supports discovery-oriented reasoning training, although autonomous discovery is not evaluated.",
+        "pdf_sha256": "389a979f3bc7fba58c7b961c9ff852c3e2e53ac08075397defd8b4f02e382d4e",
+        "evidence_pages": [
+          1,
+          5,
+          6
+        ]
+      }
+    },
+    "paper-bd47fcb8dbe6a4fd": {
+      "institutions": [
+        "MOX, Department of Mathematics, Politecnico di Milano, Milan, Italy"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        36
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Sample times along piecewise-linear interpolants of observed trajectories and regress predicted velocities onto interpolant derivatives. Stability estimates relate velocity and trajectory errors; a bias-variance analysis establishes second-order approximation and directional Jacobian regularization. The online evaluation section supplements the supplied targeted pages with controlled ODE/PDE comparisons against teacher forcing and several rollout schedules.",
+      "evidence": "Under shared architectures and optimization settings with three seeds, VM reports lower trajectory errors at training cost comparable to teacher forcing. ODE errors improve by up to an order of magnitude, and Jacobian errors by factors of 3–9. Tests support transfer across integration schemes and step sizes. Hamiltonian and chaotic examples retain invariants or attractor structure more faithfully.",
+      "discovery_use": "Learns unknown continuous-time dynamics from observed trajectories and tests whether the resulting representation preserves behavior across simulation resolutions. This is a concrete contribution to scientific system identification and learned world representations.",
+      "limits": "Identification is constrained to states supported by observed trajectories. Baseline rollout training uses explicit Euler, limiting conclusions about other integrators. Noisy-data behavior remains unresolved, and stability bounds can grow exponentially and become uninformative. Chaotic trajectory agreement is limited; attractor evidence does not establish invariant-measure guarantees. This was a targeted body review supplemented by online evaluation text, not an exhaustive review of all 76 pages. The verified official repository says implementation is coming soon.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "causality",
+        "rationale": "Learns unknown continuous-time dynamics from observed trajectories and tests whether the resulting representation preserves behavior across simulation resolutions. This is a concrete contribution to scientific system identification and learned world representations.",
+        "pdf_sha256": "56da688ddc51dc231696df0ec4781e0b795107cf612d99cd3bae783844243f55",
+        "evidence_pages": [
+          1,
+          4,
+          36
+        ]
+      }
     }
   }
 }

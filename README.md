@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="#contents"><img src="https://img.shields.io/badge/works-956-2563eb?style=flat-square" alt="956 curated works"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/works-958-2563eb?style=flat-square" alt="958 curated works"></a>
   <a href="docs/benchmarks.md"><img src="https://img.shields.io/badge/environment_profiles-202-0f766e?style=flat-square" alt="202 environment profiles"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-7c3aed?style=flat-square" alt="Contributions welcome"></a>
 </p>
@@ -78,9 +78,9 @@ Visit the website for summaries, figures, today's updates, and the full research
 | Topic | Research question | Works |
 | --- | --- | ---: |
 | 📚 [Discovery Foundations](#foundations) | What constitutes a discovery? | 51 |
-| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 99 |
+| 🧩 [Discovery Representations](#causality) | What representations enable discovery? | 100 |
 | 🔬 [Discovery Reasoning](#sci_methods) | How should agents formulate and test hypotheses? | 70 |
-| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 168 |
+| 🧠 [Discovery Training](#learning) | How can we train agents to discover? | 169 |
 | 🔄 [Continual Discovery](#adaptation) | How can agents learn from ongoing investigations? | 127 |
 | 🛠️ [Discovery Systems](#systems) | How can we build reliable discovery systems? | 160 |
 | 🌱 [Open-Ended Discovery](#open_ended) | How can agents expand the scope of discovery? | 88 |
@@ -298,6 +298,8 @@ Each work appears once under its primary contribution; see the [classification g
   Zijun Wang et al. · Amazon; UC Santa Cruz; Emory University; +2 institutions
 - <a id="paper-b2edd9dbadf5564e"></a>**Learning the 4D World through Point Trajectory Forecasting** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.28594)* · [Paper](https://arxiv.org/abs/2610.28594) · [Project](https://rootyjeon.github.io/video-point-model/) · [Code](https://github.com/rootyJeon/VPM) · [Dataset](https://huggingface.co/datasets/rooty2020/VPM-Data) · [Dataset](https://huggingface.co/datasets/rooty2020/VP-WorldBench) · [HF Model](https://huggingface.co/rooty2020/VPM-DROID)<br>
   Byungwoo Jeon et al. · KAIST; ETH Z¨urich; Seoul National University; +3 institutions
+- <a id="paper-bd47fcb8dbe6a4fd"></a>**Learning to evolve by matching velocities** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.00448)* · [Paper](https://arxiv.org/abs/2611.00448) · [Code](https://github.com/farenga/velocity-matching)<br>
+  Nicola Farenga, Andrea Manzoni · MOX, Department of Mathematics, Politecnico di Milano, Milan, Italy
 - <a id="paper-c49994cd61004d2c"></a>**Local Fisher Information Enables Sparse Causal Discovery** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.04291)* · [Paper](https://arxiv.org/abs/2610.04291)<br>
   Byeongguk Kang, Donghyeon Lee, Euijong Song, Gunwoong Park · Seoul National University
 - <a id="paper-994c8a84ad65793d"></a>**Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.29989)* · [Paper](https://arxiv.org/abs/2610.29989) · [Code](https://github.com/TencentARC/Looking-Ahead) · [Project](https://hellorpg.github.io/looking-ahead/) · [HF Model](https://huggingface.co/TencentARC/Looking-Ahead) · [Dataset](https://huggingface.co/datasets/TencentARC/Looking-Ahead)<br>
@@ -749,6 +751,8 @@ Each work appears once under its primary contribution; see the [classification g
   Linji Hao et al. · Peking University; The Hong Kong University of Science and Technology (Guangzhou); Tsinghua University; +1 institutions
 - <a id="paper-8d7f564fd9f13e27"></a>**Judging the Justification: Decision Certificate Supervision for Generative Reward Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.27528)* · [Paper](https://arxiv.org/abs/2610.27528) · [Code](https://github.com/UConn-DSIS/DeCert) · [HF Model](https://huggingface.co/gqbond/DeCert-Llama-3.1-8B)<br>
   Guiquan Sun, Bing Bai, Martin Renqiang Min, Dongjin Song · School of Computing, University of Connecticut; NEC Labs America
+- <a id="paper-c329df7abcfe52a4"></a>**Knowing When to Teach: Learning from Teachable Prefixes in Multilingual Reasoning Distillation** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2611.08179)* · [Paper](https://arxiv.org/abs/2611.08179)<br>
+  Jaewon Cho et al. · KAIST; Korea University
 - <a id="paper-b1b56960665af09f"></a>**Ladders of Thought: A Self-Evolving Curriculum of Progressively Simplified Reasoning Traces** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2609.25643)* · [Paper](https://arxiv.org/abs/2609.25643)<br>
   Minghui Liu et al. · University of Maryland, College Park; Capital One
 - <a id="paper-ff790d2b9ae4b233"></a>**Language Models Learn to Improve Language Models** · *[arXiv 2026 (preprint)](https://arxiv.org/abs/2610.23344)* · [Paper](https://arxiv.org/abs/2610.23344)<br>
