@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T00:11:49-05:00",
+  "updated_at": "2026-11-09T01:11:37-05:00",
   "window_start": "2026-10-11",
   "window_end": "2026-11-09",
   "window_days": 30,
@@ -220,6 +220,40 @@
       "id": "d03aa275613463c3"
     },
     {
+      "title": "Video-Coder: Reinforcing Agentic Coding for Video Generation",
+      "url": "https://arxiv.org/abs/2611.09894",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "Video-Coder trains a multimodal agent to produce Blender programs, inspect execution and rendered observations, and revise its scene. Rendered draft videos then guide a separate video generator.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history establishes v1 on November 6, 2026 at 18:59:57 UTC. This replaces the supplied Hugging Face midnight placeholder, which is not the original arXiv submission timestamp.",
+      "review_status": "approved",
+      "relevance": "Contributes agent training for constructing and revising executable dynamic-world representations through execution and visual feedback. Its reusable verification harness and physical-consistency evaluation provide a concrete connection to learning verified world construction.",
+      "id": "03141415402349a6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09894"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/CYWang735/Video-Coder"
+        },
+        {
+          "label": "Project",
+          "url": "https://cywang735.github.io/Video-Coder/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Video-Coder/Video-Coder-9B"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Video-Coder/Train-Data"
+        }
+      ]
+    },
+    {
       "title": "Shira proposes recording research-agent predictions before experiments",
       "date_evidence": "Supplied primary-source evidence identifies the original version in X’s native Edit History at 2026-11-07T01:12:25.000Z, corresponding to November 6, 2026 in America/New_York. The later version is explicitly marked edited.",
       "kind": "x",
@@ -240,6 +274,24 @@
       "source": "Codex primary text-and-image checked",
       "summary": "Shai Shalev-Shwartz connects learning architectures, objectives, data distributions and learning algorithms to doubleAI’s AI scientist mission. He argues that such a scientist should choose what to learn, which experiments to run and which architectures to invent, presenting AI data science as a starting point.",
       "id": "0e7af3edda5e2ae0"
+    },
+    {
+      "title": "Recursively Self-Improving Electromagnetic Spectrum Agents: Architecture and Operation",
+      "url": "https://arxiv.org/abs/2611.09318",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "RSI-ESA connects spectrum-task execution with a separate improvement loop. An LLM proposes configuration changes, independent evaluation controls acceptance, and persistent storage retains both executable versions and diagnostic experience.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on November 6, 2026 at 11:09:17 UTC, matching the supplied Atom timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly studies agents that diagnose capability gaps, validate modifications, retain improved versions, and reuse experience in subsequent improvement rounds.",
+      "id": "3bc6585012142c6f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09318"
+        }
+      ]
     },
     {
       "title": "Physical Superintelligence announces an Aaronson–Ambainis proof",
@@ -264,6 +316,28 @@
       "id": "43ec3d3dd70a17e3"
     },
     {
+      "title": "Open-world Reconstruction-based Classifier with Concept Drift Adaptation",
+      "url": "https://arxiv.org/abs/2611.09350",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "ORCCA represents class membership through autoencoder reconstruction errors. It detects unknown observations, groups buffered novelties into new classes, and updates known-class autoencoders as their distributions drift.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on November 6, 2026 at 11:46:11 UTC, matching the supplied Atom timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly addresses discovering previously unknown classes while maintaining recognition under changing known-class distributions, with explicit novelty grouping and unsupervised online adaptation.",
+      "id": "28971e1859d3c00c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09350"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JKomorniczak/orcca"
+        }
+      ]
+    },
+    {
       "title": "Kingston Kuan details the visual artifacts emitted by robotics autoresearch agents",
       "date_evidence": "Supplied primary-source evidence records the original visible dateline as 4:03 AM · Nov 6, 2026, corroborated by its own time element’s UTC timestamp.",
       "kind": "x",
@@ -284,6 +358,54 @@
       "source": "Codex primary text-and-image checked",
       "summary": "Google DeepMind announced research on human-guided AI agents for stress-testing encryption, reporting that its models uncovered two major weaknesses in legacy 1024-bit RSA cryptosystems.",
       "id": "e5529419dad60d6d"
+    },
+    {
+      "title": "Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds",
+      "url": "https://arxiv.org/abs/2611.09017",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "Frontier3DBench evaluates coding agents across objects, scenes, and interactive worlds. It combines rendered appearance, native project inspection, and runtime interaction tests to distinguish plausible output from structurally and behaviorally correct artifacts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on November 6, 2026 at 05:45:31 UTC. This replaces the supplied Hugging Face midnight placeholder.",
+      "review_status": "approved",
+      "relevance": "Provides evaluation of agent-built executable worlds through independent behavioral tests, action prerequisites, and persistent state. This concretely measures verified world-representation capabilities relevant to discovery systems.",
+      "id": "4b458439c837506f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09017"
+        },
+        {
+          "label": "Project",
+          "url": "https://lab.einsia.ai/frontier3dbench/"
+        }
+      ]
+    },
+    {
+      "title": "Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations",
+      "url": "https://arxiv.org/abs/2611.09382",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "An empirical investigation of reasoning agents that modify neural network weights without gradients. Local interventions can improve reasoning and instruction following, but discovering reliable edits and transferring their benefits remain inconsistent.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv submission history establishes v1 on 6 November 2026 at 12:22:24 UTC. This replaces the unverified midnight label and conflicting supplied calendar date.",
+      "review_status": "approved",
+      "relevance": "Directly studies agents discovering, testing, and retaining model repairs through feedback. Its held-out and transfer evaluations connect intervention discovery to reusable capability improvement.",
+      "id": "2f4decb5fa4ac25b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09382"
+        },
+        {
+          "label": "Project",
+          "url": "https://wsp-scope.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/WSP-Scope/WSP-Scope-Project"
+        }
+      ]
     },
     {
       "title": "Dung Hoang examines AutoDNA and the feedback loop in autonomous labs",
@@ -362,6 +484,28 @@
       "source": "Codex primary text-and-image checked",
       "summary": "Thinking Machines says Inkling 2 Small can autonomously manage fine-tuning on Tinker, handle long tasks, and check its work visually. Its companion announcement describes a concrete research workflow: designing an evaluator, experimenting with training data and recipes, and comparing supervised fine-tuning with reinforcement learning for forecasting.",
       "id": "92ca0ccc5622d6fd"
+    },
+    {
+      "title": "The Last Mile to the Real World: Agent-Native Primitives as Reusable Building Blocks for Solving Real-World Tasks",
+      "url": "https://arxiv.org/abs/2611.07461",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "HEELO packages resources with local application competence and composes them into task-specific agent graphs. Eight primitive families cover tools, code, proofs, knowledge, coordination, software engineering, information navigation, and harness control.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv submission history establishes v1 on 5 November 2026 at 05:15:27 UTC, replacing the supplied midnight label.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete harness architecture for selecting reusable reasoning resources, verifying outcomes, revising implicated work, and preserving validated competence across tasks. Proof methods, source learning, and unresolved-need navigation give it a substantive discovery connection.",
+      "id": "bfd452665da89e9e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07461"
+        },
+        {
+          "label": "Project",
+          "url": "https://www.heelo.dev/"
+        }
+      ]
     },
     {
       "title": "Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling",
@@ -840,6 +984,28 @@
       ]
     },
     {
+      "title": "Beneath the Surface: What We Overlook When We Talk About Agent Evolution",
+      "url": "https://arxiv.org/abs/2611.07624",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "The paper audits harness evolution beyond aggregate benchmark scores. It finds that improved averages can conceal lost task coverage, higher costs, and weak transfer, then translates those diagnostics into revised evolution operators.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv submission history establishes v1 on 5 November 2026 at 08:06:37 UTC. The printed manuscript date of 6 November and supplied midnight label do not replace that original timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly examines recursive agent self-improvement, including how agents discover useful modifications, preserve capabilities, and transfer gains. Its diagnostic findings and operator redesign address concrete obstacles to sustained improvement.",
+      "id": "c8753503fff574e5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07624"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/simple-agent-lab/RSIHub"
+        }
+      ]
+    },
+    {
       "title": "AItonomy Foundation explains the Science’s Last Exam hypothesis discovery evaluation",
       "date_evidence": "Supplied primary-source reading evidence records the original status timestamp as 10:58 AM · Nov 5, 2026 and reports a corresponding UTC datetime in the same time element.",
       "kind": "x",
@@ -1114,6 +1280,28 @@
         {
           "label": "Dataset",
           "url": "https://huggingface.co/collections/benchflow/frontierphysics-task-datasets"
+        }
+      ]
+    },
+    {
+      "title": "EvoWorld: Towards Out-of-Sight World Evolution in Generative Video Models",
+      "url": "https://arxiv.org/abs/2611.06748",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "EvoWorld separates observation and world-state reasoning from video rendering. It tests whether an entity outside the camera view changes plausibly after a newly introduced event, while preserving identity and scene continuity.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv history verifies v1 at 4 November 2026, 16:26:45 UTC. The supplied PDF is v2 dated 5 November; that revision date is not the original publication date.",
+      "review_status": "approved",
+      "relevance": "Explicitly represents evolving world state and reasons about consequences for unobserved entities. Its event–reaction evaluation contributes a concrete test of causal world-model capabilities relevant to discovery agents.",
+      "id": "70931a7217d9c26a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06748"
+        },
+        {
+          "label": "Project",
+          "url": "https://tommy-bie.github.io/projects/evoworld/"
         }
       ]
     },
@@ -1395,6 +1583,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.05609"
+        }
+      ]
+    },
+    {
+      "title": "LLMs Don't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting",
+      "url": "https://arxiv.org/abs/2611.06808",
+      "published_at": "2026-11-03",
+      "kind": "paper",
+      "summary": "The paper introduces a behavioral audit of temporal knowledge and explicit knowledge claims using dated financial facts. It finds that disclaimers and historical-date instructions can conceal retained outcome knowledge, undermining retrospective forecasting evaluations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. The primary arXiv v1 submission history confirms 4 November 2026. The manuscript's October 30 date is a separate document date.",
+      "review_status": "approved",
+      "relevance": "FinDendro evaluates whether models can distinguish known outcomes from unknown ones and whether forecasting safeguards prevent hindsight leakage. This directly supports trustworthy evaluation of agents investigating unknown outcomes.",
+      "id": "b3ca16a1bb4e68fd",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06808"
         }
       ]
     },
@@ -1888,6 +2094,32 @@
           "url": "https://ubc-vision.github.io/solv3r/"
         }
       ]
+    },
+    {
+      "title": "Small Molecule Structures Solved With Generative AI and Reasoning Models",
+      "url": "https://advances.edisonscientific.com/research/small-molecule-structures-solved-with-generative-ai-and-reasoning-models",
+      "published_at": "2026-11-02",
+      "kind": "blog",
+      "summary": "Edison announces ChefNMR2, a molecular generative model, and an agent workflow that combines its predictions with chemical reasoning, chemical-shift prediction and literature search to infer structures from experimental NMR evidence. Edison reports 82.4% first-ranked accuracy across 2,031 benchmark molecules and says integration with its Kosmos AI scientist matched human-chemist accuracy on four unpublished natural products.",
+      "date_evidence": "The original [Edison article](https://advances.edisonscientific.com/research/small-molecule-structures-solved-with-generative-ai-and-reasoning-models/) displays 2026-11-02 beside the authors beneath the title. No publication time or timezone is shown.",
+      "relevance": "Combines a specialized model and scientific agent to infer molecular structures from experimental NMR evidence, including previously unpublished compounds.",
+      "review_status": "approved",
+      "source": "Codex primary text-and-image checked",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://advances.edisonscientific.com/research/small-molecule-structures-solved-with-generative-ai-and-reasoning-models"
+        },
+        {
+          "label": "Project",
+          "url": "https://chefnmr.cs.princeton.edu"
+        },
+        {
+          "label": "Project",
+          "url": "https://huggingface.co/spaces/ziyux123/chefnmr2"
+        }
+      ],
+      "id": "63ae1a9216868285"
     },
     {
       "title": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
@@ -3406,6 +3638,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.01377"
+        }
+      ]
+    },
+    {
+      "title": "\"PRISM\" Is Not All You Need: Cross-Topic Name Collisions and Scientific Paper Retrieval",
+      "url": "https://arxiv.org/abs/2611.01362",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "The study measures increasing reuse of scientific method names across research topics and evaluates how contextual clues help retrieve the intended source. Its reusable task separates finding candidates from identifying a specific paper among namesakes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied exact original_published_at timestamp matches the primary arXiv v1 submission history: 1 November 2026 at 00:00:08 UTC.",
+      "review_status": "approved",
+      "relevance": "The paper supplies a controlled scientific-source identification evaluation for research assistants. Recovering and preserving the intended paper's identity is a concrete component of reliable literature discovery and evidence verification.",
+      "id": "960cfddd75b9ab2e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.01362"
         }
       ]
     },
@@ -7572,6 +7822,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.33644"
+        }
+      ]
+    },
+    {
+      "title": "AgentBaton: Efficient Model Collaboration in Agentic Tasks",
+      "url": "https://arxiv.org/abs/2610.35959",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "The paper studies when a capable model can transfer an evolving task to a cheaper model. It trains a lightweight detector to recognize progress that makes the remaining work manageable, preserving workspace state and transferring history through context or inspectable logs.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. The primary arXiv v1 submission history confirms 25 October 2026. The October 28 cover date is a separate document date.",
+      "review_status": "approved",
+      "relevance": "AgentBaton contributes a learned coordination mechanism for long-horizon tool-using agents that bases model handoffs on artifacts and verification feedback. This supports resource-efficient discovery harnesses, with demonstrated tasks including scientific computing, although autonomous research outcomes remain untested.",
+      "id": "243a3b052e9e1a3e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35959"
+        },
+        {
+          "label": "Project",
+          "url": "https://research.nvidia.com/labs/lpr/agentbaton/"
         }
       ]
     },
@@ -16332,6 +16604,150 @@
   ],
   "paper_pages": [
     {
+      "title": "Video-Coder: Reinforcing Agentic Coding for Video Generation",
+      "url": "https://arxiv.org/abs/2611.09894",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "Video-Coder trains a multimodal agent to produce Blender programs, inspect execution and rendered observations, and revise its scene. Rendered draft videos then guide a separate video generator.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history establishes v1 on November 6, 2026 at 18:59:57 UTC. This replaces the supplied Hugging Face midnight placeholder, which is not the original arXiv submission timestamp.",
+      "review_status": "approved",
+      "relevance": "Contributes agent training for constructing and revising executable dynamic-world representations through execution and visual feedback. Its reusable verification harness and physical-consistency evaluation provide a concrete connection to learning verified world construction.",
+      "id": "03141415402349a6",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09894"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/CYWang735/Video-Coder"
+        },
+        {
+          "label": "Project",
+          "url": "https://cywang735.github.io/Video-Coder/"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/Video-Coder/Video-Coder-9B"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Video-Coder/Train-Data"
+        }
+      ]
+    },
+    {
+      "title": "Recursively Self-Improving Electromagnetic Spectrum Agents: Architecture and Operation",
+      "url": "https://arxiv.org/abs/2611.09318",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "RSI-ESA connects spectrum-task execution with a separate improvement loop. An LLM proposes configuration changes, independent evaluation controls acceptance, and persistent storage retains both executable versions and diagnostic experience.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on November 6, 2026 at 11:09:17 UTC, matching the supplied Atom timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly studies agents that diagnose capability gaps, validate modifications, retain improved versions, and reuse experience in subsequent improvement rounds.",
+      "id": "3bc6585012142c6f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09318"
+        }
+      ]
+    },
+    {
+      "title": "Open-world Reconstruction-based Classifier with Concept Drift Adaptation",
+      "url": "https://arxiv.org/abs/2611.09350",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "ORCCA represents class membership through autoencoder reconstruction errors. It detects unknown observations, groups buffered novelties into new classes, and updates known-class autoencoders as their distributions drift.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on November 6, 2026 at 11:46:11 UTC, matching the supplied Atom timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly addresses discovering previously unknown classes while maintaining recognition under changing known-class distributions, with explicit novelty grouping and unsupervised online adaptation.",
+      "id": "28971e1859d3c00c",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09350"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/JKomorniczak/orcca"
+        }
+      ]
+    },
+    {
+      "title": "Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds",
+      "url": "https://arxiv.org/abs/2611.09017",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "Frontier3DBench evaluates coding agents across objects, scenes, and interactive worlds. It combines rendered appearance, native project inspection, and runtime interaction tests to distinguish plausible output from structurally and behaviorally correct artifacts.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The primary arXiv submission history confirms v1 on November 6, 2026 at 05:45:31 UTC. This replaces the supplied Hugging Face midnight placeholder.",
+      "review_status": "approved",
+      "relevance": "Provides evaluation of agent-built executable worlds through independent behavioral tests, action prerequisites, and persistent state. This concretely measures verified world-representation capabilities relevant to discovery systems.",
+      "id": "4b458439c837506f",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09017"
+        },
+        {
+          "label": "Project",
+          "url": "https://lab.einsia.ai/frontier3dbench/"
+        }
+      ]
+    },
+    {
+      "title": "Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations",
+      "url": "https://arxiv.org/abs/2611.09382",
+      "published_at": "2026-11-06",
+      "kind": "paper",
+      "summary": "An empirical investigation of reasoning agents that modify neural network weights without gradients. Local interventions can improve reasoning and instruction following, but discovering reliable edits and transferring their benefits remain inconsistent.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv submission history establishes v1 on 6 November 2026 at 12:22:24 UTC. This replaces the unverified midnight label and conflicting supplied calendar date.",
+      "review_status": "approved",
+      "relevance": "Directly studies agents discovering, testing, and retaining model repairs through feedback. Its held-out and transfer evaluations connect intervention discovery to reusable capability improvement.",
+      "id": "2f4decb5fa4ac25b",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09382"
+        },
+        {
+          "label": "Project",
+          "url": "https://wsp-scope.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/WSP-Scope/WSP-Scope-Project"
+        }
+      ]
+    },
+    {
+      "title": "The Last Mile to the Real World: Agent-Native Primitives as Reusable Building Blocks for Solving Real-World Tasks",
+      "url": "https://arxiv.org/abs/2611.07461",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "HEELO packages resources with local application competence and composes them into task-specific agent graphs. Eight primitive families cover tools, code, proofs, knowledge, coordination, software engineering, information navigation, and harness control.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv submission history establishes v1 on 5 November 2026 at 05:15:27 UTC, replacing the supplied midnight label.",
+      "review_status": "approved",
+      "relevance": "Provides a concrete harness architecture for selecting reusable reasoning resources, verifying outcomes, revising implicated work, and preserving validated competence across tasks. Proof methods, source learning, and unresolved-need navigation give it a substantive discovery connection.",
+      "id": "bfd452665da89e9e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07461"
+        },
+        {
+          "label": "Project",
+          "url": "https://www.heelo.dev/"
+        }
+      ]
+    },
+    {
       "title": "Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling",
       "url": "https://arxiv.org/abs/2611.08237",
       "published_at": "2026-11-05",
@@ -16642,6 +17058,28 @@
       ]
     },
     {
+      "title": "Beneath the Surface: What We Overlook When We Talk About Agent Evolution",
+      "url": "https://arxiv.org/abs/2611.07624",
+      "published_at": "2026-11-05",
+      "kind": "paper",
+      "summary": "The paper audits harness evolution beyond aggregate benchmark scores. It finds that improved averages can conceal lost task coverage, higher costs, and weak transfer, then translates those diagnostics into revised evolution operators.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv submission history establishes v1 on 5 November 2026 at 08:06:37 UTC. The printed manuscript date of 6 November and supplied midnight label do not replace that original timestamp.",
+      "review_status": "approved",
+      "relevance": "Directly examines recursive agent self-improvement, including how agents discover useful modifications, preserve capabilities, and transfer gains. Its diagnostic findings and operator redesign address concrete obstacles to sustained improvement.",
+      "id": "c8753503fff574e5",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07624"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/simple-agent-lab/RSIHub"
+        }
+      ]
+    },
+    {
       "title": "What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?",
       "url": "https://arxiv.org/abs/2611.06483",
       "published_at": "2026-11-04",
@@ -16840,6 +17278,28 @@
       ]
     },
     {
+      "title": "EvoWorld: Towards Out-of-Sight World Evolution in Generative Video Models",
+      "url": "https://arxiv.org/abs/2611.06748",
+      "published_at": "2026-11-04",
+      "kind": "paper",
+      "summary": "EvoWorld separates observation and world-state reasoning from video rendering. It tests whether an entity outside the camera view changes plausibly after a newly introduced event, while preserving identity and scene continuity.",
+      "source": "Codex full-text screened",
+      "date_evidence": "Primary arXiv history verifies v1 at 4 November 2026, 16:26:45 UTC. The supplied PDF is v2 dated 5 November; that revision date is not the original publication date.",
+      "review_status": "approved",
+      "relevance": "Explicitly represents evolving world state and reasons about consequences for unobserved entities. Its event–reaction evaluation contributes a concrete test of causal world-model capabilities relevant to discovery agents.",
+      "id": "70931a7217d9c26a",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06748"
+        },
+        {
+          "label": "Project",
+          "url": "https://tommy-bie.github.io/projects/evoworld/"
+        }
+      ]
+    },
+    {
       "title": "EnzymeRSI: A dual-loop recursive self-improvement system for enzyme design",
       "url": "https://arxiv.org/abs/2611.06321",
       "published_at": "2026-11-04",
@@ -17016,6 +17476,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.05609"
+        }
+      ]
+    },
+    {
+      "title": "LLMs Don't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting",
+      "url": "https://arxiv.org/abs/2611.06808",
+      "published_at": "2026-11-03",
+      "kind": "paper",
+      "summary": "The paper introduces a behavioral audit of temporal knowledge and explicit knowledge claims using dated financial facts. It finds that disclaimers and historical-date instructions can conceal retained outcome knowledge, undermining retrospective forecasting evaluations.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. The primary arXiv v1 submission history confirms 4 November 2026. The manuscript's October 30 date is a separate document date.",
+      "review_status": "approved",
+      "relevance": "FinDendro evaluates whether models can distinguish known outcomes from unknown ones and whether forecasting safeguards prevent hindsight leakage. This directly supports trustworthy evaluation of agents investigating unknown outcomes.",
+      "id": "b3ca16a1bb4e68fd",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.06808"
         }
       ]
     },
@@ -18892,6 +19370,24 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2611.01377"
+        }
+      ]
+    },
+    {
+      "title": "\"PRISM\" Is Not All You Need: Cross-Topic Name Collisions and Scientific Paper Retrieval",
+      "url": "https://arxiv.org/abs/2611.01362",
+      "published_at": "2026-10-31",
+      "kind": "paper",
+      "summary": "The study measures increasing reuse of scientific method names across research topics and evaluates how contextual clues help retrieve the intended source. Its reusable task separates finding candidates from identifying a specific paper among namesakes.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied exact original_published_at timestamp matches the primary arXiv v1 submission history: 1 November 2026 at 00:00:08 UTC.",
+      "review_status": "approved",
+      "relevance": "The paper supplies a controlled scientific-source identification evaluation for research assistants. Recovering and preserving the intended paper's identity is a concrete component of reliable literature discovery and evidence verification.",
+      "id": "960cfddd75b9ab2e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.01362"
         }
       ]
     },
@@ -22302,6 +22798,28 @@
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2610.33644"
+        }
+      ]
+    },
+    {
+      "title": "AgentBaton: Efficient Model Collaboration in Agentic Tasks",
+      "url": "https://arxiv.org/abs/2610.35959",
+      "published_at": "2026-10-24",
+      "kind": "paper",
+      "summary": "The paper studies when a capable model can transfer an evolving task to a cheaper model. It trains a lightweight detector to recognize progress that makes the remaining work manageable, preserving workspace state and transferring history through context or inspectable logs.",
+      "source": "Codex full-text screened",
+      "date_evidence": "The supplied original_published_at timestamp is preserved exactly. The primary arXiv v1 submission history confirms 25 October 2026. The October 28 cover date is a separate document date.",
+      "review_status": "approved",
+      "relevance": "AgentBaton contributes a learned coordination mechanism for long-horizon tool-using agents that bases model handoffs on artifacts and verification feedback. This supports resource-efficient discovery harnesses, with demonstrated tasks including scientific computing, although autonomous research outcomes remain untested.",
+      "id": "243a3b052e9e1a3e",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.35959"
+        },
+        {
+          "label": "Project",
+          "url": "https://research.nvidia.com/labs/lpr/agentbaton/"
         }
       ]
     },

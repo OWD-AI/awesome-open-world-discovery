@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**197 usage profiles** · Updated **2026-11-08**
+**200 usage profiles** · Updated **2026-11-09**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1305,6 +1305,9 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [VisSearch-Bench: Evaluating Long Horizon Visual Search in Multimodal Agents](#paper-2fa2fcaef01f9bc8) | Real data | Analysis + tools | Paper-described |
 | [On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer](#paper-9b4963f72ed4f821) | Executed programs + evaluators | Analysis + code | Paper-described |
 | [Can Large Language Models Review the Scientific Literature? A Test Against a 102-Article Benchmark](#paper-9e109f910ff861b4) | Real data | Data analysis | Paper-described |
+| [Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds](#paper-4b458439c837506f) | Executed programs + evaluators | Analysis + code | Paper-described |
+| [LLMs Don't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting](#paper-b3ca16a1bb4e68fd) | Real data | Data analysis | Paper-described |
+| ["PRISM" Is Not All You Need: Cross-Topic Name Collisions and Scientific Paper Retrieval](#paper-960cfddd75b9ab2e) | Real data | Data analysis | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -3350,6 +3353,75 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | Reward / evaluator | No benchmark training procedure or training reward is established. Evaluation uses article matching by DOI and normalized title, withheld database classifications, quotation audits against source PDFs, and blinded expert ratings of synthesis and research-gap outputs. |
 | Reset | Cookie clearing and removal of institutional sessions are described for paired search tests; interpretation uses corpus-only contexts. General environment reset support is not established. |
 | Branching | State cloning, checkpoint restoration, and branching support are not established. |
+
+</details>
+
+<a id="paper-4b458439c837506f"></a>
+
+<details>
+<summary>Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds — details</summary>
+
+[Work](../README.md#paper-4b458439c837506f) · [Source](https://arxiv.org/pdf/2611.09017)
+
+**Focus:** Evaluates 3D artifact construction on 65 object, 65 scene, and 15 interactive-world tasks. Feedback comes from executing programs, rendering scenes, inspecting geometry, and independently testing simulated movement, mechanisms, inventory, and persistent state. Photographs and existing assets supply references; physical behavior is tested inside software worlds. The tasks do not require executed research experiments.
+
+**Openness:** `Agents receive fixed instructions, applicable reference images, starter assets, and interaction contracts.`, `Agents construct executable, editable Blender or Unreal Engine projects.`, `Evaluator files and scores are hidden during generation; general network access is disabled.`, `Public execution and delivery failures provide execution errors for retries, without score feedback.`
+
+**New physical measurements:** No
+
+**Limits:** L1/L2 allow at most six attempts within 32 hours per task; L3 has a 24-hour limit. Evaluation combines measurements with model judgments. Continuous world workflows prohibit teleportation and resets. Recorded reference imagery does not establish new physical experiments. Training procedures and state-branching facilities are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward is not established. The evaluator combines visual judgments, native-scene measurements, image similarity, and runtime behavioral checks. Overall scores weight objects, scenes, and worlds by 0.30, 0.30, and 0.40; world scores weight visual quality, task fidelity, spatial layout, and interaction correctness by 0.60, 0.20, 0.05, and 0.15. Agents receive no score feedback during generation. |
+| Reset | Training-time reset support is not established. Blender evaluation executes a baseline and three seed reruns. Local world probes may place fixtures, while continuous workflows explicitly prohibit resets and teleportation. |
+| Branching | Not established. Retry attempts, seed reruns, and persistent workspaces do not establish environment snapshots or branching from saved states. |
+
+</details>
+
+<a id="paper-b3ca16a1bb4e68fd"></a>
+
+<details>
+<summary>LLMs Don't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting — details</summary>
+
+[Work](../README.md#paper-b3ca16a1bb4e68fd) · [Source](https://arxiv.org/pdf/2611.06808)
+
+**Focus:** FinDendro measures factual knowledge, explicit knowledge claims and their temporal boundaries, including the effect of historical-date instructions. Gold feedback comes from recorded financial observations and published policy outcomes. The dated backtest is a retrospective prompt evaluation.
+
+**Openness:** `Fixed evaluation sample of 2,226 historical U.S. financial facts; each fact produces four multiple-choice prompts.`, `Models answer from their own knowledge without browsing or tools and return a single option letter.`, `Release of the fact pool, sample, questions and construction code is promised; an artifact destination is not established in the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** Coverage is limited to monthly U.S. financial facts and multiple-choice responses. Correct answers do not establish memorization; the persistence control removes only one simple inference strategy. Knowledge accuracy and headline claim rates use different sample populations. Boundary estimates depend on thresholds, and API versions may change. This environment does not execute research experiments or collect new physical measurements.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A benchmark training reward or optimization procedure is not established. The evaluator checks selected values against historical gold answers, uses 1,340 controlled facts for knowledge scoring, applies balanced accuracy to policy outcomes, and measures claim rates and rolling temporal boundaries. |
+| Reset | Each prompt is sent independently with shuffled options. A stateful environment reset interface is not established. |
+| Branching | Checkpoint restoration or branching from an intermediate environment state is not established. The four aligned prompts are independently evaluated variants of each fixed fact. |
+
+</details>
+
+<a id="paper-960cfddd75b9ab2e"></a>
+
+<details>
+<summary>"PRISM" Is Not All You Need: Cross-Topic Name Collisions and Scientific Paper Retrieval — details</summary>
+
+[Work](../README.md#paper-960cfddd75b9ab2e) · [Source](https://arxiv.org/pdf/2611.01362)
+
+**Focus:** Scientific paper identification from names and contextual clues. Systems submit ordered source identifiers or explicit tie groups. Feedback comes from frozen target-record identities and relevance files built from recorded arXiv metadata. Ranking and model inference are executed computations over that fixed corpus; candidate papers' research experiments are not executed by this benchmark.
+
+**Openness:** `Fixed collection of 144,523 labelled paper records, with 1,400 shared-name targets and 1,400 matched unique-name controls.`, `Systems rank either the full collection or a supplied complete namesake group using the specified document fields.`, `The described artifact includes queries, relevance records, baseline outputs and evaluation commands; a public artifact destination is not established in the supplied pages.`
+
+**New physical measurements:** No
+
+**Limits:** The corpus covers selected arXiv categories and a restricted leading-title label syntax. Context terms come from target abstracts, and the title-plus-abstract condition indexes that same source text. Exact-name ranking assumes the complete correct namesake group is supplied. Topic clusters operationalize abstract similarity. Downstream scientific discovery and new physical measurements are not evaluated.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A benchmark training reward or trained retrieval policy is not established. The evaluator scores target-record Top-1, Top-10 and reciprocal rank, accounts for explicit ties, and gives omitted queries and invalid language-model rankings zero credit. Complete name groups may be reserved for future development and evaluation splits. |
+| Reset | The frozen corpus, queries and relevance records support rescoring and model reruns. A stateful environment reset interface is not established. |
+| Branching | Checkpoint restoration or branching from intermediate interaction states is not established. Candidate scopes, query variants and document fields are fixed comparison conditions. |
 
 </details>
 

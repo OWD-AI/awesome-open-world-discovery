@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -30881,6 +30881,357 @@
           1,
           3,
           11
+        ]
+      }
+    },
+    "paper-3bc6585012142c6f": {
+      "institutions": [
+        "Nanjing University of Aeronautics and Astronautics"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Fixed Qwen3-8B and Qwen3-32B models propose changes within 864 predefined configurations. Two evolution runs per model span six rounds, with at most three candidates per round. Development and validation guide selection; frozen versions are tested on fresh seeds. Experience ablations compare no inheritance, raw history, and history with diagnostic rules.",
+      "evidence": "Critical timely delivery rises from 64.81% to 68.54% with 8B and 70.44% with 32B. Empty transmissions fall from 39.50% to 10.34% with 32B. Retained versions preserve incremental gains. Experience inheritance benefits 32B, while 8B shows no mean benefit. Under delayed acknowledgements, 8B performs 0.22 percentage points below the baseline.",
+      "discovery_use": "Directly studies agents that diagnose capability gaps, validate modifications, retain improved versions, and reuse experience in subsequent improvement rounds.",
+      "limits": "Evidence concerns bounded configuration search in one simulator, rather than autonomous construction of new capabilities. Only two evolution runs underpin reported ranges. Model generation pauses simulation time, excluding service costs during improvement. The unchanged-component baseline does not establish superiority over random search or conventional configuration optimization. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "adaptation",
+        "rationale": "Directly studies agents that diagnose capability gaps, validate modifications, retain improved versions, and reuse experience in subsequent improvement rounds.",
+        "pdf_sha256": "ed1abf7d65afe57d2a00c1f35f617aa5207d2015b95653be5f73c7d2215bd676",
+        "evidence_pages": [
+          1,
+          2,
+          5
+        ]
+      }
+    },
+    "paper-28971e1859d3c00c": {
+      "institutions": [
+        "Wrocław University of Science and Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Per-class autoencoders provide normalized reconstruction errors. Known classes use calibrated thresholds; discovered classes use a cascade of one-sided KDE responses. Bimodality tests and Gaussian mixtures split novelty buffers. Error-weighted fine-tuning adapts known-class models. Evaluation compares seven references on 330 synthetic or semi-synthetic streams and three real streams, using known-class balanced accuracy, known-versus-unknown balanced accuracy, unknown-class ARI, and resource measurements.",
+      "evidence": "ORCCA leads tabular known-versus-unknown recognition and performs strongly under simulated drift. Real-stream novelty balanced accuracy is 0.723 on Covertype, 0.857 on KDD, and 0.638 on PAMAP2; unknown-class ARI is 0.162, 0.935, and 0.095. Performance is uneven: Covertype known-class accuracy is only 0.202, and DenStream generally groups numerous CIFAR novelty classes better.",
+      "discovery_use": "Directly addresses discovering previously unknown classes while maintaining recognition under changing known-class distributions, with explicit novelty grouping and unsupervised online adaptation.",
+      "limits": "Synthetic translation drift often increases class separation, favoring adaptive methods. Sudden changes can be mistaken for novelty. Adaptation updates initially known classes only; calibration remains fixed. Some references are modified for unsupervised operation, while CluStream receives the true class count. Per-class networks cause substantial memory use and growth with discovered classes. Results do not establish universal superiority across recognition criteria.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "adaptation",
+        "rationale": "Directly addresses discovering previously unknown classes while maintaining recognition under changing known-class distributions, with explicit novelty grouping and unsupervised online adaptation.",
+        "pdf_sha256": "13aa5a07e14e4a3d16de00b144bfed596d8fc92f120f4f831b76ff59930e1fd6",
+        "evidence_pages": [
+          1,
+          4,
+          12
+        ]
+      }
+    },
+    "paper-03141415402349a6": {
+      "institutions": [
+        "University of Central Florida",
+        "University of W¨urzburg",
+        "Microsoft Research",
+        "Tsinghua University",
+        "UNC-Chapel Hill",
+        "UW–Madison"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Teacher-generated coding trajectories initialize a Qwen3.5-9B agent through supervised fine-tuning. GRPO then optimizes multi-turn trajectories using execution validity and VLM-scored video consistency. An annealing coefficient reduces execution reward during training. The harness independently reruns submitted scripts. Evaluation uses PhyGenBench, physical dimensions of VBench-2.0, reward ablations, and limited generator transfer.",
+      "evidence": "Tables report PhyGenBench improving from 0.61 to 0.67 and selected VBench-2.0 dimensions averaging 54.58% to 78.19%. SFT alone reaches 0.63; removing annealing yields 0.65. Transfer to OmniWeaving improves 0.48 to 0.51. These support feedback-based scene programming, but measure physical plausibility rather than discovery of new physical laws.",
+      "discovery_use": "Contributes agent training for constructing and revising executable dynamic-world representations through execution and visual feedback. Its reusable verification harness and physical-consistency evaluation provide a concrete connection to learning verified world construction.",
+      "limits": "Dataset sizes conflict: early sections specify 6k SFT and 2k RL examples, while setup and conclusion specify 10k and 4k. The reported PhyGenBench improvement is six points from displayed averages, and the claimed 16.28-point OmniWeaving gain conflicts with its three-point table increase. Video evaluation and rewards depend on model judges and synthetic references. Clean re-execution verifies reproducibility, not physical truth. Appearance-dependent material behavior remains weaker, and uncertainty estimates are not reported.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "learning",
+        "rationale": "Contributes agent training for constructing and revising executable dynamic-world representations through execution and visual feedback. Its reusable verification harness and physical-consistency evaluation provide a concrete connection to learning verified world construction.",
+        "pdf_sha256": "1111598b2efe60d0fcf8d2eeb334bee2af877158dfa3e1495c314756ce202100",
+        "evidence_pages": [
+          1,
+          5,
+          8
+        ]
+      }
+    },
+    "paper-4b458439c837506f": {
+      "institutions": [
+        "Navers Lab",
+        "Einsia.AI",
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        17
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Eleven model–harness configurations complete 145 tasks: 65 objects, 65 scenes, and 15 interactive worlds. Blender and Unreal Engine submissions receive visual, structural, and behavioral scores. Independent observers test world movement, mechanisms, clearance, and continuous stateful workflows. Overall scores weight levels 30%, 30%, and 40%. A human ranking study covers 45 reference-conditioned object and scene items.",
+      "evidence": "The highest overall score is 66.02, while the strongest world-level score is 61.28. Every configuration performs worse on reference reconstruction than text-driven object and scene generation. Across world submissions, local mechanisms average 83.08, motion clearance 20.82, and stateful workflows 30.26. Automatic scores achieve mean human-ranking Kendall correlation of 0.727 and 79.2% top-choice agreement.",
+      "discovery_use": "Provides evaluation of agent-built executable worlds through independent behavioral tests, action prerequisites, and persistent state. This concretely measures verified world-representation capabilities relevant to discovery systems.",
+      "limits": "The suite evaluates construction against supplied specifications, not autonomous scientific investigation or open-ended exploration. Model and harness effects are confounded. Only 15 world tasks are present, despite their 40% overall weight. World scores allocate 60% to appearance and 15% to interaction correctness. The judge is also an evaluated model and assists task construction; human validation excludes world behavior. Bootstrap intervals quantify task sampling rather than repeated-generation variability. Cost estimates exclude retries and infrastructure, and several are lower bounds. The project links code, but repository availability could not be verified.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "benchmarks",
+        "rationale": "Provides evaluation of agent-built executable worlds through independent behavioral tests, action prerequisites, and persistent state. This concretely measures verified world-representation capabilities relevant to discovery systems.",
+        "pdf_sha256": "6045553f8afd2202ea61be83785b3a289a57456565cb70f23111d8a54e728604",
+        "evidence_pages": [
+          1,
+          3,
+          17
+        ]
+      }
+    },
+    "paper-2f4decb5fa4ac25b": {
+      "institutions": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "Tongji University",
+        "Fudan University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "GPT-6 Astra conducts 16 editing searches across seven benchmarks and Qwen3.5 models at two scales. Each search permits 50 successful forward requests, combining generation, teacher-forced diagnostics, and direct transformer-block edits. Development feedback selects a checkpoint or retains the base model; matched held-out evaluations and selected cross-task tests assess generalization.",
+      "evidence": "The primary 0.8B Math edit changes 1,023 stored values and improves MATH-500 accuracy by 29.45 percentage points. Task-specific gains reach 36.72 points on IFEval and 17.11 on SciBench. Three Math searches yield gains of 29.45, 5.00, and 27.30 points. Math-to-SciBench transfer adds 20.10 points, but transfer can also regress. Six searches ultimately retain original weights.",
+      "discovery_use": "Directly studies agents discovering, testing, and retaining model repairs through feedback. Its held-out and transfer evaluations connect intervention discovery to reusable capability improvement.",
+      "limits": "Most model–benchmark pairs have one search; the three Math trajectories also differ in prompt history and objectives. Development scores undergo adaptive selection without multiple-comparison correction. A request can contain many generations, so the request budget is not a fixed inference-cost budget. Overview results include discarded candidates. Longer-horizon agentic tasks and the mechanisms behind transfer remain untested. The supplied text covers all 21 pages; only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "adaptation",
+        "rationale": "Directly studies agents discovering, testing, and retaining model repairs through feedback. Its held-out and transfer evaluations connect intervention discovery to reusable capability improvement.",
+        "pdf_sha256": "4400e751310fff7b9b5c360cdcd74ad7cb3c86b48e6401117547a85555ecffec",
+        "evidence_pages": [
+          1,
+          3,
+          8
+        ]
+      }
+    },
+    "paper-bfd452665da89e9e": {
+      "institutions": [
+        "University of Illinois Urbana-Champaign",
+        "Georgia Institute of Technology",
+        "heelo.dev"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        9,
+        36
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Primitives expose interfaces, assess applicability, apply their resources, and exchange requirements. Execution produces environmental evidence that guides bounded revisions. A separate validation process admits reusable improvements. Evaluation combines family-specific benchmarks, matched-backbone controls, and 46 platform tasks. Conditional theoretical results address activation, composition, and retrieval limits.",
+      "evidence": "Reported same-backbone Terminal-Bench 4.0 resolution rises from 37.3% to 55.5%. Harness composition raises Terminal-Bench 2.0 Pass@1 from 60.0% to 72.2% on 45 tasks. Matched ToolBench controls improve from 55.8% to 75.1%. On platform tasks, completion rises from 9 each to 39 and 35 of 46 for the two connected agents.",
+      "discovery_use": "Provides a concrete harness architecture for selecting reusable reasoning resources, verifying outcomes, revising implicated work, and preserving validated competence across tasks. Proof methods, source learning, and unresolved-need navigation give it a substantive discovery connection.",
+      "limits": "Evidence largely concerns separate primitive families; Appendix E proposes an integrated cross-family evaluation rather than reporting its completion. Platform baselines lack credentials while connected agents gain account-backed services, confounding architecture with access. Defective primitives are fixed before reported reruns. Lower cost per completed task does not imply cheaper individual runs. The large harness-construction savings use an output-token-only lower bound. This is a targeted review of supplied sections from a 102-page paper, not exhaustive appendix inspection.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "systems",
+        "rationale": "Provides a concrete harness architecture for selecting reusable reasoning resources, verifying outcomes, revising implicated work, and preserving validated competence across tasks. Proof methods, source learning, and unresolved-need navigation give it a substantive discovery connection.",
+        "pdf_sha256": "abd42527052a5e586661a6d5da1cbb2bb73ba1d9d5f970f587d98883d51f3c4e",
+        "evidence_pages": [
+          1,
+          8,
+          9,
+          36
+        ]
+      }
+    },
+    "paper-70931a7217d9c26a": {
+      "institutions": [
+        "The Hong Kong University of Science and Technology",
+        "Tencent",
+        "The Chinese University of Hong Kong"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A VLM records generated history and infers reactions from the event actually rendered. An LTX-2.5 renderer uses entity and temporal anchors, identity-biased attention, and two-stage LoRA training with online predecessor rollouts. Approximately 12,000 synthetic videos support training. A 120-case benchmark uses blind revisit prompts, joint task-success criteria, VLM judgments, and auxiliary visual metrics.",
+      "evidence": "Core success reaches 90.8%, versus 21.7% for the strongest main-comparison baseline. Removing reasoning prompts reduces Core success to 58.3%; transferring those prompts to Evoke-Turbo raises it from 21.7% to 45.0%. Identity attention and online rollout adaptation provide further gains. High event or revisit scores alone do not establish a complete event–reaction chain.",
+      "discovery_use": "Explicitly represents evolving world state and reasons about consequences for unobserved entities. Its event–reaction evaluation contributes a concrete test of causal world-model capabilities relevant to discovery agents.",
+      "limits": "Experiments cover one event and one subject reaction, mainly horizontal camera returns. Causal plausibility means judged behavioral coherence, not identification of real-world causal laws. Synthetic scenarios and VLM-based scoring limit external validity; brain and judge use the same model family. Main baselines lack the added reasoning and retrieval components, though prompt-transfer controls partially address this. Reported controlled inference uses the initial frame as its identity anchor, so general retrieval is not demonstrated there. All 20 text pages were supplied; only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "causality",
+        "rationale": "Explicitly represents evolving world state and reasons about consequences for unobserved entities. Its event–reaction evaluation contributes a concrete test of causal world-model capabilities relevant to discovery agents.",
+        "pdf_sha256": "585ff38901032e0100a34ef666720b46df80a342ebdcd36616d976a62e2d965b",
+        "evidence_pages": [
+          1,
+          6,
+          20
+        ]
+      }
+    },
+    "paper-c8753503fff574e5": {
+      "institutions": [
+        "University of Science and Technology of China",
+        "University of California, Berkeley",
+        "Simple Agent Lab",
+        "Beijing Institute for General Artificial Intelligence",
+        "Shanghai Jiaotong University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Four evolution methods run with source-editable MiniSWE and outer-layer-only Codex using GPT-5.4 on banking and terminal tasks. Eight-pass evaluations separate reliability, empirical coverage, turnover, and deployment cost. Parent-expansion experiments, component interventions, and frozen-pool admission replays study mechanisms. EvoAudit produces operator revisions installed as Audit-Guided Evolution, or AGE.",
+      "evidence": "All 16 evolved champions gain and lose covered tasks. Eleven improve reliability, but eight of those cost more per trial. General-task transfer coverage falls for seven of eight champions; coding-target coverage rises for seven of eight. Fifteen of 16 specific components outperform generic reminders in reliability. AGE improves reliability and coverage over A-Evolve in all four settings, while regressions remain.",
+      "discovery_use": "Directly examines recursive agent self-improvement, including how agents discover useful modifications, preserve capabilities, and transfer gains. Its diagnostic findings and operator redesign address concrete obstacles to sustained improvement.",
+      "limits": "Results concern one frozen model, two harnesses, two source benchmarks, and a finite set of evolution lineages. AGE uses one search seed; repeated reporting trials do not establish robustness across independent searches. Eight-pass coverage is empirical reach, not a capability boundary. Component and frozen-pool studies do not fully reproduce altered live search dynamics. Combined AGE revisions lack individual attribution here. Supplied pages cover the main paper through page 16, not all 46 pages or supporting appendices.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "open_ended",
+        "rationale": "Directly examines recursive agent self-improvement, including how agents discover useful modifications, preserve capabilities, and transfer gains. Its diagnostic findings and operator redesign address concrete obstacles to sustained improvement.",
+        "pdf_sha256": "7aa3ccc11211b74f873c583864672c149c1db356d1a1afde40b35380b7a9094e",
+        "evidence_pages": [
+          1,
+          6,
+          14
+        ]
+      }
+    },
+    "paper-b3ca16a1bb4e68fd": {
+      "institutions": [
+        "The Fin AI",
+        "University of Manchester",
+        "Mohamed bin Zayed University of Artificial Intelligence",
+        "Deepkin AI",
+        "University of Florida",
+        "University of Montreal"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        11,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs 2,226 U.S. financial facts and four aligned prompts per fact covering factual answers, recall claims, prediction claims, and historical-date instructions. Knowledge scoring uses 1,340 controlled facts, removes cases solved by simple persistence, and balances policy-outcome classes. Rolling quarterly performance and claim rates estimate separate knowledge and claim boundaries. Evaluates 17 model variants, including point-in-time checkpoints.",
+      "evidence": "GPT-5 achieves 76% controlled factual accuracy while claiming knowledge on 38% of the full sample. Historical-date instructions reduce its knowledge claims from 39% to 1%, with accuracy changing from 76% to 75%. Filtering disclaimed facts retains substantial in-window accuracy. Llama-3.3 exhibits a seven-quarter gap between measured knowledge and continuing claims. Small point-in-time models remain near chance.",
+      "discovery_use": "FinDendro evaluates whether models can distinguish known outcomes from unknown ones and whether forecasting safeguards prevent hindsight leakage. This directly supports trustworthy evaluation of agents investigating unknown outcomes.",
+      "limits": "Correct answers do not establish memorization: the persistence control excludes only one simple inference strategy. Accuracy and headline claim rates use different sample populations, limiting direct calibration interpretations. Boundaries depend on thresholds; GPT-4o's estimated gap changes substantially under sensitivity analysis. Coverage is limited to monthly U.S. financial facts, single responses, and multiple-choice claims. API versions can change. A benchmark release is promised, but no first-party artifact destination was verified. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "benchmarks",
+        "rationale": "FinDendro evaluates whether models can distinguish known outcomes from unknown ones and whether forecasting safeguards prevent hindsight leakage. This directly supports trustworthy evaluation of agents investigating unknown outcomes.",
+        "pdf_sha256": "68cd635b2135fce17d345bded26638dcbe39ca7746e08272fd9a2f688b89e718",
+        "evidence_pages": [
+          1,
+          6,
+          11,
+          13
+        ]
+      }
+    },
+    "paper-960cfddd75b9ab2e": {
+      "institutions": [
+        "School of Computer Science, Carnegie Mellon University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Analyzes 564,861 AI-related arXiv records with original-version metadata. Defines normalized leading-title labels and measures collision rates using masked-abstract topic clusters, two encoders, author filters, and name-group bootstrap intervals. Evaluates 1,400 shared-name targets against 1,400 metadata-matched unique-name controls using three abstract-derived query terms. Compares BM25, MiniLM, E5, and listwise language-model ranking across candidate scopes and document fields.",
+      "evidence": "Cross-topic collision grows 4.33-fold relative to pooled 2020–2022, versus 1.12-fold within topics. Contextual full-index BM25 leaves a 25.7-point shared-name identification deficit; E5 with titles and abstracts reduces it to 6.9 points. Within complete namesake groups, contextual BM25 reaches 70.6%, title-only language-model ranking 89.2%, and title-plus-abstract E5 93.6%. Same-topic competitors remain harder to distinguish.",
+      "discovery_use": "The paper supplies a controlled scientific-source identification evaluation for research assistants. Recovering and preserving the intended paper's identity is a concrete component of reliable literature discovery and evidence verification.",
+      "limits": "The corpus covers selected arXiv categories and a restricted title-label syntax. Topic clusters operationalize similarity rather than establish scientific method identity. Matched comparisons are observational. Queries come from target abstracts, and the strongest document-field condition indexes that same source text, limiting conclusions about natural researcher queries. Namesake ranking assumes the correct candidate group is available. The study does not measure downstream scientific discoveries or establish that LLM assistance caused naming convergence. No public first-party artifact URL was verified. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "benchmarks",
+        "rationale": "The paper supplies a controlled scientific-source identification evaluation for research assistants. Recovering and preserving the intended paper's identity is a concrete component of reliable literature discovery and evidence verification.",
+        "pdf_sha256": "c550d71d8bed3132f340cfda34217a4722edfe87df2a13ebc111fa729adc8c73",
+        "evidence_pages": [
+          1,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    "paper-243a3b052e9e1a3e": {
+      "institutions": [
+        "The Hong Kong University of Science and Technology",
+        "University of Illinois Urbana-Champaign",
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Compares both handoff directions and two history-transfer interfaces using replayed checkpoints on DeepSWE and Terminal-Bench. Trains a Qwen-3.5-2B detector on 4,000 trajectories from 2,000 SWE-rebench tasks, using retrospective annotations based on artifacts, concrete feedback, and localized remaining work. Online detection triggers one permanent handoff. Evaluates 11 model pairs against single-model execution, routing, fixed-turn, and future-informed fixed-progress baselines.",
+      "evidence": "Reports 65.9% average API-cost reduction across the main settings, but accuracy preservation varies: 12 of 22 settings improve accuracy or lose less than 5% relatively. Opus-to-Luna improves DeepSWE accuracy from 67.3% to 76.1% with 70.5% lower API cost. Against MTRouter, AgentBaton matches or improves accuracy in four tested settings while lowering recorded cost. Reasoning-effort sweeps extend the observed accuracy–cost frontier.",
+      "discovery_use": "AgentBaton contributes a learned coordination mechanism for long-horizon tool-using agents that bases model handoffs on artifacts and verification feedback. This supports resource-efficient discovery harnesses, with demonstrated tasks including scientific computing, although autonomous research outcomes remain untested.",
+      "limits": "Local-model compute is assigned zero cost, and the official project page also excludes detector costs from its demonstration; savings do not establish lower total deployment cost or faster execution. Several model pairs lose meaningful accuracy, particularly on Terminal-Bench. Annotation quality lacks reported human agreement, and labels do not establish counterfactually optimal handoffs. Evaluation uses one shell-based harness and two benchmarks, without discovery-quality measurements or reported uncertainty for the main accuracy comparisons. Some baseline values differ between the main evaluation and effort sweep. Official code is marked forthcoming; no detector checkpoint was verified. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-09",
+        "category": "systems",
+        "rationale": "AgentBaton contributes a learned coordination mechanism for long-horizon tool-using agents that bases model handoffs on artifacts and verification feedback. This supports resource-efficient discovery harnesses, with demonstrated tasks including scientific computing, although autonomous research outcomes remain untested.",
+        "pdf_sha256": "2380743be92bfb114f5500f69f39c34df88c77e370b3bca7369c00e1af83aec2",
+        "evidence_pages": [
+          1,
+          3,
+          4,
+          8
         ]
       }
     }
