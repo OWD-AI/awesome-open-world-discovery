@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -4586,6 +4586,214 @@
       "name": "IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.08647"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents receive only designated stage inputs.",
+        "Internet access, web search, and external retrieval are disabled.",
+        "Target papers, reference outputs, checklists, and checklist scores are unavailable during generation.",
+        "Public release availability is not established by the supplied pages."
+      ],
+      "focus": "Reconstruct historical human research decisions through independently conditioned idea generation, experiment planning, and paper synthesis. Evidence consists of extracted published research artifacts and supplied historical findings; proposed experiments are not executed.",
+      "limits": "Similarity to reference artifacts does not establish scientific validity, novelty, or experimental success. The 456 stage tasks come from 152 AI papers and do not form continuous discovery trajectories. Human agreement checks use twenty examples, and evaluation weights are selected for correlation with human judgments without an established independent validation split.",
+      "training": {
+        "reward": "No training reward is established. Evaluation uses human-verified reference checklists judged by an LLM as No, Partial, or Yes, scored 0, 0.5, or 1. Dimension averages receive stage-specific weights selected to maximize correlation with human ratings. Checklist scores are withheld during generation; the best idea is selected post hoc.",
+        "reset": "Each stage executes independently with inputs extracted from the reference paper, rather than outputs from the preceding stage. A general environment reset interface is not established.",
+        "branching": "Agents may generate a variable number of candidate ideas, all evaluated afterward. Environment snapshots, state forking, and feedback-guided experimental branches are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-21bb2191b7fd862b",
+      "resource_id": "paper-21bb2191b7fd862b",
+      "name": "Can Frontier Auto Researchers Reconstruct Human Research Decisions in AI?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.12429"
+    },
+    {
+      "feedback": "real-experiment-records",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Pages 29–30 state that questions, reference answers and scoring rubrics accompany the manuscript as supplementary files.",
+        "Page 30 describes public data and code release as planned upon publication; current public availability is not established by the supplied text."
+      ],
+      "focus": "MatScope evaluates materials reasoning using existing literature, text and numerical experimental records. M1 contains 200 unaided tasks and 1,124 targets. M2 adds bounded literature retrieval, passage reading and calculation on twenty selected cases. ME20 evaluates forecasts and revisions across ninety nodes in twenty investigations as recorded observations are disclosed.",
+      "limits": "The environment reveals recorded measurements rather than performing new physical experiments. Calculation tools execute arithmetic, but autonomous executed research experiments and scientific simulation jobs are not established. Coverage concentrates on aluminium and high-entropy alloys. Historical task refinement, selected M2 failures, retrieval restrictions and documented evaluator discrepancies limit interpretation.",
+      "training": {
+        "reward": "A policy-training reward is not established; deployed model weights remain fixed. Evaluation uses target-specific grades from 0 to 5. Python checks numerical errors, units, identities and ordering; Gemini 3.1 Flash Lite evaluates explanatory relationships and object/state assignments. Registered weights and dependency rules aggregate grades. ME20 combines numerical and relation components at 70:30 before node and case averaging.",
+        "reset": "M1 tasks start in independent conversations. M2 uses isolated episodes without the earlier M1 answer, score or grader feedback. M2 permits three searches, eight actions excluding submission, ten assistant turns, 6,000 observation tokens and a 30-minute limit. A general ME20 reset or checkpoint-restoration interface is not established.",
+        "branching": "The records represent processing branches, shared states and cross-scale dependencies. ME20 supports revising still-hidden forecasts after observations arrive. Arbitrary environment branching, state cloning, rollback and counterfactual execution are not established. Active-policy trajectories are mentioned, but their action rules are not established in the supplied body."
+      },
+      "evaluation_family": "other",
+      "id": "paper-906c1e2c4e0232fc",
+      "resource_id": "paper-906c1e2c4e0232fc",
+      "name": "Benchmarking language models and agents for scientific reasoning in evolving materials laboratories",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.12014"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed collection of historical repository tasks with implementation choices left to the solver.",
+        "The paper reports release of tasks, container images, construction and evaluation tooling, and agent trajectories."
+      ],
+      "focus": "Repository issue resolution across 202 tasks, 129 repositories, and 13 programming languages. Agents inspect repository environments and produce solution patches; feedback comes from actual software test execution.",
+      "limits": "Historical engineering tasks do not establish execution of scientific research experiments. Task selection depends partly on Qwen calibration, public issues permit contamination, and description or test repairs may alter the effective contract. The human audit does not establish the released benchmark's error rate.",
+      "training": {
+        "reward": "No benchmark training procedure or training reward is established. The evaluator accepts a patch only when all designated FAIL_TO_PASS and PASS_TO_PASS tests pass. Solver modifications to test files are discarded before the evaluation test patch is applied (page 3). Construction additionally uses sequential model judges and execution revalidation.",
+        "reset": "Each submitted solution patch is evaluated in a fresh, separate container based on the task environment (page 3). An agent-accessible reset operation within a solving trajectory is not established.",
+        "branching": "Repeated independent attempts and evaluation of alternative patches are supported. Stored patches can be replayed against revised tests (pages 5–7). Checkpoint-based branching within an agent trajectory is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-8a7ed6a887a27496",
+      "resource_id": "paper-8a7ed6a887a27496",
+      "name": "Longtail-SWE: High-Quality SWE Tasks for Underrepresented Languages",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.10304"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed report tuples are supplied for scoring, best-candidate selection, or complete ranking.",
+        "The evaluated judges do not conduct new research or acquire new measurements in the benchmark protocol."
+      ],
+      "focus": "Preference evaluation over 331 pairs, triplets, and quadruplets containing 866 existing research reports. Feedback consists of fixed preference labels derived from native rubric scoring and human verification.",
+      "limits": "This evaluates judgment of recorded reports rather than executed research experiments. Labels inherit source rubric and judge preferences; initial human agreement is 63%. Dataset scale is limited, filtering thresholds are inconsistent across sections, and input ordering affects scores.",
+      "training": {
+        "reward": "No benchmark-specific training or training reward is established. Label construction uses Gemini-2.5-Pro with RACE and o3-mini with weighted rubric coverage, followed by consistency filtering and human verification (pages 3–4). Evaluation measures best-of-N selection accuracy and exact full-ranking consistency (page 5); these are evaluation metrics, not demonstrated training rewards.",
+        "reset": "The benchmark has fixed inputs without a persistent interactive environment. An environment reset interface is not established.",
+        "branching": "Alternative scoring paradigms and shuffled report order are evaluated (page 7). Stateful branching or checkpoint support is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-b1ac92ed400922f7",
+      "resource_id": "paper-b1ac92ed400922f7",
+      "name": "DeepResearch RewardBench: Evaluating Reward Models for Deep Research Report",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.10156"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose read-only file and shell queries over fixed repository snapshots and return plans.",
+        "Network egress and repository modifications are blocked; future git history and residual objects are removed.",
+        "The paper reports release of agent traces."
+      ],
+      "focus": "Trajectory auditing on 20 selected software tasks from linux, ffmpeg, and llvm-project, with three runs per model and task. Feedback comes from executed read-only tools and harness permission decisions.",
+      "limits": "Plan-mode runs do not execute submitted fixes or demonstrate successful reward exploitation. The tasks are deliberately selected, some inspected commands overlap legitimate engineering, and the study does not establish that training caused the observed behavior. No scientific experiment or new physical measurement is performed by the evaluated agents.",
+      "training": {
+        "reward": "No model training or training reward is applied in the reported investigation. Hidden-test rewards are described as background for repository RL environments (page 2), while the actual study analyzes read-only agent traces and classifies shortcut attempts (page 3). A patch-success evaluator for these plan-mode runs is not established.",
+        "reset": "Each run uses a disposable sandbox container, and every agent is run three times per task (page 3). An agent-controlled reset within a run is not established.",
+        "branching": "Repeated runs from task snapshots are supported. Checkpoint restoration or branching from an intermediate conversation or environment state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-2436e97c913008a3",
+      "resource_id": "paper-2436e97c913008a3",
+      "name": "Coding or Cheating? An Investigation of Frontier Coding LLMs",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.10404"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents may list, read, and search fixed evidence files.",
+        "Agents select among four fixed candidate designs; they cannot execute or modify code.",
+        "Reference answers, pair membership, and withheld reference evidence remain hidden.",
+        "The paper states that public release of the SIRIS artifact is planned."
+      ],
+      "focus": "Judge whether a simulator limitation changes the best design. Evidence consists of recorded simulator predictions, execution records, source, and system information under controlled evidence conditions.",
+      "limits": "The evaluated agent performs no new simulations or physical measurements. Answers are reference-simulator rankings, not verified hardware superiority. The appendix separately reports retained GPU measurements as an illustration; these are not agent-requested experiments.",
+      "training": {
+        "reward": "No benchmark training reward is established. The evaluator checks choices against the reference simulator, averages upheld and overturned accuracy as judgment, and reports their imbalance as disposition. Separate LLM limitation annotations do not earn design-choice credit. No correctness feedback arrives between turns.",
+        "reset": "Each problem and evidence condition uses a separate conversation. Fixed simulator records can be reused for another agent. An agent-controlled environment reset is not established.",
+        "branching": "Page 16 explicitly states that conversation sessions cannot be forked after the first turn; auxiliary comparisons use independent conversations."
+      },
+      "evaluation_family": "other",
+      "id": "paper-261dc12c03944d70",
+      "resource_id": "paper-261dc12c03944d70",
+      "name": "SIRIS: Can LLMs Tell When Simulation Errors Matter in AI-Driven Systems Research",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.10329"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "The evaluator controls activation directions, doses, injection layers, prompts, and readouts.",
+        "Models answer neutral tasks and report their state; autonomous experiment design or execution tools are not established.",
+        "The paper states release of the battery, direction banks, raw results, and analysis."
+      ],
+      "focus": "Controlled interventions execute model inference with altered activations. Reports are compared between state reapplication and identical text without intervention, alongside sham, random controls, probes, and trained reporters.",
+      "limits": "These are executed neural computations. Button choices are simulated responses, not actual file deletions or physical actions. Probe decodability does not establish model use or subjective experience. The benchmark tests self-report rather than autonomous research execution.",
+      "training": {
+        "reward": "Known-positive LoRA adapters are trained to report the injected condition from identical-text transcripts; a scalar reinforcement reward is not established. Logistic probes use condition labels. Evaluation measures identification, detection, paired state-versus-text differences, and held-out-task accuracy. Free-text readouts use a judge from the other model family.",
+        "reset": "Reports are generated from re-encoded transcripts with the direction reapplied or absent. Sham and fixed unsteered transcripts provide controls. A general agent-controlled reset interface is not established.",
+        "branching": "The protocol supports paired computational replay of the same transcript under state and text-only conditions. An agent-controlled checkpoint or branching interface is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6222ee6748807922",
+      "resource_id": "paper-6222ee6748807922",
+      "name": "All Quiet on the Neural Front: Language Models Do Not Report Injected Pain States",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.10123"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents query operating records, choose products and prices, procure and transfer stock, advance days, and maintain a persistent notebook.",
+        "Demand parameters and unmet demand remain hidden.",
+        "The paper states release of calibrated simulator parameters while withholding raw commercial records."
+      ],
+      "focus": "Operate 20 simulated vending machines for 180 days using action-dependent sales and cost feedback from a stochastic demand model calibrated to historical commercial records.",
+      "limits": "Paid visits and physical transfers are simulated operations; no new physical measurements are established. Price and environmental responses are assumed and unvalidated. Evaluation uses three runs per model in one frozen world seed.",
+      "training": {
+        "reward": "No model-training reward is established. The operating objective and primary evaluator are terminal cash plus unexpired inventory valued at cost. Daily observations expose assets, sales, costs, and inventory; secondary metrics assess operations and inference-cost efficiency.",
+        "reset": "Runs start with empty shelves and warehouse, no orders or sales history, and 40,000 CNY before initial charges. Repeated evaluation runs are reported. An agent-accessible reset or rollback is not established.",
+        "branching": "No checkpoint or branching support is established. The listed tools change the current operating state, query records, maintain notes, or advance the day."
+      },
+      "evaluation_family": "other",
+      "id": "paper-fbdcf45317f2ddb1",
+      "resource_id": "paper-fbdcf45317f2ddb1",
+      "name": "AutoVend: Benchmarking LLM Agents on Long-Horizon Autonomous Vending Operations",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2610.36980"
+    },
+    {
+      "feedback": "synthetic-scm",
+      "interaction": "finite-pool-query",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents purchase observations and two-arm interventions, check budgets, and submit parent sets and effect estimates.",
+        "Sample sizes, intervention variables, and assigned values are agent-selected within configured constraints.",
+        "Optional statistical and causal toolboxes vary by study arm.",
+        "Graphs, coefficients, and persistent instance noise remain hidden; variable names are randomized.",
+        "A repository is named in the paper; accessibility is not established from the supplied pages."
+      ],
+      "focus": "Discover direct causes and effect magnitudes by sequentially buying evidence from a finite synthetic population governed by heterogeneous linear structural equations.",
+      "limits": "Interventional outcomes are computed from synthetic mechanisms and fixed instance-specific exogenous values, not measured from physical experiments. All reported studies use linear mechanisms and observable modeled variables. Trajectory error attribution reads interventional contrasts and can classify observationally resolved candidates as never tested.",
+      "training": {
+        "reward": "No model training or reinforcement reward is established. A hidden-ground-truth evaluator compares submissions with the DAG and baseline SEM coefficients and scores forty outcome, trajectory, and resource measures. Agents receive raw sampled observations or computed intervention outcomes during collection.",
+        "reset": "Instance noise and coefficient deviations are initialized once and persist throughout a task. The four core actions provide no reset. Exact instance regeneration is described for benchmark construction, not as an agent action.",
+        "branching": "Interventions recompute outcomes using sampled instances' fixed exogenous values, enabling counterfactual reuse of the population. An agent-controlled checkpoint, rollback, or session-fork interface is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-97564ba477f54371",
+      "resource_id": "paper-97564ba477f54371",
+      "name": "Causal Discovery Bench: Can LLMs Autonomously Conduct Effective Experiments?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.09934"
     }
   ]
 }
