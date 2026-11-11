@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -4794,6 +4794,189 @@
       "name": "Causal Discovery Bench: Can LLMs Autonomously Conduct Effective Experiments?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.09934"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "A fixed collection of 75 requests drawn from recorded researcher sessions.",
+        "Agents choose implementation steps within restored workspaces, subject to task-specific tools, resources, network access, and time limits.",
+        "Hidden rubrics accept alternative valid solutions; the actor receives the instruction and workspace.",
+        "Coverage spans Survey, Design, Data & Env., Code, Execution, Analysis, and Writing."
+      ],
+      "focus": "Continuing ongoing computational research projects while satisfying the current request, still-effective historical requirements, and constraints carried by existing artifacts. Feedback includes tool execution, dependency checks, training, validation, and generated artifacts in CPU/GPU computing environments. Recorded sessions supply task provenance; evaluated actors perform new computation, including research experiments.",
+      "limits": "No new physical measurements are described. Tasks also include activities such as survey and writing, so experimental execution is not required for every task. Replay, anonymization, dependency substitutions, task selection, model-specific harnesses, and incomplete independent human judge validation limit interpretation. Final scientific accuracy is not established merely by resumed training or checklist success.",
+      "training": {
+        "reward": "An agent-training reward is not established. Evaluation assigns hidden binary checklist verdicts using an LLM judge and item-specific evidence rules. Table 17 identifies GLM-5.3, with GLM-5.3-Flash for a small subset. ISR requires every applicable item to pass; CSR measures partial checklist completion.",
+        "reset": "Task-start restoration is supported by replaying the workspace to the selected request boundary. Each model receives three independently scored rollouts per task. Arbitrary within-run resets and exact restoration of every historical runtime component are not established.",
+        "branching": "Repeated rollouts from a restored task boundary are supported. Cloning intermediate execution states or branching counterfactual actions from an intermediate state is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-8f318eac7d0d1be6",
+      "resource_id": "paper-8f318eac7d0d1be6",
+      "name": "ARE-bench: Benchmarking Agents' Research Ability in Real-World Researcher Sessions and Workspaces",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.14364"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Public instructions, visible trajectories, and completed-task scalar outcomes are available to updates.",
+        "Future tasks, reference solutions, and hidden test contents are excluded.",
+        "Paper-specific code or artifact release is not established in the supplied pages."
+      ],
+      "focus": "Cost and accuracy of fixed-weight agent adaptation on 105 repository-chain positions and 89 terminal tasks. Feedback comes from executed software tasks and verification, rather than simulation of physical science or new physical measurements.",
+      "limits": "Two models, seven selected repository chains, one terminal ordering, and limited repeated runs constrain generalization. Token counts measure volume rather than money or comparable physical compute across models. Subsequent artifact use does not establish an accuracy benefit.",
+      "training": {
+        "reward": "The task verifier supplies a binary success outcome, recorded before feedback becomes available for updates. Backbone weights remain fixed. SRN revises a bounded note using failures; Meta-Harness requires strictly improved support accuracy; EvoSkill validates candidates and refreshes its frontier. ReasoningBank uses a separate internal trajectory judge for memory updates.",
+        "reset": "Repository tasks start from prescribed snapshots, with no transplantation of earlier patches. Learned notes, memories, skills, and harness state reset between chains. Terminal tasks have task-specific environments while learned state persists across the fixed stream.",
+        "branching": "Extra rollouts and incumbent or candidate evaluations can re-execute completed support tasks; these executions incur improvement costs and cannot replace original scores. Arbitrary state cloning or restoration within a trajectory is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ee38ce839ae13002",
+      "resource_id": "paper-ee38ce839ae13002",
+      "name": "The RSI Tax: When Recursive Self-Improvement Is Not Worth the Cost",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.13524"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "The paper states that the benchmark dataset and evaluation toolkit are released.",
+        "Models receive the textual state, query, option names, and criteria.",
+        "Reference labels, answer type, and correct-set cardinality are withheld from model inputs."
+      ],
+      "focus": "Fixed textual decision questions covering single-select, multi-select, and probability-distribution prediction. Inputs combine recorded source material, rewrites, recompositions, and constructed rule-based scenarios. Evaluation does not execute the tools or workflows described in questions.",
+      "limits": "There is no interactive evidence acquisition or environmental action. Multi-select correctness tests ranking against the gold set rather than autonomous set-size selection. Public-source exposure, uneven answer-type coverage, context truncation, option grouping, and model-specific native-response cohorts affect interpretation.",
+      "training": {
+        "reward": "Benchmark-specific training reward is not established. Evaluation uses reference labels and distributions: hard selection accuracy, Separation–Balance F-score, Soft Brier error, and normalized expected-score error. Construction labels are checked using source evidence, executable checks, model screening, and targeted human review.",
+        "reset": "Questions have fixed state–query–options inputs. Stateful episode reset or persistent cross-question adaptation is not established.",
+        "branching": "Environmental branching is not established. The evaluator may group independent options and repeat scoring rounds to accommodate option limits; this does not execute alternative actions or trajectories."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6cf461ac0299ea0d",
+      "resource_id": "paper-6cf461ac0299ea0d",
+      "name": "MMDM: Measuring Massive Multitask Decision Making",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.14309"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Models generate solutions to fixed numeric-answer mathematical problems.",
+        "Interventions vary credit assignment and prompt selection within prescribed token and GPU-time budgets."
+      ],
+      "focus": "Compare dense rewards and prompt selection against outcome-only GRPO at matched compute. The task environment supplies mathematical problems and answer-verifier feedback; it does not let agents conduct research experiments.",
+      "limits": "The main studies use numeric-answer MATH, small models, short training budgets, and restricted recipes. GPU-time comparisons depend on hardware. These are executed model-training studies over fixed problems, without scientific simulation or new physical measurements.",
+      "training": {
+        "reward": "Pages 3–4 specify binary final-answer correctness rewards for GRPO. Dense variants use sampled continuation success or learned ridge-critic values to assign segment credit. The default verifier accepts boxed answers or a last-number fallback; the strict verifier accepts only boxed answers. Evaluation measures verifier-scored pass@1 over held-out problems, with eight sampled completions per problem.",
+        "reset": "Repeated runs with paired seeds are reported. An explicit environment reset API or checkpoint-restoration procedure is not established in the supplied pages.",
+        "branching": "Page 3 explicitly samples k continuations from each of five fixed completion prefixes. This supports branching text continuations; general environment snapshot branching is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-46931cb9723850bd",
+      "resource_id": "paper-46931cb9723850bd",
+      "name": "Are Dense Rewards Worth Their Tokens in GRPO?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.13560"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Fixed ASVspoof 2019 LA and 2021 DF audio datasets supply training, calibration, and evaluation recordings.",
+        "Unlabeled adaptation receives only cached scores from constructed deployment streams."
+      ],
+      "focus": "Evaluate bona-fide-only audio normality modeling, cross-domain ranking, transferred thresholds, and unlabeled recalibration under controlled contamination.",
+      "limits": "Deployment streams are simulated by sampling frozen evaluation scores from recorded audio. They are not an interactive acoustic simulator or live physical deployment. The study covers one English benchmark family and a compound domain shift, with four-second crops and fixed frozen representations.",
+      "training": {
+        "reward": "No reinforcement-learning reward is specified. Pages 3–4 fit scalers, optional PCA, shrinkage covariance, and robust score normalization using bona fide recordings only. Calibration uses bona fide development-score quantiles. Labelled evaluation computes EER, ROC-AUC, and FPR/TPR; the supervised reference separately trains with bona fide and spoof labels.",
+        "reset": "Pages 3–4 describe deterministic fits from frozen caches and ten pre-fixed stream-sampling seeds. An interactive reset API is not established.",
+        "branching": "Alternative scorers and threshold rules are compared using fixed caches and sampled streams. Stateful environment snapshot branching is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-9b9d141934a8fe52",
+      "resource_id": "paper-9b9d141934a8fe52",
+      "name": "When Normality Shifts: Multi-Level WavLM Modeling for Open-World Audio Deepfake Detection",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.11465"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Models attempt fixed public math and code problems and generate proposed corrections.",
+        "Verified corrections determine candidate and continuation training batches under a fixed LoRA update budget."
+      ],
+      "focus": "Measure immediate and subsequent self-update utility using separate development selection and final scoring, with an unchanged-parent baseline.",
+      "limits": "Feedback combines rule-based mathematical answer checking with executed sandboxed code tests. The environment evaluates problem solutions and adaptation outcomes, rather than allowing agents to conduct research experiments. Evidence is limited to two-update horizons, small repeated training batches, and finite fixed evaluation sets.",
+      "training": {
+        "reward": "Pages 2–3 specify supervised LoRA updates on verified self-generated corrections, rather than an RL reward. Math corrections must pass answer checks; code corrections must pass execution tests in an isolated sandbox. Development utility selects candidates using the equal-weight mean of target, OOD, and retention accuracy changes from the parent. Disjoint final items independently score all checkpoints.",
+        "reset": "Page 2 explicitly restores the parent before each candidate and resets optimizer state between updates. Candidate parameter changes persist into continuations. Page 10 describes restoration and adapter-hash checks preventing inheritance between candidate branches.",
+        "branching": "Each parent produces three candidate updates, and every candidate produces three native continuation draws, including candidates rejected by immediate selection. This explicitly supports checkpoint-based branching."
+      },
+      "evaluation_family": "other",
+      "id": "paper-f2a6d42b3cc68944",
+      "resource_id": "paper-f2a6d42b3cc68944",
+      "name": "Third Eye: Beyond Immediate Gains in Recursive Self-Improvement",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.12988"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents inspect files, edit permitted code, profile implementations, run public tests, save solution versions, and request private tests.",
+        "Agents iteratively revise and resubmit within hardware, time, correctness, and task-specific submission constraints.",
+        "Several performance metrics have no fixed upper bound."
+      ],
+      "focus": "Twenty-five AI infrastructure optimization tasks spanning operators, modules, and complete training or inference systems. Feedback comes from executed CPU/GPU computations, including correctness, downstream quality, runtime, throughput, memory, and compression measurements. Experiments use 12-hour operator budgets and 24-hour module/system budgets (pages 2, 5–6, 23–28).",
+      "limits": "Private test cases and scoring code remain inaccessible; feedback diagnostics and submission frequency/counts are task-specific. Compliance checking partly relies on an LLM Controller. Main results select the most recently started run per task–model pair and use different model harnesses. Recorded datasets and the nested ALFWorld training task do not establish new physical experiments (pages 5–6, 24–25).",
+      "training": {
+        "reward": "Benchmark-level training of the evaluated language agents and an associated training reward are not established. Evaluation uses public correctness/profiling tests, GPT-6.1 Sol compliance review, and private execution checks using exact comparisons, numerical tolerances, or downstream quality thresholds. The Judge returns score, execution/validation status, and permitted diagnostics; final performance is the best valid private score within budget. Individual tasks can execute model training with task-specific objectives (pages 5–6, 23, 25–28).",
+        "reset": "Agents may restore earlier solution versions; independent fresh runs are used in best-of-two/four comparisons. A general environment reset or full execution-state snapshot API is not established (pages 5, 28).",
+        "branching": "Saving solution versions and independent multiple runs are documented. Branching from a shared full environment snapshot or cloning an in-progress agent state is not established (pages 5, 28)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-a46d73fdabb21524",
+      "resource_id": "paper-a46d73fdabb21524",
+      "name": "Infrathon: Benchmarking Language Agents for Real-World, Long-Horizon AI Infra Optimization",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.11995"
+    },
+    {
+      "feedback": "scientific-datasets-and-hidden-verifiers",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose data, preprocessing, analysis methods, code and image rendering within a fixed archive and fixed questions.",
+        "Python, shell, geospatial and classical machine-learning libraries, and an image viewer are available offline.",
+        "Each run permits 3,600 seconds and 300 messages in a container with 4 CPUs and 24 GB of memory.",
+        "Page 9 announces a future release of EarthRecord and its evaluation sandbox; release availability is not established by the supplied text."
+      ],
+      "focus": "Scientific analysis of recorded satellite observations across 56 sites and 238 questions. Tools execute computations over fixed data. Closed-book, altered-satellite and placebo controls test reliance on prior knowledge and measurement artifacts. No simulator or new physical measurements are involved.",
+      "limits": "Evaluation checks final conclusions rather than establishing a valid scientific process. References combine computed results, global products and human-reviewed visual interpretations. Coverage is limited to selected sites, CPU tools and deliberately detectable instrument alterations.",
+      "training": {
+        "reward": "A training reward is not established. The evaluator scores the designated conclusion against references, including withheld products. Numeric answers must fall within reference ranges. pass3 is one only when all three independent passes are correct. Online access to evaluator scores during a run is not established.",
+        "reset": "Each run starts in a fresh offline container; every question receives three passes. Agent-requested resets within a run are not established.",
+        "branching": "The protocol provides separate original, closed-book, altered-satellite and placebo runs. Agent-controlled snapshot restoration or branching from an intermediate execution state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-70b6e0e37bdecc39",
+      "resource_id": "paper-70b6e0e37bdecc39",
+      "name": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.12934"
     }
   ]
 }
