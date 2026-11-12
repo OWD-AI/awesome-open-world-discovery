@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -4977,6 +4977,141 @@
       "name": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.12934"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Caption-specific rubrics are fixed before viewing videos and reused across generators.",
+        "The annotator chooses temporal windows and optional spatial crops for inspecting fixed videos.",
+        "The paper lists a code repository and describes an open-source judge and labeled training set."
+      ],
+      "focus": "Diagnostic evaluation of generated videos across mechanics, optics, heat, electricity, and acoustics. Feedback consists of rubric-item verdicts supported by timestamped frames. Fixed rules convert verdicts into semantic-adherence and physical-commonsense scores; benchmark verdicts receive human verification. The annotator uses overview and zoom tools, while the trained judge receives a caption and sampled frames.",
+      "limits": "The videos are model-generated synthetic data, not scientific-simulator trajectories or new physical measurements. Agents inspect existing clips without intervening in their depicted events. Physical scores exclude unassessable videos; joint performance also requires semantic adherence. Acoustics concerns visible consequences only. Automated training labels and sampled-frame judging can miss brief violations.",
+      "training": {
+        "reward": "PhyRubric-Train supplies automatically annotated rubric verdicts, derived scores, and evidence-based diagnoses for judge training. The body explores SFT and GRPO objectives, but the GRPO reward formula is not established in the supplied pages. Benchmark evaluation uses human-verified labels; judge agreement is measured with Pearson correlation and ROC-AUC.",
+        "reset": "Each annotation video starts in a fresh context. The underlying video remains fixed; resetting a simulated physical world is not applicable.",
+        "branching": "The annotator may request additional temporal or spatial inspections. Checkpoint restoration and branching into alternative event trajectories are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-b09a9883e4f7eccb",
+      "resource_id": "paper-b09a9883e4f7eccb",
+      "name": "PhyRubric: Rubric-Grounded Diagnostic Evaluation of Physical Commonsense in Text-to-Video Generation",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.13576"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents act through screenshots and a constrained keyboard–mouse interface.",
+        "Training instances vary numeric parameters and categorical choices within fixed scene and task templates.",
+        "Resolved configurations and generation seeds are saved for reuse.",
+        "The paper lists code and dataset locations."
+      ],
+      "focus": "Game perception, navigation, control, and recovery across 103 interactive 3D tasks and 47 image-based aiming tasks. The reconstructed Babylon.js environment returns screenshots after actions and checks online outcomes with engine-state predicates. Image-based tasks use source gameplay imagery with annotated target-hit checks. Native GTA V transfer executes gameplay and uses human review of recordings.",
+      "limits": "The environment is a game simulation, not a scientific simulator or physical experiment. Reconstructed geometry adapts commercial-game objectives. Image-based tasks operate on recorded game imagery. Default inference-time pausing changes timing demands. Generation stays within fixed templates, and benchmark scoring gives binary success without partial credit.",
+      "training": {
+        "reward": "Generated environments provide task-outcome rewards and termination signals. In the reported on-foot GRPO experiment, terminal reward is success plus 0.3 times clipped fractional traversable-distance progress for unsuccessful rollouts, minus 0.1 when interaction rounds exceed 100. Host-side A* distance estimates supply training signals and are hidden from observations. Benchmark evaluation uses binary engine-state or target-hit success.",
+        "reset": "Tasks have specified initial states; saved configurations and seeds support repeated initialization. Success or failure terminates episodes, and budget exhaustion truncates them. An agent-facing mid-episode reset or checkpoint-restoration operation is not established.",
+        "branching": "Parallel evaluation and multiple training rollouts per task are supported; each GRPO update samples eight rollouts for each of four tasks. Forking or rewinding an arbitrary intermediate simulator state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-05e0692506e6950c",
+      "resource_id": "paper-05e0692506e6950c",
+      "name": "GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.13028"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 lists a project page and code repository; release availability was not independently checked.",
+        "Scenarios specify tasks, personas, and scheduled events; simulated user actions respond to assistant guidance."
+      ],
+      "focus": "Closed-loop visual assistance in executable cooking, household, and mobile-interface simulations. The assistant observes frames and conversation and supplies guidance or silence; a persona-conditioned simulated user executes semantic actions. Scene graphs supply task progress and goal verification.",
+      "limits": "Pages 4–7 describe simulated state transitions, engine-verified success, error detection, and world-state-grounded LLM judging. These are everyday-task simulations, not executed scientific research experiments. Page 12 explicitly states that human participants used a browser simulator and did not perform physical cooking. Events are scripted, simulated users converse more frequently than people, and human validation covers CookSim. Later appendix implementation details are not established by the supplied pages.",
+      "training": {
+        "reward": "Page 11 reports GRPO on CookSim with reward I[success] + 0.30 I[error prevented] − 0.02 min(Nfalse flags, 15) − 0.05 min(T/200, 1), where T counts interaction turns. Pages 5–6 evaluate engine-verified goals within a completion budget, error flags verified by the engine or simulated user, and interaction quality from two LLM judges using engine state and factual-grounding gating.",
+        "reset": "Repeated episode execution is established: three independent rollouts per benchmark scenario and four episodes per selected training scenario. An explicit reset API, arbitrary state restoration, and exact replay guarantees are not established.",
+        "branching": "Assistant-dependent changes to user behavior and subsequent world state are established on pages 2 and 4. Checkpoint cloning, arbitrary state forks, and branching from a saved intermediate state are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ee6cdd0f138c0c90",
+      "resource_id": "paper-ee6cdd0f138c0c90",
+      "name": "Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.08286"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 states that code and data are available; availability was not independently checked.",
+        "Models receive shared principles, timestamped dialogue, and cached product evidence; case-specific rubrics remain hidden."
+      ],
+      "focus": "Evaluation of the current shopping-advice reply using 169 fixed commercial cases, 1,603 cached product records, and 1,328 case-specific criteria. Models may compare products, prioritize purchases, and preserve conditional alternatives.",
+      "limits": "Pages 5–6 establish fixed supplied evidence and generation without browsing or rubric access. Evaluation excludes upstream elicitation and purchase outcomes. Historical commercial records and successfully completed orders inform cases and principles; they do not provide new physical measurements or feedback from product use. One expert reviews judgments, and stratified cases do not represent shopping traffic.",
+      "training": {
+        "reward": "Model training and a training reward are not established. Page 6 describes DeepSeek-V4-Pro assigning pass, fail, unresolved, or not-applicable labels with quotations and reasons, followed by blinded expert review. Core, Excellence, and Safety are reported separately using pass rate P/(P+F) and resolved coverage (P+F)/(P+F+U).",
+        "reset": "Three full-suite evaluations on fixed cases are reported. Reusing the supplied case inputs is supported; a stateful environment reset API is not established.",
+        "branching": "The evaluated action is a reply to fixed dialogue and evidence. Conditional advice is allowed, but interactive user continuations, counterfactual state forks, and a branching API are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-3161d120c26a870c",
+      "resource_id": "paper-3161d120c26a870c",
+      "name": "CARTBench: Rubric-Based Evaluation of Shopping Advice for Complex and Ambiguous Requests with Timelines",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.05862"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 states that the generator, items, scoring code, and responses are released; availability was not independently checked.",
+        "Generation depth, query type, seeds, wording, response budget, and scoring protocol are configurable."
+      ],
+      "focus": "Synthetic cumulative-state questions with program-computed reference answers. Each item supplies initial values and a visible sequence of updates in one user message. The model returns an answer under a specified output protocol rather than controlling an interactive world or running research experiments.",
+      "limits": "Program execution constructs reference answers; models are not given a computation tool. Full histories remain visible, so answers cannot distinguish state maintenance from recomputation. Depths use regenerated instances. Historical BFCL scores are recorded external comparison data, not newly executed BFCL evaluations. Instructions, output limits, truncation, and parsers affect scores.",
+      "training": {
+        "reward": "Training and a training reward are not established. Pages 3–4 describe deterministic comparison with computed references: core responses require exactly one extracted integer equal to the reference; written steps use the last integer; multi-target answers require exactly the requested ordered integers. Assignment and set/count tasks report two parsers in parallel.",
+        "reset": "Identical items are reused across response protocols, and seeded generation is specified on page 11. These support repeated fixed-input evaluation. A stateful reset API and model-state restoration are not established.",
+        "branching": "Same-item wording and protocol comparisons are supported. Depth items are separate generated instances, not longer prefixes of one trajectory. Interactive action branching and checkpoint forks are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-a52fd92f63f3bd7a",
+      "resource_id": "paper-a52fd92f63f3bd7a",
+      "name": "WMIP: A Working-Memory-Inspired Programmable Probe of Cumulative State Tracking in Large Language Models",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2603.27343"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 lists a project repository.",
+        "Page 10 says model replies will be released upon publication, subject to material-license restrictions; current availability is not established."
+      ],
+      "focus": "Prepared text adaptations of 13 cognitive paradigms, scored by task rules and compared with recorded human behavioral references from published studies. Models supply task answers, confidence reports, and wagers in fixed task sequences with visible materials or history.",
+      "limits": "The human references are existing records or published summaries. Page 10 states that no humans were tested on the adapted text versions. Model inference was executed, but the evaluated models do not conduct research experiments or collect physical measurements. Timing and motor demands are removed; wagering has no real sweets. Each model supplies one temperature-zero response per step, and adaptation differences confound human–model comparisons.",
+      "training": {
+        "reward": "Training and a training reward are not established. Pages 3–5 describe task-specific scorers: invalid task answers count as wrong, unparsed false-belief replies count as wrong, and confidence/wager analyses require valid reports. Measures include accuracy, hit and false-alarm rates, d′, recall, and type-2 AUROC, with source-specific human comparisons. Wagers are reports rather than delivered rewards.",
+        "reset": "Fixed task materials, presentation variants, and selected reruns are established. Page 4 states that missing replies, hard errors, and context overflow end a chain without regeneration. An explicit reset API and arbitrary chain restoration are not established.",
+        "branching": "Fixed presentation orders, answer-order variants, warnings, and wager-label mappings are evaluated. Response-dependent experimental branching and checkpoint forks are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-dd8d9a55daee6fc1",
+      "resource_id": "paper-dd8d9a55daee6fc1",
+      "name": "CogBattery: Human-Referenced Evaluation of Cognitive Task Behavior and Structure in Language Models",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2607.24999"
     }
   ]
 }
