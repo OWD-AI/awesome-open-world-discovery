@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -5112,6 +5112,96 @@
       "name": "CogBattery: Human-Referenced Evaluation of Cognitive Task Behavior and Structure in Language Models",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2607.24999"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 3 promises a repository link after peer review; availability of a first-party environment release is not established by the supplied pages."
+      ],
+      "focus": "Search-agent robustness under controlled trustworthiness, relevance and factuality. Each search query receives one dynamically LLM-generated document with sampled reliability labels. Factual documents use existing HotpotQA or BrowseComp-Plus supporting evidence. Agents can adapt queries through a single search tool, with up to 100 calls per question. This is synthetic search simulation grounded in recorded evidence, without new physical measurements or agent execution of research experiments.",
+      "limits": "One document per call and one search tool simplify retrieval. Experiments vary one reliability dimension at a time. Human agreement with intended factuality is 85.5%. Generated documents may differ from real web evidence. RAS credits both abstention and budget exhaustion and can give an always-abstaining system maximum credit when reliability is zero.",
+      "training": {
+        "reward": "No agent training is performed in this study. Evaluation assigns budget exhaustion and missing-answer-tag outcomes directly; GPT-4.1 judges remaining answers as correct, incorrect or abstaining (page 4). RAS awards 1 for correctness, 0 for incorrect or malformed answers, and 1 minus realized evidence reliability for abstention or budget exhaustion; reliability is the product of realized trustworthiness, relevance and factuality rates. CoPRAS divides aggregate token-and-search cost by aggregate RAS. Reliability-aware training is proposed as future work (page 8).",
+        "reset": "Separate question and scenario runs are reported. An explicit reset API, restoration of intermediate state and reproducible reset controls are not established.",
+        "branching": "Agents may follow different search trajectories and are compared under controlled scenarios. Checkpoint branching, cloning, rollback and replay support are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-5bc234506dfa3e3a",
+      "resource_id": "paper-5bc234506dfa3e3a",
+      "name": "DeepStress: Stress-Testing Deep Search Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2607.13920"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "The actor chooses continuous end-effector targets through a fixed motion-planning harness.",
+        "The final configuration permits code execution for coordinate solving while the simulator waits; web search remains disabled.",
+        "The paper states that the evaluation set, code and episode replays are available from the project page."
+      ],
+      "focus": "Controlled robot-use evaluation on 111 fixed simulated episodes spanning 42 RoboDojo tasks. The simulator executes planned motions and returns RGB views, measured robot state and target-error feedback. Variants add simulated sensor readings, predicted or simulator depth, demonstrations and coordinate-solving computation. This evaluates manipulation rather than executed scientific research experiments.",
+      "limits": "All experiments use simulation, one model and one run per configuration. Comparisons follow a sequential design path. Controlled comparisons allow 100 decisions, with a 500-control-step episode limit; the final configuration removes the decision cap. Simulator depth is a reference condition. Code access and decision-cap removal change together. Video-reviewed behavior counts are lower bounds.",
+      "training": {
+        "reward": "No policy-weight training is performed. The controlling actor receives no online scoring signal. The simulator supplies terminal success and scores from 0 to 100, sometimes with intermediate-stage credit. A separate experience-reuse experiment revises a skill library using practice scores, logs and videos over five rounds. Behavior review supplements scoring but does not determine success.",
+        "reset": "Each episode uses a fresh session with no history carried over in the main configuration. Configurations run the same fixed seeded layouts, supporting repeated episode initialization. Arbitrary mid-episode reset and snapshot restoration are not established.",
+        "branching": "Matched configurations are rerun from the same initial layouts. Branching or cloning an intermediate simulator state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-385066b49e67ce5b",
+      "resource_id": "paper-385066b49e67ce5b",
+      "name": "JustRUA: A Controlled Study of GPT-6 Robot-Use Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.16009"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "The frozen actor writes and executes Python cells through fixed perception and motion primitives.",
+        "The learner can revise task-local skills and memory within structural and size constraints.",
+        "A project page is listed; public availability of the rewritten criteria is not established, and released criteria code is identified as future work."
+      ],
+      "focus": "Tests whether embodied self-improvement learns transferable manipulation knowledge or adapts to exposed verification criteria. RoboDojo, LIBERO-PRO and RoboCasa365 provide simulated episodes. The actor executes robot-control code and observes its results; a separate learner updates a library. These are manipulation trials rather than scientific research experiments.",
+      "limits": "No new physical measurements are performed. The study uses one actor–learner pairing, two exposure levels and small task samples. Rewritten criteria are author-defined proxies and apply only to RoboDojo. Simulator success feedback is cleaner than human or VLM feedback. Transfer uses distilled libraries with verifier-specific content removed, and distillation variance is not estimated.",
+      "training": {
+        "reward": "Actor weights, primitives, perception and benchmark scoring remain frozen. Library improvement uses five rounds of rollout feedback: success only without exposure, or success plus criteria code, scores and stages with exposure. The actor never reads the criteria. A complete batch with at least two fewer successes than the best earlier batch triggers library rollback. Evaluation freezes the library and uses unseen layouts; selected RoboDojo episodes receive both original and instruction-faithful judgments.",
+        "reset": "Development repeatedly initializes layouts 0–4 of seed 1; evaluation uses layouts 0–19 of seed 0. This establishes repeatable episode initialization. Arbitrary mid-episode reset or simulator-snapshot restoration is not established.",
+        "branching": "Candidate libraries can be tested in verification rollouts, and library revisions can be rolled back. Branching or cloning an intermediate simulator state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-b4b4884622ed33f2",
+      "resource_id": "paper-b4b4884622ed33f2",
+      "name": "Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.08318"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Public source measurements are available through Figshare and Zenodo under CC BY 4.0.",
+        "Task definitions, per-response results, training-log summaries, and code regenerating result tables and figures are available in the stated repository.",
+        "Rendering and model-calling code, raw model outputs, and adapter weights are available from the authors on request."
+      ],
+      "focus": "Multiple-choice interpretation of recorded optical spectra, testing consistency across equivalent tables and plots, question direction and wording, evidence order, and recognition of missing evidence. Models receive fixed evidence and options and return choices, with probabilities for applicable interfaces. The environment uses existing physical measurements, not a simulator or new physical experiments; model inference and LoRA training are executed computations.",
+      "limits": "Two optical datasets, filtered clear extrema, and fixed question templates limit coverage. Gold main and scope sets share spectra, and repeated recipes may make uncertainty intervals optimistic. Some adaptation training and development structures overlap. Adaptation uses one backbone with a frozen vision tower and three seeds per arm. Hardware and training updates differ across some comparisons; service checkpoint equivalence is unverified. Comparisons are exploratory. Autonomous experiment selection, tool-driven research, and new measurement acquisition are not established.",
+      "training": {
+        "reward": "Page 8 specifies supervised LoRA training that minimizes cross-entropy over the candidate readout; an online interaction reward is not established. Page 5 evaluates choices against canonical answer keys using accuracy, paired representation differences, agreement, scope discrimination, outside-cut accuracy change, and high-confidence errors. Page 9 selects checkpoints in selected-epoch arms by development accuracy, with loss breaking ties and early stopping after two epochs without improvement.",
+        "reset": "Fixed requests and same-day reruns are reported. An environment reset API, persistent episode state, or state-restoration mechanism is not established.",
+        "branching": "The study constructs paired representations, question variants, and evidence deletions from the same recorded spectra. Agent-controlled trajectory branching, checkpoint restoration, or counterfactual execution support is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-f5ec4fb0fb3e7ac3",
+      "resource_id": "paper-f5ec4fb0fb3e7ac3",
+      "name": "Do Multimodal Models Decide Consistently on Equivalent Optical Spectra?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.00428"
     }
   ]
 }
