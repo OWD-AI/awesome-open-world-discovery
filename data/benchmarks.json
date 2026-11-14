@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -5202,6 +5202,54 @@
       "name": "Do Multimodal Models Decide Consistently on Equivalent Optical Spectra?",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.00428"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 supplies dataset and code release addresses.",
+        "Page 29 describes evaluation cases, responses and replay code as prepared for release.",
+        "Page 33 states a cc-by-nc-sa-4.0 repository license and source attribution in documents.parquet.",
+        "Release availability was not independently checked."
+      ],
+      "focus": "NarrativeBench evaluates narrative inclusion, exclusion, recovery of omitted perspectives, diversity, robustness to confirmatory queries and language parity using fixed multilingual news contexts. Each case supplies articles, a query and instructions; models answer in the query language and cite document IDs. Missing-narrative cases supply the same prior answer to every model. No interactive retrieval, scientific experiment execution or physical measurement is part of the evaluated protocol.",
+      "limits": "Narratives are grouped by source perspective and publication language. Citation coverage does not establish factual truth or faithful interpretation. Evaluation uses fixed queries and supplied evidence; evolving investigations and effects on human information seeking remain untested.",
+      "training": {
+        "reward": "No implemented training reward is established. The evaluator maps cited document IDs to required narrative sets and computes precision, recall and F1. Narrative inclusion and exclusion use F1; missing-narrative recovery and coverage use recall. Responses in a different language from the query receive zero. Additional diagnostics measure framing gaps, language disparities and source-language omissions.",
+        "reset": "Cases reuse fixed document contexts across tasks and query languages. Stateful environment reset support is not established.",
+        "branching": "Matched prompt and language variants are evaluated with fixed evidence. Environment checkpointing or branching from an intermediate interaction state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ca49f61cf29357d0",
+      "resource_id": "paper-ca49f61cf29357d0",
+      "name": "The Narrative Gap: Can LLMs Help Us Navigate Diverse Narratives Across Languages?",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.12750"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 17 describes public dataset access, table and figure code, and instructions for rerunning mesh generation, PyFR simulation and post-processing.",
+        "Pages 28–29 describe released trajectory splits, standardized reduced subsets and a debug subset.",
+        "Per-case velocity spectra and their computation script are described as released.",
+        "Release availability was not independently checked."
+      ],
+      "focus": "TURTLES evaluates neural PDE surrogates on stored outputs from executed PyFR implicit large-eddy simulations. The dataset contains 400 turbulent wake trajectories with 400 snapshots each, split into 320 training, 40 validation and 40 test trajectories. Models predict field residuals and perform 399-step autoregressive forecasts from a supplied initial frame and Reynolds number. The benchmark provides offline simulation data rather than an interactive simulator or an agent-directed research experiment loop.",
+      "limits": "References are numerical iLES approximations. Validation uses existing DNS and experimental literature, with no new physical measurements reported. The released split tests interpolation within the sampled distribution. Temporal subsampling discards information, short trajectories limit converged statistics, and spectral agreement alone does not establish correct temporal evolution.",
+      "training": {
+        "reward": "No reinforcement-learning reward is established. Training minimizes mean squared error on next-frame residuals under a shared 100,000-step protocol. Evaluation measures relative L2 error, variance-scaled RMSE, spectral log-power discrepancies and full-trajectory GPU cost, including long-horizon rollout windows.",
+        "reset": "Every reported test rollout starts from the first ground-truth frame. Arbitrary simulator-state reset or checkpoint restoration is not established as a benchmark interface.",
+        "branching": "No benchmark support for intervention branches or simulator-state forks is established. Models forecast fixed held-out trajectories; rerunning the data-generation pipeline is described separately."
+      },
+      "evaluation_family": "other",
+      "id": "paper-221842f00fa29475",
+      "resource_id": "paper-221842f00fa29475",
+      "name": "TurtLES: A Large-Scale Benchmark for Turbulent 3D Neural PDE Surrogates",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.09567"
     }
   ]
 }

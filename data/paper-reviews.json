@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -34317,6 +34317,232 @@
           4,
           10,
           11
+        ]
+      }
+    },
+    "paper-c758335f4f7f1c39": {
+      "institutions": [
+        "IQuest Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        14
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Development agents inspect failed reasoning and tool trajectories on training and separate development-validation tasks. They construct focused problems, demonstrations, and executable environments, validating material against sources and task-specific checks. Training combines supervised fine-tuning, independently trained specialists, multi-teacher on-policy distillation on student-generated trajectories, and agentic reinforcement learning. Shared infrastructure preserves execution state and records the actual context and tokens across context compaction. Evaluation covers 13 settings against the base model, comparable 35B models, and larger open-weight models.",
+      "evidence": "The authors report improvements over the base model on all 13 settings and leadership among compared 35B models on 12. LitQA-search improves from 48.00 to 85.33, SciCode from 39.90 to 50.35, and E2E-Bench Hard from 56.06 to 77.27. SAIL leads the full comparison on ArxivDIGESTables at 35.24. Its twelve-score unweighted aggregate is 59.76, behind DeepSeek-V4-Flash-0731 at 60.08 and GLM-5.2 at 63.60. These are author-reported benchmark results, without independent reproduction.",
+      "discovery_use": "The primary contribution is post-training a scientific agent through failure diagnosis, targeted task construction, specialist distillation, and environment feedback. It directly addresses learning to retrieve evidence, check scientific assumptions, and revise investigations.",
+      "limits": "The report provides no component ablations or cycle-by-cycle measurements establishing the separate effects of diagnosis, specialists, distillation, and RL. Training quantities, optimization settings, and compute budgets are insufficiently specified for reproducing the recipe. No uncertainty estimates support small ranking differences. Models use their recommended inference configurations; SciCode retains the higher of internal and available external measurements, limiting controlled comparisons. Larger models retain advantages on repository execution and longer workflows. Resource coverage, diagnosis quality, and feedback quality constrain the loop, and successful execution cannot establish scientific validity. Benchmark gains do not independently demonstrate novel scientific discoveries. The author-listed model and dataset destinations returned authorization errors, so release availability could not be verified and no artifact links are retained.",
+      "classification_review": {
+        "date": "2026-11-14",
+        "category": "learning",
+        "rationale": "The primary contribution is post-training a scientific agent through failure diagnosis, targeted task construction, specialist distillation, and environment feedback. It directly addresses learning to retrieve evidence, check scientific assumptions, and revise investigations.",
+        "pdf_sha256": "0c81f7e70ae158a1395cc81ed5698e7efb8609abf6606b0720cebffe31e671e0",
+        "evidence_pages": [
+          1,
+          5,
+          14
+        ]
+      }
+    },
+    "paper-f02c3614db7dd665": {
+      "institutions": [
+        "Huawei Noah’s Ark Lab",
+        "University of Liverpool",
+        "University College London"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        7,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The router reads a backbone hidden state and eight answer-distribution statistics, predicts four joint correctness outcomes, and computes a log ratio of slow-mode to fast-mode success probabilities. Labelled questions supervise both-mode outcomes. CDPO uses a clipped per-decision policy surrogate with discounted terminal returns for episodic tasks. Evaluation covers held-out subjects, transferred question types, two backbone sizes, and ALFWorld and MiniWoB agents.",
+      "evidence": "On AGIEval, HDM-27B reduces thinking tokens by 37% while lowering accuracy from 0.925 to 0.910. MiniWoB tokens fall by 80.1% and wall-clock time by 67.4%, while reward falls from 0.519 to 0.469. ALFWorld reward is 0.560 versus 0.642 for always thinking, with 52% fewer tokens. At one JevBench accuracy target, HDM uses 103 tokens against 112 for the reproduced RouteLLM baseline; the ranking depends on the target.",
+      "discovery_use": "The paper trains an agent's decision to deliberate based on whether additional reasoning is expected to improve correctness, including learning from terminal episode feedback. This provides a concrete metareasoning mechanism for allocating verification effort in discovery agents, although autonomous discovery itself is not evaluated.",
+      "limits": "Charging a mean price per escalation misprices variable-length reasoning. CDPO uses biased per-decision importance weighting, assigns the same terminal credit across decisions, and redraws prices without recollecting trajectories. Agentic evidence is limited: ALFWorld has one evaluation run, while MiniWoB pools three routed seeds but single-run endpoints. Slow reasoning is frequently truncated at 4096 tokens. Candidate-code priors affect readouts, and direct routing comparisons use a different content readout. External latency comparisons use different backends. No scientific investigation or open-ended discovery is tested. All 20 extracted pages were supplied, but only pages 1 and 5 were visually inspected. The author repository was verified; checkpoint-host availability could not be verified.",
+      "classification_review": {
+        "date": "2026-11-14",
+        "category": "learning",
+        "rationale": "The paper trains an agent's decision to deliberate based on whether additional reasoning is expected to improve correctness, including learning from terminal episode feedback. This provides a concrete metareasoning mechanism for allocating verification effort in discovery agents, although autonomous discovery itself is not evaluated.",
+        "pdf_sha256": "936847cd436fa6e20fec305f9d52e6ae71be57981095d7644ca4eab0d32a3f7e",
+        "evidence_pages": [
+          1,
+          3,
+          7,
+          13
+        ]
+      }
+    },
+    "paper-eb7d817012e6cca4": {
+      "institutions": [
+        "Carnegie Mellon University",
+        "Bosch Center for Artificial Intelligence",
+        "The University of Texas at Arlington",
+        "University of California, Berkeley",
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        8,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "MXT+ connects modality-specific tokenizers and action experts through a shared Transformer. An auxiliary dreaming branch predicts future visual and proprioceptive latents using EMA targets. Mixed-embodiment pretraining excludes the target task–embodiment demonstrations, which are subsequently used for fine-tuning. Evaluation covers 13 task–embodiment pairs, with ACT, pretrained π0.5, and scratch-trained MXT+ as baselines.",
+      "evidence": "Pretraining increases mean normalized task progress from 0.63 to 0.80 and OOD progress from 0.53 to 0.77. Removing the dreaming components reduces progress from 0.78 to 0.63 across seven settings. Broader data mixtures improve transfer, while modality-level modularity avoids severe negative transfer seen with coarse interfaces.",
+      "discovery_use": "Heterogeneous pretraining and future-state representation learning provide concrete mechanisms for transferring embodied knowledge to unfamiliar robot configurations. This supports discovery training through reusable dynamics representations, although autonomous exploration is not evaluated.",
+      "limits": "OOD configurations can occur in other embodiments’ pretraining data, so these results establish cross-embodiment transfer rather than novelty relative to all training data. Dreaming ablations remove several components, not only the prediction loss. Data are team-collected, simulation coverage is narrow, and new embodiments require manual correspondence and control integration. This is a targeted review of supplied sections, not an exhaustive appendix review.",
+      "classification_review": {
+        "date": "2026-11-14",
+        "category": "learning",
+        "rationale": "Heterogeneous pretraining and future-state representation learning provide concrete mechanisms for transferring embodied knowledge to unfamiliar robot configurations. This supports discovery training through reusable dynamics representations, although autonomous exploration is not evaluated.",
+        "pdf_sha256": "b64ede6e4be0de58db83d9c2e2499bef4741ba93461802ba4990d3b5ba31429f",
+        "evidence_pages": [
+          1,
+          7,
+          8,
+          13
+        ]
+      }
+    },
+    "paper-31b24889af668b0a": {
+      "institutions": [
+        "Roblox",
+        "University of California, Merced",
+        "University of Pennsylvania",
+        "University of Texas at Austin"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The pretrained diffusion Transformer is retained, while pixel patch embeddings and a causal convolutional rendering head replace the VAE interfaces. Training uses clean-video prediction, calibrated noise schedules, and temporal and perceptual losses. Experiments compare video quality, matched depth-conditioned editing, and distilled camera-controlled generation against latent baselines.",
+      "evidence": "The 480p model scores 84.78 on VBench versus 84.05 for Wan2.1. On fast editing clips, PixVid retains 98% of source motion versus 83% for the fine-tuned latent baseline, although FVD is worse. Camera-controlled generation reduces median control-to-screen latency from 495 to 34 milliseconds, with throughput falling from 72.0 to 29.4 fps. Camera-pose errors increase over longer rollouts.",
+      "discovery_use": "The paper directly improves action-conditioned interactive world models by making controls affect individual generated frames. This is relevant infrastructure for responsive simulated interaction, although improved scientific discovery or agent planning is not demonstrated.",
+      "limits": "Most text-to-video evaluation concerns 1.3-second clips, and VBench resizing does not measure the extra high-resolution detail. Removing temporal compression increases low-resolution compute substantially. Timing uses one B200 and a custom optimized inference stack. Interactive evaluation concerns camera controls, not general physical interventions, causal identification, or agent discovery performance. Only supplied sections and two rendered pages were reviewed.",
+      "classification_review": {
+        "date": "2026-11-14",
+        "category": "causality",
+        "rationale": "The paper directly improves action-conditioned interactive world models by making controls affect individual generated frames. This is relevant infrastructure for responsive simulated interaction, although improved scientific discovery or agent planning is not demonstrated.",
+        "pdf_sha256": "17c2673939815ff4a64178a2fcd4431a3a772cee7239a6095448985604471074",
+        "evidence_pages": [
+          1,
+          3,
+          6,
+          8
+        ]
+      }
+    },
+    "paper-ca49f61cf29357d0": {
+      "institutions": [
+        "Johns Hopkins University",
+        "Cohere",
+        "George Mason University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The corpus contains 1,333 articles grouped into 180 narratives across 23 topics and 23 publication languages. Fourteen models in fifteen configurations answer 4,800 fixed-context cases across 24 query languages. Scoring uses cited-document narrative precision, recall, and F1, with response-language validation and separate diagnostics for framing gaps and source-language omissions.",
+      "evidence": "Mean narrative-inclusion F1 is 19.9%, exclusion F1 is 49.3%, and missing-narrative recall is 56.8%. Explicit diversity requests increase average coverage from 44.3% to 49.2%; the strongest configuration reaches 74.9%. Query-language and target-language performance gaps from English average 8.74 and 7.51 percentage points. Broader coverage can coexist with endorsement of a question’s premise.",
+      "discovery_use": "NarrativeBench directly evaluates identifying missing information and recovering competing perspectives from multilingual evidence. These are concrete discovery-evaluation capabilities for research assistants, and the paper explicitly connects them to finding overlooked scientific literature.",
+      "limits": "Narratives are operationalized through source perspective and language, which compresses within-group disagreement. Citation coverage does not establish faithful interpretation, source reliability, or factual truth. Translation and citation audits cover subsets, supplied contexts bypass retrieval, and most tasks use fixed queries rather than evolving investigations. Scientific-literature transfer and effects on human information seeking remain untested. Only supplied sections and representative rendered pages were reviewed.",
+      "classification_review": {
+        "date": "2026-11-14",
+        "category": "benchmarks",
+        "rationale": "NarrativeBench directly evaluates identifying missing information and recovering competing perspectives from multilingual evidence. These are concrete discovery-evaluation capabilities for research assistants, and the paper explicitly connects them to finding overlooked scientific literature.",
+        "pdf_sha256": "3760ef4facb7d1464b260a898348497bdaf8063bf0f517b27bb84bb7d15aeb35",
+        "evidence_pages": [
+          1,
+          5,
+          9,
+          10
+        ]
+      }
+    },
+    "paper-0334fef1173355ab": {
+      "institutions": [
+        "AWS Agentic AI",
+        "University of Southern California"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A splitter separates reusable evidence from protected personal context. Isolated writers create situation-conditioned lessons with scope and provenance; protected entries can enter only their owner's USER or PAIR memory. Optional review re-scopes and merges entries. Retrieval ranks authorized entries by situation similarity. Experiments compare no memory, single-scope stores, and four-scope variants using seven agent configurations, established task verifiers, synthetic preferences, planted private facts, held-out tasks, and scope ablations.",
+      "evidence": "Scheduled experiments report a 16.3 percentage-point gain over no memory with LLM writing and review, versus 11.5 for GLOBAL-only, and approximately 90% preference retention. Under random assignment, gains on first-attempt tasks are 10.1 points versus 5.5 for GLOBAL-only; round-eight preference retention is 76%. Removing GLOBAL most reduces utility, while removing USER most reduces preference retention. AGENT and PAIR add little in aggregate ablations but help targeted conflict probes. Very low planted-private-fact leakage coexists with higher preference leakage, so these privacy measures should remain distinct.",
+      "discovery_use": "MixUA contributes an agent memory system that retains lessons from verifier-graded attempts and transfers them across users and heterogeneous agents. Its concrete discovery connection is cumulative learning: useful findings become reusable experience with controlled audiences and provenance.",
+      "limits": "Users and facts are synthetic; audiences cannot express teams or intermediate groups. Scaling uses one seed per population size, and MixUA does not establish a utility advantage over GLOBAL-only at 100 users. Scheduled repetitions and shared round-one trajectories limit independence. Comparisons use scope-controlled implementations rather than complete competing memory systems. Whole-store review and memory writing are expensive; reported cost columns omit splitter and privacy-judge costs. Consent, deletion, malicious contributions, and deployment privacy are not evaluated. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-14",
+        "category": "systems",
+        "rationale": "MixUA contributes an agent memory system that retains lessons from verifier-graded attempts and transfers them across users and heterogeneous agents. Its concrete discovery connection is cumulative learning: useful findings become reusable experience with controlled audiences and provenance.",
+        "pdf_sha256": "fcd185a9e5e059b87318336e23b71cd99261afd146599a9368e55ebc6aa12599",
+        "evidence_pages": [
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    "paper-221842f00fa29475": {
+      "institutions": [
+        "Sorbonne Université, CNRS, ISIR, Paris, France",
+        "Delft University of Technology, Faculty of Aerospace Engineering, Delft, The Netherlands",
+        "Sorbonne Université, CNRS, Institut Jean Le Rond d’Alembert, Paris, France",
+        "Criteo AI Lab, Paris, France"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        28
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An automated Sobol-sampled pipeline varies super-ellipse geometry, Reynolds number, and angle of attack, using PyFR implicit large-eddy simulations validated against selected literature cases. The paper describes 14 TB of data with 400 frames per trajectory and a 320/40/40 trajectory split. Four neural operators learn next-frame residuals under a shared training protocol and generate 399-step autoregressive rollouts. Evaluation combines field errors, variance-scaled errors, spanwise spectral discrepancies, and full-mesh GPU cost, with persistence and mean-field reference baselines.",
+      "evidence": "CALM-PDE has the lowest reported next-frame field errors and final-window rollout VRMSE of 0.789, compared with 5.12 for UPT, 33.12 for GINO, and 31.24 for Transolver++. Surrogate speedups range approximately from 3 to 16 times the solver in GPU-seconds. Persistence can preserve a plausible time-averaged spectrum while predicting no evolution, demonstrating why spectral agreement requires complementary temporal evaluation. These are results under the stated implementation and training constraints, rather than general architecture rankings.",
+      "discovery_use": "TurtLES provides Discovery Evaluation for an unresolved scientific modeling problem: learning stable, physically faithful three-dimensional turbulent dynamics. Its contribution includes diagnostics that test learned physical representations beyond aggregate prediction error, giving a concrete connection to verifying scientific modeling capabilities.",
+      "limits": "The released split tests in-distribution interpolation, not extrapolation to new shape families or parameter regimes. References are implicit-LES approximations rather than experimental or DNS ground truth for every case. Temporal subsampling loses information, and trajectories are too short for converged Reynolds-stress statistics. GINO did not converge within the shared budget; Transolver++ loses cross-tile context and originated in steady-state prediction. Appendix descriptions disagree on CALM-PDE compilation settings. The repository also reports different dataset size and node ranges from the manuscript. Only the two supplied pages were visually inspected; result plots were assessed through extracted text.",
+      "classification_review": {
+        "date": "2026-11-14",
+        "category": "benchmarks",
+        "rationale": "TurtLES provides Discovery Evaluation for an unresolved scientific modeling problem: learning stable, physically faithful three-dimensional turbulent dynamics. Its contribution includes diagnostics that test learned physical representations beyond aggregate prediction error, giving a concrete connection to verifying scientific modeling capabilities.",
+        "pdf_sha256": "ca0d254a8a3c2da31d60f5e1370b31940c90227fb4647480e96e171171aff7f7",
+        "evidence_pages": [
+          1,
+          7,
+          28
         ]
       }
     }
