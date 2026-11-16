@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-16",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -5250,6 +5250,164 @@
       "name": "TurtLES: A Large-Scale Benchmark for Turbulent 3D Neural PDE Surrogates",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.09567"
+    },
+    {
+      "feedback": "real-experiment-records",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents select among 19 fixed experimental types and generate free-text experimental designs, rationales, expected evidence, and conditional interpretations.",
+        "Harnesses retain native tools, including shell utilities, Python execution, and expert consultation; these do not execute the proposed geological experiments.",
+        "The paper supplies data and code addresses; release availability is not independently established here."
+      ],
+      "focus": "Retrospective experimental planning from 277 literature-derived cases and 1,572 recorded reference plans. Agents receive hypotheses, initial context, and available conditions with newly obtained findings excluded. Feedback comes from reference-label and reference-plan comparison, without simulated experimental outcomes or new physical measurements.",
+      "limits": "Reference experiments are neither exhaustive alternatives nor necessarily required experiments. Coverage evaluates correspondence to recorded plans rather than overall correctness, novelty, or parsimony. Prospective laboratory validation is not established. Tool execution mainly supports planning and formatting rather than executed research experiments.",
+      "training": {
+        "reward": "Training reward is not established. Evaluation uses micro-precision, micro-recall, micro-F1, macro-F1, exact-set accuracy, and related selection metrics. An anonymized gpt-6-luna judge assigns reference-plan coverage scores of 0, 0.5, or 1, aggregated into strict, partial, and weighted coverage.",
+        "reset": "Independent fixed cases are evaluated. An environment reset or checkpoint interface is not established. ChemToolAgent permits up to two format-repair retries.",
+        "branching": "Alternative plans can be proposed, but experimental outcome branching, state cloning, and checkpoint-based branching are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-13b1576ff71d9ec3",
+      "resource_id": "paper-13b1576ff71d9ec3",
+      "name": "MineralExp: Benchmarking LLM Agents for Experimental Design in Real-World Mineral Exploration",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.17931"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "The financial agent can search the web and EDGAR, parse pages, retrieve stored filings, calculate, inspect price history, and submit answers.",
+        "The optimization loop can change the system prompt, tool descriptions, enabled tools, agent model, nested retrieval model, or nested retrieval instructions.",
+        "Configuration selection uses 18 development questions; final evaluation uses nine frozen test questions."
+      ],
+      "focus": "Executed financial information gathering and calculation over existing filings and market information, followed by diagnosis and configuration interventions. Tools return retrieved records and computed results; final answers receive rubric scores. This evaluates financial research workflows rather than execution of scientific experiments.",
+      "limits": "One agent, nine test questions, a single scoring model, and no control arm isolating diagnosis. Retrieved real data do not constitute new physical measurements. Identical data snapshots across repeated runs are not established. Accuracy comparisons reuse earlier baseline replicas, and one development baseline used a different search backend.",
+      "training": {
+        "reward": "No model-weight training reward is established. Gemini 3.8 Flash scores final answers against verbatim criteria with three votes per criterion and 0.5% numeric tolerance. Configuration optimization promotes cost changes with at least 5% savings while pass rate remains within 10 points of the session baseline, or accuracy changes with at least one percentage-point improvement and no more than 50% cost growth. Held-out evaluation uses paired bootstrap intervals over questions.",
+        "reset": "Repeated baseline and candidate runs are supported. Exact environment, retrieval-cache, or external-data resets are not established. Sessions stop after five rounds or two consecutive rejections.",
+        "branching": "Each candidate configuration is compared with its parent and promoted or rejected, permitting configuration alternatives. Cloning an intermediate agent trajectory or branching from a saved tool state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-13cd08575d0b4428",
+      "resource_id": "paper-13cd08575d0b4428",
+      "name": "Can You Trust Your Finance Agent? Drift, Diagnosis and Auditable Intervention on One Shipped Financial Research Agent",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.17939"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents interact with 20 functioning self-hosted web applications containing controlled seeded records and prerecorded media.",
+        "Browser actions cover navigation, forms, clicks, and other interface operations; media tools expose transcripts, frames, or native audio/video inputs.",
+        "Coding agents also have native shell, file, and subagent tools. Browser navigation is restricted to task websites; arbitrary browser JavaScript and built-in web search are disabled."
+      ],
+      "focus": "Interactive execution of ordinary web workflows across 300 test tasks. Feedback consists of browser observations, executed application state changes, media observations, and rubric verification. The environments reproduce service workflows using seeded data; they are not scientific simulators or physical measurement systems.",
+      "limits": "The shared 50-action budget does not equalize compute. Models, harnesses, and tool configurations vary together. Judge agreement is approximately 90% at rubric level. Audio and video are prerecorded, and live temporal interaction is not established. Scientific research experimentation is not the evaluated task.",
+      "training": {
+        "reward": "The verifier combines deterministic backend or answer checks, heuristic trajectory checks, and a final Qwen 3.6 27B judge. Rubric dependencies form a DAG; full success requires every rubric to pass, giving final reward 1. Partial reward is the fraction of rubric nodes passed after dependency propagation. Reinforcement learning or rejection sampling with this reward is proposed as future work; an actual training run is not established.",
+        "reset": "Supported: each episode starts a fresh website container at its seeded baseline, performs login, and navigates to the start URL. Per-task isolation supports reproducible parallel runs.",
+        "branching": "Independent parallel rollouts from reset baselines are supported. Mid-trajectory checkpointing, state cloning, and branching from an intermediate browser or application state are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-348b89b674130393",
+      "resource_id": "paper-348b89b674130393",
+      "name": "WebArena-Pro: A Heterogeneous, Multimodal, Reproducible Benchmark for Web Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.17955"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 states that study code is publicly available.",
+        "Page 11 identifies public proceedings and OpenReview as sources of papers and recorded human reviews."
+      ],
+      "focus": "Models review fixed anonymized manuscripts. A second pass attributes weaknesses to sections; any appendix support makes a weakness appendix-related (pages 3–4). The evidence consists of existing papers, recorded human reviews and generated model reviews, without a physical experimental backend.",
+      "limits": "The main protocol disables web search and browsing (page 4). Access-method comparisons include PDF API input, extracted text, coding-agent PDF reading and web upload (page 6). Human and model comparisons use different papers and years. Attribution accuracy is not quantified, and criticism correctness, usefulness and score effects are not measured (page 11). This evaluates document analysis, not executed research experiments.",
+      "training": {
+        "reward": "No training reward or policy optimization is established. The evaluator measures criticism locations using model-generated section attribution, with up to two sections per weakness, followed by aggregate appendix shares (page 4). Category assignment uses GPT-6.1-Sol (page 9); manual sample review is reported without quantified accuracy (page 11).",
+        "reset": "One PDF at a time and memory disabled are specified for the web comparison (page 6). A general reset or state-restoration interface is not established.",
+        "branching": "Comparisons across models and access methods are reported. Checkpoint branching, counterfactual state forks and adaptive experiment selection are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-4df1a4fca4ab1c5e",
+      "resource_id": "paper-4df1a4fca4ab1c5e",
+      "name": "AI Reviews Are Biased Towards the Appendix",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.17811"
+    },
+    {
+      "feedback": "synthetic-scm",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 2 states that the generator, configurations with seeds and a sample of the data are released.",
+        "Pages 5 and 23 describe released candidate roles, causal graphs and separation labels.",
+        "Page 9 states that data are released at full resolution."
+      ],
+      "focus": "Methods receive generated observational trajectories and return a candidate ranking and a possibly empty selected list of direct causes (pages 2 and 5). A two-level structural causal model supplies known causal roles. These are simulated causal mechanisms, not industrial physics or new plant measurements (page 12).",
+      "limits": "The evaluated methods analyze fixed generated tables at a common resolution and look-back (pages 9 and 36). Interventions audit generator correctness rather than provide an established interactive intervention interface for evaluated methods (pages 8 and 21–23). Public industrial datasets contextualize difficulty and are not used to evaluate method accuracy (page 34). Ten plants per configuration, one motif family, Gaussian noise and temporal aggregation limit conclusions. This is causal inference from supplied data, rather than an agent executing research experiments.",
+      "training": {
+        "reward": "No agent training reward is established. Ground-truth direct causes score first-pick accuracy, precision, lift, list length, abstention, R-precision, mean average precision, mean reciprocal rank and nDCG@3 (page 9). Generating training data is proposed as a use, without an evaluated training protocol (page 12).",
+        "reset": "Separate structure and data seeds permit rebuilding a plant or generating different batches with the same structure (page 20). The audit rebuilds and replays seeded plants and requires the replayed target to equal the released target (page 21). An online episode-reset interface is not established.",
+        "branching": "The audit applies interventions one at a time while holding exogenous noise fixed (pages 21–23), establishing controlled counterfactual replay for auditing. Such branching is not established as an allowed action for the evaluated discovery methods."
+      },
+      "evaluation_family": "other",
+      "id": "paper-9b4dbd6fab25201a",
+      "resource_id": "paper-9b4dbd6fab25201a",
+      "name": "A Synthetic Benchmark for Target-Centric Causal Discovery in Industrial Processes",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.17556"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 7 states that tasks, media, hidden ground-truth facts and scorer are frozen with checksums and describes reproducibility from the release.",
+        "The evaluation protocol denies agents network, external assets and scorer access (page 8)."
+      ],
+      "focus": "Agents write and execute Blender programs from fixed scripts, photos, opening frames or recorded videos. They render previews, inspect frames and revise within four hours using Blender 5.2, eight CPU cores and no GPU (page 8). Feedback during solving comes from executed code and rendered virtual scenes. Recorded footage and scans supply task evidence; benchmark execution does not collect new physical measurements.",
+      "limits": "Delivered code is independently replayed and scored against hidden facts. Rule checks inspect exported scene states, while a VLM judges readability of rule-passing items (pages 5–6). Task selection depends on discrimination among the evaluated agents, each main task-agent pairing runs once, and physical-validity checks weakly detect floating people (pages 7–8 and 20). Executed graphics reconstruction is evaluated, rather than executed research experiments.",
+      "training": {
+        "reward": "No agent training reward or optimization protocol is established. Evaluation combines a deterministic Rule-based Scene Check across applicable dimensions with a Gemini 4 Screen Check for recognition, action, visibility and story; overall score is their arithmetic mean (page 6). Failed delivery gates score zero (page 5). The hidden scorer is unavailable during solving (page 8).",
+        "reset": "Each valid delivery is rerun from scratch in a fresh sandbox for evaluation (page 5). Agents can repeatedly run Blender while solving (page 8). A solver checkpoint-restoration interface is not established.",
+        "branching": "Code revision, repeated rendering and inspection are allowed (page 8). Snapshot-based branching or parallel counterfactual scene-state forks are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-66f97a9f5131d1df",
+      "resource_id": "paper-66f97a9f5131d1df",
+      "name": "VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.15789"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Public dataset with linked data tables, nonempty log archives, schema, and access instructions.",
+        "Preserved workflow YAML, API responses, archive checksums, and an example analysis script."
+      ],
+      "focus": "Offline analysis of recorded GitHub workflow executions, including tool responses, access denials, provider failures, recovery attempts, and within-run coordination. The corpus records previously executed computation; it supplies no interactive simulator or new physical measurements.",
+      "limits": "Retention, access restrictions, indexing, and retrieval limit coverage. Logs are partial observations and may omit full prompts and agent activity. Indexed workflow revisions can differ from executed revisions. Run failure conclusions do not establish agent-caused failure or task completion. A validated discovery benchmark and standardized task evaluator are not established.",
+      "training": {
+        "reward": "Training reward is not established. Recorded run conclusions and tool responses are observational evidence, not a defined training reward or benchmark evaluator.",
+        "reset": "Reset support is not established. Archived rerun attempts preserve execution history but do not supply an executable reset mechanism.",
+        "branching": "Branching support is not established. The corpus supplies recorded attempts without an interface for branching execution from saved states."
+      },
+      "evaluation_family": "other",
+      "id": "paper-672dec36a01e5e2d",
+      "resource_id": "paper-672dec36a01e5e2d",
+      "name": "GH-AWTrace: A Large-Scale Dataset of GitHub Agentic Workflow Execution Logs",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.06866"
     }
   ]
 }
