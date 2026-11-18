@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**248 usage profiles** · Updated **2026-11-17**
+**254 usage profiles** · Updated **2026-11-18**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -1741,6 +1741,10 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 | [SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations](#paper-e596c0297394d7f0) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [Interpreting Coding Agents Through Their Behavioral Trajectories](#paper-9d5520dadf9c4d75) | Real data | Data analysis | Paper-described |
 | [MemInStream: Memorizing or Merely Recognizing? Rethinking Streaming Video Memory Evaluation](#paper-173b51674c0cf288) | Real data | Offline data | Paper-described |
+| [How Web Research Agents Interpret User Priorities](#paper-172bca7fd237c4d8) | Real data | Offline data | Paper-described |
+| [More Agents, More Samples, or More Thinking? Untangling Coordination, Ensembling, and Test-Time Compute in Multi-Agent LLMs](#paper-b715b2affb8796e9) | Real data | Data analysis | Paper-described |
+| [When Expert Disagreement Hurts: Prestige and Selectivity in LLM Decision Revision](#paper-0556eb8bafc5c758) | Real data | Data analysis | Paper-described |
+| [Termination Lag: Coding Agents Solve Early but Stop Late](#paper-9e5328de36564d89) | Executed programs + evaluators | Analysis + code | Paper-described |
 
 <a id="discoverybench-real"></a>
 
@@ -4433,6 +4437,98 @@ Agents analyze fixed real or synthetic datasets. Code and tool execution do not 
 
 </details>
 
+<a id="paper-172bca7fd237c4d8"></a>
+
+<details>
+<summary>How Web Research Agents Interpret User Priorities — details</summary>
+
+[Work](../README.md#paper-172bca7fd237c4d8) · [Source](https://arxiv.org/pdf/2611.22989)
+
+**Focus:** Offline auditing of 36 recorded company-comparison research runs, including reports, queries, returned sources, and citations. The underlying agents receive real web search results and page contents during collection. The study examines how priorities affect stated criteria and evidence gathering; it does not evaluate agents conducting scientific computational experiments.
+
+**Openness:** `During collection, agents search the open web rather than a fixed document pool.`, `The OpenAI agent can search, open pages, and search within pages. The Anthropic agent can search and fetch pages, although fetch is never used.`, `Prompts leave assessment criteria, sources, and company preference open; runs receive no further user input.`, `Prompts, run records, and collection code are reported as available.`
+
+**New physical measurements:** No
+
+**Limits:** Pages 4–5 describe human labeling and statistical comparisons of recorded runs. Page 8 states that financial claims were not verified, source representativeness cannot be established from the open-web records, and traces cannot establish internal reasoning. One task, two differently configured agents, one collection day, and six repetitions per condition limit generalization. No simulator or physical measurement backend is described.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or policy-training procedure is not established. Human coders label reports and search queries; evaluation uses report counts, Jaccard overlap, permutation tests, and joint Holm correction across 46 tests. These labels and tests are not reported as feedback delivered to the agents. |
+| Reset | Each condition is submitted six times per agent as separate API runs. Reproducible restoration of the web, provider state, or tool results is not established. |
+| Branching | No explicit trajectory branching, environment snapshots, or counterfactual replay facility is established. Repeated runs are independent observations rather than documented branches from a shared state. |
+
+</details>
+
+<a id="paper-b715b2affb8796e9"></a>
+
+<details>
+<summary>More Agents, More Samples, or More Thinking? Untangling Coordination, Ensembling, and Test-Time Compute in Multi-Agent LLMs — details</summary>
+
+[Work](../README.md#paper-b715b2affb8796e9) · [Source](https://arxiv.org/pdf/2611.17610)
+
+**Focus:** Resource accounting and analysis of recorded multi-agent versus single-agent results from nine studies. Comparisons distinguish greedy, sample-matched, resource-matched, and Pareto-frontier baselines.
+
+**Openness:** `The paper provides a repository address for its checklist, evaluation utilities, reproduction code, and tabular extractions; availability was not independently checked.`, `A synthetic hidden-profile task generator is described as released with the code.`
+
+**New physical measurements:** No
+
+**Limits:** The empirical evidence consists of extracted published results, rather than newly executed agent research experiments. Primary studies contain different tasks and tool environments; a unified interactive environment is not established. Corpus selection is not systematic, baselines are shared, and statistical dependence is partly assumed.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward is not established. Evaluators use paired accuracy differences, log odds, resource measurements, and accuracy versus cost frontiers. Objective scoring is an inclusion criterion for source studies. |
+| Reset | Environment reset support is not established. Reanalysis of fixed extracted tables is described. |
+| Branching | Interactive checkpoint branching is not established. Alternative baseline pairings and statistical sensitivity analyses operate on recorded results. |
+
+</details>
+
+<a id="paper-0556eb8bafc5c758"></a>
+
+<details>
+<summary>When Expert Disagreement Hurts: Prestige and Selectivity in LLM Decision Revision — details</summary>
+
+[Work](../README.md#paper-0556eb8bafc5c758) · [Source](https://arxiv.org/pdf/2611.16694)
+
+**Focus:** Binary decision revision over fixed question-evidence pairs from PubMedQA, SciFact, and ContractNLI. Models produce an initial answer and reconsider it under controlled neutral, anonymous-disagreement, or expert-labeled contexts.
+
+**Openness:** `The paper gives a code repository address; availability was not independently checked.`, `The accompanying artifact is described as containing trial outputs, control records, prompts, and offline analysis code.`
+
+**New physical measurements:** No
+
+**Limits:** Task evidence remains fixed. Opposing answers and rationales are controlled textual stimuli, rather than observations from an interactive simulator or new physical measurements. The protocol does not establish open-ended investigation, tool use, or acquisition of new evidence. Main prompts contain unequal filler, and some control protocols differ from the main audit.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or model-update procedure is not established. Evaluation compares answers with dataset ground truth and measures accuracy changes, conditional correct-to-wrong and wrong-to-correct revisions, selectivity, and paired source-label effects. Ground-truth feedback returned to the model during revision is not established. |
+| Reset | The same question, evidence, and stored initial answer are reused across revision conditions. A general environment reset interface is not established. |
+| Branching | The audit explicitly branches one shared initial answer into three controlled second-pass contexts. This is prompt-level branching; arbitrary execution-state branching is not established. |
+
+</details>
+
+<a id="paper-9e5328de36564d89"></a>
+
+<details>
+<summary>Termination Lag: Coding Agents Solve Early but Stop Late — details</summary>
+
+[Work](../README.md#paper-9e5328de36564d89) · [Source](https://arxiv.org/pdf/2611.14960)
+
+**Focus:** Repository repair and stopping behavior on SWE-bench tasks. Agents inspect files, edit source, execute commands and their own tests, and submit patches. Distinct recorded patches are subsequently evaluated using official benchmark tests.
+
+**Openness:** `The supplied pages describe patch recording, isolated retrospective evaluation, and official benchmark tests.`, `A public release of this paper's code or recorded trajectories is not established by the supplied numbered text.`
+
+**New physical measurements:** No
+
+**Limits:** Online feedback comes from executed development tools. Hidden official tests supply retrospective correctness labels and are never returned to the agent. This is software repair over fixed repositories, not an environment for scientific research experiments or new physical measurements. Each task is run once, steps approximate compute cost, and oracle stopping savings do not establish a deployable stopping policy.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or model-update procedure is not established. Official tests evaluate intermediate patches offline. Metrics are time to first correct patch, termination lag, normalized lag, and subsequent correctness regressions. Agents can obtain feedback from commands and tests they execute, but cannot observe the retrospective correctness oracle. |
+| Reset | Recorded patches are evaluated in isolated containers relative to each task's base commit. An agent-accessible reset or restart mechanism is not established. |
+| Branching | The method records intermediate patches and evaluates distinct patches retrospectively. Resuming or branching agent execution from those states is not established; the early-stop oracle is a retrospective reference. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="computational"></a>
@@ -4492,6 +4588,7 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 | [ARE-bench: Benchmarking Agents' Research Ability in Real-World Researcher Sessions and Workspaces](#paper-8f318eac7d0d1be6) | Executed programs + evaluators | Analysis + tools | Paper-described |
 | [Infrathon: Benchmarking Language Agents for Real-World, Long-Horizon AI Infra Optimization](#paper-a46d73fdabb21524) | Executed programs + evaluators | Computational experiments | Paper-described |
 | [Accelerate Bench: Evaluating Agents for Application-Level Program Optimization](#paper-39ab9d52d5376003) | Executed programs + evaluators | Computational experiments | Paper-described |
+| [AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs](#paper-db119966b06bc107) | Executed programs + evaluators | Computational experiments | Paper-described |
 
 <a id="profile-mle-bench"></a>
 
@@ -5620,6 +5717,29 @@ Agents run, train, modify or replicate computational experiments. Feedback comes
 
 </details>
 
+<a id="paper-db119966b06bc107"></a>
+
+<details>
+<summary>AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs — details</summary>
+
+[Work](../README.md#paper-db119966b06bc107) · [Source](https://arxiv.org/pdf/2611.17621)
+
+**Focus:** Iterative kernel optimization experiments on Ascend NPUs. Agents inspect supplied artifacts, modify permitted kernel source files, submit candidates, and use compilation logs, numerical checks, profiling, and measured latency to guide subsequent proposals.
+
+**Openness:** `The paper gives a public repository address for AscendGYM; availability was not independently checked.`, `Tasks provide runnable baseline code, specifications, input configurations, tests, and CPU reference outputs.`, `The shared evaluation prompt and default harness configuration are documented.`
+
+**New physical measurements:** No
+
+**Limits:** Feedback comes from actual compilation and computation on Ascend 910C hardware. Device timing is a computational performance measurement, not a new physical-world experiment. Results cover 17 of 48 tasks. Model–harness runs allow at most 80 candidate evaluations, including failures, without hard token or wall-clock limits; token-budget scores are analyzed afterward. Five final timing evaluations provide no further search feedback and are not independent optimization runs.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A model-training reward or parameter-update procedure is not established. The execution evaluator checks compilation and numerical correctness before profiling. STS scores correctness-validated speedup and penalizes improvements obtained later in the token budget. Other metrics include geometric mean speedup, threshold attainment, token cost, and pass rates. The default harness accumulates strategy lessons and code experience when enabled. |
+| Reset | Each task supplies an initial implementation. Warm runs explicitly restart from that implementation without inheriting optimized code or search checkpoints. Each build has a session-specific workspace. General arbitrary environment reset support is not established. |
+| Branching | Passing versions are backed up, and agents may build on the best validated implementation or revert while budget remains. The default harness describes search-graph exploration and proposals from multiple parent implementations, which agent-search disables. Arbitrary process-state branching is not established. |
+
+</details>
+
 [↑ Contents](#contents)
 
 <a id="recorded"></a>
@@ -5639,6 +5759,7 @@ Queries or analyses use measurements already collected. This does not create new
 | [BEND 2.0: Benchmarking the Capabilities Needed to Design DNA](#paper-331c88a499e2d06f) | Recorded experiments | Offline data | Paper-described |
 | [Benchmarking language models and agents for scientific reasoning in evolving materials laboratories](#paper-906c1e2c4e0232fc) | Recorded experiments | Analysis + tools | Paper-described |
 | [MineralExp: Benchmarking LLM Agents for Experimental Design in Real-World Mineral Exploration](#paper-13b1576ff71d9ec3) | Recorded experiments | Offline data | Paper-described |
+| [SciWorkBench: A Benchmark for Real Scientific Workflows](#paper-bdaa72677ab8b193) | Recorded experiments | Analysis + code | Paper-described |
 
 <a id="genedisco"></a>
 
@@ -5844,6 +5965,29 @@ Queries or analyses use measurements already collected. This does not create new
 | Reward / evaluator | Training reward is not established. Evaluation uses micro-precision, micro-recall, micro-F1, macro-F1, exact-set accuracy, and related selection metrics. An anonymized gpt-6-luna judge assigns reference-plan coverage scores of 0, 0.5, or 1, aggregated into strict, partial, and weighted coverage. |
 | Reset | Independent fixed cases are evaluated. An environment reset or checkpoint interface is not established. ChemToolAgent permits up to two format-repair retries. |
 | Branching | Alternative plans can be proposed, but experimental outcome branching, state cloning, and checkpoint-based branching are not established. |
+
+</details>
+
+<a id="paper-bdaa72677ab8b193"></a>
+
+<details>
+<summary>SciWorkBench: A Benchmark for Real Scientific Workflows — details</summary>
+
+[Work](../README.md#paper-bdaa72677ab8b193) · [Source](https://arxiv.org/pdf/2611.22490)
+
+**Focus:** Scientific workflow judgment across 98 biology, chemistry, materials science, and physics tasks. Agents inspect supplied experimental records, execute analyses, and perform computational research experiments such as simulation, convergence testing, modeling, and prediction. Intermediate feedback comes from computations and inspected artifacts; final evaluation applies scientific rubrics. Recorded physical measurements are inputs, not new measurements collected by the agents.
+
+**Openness:** `Agents choose analysis methods, computational steps, intermediate checks, and scientific conclusions rather than following a prescribed analysis path.`, `Execution is offline in preconfigured Docker environments; reference solutions are hidden.`, `The complete benchmark, environments, trajectories, execution code, and scoring implementation are not publicly released. An example task and rubric are documented.`
+
+**New physical measurements:** No
+
+**Limits:** Pages 5–8 establish supplied-data tasks and offline Docker execution. Page 22 includes an executed simulation task with parameter sweeps. Page 11 reports limited repetition and incomplete grader validation. The benchmark does not establish live laboratory access or new physical experimentation.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | A training reward or policy-training protocol is not established. Page 8 describes a separate, anonymized Codex evaluator using GPT-5.6 Sol and expert-authored rubrics to score submitted workflows and outputs. Testing and judging environments are separate; online access to grading feedback is not established. |
+| Reset | Tasks execute in preconfigured Docker environments. An explicit reset API, restart policy, or snapshot-restoration mechanism is not established. |
+| Branching | Agents may choose analysis paths and revise their work. Explicit environment cloning, snapshot branching, or counterfactual replay support is not established. |
 
 </details>
 
