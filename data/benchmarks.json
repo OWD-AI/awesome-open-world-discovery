@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -5748,6 +5748,169 @@
       "name": "Termination Lag: Coding Agents Solve Early but Stop Late",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.14960"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "The full suite and multi-laboratory campaigns are available to research and industry partners under licence.",
+        "Hosted evaluation provides the core tier's final instances; access tokens are issued on request.",
+        "A frozen sample contains 48 development instances.",
+        "The final-instance generation key is withheld."
+      ],
+      "focus": "Budgeted experimental reasoning over procedurally generated hidden systems. Feedback combines synthetic rules, computed readings and physics and chemistry simulators. Agents choose experiments, optionally analyse readings with sandboxed Python, and commit conclusions. Campaigns require several irrevocable commits on one persistent system. The suite does not collect new physical measurements; auxiliary evaluations on public laboratory records analyse existing data.",
+      "limits": "The families idealise science, and only implemented shortcuts are calibrated. Some families primarily test evidence analysis rather than adaptive experiment selection. Frontier construction used Flash screens on final instances, and reported performance depends on token budgets. Separate laboratory training worlds and real-data workflow evaluations are outside the calibrated suite.",
+      "training": {
+        "reward": "A deterministic verifier returns reward 1 or 0 for a committed answer using exact matching, semantic equivalence, published tolerances or simulated design performance. Campaign reward is 1 only when every stage and final commit is correct. Every observation publishes the scoring rule. On-policy expert iteration uses verified episodes; group-relative online reinforcement learning is also studied on laboratory worlds outside the suite. Additional reward shaping is not established by the supplied pages.",
+        "reset": "Instances are pure functions of family, split, level, index and key, enabling episode replay. Training, development and final instances use separate keys. An agent-accessible reset or undo action within an episode is not established.",
+        "branching": "An agent-accessible snapshot or branch interface is not established. Commits are irrevocable; campaign stages retain one hidden system and share an experiment budget. Replaying an identical instance across episodes is supported."
+      },
+      "evaluation_family": "other",
+      "id": "paper-66b145f6e3bd0ff2",
+      "resource_id": "paper-66b145f6e3bd0ff2",
+      "name": "Openhagen Worlds: Calibrated Environments for Measuring and Training Scientific Discovery Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.24711"
+    },
+    {
+      "feedback": "scientific-datasets-and-hidden-verifiers",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Task contracts, graders, baseline and expert submissions, staged data and the evaluation harness are released in archives.",
+        "Some bulk datasets require fetching and preprocessing through supplied loaders, manifests and checksums.",
+        "Public data include simulated datasets and existing physical-science and clinical records; ABIDE uses a public data-use agreement.",
+        "Ground truth, graders and anchor submissions remain outside the agent sandbox."
+      ],
+      "focus": "Executed computational research on twelve fixed-data tasks in high-energy physics, astrophysics and neuroscience. Agents inspect public data, implement and run methods, train models or execute numerical simulations, and submit artifacts scored on withheld targets. Data include simulations and previously recorded observations. The synthetic neural-mass digital-twin task predicts simulated interventions; no new physical measurements are performed.",
+      "limits": "Tasks have known feasible solutions and cover the computational analysis stage of discovery. Publication runs use the basic scaffold; the released references-enabled variant is unevaluated. Each episode has one hour, one million model tokens and 200 messages. Scores are host-side community metrics with task-specific penalties and physical-validity gates; blinded expert agreement is not established. Three retained runs per model and task do not establish stable rankings.",
+      "training": {
+        "reward": "Training models on this benchmark as a learning environment is not established. Evaluation uses deterministic host-side task scores in [0,1], withheld data and an independent submission-validity verdict. During an episode, agents receive code execution results and structural validation feedback, which never reveals the numeric score, anchors or hidden targets.",
+        "reset": "Runs use offline per-domain containers with public data mounted read-only and a writable solution directory; three retained runs are evaluated per model and task. An agent-accessible reset or state-restoration interface is not established.",
+        "branching": "Agents may revise implementations and run local computational experiments within the episode budget. A harness-supported snapshot, fork or checkpoint branching interface is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-56f1c246a2d28a6f",
+      "resource_id": "paper-56f1c246a2d28a6f",
+      "name": "Benchmarking LLM abilities on postdoc-level natural science problems",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.24321"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "The paper states that code, data, a leaderboard, and command magnitudes are publicly available.",
+        "The main evaluation runs fifteen open models with released inference configurations and model-specific adapters.",
+        "Start views and action routes are prescribed; unrestricted exploration is not established."
+      ],
+      "focus": "Evaluate scene rigidity and predictable camera-action effects in learned video worlds. Executed model inference generates observations in response to commands. References use 104 UE5-rendered start views and 36 existing ETH3D views with recorded laser-scan depth. Controlled renderings validate the measurements. These are generated worlds, rendered simulations, and recorded physical data; no new physical measurements are reported.",
+      "limits": "The protocol permits forward, backward, lateral translations, and yaw turns through native key, camera-pose, or text interfaces; pitch is tested separately. Held actions last 16 steps, and prescribed composed routes last 8–14 steps. Scenes are static and main control scores use planar motion. Start-view surfaces must remain visible, excluding long exploration and revisits. Deformation can bias recovered cameras. Command magnitudes and durations differ across models.",
+      "training": {
+        "reward": "A benchmark training reward is not established. The evaluator recovers cameras using pose anchors, tests rigidity using disjoint held-out anchors, and scores pace and composition against strides calibrated from the first four steps. Incomplete routes receive zero composition credit. Ten blinded human raters validate scores. The paper also fine-tunes LoRA adapters on 112 rendered clips with exact camera paths; its training loss is not established in the supplied pages.",
+        "reset": "Repeated generation from prescribed start views is established: held-action tests use three seeds, and routes use one seed with additional regeneration analyses. Arbitrary intermediate-state reset or checkpoint restoration is not established.",
+        "branching": "Alternative paired routes from the same start view and seed are established. The pairs reorder translations or insert detours. Branching from a saved intermediate model state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-55511e32efaddfb6",
+      "resource_id": "paper-55511e32efaddfb6",
+      "name": "StrideWorld: Benchmarking Scene Rigidity and Action Consistency in Interactive Video World Model",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.24408"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Evolution can change prompts, skills, memory banks, and agent harness code while model weights remain frozen.",
+        "Training and validation splits guide evolution; held-out test tasks measure resulting artifacts.",
+        "Reproducible materials and trajectory data are promised upon acceptance."
+      ],
+      "focus": "Measures whether noisy task evaluations can identify and retain improvements to frozen agents. Environments combine an interactive household simulator, sandboxed spreadsheet code execution, document question answering, and terminal task execution.",
+      "limits": "These are general agent task environments rather than an environment for conducting scientific research experiments. Feedback sources differ across benchmarks. Candidate-pool evidence is restricted to Terminal-Bench; several underlying environment details are not established in the supplied pages. No new physical measurements are described.",
+      "training": {
+        "reward": "Task success and training or validation scores drive artifact selection, usually with one rollout per task. ALFWorld succeeds when the household goal is completed within 50 steps. SpreadsheetBench executes workbook-editing code in a sandbox. Selection varies by method: score gates, Pareto parent selection, best-scoring versions, or retaining every proposed patch or memory. Execution-based and LLM selectors are separately evaluated; intermediate process checks are preliminary diagnostics rather than established replacements for task success.",
+        "reset": "Independent evolution runs and repeated evaluations of fixed artifacts are established. An explicit environment reset API, exact state restoration, and reproducible reset semantics are not established in the supplied pages.",
+        "branching": "Multiple candidate artifacts, Pareto parents, and fixed candidate pools support comparisons among alternative agent configurations. Cloning, rollback, or branching from an intermediate environment state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-a0c40b04aa3282e6",
+      "resource_id": "paper-a0c40b04aa3282e6",
+      "name": "The Resolution Hypothesis: Agent Evolution's Key Is Identifying Improvements",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.23068"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose temporal windows, extract frames, inspect visual regions, revisit observations, and optionally retain observation summaries.",
+        "Reference answers, annotated evidence locations, and construction summaries are hidden during standard solving.",
+        "Evaluation uses fixed recorded videos and configuration-specific observation budgets."
+      ],
+      "focus": "Active evidence acquisition and integration for 310 fine-grained questions over 108 recorded long videos. Tool responses provide decoded visual observations; final answers and temporal evidence coverage are evaluated separately.",
+      "limits": "Recorded video inspection supplies no new physical measurements and does not change the recorded world. Temporal frame hits do not establish spatial sufficiency or correct evidence integration. Full-harness budgets vary across deployments; the evidence-oracle diagnostic also changes reasoning settings and input format.",
+      "training": {
+        "reward": "Supervised fine-tuning combines 2,623 direct QA examples with 3,315 interaction-step examples. Only the current assistant target turn contributes to the loss; valid steps are retained without filtering by final-answer correctness. An online reinforcement-learning reward is not established. Evaluation uses a frozen gpt-6-luna/high semantic rubric with reference answers and answer specifications; invalid, missing, or unresolved answers score zero. Temporal frame-hit recall is a separate diagnostic, and external benchmarks use deterministic scoring.",
+        "reset": "Earlier and overlapping video windows can be revisited. Trajectories are logged for replay, and technical retries cover transient API failures only. An explicit reset operation that clears agent state or restores an intermediate trajectory state is not established.",
+        "branching": "Agents may choose alternative observation windows and visual inspections within a trajectory. Snapshot cloning, rollback, or branching from a saved agent state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-2b6b0ea42fe13cb4",
+      "resource_id": "paper-2b6b0ea42fe13cb4",
+      "name": "NexSight: Verifiable Tasks for Fine-Grained Agentic Long-Video Understanding",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.22790"
+    },
+    {
+      "feedback": "synthetic-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "The evaluator derives situation-specific explicit and implicit propositions from a supplied prompt and video.",
+        "Verification uses a specified tool space, scene-graph queries, and three soft temporal operators.",
+        "Evaluation includes fixed generated videos and public video datasets with human ratings."
+      ],
+      "focus": "Scores and diagnoses generated-video faithfulness through perceptual confidence traces, symbolic temporal reductions, and perceptual calibration. FVBench contains 400 synthesized videos from 200 compositional prompts.",
+      "limits": "Video generation and perceptual verification are computational operations; depicted physical events are not new physical measurements. Evaluation is fixed-video analysis rather than an interactive world simulator or an environment for conducting scientific research experiments. Tool errors, proposition compilation, calibration context, and soft averaging limit validity.",
+      "training": {
+        "reward": "A reinforcement-learning training reward is not established. Perception-Aware Calibration uses up to 20 demonstrations of each significance class from a held-out rated set in an in-context adjudicator. Neural and graph verifiers produce confidence traces; soft Always, Eventually, and Until operators reduce them to proposition scores, which are filtered and averaged by dimension. Evaluation measures correlation with human ratings and report comparisons using Gemini 3.1 Pro, supplemented by human audits.",
+        "reset": "An environment reset API or state-restoration mechanism is not established. Inputs are fixed videos processed by the evaluation pipeline.",
+        "branching": "Propositions are independently verified through neural or graph routes. Environment-state branching, snapshot cloning, and rollback support are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-e17c4d2ea4d004f8",
+      "resource_id": "paper-e17c4d2ea4d004f8",
+      "name": "FVScore: Specification-Driven Neuro-Symbolic Video Evaluation",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.22673"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 states that code, the task registry, the sandbox harness, and the leaderboard are publicly available.",
+        "Agents receive task specifications, weight artifacts, a working directory, and task-permitted metered probes. Hidden evaluation targets remain private.",
+        "Agents may inspect weights, perform numerical analysis, and submit edits or constructed networks within task-specific access, edit, compute, and probe budgets."
+      ],
+      "focus": "Executed computational investigations of neural-network weights across reading, repair, infeasibility verification, synthesis, and compression. Permitted probes provide live computational feedback; final submissions receive held-out evaluation. READ tasks prohibit forward passes. Control-policy and game tasks concern software environments; no new physical measurements are involved.",
+      "limits": "Gradient descent, iterative output-driven optimization, unauthorized model execution, and sandbox bypasses are prohibited. Final evaluation is separate from live probe feedback. Results use default difficulty and seed 0, with one or two samples per model and differing scaffolds. Only 39 of 42 tasks pass the stated validity gate, and only 21 reference solutions use agent-equivalent access. Quarantined runs score zero pending human review; none had been reviewed. Recorded datasets or calibration prompts used by privileged references do not establish physical experimentation.",
+      "training": {
+        "reward": "An agent-training reward or training procedure is not established. The evaluator computes a ledger-derived score combining task gain, held-out collateral damage, structural edit cost, and metered compute use. The score is task gain multiplied by exp(-alpha times collateral damage), (1 minus 0.1 times edit cost), and (1 minus 0.1 times compute-budget fraction), with alpha approximately 2.23. Budget violations, invalid submissions, and uncleared quarantines score zero.",
+        "reset": "Within-run reset or checkpoint restoration support is not established. Infrastructure failures may be rerun under a fresh sample identifier; other unsuccessful runs score zero.",
+        "branching": "Checkpoint forking, rollback, and branching from saved environment states are not established. Numerical analysis and task-permitted candidate probes are allowed within the same metered run."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-a837fe6a2ea82fd9",
+      "resource_id": "paper-a837fe6a2ea82fd9",
+      "name": "WeightBench: Evaluating Language Models as Weight-Space Programmers",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.18553"
     }
   ]
 }
