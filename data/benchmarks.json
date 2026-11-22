@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-22",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -6197,6 +6197,29 @@
       "name": "Auto-Research Arena: Benchmarking and Advancing Auto-Research in Language Modeling",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2610.35866"
+    },
+    {
+      "feedback": "real-experiment-records",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Private partner corpus; agreements restrict disclosure of test sources.",
+        "Systems receive frozen DOM snapshots, screenshots, documented interaction access, a conversion objective, and permitted pre-experiment design information.",
+        "Recorded outcomes, observed effects, conversion counts, and outcome statistics are withheld during inference."
+      ],
+      "focus": "Retrospective prediction of recorded website A/B-test outcomes and relative lift for 318 historical experiments. UX-1 executes simulated shopper sessions on frozen page evidence, with 1,000 shoppers per arm. Evaluation uses recorded human experiment outcomes; no new live traffic experiments or physical measurements are performed.",
+      "limits": "Developer-run retrospective evaluation with unknown training-site overlap and unequal system budgets. Duration screening excludes tests lasting 21 days or less. Accuracy intervals assume experiment independence despite shared sites. Inconclusive historical outcomes do not establish zero effects. Prospective test-prioritization benefits are not established.",
+      "training": {
+        "reward": "UX-1 is fine-tuned on recorded human website interactions to capture variation in browsing decisions. The precise training loss or reward is not established. The evaluator credits a locked forecast only when it matches the recorded human outcome, classified using the historical effect's two-sided 95% confidence interval. Evaluation also measures balanced accuracy, lift error, and presentation-order consistency; invalid forecasts receive no outcome credit.",
+        "reset": "Each presentation order is evaluated three times with independent execution state. The random seed is fixed within each UX-1 page comparison. The first repetition in the prespecified primary order determines primary scoring. Arbitrary within-session reset support is not established.",
+        "branching": "The protocol evaluates both page-presentation orders using fixed artifacts. Arbitrary state branching, checkpoint rollback, and adaptive execution of new live experiments are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-075e72f7e63f464a",
+      "resource_id": "paper-075e72f7e63f464a",
+      "name": "Squoosh Bench: Evaluating UX-1 on 318 Historical Website A/B Tests",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.25200"
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 [← Main list](../README.md) · [Structured profiles](../data/benchmarks.json)
 
-**274 usage profiles** · Updated **2026-11-20**
+**275 usage profiles** · Updated **2026-11-22**
 
 Compare environments by feedback source and interaction. Each row describes a usage mode; a single project can appear in several groups. Expand the notes below each table for sources, limitations, and training interfaces.
 
@@ -6240,6 +6240,7 @@ Queries or analyses use measurements already collected. This does not create new
 | [Benchmarking language models and agents for scientific reasoning in evolving materials laboratories](#paper-906c1e2c4e0232fc) | Recorded experiments | Analysis + tools | Paper-described |
 | [MineralExp: Benchmarking LLM Agents for Experimental Design in Real-World Mineral Exploration](#paper-13b1576ff71d9ec3) | Recorded experiments | Offline data | Paper-described |
 | [SciWorkBench: A Benchmark for Real Scientific Workflows](#paper-bdaa72677ab8b193) | Recorded experiments | Analysis + code | Paper-described |
+| [Squoosh Bench: Evaluating UX-1 on 318 Historical Website A/B Tests](#paper-075e72f7e63f464a) | Recorded experiments | Analysis + tools | Paper-described |
 
 <a id="genedisco"></a>
 
@@ -6468,6 +6469,29 @@ Queries or analyses use measurements already collected. This does not create new
 | Reward / evaluator | A training reward or policy-training protocol is not established. Page 8 describes a separate, anonymized Codex evaluator using GPT-5.6 Sol and expert-authored rubrics to score submitted workflows and outputs. Testing and judging environments are separate; online access to grading feedback is not established. |
 | Reset | Tasks execute in preconfigured Docker environments. An explicit reset API, restart policy, or snapshot-restoration mechanism is not established. |
 | Branching | Agents may choose analysis paths and revise their work. Explicit environment cloning, snapshot branching, or counterfactual replay support is not established. |
+
+</details>
+
+<a id="paper-075e72f7e63f464a"></a>
+
+<details>
+<summary>Squoosh Bench: Evaluating UX-1 on 318 Historical Website A/B Tests — details</summary>
+
+[Work](../README.md#paper-075e72f7e63f464a) · [Source](https://arxiv.org/pdf/2611.25200)
+
+**Focus:** Retrospective prediction of recorded website A/B-test outcomes and relative lift for 318 historical experiments. UX-1 executes simulated shopper sessions on frozen page evidence, with 1,000 shoppers per arm. Evaluation uses recorded human experiment outcomes; no new live traffic experiments or physical measurements are performed.
+
+**Openness:** `Private partner corpus; agreements restrict disclosure of test sources.`, `Systems receive frozen DOM snapshots, screenshots, documented interaction access, a conversion objective, and permitted pre-experiment design information.`, `Recorded outcomes, observed effects, conversion counts, and outcome statistics are withheld during inference.`
+
+**New physical measurements:** No
+
+**Limits:** Developer-run retrospective evaluation with unknown training-site overlap and unequal system budgets. Duration screening excludes tests lasting 21 days or less. Accuracy intervals assume experiment independence despite shared sites. Inconclusive historical outcomes do not establish zero effects. Prospective test-prioritization benefits are not established.
+
+| Training Interface | Source-Reported Support |
+| --- | --- |
+| Reward / evaluator | UX-1 is fine-tuned on recorded human website interactions to capture variation in browsing decisions. The precise training loss or reward is not established. The evaluator credits a locked forecast only when it matches the recorded human outcome, classified using the historical effect's two-sided 95% confidence interval. Evaluation also measures balanced accuracy, lift error, and presentation-order consistency; invalid forecasts receive no outcome credit. |
+| Reset | Each presentation order is evaluated three times with independent execution state. The random seed is fixed within each UX-1 page comparison. The first repetition in the prespecified primary order determines primary scoring. Arbitrary within-session reset support is not established. |
+| Branching | The protocol evaluates both page-presentation orders using fixed artifacts. Arbitrary state branching, checkpoint rollback, and adaptive execution of new live experiments are not established. |
 
 </details>
 

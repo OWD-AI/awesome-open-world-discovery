@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-22",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -39653,6 +39653,262 @@
           6,
           23,
           26
+        ]
+      }
+    },
+    "paper-5a7fbd132c54f7e8": {
+      "institutions": [
+        "Cornell Tech",
+        "Abel AI",
+        "Arizona State University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        8,
+        11,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A two-phase procedure screens candidate parents in reverse temporal order, then removes nonparents using conditional independence tests. Nonstationary discovery uses independently replicated trajectories from the same underlying system. Oracle correctness and polynomial test complexity are proved under stated assumptions.",
+      "evidence": "Oracle experiments recovered every tested graph. Finite-sample experiments support favorable accuracy–runtime trade-offs and faster execution at 1000–2000 time-indexed nodes. Accuracy is not uniformly superior: IAMB frequently performs better, and DREAM4 results are mixed. Smaller conditioning sets under an oracle do not consistently transfer to finite data.",
+      "discovery_use": "Directly advances discovery of unknown causal structure from nonstationary temporal observations, with explicit identifiability assumptions, an efficient algorithm, and comparative evaluation.",
+      "limits": "Requires faithfulness, lag-1 self-causation, no contemporaneous links, and observed parents after the initial time step. Nonstationary discovery requires replicate trajectories. Evaluation uses synthetic and re-simulated data without a suitable real-world benchmark. Lean verification omits statistical testing, probability-to-oracle assumptions, and the Python implementation.",
+      "classification_review": {
+        "date": "2026-11-22",
+        "category": "causality",
+        "rationale": "Directly advances discovery of unknown causal structure from nonstationary temporal observations, with explicit identifiability assumptions, an efficient algorithm, and comparative evaluation.",
+        "pdf_sha256": "a84b5179019800c196780a288e2ce6c38d4b8df5a8a5409528734b0c99bccd23",
+        "evidence_pages": [
+          1,
+          8,
+          11,
+          12
+        ]
+      }
+    },
+    "paper-07d363d78c9dadb1": {
+      "institutions": [
+        "Huazhong University of Science and Technology",
+        "Tencent",
+        "Peking University",
+        "The Hong Kong University of Science and Technology"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A terminal velocity-field probe produces a clean candidate and normalized discrepancy score. Two thresholds route chunks to acceptance, refinement, or regeneration. Refinement follows a 3-to-2-to-1 schedule near control transitions, with burst fallback and speculative overlap. Evaluation covers WBench, LongSpecBench, and shared-weight Hy-Nomas pairing.",
+      "evidence": "On WBench, SpecWM achieves 1.63× generation-loop speedup, NavScore 85.63 versus the target’s 85.49, and HPSv3 77.66 versus 74.57. LongSpecBench reports 1.67× speedup and nearly target-level revisit consistency. Ablations support selective routing, transition-aware refinement, fallback, and overlap.",
+      "discovery_use": "Improves action-conditioned interactive world models and evaluates sustained control and scene persistence. This supports representations and environments for exploration, although scientific knowledge verification and autonomous discovery are not demonstrated.",
+      "limits": "Verification measures agreement with a target generator, not factual truth or physical validity. Pairings require compatible latent representations and interfaces. LingBot overlap uses eight GPUs versus four for single-model baselines, so latency gains do not establish compute savings. Timing excludes loading and final decoding. Long rollouts last about 32 seconds; supplemental implementation details were not supplied.",
+      "classification_review": {
+        "date": "2026-11-22",
+        "category": "causality",
+        "rationale": "Improves action-conditioned interactive world models and evaluates sustained control and scene persistence. This supports representations and environments for exploration, although scientific knowledge verification and autonomous discovery are not demonstrated.",
+        "pdf_sha256": "be3c552cb9987a60a650477a6d01c7eea0e7a144cfb6dbeaf79aaf76b79dc942",
+        "evidence_pages": [
+          1,
+          3,
+          5
+        ]
+      }
+    },
+    "paper-fb863575ba5ebd3c": {
+      "institutions": [
+        "Virginia Tech",
+        "fal",
+        "Georgia Tech",
+        "IBM Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        9,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Block-output vectors, indexed by stream, guidance pass, and sampling-stage bin, are fitted to frozen RL checkpoints through velocity matching. Controls include average activation differences and matched-size LoRA. Additional experiments train vectors directly with RL and replace attention pathways to localize effects.",
+      "evidence": "Vectors recover 90.0–96.3% of reward gains across six image models and 89.8% or 111.9% across two video models. Direct RL on vectors exceeds two SD3.5-M reference gains. Attention interventions implicate image access to text representations. New-subject supervised learning benefits more from input-dependent LoRA, qualifying the capability-elicitation interpretation.",
+      "discovery_use": "Provides a concrete mechanistic test of capability elicitation versus acquisition during RL post-training, including compositional and rule-based visual reasoning. This informs discovery-training foundations, with transfer to discovery agents remaining an inference.",
+      "limits": "Sufficiency of steering does not establish necessity or prove that RL learns no new capabilities. All studied RL methods use policy gradients. Only two of six screened video models show reliably positive evaluated gains. Reward recovery also reproduces diversity and color losses. Mechanistic localization focuses on SD3.5-M; discovery-agent performance is untested.",
+      "classification_review": {
+        "date": "2026-11-22",
+        "category": "learning",
+        "rationale": "Provides a concrete mechanistic test of capability elicitation versus acquisition during RL post-training, including compositional and rule-based visual reasoning. This informs discovery-training foundations, with transfer to discovery agents remaining an inference.",
+        "pdf_sha256": "88ae5d5b9f854b6dfa33b1d04d7f1c6cee98344d066fac6a8fcd2ad0146ef5bc",
+        "evidence_pages": [
+          1,
+          3,
+          9,
+          20
+        ]
+      }
+    },
+    "paper-b6fcfae4fb9b0e9d": {
+      "institutions": [
+        "Independent Researcher"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Combines Mellin-GLU quadrature, architecture-specific routing, compensated width extension, and tokenizer-aligned readout in an automated compiler. Evaluates arithmetic, Boolean circuits, ablations, numerical kernels, false triggers, language noninferiority, and sparse sidecar execution.",
+      "evidence": "On 1,200 arithmetic cases, reported BF16 ALU-prefix accuracy is 99.17% for Granite and 100% for Qwen, with 98–100% inline resumption. Broader four-seed output accuracy falls to 94.07% and 96.60%. Reported language evaluations pass the stated noninferiority margins; FP32 circuit execution resolves tested carry edge cases.",
+      "discovery_use": "Provides analytical machinery for adding deterministic symbolic computation to pretrained reasoning models while testing retained language competence. This is a concrete foundation for reliable calculation and verification within discovery reasoning, although autonomous discovery is not evaluated.",
+      "limits": "Internal ALU exactness differs from complete generated-answer correctness. Guarantees depend on precision, kernels, syntax, bounded input ranges, and compilation layout. BF16 carry guarantees are weaker than FP32 guarantees; unsupported formats can abstain. Language retention is empirical on selected suites. Supplied pages omit parts of the appendix, and numerical scripts are not formal proof checking. No associated first-party code or patch release was verified.",
+      "classification_review": {
+        "date": "2026-11-22",
+        "category": "foundations",
+        "rationale": "Provides analytical machinery for adding deterministic symbolic computation to pretrained reasoning models while testing retained language competence. This is a concrete foundation for reliable calculation and verification within discovery reasoning, although autonomous discovery is not evaluated.",
+        "pdf_sha256": "1f1f3c4c17bfa118b5b5414bdb4b924868fbd68f2026d0d7046b2d762c51219e",
+        "evidence_pages": [
+          1,
+          2,
+          13
+        ]
+      }
+    },
+    "paper-075e72f7e63f464a": {
+      "institutions": [
+        "Squoosh AI"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Fine-tuned UX-1 simulates 1,000 shoppers per arm. Four systems receive frozen page evidence and permitted experiment-design information. The protocol prespecifies scoring repetitions, reverses presentation order, retains failures, and evaluates outcome classification and lift estimation.",
+      "evidence": "UX-1 matches 267 of 318 outcomes, achieving 83.96% accuracy and 83.40% balanced accuracy, versus 61.64% accuracy for Qwen3 Next 80B. Its 126 recommended variants contain 118 historical winners, capturing 86.1% of all variant wins while missing 19 winners outside the shortlist.",
+      "discovery_use": "Evaluates whether simulated agents can forecast experimental outcomes and prioritize interventions for live testing. This directly informs discovery through experimental selection, with explicit measurement of missed beneficial candidates.",
+      "limits": "Private partner data and unknown training-site overlap prevent strong contamination assessment. Developer-run retrospective evaluation does not establish prospective prioritization benefits. Systems use different budgets, so results do not isolate fine-tuning. Duration screening changes the target population. Site clustering can narrow uncertainty intervals artificially, and inconclusive historical results do not establish zero effects. No first-party benchmark or model release was verified.",
+      "classification_review": {
+        "date": "2026-11-22",
+        "category": "benchmarks",
+        "rationale": "Evaluates whether simulated agents can forecast experimental outcomes and prioritize interventions for live testing. This directly informs discovery through experimental selection, with explicit measurement of missed beneficial candidates.",
+        "pdf_sha256": "4f3e664095676478280c8d0f164337c1de75a18de02d3cd874dcc0b374235549",
+        "evidence_pages": [
+          1,
+          3,
+          8
+        ]
+      }
+    },
+    "paper-454e9ae4843b4701": {
+      "institutions": [
+        "Stanford University",
+        "Ecole polytechnique fédérale de Lausanne"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An isolated agent requests camera-image probes, candidate evaluations and validations, stating a hypothesis and expected outcome for each request. Numerical light-propagation models are forbidden. Classification and image-encoding experiments compare agents with PPO, policy gradient and backpropagation through a calibrated model. Harness ablations use the calibrated simulator; final hardware tests use sealed data.",
+      "evidence": "The best classifier reached 96.8% test accuracy with earlier notes, versus 91.1% without notes, approximately 52% for gradient-free baselines and 96.3% for calibrated-model backpropagation. The encoder reached 16.1 dB versus 15.0 dB for PPO and 16.9 dB for backpropagation. Agents measured optical geometry and aberrations, then designed compact lens-and-prism parameterizations. Images, probes, hypotheses and retained notes improved simulated-harness results.",
+      "discovery_use": "Directly demonstrates an agent investigating unknown physical-device behavior through hypotheses, informative probes, measured verification and interpretable experimental designs.",
+      "limits": "Evidence covers one optical setup, three digit classes and a small image-encoding task. The highlighted classifier result is a best run; three runs using earlier experience averaged 92.4% with 3.9-point standard deviation. The 0.5-point advantage over backpropagation does not establish significant superiority. Earlier-session experience has an additional acquisition cost. Agents receive richer observations than reward-based baselines, although a scalar-only ablation still beats PPO. Harness ablations were simulated, and broad deployment remains prospective.",
+      "classification_review": {
+        "date": "2026-11-22",
+        "category": "sci_methods",
+        "rationale": "Directly demonstrates an agent investigating unknown physical-device behavior through hypotheses, informative probes, measured verification and interpretable experimental designs.",
+        "pdf_sha256": "3b7c203fb7a94d9746a583d398779611e5315d3a7bbce604fb9c94f23acc2bc5",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-16d3573e2524f8ca": {
+      "institutions": [
+        "University of Crete",
+        "Karolinska Institute",
+        "University Hospital of Heraklion"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The compiler derives candidate values from requests, schemas, fixed transformations and permitted context. Decision models answer separate questions for tool selection, capability and arguments. Six System 1 agents are compared with eighteen local LLM configurations across 157 tools. The main benchmark contains 1,952 complete or unsupported requests; another 174 test missing required arguments. Evaluation scores proposed calls without executing tools.",
+      "evidence": "The strongest agent achieved 97.0% tool-selection accuracy, 97.0% argument accuracy and 93.9% fully correct requests, versus 91.3% full correctness for the best LLM configuration. No invented content was detected in 10,888 System 1 calls. Missing-information requests were correctly handled in 86.2–93.7% of cases, versus at most 5.7% for LLM agents. OpenJev achieved 92.9% full correctness at 2.6 seconds per request, versus 4.5 seconds for the strongest LLM configuration.",
+      "discovery_use": "Contributes concrete infrastructure for scientific agents: grounded tool selection and argument construction, explicit handling of missing information, and replayable decisions across biomedical research tools. Its connection is reliable scientific workflow execution rather than autonomous hypothesis discovery.",
+      "limits": "The benchmark predominantly uses custom explicit requests and scores the first proposed call without execution, so it does not demonstrate successful multistep scientific investigations or valid downstream findings. Grounded choices can still select wrong tools, misassign values or violate schemas. The hallucination test accepts values appearing anywhere in a request and therefore undercounts fabrication. LLM baselines receive no task-specific system prompt, and several match the best System 1 agent on argument filling. Existing decision checkpoints are dependencies rather than new releases from this paper.",
+      "classification_review": {
+        "date": "2026-11-22",
+        "category": "systems",
+        "rationale": "Contributes concrete infrastructure for scientific agents: grounded tool selection and argument construction, explicit handling of missing information, and replayable decisions across biomedical research tools. Its connection is reliable scientific workflow execution rather than autonomous hypothesis discovery.",
+        "pdf_sha256": "32836efabc07291f45447326cbdbd1c4ea0df8dabb6b726c80b7c90dbc7e3764",
+        "evidence_pages": [
+          1,
+          2,
+          4,
+          6
+        ]
+      }
+    },
+    "paper-03b179946dd0e551": {
+      "institutions": [
+        "UIUC",
+        "CMU",
+        "Rutgers",
+        "Princeton",
+        "Stanford",
+        "Yale"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        8,
+        15
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Four sizes of one model family receive graded practice answers, weight access, CPU code execution and budgets of twenty forward passes and two hundred code runs. Gradients and optimizers are blocked. Edits are tested against unchanged weights on matched problems and seeds. A second protocol adds a reserved-practice acceptance check. Submitted edits are evaluated on unseen math problems; repair is additionally evaluated on six image benchmarks.",
+      "evidence": "The strongest accepted edit improved held-out math accuracy from 57.2% to 63.8% across 490 problems with eight answers each. Token-limit failures decreased from 33.6% to 26.1%. Only the 27B model improved itself in the tested family. Its submitted repair raised damaged-copy math accuracy from 0% to 33%, versus 58.5% for the intact model, and image accuracy from 7.3% to 70.2%, versus 84.3% intact. Applying only its repair to the correctly identified matrix achieved 55% math accuracy.",
+      "discovery_use": "Directly studies experimentally verified self-improvement: a model diagnoses failures, proposes persistent weight edits, tests them and decides whether to retain them. This is relevant evidence toward recursive self-improvement, with substantial limits on the demonstrated recursion.",
+      "limits": "Each editing session starts from base weights, the editor remains unchanged during the session, and accepted edits replace rather than accumulate on previous edited checkpoints. Consequently, the eight-session trajectory does not establish recursive improvement by progressively stronger editors. Repair uses an intact editor operating on a damaged copy and an extreme artificial corruption. Scaling evidence comes from sparse sessions within one family. Improvements chiefly address termination failures under fixed token budgets; broad capability gains and regression resistance remain unestablished. Supplied pages support a targeted methods/results review, not exhaustive inspection of all 63 pages.",
+      "classification_review": {
+        "date": "2026-11-22",
+        "category": "open_ended",
+        "rationale": "Directly studies experimentally verified self-improvement: a model diagnoses failures, proposes persistent weight edits, tests them and decides whether to retain them. This is relevant evidence toward recursive self-improvement, with substantial limits on the demonstrated recursion.",
+        "pdf_sha256": "176d0a9b6068ac632ed8a2899551efa0de6489543def9d9fd49d31643b9b6f10",
+        "evidence_pages": [
+          1,
+          7,
+          8,
+          15
         ]
       }
     }
