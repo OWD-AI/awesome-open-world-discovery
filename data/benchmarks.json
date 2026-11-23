@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -6220,6 +6220,141 @@
       "name": "Squoosh Bench: Evaluating UX-1 on 318 Historical Website A/B Tests",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.25200"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents propose hypotheses, implement C++ factors, execute backtests, interpret results and design ablations.",
+        "Research is bounded to seven rounds, at most 100 hypotheses per round, supplied reports and historical market data.",
+        "Research directions are constrained by prompts to the report's phenomena, mechanisms and direct extensions.",
+        "Research feedback covers 2022–2023; 2024–2025 results are reserved for subsequent scoring."
+      ],
+      "focus": "Executed quantitative research experiments on fixed recorded market data. Agents develop and compare factor hypotheses through compilation and deterministic historical backtests. These are computational experiments and backtest simulations; page 22 explicitly distinguishes them from live trading. No new physical measurements are involved.",
+      "limits": "Seven tasks and one run per model do not establish run-to-run reliability. Strong research prompts and one toolchain bound autonomy. Pretraining contamination remains possible. Test-data and network isolation partly rely on conventions. Historical task-selection runs included 2024 feedback. Writable training statistics were not recomputed during scoring, pool thresholds lack sensitivity analysis, and static look-ahead checks are incomplete.",
+      "training": {
+        "reward": "Model parameter training or an RL reward is not established. Here, training denotes the research data period. Fixed code returns compilation, trial-run, coverage and degeneracy checks, with at most three fixes for a failed check. Backtest feedback includes each of ten groups' returns and Sharpe ratios, turnover and quarterly performance. Final evaluation uses an independent deterministic scorer without an LLM judge: a fixed training-only rule selects factors with training-period S at least 3 and pairwise return correlation below 0.6, then removes look-ahead factors. On 2024–2025 style-neutralized returns, S below 2 scores zero; otherwise the score is 100 times min(S/6, 1). Empty pools score zero.",
+        "reset": "Historical data are replayed over fixed training and test windows, with specified warm-up periods. Research spans 24 model sessions, with histories carried through files and a cumulative iteration tree. Arbitrary environment resets, snapshot restoration and restarting a research run from an intermediate state are not established.",
+        "branching": "Research branches are supported through parent-linked factor candidates, copying parent code before modification, ablations and a cumulative iteration tree that retains failed and refuted nodes. Environment-state cloning, rollback and checkpoint-based execution branching are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-8bc0437e8ecd2924",
+      "resource_id": "paper-8bc0437e8ecd2924",
+      "name": "Report2Alpha-Bench: Evaluating LLM Agents on End-to-End Quantitative Research",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.27635"
+    },
+    {
+      "feedback": "scientific-datasets-and-hidden-verifiers",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Tasks use version-pinned real-world knowledge sources, public evidence, permitted tools and fixed budgets.",
+        "Reference answers, withheld rules, hidden tests and scorer logs are private.",
+        "Code and resources are announced; public evidence and private oracle access are separated."
+      ],
+      "focus": "Evaluates downstream utility of agent-built ontologies across 19,947 knowledge application, repair, organization and construction tasks. Feedback mixes exact queries over recorded databases and event logs, executed policy and schema checks, numerical SBML simulations, symbolic predicates and OmniGibson simulator rollouts. P0 accepts one answer without agent tool execution. P1 permits budgeted native-executor probes, artifact construction and tool actions under a fixed step limit.",
+      "limits": "Source-native correctness does not establish empirical scientific truth, treatment outcomes or contact-level physical feasibility. Clinical examples use patient fixtures, SBML results are in silico, and embodied placement is replayed symbolically. No new physical measurements are reported. Independent second-engine checks are unavailable for 737 tasks. General environment checkpointing and branching are not established.",
+      "training": {
+        "reward": "No model-training reward or weight-update procedure is established; agents build knowledge per task. Native verifiers assign binary task success, with valid success additionally requiring no committed policy violation. Mapping F1, parseability coverage and cost are supplementary evaluation measures. P1 probes return native-executor labels at declared costs.",
+        "reset": "Tasks specify an initial state. Paired comparisons fix reset state, and intervention evaluation explicitly resets the native environment before planner attempts (pages 19–20). A general agent-accessible reset operation is not established.",
+        "branching": "Intervention replay fixes actions or inputs while changing an artifact component. Agent-controlled trajectory branching, checkpoint restoration and arbitrary counterfactual forks are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-e45d7741173387ab",
+      "resource_id": "paper-e45d7741173387ab",
+      "name": "AutoOntologyBench: A Task-Grounded Benchmark for Agentic Knowledge Engineering",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.27734"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "Known and unknown seizure categories are defined by taxonomy and subject counts.",
+        "Four leave-one-class-out rounds test seizure types excluded from fine-tuning.",
+        "Protocol, subject splits and code are publicly released; the pretrained checkpoint is available on request."
+      ],
+      "focus": "Offline open-set classification of recorded TUSZ v2.0.3 EEG: 11,296 annotated seizure windows from 206 subjects. Models classify known seizure types and reject unknown types. Allowed work consists of fixed-recording preprocessing, supervised fine-tuning, post-hoc scorer fitting and held-out evaluation. There is no interactive clinical environment or collection of new EEG measurements.",
+      "limits": "Subject novelty remains entangled with seizure-type novelty. Rare-class test cohorts contain only 3–5 subjects, and fairness estimates can use eight subjects. Unlabeled pretraining overlaps with 30 evaluation subjects. Metrics operate at window level, use one backbone checkpoint and three seeds, and do not establish patient outcomes or demographic fairness.",
+      "training": {
+        "reward": "No reinforcement-learning reward is established. Fine-tuning minimizes inverse-frequency-weighted cross-entropy using AdamW for up to 50 epochs, with validation-accuracy early stopping and patience 7. Evaluators report known-class accuracy, AUROC, AUOSCR, CCR at specified FPRs, F@C95 and dispersion of per-subject rejection rates. Ordinary rejection thresholds use the fifth percentile of known validation scores; fairness analysis uses 10% known-test rejection.",
+        "reset": "Each LOCO round initializes a fresh model from the pretrained EFM checkpoint and fine-tunes independently. Each seed defines its own subject partition, training run and scorer fit. Interactive environment reset support is not established.",
+        "branching": "LOCO rounds and seed repetitions provide separate offline comparisons. Environment checkpointing, action-trajectory branching and counterfactual execution forks are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-4388e48626232062",
+      "resource_id": "paper-4388e48626232062",
+      "name": "A Benchmark Protocol and Fairness Analysis Towards Open-Set EEG Seizure Type Classification",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.27783"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": null,
+      "openness": [
+        "The paper states that it releases an annotated action dataset, a 400-action human-annotated test set, and a fine-tuned open-source critic."
+      ],
+      "focus": "Robot manipulation and action critique across 12 suites. Policies issue numerical control commands with mandatory local-intent notes and receive updated observations; omitted notes cause command rejection. Simulator execution and native benchmark grading are explicit in the additional experiments. The critic benchmark instead analyzes fixed recorded actions using task goals, local intents, bounded pre/post-action views, execution information, and optional lift frames. Released StationeryBench records include physical move_to calls.",
+      "limits": "The collection mixes new rollouts and released trajectories. New physical experiments are not established: physical records do not establish new hardware execution by this study. Critic evaluation uses 400 human-labeled actions. Critique feedback improves one repeated simulator task, without establishing general policy improvement.",
+      "training": {
+        "reward": "The critic receives supervised LoRA fine-tuning on 12,844 annotated actions, targeting outcome, failure mode, grasp sub-category, and diagnostic text. Episode-separated human labels evaluate accuracy and Cohen’s κ. Native suite graders evaluate policy episodes. An RL training reward is not established.",
+        "reset": "Repeated DexJoCo attempts use the same seed and initial state in fresh instances. Reset to arbitrary intermediate states is not established.",
+        "branching": "Matched attempts from the same initial simulator state are demonstrated. Saved-state branching or counterfactual continuation from an intermediate action is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-99b74b1af40696d4",
+      "resource_id": "paper-99b74b1af40696d4",
+      "name": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.26613"
+    },
+    {
+      "feedback": "scientific-datasets-and-hidden-verifiers",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "The paper describes NextUnit-Bench as an open benchmark and supplies a GitHub repository address.",
+        "Development data and labels are available to agents; hidden units, hidden labels, scoring code, and final scores remain unavailable during development."
+      ],
+      "focus": "Agents conduct executable modeling experiments on 24 public PHM datasets across 58 folds. They inspect labeled development units, write code, fit and validate predictors, and deliver sealed executable programs within two hours. Shell, Python, and permitted internet access are available. Runtime checks report execution errors without hidden-unit performance. Evaluation executes each sealed predictor offline on held-out units or operating conditions. Sources include recorded physical-machine data and previously simulated datasets; agents acquire no new physical measurements.",
+      "limits": "Public-data recognition and pretraining exposure cannot be excluded. Internet restrictions were stated but not technically enforced. Most configurations have limited repetitions, and three datasets contain collection or preparation shortcuts. Hidden units represent fixed dataset partitions rather than live equipment.",
+      "training": {
+        "reward": "Agent weight training and an RL reward are not established. Agents train their delivered predictors on development data. The hidden evaluator computes S = 100 max(0, 1 − E/B), using the mean loss of fixed random-forest and CNN baselines as B; failed deliverables score zero. Hidden scores are not returned during development.",
+        "reset": "Sealed predictors run in a fresh process for each hidden unit. Independent development reruns are reported. An agent-accessible environment rollback or reset API is not established.",
+        "branching": "Agents may run candidate modeling and validation computations within the budget. Environment snapshot branching is not established; plan transplants use separate development runs."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-2b317a62d713570d",
+      "resource_id": "paper-2b317a62d713570d",
+      "name": "Moving Generality from Model to Modeler: LLM Agents for PHM on a Deployment-Style Benchmark",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.25252"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "The paper states that it releases ReSpaceBench and the separate RS-30K training dataset.",
+        "Default evaluation withholds scene metadata, camera poses, and ground-truth event annotations from models."
+      ],
+      "focus": "Fixed-video spatial-memory question answering across controlled revisits. Inputs combine rendered synthetic homes, rendered FARO scans, and recorded PICO headset videos. Answers derive deterministically from verified scene metadata, room-entry sequences, and object-state records, with automated and human checks. Direct models receive sampled frames and questions; agentic frameworks can inspect the full fixed video and revisit segments through tools. Evaluation scores option correctness or numeric exact match.",
+      "limits": "The agents do not choose navigation actions or alter environments. Physical scanning and headset recording create source data, while evaluation consumes recordings and renders without new physical experiments. Most questions use synthetic scenes; 218 use real-home sources. Coverage-aware sampling uses privileged annotations.",
+      "training": {
+        "reward": "Supervised fine-tuning on 30,018 separate ProcTHOR questions targets answer letters or numeric answers. An RL reward is not established. Evaluation reports the unweighted mean of nine task accuracies.",
+        "reset": "Fixed videos can be revisited through agent tools, and humans have unrestricted replay. An interactive world reset is not established.",
+        "branching": "Agents may select different segments of an existing video. Action-dependent world branching and saved-state simulation branching are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ae4dcdb7e2625d3e",
+      "resource_id": "paper-ae4dcdb7e2625d3e",
+      "name": "Lost in the Hallway: Benchmarking Persistent Spatial Memory Across Revisits",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.21485"
     }
   ]
 }
