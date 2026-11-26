@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -6560,6 +6560,304 @@
       "name": "GameDojo: Benchmarking Real-Time Interactive Agents in Video Games",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.30771"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "A fixed collection of task instances combines factual and contextual QA, mathematics, code, spreadsheet manipulation, procedural tools, and search.",
+        "H2 returns execution errors or observations and permits up to three bounded retries.",
+        "H3 permits one outcome-blind revision; evaluator outcomes and gold answers remain hidden during evaluation."
+      ],
+      "focus": "Matched intervention evaluation over recorded benchmark inputs and newly executed model, code, and tool trajectories. Feedback includes answer-interface errors, runtime or tool errors, observations, and retrieved evidence in designated experiments. Offline replay additionally evaluates intervention-selection policies.",
+      "limits": "These are benchmark problem-solving executions rather than research experiments conducted by the evaluated agents. Feedback availability differs by benchmark. H2 bundles feedback with retries. Only 56.5% of source failures receive labels, label validation is uneven, and LiveMath is excluded from failure-conditioned analysis.",
+      "training": {
+        "reward": "Direct skills are generated from training items; SkillOpt uses scored rollouts; Trace2Skill uses successful and failed trajectories with a validation gate. Skills are frozen before testing. Evaluation uses benchmark-native performance, while no harness level sees evaluator outcomes or gold answers. A single common reward formula across all nine benchmarks is not established in the supplied pages.",
+        "reset": "The study reruns the same task instances across matched configurations and three repeats. Exact environment reset operations, state restoration, and cross-run memory handling are not established in the supplied pages.",
+        "branching": "Alternative model, skill, harness, and budget configurations are evaluated separately on matched instances. Skills are reused unchanged across models. Mid-trajectory cloning, rollback, and environment-state branching are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-8a1c222c2e75ab21",
+      "resource_id": "paper-8a1c222c2e75ab21",
+      "name": "Which Failure Does an Intervention Repair? When Agent Interventions Help, and Where Self-Evolving Skills Stall",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.29290"
+    },
+    {
+      "feedback": "probabilistic-model",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Generate and revise questions, reference answers, visual targets and distractors over a fixed image pool.",
+        "Compose probes from ten skills, three wrappers and five formats; experimental assignments remain fixed.",
+        "Update target-specific probing rules using collection trajectories and held-out validation, then freeze them before testing."
+      ],
+      "focus": "Adaptive discovery of MLLM hallucinations through executed model queries on existing image datasets. This is model evaluation, with no scientific simulator or new physical measurements.",
+      "limits": "The image pool, taxonomy and experimental configurations are fixed. Model judges supply probabilistic validity and hallucination judgments. General environment restoration and snapshot branching are not established.",
+      "training": {
+        "reward": "No policy-training reward is established. The question verifier supplies corrective feedback and a binary quality gate. An independent hallucination judge scores responses from 1 to 10; scores 1–3 count as confirmed hallucinations. Rule updates are accepted only when validation Quality does not decrease and VHDR improves by at least 2.5 percentage points (pages 5–6).",
+        "reset": "Revision context starts empty for each instance. Each target evolves independently from the shared initial library. An environment reset API is not established (pages 4–6).",
+        "branching": "The main implementation permits two sequential attempts per instance and retains the latest valid candidate. Independent Best-of-2 is an ablation. Snapshot restoration or general branching support is not established (pages 5 and 7–8)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-e42f05263c7122d4",
+      "resource_id": "paper-e42f05263c7122d4",
+      "name": "SEAM: A Self-Evolving and Adaptive Probing Framework for Automatic MLLM Hallucination Evaluation",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.34598"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Improve, replace or discard a starter program using any method within the task's fixed objective, data and compute budget.",
+        "Write and execute code, repeatedly evaluate development performance, and save alternative solution versions.",
+        "Work offline for up to 12 hours; hidden test instances and expert solutions are unavailable during the run."
+      ],
+      "focus": "Executed computational research experiments on 100 scientific problems. Feedback comes from running candidate programs and scoring their outputs. Existing recordings and measured datasets are inputs; some methods use simulations, but the benchmark performs no new physical measurements.",
+      "limits": "Automatically scored programs define the scope. Physical experiments, new data collection and human assessment of results are explicitly excluded. Each agent-task score comes from one run, and metric upper bounds are often unattainable by definition (page 13).",
+      "training": {
+        "reward": "Agent training is not established. During a run, a checker executes the solution on development data and returns the task metric. Afterward, one grader evaluates starter, agent and expert programs on identical hidden instances. Scores normalize improvement from the starter to the metric upper bound and are clipped to 0–100; expert margins are reported separately (page 5).",
+        "reset": "Each task starts from its supplied starter and development data in an offline environment. Final evaluation uses a separate container. An in-run reset or snapshot restoration API is not established (pages 4–5 and 17–18).",
+        "branching": "Saving versions and exploring alternative methods are supported and documented, including rejected experimental branches. Explicit environment snapshot or fork support is not established. Saved versions are evaluated at five checkpoints after the run (pages 5 and 21)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-f839edadeae6d529",
+      "resource_id": "paper-f839edadeae6d529",
+      "name": "REE: A Scientific Research Entrance Exam for AI Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.34646"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Use tools, request clarification, create artifacts and revise submissions within bounded turns.",
+        "Retain workspace artifacts and permitted agent state across interdependent tasks under Frozen and Evolving conditions.",
+        "Framework-specific post-turn procedures may update memory, skills or harnesses.",
+        "L2 includes executed model-development experiments; other tasks cover office work, programming and simulated service workflows."
+      ],
+      "focus": "A mixed task-stream benchmark whose AutoResearch component executes computational experiments, including data preparation, model choice, training and tuning. Other feedback comes from executable rules, unit tests, artifact checks and simulated service-state assertions. Existing datasets and user simulators do not imply new physical measurements.",
+      "limits": "Cohorts, runtime revisions and budgets differ across configurations. Several integrations have no native learner. Repeated-run uncertainty and systematic artifact-removal or learning-state-removal tests are unavailable, limiting causal claims about transfer (pages 10–11 and 20).",
+      "training": {
+        "reward": "The last submission's reward in [0,1] defines the turn reward; partial credit is retained. Tests and assertions evaluate programming, documents and service tasks. MLE metrics are normalized between baseline and best-reported anchors. Post-turn learners may use trajectories and rewards, but no single policy-training objective is established across frameworks (pages 6, 9 and 11).",
+        "reset": "Reset reinitializes workspace and agent state before every turn and disables post-turn updates. Frozen retains permitted state without explicit updates. Evolving retains state and enables updates when supported. Retries share the evolving within-turn state rather than restoring the initial condition (pages 5 and 11).",
+        "branching": "Up to three submissions permit sequential retries with evaluator feedback. General snapshot restoration or branching from a prior state is not established; retries explicitly share state (pages 5–6 and 14)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-2d31903b55705553",
+      "resource_id": "paper-2d31903b55705553",
+      "name": "EvoLink-Bench: A Benchmark for Evaluating Self-Evolving Agents in Long-Horizon Interdependent Task Streams",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.34400"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Choose research directions, gather evidence and synthesize reports from a supplied query.",
+        "The local framework permits Search and Open over a fixed Wikipedia snapshot with shared workflow and interaction budgets.",
+        "Separate evaluated systems use provider-native search or their own deep-research orchestration."
+      ],
+      "focus": "Information retrieval and report synthesis evaluated against hidden Wikipedia-derived relations. Search returns existing documentary evidence; an LLM judges coverage. This evaluates knowledge exploration rather than executed scientific experiments or new physical measurements.",
+      "limits": "Coverage is relative to selected three-hop trees and hidden relations. It does not establish unrestricted novelty or comprehensive factual correctness. Local fixed-corpus and provider-native retrieval conditions differ. Detailed reset and branching procedures are not established in the supplied pages.",
+      "training": {
+        "reward": "Policy training and an online training reward are not established. Gemini 2.5 Pro judges hidden rubrics as Satisfied, Partially Satisfied or Not Satisfied. Only Satisfied receives binary credit. Recursive breadth and continuity-sensitive depth are combined by geometric mean; access to rubric scores during report generation is not established (pages 5–6).",
+        "reset": "The local retrieval corpus is fixed to enwiki-20260701-v1. Per-case workspace or agent-state reset procedures are not established in the supplied text (page 6).",
+        "branching": "Agents may explore multiple research directions through retrieval. Execution snapshots, state restoration and explicit branch comparison support are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-65a381c9fe2032c6",
+      "resource_id": "paper-65a381c9fe2032c6",
+      "name": "DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.34852"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "The platform and research map are described as open source.",
+        "Methods, benchmarks, metrics, output formats, scorers, sandbox backends, and commands support plugins.",
+        "Users can convert recordings into tasks and generate synthetic training scenes."
+      ],
+      "focus": "Infer executable simulations from fixed real or simulated recordings. Coding agents inspect visible inputs, write and test simulation programs, and submit deliverables. The platform freezes and fingerprints deliverables, executes them offline, and scores their outputs against hidden references. Feedback comes from executed simulations, reproducibility checks, and benchmark scorers. Real recordings are existing data; the platform does not collect new physical measurements.",
+      "limits": "Five existing benchmarks retain official scorers. IRIS and the synthetic suite use trajectory reproduction skill; IRIS coverage is limited to dropped balls and differs from its original parameter-recovery evaluation. Hidden references are unavailable to agents. Default network access reaches only the model API. A systematic comparison of connected methods and model training are not demonstrated. Overlap detection misses some heavily compressed copies.",
+      "training": {
+        "reward": "A whole submitted program receives the score produced by the evaluation code after freezing and offline execution. Training scenes and user recordings use reproduction skill, 1 minus trajectory error divided by static-baseline error. Infrastructure failures receive no reward. Official benchmark datasets are evaluation-only. Offline fine-tuning, preference learning, and online reinforcement learning are supported as uses of exported tasks and rewards, but no trainer or trained model is supplied and no model training is demonstrated.",
+        "reset": "Programs can be rerun in isolated environments with the same random seed; two reruns are compared for reproducibility. Interrupted computations resume by input content. Arbitrary simulator-state reset during an agent session is not established.",
+        "branching": "Agents can edit and test candidate programs in their workspaces. Same-seed reruns are supported. Branching from saved simulator states or counterfactual physical states is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-61f4b5f38fd11161",
+      "resource_id": "paper-61f4b5f38fd11161",
+      "name": "Real2SimLab: A Unified Platform for Real-to-Simulation Transfer",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.34849"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-analysis",
+      "new_physical_experiments": false,
+      "openness": [
+        "The dataset, scoring pipeline, and per-row outputs and verdicts are described as released.",
+        "Dataset records preserve source post identifiers and author attribution.",
+        "Dataset content is distributed under applicable CC BY-SA licenses."
+      ],
+      "focus": "Answer fixed human-written puzzles from a public archive using supplied text, optional author hints, and attached images. Tool use is disabled. Evaluation checks answer equivalence against references derived from accepted answers; it does not execute research experiments or collect physical measurements.",
+      "limits": "Accepted answers can be wrong or non-unique, and reference extraction has limited human auditing. Harness prompts and reasoning settings differ across some models. Completion budgets are requested but not enforced, and timeout exclusion biases accuracy upward. The small dated slice cannot distinguish contamination from difficulty changes. Generalization beyond puzzle reasoning is not established.",
+      "training": {
+        "reward": "No training reward or model training is established. The evaluation scorer first applies normalized exact match, including numeric equivalence, then uses an LLM judge for answer equivalence when exact match fails. Accuracy counts accepted answers among non-errored rows; the judge does not grade reasoning.",
+        "reset": "Fixed puzzles can be evaluated again, and paired hint and image ablations are demonstrated. Interactive environment reset or saved-state restoration is not established.",
+        "branching": "Alternative model outputs and repeated evaluation conditions are compared offline. Interactive branching, simulator snapshots, and counterfactual execution are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-a7a760569ac6b0ac",
+      "resource_id": "paper-a7a760569ac6b0ac",
+      "name": "Puzzling-Bench: Evaluating Language Models on 23,777 Human-Written Puzzles with Community-Verified Answers",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.34331"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose searches, inspections, website edits, questions, waits, and completion within the local task websites.",
+        "Source annotations, answer roles, and evaluation labels are hidden from agents."
+      ],
+      "focus": "Browser task completion under changing evidence and requests. Local website simulations execute actions and return screenshots and accessibility trees. Physical observations are replayed real recordings, with scheduled request updates and fixed clarification replies; they are not new physical measurements.",
+      "limits": "Main episodes allow 20 decisions and composite episodes 30. Replay normally advances eight source seconds per active decision. Final-state scoring can credit unsupported guesses and does not require clarification. The clarification reply does not depend on question quality.",
+      "training": {
+        "reward": "Training reward is not established. The evaluator awards binary success when the normalized terminal website state matches any verified acceptable goal, including quantities and required fields, with no extra selections. Corrected intermediate mistakes incur no penalty (pages 5–6 and 16).",
+        "reset": "Each episode starts from an isolated website state, which persists during interaction. Standby resumes the same state. An agent-accessible reset operation is not established (pages 5–6).",
+        "branching": "Branching or restoration to an intermediate state is not established. Matched conditions use the same starting website state and final goal (page 8)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-d47f36447ed08fe0",
+      "resource_id": "paper-d47f36447ed08fe0",
+      "name": "EgoUseBench: Benchmarking Computer-Use Agents under Evolving First-Person Contexts",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.34466"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose investigation targets, experiments, and reporting decisions without entry-point hints, vulnerability classes, earlier reports, or seed proofs of concept.",
+        "Agents can inspect binaries and kernel state, compile and execute programs, attach crafted disk images, and restart or restore the target VM.",
+        "Campaigns are network isolated and cannot access other campaigns or harness code."
+      ],
+      "focus": "Open-ended defect discovery through executed experiments on production Windows kernel binaries in virtual machines. Feedback includes program execution, debugger observations, and captured kernel crashes; these are executed software computations rather than physical measurements or simulated physical dynamics.",
+      "limits": "Evaluation covers twelve targets on one discovery build, generally one campaign per model and target. Crash persistence on a newer build defines operational zero-day status. Exploitability and vendor confirmation are not established by that criterion. Final verdicts incorporate human corrections.",
+      "training": {
+        "reward": "Training reward is not established. Evaluation rebuilds and executes every submitted proof of concept on four fresh VM pairs. A single-shot LLM Judge assesses replay-supported validity, root-cause duplicates, and impact. Scores include unique bug counts and summed estimated bounties by impact class (pages 4–6).",
+        "reset": "Each campaign starts from fresh disposable VM images. Agents may restart or restore the target VM, and the Judge uses four fresh VM pairs per report (pages 4–5).",
+        "branching": "Fresh independent campaigns and report replays are supported. Forking an intermediate investigation state into alternative branches is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-047317805cb4ee90",
+      "resource_id": "paper-047317805cb4ee90",
+      "name": "Benchmarking Open-Ended Vulnerability Discovery in Windows Kernel Binaries",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.33486"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Models answer closed-set questions using the recorded observation prefix available at each designated query time.",
+        "Answers do not control the recorded episode or generate subsequent physical observations."
+      ],
+      "focus": "Evidence sufficiency, intention inference, response selection, and social outcome assessment over prerecorded egocentric videos. Temporal observation restrictions provide streaming evaluation over fixed recordings; proposed reactions are scored answers rather than executed robot actions.",
+      "limits": "Human experts determine intention decidability and reviewed answer labels. Questions are closed set. Interactive robot execution is described as future work, and causal streaming denotes access to observation prefixes rather than causal identification.",
+      "training": {
+        "reward": "Training reward is not established; models are evaluated zero-shot. Evaluation uses exact match or set F1, averages four stage scores, and reports intention anticipation discounted by premature commitments, engagement macro-F1, joint reaction exact match, and compliance diagnostics (pages 6–7).",
+        "reset": "Each question uses its designated recorded observation prefix. An interactive environment reset mechanism is not established.",
+        "branching": "Action-dependent branching is not established. Recorded futures remain fixed and are not affected by model answers."
+      },
+      "evaluation_family": "other",
+      "id": "paper-49c7ed7a9e9897fa",
+      "resource_id": "paper-49c7ed7a9e9897fa",
+      "name": "AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.34347"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents derive test scopes and behavioral oracles from requirements and explore the repository without issue descriptions or designated investigation locations.",
+        "Agents inspect source, author and execute tests, analyze failures, and submit evidence and locations.",
+        "Repaired snapshots, reference patches, and defect annotations remain reserved for evaluation."
+      ],
+      "focus": "Autonomous software investigation through test design, execution, and diagnosis on fixed repository snapshots containing recorded reference defects. Runtime feedback comes from executed software computations; the benchmark does not collect new physical measurements.",
+      "limits": "Covers Python repositories and recorded defects. Localization agreement does not independently validate every causal explanation or previously unrecorded defect. Independent replay of submitted Task 2 report evidence is not implied. Model comparisons combine models with production harnesses.",
+      "training": {
+        "reward": "Training reward is not established. Task 1 independently executes submitted tests on defective and repaired snapshots to score repaired-snapshot validity, repeated fail-to-pass discrimination, and coverage. Task 2 compares reported file, function, and hunk locations against reference annotations using precision and recall (pages 3–5).",
+        "reset": "Instances supply isolated Docker runtimes initialized with the unrepaired repository and requirements. Task 1 and Task 2 run independently. An agent-accessible reset during investigation is not established (pages 6, 15, and 19).",
+        "branching": "The evaluator executes tests against paired defective and repaired snapshots. Agent-accessible branching or restoration of intermediate runtime states is not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-19b4c66464eb3ea1",
+      "resource_id": "paper-19b4c66464eb3ea1",
+      "name": "SpecEngineeringBench: Evaluating Coding Agents as Autonomous Specification Engineers",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.32973"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose exploration paths and predefined navigation and object-interaction skills within fixed tasks and action budgets.",
+        "Ground truth and evaluation scores are withheld from agents.",
+        "Page 1 lists code and scene assets; release availability and licensing are not established by the supplied text."
+      ],
+      "focus": "Active spatial exploration, reasoning, and object relocation across 250 tasks in 27 Isaac Sim environments. Feedback consists of rendered camera views, simulated proprioception, action outcomes, collisions, and reachability reports. These are simulated observations, not new physical measurements. Recorded trajectories support audits and final-answer diagnostics (pages 2, 5, 15, 30–31).",
+      "limits": "Predefined high-level skills enforce geometry and access conditions before applying grasp, release, and articulation transitions. This evaluates simulated high-level decisions; hardware performance and learned low-level control are not established. Main agents do not receive evaluator depth. Oracle diagnostics use supplied recorded or generated views and obtain one final answer without further actions (pages 10, 29–31).",
+      "training": {
+        "reward": "A training reward or parameter-training procedure is not established. The independent evaluator checks outcome correctness A and required evidence N; strict success is A AND N. Stronger corroboration S is reported separately. Checks use simulator state, geometry, visibility, and ordered episode events; scores are withheld from agents (pages 5–7, 13–15).",
+        "reset": "Each episode starts from its specified scene state and camera pose. Agent-controlled resets or restoration of intermediate states are not established (pages 5 and 7).",
+        "branching": "Arbitrary simulator-state cloning or branching is not established. The oracle diagnostics modify final-answer inputs from completed trajectories without further environment actions (pages 9–10 and 28–30)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-a6aecb019028070c",
+      "resource_id": "paper-a6aecb019028070c",
+      "name": "ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.33143"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents act through UIverse graphical tools, inspect demonstration frames, and declare completion; internal state, verifiers, and answer keys are inaccessible.",
+        "Tasks, environments, demonstrations, verifiers, and the harness are stated to be publicly available on page 13.",
+        "The task set and three rule versions are hand-built; agents select actions within those fixed tasks."
+      ],
+      "focus": "In-context rule learning across 110 computer-use tasks and 50 robot-use tasks. Computer actions execute in stateful web applications and an OS desktop. Robot actions execute in an Isaac Lab physics simulator, returning camera views and motion feedback. Real-world human demonstration videos are recorded context; evaluated robot runs do not obtain new physical measurements (pages 2, 4, 9, 13).",
+      "limits": "The feedback classification covers executed digital applications; the robot component specifically uses physics simulation. No task combines both domains. Native agent frameworks differ across models. Hand-built tasks and interface operation limit isolation of rule learning from execution difficulty (pages 4, 6, 9).",
+      "training": {
+        "reward": "No parameter updates are used for the evaluated in-context learning. A training reward is not established. Hidden programs evaluate final application records, files, or simulator object poses, contacts, and joint states. Success requires the goal and all rule checks; process scores give partial credit, including weighted robot milestones capped at 0.9 for failed runs (pages 2, 6, 13–14).",
+        "reset": "Each episode creates an isolated world instance and fresh model session from a task, rule, modality, generalization level, and seed. REPLAY restores the demonstrated situation; RESAMPLE draws a new instance where supported; RELOCATE uses a counterpart environment. Agent-controlled intermediate resets are not established (pages 5 and 13).",
+        "branching": "Rule questions use a separate branch of the agent context after demonstration inspection and before the first action; their answers never reach the execution run. Arbitrary environment-state branching or agent-controlled checkpoint restoration is not established (page 6)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-6d0aa520156c58d3",
+      "resource_id": "paper-6d0aa520156c58d3",
+      "name": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.32649"
     }
   ]
 }

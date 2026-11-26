@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "scope": "Targeted review of downloaded full texts: author/affiliation front matter and specified body, results, discussion or technical sections. Page references identify consulted PDF pages, including selected passages; this is not a claim of exhaustive line-by-line reading or independent reproduction. Downloads alone never establish review completion.",
   "reviews": {
     "f04": {
@@ -41719,6 +41719,1108 @@
           1,
           5,
           23
+        ]
+      }
+    },
+    "paper-c170eb9509688676": {
+      "institutions": [
+        "Jilin University",
+        "Shanghai Jiao Tong University",
+        "Huazhong University of Science and Technology",
+        "Institute of Automation, Chinese Academy of Sciences"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A visibility-aware Writer incorporates image evidence into a fixed 3D lattice. A trajectory-conditioned Evolver advances its features, and a pose-queried Reader decodes occupancy. Training jointly supervises current occupancy, future occupancy, and ray depth. Evaluation uses Occ3D-nuScenes, forecasting horizons through eight seconds, perception-and-warp controls, state ablations, and alternative ego trajectories.",
+      "evidence": "At one to three seconds, average IoU increases from SparseWorld-TC's 48.69 to 67.82, while mIoU increases from 25.40 to 28.72. Unchanged-space IoU improves from 51.07 to 70.86 and unseen-space IoU from 40.92 to 62.71; changed-space IoU remains essentially equal, 45.35 versus 45.30. Average one-to-eight-second IoU improves by 21.58 points. Measured throughput is 23.15 versus 9.36 FPS.",
+      "discovery_use": "Contributes a persistent world representation that accumulates observations, retains previously observed structure, and predicts unobserved future space. This provides a concrete representation mechanism for agents reasoning beyond their current observations.",
+      "limits": "Evidence is confined to one driving dataset and short observation histories, with state resets every eight capture groups. Camera predictions are scored inside target camera masks; ground-truth-input results use different scoring coverage. Main results condition on ground-truth future poses, although alternative trajectories are tested. Unsignaled motion and never-observed structure remain difficult. Large geometric gains accompany smaller semantic gains; active exploration, causal identification, and discovery transfer are untested. All 17 supplied text pages were reviewed; only two pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "causality",
+        "rationale": "Contributes a persistent world representation that accumulates observations, retains previously observed structure, and predicts unobserved future space. This provides a concrete representation mechanism for agents reasoning beyond their current observations.",
+        "pdf_sha256": "ef001aa14c33c42d9c6ba10439ff58a7f2d861f402233f29d8fa9b0353a78b64",
+        "evidence_pages": [
+          1,
+          3,
+          16
+        ]
+      }
+    },
+    "paper-8a1c222c2e75ab21": {
+      "institutions": [
+        "University of Southern California",
+        "Amazon"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A factorial study covers 1,872 instances across nine benchmarks, four models, four skill conditions, four harness levels, and three budgets, with nearly 0.9 million trajectories. Comparisons hold other axes fixed. Failure labels are frozen before matched outcomes are examined. Additional experiments test skill transfer, stronger constructors, external factual evidence, and intervention-selection policies.",
+      "evidence": "A SQuAD skill's gain falls from 66.2 points under the minimal harness to 2.2 with execution feedback, largely reflecting answer formatting. Visible-error failures are much more recoverable on QA tasks, but this relationship is weaker on spreadsheets. A transferred optimized skill reduces Hotpot Context accuracy from 62.0% to 13.6%. On SimpleQA, own-fact skills barely help, whereas supplied retrieved passages substantially improve accuracy. A 20-task benchmark pilot outperforms always choosing the stronger model at lower reported cost.",
+      "discovery_use": "Provides a matched evaluation protocol for agent interventions, feedback-based recovery, and self-evolving skills. Its tests directly examine when retained experience improves capability and when agents require external information, making it relevant to evaluating discovery systems and self-improvement.",
+      "limits": "Main skills are constructed by Qwen3.5-9B and transferred unchanged, limiting conclusions about skills constructed separately for each model. H2 combines feedback with retries. Only 56.5% of source failures receive labels, and validation is uneven across domains; the supplied author check reports 78% overall agreement with particularly weak strata. LiveMath is excluded from failure-conditioned analyses. Per-task routing does not beat the fixed configuration, and most tested failure comparisons remain unsuccessful. This is a targeted review of supplied pages 1–16 and 41 of 57, with two rendered pages inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Provides a matched evaluation protocol for agent interventions, feedback-based recovery, and self-evolving skills. Its tests directly examine when retained experience improves capability and when agents require external information, making it relevant to evaluating discovery systems and self-improvement.",
+        "pdf_sha256": "af462b1c52d9c2cc3a35679cc2e84add0a076a55f9a518c6e372e87d2b440681",
+        "evidence_pages": [
+          1,
+          3,
+          11
+        ]
+      }
+    },
+    "paper-4f81071420d385cd": {
+      "institutions": [
+        "AMD",
+        "University of Michigan",
+        "Tulane University",
+        "Georgia Institute of Technology",
+        "University College London",
+        "University of California, Los Angeles",
+        "New York University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        6
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Two LLM families assess individual fail-to-pass assertions and generate executable alternative fixes to substantiate false negatives. Passing patches require executed regression counterexamples to count as false positives. The audit repairs statements or removes flawed tasks. GRPO training compares equal-sized, approximately difficulty-matched 512-task sets, a pass-rate-filtered control, and strengthened tests across three seeds, evaluated on repository-disjoint held-out benchmarks.",
+      "evidence": "The audit releases 1,087 tasks, including 184 repaired statements. In Orig, 74% of never-solved tasks are false-negative flawed versus approximately 20% of sometimes-solved tasks. Conservative counterexamples identify 26.1% of distinct passing patches as false positives. Sometimes-solved flawed tasks contribute 19.5% of gradient-carrying groups, so removing never-solved tasks misses most relevant errors. Audited training improves held-out scores by 2.4 and 2.7 percentage points. False-positive hardening shows no detectable held-out improvement.",
+      "discovery_use": "Studies the correctness of executable reward signals used to train coding agents. Its witness-and-counterexample audit concretely connects verification quality to learning, addressing how agents learn reliable problem solving rather than exploit faulty evaluators.",
+      "limits": "Experiments use one base model, scaffold, RL recipe, source collection, and an 80-step training budget. Removal, replacement, and repair effects are not isolated. Execution establishes test behavior, while witness reasonableness still relies on fallible LLM judgments with limited human checks. False-positive detection covers regressions with runnable counterexamples and leaves many patches undetermined. Three seeds cannot establish equivalence after hardening, and held-out tests can themselves mislabel patches. All 18 supplied text pages were reviewed; only two rendered pages were inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "learning",
+        "rationale": "Studies the correctness of executable reward signals used to train coding agents. Its witness-and-counterexample audit concretely connects verification quality to learning, addressing how agents learn reliable problem solving rather than exploit faulty evaluators.",
+        "pdf_sha256": "1588cbe11056966d14be715f744ab1214b781dc7da68ccfcfb970c4625d567df",
+        "evidence_pages": [
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    "paper-e42f05263c7122d4": {
+      "institutions": [
+        "Nanjing University",
+        "CASIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A library separates ten probing skills, three elicitation wrappers, and five answer formats. The inner loop permits two attempts, querying targets only after quality approval. An outer updater distills trajectories into target-specific rule edits, accepts improvements on validation data, and freezes rules before testing. Experiments split 2,000 images into 400 collection, 400 validation, and 1,200 test images across four target models.",
+      "evidence": "Mean valid hallucination discovery rises from 14.90% for single-pass generation to 24.33% with feedback and 27.67% with skill evolution, with automated validity of 98.17–99.17%. Budget-matched feedback beats independent best-of-two generation. Frozen evolved probes beat original POPE, AMBER, and PhD questions in all 12 matched single-query comparisons. Human auditing reports verifier precision of 95.1% and hallucination-judge precision/recall of 97.4%/97.8%.",
+      "discovery_use": "Its evaluator actively discovers previously unexposed model failures and converts probing experience into validated reusable rules, connecting adaptive evaluation with learning to discover.",
+      "limits": "The fixed taxonomy, one evolution round, and target-specific libraries limit evidence for broader continual discovery. Main single-pass versus feedback results change attempt budgets, though separate matched-budget ablations support feedback. Human evaluator audits cover GPT-5.2, and automated validity exceeds human-confirmed precision. Equal test-time target queries do not equalize prior collection and evolution costs. Generator choice substantially changes performance. The abstract’s 89.2% relative-improvement claim is unexplained: the 12 displayed relative gains average approximately 99.9%. No first-party artifact release was verified. Only pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Its evaluator actively discovers previously unexposed model failures and converts probing experience into validated reusable rules, connecting adaptive evaluation with learning to discover.",
+        "pdf_sha256": "6ae63d91ceed3ecef94347f9e476c9afdc7c95dd2fcd9ba6788078d94745cd27",
+        "evidence_pages": [
+          1,
+          6,
+          7
+        ]
+      }
+    },
+    "paper-f839edadeae6d529": {
+      "institutions": [
+        "TokenWave AI",
+        "The University of Tokyo",
+        "Carnegie Mellon University",
+        "Northwestern University",
+        "Weill Cornell Medicine",
+        "Yale University",
+        "Nanyang Technological University",
+        "Monolith Management",
+        "Stanford University",
+        "California Institute of Technology",
+        "Harvard University",
+        "University of New South Wales",
+        "Johns Hopkins University",
+        "University of Toronto"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Agents work offline for up to 12 hours with fixed local compute, development data, and a checker. Starter, agent, and expert solutions are graded on identical held-out instances. Task metrics are normalized between starter performance and an upper bound. Saved solutions are evaluated at five checkpoints; trajectory analysis examines method construction and validation.",
+      "evidence": "Claude Opus 5.5 and GPT-6.1 Sol score 39.6 and 38.2, versus the expert baseline’s 24.4, winning on 86% and 81% of tasks. Both have positive mean margins by two hours, although GPT’s interval still includes zero then; both intervals exclude zero by four hours. Method tracing classifies 51% of best methods as tailoring and 45% as combinations of existing methods. A documented validation failure demonstrates severe development-data overfitting.",
+      "discovery_use": "Directly benchmarks autonomous research agents improving solutions to open scientific problems through repeated experiments and held-out verification.",
+      "limits": "Tasks require automatically scored programs and exclude physical experimentation, new data collection, and human assessment. Each model-task pair has one run; bootstrap intervals measure variation across tasks rather than repeated-run uncertainty. Harness differences materially affect Grok’s stopping behavior. Expert baselines are budget-constrained implementations, rather than universal scientific frontiers. Most upper bounds need not be attainable. Novelty tracing relies on an LLM judge. The author-listed dataset could not be verified as publicly accessible; the supplied check returned 401, and web access also failed. RSI-Exam is cited prior work, not this paper’s release.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Directly benchmarks autonomous research agents improving solutions to open scientific problems through repeated experiments and held-out verification.",
+        "pdf_sha256": "b6cf4405696dbe8fe3954b99ae8b63e93feeb3108f7aa5c6ab87be60b277d268",
+        "evidence_pages": [
+          1,
+          4,
+          13
+        ]
+      }
+    },
+    "paper-2d31903b55705553": {
+      "institutions": [
+        "Beihang University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        9,
+        16
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs 637 L1 turns across 23 streams and 252 L2 turns across 18 streams. Selected cohorts evaluate five frameworks per backbone configuration under Reset, Frozen, and Evolving conditions. Measurements include final rewards, retry recovery, learning-state changes, and unseen probes.",
+      "evidence": "Across 19,635 scored positions, framework rankings and update benefits vary by task level and configuration. Only 24.75% and 27.63% of executions entering retries eventually pass for the two audited backbones. State changes and positive aggregate differences do not reliably indicate better unseen-probe performance.",
+      "discovery_use": "Directly evaluates whether agents retain, revise, and reuse experience across dependent tasks, including automated research workflows. Its separation of retries, persistent updates, and later transfer is valuable for evaluating learning to discover.",
+      "limits": "Targeted body review, with only two pages visually inspected. Cohorts, runtime revisions, and budgets differ; repeated-run uncertainty is unavailable. Some Evolving integrations lack a native learner. Missing state-removal and artifact-removal experiments prevent causal attribution of later gains to saved experience.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates whether agents retain, revise, and reuse experience across dependent tasks, including automated research workflows. Its separation of retries, persistent updates, and later transfer is valuable for evaluating learning to discover.",
+        "pdf_sha256": "d272ea5bc33078a9e6852b27d3cb193436d2e26f9a5bbd275274fddb6494d2d1",
+        "evidence_pages": [
+          1,
+          9,
+          16
+        ]
+      }
+    },
+    "paper-65a381c9fe2032c6": {
+      "institutions": [
+        "Zhejiang University",
+        "Tencent"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Wikipedia links are expanded into three-hop trees around 48 roots. Sampled branches generate 144 queries and 44,102 hidden relation rubrics. An LLM judges report coverage; recursive breadth and continuity-sensitive depth scores are combined geometrically. Evaluation covers 16 agents, human agreement, metric ablations, ranking sensitivity, and alternative construction models.",
+      "evidence": "Claude Opus 5 leads with 57.04% overall coverage. Binary rubric judgments achieve 0.893 Macro-F1 against human labels. Overall coverage correlates with expert ratings at Spearman 0.833, compared with 0.597 for flat coverage. Breadth and depth expose different agent strengths. Alternative construction preserves Claude’s mean lead but reduces its advantage.",
+      "discovery_use": "Directly evaluates research agents’ exploration of knowledge across directions and connected chains, providing a concrete discovery-capability evaluation.",
+      "limits": "Coverage is relative to selected Wikipedia relations, rather than unrestricted research novelty or comprehensive factual correctness. Trees have only three hops and two roots per domain. Partial satisfaction receives zero metric credit. Construction-model sensitivity remains despite the small robustness study. Native-search systems and the fixed-corpus harness differ in retrieval conditions. This was a targeted review of supplied body sections and selected appendix pages, with only two pages visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates research agents’ exploration of knowledge across directions and connected chains, providing a concrete discovery-capability evaluation.",
+        "pdf_sha256": "6f52c3ae1dc7063a4ffd7843c803ec81664bd36a5de3fafb9f265c1d33bb34d5",
+        "evidence_pages": [
+          1,
+          5,
+          7
+        ]
+      }
+    },
+    "paper-c4e824cf8ebe18c6": {
+      "institutions": [
+        "Imperial College London",
+        "Microsoft Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A deterministic orchestrator coordinates six LLM roles for claim extraction, independent acceptance-contract construction, obligation criticism, procedure proposal, execution, and evidence audit. Evaluation uses 445 Terminal-Bench traces and online comparisons on FrontierMath, Terminal-Bench, and CyberGym.",
+      "evidence": "Selects passing candidates in 30 of 36 mixed pools versus 24 for the same-model text baseline; overall credit is 80 of 89. Online successes rise from 8 to 11, 63 to 73, and 37 to 45 across the three benchmarks. A retained numerical counterexample exposes an incorrect solution accepted by the benchmark.",
+      "discovery_use": "Provides a concrete method for agents to verify claims through executable checks, preserved evidence, and explicit abstention. This directly supports reliable hypothesis checking and agent improvement, with demonstrated mathematical and computational applications.",
+      "limits": "One fixed offline pool and one run per online arm limit certainty; FrontierMath has only 12 problems. Verification adds roughly tenfold wall time and remains model-dependent. Equation 10 uses advisory violations for tie-breaking, while Figure 2 and Appendix B specify verified contract coverage, leaving the ranking rule inconsistent. Authority circularity and overly literal contracts cause errors.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "sci_methods",
+        "rationale": "Provides a concrete method for agents to verify claims through executable checks, preserved evidence, and explicit abstention. This directly supports reliable hypothesis checking and agent improvement, with demonstrated mathematical and computational applications.",
+        "pdf_sha256": "958b63f1a573a18f6d91add4513280a7bfb6f04ed09261a17a00e10b4fc46040",
+        "evidence_pages": [
+          1,
+          4,
+          9
+        ]
+      }
+    },
+    "paper-3926141d652838da": {
+      "institutions": [
+        "Harbin Institute of Technology",
+        "Hong Kong Polytechnic University",
+        "Southeast University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        18
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Separates current-view candidate assessment from history-conditioned action selection. Depth localizes candidates and supports bounded waypoint motion and reactive obstacle checks. Evaluations cover two object-search benchmarks, aerial navigation transfer, same-backbone comparisons, and component ablations.",
+      "evidence": "Reports 41.61% success on UAV-ON and 11.98% on AerialDojo-200K, versus strongest reported baselines of 23.80% and 3.20%. Same-backbone comparisons also favor the agent. Removing motion checks raises collision rate from 10.23% to 61.12% in the 40-decision ablation.",
+      "discovery_use": "Contributes an agent that actively explores unfamiliar environments, gathers observations to resolve uncertain target identities, and grounds stopping decisions in fresh visual and geometric evidence. This is a concrete embodied discovery capability.",
+      "limits": "Evidence is from simulated benchmarks, without demonstrated physical deployment or retained learning across episodes. Depth errors and false semantic confirmations cause failures. AerialDojo reproductions use estimated depth following simulator diagnostics, whereas published baselines retain their original settings. Transfer uses benchmark-specific adjustments and L1 assistance; reported gains are percentage points.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "systems",
+        "rationale": "Contributes an agent that actively explores unfamiliar environments, gathers observations to resolve uncertain target identities, and grounds stopping decisions in fresh visual and geometric evidence. This is a concrete embodied discovery capability.",
+        "pdf_sha256": "cba34c3b4f609f5694229c3fd58f0570ba0696ddf32970237b8005f5755e1448",
+        "evidence_pages": [
+          1,
+          4,
+          18
+        ]
+      }
+    },
+    "paper-bb834545ea072825": {
+      "institutions": [
+        "Shanghai Jiao Tong University",
+        "Shanghai Innovation Institute",
+        "JD.com"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Mixed-outcome groups use GRPO, successful groups are skipped, and all-fail groups trigger splicing. A stronger model selects a restorable point and proposes three bounded options. Three learner continuations estimate each option's success probability. Positive options receive standardized-return softmax weights for local, length-normalized supervised updates.",
+      "evidence": "Across two policy families and SWE-bench Verified and BrowseComp-Plus, SPLICE improves GRPO by 2.8–9.8 percentage points. Initially failed SWE-task graduation rises from 8.1% to 18.9%. Compared with ReLIFT, proposal-model turns decrease from 113.4k to 93.5k while performance improves. Ablations support continuation verification and return weighting.",
+      "discovery_use": "Directly improves learning from failed investigations through locally proposed alternatives and outcome verification, including demonstrated gains for long-horizon research agents.",
+      "limits": "Multiple continuations add environment execution cost, and three samples give noisy option values. Stateful tasks require restoration or faithful replay. Baselines share task data rather than identical computation. The target-weighting proposition concerns empirical candidate returns, not guaranteed policy improvement. No first-party release was verified in the bounded search. Only supplied pages 1 and 3 were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "learning",
+        "rationale": "Directly improves learning from failed investigations through locally proposed alternatives and outcome verification, including demonstrated gains for long-horizon research agents.",
+        "pdf_sha256": "78b5b79158955ac5784f51a364395d3e79fb3ab23cf4eda697f5bb35a1f5e70d",
+        "evidence_pages": [
+          1,
+          4,
+          10
+        ]
+      }
+    },
+    "paper-11d273069ded62ba": {
+      "institutions": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        16,
+        38
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Executable SQL anchors question synthesis, while an error-attribution graph guides targeted data generation. Filtered teacher trajectories support iterative supervised tuning and a separate reinforcement-learning stage. Recurrent repair intents trigger bounded prompt and skill edits, checked through independent audits, execution replay, regression evaluation, and consolidation.",
+      "evidence": "Sports-Normal accuracy rises from 83.5% to 97.8%, and Sports-Hard from 45.7% to 74.0%. General SQL benchmark results improve on most metrics, although Post-RL slightly reduces LiveSQLBench Large reward. On a shared 500-question evaluation, factual correctness rises from 75.8 to 86.3 and latency falls from 26.4 to 15.5 seconds. Thirty harness versions improve aggregate score by 10.8 points.",
+      "discovery_use": "The primary contribution connects runtime evidence, factual verification, failure investigation, retained diagnostic experience, and validated model and harness updates. These mechanisms directly support agents learning from unknown failure causes and improving their investigative capabilities.",
+      "limits": "Correctness partly depends on LLM judges, and response length is only a proxy for informational richness. Combined model and harness changes do not isolate each mechanism's contribution. Repeated evaluation of successive versions on one fixed test set limits evidence of long-term generalization. The authors acknowledge largely separate evolution loops and substantial human involvement in review and deployment. This is a targeted review of supplied sections from a 48-page report. No first-party release was verified; supplied BIRD links are external benchmarks.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "adaptation",
+        "rationale": "The primary contribution connects runtime evidence, factual verification, failure investigation, retained diagnostic experience, and validated model and harness updates. These mechanisms directly support agents learning from unknown failure causes and improving their investigative capabilities.",
+        "pdf_sha256": "4df87179838624afc841f5e01df4ff204a68ab616dab14d40f43de9cf9411233",
+        "evidence_pages": [
+          1,
+          16,
+          38
+        ]
+      }
+    },
+    "paper-134b79e1fb670581": {
+      "institutions": [
+        "Department of Electronic Engineering, Tsinghua University",
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The agent issues up to five absolute end-effector keyposes per call, with a planner executing intermediate motion. Selected pixels receive source-tagged 3D measurements. On separate layouts, independent rollout series generate experience notes; merging retains lessons supported by at least two rollouts and freezes at most five rules per task plus general rules.",
+      "evidence": "Reports 74.5% success on RoboDojo, 84.5% on RoboLab, and 75 successes in 85 zero-shot physical episodes. Experience raises the cheaper-model RoboDojo result from 61.5% to 68.0% and RoboLab from 79.8% to 84.5%. Continuing note rewriting eventually degrades performance, whereas merged frozen rules remain more stable. Grouping keyposes reduces model calls substantially without a clear success change.",
+      "discovery_use": "Provides a concrete feedback-to-retained-experience mechanism: an agent extracts, corroborates, and consolidates reusable rules from execution, improving behavior on unseen layouts.",
+      "limits": "Slow model calls and absent force feedback restrict contact-rich and dynamic tasks. Demonstration compression establishes geometric sparsity, not successful replay. Leaderboard comparisons differ in model, guides, experience, and evaluation budgets. Physical evaluation covers few trials per task; timing uses episodes with complete logs. Only supplied pages 1 and 2 were visually inspected. The project association and availability are verified by the supplied PDF annotation and HTTP check; the web reader could not retrieve it.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "adaptation",
+        "rationale": "Provides a concrete feedback-to-retained-experience mechanism: an agent extracts, corroborates, and consolidates reusable rules from execution, improving behavior on unseen layouts.",
+        "pdf_sha256": "da6e40cf3fd196b4d44e3c4e5b0d3f1f2f80d9342d1604f5ff1403c8e5a82308",
+        "evidence_pages": [
+          1,
+          5,
+          8,
+          12
+        ]
+      }
+    },
+    "paper-7f2029d0ffba62dc": {
+      "institutions": [
+        "Nanyang Technological University",
+        "Microsoft Research",
+        "National University of Singapore"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "PAEB stores measured transitions, execution context, provenance, and evidence references. SEPP derives actions and checks progress from current observations. A fixed model revises procedures during stalls and consolidates versions after attempts. Evaluation compares retained snapshots with a no-carryover control on unseen layouts, with a two-component carryover ablation on nine tasks.",
+      "evidence": "Across 42 RoboDojo tasks, ten evolution attempts raise score from 27.0 to 54.4 and success from 19.7% to 48.0%. On the nine-task ablation, evidence alone scores 57.3, procedures alone 47.5, and both 70.4. With GPT-6.2 Astra on 34 tasks, five attempts yield 80.1 versus 49.6 for direct acting, with 14.1 versus 63.2 requests per episode. Four real tasks improve from 66.9 to 83.3.",
+      "discovery_use": "SEEK directly studies cumulative discovery from execution: agents retain measured action effects, use failed attempts as evidence, and revise reusable procedures while keeping model weights fixed.",
+      "limits": "Knowledge accumulates separately for each task; cross-task transfer and long-term evidence maintenance remain untested. Perception, executor, and action interfaces remain fixed. The GPT-6.2 comparison excludes Open tasks, while broader leaderboard comparisons use differing experience and reasoning protocols. Component ablations and real-robot tests cover small subsets; fewer inference requests do not account for the full cost of evolution attempts.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "adaptation",
+        "rationale": "SEEK directly studies cumulative discovery from execution: agents retain measured action effects, use failed attempts as evidence, and revise reusable procedures while keeping model weights fixed.",
+        "pdf_sha256": "0c5981d0f123dc90d6421df355f0c47a3cefc36c3b65198618daa0ee23a443a8",
+        "evidence_pages": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    "paper-4c2fad959c80a815": {
+      "institutions": [
+        "The University of Hong Kong",
+        "Zhejiang University",
+        "Southern University of Science and Technology",
+        "The Chinese University of Hong Kong, Shenzhen",
+        "City University of Hong Kong"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A coding agent explores Code, Code+ICL, and Code+Policy repair routes. Verified successes are selected by normalized motion jerk and integrated into skills, memory, and routing. Policy training combines supervised trajectories, same-state corrective preferences, failure-aware sampling, and EWC. Candidate updates undergo matched development evaluation before retention.",
+      "evidence": "After eight LIBERO-PRO rounds, standalone success rises from 11.0% to 84.1% and hybrid success reaches 90.5%; three repeated runs average 83.7% ± 1.4% standalone success. RoboTwin standalone success reaches 77.5% using 7.5K trajectories, versus 76.8% for conventional training with 27.5K. Joint evolution and corrective-preference ablations support the proposed loop.",
+      "discovery_use": "Directly studies recursive capability discovery: policy failures guide verified program repairs, retained harness experience, and policy updates that improve subsequent solution search.",
+      "limits": "Discovery operates over fixed atomic skills and perception tools, with task-level success checks selecting training data. Real-robot evidence covers four tasks with ten evaluation trials each, and operators approximately restore failed scenes. Published competitor results retain differing protocols. Reported API savings do not establish total training-cost savings. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "open_ended",
+        "rationale": "Directly studies recursive capability discovery: policy failures guide verified program repairs, retained harness experience, and policy updates that improve subsequent solution search.",
+        "pdf_sha256": "3ad44d96bae9ae53090f2117350d2537b4747300ad6094665c0fc23696ce0d49",
+        "evidence_pages": [
+          1,
+          5,
+          8
+        ]
+      }
+    },
+    "paper-61f4b5f38fd11161": {
+      "institutions": [
+        "State Key Laboratory of General AI, School of Intelligence Science and Technology, PKU",
+        "Ngoro Robotics",
+        "School of Physics, PKU",
+        "The University of Hong Kong"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Method and benchmark adapters share task and deliverable formats. Visible inputs are separated from hidden references; deliverables are frozen, fingerprinted, rerun offline, and scored. Five benchmarks retain official scorers; IRIS and synthetic tasks use trajectory reproduction skill relative to a static baseline.",
+      "evidence": "Connects 47 coding agents and five non-agent methods to six benchmarks. Adapter checks reproduce selected official results, and the synthetic generating program achieves reproduction skill 1. Recording-overlap detection finds 36 of 40 transformed synthetic copies and all 27 Physics-IQ clips reused by PhysCodeGym.",
+      "discovery_use": "Provides evaluation infrastructure for agents inferring executable physical world representations from observations, with reproducibility checks and held-out verification.",
+      "limits": "There is no systematic comparison of connected agents and no demonstrated model training. IRIS coverage includes only dropped balls, one of eight classes, and its reproduction scores are not comparable with original parameter-recovery scores. Overlap detection misses heavily compressed copies. Only supplied pages 1 and 2 were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Provides evaluation infrastructure for agents inferring executable physical world representations from observations, with reproducibility checks and held-out verification.",
+        "pdf_sha256": "29e82d4e9dd0dd942668a163477995448aad84774b929a938a7dd93adb69b00c",
+        "evidence_pages": [
+          1,
+          3,
+          6,
+          10
+        ]
+      }
+    },
+    "paper-fa6c10ecd06c3bd1": {
+      "institutions": [
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        7,
+        10
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Orthogonal prediction and residual aggregates feed conjugate Gaussian posterior updates. A posterior MDP expresses terminal Bayes simple regret, and residual horizon optimization reduces each allocation decision to a simplex optimization approximated by Monte Carlo gradients. A delayed-proxy ablation separates estimation benefits from advance-information benefits.",
+      "evidence": "Synthetic experiments place RHOPE or its delayed variant lowest in relative simple regret across the reported settings. With known moments on GDSC, Claude-based RHOPE scores 38.70% of uniform-allocation regret, versus 42.55% for RHO and 38.54% for the delayed variant. Most gains arise from improved estimation; advance information adds smaller, inconsistent empirical gains.",
+      "discovery_use": "RHOPE directly improves experimental allocation for learning unknown treatment outcomes under a fixed measurement budget. Its separation of proxy-assisted estimation from advance information is concretely relevant to discovery-oriented experimental design.",
+      "limits": "The theory concerns a Gaussian sequential experiment with specified priors and moments; its PPI++ identity does not transfer independent-sampling guarantees to adaptive data. Weak proxies can harm performance, as illustrated by ridge predictions. GDSC evaluation is semi-synthetic rather than prospective experimentation. Supplied pages cover 1–16 of 49; estimated-moment appendix experiments were not available for assessment. No first-party release was verified in the bounded search.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "sci_methods",
+        "rationale": "RHOPE directly improves experimental allocation for learning unknown treatment outcomes under a fixed measurement budget. Its separation of proxy-assisted estimation from advance information is concretely relevant to discovery-oriented experimental design.",
+        "pdf_sha256": "8f31a3e12dc2a74aa3369747cdecfde6eafac786310dd168dd8b9000d82c21dc",
+        "evidence_pages": [
+          1,
+          7,
+          10
+        ]
+      }
+    },
+    "paper-a7a760569ac6b0ac": {
+      "institutions": [
+        "University of Massachusetts Amherst",
+        "University of Southern California",
+        "University of Oregon",
+        "University of Texas at Dallas",
+        "Vanderbilt University",
+        "Texas A&M University",
+        "University of Missouri",
+        "Cisco",
+        "University of Georgia",
+        "Dolby Laboratories",
+        "Zillow",
+        "Adobe Research"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Filters a public Puzzling Stack Exchange dump and extracts short reference answers. Evaluates nine models on a fixed 255-puzzle text set and two models on 100 image puzzles. Scores normalized exact matches first, then answer equivalence through an LLM judge; compares three judges and conducts hint and image ablations.",
+      "evidence": "The strongest model scores 74.8% on non-errored text-pilot rows. Seventeen puzzles resist all nine models on their 193-puzzle common subset, while oracle coverage reaches 91.2%. Images contribute approximately 24–35 percentage points. Judge changes move scores by at most 1.6 points, but references and timeout exclusions also affect results.",
+      "discovery_use": "Provides a verified-answer evaluation of lateral reasoning, hidden-pattern inference, and solution discovery, with useful controls for hints, scoring, and contamination. Its connection is to discovery reasoning rather than autonomous scientific research.",
+      "limits": "Generalization from puzzle skill to broader discovery remains unestablished. Accepted answers can be wrong or non-unique; references receive limited human auditing. Harness and reasoning-effort differences confound comparisons, timeout exclusion inflates some scores, and the small post-cutoff slice cannot distinguish contamination from difficulty drift. All 15 supplied text pages were reviewed; only two pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Provides a verified-answer evaluation of lateral reasoning, hidden-pattern inference, and solution discovery, with useful controls for hints, scoring, and contamination. Its connection is to discovery reasoning rather than autonomous scientific research.",
+        "pdf_sha256": "5ed4ffe3dfe3bd0e134b6f0ba5868b995b600589c9a37d0d60bcb2f8d5d3b0cf",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-955a12b2feff56ed": {
+      "institutions": [
+        "Miami University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The authors evaluate SED with its own judge controlling memory writes in AgentDojo. They compare clean and poisoned memories across ten repetitions, test persistence and cross-model transfer, and evaluate matched benign counterexamples and an automatic policy broadness gate. Additional experiments probe five direct integrity attacks.",
+      "evidence": "Nemotron legitimate-task success falls from 50/50 to 18/50 after one poisoned episode, with over-refusal in all ten repetitions. Unrelated tasks remain successful and injection success is 0/60. In a separate mitigation batch, success rises from 52% to 82% with counterexamples and 88% with the gate. Mitigation ordering reverses on gpt-oss, and neither restores clean utility.",
+      "discovery_use": "The paper identifies and mitigates a concrete failure of feedback-driven agent adaptation: retained experience produces overgeneralized rules that impair future behavior. This directly informs reliable continual learning and self-improvement.",
+      "limits": "The study tests one defense, fixed learning components, and mainly Slack membership tasks. Poisoning requires an initially successful injection. Mitigation estimates condition on successful poisoning admission. Serving variability produces different poisoned baselines across batches. Self-poisoning is qualitative. DeepSeek lacks the matched eight-carrier Slack and banking screen shown for other models, so its resistance evidence is narrower than some narrative claims suggest.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "adaptation",
+        "rationale": "The paper identifies and mitigates a concrete failure of feedback-driven agent adaptation: retained experience produces overgeneralized rules that impair future behavior. This directly informs reliable continual learning and self-improvement.",
+        "pdf_sha256": "e87a1634f18d0b4e69359551973f38c4d514d6b7bc85dd2b9cd79672cee9c52d",
+        "evidence_pages": [
+          1,
+          3,
+          9
+        ]
+      }
+    },
+    "paper-08d8d6e9b61cb83e": {
+      "institutions": [
+        "College of Biomedical Engineering, Fudan University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A frozen ImageNet-pretrained ViT retains shared shallow adapters and conditionally adds deep adapters. A classifier two-sample test compares incoming features with Gaussian references reconstructed from class means and covariances. New adapters receive an orthogonality constraint; balanced Gaussian pseudo features recalibrate a unified classifier. Prototype similarities guide Top-K adapter fusion.",
+      "evidence": "Table II reports average incremental accuracies of 77.98%, 94.86%, and 84.64% on Skin8, Kvasir-V2, and Path16. Skin8 improves from CRCL's 75.04% to 77.98%, a 2.94-point gain, with additional parameters reduced from 2.44M to 1.99M. Gaussian recalibration reduces old-to-new misclassification from 27.7% to 13.1%. Conditional allocation outperforms always expanding and always reusing.",
+      "discovery_use": "PICE contributes continual learning through retained statistical experience, conditional capacity growth, and consolidation without historical images. This directly fits continual discovery training, even though autonomous identification of unknown categories remains outside its demonstrated capabilities.",
+      "limits": "New categories and task boundaries are supplied; the model cannot autonomously discover unknown diseases. Gaussian memory and the expansion threshold constrain applicability. Parameter counts omit statistical-memory storage and do not establish total deployment cost. Abstract retention figures are not reconciled with page 8's 64.3% final-stage old-task accuracy. Evaluation is retrospective classification rather than clinical deployment, and uncertainty across repeated runs is not reported in the supplied tables. No first-party release was verified.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "adaptation",
+        "rationale": "PICE contributes continual learning through retained statistical experience, conditional capacity growth, and consolidation without historical images. This directly fits continual discovery training, even though autonomous identification of unknown categories remains outside its demonstrated capabilities.",
+        "pdf_sha256": "f3e9e09919b7a203a55c55c4a34d59cee21aef54d95b93a9777cbbf3abbde9a1",
+        "evidence_pages": [
+          1,
+          4,
+          12
+        ]
+      }
+    },
+    "paper-d47f36447ed08fe0": {
+      "institutions": [
+        "Zhejiang University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        6,
+        24
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The benchmark contains 293 Online tasks and 200 matched versions in each of two comparison settings. Frozen websites support executable final-state checks over verified acceptable outcomes. Main comparisons hold websites and goals fixed while varying information delivery. Additional experiments manipulate history, alerts, replay pace, and request updates; trace audits examine how success was reached.",
+      "evidence": "Across six models, mean success is 86.1% for Computer-Use, 64.2% Offline, and 63.4% Online. The Online decline from Computer-Use is 22.7 percentage points, or 26.3% relatively. Online uses fewer tokens than Offline, but their aggregate success rates are similar. New visual evidence invalidating earlier choices is particularly difficult, and additional request updates do not consistently reduce success.",
+      "discovery_use": "Evaluates agents acquiring missing information, revising interpretations under new evidence, and correcting persistent actions. These are concrete discovery and verification capabilities under partially observed, changing conditions.",
+      "limits": "Final-state success can reward unsupported guesses: 69 of 78 audited successful Clarify runs selected while the referent remained unresolved. Clarification returns a fixed reply, so question quality is not evaluated. Most conditions have one run per task. Main tasks are dominated by shopping and tutorial retrieval, with only one place-bookmarking task. Local websites and step-based replay limit ecological validity. Only the two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Evaluates agents acquiring missing information, revising interpretations under new evidence, and correcting persistent actions. These are concrete discovery and verification capabilities under partially observed, changing conditions.",
+        "pdf_sha256": "eeeab64eb4c9a577100c1753531b71f9ffcd7955af355e7fb1522c57a469bc64",
+        "evidence_pages": [
+          1,
+          3,
+          6,
+          24
+        ]
+      }
+    },
+    "paper-4a9030e27723d000": {
+      "institutions": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "DexForce Technology Co., Ltd.",
+        "Foshan University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Agents reconstruct and replay existing episodes, accepting real–proxy pairs only when visible-object silhouette IoU passes 0.80 checks. These pairs adapt video renderers. For new scenes, an agent reconstructs assets and revises pose-aware control programs using execution feedback; successful randomized rollouts are rendered while retaining simulator actions and states.",
+      "evidence": "The pipeline constructs 1,884 aligned pairs. Three reconstruction refinements raise episode acceptance from 33.1% to 39.7%. On three real-robot tasks, 50 generated demonstrations per task yield 60.0% mean π0.5 success, versus 27.8% from the same simulator trajectories and 62.2% from 50 real demonstrations. Paired renderer adaptation improves success over released H3 from 44.4% to 60.0%.",
+      "discovery_use": "Provides a concrete embodied discovery harness: agents infer scene geometry, revise reconstructions against observational evidence, and develop execution-verified programs that supply new policy-training experience.",
+      "limits": "The primary evaluation establishes demonstration quality and manipulation transfer, rather than sustained autonomous investigation. Real-robot tests cover three tasks with 30 trials per condition. Cross-view consistency and autoregressive drift remain unresolved. Cost savings are projections excluding renderer training, and appearance variations were represented during training. The dataset release is promised rather than verified. Only two supplied pages were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "systems",
+        "rationale": "Provides a concrete embodied discovery harness: agents infer scene geometry, revise reconstructions against observational evidence, and develop execution-verified programs that supply new policy-training experience.",
+        "pdf_sha256": "bb7c23031ee121ab9d0bd44e7214cdab409649ba636336fc6a76763ac5dee29c",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-e6e5f098e61efd93": {
+      "institutions": [
+        "Shanghai Jiao Tong University",
+        "Shanghai Innovation Institute",
+        "JD.com"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "A frozen student sometimes begins a trajectory before a teacher completes it; only verified completions enter the replay pool. A hindsight selector retains 40% of eligible teacher turns. During training, the current student generates one response from a selected stored prefix, receives reverse-KL teacher supervision, and discards the lowest-confidence 10% of candidate updates.",
+      "evidence": "Qwen3.5 SWE-bench Verified success reaches 59.5%, versus 57.1% for asynchronous one-turn OPD and 53.7% for vanilla replay. End-to-end time falls from 5.5 to 3.0 hours and environment actions from 308.1k to 171.2k. BrowseComp-Plus reaches 49.6%, versus 47.1% for synchronous one-turn OPD. Controlled allocation experiments favor hindsight selection over equally sized random subsets.",
+      "discovery_use": "Contributes evidence-directed training for research agents by selecting consequential diagnoses, corrections, and verification decisions from completed investigations.",
+      "limits": "Stored histories come from a frozen initial student and can become stale as training progresses. Replayed responses are never executed, and teacher confidence indicates certainty rather than correctness. Qwen3 Deep Research training is omitted because the teacher advantage is small. No first-party release was verified in the bounded search. Only supplied pages 3 and 9 were visually inspected.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "learning",
+        "rationale": "Contributes evidence-directed training for research agents by selecting consequential diagnoses, corrections, and verification decisions from completed investigations.",
+        "pdf_sha256": "c6bb329fd6fcf1843baf63a71f7dcc45c13e3e6c3d842569a9abbb44a321db86",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-e4a02c27e3b16a70": {
+      "institutions": [
+        "Zhejiang University",
+        "Shanghai Innovation Institute"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Reforge contains 62,125 simulated trajectories across 96 assets and 300 real failure trajectories across ten additional assets. Post-training uses 25.6k segments, with 45% failure-related examples. Interaction Alignment adds area-normalized object-region reconstruction; Surface Correspondence supervises intermediate features using simulator-projected surface tracks. Evaluation separates object motion, gripper motion, reconstruction, visible integrity, and paired-action response differences.",
+      "evidence": "Cosmos3 Nano object ADE decreases from 9.07 to 6.51 pixels, including a 35.0% reduction on unseen assets. Response Difference Error falls 43.3% on 100 action pairs. DROID and real-failure PSNR improve by 1.04 and 0.68 dB. Most object-motion improvement comes from the dataset: auxiliary losses add a 4.4% reduction over matched base post-training. DreamDojo object ADE worsens versus its pretrained checkpoint, despite improving over base post-training.",
+      "discovery_use": "It strengthens action-conditioned world representations for predicting unfamiliar physical consequences, including failures and differences between alternative actions. This directly supports agents reasoning about interventions beyond successful demonstration coverage.",
+      "limits": "Predictions cover 16 future frames, approximately one second. Real-world transfer is established through reconstruction and visual-quality measures, without real-world motion ground truth or closed-loop control evaluation. Simulated motion scores depend on CoTracker measurements, and visible integrity uses a model judge. Direct code, dataset, and checkpoint destinations were not independently verified within the browsing budget; the author project page was verified.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "causality",
+        "rationale": "It strengthens action-conditioned world representations for predicting unfamiliar physical consequences, including failures and differences between alternative actions. This directly supports agents reasoning about interventions beyond successful demonstration coverage.",
+        "pdf_sha256": "d74f45f941f7f629fcb6abfdf31029c83b52da774890d59af6e8cfd253d17b72",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-047317805cb4ee90": {
+      "institutions": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        13
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Agents investigate twelve targets through interchangeable disassemblers, a kernel debugger, and isolated VM tools under output-token budgets. A separate Judge replays each submitted proof of concept on four fresh VM pairs and assesses validity, duplicates, and impact. Patch dating estimates potential training exposure; newer-build replay tests whether findings persist.",
+      "evidence": "Across 204 campaigns, the authors report 146 distinct defects whose proofs of concept still crash the September reference build. The main comparison yields 248 findings counted within individual models, rather than globally distinct defects. Discovery yield and continued progress differ substantially across models. Removing symbols or the disassembler server reduces the strongest model's yield by 37% and 67%, respectively.",
+      "discovery_use": "DeepBinary directly evaluates autonomous discovery of unknown defects, sustained investigation, experimental verification, and root-cause reasoning without supplying target bugs or search strategies.",
+      "limits": "Evaluation covers one Windows build and generally one campaign per model–target pair; model and harness effects are partly confounded. Crash persistence defines operational zero-day status without establishing exploitability or vendor confirmation. Bounties are estimates. Judge validation uses small constructed test sets, and final counts include human corrections. Disassembler improvement intervals include parity. The public repository supplies a project overview; the framework and benchmark materials are not publicly distributed.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "DeepBinary directly evaluates autonomous discovery of unknown defects, sustained investigation, experimental verification, and root-cause reasoning without supplying target bugs or search strategies.",
+        "pdf_sha256": "f9bde38faa0d5c4d08cb5145b01b93061c14ab646ea7e3a992575b0e2b788b8c",
+        "evidence_pages": [
+          1,
+          3,
+          13
+        ]
+      }
+    },
+    "paper-49c7ed7a9e9897fa": {
+      "institutions": [
+        "Tencent Robotics X Lab"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        9
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs 8,000 expert-reviewed questions from 357 egocentric clips across 36 capabilities. Four temporal anchors control observation availability. Evaluates 45 models using stage scores, false commitment rates, intention anticipation, and joint reaction correctness.",
+      "evidence": "The leading overall score is 72.6%, with Attention reaching 93.6%. Nevertheless, model-family premature commitment rates range from 26% to 51%, and no model exceeds 14.7% joint reaction correctness. Strong perception therefore does not establish calibrated inference or coherent response composition.",
+      "discovery_use": "Directly evaluates evidence sufficiency, inference of unknown intentions, calibrated abstention, and action selection under incomplete observations. These are concrete discovery-reasoning capabilities.",
+      "limits": "Uses recorded videos and closed-set questions rather than interactive robot execution or open-ended investigation. Human judgments determine when intentions become decidable. Causal streaming denotes observation-prefix restrictions, not causal identification. Review covers supplied pages 1–16 of 48 and the two supplied images.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates evidence sufficiency, inference of unknown intentions, calibrated abstention, and action selection under incomplete observations. These are concrete discovery-reasoning capabilities.",
+        "pdf_sha256": "6e17b7c8c94afdd47b5da29785b7b340da03efcd391d39f874d7b1c6e83ab345",
+        "evidence_pages": [
+          1,
+          5,
+          9
+        ]
+      }
+    },
+    "paper-19b4c66464eb3ea1": {
+      "institutions": [
+        "TokenWave AI",
+        "Independent Researcher",
+        "The University of Tokyo",
+        "Monolith Management, US"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Provides 100 instances from 78 Python repositories containing 531 recorded defect occurrences. Task 1 executes generated tests against defective and repaired snapshots. Independent Task 2 scores reported locations at file, function, and hunk levels. Seven model–harness systems are evaluated.",
+      "evidence": "Mean repaired-snapshot pass rate is 91.47% and changed-line coverage is 80.48%, but only 26.36% of generated tests distinguish defective from repaired behavior. Function localization recall is 51.29%, versus 78.11% for files. Multi-file bug localization reaches only 2.00%–7.84%. Authored tests improve recall while reducing precision.",
+      "discovery_use": "Directly evaluates agents discovering unknown software defects through requirements interpretation, autonomous test design, execution, and diagnosis without issue descriptions or designated investigation locations.",
+      "limits": "The benchmark covers Python repositories and recorded reference defects. Localization agreement does not independently establish every report's causal explanation or validate previously unrecorded bugs; independent replay of submitted report evidence is not implied. Model comparisons also combine different production harnesses. The paired authored-test comparison uses one model–harness system, with median recall changes of zero.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates agents discovering unknown software defects through requirements interpretation, autonomous test design, execution, and diagnosis without issue descriptions or designated investigation locations.",
+        "pdf_sha256": "5c3dfe98a2ad34934a79a39dce892b7b3204987051401b2020cd45c8164ddde0",
+        "evidence_pages": [
+          1,
+          2,
+          8
+        ]
+      }
+    },
+    "paper-a18dad02bc132ecb": {
+      "institutions": [
+        "Mohamed bin Zayed University of Artificial Intelligence",
+        "University of California, San Diego",
+        "Pinscreen"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        11
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Constructs image-aligned object point sets from the initial observation, refines depth using commanded grasps, and simulates grasping, carrying, release, and gravity. Three video backbones render the proxy. Evaluation uses 293 DROID episodes from held-out setups, robot-only ablations, and open-gripper and frozen-object interventions.",
+      "evidence": "Simulated objects reduce missed pickups from 54.1% to 37.6% relative to a robot-only proxy, although correct-object pickups improve by an uncertain 7.5 points. Freezing rigid objects reduces H3-C lifts from 42% to 10%, versus 57% to 49% for LTX-2.3-C. Arm-following gains primarily come from robot rendering.",
+      "discovery_use": "Provides an explicit world state and intervention tests that reveal whether generated predictions follow simulated action consequences, directly supporting verification of world representations.",
+      "limits": "Handles first-frame objects and pick-and-place dynamics; deformable objects move rigidly. Simulator grasps agree with reality in roughly 70% of episodes. Actions are replayed without closed-loop control. Calibration partly uses evaluated recording frames, Ctrl-World has substantial test overlap, and grasp metrics depend on segmentation and judges. WorldArena comparisons use unequal training data.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "causality",
+        "rationale": "Provides an explicit world state and intervention tests that reveal whether generated predictions follow simulated action consequences, directly supporting verification of world representations.",
+        "pdf_sha256": "2b4d00e2282268f3e73cac0e57be4f75573fdc2d80575254c7c5152156612b22",
+        "evidence_pages": [
+          1,
+          3,
+          11
+        ]
+      }
+    },
+    "paper-ba706a0fac781c00": {
+      "institutions": [
+        "Zhejiang University",
+        "The University of Hong Kong"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        27
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "An LLM scheduler constructs verifiable task stages, diagnoses stalled progress, and selects practice windows using rollout observations and a history buffer. Stage-balanced rewards and normal, prefix, and suffix rollouts train a shared policy with PPO. Physical experiments substitute RECAP training and segment resampling for simulator resets.",
+      "evidence": "Headline success reaches 97.8% on LIBERO-Long and 51.3% on RoboCasa365, versus 96.2% and 45.8% for StructRL. On LIBERO, progress rewards alone reach 96.8%, while adding practice reaches 97.8%; history adds 0.6 points over adaptive scheduling without history. The physical adaptation reaches 95% on BreadBaker versus RECAP's 70%.",
+      "discovery_use": "Contributes a feedback-driven improvement loop that identifies unknown policy weaknesses, selects targeted practice, and retains intervention history to guide subsequent learning.",
+      "limits": "Requires task-specific completion checks, verified milestones, and restorable simulator states. Matched PPO updates do not guarantee equal interaction cost. RoboCasa seed analysis varies evaluation seeds with fixed checkpoints, whereas LIBERO includes training-seed variation. Physical evidence covers three tasks and uses a different learning procedure. The scheduler operates between rounds rather than during execution.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "adaptation",
+        "rationale": "Contributes a feedback-driven improvement loop that identifies unknown policy weaknesses, selects targeted practice, and retains intervention history to guide subsequent learning.",
+        "pdf_sha256": "df24ab9c04a939c29fcc4d3a4f1c9fcd0de1eb13d6b87eb6c2c983ce87bc119d",
+        "evidence_pages": [
+          1,
+          5,
+          27
+        ]
+      }
+    },
+    "paper-a6aecb019028070c": {
+      "institutions": [
+        "The University of Hong Kong",
+        "University of Electronic Science and Technology of China",
+        "Shanghai Innovation Institute",
+        "JD.com"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "The benchmark contains 250 manually validated tasks across 11 types and 27 environments. Seven VLM agents choose constrained navigation and interaction skills from visual observations and feedback. Strict success requires both a correct outcome and task-required evidence; stronger corroboration is reported separately. Human task completion, a 200-episode rule audit, trajectory analysis, and four oracle-input diagnostics examine feasibility and failure causes.",
+      "evidence": "The strongest model achieves 73.2% outcome accuracy but 69.2% strict success; other models remain below 50% strict success. Humans achieve 84% on a stratified 100-task sample. Across 1,750 model episodes, 206 correct outcomes lack required evidence, including 106 unmet landmark-exploration cases. On 139 diagnostic questions per model, supplying missing target views raises pooled final-answer accuracy from 45.2% to 58.4%; complete trajectory views plus geometric sensors reach 77.6%.",
+      "discovery_use": "ROAM-Bench directly evaluates agents discovering hidden scene information through active exploration and interaction, then checks whether their conclusions are supported by required observations and actions. Its separation of correct outcomes from completed evidence gathering is a concrete discovery-evaluation contribution.",
+      "limits": "Evaluation uses simulated scenes and predefined high-level skills, so it does not establish hardware performance or learned low-level control. Prescribed evidence checks are not always logically necessary for answering: path-integration answers can use supplied self-motion information while landmark visits measure instruction completion. Stronger corroboration does not guarantee a correct conclusion. Human completion uses one person per sampled task, and the rule audit uses one annotator. Oracle diagnostics vary view counts or context and measure final answers rather than complete agent episodes.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "ROAM-Bench directly evaluates agents discovering hidden scene information through active exploration and interaction, then checks whether their conclusions are supported by required observations and actions. Its separation of correct outcomes from completed evidence gathering is a concrete discovery-evaluation contribution.",
+        "pdf_sha256": "604b474c7fbc627e31bb65baa8190f900527b641112e64740976d868d17c1661",
+        "evidence_pages": [
+          1,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    "paper-4dbda9c5708247a9": {
+      "institutions": [
+        "Peking University",
+        "National University of Singapore",
+        "NVIDIA",
+        "Tongji University",
+        "University of Chicago"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        6,
+        9,
+        12
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Eight exploration agents share attempt records and use simulator resets to search for successful stages. A distilling agent consolidates evaluated programs and task knowledge. Refinement diagnoses stage bottlenecks and tests repairs across randomized layouts, with held-out selection and separate test layouts. A common perception and control library supports different hands. Real-robot discrepancies update a calibrated simulator between refinement rounds.",
+      "evidence": "Refinement increases Bench2Dex success from 44.6% to 60.6% and its composite score from 59.1 to 72.9, exceeding the best evaluated trained-policy aggregate. DexJoCo full-randomization success reaches 81.0%, versus 40.3% for the strongest trained baseline. At the standard Bench2Dex execution budget, frozen programs outperform the same model acting online. Hardware demonstrations include stacking, piano, box opening, and calligraphy, with limited within-family skill reuse.",
+      "discovery_use": "The framework explicitly searches for unknown manipulation solutions, shares experimental attempts, consolidates successful procedures into retained programs, and verifies revisions on randomized layouts. This is a concrete embodied discovery harness rather than ordinary robot deployment.",
+      "limits": "Sustained contact, force regulation, and unsolved stages remain difficult; trained policies lead on 11 of 26 Bench2Dex tasks. Development is expensive, with median exploration and refinement costs of 427M and 214M tokens per task. Tasks are learned separately. Hardware reliability is measured in simulation rather than repeated physical trials. DexJoCo object-randomization results depend partly on a documented camera fallback. The verified author branch currently announces code as coming soon rather than providing the harness.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "systems",
+        "rationale": "The framework explicitly searches for unknown manipulation solutions, shares experimental attempts, consolidates successful procedures into retained programs, and verifies revisions on randomized layouts. This is a concrete embodied discovery harness rather than ordinary robot deployment.",
+        "pdf_sha256": "54cbab2e2f15e2ad22f030607ddf5362dcbb1a84469735228537032c94ebd20d",
+        "evidence_pages": [
+          1,
+          6,
+          9,
+          12
+        ]
+      }
+    },
+    "paper-9c8b391555fa4aec": {
+      "institutions": [
+        "Show Lab, National University of Singapore",
+        "University of Science and Technology of China"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        2,
+        5,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Player agents generate reactive play programs. Diagnosis and planning agents coordinate code edits with video-generated assets, and A/B judges retain candidates supported by replay evidence without critical regression. Textual Behavior Skills preserve game-local experience without changing model weights. Frozen projects are evaluated on 140 GameCraft-Bench tasks, 47 GameASG-Bench tasks, and a clip-based human study.",
+      "evidence": "GameCraft-Bench Overall increases from 50.81 at initialization to 60.05 after evolution, versus 52.46 for adapted Play2Code under matched development-token budgets. GameASG strict success increases from 35.7% to 57.4% during refinement but does not increase further during evolution. Human overall-quality ratings reach 3.67 versus 2.43 for Play2Code. Three evolution cycles improve scores on a separate 10-game subset. Behavior Skills improve measured exploration, with prior skill-creation costs excluded.",
+      "discovery_use": "Agents explore generated games, diagnose previously unobserved defects, propose new development goals, and verify successive revisions. This provides a concrete framework for feedback-driven investigation and open-ended artifact improvement, although it does not demonstrate recursive improvement of model capabilities.",
+      "limits": "Incomplete play routes leave defects undiagnosed, and candidate acceptance does not guarantee improvement on every path. GameCraft scores depend on demonstrated interactions; the paper documents substantial sensitivity to trace selection. Human ratings measure impressions from clips rather than direct play or sustained engagement. Repeated evolution is tested on only 10 games. Video compute is separate from token accounting, and transfer beyond the tested engines remains unestablished.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "open_ended",
+        "rationale": "Agents explore generated games, diagnose previously unobserved defects, propose new development goals, and verify successive revisions. This provides a concrete framework for feedback-driven investigation and open-ended artifact improvement, although it does not demonstrate recursive improvement of model capabilities.",
+        "pdf_sha256": "11d7e9098418874a4d0f70266c4133c55568d454b5c74a8a0625d342cc75203a",
+        "evidence_pages": [
+          1,
+          2,
+          5,
+          8
+        ]
+      }
+    },
+    "paper-9ab77a7a8cd518ce": {
+      "institutions": [
+        "Singapore Management University",
+        "Harbin Institute of Technology",
+        "Fuzhou University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Adapts a shared video diffusion transformer with LoRA. Geometric Anchoring exchanges synchronized cross-view features, and Temporal Compensation aggregates neighboring times. Training uses 125K panorama-derived clips; evaluation uses 300 source-disjoint videos, two camera-control architectures, image-to-video and continuation tasks, and component and sampling-density ablations.",
+      "evidence": "At sampling interval four, CameraCtrl re-entry identity rises from 0.2325 to 0.3355 for image-to-video and from 0.2494 to 0.3771 for continuation. Both architectures improve all 14 main metrics over their matched perspective-only baselines. Panoramic evolution alone can degrade visual quality; explicit spatial and temporal coupling resolves much of that tradeoff.",
+      "discovery_use": "Develops a world representation that maintains evolving entities outside current observation, a concrete capability for agents reasoning about partially observed environments and revisiting previously observed objects.",
+      "limits": "Requires panoramic training data and evaluates 81-frame generations rather than long-horizon interactive behavior. Navigation and closed-loop agent benefits remain untested. Tracking, inferred camera poses, and depth estimators affect evaluation; independently normalized translations omit absolute scale accuracy. Released larger-model comparisons are less controlled than matched-backbone baselines. Sparse panoramas still increase denoising cost.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "causality",
+        "rationale": "Develops a world representation that maintains evolving entities outside current observation, a concrete capability for agents reasoning about partially observed environments and revisiting previously observed objects.",
+        "pdf_sha256": "04e5eb2cf6c663ae63e45159924aac6a915ebebf439d5ae6236b459fc07a34ad",
+        "evidence_pages": [
+          1,
+          3,
+          8
+        ]
+      }
+    },
+    "paper-4e0653d413f526d4": {
+      "institutions": [
+        "Beijing Academy of Artificial Intelligence (BAAI)"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        5
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Generates responses to 9,600 general prompts once per initial model. Fine-tuning combines domain-answer cross-entropy with frozen-reference forward KL on saved assistant-response prefixes. Tests three small model families, two domains, seven adaptation baselines, and replay-context, target, and answer-source controls.",
+      "evidence": "Average forgetting falls from 28.07 points with standard SFT to 2.44, while factual acquisition averages 15.49 versus 15.23 points. Instruction-context replay outperforms matched-budget BOS replay in all six settings by the reported trade-off score. Sampled-token replay performs similarly to soft targets, suggesting replay context matters more than target form.",
+      "discovery_use": "Addresses a concrete continual-discovery prerequisite: acquiring new factual knowledge while retaining instruction following, reasoning, and coding abilities. Controlled replay comparisons investigate which retained experience protects these capabilities.",
+      "limits": "Experiments use 3–4B-class models, two domains, and 300-step adaptations rather than extended continual-learning sequences. Acquisition relies on uncalibrated model judges, with method-dependent unresolved labels. Replay overlaps evaluation capability types; safety and long-context retention remain untested. Some baseline margins have intervals crossing zero, and soft-target superiority over sampled replay is not established.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "adaptation",
+        "rationale": "Addresses a concrete continual-discovery prerequisite: acquiring new factual knowledge while retaining instruction following, reasoning, and coding abilities. Controlled replay comparisons investigate which retained experience protects these capabilities.",
+        "pdf_sha256": "bd06f72e239534fab9b8a90160ab53122753cbf060801f287a6b85001edf7598",
+        "evidence_pages": [
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    "paper-6d0aa520156c58d3": {
+      "institutions": [
+        "Tsinghua University"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        4,
+        8
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "Provides 160 tasks, three rules per task, 30 environments, and 630 demonstration videos. UIverse supplies a common graphical interaction harness. Six agents receive text or video rules and undergo state-based verification, replay/resample/relocate tests, rule questions, and no-rule controls.",
+      "evidence": "The strongest agents achieve approximately 76–82% computer success and 24–28% robot success depending on modality. No-rule success is at most 8.1% on the ablation subset. GPT-6 Astra answers 98% of robot rule questions correctly but completes 19.6% of matching runs. Weaker agents lose substantial video-based success when instances are resampled.",
+      "discovery_use": "Directly evaluates agents acquiring unfamiliar rules from evidence, generalizing them to new situations, and executing them under verifiable conditions. Its controls distinguish contextual learning from prior knowledge and demonstration replay.",
+      "limits": "Tasks and environments are hand-built, robot execution occurs in simulation, and no task combines both domains. Main results use rule C; several diagnostics use a 54-task subset and three models. Models retain different native agent frameworks. A common interface does not fully isolate rule learning from navigation, control, and task difficulty.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "benchmarks",
+        "rationale": "Directly evaluates agents acquiring unfamiliar rules from evidence, generalizing them to new situations, and executing them under verifiable conditions. Its controls distinguish contextual learning from prior knowledge and demonstration replay.",
+        "pdf_sha256": "84e58cc9a858c4430d775f59e967518b4f4f9323e19d1847beb1c34d76d0c8fe",
+        "evidence_pages": [
+          1,
+          4,
+          8
+        ]
+      }
+    },
+    "paper-1546a033e2498fa9": {
+      "institutions": [
+        "University of Technology Nuremberg",
+        "NVIDIA"
+      ],
+      "consulted_pdf_pages": [
+        1,
+        3,
+        7,
+        20
+      ],
+      "sections": [
+        "Author and affiliation front matter",
+        "Targeted method, evaluation and limitations passages"
+      ],
+      "method": "LoRA training compares full teacher reasoning, actions alone, and summaries placed after an empty reasoning block. Cross-entropy supervises teacher targets, while KL regularization on saved out-of-domain student generations limits drift. Separate environment-specific students are evaluated on AppWorld and SWE-bench Verified, with capability-retention tests and ablations of replay domain, summary placement, summary content, and visible commentary.",
+      "evidence": "With the open teacher, Qwen3-4B AppWorld success rises from 7.3% initially to 17.9% with actions and 34.5% with CoT-proxies; SWE-bench rises from 2.7% to 15.1% with proxies. Closed-teacher proxies reach 48.2% on AppWorld and 27.8% on SWE-bench for the 4B student. Out-of-domain replay reduces measured drift. Summary placement and content matter, but proxy advantages over full reasoning are statistically significant only for the open-teacher 4B SWE-bench comparison.",
+      "discovery_use": "This is a reusable post-training method for learning long-horizon agent policies, including repository exploration, tool use, and executable verification, while retaining existing capabilities. Its discovery connection is enabling investigation policies through training; scientific discovery and open-world generalization are not directly evaluated.",
+      "limits": "Evidence covers two students and two environments, with separate training for each environment rather than demonstrated cross-environment transfer. Closed-teacher SWE-bench experiments use more successful trajectories and single runs, limiting teacher comparisons and uncertainty assessment. Capability retention is measured on three single-turn benchmarks and a KL probe. Some students frequently exhaust context budgets. No paper-specific code, dataset, or checkpoint release was verified; Open-R1 is a cited replay-data source.",
+      "classification_review": {
+        "date": "2026-11-26",
+        "category": "learning",
+        "rationale": "This is a reusable post-training method for learning long-horizon agent policies, including repository exploration, tool use, and executable verification, while retaining existing capabilities. Its discovery connection is enabling investigation policies through training; scientific discovery and open-world generalization are not directly evaluated.",
+        "pdf_sha256": "24209c14204390a0e40e3cc4d01f2bef7b2db1ba0fcb8bdd6f8c09712a0581e7",
+        "evidence_pages": [
+          1,
+          3,
+          7,
+          20
         ]
       }
     }
