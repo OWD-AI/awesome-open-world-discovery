@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "note": "Profiles are usage modes, not independent benchmark counts. Capabilities are source-reported, not independently executed. Real data, interaction and new physical execution are separate properties.",
   "profiles": [
     {
@@ -6858,6 +6858,279 @@
       "name": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
       "status": "paper-described",
       "evidence": "https://arxiv.org/pdf/2611.32649"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 1 lists code, project, and dataset URLs.",
+        "Pages 21–22 describe the release format and promise videos, instructions, edit specifications, metadata, states, annotations, and evaluation code. Actual release availability is not established by the supplied pages."
+      ],
+      "focus": "Physical counterfactual video editing across rigid, elastic, and fluid dynamics. Models receive a fixed source video and an instruction specifying an edit and execution frame, then generate a video. Reference feedback combines 508 precomputed physics-simulation cases with 25 prerecorded physical cases. The real cases required new recordings during dataset construction; evaluated models do not request new physical measurements. The physics-based comparison executes reconstruction and simulation on ten fixed cases (pages 5–6, 21–24).",
+      "limits": "The evaluation interface supplies fixed cases rather than interactive simulator or device access. Counterfactual fidelity covers 506 of 533 cases, requires human track verification, and excludes unmeasurable objects or videos. Human preferences cover 71 cases. Each model returns one video per case, input formats differ, and the physics-based comparison receives additional perception support on a narrow subset (pages 16–19, 23–24).",
+      "training": {
+        "reward": "A benchmark training reward is not established. Evaluation uses counterfactual fidelity against source and target measurements, with overshoot, missing-object, and premature-edit penalties; Mask IoU and visual metrics; GPT-6 Astra edit-adherence and physical-commonsense judgments; and blinded human preferences (pages 6–8, 16–19).",
+        "reset": "Model-facing environment reset support is not established. During dataset construction, simulations start from initial states or restore source states at the execution frame; physical recordings use separately staged takes (pages 21–22).",
+        "branching": "Counterfactual branching is established for simulated dataset construction: edits continue from the source scene state, including saved later-frame states. Each simulated source group has 3 to 10 cases. Model-controlled branching or arbitrary simulator queries are not established (pages 21–22)."
+      },
+      "evaluation_family": "other",
+      "id": "paper-d9aa6f0fc9ffad93",
+      "resource_id": "paper-d9aa6f0fc9ffad93",
+      "name": "PhyCoVE: Benchmarking Physical Counterfactual Video Editing across Diverse Material Dynamics",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.29184"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Benchmark code and evaluation scripts are publicly available; the dataset is released (page 10).",
+        "Agents receive kernel specifications and starting implementations, while workload dimensions, counts and input tensors remain hidden (pages 20–21).",
+        "Agents can submit revised kernel implementations within the target ISA and benchmark constraints; shell and web tools are disabled (pages 21–22)."
+      ],
+      "focus": "Iterative CPU kernel optimization across Arm architectural extensions. Candidate code is compiled and executed on actual target machines. Feedback includes compiler errors, correctness errors, geometric-mean speedup, available hardware counters and disassembly. These are executed computations and hardware timing measurements, rather than simulated performance or new physical science experiments (pages 3, 5, 20–22).",
+      "limits": "Normally 40 counted compile, evaluate and disassemble calls per run, extended to 100 in scaling experiments; at least 15 calls are required. Evaluation uses fixed hidden workloads with deterministic inputs, correctness before timing, single-core execution and no multithreading. An evaluation has a 1200-second limit. Coverage concentrates on Arm CPUs, with limited expert-backed cross-generation tasks (pages 6, 10, 17, 21–22).",
+      "training": {
+        "reward": "Model training or an RL training reward is not established. The evaluator assigns geometric-mean speedup against the expert reference across hidden workloads, with score zero if any correctness check fails. Speedup@40 retains the best correct implementation within the budget (pages 3, 6).",
+        "reset": "Claude Code and Codex start in fresh empty working directories with auto-memory off. Every evaluate call runs in a fresh subprocess with the same workload inputs. General environment snapshot restoration or rollback is not established (pages 17, 21–22).",
+        "branching": "Versioned candidates, saved best results and access to earlier versions support trying alternative implementations. Evaluation and disassembly must target the last compiled version. Explicit environment cloning or branching from saved execution states is not established (pages 21–22)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-4f56c8d7f4c84b2b",
+      "resource_id": "paper-4f56c8d7f4c84b2b",
+      "name": "KernelShift: Benchmarking Kernel Optimization Across Evolving Hardware",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.29590"
+    },
+    {
+      "feedback": "scientific-simulator",
+      "interaction": "budgeted-simulator-jobs",
+      "new_physical_experiments": false,
+      "openness": [
+        "Methods may propose wings within a continuous 38-variable bounded design space (page 2).",
+        "Agents can inspect supplied source records, render geometries, write and run analysis code, fit models and perform numerical optimization (page 5).",
+        "Released materials include evaluation records, benchmark and baseline code, prompts, analysis scripts, a runner and a verifier. The original distributed agent controller and full agent traces are not released (page 10)."
+      ],
+      "focus": "Sequential transonic wing design using a learned aerodynamic surrogate and executed CFD simulations. Online feedback supplies a valid lift-to-drag score or a recorded failure type. Recommendations receive private CFD grades that are withheld from the optimizer. Recorded source data provide prior information; the study also executes new numerical simulations, without new physical measurements (pages 2–5, 10).",
+      "limits": "Each episode permits up to 4,096 surrogate evaluations and 32 sequential online CFD evaluations. The score aggregates three Mach conditions at a target lift coefficient. Delivery requires valid results for all conditions. Meshing has a 30-minute limit and each flow condition a two-hour limit. Some requests reuse recorded outcomes. Failure rates depend on the numerical recipe and infrastructure; cross-family prior information and total computation are unmatched (pages 2–3, 6, 14–16).",
+      "training": {
+        "reward": "Agent weight training or an RL training reward is not established. Online CFD returns a score or failure type. The benchmark separately evaluates recommendation delivery and mean geometric-mean lift-to-drag score among valid recommendations; private checkpoint grades provide no search feedback (pages 2–3).",
+        "reset": "Episodes are independent, use separate agent workspaces and do not share information across episodes. Some baselines begin with the same 62 development CFD records, while agents receive SuperWing source records. Within-episode rollback or simulator snapshot restoration is not established (pages 3–6).",
+        "branching": "Agents may generate alternative designs and analyses. The planning method compares four two-step contingent plans, executes only the first action of the selected plan and replans after feedback. Actual online CFD evaluations remain sequential; cloning or branching saved simulator states is not established (pages 3, 5)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-da00803918c5dd70",
+      "resource_id": "paper-da00803918c5dd70",
+      "name": "WingBench: Benchmarking How AI Agents Search for Better Designs",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.28418"
+    },
+    {
+      "feedback": "scientific-datasets-and-hidden-verifiers",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 7 states that public worlds and nominal simulation are released on Hugging Face and archived on Zenodo.",
+        "Page 7 states that the pipeline execution and scoring harness is open source.",
+        "Sealed worlds and their construction code are withheld; authors offer scoring of submitted pipelines on request."
+      ],
+      "focus": "Executed computational physics analyses for Higgs mass and signal strength, Higgs width, lepton calibration, and jet calibration. Agents develop code on public pseudodata and nominal simulation; frozen pipelines are executed on preassembled sealed datasets with hidden injected truths. Inputs derive from CMS detector simulation and private simulated signal samples. These are simulated datasets, not newly collected physical measurements or an agent-controlled live detector.",
+      "limits": "Development lasts at most 7.5 hours in a sandbox with web access, the task prompt, evaluation contract, public world, nominal simulation, and a public-world self-check (pages 3 and 17). Sealed evaluation is offline and isolated. Worlds mainly vary detector response and injected signal within one experiment; alternative-generator coverage is limited, and scores depend on expert references and selected quality weights (page 7). Page 4 lists ten JETCALIB worlds, while pages 15 and 21 specify 32, with ten timed. Hidden-world access during development is prohibited; interactive simulator control is not established.",
+      "training": {
+        "reward": "A training reward or model-weight update procedure is not established. The evaluator executes frozen pipelines and compares inferred quantities and uncertainties with hidden injected truths and expert-reference performance. Likelihood penalties measure precision, pulls, and shared bias; quality terms check fit, detector calibration, truthfulness, kinematic closure, systematic completeness, and compute. Final scores exponentiate the total penalty and are reported relative to the expert reference (pages 3–4 and 14–15). The development self-check runs the pipeline on the public world and checks output formats (page 17).",
+        "reset": "Frozen pipelines are rerun in isolation on separately assembled sealed worlds, and development sessions are repeated. Agent-controlled environment reset, checkpoint restoration, and regeneration of hidden worlds are not established. Worlds are assembled and sealed before evaluation (pages 3 and 5).",
+        "branching": "Agents may revise and rerun analysis code on the public world during development. Explicit environment-state branching, a branching API, or access to alternative hidden-world outcomes during development is not established. The submitted pipeline is frozen before sealed-world execution (pages 3 and 17)."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-50b951e98c679f9d",
+      "resource_id": "paper-50b951e98c679f9d",
+      "name": "HEP-Ex-Bench: Evaluating Agentic Performance in High Energy Physics Experiment Data Analyses with Sealed Worlds",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.28194"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Page 14 states that benchmark code, synthetic data, and prompts are available.",
+        "Proprietary RobotVacuum protocol definitions, functional descriptions, and reference instructions will not be publicly released."
+      ],
+      "focus": "Synthetic Home, Car, and Phone worlds execute Python device behaviors, shared environmental effects, and simulated time. Agents discover tools and state, issue queries and controls, use memory, submit answers and infeasibility reports, and sleep to advance time. Calls within a round execute in order. Interaction ends at session.finish or 20 turns; Goal and Workflow worlds then simulate to a fixed evaluation horizon. Feedback consists of simulated state changes and tool responses. External manuals and industrial reference instructions support construction and coverage analysis; the benchmark reports no new physical measurements.",
+      "limits": "Validation and test tasks share a constructed world pool. Simulated dynamics and configured semantic evaluation constrain interpretation. Physical deployment is untested. Supplied pages cover 1–16; remaining appendices are unavailable here.",
+      "training": {
+        "reward": "An agent-training reward and weight-update experiment are not established; targeted training is future work on page 13. The evaluator reports mean Pass@1 and requires every applicable state, answer, report, memory, and temporal/workflow check to pass. It also reports reason-code accuracy, semantic report success, and tool/turn efficiency (page 8).",
+        "reset": "Saved configurations fix initial worlds for construction and reference replay, and task builders can use valid initial-state variants (pages 6–7). An agent-facing reset API or restoration of arbitrary intermediate states is not established.",
+        "branching": "Reference-execution replay is described. Arbitrary runtime snapshotting, forked continuations, and agent-controlled branching are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-0d59eceab25ffe6f",
+      "resource_id": "paper-0d59eceab25ffe6f",
+      "name": "SynthDCB: World Distillation for Scalable Device Control Benchmarking",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.18639"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "A public benchmark report and 859-run frontier trace dataset are identified on pages 1–2.",
+        "Release of the complete executable simulator, restoration interface, and grader is not established in the supplied numbered pages."
+      ],
+      "focus": "A calibrated 90-day wholesale simulator couples purchasing, perishable inventory, customer retention, supplier reliability, and cash. Each morning starts a fresh conversation with a dashboard and persistent notes. Agents have up to 60 tool calls to query SQL records, inspect offers, order cases, set shortfall cover, and edit notes before advancing the day. Simulator rules and shared exogenous random draws produce later records and terminal profit. Public retail datasets and published operational references calibrate the simulation; the benchmark collects simulated outcomes and agent traces, with no new physical measurements or live business deployment.",
+      "limits": "Six businesses share one simulated workflow, and screening selects mechanisms with measurable delayed profit effects. Validation and sealed testing each use one business. Researchers derive operational rules. Leaderboard and trained-system prompts differ, and the sealed-test profit gain is uncertain.",
+      "training": {
+        "reward": "Episodes are evaluated after Day 89 by net business-value change, including revenues, sold inventory cost, waste, shortfall penalties, operating costs, and a closing lost-customer reserve (page 3). Continuation RL assigns 1 only to a valid continuation whose terminal profit exceeds its archived reference; crashes and other continuations receive 0. Pass-rate-normalized MaxRL advantages and CISPO updates train the policy (page 7).",
+        "reset": "Deterministic replay from any committed morning restores the simulator by replaying the archived prefix. Training restores mornings 60–85; interrupted evaluation runs can resume from their last committed morning (pages 2–4 and 7). Fresh conversational context each morning retains the persistent notebook.",
+        "branching": "The research and training harness supports counterfactual action replay and four continuations from the same restored state. Their archived prefix and subsequent exogenous random draws match the reference run, enabling controlled alternative futures (pages 2 and 7). An agent-facing branching tool during ordinary benchmark interaction is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-b9c8ef732897ca34",
+      "resource_id": "paper-b9c8ef732897ca34",
+      "name": "Measuring and Teaching Language Model Agents to Act on Delayed Consequences",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.28158"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "offline-data",
+      "new_physical_experiments": false,
+      "openness": [
+        "The model chooses when to confirm completion or report a mistake during sequential playback of recorded cooking videos.",
+        "Only a completion confirmation advances the instruction; model outputs do not change the recorded physical activity.",
+        "Code and model weights are promised for public release."
+      ],
+      "focus": "Evaluate whether proactive task guidance follows visual evidence beyond timing shortcuts, using QICD and transfer to Ego-MC-Bench.",
+      "limits": "Fixed recorded data, rather than a simulator or live physical interaction. Evaluation mainly uses annotated step-start anchors. Completion accuracy and mistake F1 are coupled, with 15-second tolerances; mistake scoring does not establish that the named mistake is correct. Evidence covers cooking, and stronger timing-only inputs reduce some margins.",
+      "training": {
+        "reward": "ECT uses supervised cross-entropy on answer tokens from annotated protocol checks, including time-matched negatives; no reinforcement-learning reward is reported. The official evaluator measures completion accuracy, mistake F1 and margin over a video-blind frontier.",
+        "reset": "Recorded episodes are replayed for evaluation. Input windows are anchored to annotated step starts, and feedback memory is cleared at every step. A general environment reset API is not established.",
+        "branching": "Offline decision replay, video swaps and timestamp interventions are reported. Branching changes model decisions or supplied evidence; action-dependent physical outcomes and simulator-state branching are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-ac2b1db6b490103d",
+      "resource_id": "paper-ac2b1db6b490103d",
+      "name": "Speak When You See It: Proactive Task Assistants Should Wait for Evidence, Not the Clock",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.30895"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "computational-experimentation",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose implementations, tests, candidate artifacts, submissions and stopping times within task budgets.",
+        "Tasks provide starting artifacts, documentation and development evidence, while final conditions remain hidden and cannot be queried.",
+        "Agents use preinstalled tools and files plus a fixed web snapshot; downloading packages, code, data or models is prohibited.",
+        "The paper reports release of tasks, evaluation trajectories and a leaderboard."
+      ],
+      "focus": "Long-horizon engineering and scientific computing through executed implementation, model training, testing, geometric reconstruction and simulation, with independent hidden evaluation.",
+      "limits": "Feedback combines executed programs, geometric comparisons, simulations and comparison against recorded scientific observations. Physical engineering tasks use expert-built synthetic environments; aircraft bench tools and flights do not establish new physical measurements. Difficulty-filtered tasks and heterogeneous estimated ceilings limit generalization. Hidden evaluation is unavailable during development.",
+      "training": {
+        "reward": "An agent-training procedure or training reward is not established. Evaluation uses isolated pristine verifiers and continuous task metrics such as speed, cost, accuracy and geometric error, normalized between task baselines and estimated ceilings. Scores come from execution, geometry or simulation rather than an LLM judge.",
+        "reset": "Eight independent trials per model and task begin from supplied starting artifacts. Separate continuation runs are also studied. A general within-run environment reset or checkpoint restoration API is not established.",
+        "branching": "Agents develop multiple artifact versions and submit pinned commits; selection across independent attempts and submitted versions is studied. Arbitrary environment-state snapshots or branch-from-state support are not established."
+      },
+      "evaluation_family": "computational-research",
+      "id": "paper-2277eedbe7475fac",
+      "resource_id": "paper-2277eedbe7475fac",
+      "name": "OWE-Bench: A long-horizon benchmark for measuring real-world engineering",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.30017"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "fixed-data-code-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Agents choose programs, commands, pixel measurements, rendering methods and revisions within a CPU-only Python sandbox.",
+        "Network access permits model API calls and package installation.",
+        "Ground truth, task generators and task metadata are unavailable to agents; image and video generation models are forbidden.",
+        "Each fixed instance permits one attempt with a 30-minute wall-clock budget."
+      ],
+      "focus": "Visual rule solving on 500 procedurally generated instances across 100 task families. Agents execute programs that render answer videos; deterministic rules evaluate those videos against symbolic ground truth. This is synthetic visual reasoning with executed computation, not a scientific simulator or new physical measurements.",
+      "limits": "Flat colours, exact geometry and deterministic scoring favour programmatic solutions. Agents iterate with tools while video-model baselines use published single-sample results and were not rerun. Transfer classification can count a crash while measuring a new frame as depictive. Arbitrary environment branching and access to official evaluator feedback during an agent attempt are not established.",
+      "training": {
+        "reward": "The unmodified official evaluator uses classical computer vision and OCR to compare videos against symbolic ground truth and returns a score in [0, 1]; missing videos score zero. Coding agents are evaluated off the shelf without policy training. Training the coding policy with this evaluator is proposed as future work. Published RL-trained video baselines used benchmark evaluators as rewards.",
+        "reset": "Every instance starts in a fresh container containing its inputs and a harness-generated task statement. Exactly one attempt is allowed, with no retry. Reset to an intermediate state within an attempt is not established.",
+        "branching": "Agents may revise and rerun code within an attempt. The analysis separately re-executes successful programs on another fixed instance of the same family. Snapshot-based branching or counterfactual environment forks during agent execution are not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-0d0c22525f2f3fc8",
+      "resource_id": "paper-0d0c22525f2f3fc8",
+      "name": "Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.34813"
+    },
+    {
+      "feedback": "executed-computation",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "A benchmark code repository is supplied.",
+        "Official method implementations and dataset evaluators are used."
+      ],
+      "focus": "Context optimizers generate rollouts on fixed training examples and use evaluator feedback to revise prompts or experience pools. Four tasks use single-response evaluation; AppWorld adds stateful application interactions through APIs. Feedback combines computed graders, exact matching, instruction checks, and task-goal completion. MiddleMatch data are synthetic; other tasks use supplied benchmark data. No new physical measurements are described.",
+      "limits": "Tasks assess reasoning, instruction following, context retrieval, and application use. HotpotQA supplies passages directly. Initial prompts and optimization budgets differ across methods. These tasks do not establish an environment for executed scientific research experiments.",
+      "training": {
+        "reward": "Context optimization changes text while model parameters remain frozen. MATH500 uses Qwen-Verify; HotpotQA and MiddleMatch use exact match; IFBench uses its official metric; AppWorld uses official task-goal completion. Validation selects contexts or experience pools. Reflections and semantic advantages guide updates rather than a common numerical reinforcement-learning reward.",
+        "reset": "Five independent seeds and repeated training epochs are specified. AppWorld environment reset and checkpoint restoration support are not established in the supplied text.",
+        "branching": "TF-GRPO generates groups of five rollouts. GEPA samples prompt candidates from a Pareto frontier in a search tree. These establish rollout and prompt alternatives; branching from a saved AppWorld state is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-f41e96568ec9db1d",
+      "resource_id": "paper-f41e96568ec9db1d",
+      "name": "Revisiting LLMs as Context Engineers",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.30494"
+    },
+    {
+      "feedback": "real-data",
+      "interaction": "fixed-data-tool-execution",
+      "new_physical_experiments": false,
+      "openness": [
+        "Elliptic++ data are public; AMLworld data are synthetic.",
+        "Control artifacts and some uncertainty results are available from the authors on request.",
+        "A public release of the complete audit implementation is not established."
+      ],
+      "focus": "A local pipeline queries recorded transaction and graph evidence, retrieves regulatory text, and executes judge, gate, and override decisions. Auditors intervene on component outputs and replay the pipeline on frozen evidence. Elliptic++ records real transactions; AMLworld supplies previously generated simulator data. Synthetic pipelines and authored typology cases validate the audit. No live transactions or new physical measurements are performed.",
+      "limits": "Attribution is conditional on evidence collected with scores visible, including some label-derived fields. The main attribution set contains eight transaction-illicit hard cases. AMLworld transfer omits the full attribution protocol. The benchmark audits classification decisions rather than agents conducting research experiments.",
+      "training": {
+        "reward": "Attribution credit is used to audit decisions, not optimize agents. Agent training rewards are not established. WalletGAT uses supervised class-weighted cross-entropy. Evaluation measures decision events, actual causation, interventional Shapley credit, mediation, and detection metrics.",
+        "reset": "The program can be re-executed with valid null outputs and frozen evidence. Shared seeds and byte-identical evidence support matched comparisons, but replies are not seed-reproducible across server processes. Mutable-environment checkpoint restoration is not established.",
+        "branching": "All component coalitions are enumerated for the small pipelines. Score injections, alternate component outputs, and crossed judge/rule scores create counterfactual replay branches on fixed evidence. Physical or live transaction-state branching is not established."
+      },
+      "evaluation_family": "other",
+      "id": "paper-e01b4af04a3b1c9b",
+      "resource_id": "paper-e01b4af04a3b1c9b",
+      "name": "Who Makes the Decision? Auditing an Agentic LLM Pipeline for Illicit Cryptocurrency Transaction Monitoring",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.29829"
+    },
+    {
+      "feedback": "synthetic-rules",
+      "interaction": "interactive-simulator",
+      "new_physical_experiments": false,
+      "openness": [
+        "Open-source task instances, transition graphs, initial states, source corpora, authored scenarios, oracle bounds, replayable witnesses, budgets, verifier reports, freeze manifests, and evaluation harness.",
+        "Recorded model trajectories are not publicly released."
+      ],
+      "focus": "Evaluate evidence discovery and workflow decisions in finite, deterministic, partially observable software environments. Resource accesses reveal records, action identifiers, or credentials; authored prerequisites and terminal rules determine outcomes. Source-derived records and authored overlays supply evidence. Agents may issue ordered action batches, and discovered identifiers remain directly accessible. Dispatched accesses, including invalid and duplicate accesses, consume a fixed budget; episodes also have a 60-turn limit.",
+      "limits": "Interaction executes authored state transitions over records, without new physical measurements or agent-run research experiments. Offline breadth-first search executes computation to derive reference bounds; four tasks also have executed checks on authored content counterfactuals. The oracle knows the full graph, uses uniform access costs, and omits navigation costs, latency, tokens, and economic cost. Model-informed selection limits prevalence claims. Executed content counterfactuals cover only four tasks.",
+      "training": {
+        "reward": "Model training and a training reward are not established. The evaluator uses declared success and absorbing wrong-terminal conditions. Breadth-first search computes exact minimum successful accesses and residual work for recoverable terminal states. Reported measures include success, conditional attainment, residual progress, normalized detour, invalid or duplicate accesses, and irreversible failures.",
+        "reset": "Frozen initial states, replayable witnesses, and three repeated episodes per model-task pair are described. Agent-facing reset, rollback, or restoration during an episode is not established. Wrong commitments are absorbing.",
+        "branching": "The environment offers multiple enabled actions, and the offline oracle explores alternative paths through breadth-first search. Agent-facing snapshot branching or parallel counterfactual rollouts are not established. Authored content counterfactual checks on four tasks are separate validation procedures."
+      },
+      "evaluation_family": "other",
+      "id": "paper-2268655037c928ac",
+      "resource_id": "paper-2268655037c928ac",
+      "name": "DetourBench: Trajectory-Level Evaluation of Interactive Agents with Exact Minimum-Action Bounds",
+      "status": "paper-described",
+      "evidence": "https://arxiv.org/pdf/2611.20844"
     }
   ]
 }
